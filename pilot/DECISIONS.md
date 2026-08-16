@@ -134,3 +134,39 @@
 ### 判定
 - **PROCEED TO MARGINAL-UTILITY SELECTOR**。
 - 下一轮必须以 strict official labels、report-grouped CV、repeated-run stability/transfer 为主评价；不要沿用 random KFold 的乐观 selector 结论。
+
+## 12. Runtime-Normalized Stability Final Audit（2026-08-16）
+
+### runtime identity 修正
+- 上一轮把 `DeepSeek-V4-flash[1m]`/Anthropic-compatible 与 `deepseek-chat`/OpenAI-compatible 表述为不同模型过强。DeepSeek 官方 V4 文档说明：过渡期 `deepseek-chat` 指向 `deepseek-v4-flash` non-thinking mode。
+- 但历史 artifact 没保存 response-level `model`/`system_fingerprint`：`stage2_old`、`r1`、`r2` 均标注为 provenance insufficient，不能作为 strict same-runtime replicates。
+- 因此只补最小严格实验：固定原 250-query subset，新跑 `rn1/rn2/rn3`，不扩大到 492，不改 retrieval/memory/prompt。
+
+### provenance / cache
+- `pilot/llm.py` 默认 DeepSeek official fallback 改为请求 `deepseek-v4-flash`，显式 non-thinking，新增 `call_once_with_metadata` 保存 response model/fingerprint。
+- `pilot/stage3/stability_run.py` cache version 升为 runtime-normalized v2；cache key 包含 runtime、endpoint、requested/effective model 可验证字段、thinking mode、temperature、max_tokens、完整 prompt、arm/mode/sample、retrieval config、memory config。
+- `pilot/stage2_official/run_official.py` 也加入 runtime/retrieval/memory config 到后续 cache key，避免未来混用。
+- `rn1/rn2/rn3` 三轮 3000 calls 均返回：requested/effective/response model = `deepseek-v4-flash`，system_fingerprint = `a26a7955944dc5c60445bff77fac9c8e`，thinking=false，temperature=0，max_tokens=600。
+
+### selector leakage 修正
+- `run_selector_baselines.py` 修复 fold prior leakage：tie-breaking priors 只由 `train_idx` 计算；random CV 改为 seed KFold，避免用全数据 preferred label 做 stratification。
+- no-leak selector audit：random best 0.7378（+1.22pp），report GroupKFold best 0.7317（+0.61pp）。旧 query/retrieval selector 仍弱，不作为下一阶段方法。
+
+### normalized stability 结果
+- Same-runtime arm agreement：None 0.9787，Case 0.9920，Strategy 0.9840，Both 0.9920。
+- Expected metrics：Best Fixed 0.7467，Oracle 0.8387，Oracle Gap 0.0920。
+- Preference event repeatability：
+  - Case>Strategy：26 any，23 >=2/3，19 3/3。
+  - Strategy>Case：21 any，20 >=2/3，19 3/3。
+  - Case>Both：6 any，5 >=2/3，5 3/3。
+  - Strategy>Both：12 any，12 >=2/3，10 3/3。
+- Three-way held-out transfer：
+  - rn2+rn3→rn1：policy 0.832 vs Best Fixed 0.748，gain +0.084，95% bootstrap CI [0.052, 0.120]。
+  - rn1+rn3→rn2：policy 0.836 vs 0.744，gain +0.092，CI [0.056, 0.132]。
+  - rn1+rn2→rn3：policy 0.840 vs 0.748，gain +0.092，CI [0.056, 0.132]。
+  - mean gain +0.0893；pooled CI [0.0693, 0.1093]，pooled 仅作汇总，fold-level CI 为主。
+
+### 判定
+- **PROCEED TO MARGINAL-UTILITY SELECTOR**。
+- 下一阶段方向：Both as default action + estimate Case/Strategy/None relative marginal utility + confidence gating。
+- 不再主推 four-arm independent correctness classification。

@@ -1,0 +1,266 @@
+{
+  "replicates": [
+    "stage2_old",
+    "r1",
+    "r2"
+  ],
+  "n": 250,
+  "runtime_identity": {
+    "stage2_old": {
+      "replicate": "stage2_old",
+      "artifact_runtime_provenance": "insufficient",
+      "requested_model": "DeepSeek-V4-flash[1m]",
+      "backend": "anthropic_compatible",
+      "effective_model": null,
+      "model_version": null,
+      "thinking_mode": false,
+      "notes": "Historical arm_outputs.json stores outputs only, not response model/version/fingerprint."
+    },
+    "r1": {
+      "replicate": "r1",
+      "artifact_runtime_provenance": "insufficient",
+      "runtime_request": null,
+      "notes": "No per-call response runtime metadata was saved."
+    },
+    "r2": {
+      "replicate": "r2",
+      "artifact_runtime_provenance": "insufficient",
+      "runtime_request": null,
+      "notes": "No per-call response runtime metadata was saved."
+    }
+  },
+  "arm_agreement": {
+    "none": 0.9386666666666666,
+    "case": 0.9546666666666667,
+    "strategy": 0.936,
+    "both": 0.9626666666666667
+  },
+  "preference_event_stability": {
+    "case_gt_strategy": {
+      "positive_any_run": 33,
+      "positive_in_at_least_2_runs": 20,
+      "positive_all_3_runs": 10,
+      "at_least_2_rate_among_any": 0.6060606060606061,
+      "all_3_rate_among_any": 0.30303030303030304,
+      "run_count_histogram": {
+        "0": 217,
+        "1": 13,
+        "2": 10,
+        "3": 10
+      }
+    },
+    "strategy_gt_case": {
+      "positive_any_run": 24,
+      "positive_in_at_least_2_runs": 18,
+      "positive_all_3_runs": 8,
+      "at_least_2_rate_among_any": 0.75,
+      "all_3_rate_among_any": 0.3333333333333333,
+      "run_count_histogram": {
+        "0": 226,
+        "1": 6,
+        "2": 10,
+        "3": 8
+      }
+    },
+    "case_gt_both": {
+      "positive_any_run": 9,
+      "positive_in_at_least_2_runs": 4,
+      "positive_all_3_runs": 3,
+      "at_least_2_rate_among_any": 0.4444444444444444,
+      "all_3_rate_among_any": 0.3333333333333333,
+      "run_count_histogram": {
+        "0": 241,
+        "1": 5,
+        "2": 1,
+        "3": 3
+      }
+    },
+    "strategy_gt_both": {
+      "positive_any_run": 15,
+      "positive_in_at_least_2_runs": 11,
+      "positive_all_3_runs": 2,
+      "at_least_2_rate_among_any": 0.7333333333333333,
+      "all_3_rate_among_any": 0.13333333333333333,
+      "run_count_histogram": {
+        "0": 235,
+        "1": 4,
+        "2": 9,
+        "3": 2
+      }
+    }
+  },
+  "expected": {
+    "expected_arm_accuracy": {
+      "none": 0.6946666666666667,
+      "case": 0.7226666666666667,
+      "strategy": 0.7053333333333334,
+      "both": 0.7466666666666667
+    },
+    "expected_best_fixed_arm": "both",
+    "expected_best_fixed": 0.7466666666666667,
+    "expected_oracle": 0.8346666666666667,
+    "expected_oracle_gap": 0.08799999999999997,
+    "one_shot_by_replicate": {
+      "stage2_old": {
+        "accuracy": {
+          "none": 0.7,
+          "case": 0.736,
+          "strategy": 0.704,
+          "both": 0.748
+        },
+        "best_fixed_arm": "both",
+        "best_fixed": 0.748,
+        "oracle": 0.832,
+        "oracle_gap": 0.08399999999999996
+      },
+      "r1": {
+        "accuracy": {
+          "none": 0.696,
+          "case": 0.72,
+          "strategy": 0.696,
+          "both": 0.748
+        },
+        "best_fixed_arm": "both",
+        "best_fixed": 0.748,
+        "oracle": 0.836,
+        "oracle_gap": 0.08799999999999997
+      },
+      "r2": {
+        "accuracy": {
+          "none": 0.688,
+          "case": 0.712,
+          "strategy": 0.716,
+          "both": 0.744
+        },
+        "best_fixed_arm": "both",
+        "best_fixed": 0.744,
+        "oracle": 0.836,
+        "oracle_gap": 0.09199999999999997
+      }
+    }
+  },
+  "heldout_preference_transfer": {
+    "folds": {
+      "stage2_old": {
+        "train_runs": [
+          "r1",
+          "r2"
+        ],
+        "train_global": {
+          "none": 0.692,
+          "case": 0.716,
+          "strategy": 0.706,
+          "both": 0.746
+        },
+        "choice_distribution": {
+          "both": 227,
+          "case": 5,
+          "none": 9,
+          "strategy": 9
+        },
+        "policy_accuracy": 0.792,
+        "best_fixed_arm": "both",
+        "best_fixed": 0.748,
+        "oracle": 0.832,
+        "oracle_gap": 0.08399999999999996,
+        "gain_over_best_fixed": 0.044,
+        "oracle_gap_recovered": 0.5238095238095241,
+        "paired_bootstrap": {
+          "point_estimate": 0.044,
+          "ci95": [
+            0.016,
+            0.072
+          ],
+          "bootstrap_resamples": 10000,
+          "random_seed": 20260816,
+          "implementation": "paired percentile bootstrap over query-level differences: policy_correct_i - best_fixed_arm_correct_i"
+        }
+      },
+      "r1": {
+        "train_runs": [
+          "stage2_old",
+          "r2"
+        ],
+        "train_global": {
+          "none": 0.694,
+          "case": 0.724,
+          "strategy": 0.71,
+          "both": 0.746
+        },
+        "choice_distribution": {
+          "both": 220,
+          "case": 7,
+          "none": 12,
+          "strategy": 11
+        },
+        "policy_accuracy": 0.832,
+        "best_fixed_arm": "both",
+        "best_fixed": 0.748,
+        "oracle": 0.836,
+        "oracle_gap": 0.08799999999999997,
+        "gain_over_best_fixed": 0.084,
+        "oracle_gap_recovered": 0.9545454545454549,
+        "paired_bootstrap": {
+          "point_estimate": 0.084,
+          "ci95": [
+            0.052,
+            0.12
+          ],
+          "bootstrap_resamples": 10000,
+          "random_seed": 20260816,
+          "implementation": "paired percentile bootstrap over query-level differences: policy_correct_i - best_fixed_arm_correct_i"
+        }
+      },
+      "r2": {
+        "train_runs": [
+          "stage2_old",
+          "r1"
+        ],
+        "train_global": {
+          "none": 0.698,
+          "case": 0.728,
+          "strategy": 0.7,
+          "both": 0.748
+        },
+        "choice_distribution": {
+          "both": 221,
+          "case": 7,
+          "none": 13,
+          "strategy": 9
+        },
+        "policy_accuracy": 0.828,
+        "best_fixed_arm": "both",
+        "best_fixed": 0.744,
+        "oracle": 0.836,
+        "oracle_gap": 0.09199999999999997,
+        "gain_over_best_fixed": 0.084,
+        "oracle_gap_recovered": 0.91304347826087,
+        "paired_bootstrap": {
+          "point_estimate": 0.084,
+          "ci95": [
+            0.048,
+            0.124
+          ],
+          "bootstrap_resamples": 10000,
+          "random_seed": 20260816,
+          "implementation": "paired percentile bootstrap over query-level differences: policy_correct_i - best_fixed_arm_correct_i"
+        }
+      }
+    },
+    "mean_policy_accuracy": 0.8173333333333334,
+    "mean_best_fixed": 0.7466666666666667,
+    "mean_oracle": 0.8346666666666667,
+    "mean_gain_over_best_fixed": 0.07066666666666667,
+    "pooled_paired_bootstrap": {
+      "point_estimate": 0.07066666666666667,
+      "ci95": [
+        0.052,
+        0.08933333333333333
+      ],
+      "bootstrap_resamples": 10000,
+      "random_seed": 20260816,
+      "implementation": "paired percentile bootstrap over query-level differences: policy_correct_i - best_fixed_arm_correct_i"
+    },
+    "pooled_note": "Pooled over held-out run/query observations; query reuse across runs means fold-level CIs are primary."
+  }
+}

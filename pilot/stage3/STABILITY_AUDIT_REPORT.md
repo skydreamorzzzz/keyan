@@ -2,6 +2,8 @@
 
 Date: 2026-08-16
 
+Correction note: this report predates `RUNTIME_NORMALIZED_STABILITY_REPORT.md`. Its caveat that `deepseek-chat` and `DeepSeek-V4-flash[1m]` were not byte-identical should be read as an API alias/path provenance caveat, not as proof of different underlying models. DeepSeek official V4 documentation says `deepseek-chat` mapped to `deepseek-v4-flash` non-thinking during the transition period. Because the old artifacts did not save response-level model/version metadata, the later runtime-normalized audit treats `stage2_old/r1/r2` as provenance-insufficient and uses `rn1/rn2/rn3` as strict same-runtime evidence.
+
 Scope: fix execution-label validity, repair Stage 2 cache provenance, and test whether the oracle gap reflects cross-run marginal-utility heterogeneity rather than one-shot noise. No new selector features or router design were added.
 
 ## Artifacts

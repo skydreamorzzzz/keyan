@@ -8,12 +8,13 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 import s2o_common as c
 import retrieval as pilot_retrieval
 import config as pilot_config
+import llm as pilot_llm
 
 N = 492
 K_FACTS = 12
 TOP_CASE = 4
 TOP_STRATEGY = 3
-CACHE_KEY_VERSION = "stage2_official_full_prompt_v2"
+CACHE_KEY_VERSION = "stage2_official_full_prompt_v3_runtime_identity"
 
 SYS_PROGRAM = (
     "You are solving a financial reasoning question (FinQA). Given the context and question, produce the "
@@ -49,10 +50,24 @@ def stable_cache_key(mode, arm, sample_index, prompt, system):
         "mode": mode,
         "arm": arm,
         "sample_index": sample_index,
+        "runtime": pilot_llm.runtime_config(),
         "model": pilot_config.LLM_MODEL,
         "temperature": pilot_config.LLM_TEMPERATURE,
         "max_tokens": 600,
-        "thinking": "disabled",
+        "thinking_mode": False,
+        "retrieval_config": {
+            "k_facts": K_FACTS,
+            "case_top_k": TOP_CASE,
+            "strategy_top_k": TOP_STRATEGY,
+            "embed_model": c.EMBED_MODEL,
+            "case_retriever": "pilot_retrieval.retrieve_cases",
+            "strategy_retriever": "pilot_retrieval.retrieve_strategies_v2",
+        },
+        "memory_config": {
+            "case_memory": "pilot/output/case_memory.json",
+            "strategy_memory": "pilot/output/strategies_clean.json",
+            "case_facts_used": 3,
+        },
         "system": system,
         "prompt": prompt,
     }

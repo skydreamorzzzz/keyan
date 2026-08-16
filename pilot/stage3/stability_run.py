@@ -34,7 +34,7 @@ ARMS = {
     "strategy": "baseline_strategy",
     "both": "baseline_both",
 }
-CACHE_VERSION = "stability_full_doc_prog_v1"
+CACHE_VERSION = "stability_full_doc_prog_v2_runtime_normalized"
 
 
 def load_json(path: str) -> Any:
@@ -52,17 +52,30 @@ def deterministic_subset(dev: list[dict[str, Any]], n: int = SAMPLE_N) -> list[i
 
 
 def stable_key(replicate: str, arm: str, sample_index: int, prompt: str, system: str) -> str:
+    runtime = pilot_llm.runtime_config()
     payload = {
         "version": CACHE_VERSION,
         "replicate": replicate,
         "mode": "prog",
         "arm": arm,
         "sample_index": sample_index,
-        "llm_runtime": pilot_llm.runtime_config(),
+        "runtime": runtime,
         "model": pilot_config.LLM_MODEL,
         "temperature": pilot_config.LLM_TEMPERATURE,
         "max_tokens": 600,
-        "thinking": "disabled",
+        "thinking_mode": False,
+        "retrieval_config": {
+            "case_top_k": TOP_CASE,
+            "strategy_top_k": TOP_STRATEGY,
+            "case_retriever": "pilot_retrieval.retrieve_cases",
+            "strategy_retriever": "pilot_retrieval.retrieve_strategies_v2",
+            "embed_model": pilot_config.EMBED_MODEL,
+        },
+        "memory_config": {
+            "case_memory": "pilot/output/case_memory.json",
+            "strategy_memory": "pilot/output/strategies_clean.json",
+            "case_facts_used": 3,
+        },
         "system": system,
         "prompt": prompt,
     }
@@ -84,12 +97,18 @@ class JsonlCache:
 
     def call(self, key: str, prompt: str, system: str) -> str:
         if key in self.cache:
-            return self.cache[key]
-        out = c.ask_llm(prompt, system=system)
-        self.cache[key] = out
+            rec = self.cache[key]
+            if isinstance(rec, dict):
+                return rec["out"], rec.get("runtime", {})
+            return rec, {}
+        messages = [{"role": "system", "content": system}, {"role": "user", "content": prompt}]
+        response = pilot_llm.call_once_with_metadata(messages, max_tokens=600)
+        out = response["text"]
+        runtime = response.get("runtime", {})
+        self.cache[key] = {"out": out, "runtime": runtime}
         with open(self.path, "a") as f:
-            f.write(json.dumps({"key": key, "out": out}, ensure_ascii=False) + "\n")
-        return out
+            f.write(json.dumps({"key": key, "out": out, "runtime": runtime}, ensure_ascii=False) + "\n")
+        return out, runtime
 
 
 def build_prep(dev: list[dict[str, Any]], sample_indices: list[int]) -> dict[int, dict[str, Any]]:
@@ -146,7 +165,35 @@ def run(replicate: str, workers: int) -> None:
         }, open(sample_path, "w"), indent=2)
     prep = build_prep(dev, sample_indices)
     out_path = os.path.join(OUT, f"stability_run_{replicate}.json")
-    results = load_json(out_path) if os.path.exists(out_path) else {"replicate": replicate, "prog": {a: {} for a in ARMS.values()}}
+    results = load_json(out_path) if os.path.exists(out_path) else {
+        "replicate": replicate,
+        "runtime_request": {
+            **pilot_llm.runtime_config(),
+            "max_tokens": 600,
+            "temperature": pilot_config.LLM_TEMPERATURE,
+        },
+        "retrieval_config": {
+            "case_top_k": TOP_CASE,
+            "strategy_top_k": TOP_STRATEGY,
+            "case_retriever": "pilot_retrieval.retrieve_cases",
+            "strategy_retriever": "pilot_retrieval.retrieve_strategies_v2",
+            "embed_model": pilot_config.EMBED_MODEL,
+        },
+        "memory_config": {
+            "case_memory": "pilot/output/case_memory.json",
+            "strategy_memory": "pilot/output/strategies_clean.json",
+            "case_facts_used": 3,
+        },
+        "prompt_config": {
+            "grounding": "full_doc",
+            "mode": "prog",
+            "system_prompt_sha256": hashlib.sha256(SYS_PROGRAM.encode()).hexdigest(),
+            "experience_block_builder": "stage2_official.run_official.exp_block",
+        },
+        "prog": {a: {} for a in ARMS.values()},
+        "runtime_by_call": {},
+    }
+    results.setdefault("runtime_by_call", {})
     cache = JsonlCache(os.path.join(OUT, f"llm_cache_stability_{replicate}.jsonl"))
 
     pending = []
@@ -162,16 +209,18 @@ def run(replicate: str, workers: int) -> None:
 
     def work(item):
         i, arm, key, prompt, system = item
-        return i, arm, cache.call(key, prompt, system)
+        out, runtime = cache.call(key, prompt, system)
+        return i, arm, out, runtime
 
     failures = []
     with ThreadPoolExecutor(max_workers=workers) as ex:
         for j, item in enumerate(ex.map(work, pending), 1):
-            i, arm, out = item
+            i, arm, out, runtime = item
             if out is None:
                 failures.append((i, arm))
                 continue
             results["prog"][arm][str(i)] = out
+            results["runtime_by_call"][f"{arm}:{i}"] = runtime
             if j % 20 == 0:
                 json.dump(results, open(out_path, "w"), ensure_ascii=False)
                 print(f"  {j}/{len(pending)}")
