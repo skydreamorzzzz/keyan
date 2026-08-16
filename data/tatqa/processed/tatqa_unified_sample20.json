@@ -1,0 +1,921 @@
+[
+  {
+    "sample_id": "tatqa:dev:7662c80f-c404-41fb-ab9a-282e91822f74",
+    "split": "dev",
+    "source_id": "fd28a5b6-ecac-4f54-987d-e6a4b1e63bb6",
+    "question": "What are the years included in the table?",
+    "answer": [
+      "2019",
+      "2018"
+    ],
+    "answer_type": "multi-span",
+    "operator": "multi_span",
+    "scale": "",
+    "derivation": "",
+    "text_context_preview": "paragraph_1: Note 21. Equity - dividends\nparagraph_2: Dividends paid during the financial year were as follows:\nparagraph_3: The Directors have declared a final dividend of AU 18 cents per share for the year ended 30 June 2019. The dividend will be paid on 25 September 2019 based on a record date of 4 September 2019. This amounts to a total dividend of US$15.9 million based on the number of shares outstanding.\nparagraph_4: Accounting policy for dividends\nparagraph_5: Dividends are recognised whe",
+    "table_preview": [
+      [
+        "Consolidated",
+        "",
+        ""
+      ],
+      [
+        "",
+        "2019",
+        "2018"
+      ],
+      [
+        "",
+        "US$’000",
+        "US$’000"
+      ],
+      [
+        "Final dividend for the year ended 30 June 2018 of AU 14 cents (2017: AU 12 cents)",
+        "13,327",
+        "12,534"
+      ],
+      [
+        "Interim dividend for the half year ended 31 December 2018 of AU 16 cents (2017: AU 13 cents)",
+        "14,801",
+        "13,099"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:37857b3c-7acc-4562-9dc5-b40ea433f22c",
+    "split": "train",
+    "source_id": "21a527d5-6e1f-476e-a10d-2a6df4666986",
+    "question": "What years are included in the table?",
+    "answer": [
+      "2019",
+      "2018",
+      "2017"
+    ],
+    "answer_type": "multi-span",
+    "operator": "multi_span",
+    "scale": "",
+    "derivation": "",
+    "text_context_preview": "paragraph_1: 2) Cloud Services and Subscriptions:\nparagraph_2: Cloud services and subscriptions revenues are from hosting arrangements where in connection with the licensing of software, the end user doesn’t take possession of the software, as well as from end-to-end fully outsourced business-to-business (B2B) integration solutions to our customers (collectively referred to as cloud arrangements). The software application resides on our hardware or that of a third party, and the customer accesse",
+    "table_preview": [
+      [
+        "",
+        "",
+        "",
+        "Year Ended June 30,",
+        "",
+        ""
+      ],
+      [
+        "(In thousands)",
+        "2019",
+        "Change increase (decrease)",
+        "2018",
+        "Change increase (decrease)",
+        "2017"
+      ],
+      [
+        "Cloud Services and Subscriptions:",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Americas",
+        "$616,776",
+        "$61,553",
+        "$555,223",
+        "$70,216",
+        "$485,007"
+      ],
+      [
+        "EMEA",
+        "206,227",
+        "14,707",
+        "191,520",
+        "40,673",
+        "150,847"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:f27f4e85-8a07-4053-9765-acac6d4780f3",
+    "split": "train",
+    "source_id": "f897bcf7-b40f-450b-9ecb-e263a945e7a9",
+    "question": "What was the change in deferred services revenue between 2018 and 2019?",
+    "answer": 368,
+    "answer_type": "arithmetic",
+    "operator": "subtract",
+    "scale": "million",
+    "derivation": "3,502-3,134",
+    "text_context_preview": "paragraph_1: Deferred revenue and financed unearned services revenue (in millions):\nparagraph_2: The following table summarizes the components of our deferred revenue and financed unearned services balance as reported in our consolidated balance sheets (in millions):\nparagraph_3: Deferred product revenue represents unrecognized revenue related to undelivered product commitments and other product deliveries that have not met all revenue recognition criteria. Deferred services revenue represents c",
+    "table_preview": [
+      [
+        "",
+        "April 26, 2019",
+        "April 27, 2018"
+      ],
+      [
+        "Deferred product revenue",
+        "$ 84",
+        "$ 107"
+      ],
+      [
+        "Deferred services revenue",
+        "3,502",
+        "3,134"
+      ],
+      [
+        "Financed unearned services revenue",
+        "82",
+        "122"
+      ],
+      [
+        "Total",
+        "$ 3,668",
+        "$ 3,363"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:87c2a157-550c-4a95-830f-2e3d7787a42c",
+    "split": "train",
+    "source_id": "ed965846-cd02-4ab7-97e0-b75c7c5a2f0c",
+    "question": "Which years does the table provide information for the Company’s deferred tax assets and liabilities?",
+    "answer": [
+      "2019",
+      "2018"
+    ],
+    "answer_type": "multi-span",
+    "operator": "multi_span",
+    "scale": "",
+    "derivation": "",
+    "text_context_preview": "paragraph_1: GreenSky, Inc. NOTES TO CONSOLIDATED FINANCIAL STATEMENTS — (Continued) (United States Dollars in thousands, except per share data, unless otherwise stated)\nparagraph_2: Details of the Company’s deferred tax assets and liabilities are as follows:\nparagraph_3: As of December 31, 2019, the Company had net operating loss carryforwards (“NOLs”) of $4.7 million, of which approximately $3.9 million have an indefinite life. NOLs of $0.8 million will begin to expire in 2030. As of December ",
+    "table_preview": [
+      [
+        "",
+        "Year Ended December 31,",
+        ""
+      ],
+      [
+        "",
+        "2019",
+        "2018"
+      ],
+      [
+        "Deferred tax assets:",
+        "",
+        ""
+      ],
+      [
+        "Investment in partnership",
+        "$358,024",
+        "$299,466"
+      ],
+      [
+        "Net operating loss carryforwards and tax credits",
+        "5,160",
+        "5,634"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:a71a272e-5c74-495f-9a89-e800831fd423",
+    "split": "train",
+    "source_id": "41405b4d-df17-459a-9548-28d2188bd065",
+    "question": "What was the percentage change in the outstanding weighted-average exercise price per share for pivotal stock options between 2018 and 2019?",
+    "answer": 6.27,
+    "answer_type": "arithmetic",
+    "operator": "divide",
+    "scale": "percent",
+    "derivation": "(8.31-7.82)/7.82",
+    "text_context_preview": "paragraph_1: VMware and Pivotal Stock Options\nparagraph_2: The following table summarizes stock option activity for VMware and Pivotal since February 3, 2017 (shares in thousands):\nparagraph_3: (1) The weighted-average exercise price of options outstanding as of February 1, 2019 reflects the adjustments to the options as a result of the Special Dividend.\nparagraph_4: (2) Stock option granted under the VMware equity plan includes 0.6 million options issued for unvested options assumed as part of ",
+    "table_preview": [
+      [
+        "",
+        "",
+        "VMware Stock Options",
+        "",
+        "Pivotal Stock Options"
+      ],
+      [
+        "",
+        "Number of Shares",
+        "Weighted-Average Exercise Price (per share)",
+        "Number of Shares",
+        "Weighted-Average Exercise Price (per share)"
+      ],
+      [
+        "Outstanding, February 3, 2017",
+        "1,991",
+        "$69.38",
+        "39,361",
+        "$6.72"
+      ],
+      [
+        "Granted",
+        "745",
+        "13.79",
+        "20,323",
+        "9.73"
+      ],
+      [
+        "Forfeited",
+        "(36)",
+        "55.44",
+        "(2,380)",
+        "8.13"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:dev:5739426c-3352-427a-98be-704f08737259",
+    "split": "dev",
+    "source_id": "ef1f83ac-45f8-4d92-b577-390b4d8d9473",
+    "question": "What does software and other revenue comprise of?",
+    "answer": [
+      "Comprised primarily of fees for end-user software products provided through direct customer"
+    ],
+    "answer_type": "span",
+    "operator": "span",
+    "scale": "",
+    "derivation": "",
+    "text_context_preview": "paragraph_1: Years Ended December 31, 2019 and 2018:\nparagraph_2: Revenue\nparagraph_3: Services. Services revenue consists primarily of fees for customer support services generated from our partners. We provide these services remotely, generally using personnel who utilize our proprietary technology to deliver the services. Services revenue is also comprised of licensing of our Support.com Cloud applications. Services revenue for the year ended December 31, 2019 decreased by $4.9 million from 20",
+    "table_preview": [
+      [
+        "($ in thousands)",
+        "2019",
+        "% Change 2018 to 2019",
+        "2018"
+      ],
+      [
+        "Services",
+        "$59,545",
+        "(8)%",
+        "$64,476"
+      ],
+      [
+        "Software and other",
+        "3,788",
+        "(25)%",
+        "5,073"
+      ],
+      [
+        "Total revenue ",
+        "$63,333",
+        "(9)%",
+        "$69,549"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:68ad8216-8af0-4685-afcb-0bcfb482af3f",
+    "split": "train",
+    "source_id": "394df4cf-0cf5-4645-bb7a-c7a0366c0283",
+    "question": "What is the Total number of Shares purchased across the periods?",
+    "answer": [
+      "4,743,354"
+    ],
+    "answer_type": "span",
+    "operator": "span",
+    "scale": "",
+    "derivation": "",
+    "text_context_preview": "paragraph_1: Issuer Purchases of Equity Securities\nparagraph_2: (i) Includes 3,416 shares that have been withheld by the Company to satisfy its tax withholding and remittance obligations in connection with the vesting of restricted stock awards. In addition, the Company exercised a pro-rata portion of the 2022 convertible note hedges (described in Note 12, Indebtedness, of the Notes to the Consolidated Financial Statements) to offset the shares of the Company’s Class A common stock issued to set",
+    "table_preview": [
+      [
+        "Period",
+        "Total number of Shares purchased",
+        "Average price paid per share",
+        "Total number of shares purchased as part of publicly announced plans or programs",
+        "Maximum number (or approximate dollar value) of shares that may yet be purchased under the plans or programs"
+      ],
+      [
+        "October 1 to October 31",
+        "3,646,581 (i)",
+        "97.28 (ii)",
+        "—",
+        "—"
+      ],
+      [
+        "November 1 to November 30",
+        "1,096,773 (iii)",
+        "— (ii)",
+        "—",
+        "—"
+      ],
+      [
+        "December 1 to December 31",
+        "—",
+        "—",
+        "—",
+        "—"
+      ],
+      [
+        "Total",
+        "4,743,354",
+        "97.28 (ii)",
+        "—",
+        "—"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:73ab9d9e-d2e4-4347-8254-adacde6cd718",
+    "split": "train",
+    "source_id": "b0c8063b-bc5f-4741-949b-3150643eeac8",
+    "question": "What is the difference in percentage of revenues from FEI-NY between 2019 and 2018?",
+    "answer": 8.5,
+    "answer_type": "arithmetic",
+    "operator": "subtract",
+    "scale": "percent",
+    "derivation": "76.9-68.4",
+    "text_context_preview": "paragraph_1: Consolidated Results\nparagraph_2: The table below sets forth for the fiscal years ended April 30, 2019 and 2018, the percentage of consolidated net sales represented by certain items in the Company’s consolidated statements of operations:",
+    "table_preview": [
+      [
+        "",
+        "2019",
+        "2018"
+      ],
+      [
+        "Revenues",
+        "",
+        ""
+      ],
+      [
+        "FEI-NY",
+        "76.9%",
+        "68.4%"
+      ],
+      [
+        "FEI-Zyfer",
+        "24.7",
+        "38.8"
+      ],
+      [
+        "Less intersegment revenues",
+        "(1.6)",
+        "(7.2)"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:9ad8bdbc-9a6d-4076-8d9c-51f83f66b4e9",
+    "split": "train",
+    "source_id": "a3ce1a9f-8c21-45d2-b30b-2edaa8167512",
+    "question": "What was the Net carrying amount of long-term debt in 2019?",
+    "answer": [
+      "206,909"
+    ],
+    "answer_type": "span",
+    "operator": "span",
+    "scale": "thousand",
+    "derivation": "",
+    "text_context_preview": "paragraph_1: 8. Debt and Interest Rate Swap\nparagraph_2: Debt The carrying amount of the Company's long-term debt consists of the following:\nparagraph_3: On May 12, 2017, the Company entered into a credit agreement with certain lenders and a collateral agent in connection with the acquisition of Exar (Note 3). The credit agreement provides for an initial secured term B loan facility (the “Initial Term Loan”) in an aggregate principal amount of $425.0 million. The credit agreement permits the Com",
+    "table_preview": [
+      [
+        "",
+        "December 31, 2019",
+        "December 31, 2018"
+      ],
+      [
+        "",
+        "(in thousands)",
+        ""
+      ],
+      [
+        "Principal",
+        "$212,000",
+        "$262,000"
+      ],
+      [
+        "Less:",
+        "",
+        ""
+      ],
+      [
+        "Unamortized debt discount",
+        "(1,328)",
+        "(1,630)"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:2ca81659-962f-443a-95fa-04da66829eba",
+    "split": "train",
+    "source_id": "0992660b-76ed-46a1-92eb-e91977f6f381",
+    "question": "How many Satellite subscribers were there in 2019?",
+    "answer": [
+      "1,005,282"
+    ],
+    "answer_type": "span",
+    "operator": "span",
+    "scale": "",
+    "derivation": "",
+    "text_context_preview": "paragraph_1: TOTAL BCE CUSTOMER CONNECTIONS\nparagraph_2: (1) At the beginning of Q1 2019, we adjusted our wireless subscriber base to remove 167,929 subscribers (72,231 postpaid and 95,698 prepaid) as follows: (A) 65,798 subscribers (19,195 postpaid and 46,603 prepaid), due to the completion of the shutdown of the CDMA network on April 30, 2019, (B) 49,095 prepaid subscribers as a result of a change to our deactivation policy, mainly from 120 days for Bell/Virgin Mobile and 150 days for Lucky Mo",
+    "table_preview": [
+      [
+        "",
+        "2019",
+        "2018",
+        "% CHANGE"
+      ],
+      [
+        "Wireless subscribers [1][2]",
+        "9,957,962",
+        "9,610,482",
+        "3.6%"
+      ],
+      [
+        "Postpaid [1][2]",
+        "9,159,940",
+        "8,830,216",
+        "3.7%"
+      ],
+      [
+        "Prepaid [1]",
+        "798,022",
+        "780,266",
+        "2.3%"
+      ],
+      [
+        "Retail high-speed Internet subscribers [1][3]",
+        "3,555,601",
+        "3,410,374",
+        "4.3%"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:42bcad87-2d9d-40fe-a58f-9f3f2b3d34c4",
+    "split": "train",
+    "source_id": "d2647217-3696-4ec0-ad69-a3db3626c707",
+    "question": "What is the average Total reclassifications for the period for the 3 years?",
+    "answer": -4.07,
+    "answer_type": "arithmetic",
+    "operator": "divide",
+    "scale": "million",
+    "derivation": "-(2.5+1.9+7.8)/3",
+    "text_context_preview": "paragraph_1: The following table provides detail of amounts reclassified from AOCL:\nparagraph_2: (1) These accumulated other comprehensive components are included in our derivative and hedging activities. See Note 15, “Derivatives and Hedging Activities,” of the Notes to Consolidated Financial Statements for additional details.",
+    "table_preview": [
+      [
+        "(In millions)",
+        "2019",
+        "2018",
+        "2017",
+        "Location of Amount Reclassified from AOCL"
+      ],
+      [
+        "Defined benefit pension plans and other post-employment benefits:",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Prior service credits",
+        "$ 0.1",
+        "$0.3",
+        "$ 1.3",
+        ""
+      ],
+      [
+        "Actuarial losses",
+        "(4.9)",
+        "(3.1)",
+        "(10.0)",
+        ""
+      ],
+      [
+        "Total pre-tax amount",
+        "(4.8)",
+        "(2.8)",
+        "(8.7)",
+        "Other (expense) income, net"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:490607ea-3c95-4679-9a34-c546b36ea930",
+    "split": "train",
+    "source_id": "7f48271c-c615-4e72-bf74-6864c6a8c0a0",
+    "question": "Where are reclassifications related to gains and losses on available-for-sale debt securities included in?",
+    "answer": [
+      "Reclassifications related to gains and losses on available-for-sale debt securities are included in \"Interest and other expense, net\"."
+    ],
+    "answer_type": "span",
+    "operator": "span",
+    "scale": "",
+    "derivation": "",
+    "text_context_preview": "paragraph_1: 12. Accumulated Other Comprehensive Loss\nparagraph_2: Accumulated other comprehensive loss, net of taxes, consisted of the following:\nparagraph_3: Reclassifications related to gains and losses on available-for-sale debt securities are included in \"Interest and other expense, net\". Refer to Note 3, \"Financial Instruments\" for the amount and location of reclassifications related to derivative instruments. Reclassifications of the defined benefit pension components of net periodic bene",
+    "table_preview": [
+      [
+        "",
+        "Net Unrealized Gains (Losses) on Derivative Instruments",
+        "Net Unrealized Gains (Losses) on Available for Sale Securities",
+        "Defined Benefit Pension Components",
+        "Foreign Currency Translation Adjustments",
+        "Total"
+      ],
+      [
+        "Balances, January 31, 2017",
+        "$14.6",
+        "$1.5",
+        "$(33.8)",
+        "$(160.8)",
+        "$(178.5)"
+      ],
+      [
+        "Other comprehensive (loss) income before reclassifications",
+        "(24.5)",
+        "(0.6)",
+        "4.3",
+        "86.3",
+        "65.5"
+      ],
+      [
+        "Pre-tax losses (gains) reclassified from accumulated other comprehensive income",
+        "(9.9)",
+        "0.3",
+        "0.9",
+        "0.1",
+        "(8.6)"
+      ],
+      [
+        "Tax effects",
+        "3.2",
+        "0.1",
+        "(0.7)",
+        "(4.8)",
+        "(2.2)"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:82c74c65-f53e-423a-995b-ab4f6e057161",
+    "split": "train",
+    "source_id": "d28839bf-4989-4ad4-acb4-c76e6eb815a9",
+    "question": "What was the committed backlog in December 31, 2019?",
+    "answer": [
+      "$2,168"
+    ],
+    "answer_type": "span",
+    "operator": "span",
+    "scale": "million",
+    "derivation": "",
+    "text_context_preview": "paragraph_1: The following table sets forth our 60-month backlog estimate, by reportable segment, as of December 31, 2019; September 30, 2019; June 30, 2019; March 31, 2019; and December 31, 2018 (in millions). The 60-month backlog estimate includes approximately $1.5 billion as a result of the acquisition of Speedpay, which occurred on May 9, 2019. Dollar amounts reflect foreign currency exchange rates as of each period end. This is a non-GAAP financial measure being presented to provide compar",
+    "table_preview": [
+      [
+        "",
+        "December 31, 2019",
+        "September 30, 2019",
+        "June 30, 2019",
+        "March 31, 2019",
+        "December 31, 2018"
+      ],
+      [
+        "ACI On Premise",
+        "$1,977",
+        "$1,925",
+        "$1,880",
+        "$1,861",
+        "$1,875"
+      ],
+      [
+        "ACI On Demand",
+        "3,855",
+        "3,756",
+        "3,813",
+        "2,290",
+        "2,299"
+      ],
+      [
+        "Total",
+        "$5,832",
+        "$5,681",
+        "$5,693",
+        "$4,151",
+        "$4,174"
+      ],
+      [
+        "",
+        "December 31, 2019",
+        "September 30, 2019",
+        "June 30, 2019",
+        "March 31, 2019",
+        "December 31, 2018"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:dffb8023-6bac-4569-a4a2-94b90c0eec67",
+    "split": "train",
+    "source_id": "3f29c754-223a-4d53-8d7b-6fb40ee0774f",
+    "question": "What is the percentage difference of Deposits and restricted cash for June 30, 2019 vs June 30, 2018?",
+    "answer": 44.22,
+    "answer_type": "arithmetic",
+    "operator": "divide",
+    "scale": "percent",
+    "derivation": "(13,671-9,479)/9,479",
+    "text_context_preview": "paragraph_1: NOTE 8—OTHER ASSETS\nparagraph_2: Deposits and restricted cash primarily relate to security deposits provided to landlords in accordance with facility lease agreements and cash restricted per the terms of certain contractual-based agreements.\nparagraph_3: Deferred implementation costs relate to direct and relevant costs on implementation of long-term contracts, to the extent such costs can be recovered through guaranteed contract revenues. As a result of the adoption of Topic 606, de",
+    "table_preview": [
+      [
+        "",
+        "As of June 30, 2019",
+        "As of June 30, 2018"
+      ],
+      [
+        "Deposits and restricted cash",
+        "$13,671",
+        "$9,479"
+      ],
+      [
+        "Deferred implementation costs",
+        "—",
+        "13,740"
+      ],
+      [
+        "Capitalized costs to obtain a contract",
+        "35,593",
+        "13,027"
+      ],
+      [
+        "Investments",
+        "67,002",
+        "49,635"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:a8c806cb-682b-48f8-979d-d82cbdaa2ab8",
+    "split": "train",
+    "source_id": "8246ab3e-5088-4608-b00a-72f31d3453d2",
+    "question": "What was the Weighted-average shares used in computing basic net income per share in 2019, 2018 and 2017 respectively?",
+    "answer": [
+      "74,994",
+      "73,482",
+      "72,292"
+    ],
+    "answer_type": "multi-span",
+    "operator": "multi_span",
+    "scale": "thousand",
+    "derivation": "",
+    "text_context_preview": "paragraph_1: Net Income Per Share\nparagraph_2: Basic net income per share is computed by dividing net income by the weighted-average number of common shares outstanding for the period. Diluted net income per share is computed giving effect to all potentially dilutive common stock and common stock equivalents, including stock options, RSUs and common stock subject to repurchase.\nparagraph_3: The following table reconciles the shares used in calculating basic net income per share and diluted net i",
+    "table_preview": [
+      [
+        "",
+        "",
+        "Fiscal Year Ended",
+        ""
+      ],
+      [
+        "",
+        "December 28, 2019",
+        "December 29, 2018",
+        "December 30, 2017"
+      ],
+      [
+        "Weighted-average shares used in computing basic net income per share",
+        "74,994",
+        "73,482",
+        "72,292"
+      ],
+      [
+        "Add potentially dilutive securities",
+        "2,292",
+        "1,700",
+        "1,947"
+      ],
+      [
+        "Weighted-average shares used in computing basic and diluted net income per share",
+        "77,286",
+        "75,182",
+        "74,239"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:92cc0a66-9801-45a1-8a13-cbe30f7871ba",
+    "split": "train",
+    "source_id": "9c6f1833-8aa4-4012-99ab-8fea4c9d846f",
+    "question": "What was the Beginning balance in 2019 and 2018 respectively?",
+    "answer": [
+      "$6,164",
+      "$4,931"
+    ],
+    "answer_type": "multi-span",
+    "operator": "multi_span",
+    "scale": "",
+    "derivation": "",
+    "text_context_preview": "paragraph_1: A reconciliation of the beginning and ending amount of unrecognized tax benefits is as follows:\nparagraph_2: Interest and penalty charges, if any, related to uncertain tax positions are classified as income tax expense in the accompanying consolidated statements of operations. As of March 31, 2019 and 2018, the Company had immaterial accrued interest or penalties related to uncertain tax positions.\nparagraph_3: The Company is subject to taxation in the United Kingdom and several for",
+    "table_preview": [
+      [
+        "",
+        "Year ended March 31,",
+        ""
+      ],
+      [
+        "",
+        "2019",
+        "2018"
+      ],
+      [
+        "Beginning balance",
+        "$6,164",
+        "$4,931"
+      ],
+      [
+        "Additions based on tax positions related to current year",
+        "164",
+        "142"
+      ],
+      [
+        "Additions for tax positions of prior years",
+        "231",
+        "1,444"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:dev:78523190-61da-490f-b019-b065c317bfd3",
+    "split": "dev",
+    "source_id": "4e94f70f-b7e3-453e-ae92-846768589e75",
+    "question": "Why did normalised ROFE decrease?",
+    "answer": [
+      "Due to an increase in funds employed driven by refurbishments and acquisitions of hotels."
+    ],
+    "answer_type": "span",
+    "operator": "span",
+    "scale": "",
+    "derivation": "",
+    "text_context_preview": "paragraph_1: Hotels sales improvement in the second half was driven by Bars, Food and Accommodation, benefitting from venue refurbishments completed in the year.\nparagraph_2: Hotels sales increased by 3.7% in F19 or 1.8% on a normalised basis. Comparable sales increased by 1.9% with 3.0% growth in Q4. Sales growth accelerated in the second half due to continued growth in Bars, Food and Accommodation benefitting from venue refurbishments with 49 completed during the year. Gaming sales continue to",
+    "table_preview": [
+      [
+        "",
+        "F19",
+        "F18",
+        "",
+        ""
+      ],
+      [
+        "$ MILLION",
+        "53 WEEKS",
+        "52 WEEKS",
+        "CHANGE",
+        "CHANGE NORMALISED"
+      ],
+      [
+        "Sales",
+        "1,671",
+        "1,612",
+        "3.7%",
+        "1.8%"
+      ],
+      [
+        "EBITDA",
+        "372",
+        "361",
+        "3.5%",
+        "2.5%"
+      ],
+      [
+        "Depreciation and amortisation",
+        "(111)",
+        "(102)",
+        "9.9%",
+        "9.9%"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:469b15eb-f584-4b29-ab71-16937c6576ff",
+    "split": "train",
+    "source_id": "d35039cc-5f70-4d30-b1d2-fb22b69e4bd6",
+    "question": "How are total segment assets defined?",
+    "answer": [
+      "accounts receivable, inventories, net, customer-related property, plant and equipment, intangible assets net of accumulated amortization and goodwill."
+    ],
+    "answer_type": "span",
+    "operator": "span",
+    "scale": "",
+    "derivation": "",
+    "text_context_preview": "paragraph_1: Segment Data\nparagraph_2: Operating segments are defined as components of an enterprise that engage in business activities from which they may earn revenues and incur expenses; for which separate financial information is available; and whose operating results are regularly reviewed by the chief operating decision maker to assess the performance\nof the individual segment and make decisions about resources to be allocated to the segment.\nparagraph_3: The Company derives its revenue fr",
+    "table_preview": [
+      [
+        "",
+        "August 31, 2019",
+        "August 31, 2018"
+      ],
+      [
+        "Total assets",
+        "",
+        ""
+      ],
+      [
+        "EMS",
+        "$4,353,465",
+        "$3,456,866"
+      ],
+      [
+        "DMS",
+        "4,988,198",
+        "5,378,436"
+      ],
+      [
+        "Other non-allocated assets",
+        "3,628,812",
+        "3,210,339"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:c1db50da-57eb-4da1-b2ad-998d3697a70b",
+    "split": "train",
+    "source_id": "6c0c1292-752b-430d-b590-aaac01463b0c",
+    "question": "What is the average approximate Dollar Value of Shares that May Yet Be Purchased Under the Program from March 1, 2019 to May 31, 2019?",
+    "answer": 7275.77,
+    "answer_type": "arithmetic",
+    "operator": "divide",
+    "scale": "million",
+    "derivation": "(8,780.5+7,198.4+5,848.4) / 3 ",
+    "text_context_preview": "paragraph_1: Stock Repurchase Program\nparagraph_2: Our Board of Directors has approved a program for us to repurchase shares of our common stock. On September 17, 2018 and February 15, 2019, we announced that our Board of Directors approved expansions of our stock repurchase program totaling $24.0 billion. As of May 31, 2019, approximately $5.8 billion remained available for stock repurchases pursuant to our stock repurchase program.\nparagraph_3: Our stock repurchase authorization does not have ",
+    "table_preview": [
+      [
+        "",
+        "",
+        "",
+        "Total Number of",
+        "Approximate Dollar"
+      ],
+      [
+        "",
+        "",
+        "",
+        "Shares Purchased as",
+        "Value of Shares that"
+      ],
+      [
+        "",
+        "Total Number of",
+        "Average Price",
+        "Part of Publicly",
+        "May Yet Be"
+      ],
+      [
+        "",
+        "Shares",
+        "Paid per",
+        "Announced",
+        "Purchased"
+      ],
+      [
+        "(in millions, except per share amounts)",
+        "Purchased",
+        "Share",
+        "Program",
+        "Under the Program"
+      ]
+    ]
+  },
+  {
+    "sample_id": "tatqa:train:e9d402a6-f35c-4a1b-889f-9775eca979b9",
+    "split": "train",
+    "source_id": "789bab55-3343-4512-b6b2-18ea66d8d79c",
+    "question": "For which year was  the  Total future minimum operating lease payments be higher?",
+    "answer": [
+      "2019"
+    ],
+    "answer_type": "span",
+    "operator": "comparison",
+    "scale": "",
+    "derivation": "Compare the  Total future minimum operating lease payments  for the larger value",
+    "text_context_preview": "paragraph_1: Future minimum operating lease payments were as follows:\nparagraph_2: Operating lease commitments were mainly in respect of land and buildings which arose from a sale and operating leaseback transaction in 2001. Leases have an average term of 13 years (2017/18: 14 years) and rentals are fixed for an average of 13 years (2017/18: 14 years).\nparagraph_3: Other than as disclosed below, there were no contingent liabilities or guarantees at 31 March 2018 other than those arising in the o",
+    "table_preview": [
+      [
+        "Payable in the year ending 31 March:",
+        "2019 £m",
+        "2018 £m"
+      ],
+      [
+        "2019",
+        "-",
+        "600"
+      ],
+      [
+        "2020",
+        "755",
+        "550"
+      ],
+      [
+        "2021",
+        "641",
+        "513"
+      ],
+      [
+        "2022",
+        "599",
+        "486"
+      ]
+    ]
+  }
+]

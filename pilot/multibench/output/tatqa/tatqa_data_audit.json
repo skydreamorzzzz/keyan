@@ -1,0 +1,184 @@
+{
+  "splits": {
+    "train": {
+      "contexts": 2201,
+      "questions": 13215,
+      "avg_questions_per_context": 6.004089050431622,
+      "avg_paragraphs_per_context": 4.779191276692413,
+      "avg_table_rows": 9.41753748296229,
+      "avg_table_cols_maxrow": 3.9972739663789185,
+      "top_level_context_keys": [
+        "paragraphs",
+        "questions",
+        "table"
+      ],
+      "question_keys": [
+        "answer",
+        "answer_from",
+        "answer_type",
+        "derivation",
+        "order",
+        "question",
+        "rel_paragraphs",
+        "req_comparison",
+        "scale",
+        "uid"
+      ],
+      "answer_type_counts": {
+        "multi-span": 1645,
+        "span": 5722,
+        "arithmetic": 5543,
+        "count": 305
+      },
+      "operator_counts": {
+        "multi_span": 1568,
+        "span": 5040,
+        "divide": 3018,
+        "comparison": 759,
+        "subtract": 2187,
+        "count": 305,
+        "add": 298,
+        "multiply": 40
+      },
+      "scale_counts": {
+        "none": 6457,
+        "percent": 2104,
+        "thousand": 2481,
+        "million": 2153,
+        "billion": 20
+      },
+      "answer_from_counts": {
+        "table": 5920,
+        "text": 3125,
+        "table-text": 4170
+      },
+      "missing_counts": {
+        "answer": 0,
+        "operator": 0,
+        "scale": 0,
+        "derivation": 6612,
+        "text_context": 0,
+        "table": 0
+      }
+    },
+    "dev": {
+      "contexts": 278,
+      "questions": 1668,
+      "avg_questions_per_context": 6.0,
+      "avg_paragraphs_per_context": 4.877697841726619,
+      "avg_table_rows": 9.715827338129497,
+      "avg_table_cols_maxrow": 3.902877697841727,
+      "top_level_context_keys": [
+        "paragraphs",
+        "questions",
+        "table"
+      ],
+      "question_keys": [
+        "answer",
+        "answer_from",
+        "answer_type",
+        "derivation",
+        "order",
+        "question",
+        "rel_paragraphs",
+        "req_comparison",
+        "scale",
+        "uid"
+      ],
+      "answer_type_counts": {
+        "span": 701,
+        "multi-span": 217,
+        "arithmetic": 718,
+        "count": 32
+      },
+      "operator_counts": {
+        "span": 628,
+        "multi_span": 206,
+        "comparison": 84,
+        "subtract": 249,
+        "divide": 408,
+        "count": 32,
+        "add": 57,
+        "multiply": 4
+      },
+      "scale_counts": {
+        "none": 794,
+        "million": 254,
+        "percent": 268,
+        "thousand": 345,
+        "billion": 7
+      },
+      "answer_from_counts": {
+        "text": 389,
+        "table-text": 507,
+        "table": 772
+      },
+      "missing_counts": {
+        "answer": 0,
+        "operator": 0,
+        "scale": 0,
+        "derivation": 834,
+        "text_context": 0,
+        "table": 0
+      }
+    },
+    "test": {
+      "contexts": 278,
+      "questions": 1669,
+      "avg_questions_per_context": 6.003597122302159,
+      "avg_paragraphs_per_context": 4.60431654676259,
+      "avg_table_rows": 9.280575539568344,
+      "avg_table_cols_maxrow": 4.028776978417266,
+      "top_level_context_keys": [
+        "paragraphs",
+        "questions",
+        "table"
+      ],
+      "question_keys": [
+        "order",
+        "question",
+        "uid"
+      ],
+      "answer_type_counts": {
+        "missing": 1669
+      },
+      "operator_counts": {
+        "missing": 1669
+      },
+      "scale_counts": {
+        "none": 1669
+      },
+      "answer_from_counts": {
+        "missing": 1669
+      },
+      "missing_counts": {
+        "answer": 1669,
+        "operator": 1669,
+        "scale": 1669,
+        "derivation": 1669,
+        "text_context": 0,
+        "table": 0
+      }
+    }
+  },
+  "md5": {
+    "train": {
+      "path": "data/tatqa/raw/tatqa_dataset_train.json",
+      "actual": "cc5026bdfe51bb47d63e6c3d31714951",
+      "expected": "cc5026bdfe51bb47d63e6c3d31714951",
+      "matches_expected": true
+    },
+    "dev": {
+      "path": "data/tatqa/raw/tatqa_dataset_dev.json",
+      "actual": "0b24a68b35fd814df5ad12cba548a8ea",
+      "expected": "0b24a68b35fd814df5ad12cba548a8ea",
+      "matches_expected": true
+    },
+    "test": {
+      "path": "data/tatqa/raw/tatqa_dataset_test.json",
+      "actual": "c6ccc2beecaed12fc070c3df102ca019",
+      "expected": "c6ccc2beecaed12fc070c3df102ca019",
+      "matches_expected": true
+    }
+  }
+}
