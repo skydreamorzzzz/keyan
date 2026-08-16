@@ -498,3 +498,35 @@
 ### decision
 - **PROCEED**, but only to a larger diagnostic dry-run with frozen pipeline and explicit scale/format failure audit.
 - Do not interpret this as evidence that TAT-QA memory helps yet; it only clears the pipeline-validity gate.
+
+## 23. TAT-QA Output Normalization Audit（2026-08-16）
+
+### scope
+- 只做 evaluation-layer audit；冻结现有 30×4 raw outputs，不调用 API，不改 prompt、retrieval、memory 或样本。
+- 基于 official TAT-QA evaluator 语义实现保守 prediction canonicalization。
+
+### canonicalization contract
+- 只改纯数值/货币字符串：去 `$`、`,` 等格式符。
+- 将纯数值 answer 中嵌入的 `million` / `thousand` / `billion` / `percent` / `%` 与独立 `scale` 拆分。
+- 若 answer 内嵌 scale 与独立 scale 重复，只保留独立 scale 语义，避免 official evaluator 二次 scale。
+- 包含普通词的真实 span / multi-span 文本不改。
+
+### results
+- Changed predictions：52 / 120。
+- Correctness flips：14 improved，0 worsened。
+- EM / F1 raw → canonicalized：
+  - None：0.567 / 0.685 → 0.667 / 0.785。
+  - Case：0.533 / 0.620 → 0.667 / 0.753。
+  - Strategy：0.533 / 0.662 → 0.633 / 0.762。
+  - Both：0.500 / 0.592 → 0.633 / 0.725。
+- Memory events raw → canonicalized：
+  - case-only：0 → 0。
+  - strategy-only：1 → 0。
+  - None > Both：2 → 2。
+  - Case > Both：1 → 1。
+  - Strategy > Both：2 → 1。
+
+### decision
+- **FREEZE EVALUATION CONTRACT**。
+- 后续 TAT-QA execution 主评价应使用 canonicalized prediction contract；raw evaluator-only numbers are diagnostic only。
+- 该 audit 说明上一轮部分 memory-effect event 是 answer/scale formatting artifact，但 negative interference signals 没有完全消失。

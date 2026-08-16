@@ -1,0 +1,886 @@
+{
+  "version": "tatqa_output_normalization_audit_v1",
+  "source_four_arm_json": "pilot/multibench/output/tatqa/tatqa_four_arm_dry_run.json",
+  "sample_n": 30,
+  "arms": [
+    "none",
+    "case",
+    "strategy",
+    "both"
+  ],
+  "normalization_contract": [
+    "Strip currency symbols and comma separators only from pure numeric predictions.",
+    "Split embedded thousand/million/billion/percent scale tokens from pure numeric predictions.",
+    "Remove duplicate embedded scale when it matches the independent pred_scale.",
+    "Preserve textual span and multi-span answers containing non-scale words."
+  ],
+  "changed_predictions": 52,
+  "change_tag_counts": {
+    "numeric_format": 52,
+    "duplicate_scale_removed": 23,
+    "embedded_scale:million": 14,
+    "embedded_scale:percent": 9
+  },
+  "metrics": {
+    "raw": {
+      "none": {
+        "count": 30,
+        "missing_predictions": 0,
+        "exact_match": 0.5666666666666667,
+        "f1": 0.6853333333333335,
+        "scale_score": 0.7666666666666667,
+        "op_score": 0.0,
+        "by_answer_type": {
+          "arithmetic": {
+            "count": 7,
+            "em": 0.7142857142857143,
+            "f1": 0.7142857142857143
+          },
+          "count": {
+            "count": 1,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "multi-span": {
+            "count": 1,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "span": {
+            "count": 21,
+            "em": 0.47619047619047616,
+            "f1": 0.6457142857142857
+          }
+        },
+        "by_scale": {
+          "": {
+            "count": 21,
+            "em": 0.47619047619047616,
+            "f1": 0.6457142857142857
+          },
+          "million": {
+            "count": 3,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "percent": {
+            "count": 3,
+            "em": 0.3333333333333333,
+            "f1": 0.3333333333333333
+          },
+          "thousand": {
+            "count": 3,
+            "em": 1.0,
+            "f1": 1.0
+          }
+        },
+        "missing_prediction_uids": []
+      },
+      "case": {
+        "count": 30,
+        "missing_predictions": 0,
+        "exact_match": 0.5333333333333333,
+        "f1": 0.62,
+        "scale_score": 0.7333333333333333,
+        "op_score": 0.0,
+        "by_answer_type": {
+          "arithmetic": {
+            "count": 7,
+            "em": 0.5714285714285714,
+            "f1": 0.5714285714285714
+          },
+          "count": {
+            "count": 1,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "multi-span": {
+            "count": 1,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "span": {
+            "count": 21,
+            "em": 0.47619047619047616,
+            "f1": 0.6
+          }
+        },
+        "by_scale": {
+          "": {
+            "count": 21,
+            "em": 0.47619047619047616,
+            "f1": 0.6
+          },
+          "million": {
+            "count": 3,
+            "em": 0.6666666666666666,
+            "f1": 0.6666666666666666
+          },
+          "percent": {
+            "count": 3,
+            "em": 0.3333333333333333,
+            "f1": 0.3333333333333333
+          },
+          "thousand": {
+            "count": 3,
+            "em": 1.0,
+            "f1": 1.0
+          }
+        },
+        "missing_prediction_uids": []
+      },
+      "strategy": {
+        "count": 30,
+        "missing_predictions": 0,
+        "exact_match": 0.5333333333333333,
+        "f1": 0.662,
+        "scale_score": 0.7666666666666667,
+        "op_score": 0.0,
+        "by_answer_type": {
+          "arithmetic": {
+            "count": 7,
+            "em": 0.7142857142857143,
+            "f1": 0.7142857142857143
+          },
+          "count": {
+            "count": 1,
+            "em": 0.0,
+            "f1": 0.0
+          },
+          "multi-span": {
+            "count": 1,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "span": {
+            "count": 21,
+            "em": 0.47619047619047616,
+            "f1": 0.66
+          }
+        },
+        "by_scale": {
+          "": {
+            "count": 21,
+            "em": 0.42857142857142855,
+            "f1": 0.6123809523809525
+          },
+          "million": {
+            "count": 3,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "percent": {
+            "count": 3,
+            "em": 0.3333333333333333,
+            "f1": 0.3333333333333333
+          },
+          "thousand": {
+            "count": 3,
+            "em": 1.0,
+            "f1": 1.0
+          }
+        },
+        "missing_prediction_uids": []
+      },
+      "both": {
+        "count": 30,
+        "missing_predictions": 0,
+        "exact_match": 0.5,
+        "f1": 0.592,
+        "scale_score": 0.7333333333333333,
+        "op_score": 0.0,
+        "by_answer_type": {
+          "arithmetic": {
+            "count": 7,
+            "em": 0.5714285714285714,
+            "f1": 0.5714285714285714
+          },
+          "count": {
+            "count": 1,
+            "em": 0.0,
+            "f1": 0.0
+          },
+          "multi-span": {
+            "count": 1,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "span": {
+            "count": 21,
+            "em": 0.47619047619047616,
+            "f1": 0.6076190476190476
+          }
+        },
+        "by_scale": {
+          "": {
+            "count": 21,
+            "em": 0.42857142857142855,
+            "f1": 0.5599999999999999
+          },
+          "million": {
+            "count": 3,
+            "em": 0.6666666666666666,
+            "f1": 0.6666666666666666
+          },
+          "percent": {
+            "count": 3,
+            "em": 0.3333333333333333,
+            "f1": 0.3333333333333333
+          },
+          "thousand": {
+            "count": 3,
+            "em": 1.0,
+            "f1": 1.0
+          }
+        },
+        "missing_prediction_uids": []
+      }
+    },
+    "canonicalized": {
+      "none": {
+        "count": 30,
+        "missing_predictions": 0,
+        "exact_match": 0.6666666666666666,
+        "f1": 0.7853333333333333,
+        "scale_score": 0.7666666666666667,
+        "op_score": 0.0,
+        "by_answer_type": {
+          "arithmetic": {
+            "count": 7,
+            "em": 0.7142857142857143,
+            "f1": 0.7142857142857143
+          },
+          "count": {
+            "count": 1,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "multi-span": {
+            "count": 1,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "span": {
+            "count": 21,
+            "em": 0.6190476190476191,
+            "f1": 0.7885714285714285
+          }
+        },
+        "by_scale": {
+          "": {
+            "count": 21,
+            "em": 0.6190476190476191,
+            "f1": 0.7885714285714285
+          },
+          "million": {
+            "count": 3,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "percent": {
+            "count": 3,
+            "em": 0.3333333333333333,
+            "f1": 0.3333333333333333
+          },
+          "thousand": {
+            "count": 3,
+            "em": 1.0,
+            "f1": 1.0
+          }
+        },
+        "missing_prediction_uids": []
+      },
+      "case": {
+        "count": 30,
+        "missing_predictions": 0,
+        "exact_match": 0.6666666666666666,
+        "f1": 0.7533333333333333,
+        "scale_score": 0.7333333333333333,
+        "op_score": 0.0,
+        "by_answer_type": {
+          "arithmetic": {
+            "count": 7,
+            "em": 0.5714285714285714,
+            "f1": 0.5714285714285714
+          },
+          "count": {
+            "count": 1,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "multi-span": {
+            "count": 1,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "span": {
+            "count": 21,
+            "em": 0.6666666666666666,
+            "f1": 0.7904761904761903
+          }
+        },
+        "by_scale": {
+          "": {
+            "count": 21,
+            "em": 0.6666666666666666,
+            "f1": 0.7904761904761903
+          },
+          "million": {
+            "count": 3,
+            "em": 0.6666666666666666,
+            "f1": 0.6666666666666666
+          },
+          "percent": {
+            "count": 3,
+            "em": 0.3333333333333333,
+            "f1": 0.3333333333333333
+          },
+          "thousand": {
+            "count": 3,
+            "em": 1.0,
+            "f1": 1.0
+          }
+        },
+        "missing_prediction_uids": []
+      },
+      "strategy": {
+        "count": 30,
+        "missing_predictions": 0,
+        "exact_match": 0.6333333333333333,
+        "f1": 0.7619999999999999,
+        "scale_score": 0.7666666666666667,
+        "op_score": 0.0,
+        "by_answer_type": {
+          "arithmetic": {
+            "count": 7,
+            "em": 0.7142857142857143,
+            "f1": 0.7142857142857143
+          },
+          "count": {
+            "count": 1,
+            "em": 0.0,
+            "f1": 0.0
+          },
+          "multi-span": {
+            "count": 1,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "span": {
+            "count": 21,
+            "em": 0.6190476190476191,
+            "f1": 0.8028571428571428
+          }
+        },
+        "by_scale": {
+          "": {
+            "count": 21,
+            "em": 0.5714285714285714,
+            "f1": 0.7552380952380953
+          },
+          "million": {
+            "count": 3,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "percent": {
+            "count": 3,
+            "em": 0.3333333333333333,
+            "f1": 0.3333333333333333
+          },
+          "thousand": {
+            "count": 3,
+            "em": 1.0,
+            "f1": 1.0
+          }
+        },
+        "missing_prediction_uids": []
+      },
+      "both": {
+        "count": 30,
+        "missing_predictions": 0,
+        "exact_match": 0.6333333333333333,
+        "f1": 0.7253333333333333,
+        "scale_score": 0.7333333333333333,
+        "op_score": 0.0,
+        "by_answer_type": {
+          "arithmetic": {
+            "count": 7,
+            "em": 0.5714285714285714,
+            "f1": 0.5714285714285714
+          },
+          "count": {
+            "count": 1,
+            "em": 0.0,
+            "f1": 0.0
+          },
+          "multi-span": {
+            "count": 1,
+            "em": 1.0,
+            "f1": 1.0
+          },
+          "span": {
+            "count": 21,
+            "em": 0.6666666666666666,
+            "f1": 0.798095238095238
+          }
+        },
+        "by_scale": {
+          "": {
+            "count": 21,
+            "em": 0.6190476190476191,
+            "f1": 0.7504761904761904
+          },
+          "million": {
+            "count": 3,
+            "em": 0.6666666666666666,
+            "f1": 0.6666666666666666
+          },
+          "percent": {
+            "count": 3,
+            "em": 0.3333333333333333,
+            "f1": 0.3333333333333333
+          },
+          "thousand": {
+            "count": 3,
+            "em": 1.0,
+            "f1": 1.0
+          }
+        },
+        "missing_prediction_uids": []
+      }
+    }
+  },
+  "events": {
+    "raw": {
+      "case_only": 0,
+      "strategy_only": 1,
+      "none_only": 0,
+      "both_only": 0,
+      "none_gt_both": 2,
+      "case_gt_both": 1,
+      "strategy_gt_both": 2
+    },
+    "canonicalized": {
+      "case_only": 0,
+      "strategy_only": 0,
+      "none_only": 0,
+      "both_only": 0,
+      "none_gt_both": 2,
+      "case_gt_both": 1,
+      "strategy_gt_both": 1
+    }
+  },
+  "flip_counts": {
+    "improved": 14
+  },
+  "flips": [
+    {
+      "sample_id": "tatqa:dev:06e79509-49d3-47c4-94a9-1ca382cb11c3",
+      "uid": "06e79509-49d3-47c4-94a9-1ca382cb11c3",
+      "arm": "none",
+      "answer_type": "span",
+      "gold_answer": [
+        "$191.7 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$191.7 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "191.7",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What is the Company's valuation allowance against its U.S deferred tax assets as of December 31, 2019?"
+    },
+    {
+      "sample_id": "tatqa:dev:06e79509-49d3-47c4-94a9-1ca382cb11c3",
+      "uid": "06e79509-49d3-47c4-94a9-1ca382cb11c3",
+      "arm": "case",
+      "answer_type": "span",
+      "gold_answer": [
+        "$191.7 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$191.7 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "191.7",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What is the Company's valuation allowance against its U.S deferred tax assets as of December 31, 2019?"
+    },
+    {
+      "sample_id": "tatqa:dev:06e79509-49d3-47c4-94a9-1ca382cb11c3",
+      "uid": "06e79509-49d3-47c4-94a9-1ca382cb11c3",
+      "arm": "strategy",
+      "answer_type": "span",
+      "gold_answer": [
+        "$191.7 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$191.7 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "191.7",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What is the Company's valuation allowance against its U.S deferred tax assets as of December 31, 2019?"
+    },
+    {
+      "sample_id": "tatqa:dev:06e79509-49d3-47c4-94a9-1ca382cb11c3",
+      "uid": "06e79509-49d3-47c4-94a9-1ca382cb11c3",
+      "arm": "both",
+      "answer_type": "span",
+      "gold_answer": [
+        "$191.7 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$191.7 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "191.7",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What is the Company's valuation allowance against its U.S deferred tax assets as of December 31, 2019?"
+    },
+    {
+      "sample_id": "tatqa:dev:f1eedc55-cc96-4574-b82b-e6f17cf176af",
+      "uid": "f1eedc55-cc96-4574-b82b-e6f17cf176af",
+      "arm": "case",
+      "answer_type": "span",
+      "gold_answer": [
+        "$16.9 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$16.9 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "16.9",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What was the increase in interest income in 2019?"
+    },
+    {
+      "sample_id": "tatqa:dev:f1eedc55-cc96-4574-b82b-e6f17cf176af",
+      "uid": "f1eedc55-cc96-4574-b82b-e6f17cf176af",
+      "arm": "strategy",
+      "answer_type": "span",
+      "gold_answer": [
+        "$16.9 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$16.9 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "16.9",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What was the increase in interest income in 2019?"
+    },
+    {
+      "sample_id": "tatqa:dev:f1eedc55-cc96-4574-b82b-e6f17cf176af",
+      "uid": "f1eedc55-cc96-4574-b82b-e6f17cf176af",
+      "arm": "both",
+      "answer_type": "span",
+      "gold_answer": [
+        "$16.9 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$16.9 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "16.9",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What was the increase in interest income in 2019?"
+    },
+    {
+      "sample_id": "tatqa:dev:03f232b9-a78e-42d0-b555-c801eaac577d",
+      "uid": "03f232b9-a78e-42d0-b555-c801eaac577d",
+      "arm": "none",
+      "answer_type": "span",
+      "gold_answer": [
+        "$46.4 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$46.4 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "46.4",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What was the amount of unrecognized stock-based compensation expense related to RSUs as of December 31, 2019?"
+    },
+    {
+      "sample_id": "tatqa:dev:03f232b9-a78e-42d0-b555-c801eaac577d",
+      "uid": "03f232b9-a78e-42d0-b555-c801eaac577d",
+      "arm": "case",
+      "answer_type": "span",
+      "gold_answer": [
+        "$46.4 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$46.4 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "46.4",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What was the amount of unrecognized stock-based compensation expense related to RSUs as of December 31, 2019?"
+    },
+    {
+      "sample_id": "tatqa:dev:03f232b9-a78e-42d0-b555-c801eaac577d",
+      "uid": "03f232b9-a78e-42d0-b555-c801eaac577d",
+      "arm": "both",
+      "answer_type": "span",
+      "gold_answer": [
+        "$46.4 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$46.4 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "46.4",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What was the amount of unrecognized stock-based compensation expense related to RSUs as of December 31, 2019?"
+    },
+    {
+      "sample_id": "tatqa:dev:9e5d65f8-9015-40a0-a35f-361b9b7c753d",
+      "uid": "9e5d65f8-9015-40a0-a35f-361b9b7c753d",
+      "arm": "none",
+      "answer_type": "span",
+      "gold_answer": [
+        "$1.1 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$1.1 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "1.1",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What was the liability reserve for unrecognized income tax position at 31 March 2019?"
+    },
+    {
+      "sample_id": "tatqa:dev:9e5d65f8-9015-40a0-a35f-361b9b7c753d",
+      "uid": "9e5d65f8-9015-40a0-a35f-361b9b7c753d",
+      "arm": "case",
+      "answer_type": "span",
+      "gold_answer": [
+        "$1.1 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$1.1 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "1.1",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What was the liability reserve for unrecognized income tax position at 31 March 2019?"
+    },
+    {
+      "sample_id": "tatqa:dev:9e5d65f8-9015-40a0-a35f-361b9b7c753d",
+      "uid": "9e5d65f8-9015-40a0-a35f-361b9b7c753d",
+      "arm": "strategy",
+      "answer_type": "span",
+      "gold_answer": [
+        "$1.1 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$1.1 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "1.1",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What was the liability reserve for unrecognized income tax position at 31 March 2019?"
+    },
+    {
+      "sample_id": "tatqa:dev:9e5d65f8-9015-40a0-a35f-361b9b7c753d",
+      "uid": "9e5d65f8-9015-40a0-a35f-361b9b7c753d",
+      "arm": "both",
+      "answer_type": "span",
+      "gold_answer": [
+        "$1.1 million"
+      ],
+      "gold_scale": "",
+      "raw_prediction": {
+        "answer": "$1.1 million",
+        "scale": "million"
+      },
+      "canonicalized_prediction": [
+        "1.1",
+        "million"
+      ],
+      "change_tags": [
+        "duplicate_scale_removed",
+        "embedded_scale:million",
+        "numeric_format"
+      ],
+      "raw_em": 0.0,
+      "raw_f1": 0.0,
+      "canonicalized_em": 1.0,
+      "canonicalized_f1": 1.0,
+      "direction": "improved",
+      "question": "What was the liability reserve for unrecognized income tax position at 31 March 2019?"
+    }
+  ],
+  "decision": "FREEZE EVALUATION CONTRACT"
+}
