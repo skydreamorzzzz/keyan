@@ -1,0 +1,69 @@
+{
+  "definition": "lowercase whitespace-normalized exact match between official dev[:492] question and any train question",
+  "duplicates_n": 9,
+  "duplicate_sample_indices": [
+    94,
+    103,
+    125,
+    226,
+    364,
+    387,
+    406,
+    416,
+    459
+  ],
+  "all": {
+    "n": 492,
+    "accuracy": {
+      "none": 0.6808943089430894,
+      "case": 0.717479674796748,
+      "strategy": 0.693089430894309,
+      "both": 0.725609756097561
+    },
+    "best_fixed_arm": "both",
+    "best_fixed": 0.725609756097561,
+    "oracle": 0.8191056910569106,
+    "oracle_gap": 0.0934959349593496,
+    "case_gain_vs_none": 0.03658536585365857,
+    "strategy_gain_vs_none": 0.012195121951219523,
+    "case_beats_strategy": 43,
+    "strategy_beats_case": 31,
+    "both_wrong_single_correct": 31
+  },
+  "duplicates_only": {
+    "n": 9,
+    "accuracy": {
+      "none": 0.8888888888888888,
+      "case": 0.8888888888888888,
+      "strategy": 0.7777777777777778,
+      "both": 0.8888888888888888
+    },
+    "best_fixed_arm": "none",
+    "best_fixed": 0.8888888888888888,
+    "oracle": 0.8888888888888888,
+    "oracle_gap": 0.0,
+    "case_gain_vs_none": 0.0,
+    "strategy_gain_vs_none": -0.11111111111111105,
+    "case_beats_strategy": 1,
+    "strategy_beats_case": 0,
+    "both_wrong_single_correct": 0
+  },
+  "duplicates_removed": {
+    "n": 483,
+    "accuracy": {
+      "none": 0.6770186335403726,
+      "case": 0.7142857142857143,
+      "strategy": 0.6915113871635611,
+      "both": 0.722567287784679
+    },
+    "best_fixed_arm": "both",
+    "best_fixed": 0.722567287784679,
+    "oracle": 0.8178053830227743,
+    "oracle_gap": 0.09523809523809523,
+    "case_gain_vs_none": 0.037267080745341685,
+    "strategy_gain_vs_none": 0.01449275362318847,
+    "case_beats_strategy": 42,
+    "strategy_beats_case": 31,
+    "both_wrong_single_correct": 31
+  }
+}

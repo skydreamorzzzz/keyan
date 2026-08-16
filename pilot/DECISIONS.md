@@ -102,3 +102,35 @@
 - 新发现：corrected 指标下 structured_case −7.7pp，机制=案例 exe_ans 小数值与 structured prompt 的"return a percentage"规范冲突（尺度污染）。exec 指标不受影响且 case 正向。
 - reproduction 排名仍未复现论文（Mem0-Aug>Baseline>Structured>RAG），模型能力依赖，非 pipeline 错误。
 - **判定 READY FOR STAGE 3**。约束：注入尺度一致性、grounding 配置化、grounding/experience 检索独立。
+
+## 11. Stage 3 Validity / Stability Audit（2026-08-16）
+
+### evaluator 修正
+- `pilot/executor.py` 的主 `match_result` 改为 official-compatible execution equality：数值 `round(x, 5)` 后精确相等，字符串按原值相等；旧 relative tolerance 保留为 `match_result_legacy` 仅诊断用。
+- 同时修复官方 linear program 解析：无 `#` 但存在顶层逗号分隔步骤的程序现在按顺序执行，避免只执行第一步。
+- 测试：`python -m unittest pilot.tests.test_executor_official` 通过；dev 883/883、train 6251/6251 gold program 与官方 evaluator 一致。
+
+### Stage 2 strict 重算
+- Full-doc strict：None 0.6809，Case 0.7175，Strategy 0.6931，Both 0.7256；Best Fixed 0.7256，Oracle 0.8191，Gap 0.0935。
+- 相比旧 relative-tolerance 标签：Best Fixed 0.7276 -> 0.7256，Oracle 0.8211 -> 0.8191；Oracle Gap 不变。
+- Structured strict：None 0.6220，Case 0.6443，Strategy 0.6301，Both 0.6545；Best Fixed 0.6545，Oracle 0.7378，Gap 0.0833。
+
+### provenance 修正
+- `pilot/stage2_official/run_official.py` cache key 从 `prompt[:300]` 改为完整 system prompt + 完整 user prompt + mode/arm/sample index/model/config/version 的 SHA-256。
+- stability experiment 使用独立 cache namespace：`pilot/stage3/stability/llm_cache_stability_<replicate>.jsonl`，不复用 Stage 2 旧 cache。
+- 限制：历史 Stage 2 replicate 的原 cache key 弱，保留为 historical run；新 r1/r2 使用当前可用 DeepSeek official API fallback (`deepseek-chat`, temperature 0)，不是完全相同的旧 Anthropic-compatible `DeepSeek-V4-flash[1m]` backend。
+
+### repeated-run stability
+- 固定 Full-doc official-aligned，official dev[:492] 中用 label-independent SHA-256 deterministic 规则选 250 条；四臂 None/Case/Strategy/Both 新跑 r1/r2，共 2000 次新 LLM 调用，failures=0。
+- 3 replicates（stage2_old+r1+r2）上 per-arm correctness agreement：None 0.9387，Case 0.9547，Strategy 0.9360，Both 0.9627。
+- repeated expected：Best Fixed 0.7467，Oracle 0.8347，Gap 0.0880；subset one-shot gaps 为 0.084/0.088/0.092。
+- cross-run preference transfer：用两个 runs 判断 query-level arm preference，在 held-out run 平均 accuracy 0.8173；held-out Best Fixed 平均 0.7467；delta +0.0707，约回收 repeated expected gap 的 80%。
+- 结论：oracle gap 不像主要由 one-shot run noise 造成，存在稳定可迁移 marginal utility heterogeneity。
+
+### leakage / duplicate robustness
+- report-grouped CV audit：strict random KFold 最好 0.7500（query_retrieval_meta/logreg），GroupKFold by report 最好 0.7317（query_retrieval_meta/rf）。此前 Stage 3 selector 数字需按 GroupKFold 从严解释。
+- exact duplicate train-question audit：official dev[:492] 中 9 条 exact duplicate；去掉后 Case gain vs None 为 +3.73pp（全量 +3.66pp），Oracle Gap 为 9.52pp（全量 9.35pp）。duplicates 不解释 Case 增益或 oracle gap。
+
+### 判定
+- **PROCEED TO MARGINAL-UTILITY SELECTOR**。
+- 下一轮必须以 strict official labels、report-grouped CV、repeated-run stability/transfer 为主评价；不要沿用 random KFold 的乐观 selector 结论。

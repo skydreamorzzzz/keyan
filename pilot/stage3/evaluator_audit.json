@@ -1,0 +1,153 @@
+{
+  "gold_program_audit": [
+    {
+      "split": "dev",
+      "n": 883,
+      "official_gold_mismatches": 0,
+      "local_vs_official_mismatch_count_first20": 0,
+      "first_mismatches": []
+    },
+    {
+      "split": "train",
+      "n": 6251,
+      "official_gold_mismatches": 0,
+      "local_vs_official_mismatch_count_first20": 0,
+      "first_mismatches": []
+    }
+  ],
+  "stage2_recomputed": {
+    "n": 492,
+    "full_doc_strict": {
+      "accuracy": {
+        "none": 0.6808943089430894,
+        "case": 0.717479674796748,
+        "strategy": 0.693089430894309,
+        "both": 0.725609756097561
+      },
+      "best_fixed_arm": "both",
+      "best_fixed": 0.725609756097561,
+      "oracle": 0.8191056910569106,
+      "oracle_gap": 0.0934959349593496,
+      "case_beats_strategy": 43,
+      "strategy_beats_case": 31,
+      "both_wrong_single_correct": 31,
+      "correct_set_distribution": {
+        "none+case+strategy+both": 277,
+        "case": 7,
+        "none_correct": 89,
+        "none+strategy+both": 9,
+        "none+case+both": 12,
+        "none": 15,
+        "none+case+strategy": 4,
+        "none+both": 2,
+        "case+strategy+both": 28,
+        "case+both": 17,
+        "strategy+both": 10,
+        "none+case": 7,
+        "none+strategy": 9,
+        "strategy": 3,
+        "case+strategy": 1,
+        "both": 2
+      }
+    },
+    "full_doc_legacy": {
+      "accuracy": {
+        "none": 0.6829268292682927,
+        "case": 0.7195121951219512,
+        "strategy": 0.6951219512195121,
+        "both": 0.7276422764227642
+      },
+      "best_fixed_arm": "both",
+      "best_fixed": 0.7276422764227642,
+      "oracle": 0.8211382113821138,
+      "oracle_gap": 0.0934959349593496,
+      "case_beats_strategy": 43,
+      "strategy_beats_case": 31,
+      "both_wrong_single_correct": 31,
+      "correct_set_distribution": {
+        "none+case+strategy+both": 278,
+        "case": 7,
+        "none_correct": 88,
+        "none+strategy+both": 9,
+        "none+case+both": 12,
+        "none": 15,
+        "none+case+strategy": 4,
+        "none+both": 2,
+        "case+strategy+both": 28,
+        "case+both": 17,
+        "strategy+both": 10,
+        "none+case": 7,
+        "none+strategy": 9,
+        "strategy": 3,
+        "case+strategy": 1,
+        "both": 2
+      }
+    },
+    "structured_strict": {
+      "accuracy": {
+        "none": 0.6219512195121951,
+        "case": 0.6443089430894309,
+        "strategy": 0.6300813008130082,
+        "both": 0.6544715447154471
+      },
+      "best_fixed_arm": "both",
+      "best_fixed": 0.6544715447154471,
+      "oracle": 0.7378048780487805,
+      "oracle_gap": 0.08333333333333337,
+      "case_beats_strategy": 30,
+      "strategy_beats_case": 23,
+      "both_wrong_single_correct": 29,
+      "correct_set_distribution": {
+        "none+case+strategy+both": 252,
+        "none+case": 8,
+        "none_correct": 129,
+        "none+strategy+both": 7,
+        "both": 8,
+        "none": 12,
+        "strategy": 3,
+        "none+both": 3,
+        "case+both": 11,
+        "none+case+both": 9,
+        "case+strategy+both": 28,
+        "strategy+both": 4,
+        "none+strategy": 9,
+        "none+case+strategy": 6,
+        "case": 2,
+        "case+strategy": 1
+      }
+    },
+    "structured_legacy": {
+      "accuracy": {
+        "none": 0.6260162601626016,
+        "case": 0.6463414634146342,
+        "strategy": 0.6321138211382114,
+        "both": 0.6565040650406504
+      },
+      "best_fixed_arm": "both",
+      "best_fixed": 0.6565040650406504,
+      "oracle": 0.741869918699187,
+      "oracle_gap": 0.08536585365853655,
+      "case_beats_strategy": 30,
+      "strategy_beats_case": 23,
+      "both_wrong_single_correct": 29,
+      "correct_set_distribution": {
+        "none+case+strategy+both": 253,
+        "none+case": 8,
+        "none_correct": 127,
+        "none+strategy+both": 7,
+        "both": 8,
+        "none": 13,
+        "strategy": 3,
+        "none+both": 3,
+        "case+both": 11,
+        "none+case+both": 9,
+        "case+strategy+both": 28,
+        "strategy+both": 4,
+        "none+strategy": 9,
+        "none+case+strategy": 6,
+        "case": 2,
+        "case+strategy": 1
+      }
+    }
+  }
+}

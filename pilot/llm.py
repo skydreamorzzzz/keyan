@@ -1,10 +1,39 @@
-"""LLM 客户端：Anthropic 兼容接口（DeepSeek 端点），并发 + 缓存可恢复。"""
+"""LLM 客户端：Anthropic 兼容接口优先，DeepSeek official API fallback。"""
 import json, os, time, threading
 from concurrent.futures import ThreadPoolExecutor
 import httpx
 import config
 
 _lock = threading.Lock()
+
+def runtime_config():
+    """Return inference provenance fields used by experiment cache keys."""
+    if config.LLM_BASE_URL and config.LLM_API_KEY:
+        return {
+            "backend": "anthropic_compatible",
+            "base_url": config.LLM_BASE_URL,
+            "model": config.LLM_MODEL,
+            "temperature": config.LLM_TEMPERATURE,
+            "max_tokens": config.LLM_MAX_TOKENS,
+            "thinking": "disabled",
+        }
+    if os.environ.get("DEEPSEEK_API_KEY"):
+        return {
+            "backend": "deepseek_openai_compatible",
+            "base_url": os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com").rstrip("/"),
+            "model": os.environ.get("DEEPSEEK_MODEL", "deepseek-chat"),
+            "temperature": config.LLM_TEMPERATURE,
+            "max_tokens": config.LLM_MAX_TOKENS,
+            "thinking": "not_supported",
+        }
+    return {
+        "backend": "unconfigured",
+        "base_url": config.LLM_BASE_URL,
+        "model": config.LLM_MODEL,
+        "temperature": config.LLM_TEMPERATURE,
+        "max_tokens": config.LLM_MAX_TOKENS,
+        "thinking": "disabled",
+    }
 
 def _extract_text(data):
     parts = []
@@ -13,7 +42,7 @@ def _extract_text(data):
             parts.append(c.get("text", ""))
     return "\n".join(parts).strip()
 
-def call_once(messages, max_tokens=None, temperature=None, timeout=180):
+def _call_anthropic_compatible(messages, max_tokens, temperature, timeout):
     url = config.LLM_BASE_URL + "/v1/messages"
     headers = {
         "x-api-key": config.LLM_API_KEY,
@@ -22,18 +51,53 @@ def call_once(messages, max_tokens=None, temperature=None, timeout=180):
     }
     payload = {
         "model": config.LLM_MODEL,
-        "max_tokens": max_tokens or config.LLM_MAX_TOKENS,
-        "temperature": config.LLM_TEMPERATURE if temperature is None else temperature,
+        "max_tokens": max_tokens,
+        "temperature": temperature,
         "messages": messages,
-        "thinking": {"type": "disabled"},   # 节省 token，输出确定性程序
+        "thinking": {"type": "disabled"},
     }
+    r = httpx.post(url, headers=headers, json=payload, timeout=timeout)
+    if r.status_code == 200:
+        return _extract_text(r.json())
+    raise RuntimeError(f"HTTP {r.status_code}: {r.text[:200]}")
+
+def _call_deepseek(messages, max_tokens, temperature, timeout):
+    cfg = runtime_config()
+    url = cfg["base_url"] + "/chat/completions"
+    api_key = os.environ.get("DEEPSEEK_API_KEY", "")
+    chat_messages = []
+    for msg in messages:
+        if msg.get("role") == "system":
+            chat_messages.append({"role": "system", "content": msg.get("content", "")})
+        else:
+            chat_messages.append({"role": msg.get("role", "user"), "content": msg.get("content", "")})
+    headers = {
+        "authorization": f"Bearer {api_key}",
+        "content-type": "application/json",
+    }
+    payload = {
+        "model": cfg["model"],
+        "messages": chat_messages,
+        "max_tokens": max_tokens,
+        "temperature": temperature,
+    }
+    r = httpx.post(url, headers=headers, json=payload, timeout=timeout)
+    if r.status_code == 200:
+        data = r.json()
+        return data["choices"][0]["message"].get("content", "").strip()
+    raise RuntimeError(f"HTTP {r.status_code}: {r.text[:200]}")
+
+def call_once(messages, max_tokens=None, temperature=None, timeout=180):
+    max_tokens = max_tokens or config.LLM_MAX_TOKENS
+    temperature = config.LLM_TEMPERATURE if temperature is None else temperature
     last_err = None
     for attempt in range(config.LLM_MAX_RETRIES):
         try:
-            r = httpx.post(url, headers=headers, json=payload, timeout=timeout)
-            if r.status_code == 200:
-                return _extract_text(r.json())
-            last_err = f"HTTP {r.status_code}: {r.text[:200]}"
+            if config.LLM_BASE_URL and config.LLM_API_KEY:
+                return _call_anthropic_compatible(messages, max_tokens, temperature, timeout)
+            if os.environ.get("DEEPSEEK_API_KEY"):
+                return _call_deepseek(messages, max_tokens, temperature, timeout)
+            raise RuntimeError("no LLM backend configured")
         except Exception as e:
             last_err = str(e)
         time.sleep(1.5 * (attempt + 1))

@@ -17,7 +17,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, f1_score, recall_score
-from sklearn.model_selection import KFold, StratifiedKFold
+from sklearn.model_selection import GroupKFold, KFold, StratifiedKFold
 from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
@@ -55,7 +55,9 @@ def preferred_label(correct: dict[str, bool], priors: dict[str, float]) -> str:
     return max(ok, key=lambda a: (priors[a], a == "both"))
 
 
-def folds_for(y: list[str], n_splits: int = 5):
+def folds_for(y: list[str], n_splits: int = 5, groups=None):
+    if groups is not None:
+        return GroupKFold(n_splits=n_splits).split(np.zeros(len(y)), y, groups)
     counts = Counter(y)
     if min(counts.values()) >= n_splits:
         return StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=20260816).split(np.zeros(len(y)), y)
@@ -104,7 +106,16 @@ def evaluate_choice(records: list[dict[str, Any]], choices: list[str], label_key
     }
 
 
-def run(label_key: str = "full_doc_prog_correct", suffix: str = "") -> dict[str, Any]:
+def report_group(rec: dict[str, Any]) -> str:
+    filename = rec.get("filename") or rec.get("sample_id") or str(rec.get("sample_index"))
+    # FinQA filenames are usually COMPANY/YEAR/page_x.pdf-idx or similar.
+    if isinstance(filename, str) and "/page_" in filename:
+        return filename.split("-")[0]
+    sid = str(rec.get("sample_id", ""))
+    return sid.rsplit("-", 1)[0] if "-" in sid else sid
+
+
+def run(label_key: str = "full_doc_prog_correct", suffix: str = "", cv: str = "random") -> dict[str, Any]:
     records = load_records()
     correct = [r["labels"][label_key] for r in records]
     priors = {a: float(np.mean([c[a] for c in correct])) for a in ARMS}
@@ -120,7 +131,8 @@ def run(label_key: str = "full_doc_prog_correct", suffix: str = "") -> dict[str,
         for model_name in ["logreg", "tree", "rf", "mlp"]:
             choices = [None] * len(records)
             prob_dump = []
-            for train_idx, test_idx in folds_for(preferred):
+            groups = [report_group(r) for r in records] if cv == "group_report" else None
+            for train_idx, test_idx in folds_for(preferred, groups=groups):
                 arm_probs = {}
                 for arm in ARMS:
                     y = y_bin[arm]
@@ -144,6 +156,7 @@ def run(label_key: str = "full_doc_prog_correct", suffix: str = "") -> dict[str,
             results[name]["cv_probabilities"] = sorted(prob_dump, key=lambda x: x["sample_index"])
 
     compact = {k: {kk: vv for kk, vv in v.items() if kk != "cv_probabilities"} for k, v in results.items()}
+    compact["_meta"] = {"label_key": label_key, "cv": cv, "n": len(records)}
     base = "selector_baselines" + (f"_{suffix}" if suffix else "")
     json.dump(compact, open(os.path.join(OUT, base + ".json"), "w"), indent=2, ensure_ascii=False)
     json.dump(results, open(os.path.join(OUT, base + "_with_probs.json"), "w"), indent=2, ensure_ascii=False)
@@ -155,5 +168,6 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--label-key", default="full_doc_prog_correct")
     ap.add_argument("--suffix", default="")
+    ap.add_argument("--cv", choices=["random", "group_report"], default="random")
     args = ap.parse_args()
-    run(args.label_key, args.suffix)
+    run(args.label_key, args.suffix, args.cv)

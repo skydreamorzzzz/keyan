@@ -7,11 +7,13 @@ import numpy as np
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 import s2o_common as c
 import retrieval as pilot_retrieval
+import config as pilot_config
 
 N = 492
 K_FACTS = 12
 TOP_CASE = 4
 TOP_STRATEGY = 3
+CACHE_KEY_VERSION = "stage2_official_full_prompt_v2"
 
 SYS_PROGRAM = (
     "You are solving a financial reasoning question (FinQA). Given the context and question, produce the "
@@ -40,6 +42,22 @@ def structured_prompt_with_exp(facts, q, exp):
     if exp:
         base = base.replace("\nQuestion:\n", exp + "\nQuestion:\n", 1)
     return base
+
+def stable_cache_key(mode, arm, sample_index, prompt, system):
+    payload = {
+        "version": CACHE_KEY_VERSION,
+        "mode": mode,
+        "arm": arm,
+        "sample_index": sample_index,
+        "model": pilot_config.LLM_MODEL,
+        "temperature": pilot_config.LLM_TEMPERATURE,
+        "max_tokens": 600,
+        "thinking": "disabled",
+        "system": system,
+        "prompt": prompt,
+    }
+    blob = json.dumps(payload, sort_keys=True, ensure_ascii=False)
+    return hashlib.sha256(blob.encode()).hexdigest()
 
 def main():
     smoke = int(os.environ.get("SMOKE", "0"))
@@ -137,14 +155,14 @@ def main():
         for mode, arms in [("ff", ff), ("prog", prog)]:
             for name, fn in arms.items():
                 results[mode].setdefault(name, {})
-                if i not in results[mode][name]:
+                if str(i) not in results[mode][name]:
                     pending.append((i, mode, name, fn, prep[i]))
     print(f"pending arm-mode calls: {len(pending)}")
 
     def work(item):
         i, mode, name, fn, p = item
         prompt, sysp = fn(p)
-        key = hashlib.sha1((mode + "|" + name + "|" + str(i) + "|" + prompt[:300]).encode()).hexdigest()[:14]
+        key = stable_cache_key(mode, name, i, prompt, sysp)
         return mode, name, i, call(key, prompt, sysp)
 
     failed = []
@@ -176,7 +194,7 @@ def main():
         else:
             remembered = "(none)"
         prompt = c.build_prompt_mem0aug(remembered, p["context"], p["question"])
-        key = hashlib.sha1(("ff|mem0aug|" + str(i) + "|" + prompt[:200]).encode()).hexdigest()[:14]
+        key = stable_cache_key("ff", "mem0aug", i, prompt, c.FIN_SYSTEM)
         out = call(key, prompt, c.FIN_SYSTEM)
         results["ff"]["mem0aug"][str(i)] = out
         # 累积：context + Q/A（新项只 embed 一次）

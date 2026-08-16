@@ -216,7 +216,7 @@ def normalize_program(raw):
     if m:
         raw = m.group(1).strip()
     raw = raw.replace("compare(", "greater(")
-    if "#" in raw:
+    if "#" in raw or has_top_level_step_separator(raw):
         return "LINEAR:" + raw
     # top-level infix > handling: split at '>' outside parentheses
     if ">" in raw:
@@ -229,6 +229,23 @@ def normalize_program(raw):
         if idx > 0:
             raw = f"greater({raw[:idx].strip()}, {raw[idx+1:].strip()})"
     return raw
+
+def has_top_level_step_separator(raw):
+    """Detect official linear programs with multiple top-level steps.
+
+    Example: `subtract(72.47, 71.46), divide(1.1, 71.46)` has no # reference
+    but is still a linear official program whose final answer is the last step.
+    """
+    depth = 0
+    for i, ch in enumerate(raw):
+        if ch == '(':
+            depth += 1
+        elif ch == ')':
+            depth -= 1
+        elif ch == ',' and depth == 0:
+            rest = raw[i + 1:].lstrip()
+            return bool(re.match(r'[a-z_]+\(', rest))
+    return False
 
 def exec_program_re(pr, table):
     pr = normalize_program(pr)
@@ -248,8 +265,37 @@ def exec_linear_str(prog_str, table):
     return exec_steps(steps, table)
 
 # ---------------- 结果匹配 ----------------
+def official_normalize_result(x):
+    """Normalize an execution result using official FinQA evaluate.py semantics.
+
+    Official `eval_program` rounds the final numeric result to 5 decimals and
+    then compares it to `qa["exe_ans"]` with exact Python equality.
+    """
+    if x == "parse_error" or x == "n/a":
+        return x
+    if isinstance(x, str):
+        return x
+    if isinstance(x, (int, float)):
+        return round(float(x), 5)
+    return x
+
 def match_result(pred, gold):
-    """执行结果是否与 gold exe_ans 一致。gold 可为数值或 yes/no。"""
+    """Official-compatible execution-result equality.
+
+    This is intentionally strict: numeric predictions are rounded to 5 decimals
+    like `analysis/official_code/evaluate.py::eval_program`, then compared
+    exactly to the dataset `qa["exe_ans"]`.
+    """
+    if pred == "parse_error" or pred == "n/a":
+        return False
+    if isinstance(gold, str):
+        return pred == gold
+    if not isinstance(pred, (int, float)):
+        return False
+    return official_normalize_result(pred) == gold
+
+def match_result_legacy(pred, gold):
+    """Legacy Stage 1-3 diagnostic matcher with relative tolerance."""
     if pred == "parse_error" or pred == "n/a":
         return False
     if isinstance(gold, str):

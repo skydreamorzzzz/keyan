@@ -1,0 +1,1000 @@
+{"key": "640aae0f20ac0f547247012f172bbeb5f111a09d973674819bb4de95b9a23bf0", "out": "divide(1050, 251)"}
+{"key": "2c479481ce1fae5eb7c4570e1d5a34fd23ef419ca20c446b25c583996fd7b1ca", "out": "divide(1050, 251)"}
+{"key": "c5f879119890828c658b9136a1691c0100a341bfc5d3a5b3cd18a8cc54e59194", "out": "divide(1050, 251)"}
+{"key": "df7a91f629da8ff601f8aa84a708d204cb80f38c447c910f4cebc8601f8a4265", "out": "divide(1050, 251)"}
+{"key": "fa6a7ce91d28d4d60000382c23e3d9bb9db93dec07d3497c7333d9d8a60c1313", "out": "divide(subtract(366854, 187103), 187103)"}
+{"key": "eb31de337239e4451ea258c0e3cab82870d71492ad4e8fb7f0335b72053b9c1d", "out": "divide(subtract(366854, 187103), 187103)"}
+{"key": "4e5de510736fa715975ccb6fa5f69f0e3693fb42e0b8adb166f4a0e778541538", "out": "divide(subtract(366854, 187103), 187103)"}
+{"key": "ee4c8fdc5596525e815819affbee8702cbae005121eb58b6872b582388aca63e", "out": "divide(subtract(366854, 187103), 187103)"}
+{"key": "2c0bcedc4a6ec13a7378dac4ce6857e1b897bfdec68182f48cecbea315da8a48", "out": "divide(60, 243)"}
+{"key": "4fb4e03df37745d3edbb136f587919aac3f5ba0c37d0f9cb9df2436bbd82e860", "out": "multiply(divide(60, 243), const_100)"}
+{"key": "d304ff72a843563687eabfcc216d00477cde3f94988816d448f00918486c3380", "out": "divide(60, 243)"}
+{"key": "f4ffd0f88ed35a1d15e995dd2d1f845e41350eb2d5d71cb6c6375b7006665610", "out": "multiply(divide(60, 243), const_100)"}
+{"key": "948b0e03d874865d60de6bcdd11bdcba7689fcfce78578579903adf82a608040", "out": "divide(74843, 72699)"}
+{"key": "83bdbaa9e517c4c60249c3b53fd415286ecaa450948588f4865f5b9a7ff0be4c", "out": "divide(74843, 72699)"}
+{"key": "ca3943cc5f6e78bfc72098716857e92c61ac54cf9fcd60a792f1d3bc4e98ec11", "out": "divide(74843, 72699)"}
+{"key": "6560c8c43586db8a930a3fe6c48e8228a6c5ddbbce2fcca8e0fbf6f4fefc6aa1", "out": "divide(74843, 72699)"}
+{"key": "31dfe62e7ad1de590a8233d0e6a920f8d62a72b86f049be0c86aafbdec9dcda6", "out": "divide(83382, 249038)"}
+{"key": "efe67687015105f6d7c7d47172c81397d5d9c994b7f31475fa2693cccf3ea676", "out": "divide(83382, 249038)"}
+{"key": "e703acb44d820f1474fb3747f1194e4676be61b92ff51713c459a5ed317646cc", "out": "divide(83382, 249038)"}
+{"key": "bf0cb8dce3cf90ee828aa31dc3a2eea323b07895e3319e276a4794e5623df2d3", "out": "divide(83382, 249038)"}
+{"key": "b5890482594d27799b0a472e92ede20e319fb085b0b32b65fc6259b002deb880", "out": "divide(subtract(178.93, 100.00), 100.00)"}
+{"key": "e8ab656eaffd0d7b388fbdc91ce435074a150d30ba712d0d12173bcf4bdb4dd4", "out": "divide(subtract(178.93, const_100), const_100)"}
+{"key": "8ab9eda6baaeff9c88ab168fbe05f491b7c67d6702a37c944e84e32e5c019c09", "out": "divide(subtract(178.93, 100.00), 100.00)"}
+{"key": "8f906440dd792fc52e835929aba8a1f982ffa742c7361613b9437d9273658b4d", "out": "divide(subtract(178.93, 100.00), 100.00)"}
+{"key": "d1619df186d8c08038302b4653b8503acf06a62d1fffecf2d4d523dc547cd655", "out": "divide(12000000, 3000000)"}
+{"key": "0d463c33f82873b3ace0f6a7a2bfd0ea892581819f911d489b50327a76490ed5", "out": "divide(12000000, 3000000)"}
+{"key": "1f3006240f7bafc466fe2b88a1b60ab4dba27a9c7e11f126633cddc3d4d00e15", "out": "divide(12000000, 3000000)"}
+{"key": "81b90dcef014b51b66e5af3f9ddb9bb81fff0ebbf27ad58ab62b6b90181ed158", "out": "divide(12000000, 3000000)"}
+{"key": "05814b834701dec6d13dfc8ab30b155484126b87f60927b7fa8664ff241dfb2b", "out": "divide(subtract(31434, 47733), 47733)"}
+{"key": "5ef38c74ee206702ab5dcce94bad79d93d198d64389d69a463379b3c88f6faf9", "out": "divide(subtract(31434, 47733), 47733)"}
+{"key": "de2b1a262e2c4b6e980650b17b4f6ae8f89a7c99169d514c115f3493d0cc0a13", "out": "divide(subtract(31434, 47733), 47733)"}
+{"key": "3d24a173c8a2128a4a9a947c4397a310e6d311ddcbff7ee126d703153da2a8fc", "out": "divide(subtract(31434, 47733), 47733)"}
+{"key": "061a0c82a8f999ef339f85b225b933d16d394a5df3c1fa9f9784ebcfe51f8061", "out": "divide(1487, 2242)"}
+{"key": "60541b8877203ce5c9822dc3ffca90b16e3141a08b64af673eb0b51f24d87209", "out": "divide(1487, 2242)"}
+{"key": "1c33a64b69e79a162155bde86f2743c073d08bc8f6a5de018c6d09fb88bcba2e", "out": "divide(1487, 2242)"}
+{"key": "48f1682d6205abdbb7785fe195c2f69bee9b65ead1bd5a6cd73ab83d5f18e555", "out": "divide(1487, 2242)"}
+{"key": "34e0de4d7270f080bb4b20774db33a4450bf58530c0c13b95b8ef606dd53e256", "out": "add(1211, 331)"}
+{"key": "3eb7f28c10f5b9fa2350716def672b778dc61d454eb44a6e30347ea39325e9a6", "out": "add(1211, 331)"}
+{"key": "e6a4791a2ded6ffc8b0c074ae7ca555242c5269d4eaeba91f11a0881a763c4ae", "out": "add(1211, 331)"}
+{"key": "1f60a9a3657b70988b2d1a0098592d289f76523600491eae70201557e5f24c41", "out": "add(1211, 331)"}
+{"key": "bbee9baedc7e9a73336b7720c89cddc1031f53deb3155c7713d5b9214b5a95be", "out": "divide(108256, 163897)"}
+{"key": "d2f2bd832e64cdb633c8c5e85074fd097de4a8a6b367f53b83f143b740146799", "out": "divide(108256, 163897)"}
+{"key": "60045a4cac5db8a4cf1d8956045ae8f7bd32cbd4eb94cd4bec4df555c2589397", "out": "divide(108256, 163897)"}
+{"key": "ac6d5d5c2d71ddac1561be0fb3080d67482cfc88b91c245c6d56b7142b07da22", "out": "divide(108256, 163897)"}
+{"key": "0490200970dc6cd3fdb3243a88d6aed51be3e6034d314c39218606843e04b16e", "out": "divide(2, 6)"}
+{"key": "7462eb7b51125fae992f4ee7a5fff2ba5782d071d588c5611fcbff85c12a2ab3", "out": "divide(2, 6)"}
+{"key": "da577f14ad1bb2c49df7cb8d6dbc53cc4fe4c4a8567b89b3e2defe1d0a507852", "out": "divide(2, 6)"}
+{"key": "7d2ade2d2ffeafeecceeb138f5a61973fb80198410c8593df3165f12868ad072", "out": "divide(2, 6)"}
+{"key": "ea85024a327a86ae1a2fde66a34c9a7e9828737ba093e0a179ca76047761f1cb", "out": "divide(subtract(6967, 6035), 6035)"}
+{"key": "2d7fa4b1baabc8794e00f7b7198dfdf595342b2979c84c3ca3786b2171a949ca", "out": "divide(subtract(6035, 6967), 6967)"}
+{"key": "3092df8a05f48ab33e4fff19980bed0c074f9cf137f4004101f79a3bfd90902c", "out": "divide(subtract(6967, 6035), 6035)"}
+{"key": "741abbb069354bff08c2205b79466507ea0eeb1aa441b572b5511a893dc84532", "out": "divide(subtract(6035, 6967), 6967)"}
+{"key": "3cc2ac03a7311955082aafacaa24232d055e2997103b358b9695a4d5a62747cc", "out": "divide(3955, 29953)"}
+{"key": "e2616d13eeb9ce4c6f58421674a9fb486e1e0099e5dcee76e6886aa32035f61c", "out": "divide(3955, 29953)"}
+{"key": "bd31aa4ae419f8b6e304305e4260c1dd11ddfa510ccf41c6e727073635f7e4d6", "out": "divide(3955, 29953)"}
+{"key": "e17ef4e5664a0d9223b3ce31edca1e72622ec38f2b0bcca2b7f0cb45c8b24de3", "out": "divide(3955, 29953)"}
+{"key": "f95d23117f982954d6a981da311bb13373f634258fe623831e05f9b309065f65", "out": "subtract(148.92, 135.02)"}
+{"key": "99e26711d9e9177f796b85150a28ebf2b447faefa9a74379ab370b512743f925", "out": "subtract(divide(subtract(148.92, const_100), const_100), divide(subtract(135.02, const_100), const_100))"}
+{"key": "4c6e8a6072d928af6040cb0f09aa95129bd308b2adf8b90e1a3c124bea45a242", "out": "subtract(divide(subtract(148.92, const_100), const_100), divide(subtract(135.02, const_100), const_100))"}
+{"key": "61120c7a13a9167443dd0dc5ad27f812ade7113f1948431b7379d96e035f9788", "out": "subtract(subtract(148.92, 100.00), subtract(135.02, 100.00))"}
+{"key": "b00a9fd2def3035fffa514718ea18cf5c88b47c556c2e60d58e4c5915e059998", "out": "divide(77, 469)"}
+{"key": "0183e7d74331a7b2f678d763ff4514b1344b373bd4d1e2ec2bb5539037def80b", "out": "divide(77, 469)"}
+{"key": "d53dd5dd7d76cc78791b98f3115d3bedb10ac4d69be204ce3f6ca424d242ddf0", "out": "divide(77, 392)"}
+{"key": "ddceafea1d2632803ff0c2515b866dda825b2141c22533326f63e18e07686a63", "out": "divide(77, 469)"}
+{"key": "166d2d1be72d0271c20be8fda2948c2f9855613d677b7ea5d13df88281aa63e0", "out": "divide(208.1, 193.5)"}
+{"key": "2b1fb48c32233121f7c63759485af1dceb5812d7b5242255e0d6d86bc34f4ac9", "out": "divide(subtract(208.1, const_100), subtract(193.5, const_100))"}
+{"key": "1b88f29fe6e4f7a090db559acf670df00c89e450042210acc5729828a2e34fa3", "out": "divide(subtract(208.1, 100.0), subtract(193.5, 100.0))"}
+{"key": "c12cbcb1dfa588e03aeac54c3f0e1b40bebcd431d6b994ffcba329b9d805164d", "out": "divide(subtract(208.1, const_100), subtract(193.5, const_100))"}
+{"key": "f8fe3567553ec7b08b07208893c08686b9159455221b767779ff127b5f500dbb", "out": "divide(subtract(674.0, 669.5), 669.5)"}
+{"key": "d6871776b97307f8a8b3054178dda35c090f5e3ef2dd8118378fc9639c54cad6", "out": "divide(subtract(674.0, 669.5), 669.5)"}
+{"key": "d8b40759bdb243c0394a03761141f4c5104fa8ecdf29505078cf70c53731e839", "out": "divide(subtract(674.0, 669.5), 669.5)"}
+{"key": "7502f2983ef1e86f2a5b4a56c50a7df2fd3319cc365352caa35d8cddd6531edf", "out": "divide(subtract(674.0, 669.5), 669.5)"}
+{"key": "bbe7a83bdc0fecbff2f2a3463bf0542ff242550b8cabc179dce4a64499b3275a", "out": "subtract(3.99, 3.99)"}
+{"key": "43590779347693a8946d5a8e7a4adbecea392648a05b088e87c86db640843db9", "out": "subtract(3.99, 3.99)"}
+{"key": "24a766a95a8b9f7038160083990e5a736697ba109d532e567fae4ee5f98226bd", "out": "subtract(3.99, 3.99)"}
+{"key": "86e241585cf50cf81c58640135daba0e21b320ce0ee0cf3f37ae3549326fc269", "out": "subtract(3.99, 3.99)"}
+{"key": "80f1c33867c79bf18b4482b35f57e1e9a8487100cadbb913a44319b399762d8b", "out": "divide(4087587, add(448859, 4087587))"}
+{"key": "68435588418a56e71062d0631b83b8d74a9320d69a00737ec0f753732fdd02a9", "out": "divide(4087587, add(448859, 4087587))"}
+{"key": "2377a60729df65cb737d2c70b92cb40b7318786a75d08745769e0f29aa5ce285", "out": "divide(4087587, add(448859, 4087587))"}
+{"key": "1d474576ae1ff1f9ed7d5d87d860a62d2aed4b6f9fbd0d13302d07b9145ed04d", "out": "divide(4087587, add(448859, 4087587))"}
+{"key": "a4689ce070ec2c8a5f3bbc9d77456c0122f7e3b07eeb1a024b97b1fe7389c9fd", "out": "divide(90.0, 380.0)"}
+{"key": "c8a7727c6a51f3d2c7a84d83b4859a1848d66c09db7cf70e44ccdf097c1454e9", "out": "divide(65.0, 90.0)"}
+{"key": "1574d811cfb5cfd17edb356edf30cf97a295939e3dd08cab8da3811bc83857e3", "out": "divide(90.0, 380.0)"}
+{"key": "972cfbd7d0b3654e318257cad0683f3d59780d4e2f6246c0926db8aae2976762", "out": "divide(65.0, 90.0)"}
+{"key": "6be39f20acc2c7beba32da7ae36a98d31d7b6706a05ffb0edb9069ce1cb47581", "out": "divide(subtract(766451, 204079), 204079)"}
+{"key": "7712d0cd17228675ab8cdd8719abb5122c4ad20a25288a5ae2bfbb59f9c1bb87", "out": "divide(subtract(766451, 204079), 204079)"}
+{"key": "af4778e84c6742c24d808b9465daa57bbc048235c8e2a217c31dac293ef77f3f", "out": "divide(subtract(766451, 204079), 204079)"}
+{"key": "e2387eaf036107032c3be6b284203b6a83d3dc6f906ee007de85b655c94f8e14", "out": "divide(subtract(766451, 204079), 204079)"}
+{"key": "343ab8a08b527918c158c98896614b265b595819f29535280405f7d52ccb812e", "out": "divide(685, 10877)"}
+{"key": "8ee08dac5b733cf947b358914f50df7ab3194ab07639a79c37264cd60bcdd3a3", "out": "divide(685, 10877)"}
+{"key": "9fa243b264ac5bc58b06a3baddae93f673c924f1f0ba81dff6cb93fc28fe30c4", "out": "divide(685, 10877)"}
+{"key": "52f8b223bc92cc3d97a666230ed4da6873e944c28fe6b01e9a50100278c014be", "out": "divide(685, 10877)"}
+{"key": "fc20e37797d466a3b43c63b4fc38e1789d4091ef65d9ee0e8ead84cca106638c", "out": "divide(1953, 2089)"}
+{"key": "fc89e0d36a6769ba754f130794e7658aa656a52d0d70be68c6090a138f5b9dbf", "out": "divide(1953, 2089)"}
+{"key": "babe0ec58db66f521b188b154656626762dd59468e41dc18a2db9a7dfe398438", "out": "divide(1953, 2089)"}
+{"key": "45dd15ca4e9ee26abe21d8c5dbdd98b038df2ac8190c781e00357a8833db2665", "out": "divide(1953, 2089)"}
+{"key": "8300f0a204ac365d6b305f8617e6bc7cf687743b5152668e5adcc944956580b8", "out": "divide(subtract(47.1, 5.4), 47.1)"}
+{"key": "9327d948e040bedfcccc4bc5c2added812841ef35ff342cc3780792edf81c871", "out": "divide(subtract(47.1, 5.4), 5.4)"}
+{"key": "b2df2db9102460d43834103d5e16e40162bc619b5307c10a168362b792eb7795", "out": "divide(subtract(47.1, 41.7), 41.7)"}
+{"key": "1c649d30c188bb7064583c79b45dc376f90651a4813b7f2aca6908261968010e", "out": "divide(subtract(47.1, 5.4), 5.4)"}
+{"key": "240b3be5ffc4ec4152b6b7d815f93e4b753bea4e081de2a79d597256336fbde2", "out": "divide(397612895, 463)"}
+{"key": "ee49c2ae1ebe8f4a20120b34e0c0308216402f8321559cde3a1d776e13439777", "out": "divide(397612895, 463)"}
+{"key": "219f204bf07f6f7b4f5da02d1af2858a9cbd50d34f66c6b90306407adfef1b50", "out": "divide(397612895, 463)"}
+{"key": "b1d043598122750c2bbb3335cc9a8fa6b71cabb67b5b6225b1f6c79d4e753542", "out": "divide(397612895, 463)"}
+{"key": "684a9b86c78ca3a913bba065b0719eefcf65b55d9e37e0193ef48ff796aad148", "out": "table_sum(residential mortgages at fair value, none)"}
+{"key": "5e8e96ce129f0d0fc19e7ad3d1c29b28643e09c9360b75c5c898e330460b372c", "out": "add(1356, 2220)"}
+{"key": "4dd84a1902569d32658540040a74db2672c706a8d5797c099ba034252769da4c", "out": "add(1356, 2220)"}
+{"key": "e1281c859cb35de71bc488bf27e0c50165d8955e9b50e524e26795b0989dffb9", "out": "add(1356, 2220)"}
+{"key": "0601ea76eda2103305c782c62fef3ca9904ac5194cdbf63a801210a823b2d7c4", "out": "subtract(258800, 25171)"}
+{"key": "3c3521465c3a61b3332d7c70a0a67568e41c4a0fa973b4d68cdae89dd69c632a", "out": "subtract(258800, 25171)"}
+{"key": "7d459dcffb76459e6d8fbe15349fe5f65ee0f43b4ef2bc011a30b5959757e4bd", "out": "subtract(258800, 25171)"}
+{"key": "9d0ccccbb4b17bbba8ae38c09f1469cf1ec26932e87b2f566f5c966bc88134b0", "out": "subtract(258800, 25171)"}
+{"key": "65163c04e0777349319a9db4b0e0ff3be618d50daf9637e7ca823fcad5d75fea", "out": "multiply(56.73, 397612895)"}
+{"key": "ddab6d4c14ff48bb9c5d66dc7211acf02694ed9f5ce03146b4853a059e205b6e", "out": "multiply(397612895, 56.73)"}
+{"key": "747ab2a794445d4eac62b9ff23db6502eec9c15f95915671872a2f9b61e7248d", "out": "multiply(56.73, 397612895)"}
+{"key": "6a6720f46b4e59f1bfa234f9d85d66bb6549fe44a846a9f2a076a28bebc39175", "out": "multiply(397612895, 56.73)"}
+{"key": "08c7b352e9aefd8184ac89487ee11881009205067c8be35b72d4b8e34fb27c66", "out": "divide(77699, 403484)"}
+{"key": "358fa9d3429c5c070294a592168bc31fd432742ea3646dc0d1062b22a0c618ca", "out": "divide(77699, 403484)"}
+{"key": "c57a36b075d55ef7f71861d787ebba293ec618472f3940f46de5b10ab8d703ba", "out": "divide(77699, 403484)"}
+{"key": "66fe23f4d3b9789023c049414bf9b87004abc2027cfff08965c1c1d194442955", "out": "divide(77699, 403484)"}
+{"key": "2a310c98b04b01a8e461cdcf79d48f8629767a7e9302d8f7c949ca4085f0d657", "out": "divide(142.1, 182.2)"}
+{"key": "533e746d2c5f678ca360178b1c13a32dc5d2eca31dbae88d75ef762e268ef173", "out": "divide(142.1, 182.2)"}
+{"key": "c39228371e9f26b699dc7e176111332b27ed817c768c327169f4d3a50a4a6de0", "out": "divide(142.1, 182.2)"}
+{"key": "7f9d759556c94b9d48905bb30c90cb2ec229410cd9816e5d7a719c5c43d627cf", "out": "divide(142.1, 182.2)"}
+{"key": "6c21a91243c5b0ec4b4a89d5ff840530e4d69483d784581574abf9558dfcdce2", "out": "table_sum(purchases of reserves in place, none)"}
+{"key": "ec2ecf6121ba025546a11e2f560e42539242d77f2cf3744330b630f730a21119", "out": "table_sum(purchases of reserves in place, none)"}
+{"key": "f5361adaf0f90a87da2e3e7252670afcaea242e735c7a2f3aa1364c5563a76b7", "out": "table_sum(purchases of reserves in place, none)"}
+{"key": "ebd532c34d3acaa3108e3739e58225c203f15840e2cdfabdf9085bbbedcfd587", "out": "table_sum(purchases of reserves in place, none)"}
+{"key": "54a70101f9dbb0b77e2b1acf63488a525349d50b1bb7547cf92891a635db0c8e", "out": "divide(subtract(527.7, 257.6), 257.6)"}
+{"key": "3060ede2fec79edd2ef39c4fa1e160fc69f7d7bee624d2dff727954503ce71d0", "out": "divide(subtract(527.7, 257.6), 257.6)"}
+{"key": "db812a39f0c67b25771cef04b03121cb291be5c38ce181b129de1b9903c68cd6", "out": "divide(subtract(527.7, 257.6), 257.6)"}
+{"key": "d453e0ebe9d6c6be433afcd15f6065c11d8f96b5775f59943b57649a5d36c4e2", "out": "divide(subtract(527.7, 257.6), 257.6)"}
+{"key": "24934b01e7bd0ffc59425e35e921d90c67f5df41a17b80b82b7880642ccd3b04", "out": "divide(1100, 5245)"}
+{"key": "5bb2a678541656d7f94467e990abc2fbd0ea8263e86814b45dd8800a4222088a", "out": "divide(multiply(1.1, const_1000), 5245)"}
+{"key": "adcb4deda5ad79866534995991ac32c019ab3e255933dfdb0a9cb4f7868d2290", "out": "divide(1100, 5245)"}
+{"key": "0d659d1baf79575209a041f302ad84dbe72f050308260310387c8d25ec645613", "out": "divide(multiply(1.1, const_1000), 5245)"}
+{"key": "bd18fb07972422c1026265cfa27220710ea95f59e44f8cd3dc98b8929c99e0ae", "out": "divide(subtract(181612, 172521), 172521)"}
+{"key": "fa5db3a1ba5f0d57d6c809c3733f1b2715150ff436ac155027b07d2993a9bd53", "out": "divide(subtract(181612, 172521), 172521)"}
+{"key": "576c7f965cc29cfecf9922e05ece70c2d95a42ee540f9cee8f32113933e04863", "out": "divide(subtract(181612, 172521), 172521)"}
+{"key": "41262f35af32b904aa23c534ffce4107db89a98d376bea434e7f6c37e6418fa0", "out": "divide(subtract(181612, 172521), 172521)"}
+{"key": "46d33a08517a5263aefa8a90c983af317f97d29bc830114e94fcc850dccd6204", "out": "divide(subtract(1.68, 1.92), 1.92)"}
+{"key": "f8ac83fbf63e80db248026f94c62abdb15be8d1d6685e0a9e0e6dafa51002c58", "out": "divide(subtract(1.68, 1.92), 1.92)"}
+{"key": "3d632224a2ca96fe19ebfb8ed953935536d44db02db3b50c3f6bf3a134e03013", "out": "divide(subtract(1.68, 1.92), 1.92)"}
+{"key": "9cea18727155f92ae1e11c0375db39f0bc3d711a1a8af2334de593df66810c40", "out": "divide(subtract(1.68, 1.92), 1.92)"}
+{"key": "f993bc327305b9ec871ba545d53282955594da9348ed689be1d38f36c7951c70", "out": "table_average(total accumulated other comprehensive losses, none)"}
+{"key": "89e543bdbb3d7f1b7b007d09c412df3b8e31d0f38f9e1610aacccb78eb8244fe", "out": "average(add(-9402, -6826, -4190))"}
+{"key": "7c8d61fcd7482e3311d310e78aadb6332defb0a45e13ea75a634ca7b0ba7aa37", "out": "average(add(-9402, add(-6826, -4190)))"}
+{"key": "0df0b958068f65c99f1e393c7e751bbeff19e2974ac231a656c06a882e4e14a1", "out": "table_average(total accumulated other comprehensive losses, none)"}
+{"key": "8b1f09e8337232c74f1b35d8c318e867e9518de42623d3c7acc6e718af7336a0", "out": "multiply(300, 6.50%)"}
+{"key": "5e4d584d93fb3144b33fbcb06655d4812ea4a343f5f4e0fc9694716e03900458", "out": "multiply(300, 0.065)"}
+{"key": "ec8e439fa750aa9728fccde6f62aa9cb5e2eae29c72135a1c6c74f187f99432f", "out": "multiply(300, 6.50%)"}
+{"key": "787a628aacb48e79d142a974d9e16f1b73aedc92ea7911a816eea194e2d22083", "out": "multiply(300, 0.065)"}
+{"key": "8ad2d063468ba84b934950320a91f2231d70939d22374711cb3e1ad54bdad35f", "out": "divide(1580, 2206)"}
+{"key": "67105ded6fa0047e88b56741767a6a052eafd78709dfbdd2ae9d925eb220380b", "out": "divide(table_sum('thereafter', 'none'), 2206)"}
+{"key": "348ed19a94ccd4b5fbd5f05b4df18884a856ab82fbdbfa2d10cffc158cf5ec59", "out": "divide(1580, 2206)"}
+{"key": "ceccd35ef4f9713c03dc3189a7db0817850f599dfab81756a180f14efc914783", "out": "divide(1580, 2206)"}
+{"key": "1c707072fb23908917b79b4bb9d38c784cf617dcac6e0b47491f1584b5546d77", "out": "divide(subtract(172945, 178413), 178413)"}
+{"key": "c7eefd170a65a67525043ade1c3a193da8364364cacc118bf9ea8d51843fec65", "out": "divide(subtract(172945, 178413), 178413)"}
+{"key": "b23783b77f9a19b4278863b3e157d0da38e5f2d61ca4729fa8a0fe76718dd70c", "out": "divide(subtract(172945, 178413), 178413)"}
+{"key": "9d84728de509da27ea5676921965dd159ebe32f8c3daf28407aa0da7a565c762", "out": "divide(subtract(172945, 178413), 178413)"}
+{"key": "66b3c5a28856a253f6d8807a510c55e9f87b854004eb3dffa456d8fa56bd137a", "out": "divide(130, 7)"}
+{"key": "ac2c33c20085c9c3a772ec1fd677cc1ab61c92166b7c3d4e790e0595df894ee9", "out": "divide(130, 7)"}
+{"key": "cac4e34f1cf4f4ddcb4d13aaa1114d495a4f50871ee440eb10661fc7d6d8a2d1", "out": "divide(130, 7)"}
+{"key": "ff62248b31e8d78cf9e1c2f22547cbac929d62b4c963c6670bc2a5942d78c999", "out": "divide(130, 7)"}
+{"key": "c2687603385747466857dcc4a32bb6d11ee1817dc05c362e8f7f5c64011a16c7", "out": "greater(288, 453)"}
+{"key": "0426b08fd4eb3efa99ed206810167e2d40d14b721b36f4d50386414a73297770", "out": "greater(288, 453)"}
+{"key": "3241fbd432f30c549c74a5cd374870a7d25c587cc493eed17feb34792396ff98", "out": "greater(288, 468)"}
+{"key": "e3e81460ef84ba185be9376e2680faabbc862c2a4fd8ed83595f274db1647fa4", "out": "greater(288, 468)"}
+{"key": "e318e24603898125f8d95cdef600e37f809f08dbf6197932300dbbba3f49be23", "out": "subtract(3451276, 3155228)"}
+{"key": "f9c1ec2950e66065d9d83ac4928f143ae503e8769ef04ec6bbbad42c87a93e91", "out": "subtract(3451276, 3155228)"}
+{"key": "2c37a453c068b1103c3fd7ae80f64132c3bbfbe0722cdeb79410446e9504467d", "out": "subtract(3451276, 3155228)"}
+{"key": "4af1f0a1206c34e7b80cfa22cdbd7426011ab485af9db74f3b612920ff878e51", "out": "subtract(3451276, 3155228)"}
+{"key": "09c14746b812f0a6c238a40488da074fa41aecc0a4180786ba5123d55a021b92", "out": "divide(subtract(1063, 1030), 1030)"}
+{"key": "508f5cac1af1dc72f4647683ee872db080d2237dd5cc5de1c59feeeb1fca1f04", "out": "divide(subtract(1063, 1030), 1030)"}
+{"key": "4928a8d0a35d6ff01616b40661b3c129c8116ba93918306bc40419479e7f320c", "out": "divide(subtract(1063, 1030), 1030)"}
+{"key": "2d3df13404044e2447661a9384a0c731a4753dfaf9696cf3e00d2c77538d016a", "out": "divide(subtract(1063, 1030), 1030)"}
+{"key": "c57c3a52dd0d575b981ea4be71d502df236dedec1fe4d00fddea47ff74f92f41", "out": "divide(subtract(1791, 2715), 2715)"}
+{"key": "5db106bb4b3b730c09772e1d6d6e35fa5b4cf46d681ea3ab2f6021e59d39c3a8", "out": "divide(subtract(1791, 2715), 2715)"}
+{"key": "b10ca5e33701ae442bd57d5dedf24f9d25e2c92a6d7d13a9641596b258a959e1", "out": "divide(subtract(1791, 2715), 2715)"}
+{"key": "ac4beabbf51d1ac999c82ff88cbcbdf2064670fa359ff042dd73c257d0e4e4dd", "out": "divide(subtract(1791, 2715), 2715)"}
+{"key": "57f0b8fdc105e0773d3cdaf7e0390c0bf716350da6763bf6878c892948689161", "out": "subtract(62, 37)"}
+{"key": "ce7716385099fe304f390f8d025f6e5c3c431f5eb39a5083cebfa161e36fb9aa", "out": "subtract(62, 37)"}
+{"key": "1059ab1aaf1c63bb7dd4d5991809f396eb320700421369346d916941c2dc4511", "out": "subtract(62, 37)"}
+{"key": "3b5301baf3bca00e78c1bcc51b166e0f51797030577530d851441f71ef76f469", "out": "subtract(62, 37)"}
+{"key": "60b58aa3171cf4ae8a6f720106f7ce638dad84be527bec753bc18dbb0790fd78", "out": "divide(subtract(252.7, 231.0), 231.0)"}
+{"key": "4e5c985408153fbab3ea8bf26080fa5253f5fc73d47ba0626be8df2c42c9ae0e", "out": "divide(subtract(252.7, 231.0), 231.0)"}
+{"key": "d61b537ddd2d2b7f698201c95329b63cc42f0c43dac613efe16aad8072ef5672", "out": "divide(subtract(252.7, 231.0), 231.0)"}
+{"key": "370bed236f08b96c1e5013c2c34f2245c049115ae308f1378ef8c8c245ccdd51", "out": "divide(subtract(252.7, 231.0), 231.0)"}
+{"key": "f34a923ab6844ada0b50d91f9b126ed359a523e3edefbc8a79e9b10dd4ed2322", "out": "divide(subtract(1267, 1356), 1356)"}
+{"key": "060f5a68b00dc086f330be6d3d33feb9e81b599edee92e0f2f8d8db671254137", "out": "divide(subtract(1267, 1356), 1356)"}
+{"key": "f0f13a3be55f81c0b1b2f1e582633493dbc3a9ecbcba122e6c810e1f894b701e", "out": "divide(subtract(1267, 1356), 1356)"}
+{"key": "5f8484eec96f09ab76706f2177831a2247c9f32173546cd4c175ee7d876ad442", "out": "divide(subtract(1267, 1356), 1356)"}
+{"key": "017495cfc4b25a884a9e7cb2d3f8103d362c2bb00dc1546369965cf07267cd79", "out": "divide(subtract(17388, -38957), -38957)"}
+{"key": "52c1ee5455cdbbed05b7ccfb85d79fe3e4485f6a23e6dd1a92c4d632dd5e389f", "out": "divide(subtract(17388, -38957), -38957)"}
+{"key": "2e8c8cecab2179a48204d2d6ccab296adac6c565cf52df2cc42957f942fe5300", "out": "subtract(17388, -38957)"}
+{"key": "9b558fc4a01ba742e89576721933630969f42593efc645a0fcaa6c8fd5920af8", "out": "divide(subtract(17388, -38957), -38957)"}
+{"key": "e9af4f81eec5b094f52e4c9f1f0a52b1da6835636ee65472ffa77797b1f5176a", "out": "add(2547.2, add(-1641.6, -1359.8))"}
+{"key": "50c5b742f7a2f48666dccebe3d5a5e26325caff4cd44893feca0e5dd90317dd1", "out": "divide(subtract(2547.2, add(-1641.6, -1359.8)), 2547.2)"}
+{"key": "0eab3e76934df237824a8e8db5bc2071c829179309b4374309f06739d188c81c", "out": "table_sum(financing activities)"}
+{"key": "c907dbbb22790b3b323324e9a36dc4370ce40fc482bd579e430a695e61ce245d", "out": "divide(const_1, 0.14)"}
+{"key": "b2afd84332a18fffc44206ccf1ad4b0c6338c2ff2088cc8f9109f61a01ffa4fa", "out": "divide(add(add(-1641.6, -1359.8), const_2), const_2)"}
+{"key": "b3b394c9473fded05cb9d8cfface589bc6b66492e1f04a4c1437cf74b589947b", "out": "divide(const_1000, const_1000)"}
+{"key": "a8cb1a4406516eb2f5ed5713644c8dc26c805f14e1619a1e8933ad80e1750d08", "out": "divide(const_1000, const_1000)"}
+{"key": "1e9228015c915d474a16e1b2c25bdaf211b5b1609546239ae2de1a9f38316797", "out": "divide(const_1000, const_1000)"}
+{"key": "2094e907364ac3fe239449d658c24c1963d9e71289d69e387f8324a6b39c0d74", "out": "divide(add(4091, 1031), 19427)"}
+{"key": "c4040eb65b4ef4863627c5b2270c2207b882eb4f47d69966d005c33001562d49", "out": "divide(add(4091, 1031), 19427)"}
+{"key": "7095e50fc03f9dcfda4841602ef110b1f09b4bebee993f283d063877f3217b4b", "out": "divide(add(13536, add(4091, 1031)), 19427)"}
+{"key": "6c1e7a5a199f0edfc88a6317cf15310c4fc3815f570a7c704c6d642d0915e06e", "out": "divide(add(4091, 1031), 19427)"}
+{"key": "f8a879ed8003718052bce2fd820fd492de1f5ed7aa12a55b9584043d78fb3ec4", "out": "divide(1029, 750)"}
+{"key": "15caace26276e7899969866deb4914e5076822870dda0d8c75ca15ec1af1bcfb", "out": "divide(1029, 750)"}
+{"key": "f67e57f2b60f3d525d5982c57d6d5674ebd7a89b675835b59c32d0b61c7c5d71", "out": "divide(1029, 750)"}
+{"key": "208b09ab7d26586b2a085a77a5567ee55f3bb42e3325b8046818a519e79f860d", "out": "divide(1029, 750)"}
+{"key": "052c4f3d49be9c068941e77b33987b495e9b7c04ca4b5b0c7156f08b000a4300", "out": "table_sum(equity compensation plans approved by security holders, none)"}
+{"key": "1f23ca7a2c394ed1b90c3ef513ffc0ddbf2ddd9481853dab90d1342c8b6a495e", "out": "add(448859, 4087587)"}
+{"key": "d257ebfd2d8900db53823491228e6c8994f85bd3c89683c3aa72c6595685c86f", "out": "add(448859, 4087587)"}
+{"key": "d32994fb30c49b73129eee00bf617f5ee420b561fb77afbafa60663927166ae1", "out": "add(448859, 4087587)"}
+{"key": "53324ba82c1788ab2330adc23e624d07675d25e0b39e220da025a1589d59ce50", "out": "divide(subtract(99832, 81881), 81881)"}
+{"key": "8358dbf520391d4627f6f3975fdb18071f09684b0363472facd66c0af07f7738", "out": "divide(subtract(99832, 81881), 81881)"}
+{"key": "e37f86987dc646697f9ca08f6c26f32e6e7d61712c4797b2907ca71dde174568", "out": "subtract(divide(subtract(99832, 81881), 81881), 0)"}
+{"key": "5ded579ab419cce76bb7a6455b8caca3cdc585b80280587ea7a672febae299ac", "out": "divide(subtract(99832, 81881), 81881)"}
+{"key": "52cc53e047112ed52d34da345962ad077470fddeab6e49acfa0e776e44495541", "out": "subtract(290.6, 303.1)"}
+{"key": "5b31bddf08f8e3b7e421c755edafe589c0ce673fa7d0400fb47fa8d23ba98ec1", "out": "subtract(290.6, 303.1)"}
+{"key": "386593dab8cbe2096c3cd985e0ad6f42798fab90b73669e19d90c00b85b8fbec", "out": "subtract(290.6, 303.1)"}
+{"key": "34fc893ea5557bf548238d953805774dfe81e8bd7a5b6127cf2ed0d35114697e", "out": "subtract(290.6, 303.1)"}
+{"key": "01f816ed373b4178735599bbddae68ffe3b5c2be385b091f652bbea2cf70886d", "out": "divide(subtract(18.13, 11.75), 11.75)"}
+{"key": "995d4ba2c0c5f90d7eaabc584ccbea84ca8e1d1947e3a2eec9c07b529489f0b6", "out": "divide(subtract(18.13, 11.75), 11.75)"}
+{"key": "55dba3fc685b74219a93a47815547b9af63b93fbaac11b21a83094a1a29aecb2", "out": "subtract(18.13, 11.75)"}
+{"key": "ea497386ddfac8c45ebc3d1de8a412844210cdae50c9c559316401f0b9c9bb4a", "out": "divide(subtract(18.13, 11.75), 11.75)"}
+{"key": "1b6ecb2796e507ef26d375b65aa1dad51a0636bf7e2ad75bb637126aa7ac8311", "out": "divide(7616, add(13107, 7616))"}
+{"key": "fcff717b6887daff9de6cbe2bf603ecddca63e693c19293642cdec9807aee021", "out": "divide(7616, add(13107, 7616))"}
+{"key": "48c0ee8c87be4faecd44e1e619a0036339f69e6115790e86b834d64a7cba4696", "out": "divide(7616, add(13107, 7616))"}
+{"key": "f1357e2c37338e15cf1be2619a4314b59e6e76ace085d67cb95c74f1e0c147fa", "out": "divide(7616, add(13107, 7616))"}
+{"key": "8fb71bb855cab69c6a79cb82ccd9d1c70d621a2d3001645806de4d3967f0aca2", "out": "table_average(expected life in years, none)"}
+{"key": "f9f40074d11739e75779d4279a569864f6df580911892a15360745b4da5bf678", "out": "divide(add(add(5.0, 5.1), 5.5), const_3)"}
+{"key": "ea8998a1f93c49d16f93a6a75fa5c5f266a6c961390dd8564313e3ef9a9f2617", "out": "divide(add(5.0, add(5.1, 5.5)), const_3)"}
+{"key": "5b44942ea133e8e697f58ce287c753f82857b1be994e9a4ac6a046f0564d1d0c", "out": "divide(add(add(5.0, 5.1), 5.5), const_3)"}
+{"key": "147d5643c1ae467a0f9a0430ca8359d10d868069b5f2b016a91b07aa1d61fab9", "out": "divide(subtract(1200, 789), 789)"}
+{"key": "c75653e9a9d3342aaf19dbeb1d43cbe4d6f4fbabddb9cf71d163fd6eb6f92b71", "out": "divide(subtract(1200, 789), 789)"}
+{"key": "679c3224447cf81d4653a0226510ce79a15f0ec82db7f87a42589abb745ae6be", "out": "divide(subtract(1200, 789), 789)"}
+{"key": "fec083535dd770b75d8d2694952464e6a4a70db1745b7907c352a4443b93fcd1", "out": "divide(subtract(1200, 411.0), 411.0)"}
+{"key": "4d9ac8ca2430ab7eb4882c37cba39c33cf21e8efe4573057f220be44ec70f652", "out": "divide(453815, 3450152)"}
+{"key": "9313a0a5a2684f11b3848b0ebbf8a81ff651bdb6b82fb96d6b3064be9a4e031d", "out": "divide(453815, 3450152)"}
+{"key": "afd5fdef305e7edddfff783edff74e17014d3e3c6afbd9255dc574df2667b9b2", "out": "divide(453815, 3450152)"}
+{"key": "de85e9307f1655dc4e209bfa901a86c3b4ca573f329cfb3bf0b430d66463e138", "out": "divide(453815, 3450152)"}
+{"key": "ebe76d746477e09bf6ce50acf311a4930a82a11e2a76dca8314dad32e63314d6", "out": "divide(subtract(96.5, 100.0), 100.0)"}
+{"key": "1876bd3b79e710397c059630614bebc130e267fcf8ad1fc7bd8370adaa8b113e", "out": "subtract(divide(subtract(96.50, const_100), const_100), divide(subtract(150.30, const_100), const_100))"}
+{"key": "7493dcfe510337d192e18510b6107e7d08389d3f50fb6309466ae17eee52f942", "out": "subtract(divide(subtract(96.5, 100.0), 100.0), divide(subtract(150.3, 100.0), 100.0))"}
+{"key": "a83f2a62640c1e9b9bed4092366c1a5ca6f49778261f07b6398d3d5c92cf65b3", "out": "subtract(divide(subtract(96.50, const_100), const_100), divide(subtract(150.30, const_100), const_100))"}
+{"key": "73d0e45ede0534bf3fc43568a28d93bb06d046956a2fe0ed65f1489bdf3c8edb", "out": "divide(64, 549)"}
+{"key": "e7b98172049b1f4703f8a10ea7c3843f173505769e7b5915aab13ed97abbe368", "out": "divide(64, 549)"}
+{"key": "381f8f18cb3eb8de70cca1a7d3562359660cc3c8930e8e7a862bbbe05b763f35", "out": "divide(64, 549)"}
+{"key": "0d13bca82cb83ab7415b1561808b3a947866f59a1cfa3444014969cad1efc169", "out": "divide(64, 549)"}
+{"key": "0166abaf5238f983a7f8796dd724c6b5a40e8e0c95348a5ac0c38fb16f8e9134", "out": "divide(subtract(2467.1, 2397.8), 2397.8)"}
+{"key": "75e700395ee6e163d2d389187bbf3f7667b6dda39fb9623208cc662167789ff9", "out": "divide(subtract(2467.1, 2397.8), 2397.8)"}
+{"key": "793d35f485c035789ee21f736cfdfcfc00ab3fc75b04ffe91da765b0b0ae23c0", "out": "divide(subtract(2467.1, 2397.8), 2397.8)"}
+{"key": "408908025881e4de7f1944ce85f9f0197b900bccd9f2e80190fac96a3bd074a3", "out": "divide(subtract(2467.1, 2397.8), 2397.8)"}
+{"key": "4ca270b32c257c15bdd83c30896acdd3635fd14f59ab4cc513b0ff30ef124546", "out": "divide(55, 0.40)"}
+{"key": "ee455ce9a128fefa9d96a1f013a309137ef5ed778fb1df61c761db6d0e154eee", "out": "divide(55, 0.40)"}
+{"key": "11a74a4ecc5c1032fdc27c1228d9e7aac04eeaa6797156399a6c9c9da466856e", "out": "divide(55, 0.40)"}
+{"key": "434a1d4bff0e29aea9cb1076bd0761591f540a12243f9921b8db4902432a0e27", "out": "divide(55, 0.40)"}
+{"key": "5ee174a543171ce8accabf781a1e0350e97adbc4002d473750348f67eadcd351", "out": "divide(subtract(50408, 211942), 211942)"}
+{"key": "172e97ba3c540f1d0ca5f2fbf3e744dfeb763b98f166054828a7aae947166b08", "out": "subtract(divide(subtract(50408, 211942), 211942), 1)"}
+{"key": "54cebed939043d680b8174cfdd921e3506fc57b31a1cbc3576d9287ef4e46131", "out": "divide(subtract(48777, 211942), 211942)"}
+{"key": "ebd4275a8519a565b6c3fd32bc112f811e403e6c03c3000f2c6c4142da4299a2", "out": "divide(subtract(50408, 211942), 211942)"}
+{"key": "ce3821c27b2f1216561a5114d22eb6ecca8c0cac655b045b4e420f501d8549a6", "out": "divide(6900, 220600)"}
+{"key": "bc8818a1d54e511c899e95d575bca5fbc9b1439dc7307bb042844ec0fe159fd7", "out": "divide(6900, 220600)"}
+{"key": "d49d12d7ea5c4ef5eabfc6ba2ea86d70727bc209e1bfef23d04447599316c9db", "out": "divide(6900, 220600)"}
+{"key": "662e288758088c998cc3cffc29883ec30e49c15fe039e089c7c9d6dc58e6029d", "out": "divide(6900, 220600)"}
+{"key": "40fc73736388e3afe9bdc01c4b5180a64c6f9849c19be6579100330b562c9474", "out": "divide(2094800, 6156900)"}
+{"key": "d98d61b17220edb7b37368bc008931d33dfb69883b900c8f9ee53ed5fec75153", "out": "divide(2094800, 6156900)"}
+{"key": "24eef0a090feccb7bf3eed62539133cb5379e78c57d032313840b114fd777e0a", "out": "divide(2094800, 6156900)"}
+{"key": "a91e2ce02b46ada92d5721d8a04c6a1cb03bc5f1ae1c0e2f6762fb49a13e1319", "out": "divide(2094800, 6156900)"}
+{"key": "82d8dd36bb0d4a7af0945684dc08b3599ca6ec454fa1b5cdba817aef9b87f9fc", "out": "greater(14, 19)"}
+{"key": "7a00b9617cc755a5d6e1b6eac0ed2cc39b07eec3077e0c613cc615ccfb0fef07", "out": "greater(14, 19)"}
+{"key": "9e76f3d902f57100fb9f2622181efcc9a9031a55af38fb5faa75c073dc355360", "out": "divide(subtract(14, 19), 19)"}
+{"key": "a38bca33697283411daa7f2f97ba24686ae7a7a9db593bca1419e46b10c3c925", "out": "divide(subtract(14, 19), 19)"}
+{"key": "77334ecef88f8de9711b2d281fb65a56ce535095649dec7c6399999f5828da10", "out": "multiply(246, 1)"}
+{"key": "2918c74e94f4fd781c0ad697ada338a8da19fbe3f48b786ed7522d5df66dc3af", "out": "multiply(subtract(154.3, 154.3), 12.12)"}
+{"key": "0d4e669359898c11982bc54346f5a24787bb986b0e150bacdf842587cf8604f2", "out": "multiply(246, 1)"}
+{"key": "9fd0e214a7160196de36b74504c489a4ff500de82bdc5ab66f8280472eaf8883", "out": "multiply(246, const_1000000)"}
+{"key": "cde256007d548ab2635b641d12c758990c5b699009e9da2f8d769336721d4f16", "out": "divide(subtract(130085, 113941), 130085)"}
+{"key": "0800aca744a01f2d9251b2cea73df5bb7ac6e35dc00f0bfa11876efe8e5587fd", "out": "divide(subtract(130085, 113941), 130085)"}
+{"key": "2cfaab26f0d2e725f0a5c9b1172c5247951e63caca3cd33ee1bae390cc39fe6f", "out": "divide(subtract(130085, 113941), 130085)"}
+{"key": "08e63560b1c009b528c9d59511901bfc70fed9a36fc24ee23f597d957ddea508", "out": "divide(subtract(130085, 113941), 130085)"}
+{"key": "9f345dff10995db7ac1db0e3eaddc71110596881026510da27e820fe422b7dbb", "out": "divide(453815, 2996337)"}
+{"key": "249acefce2ac8ab3e734523b743f8de47105c0b8ab287f996d588569323bd27b", "out": "divide(453815, 2996337)"}
+{"key": "b3127c35cd62c4efaa2a0115455a341ae339c59ae84b60cda27104f8149c4b73", "out": "divide(453815, 2996337)"}
+{"key": "afa5fd1a192bc6e1f30ace5572ecc9d81d3cf54c45ddbbd82c3a10d36c67d81c", "out": "divide(453815, 2996337)"}
+{"key": "218a82db9a831fd99ff02cca9ea75aac270b723c360638163927f8a26bbec8b6", "out": "subtract(4.61, 1.56)"}
+{"key": "eda122e790790ed06099442ba1742da43594aee8527ca0fb7bfffe260fa11a6a", "out": "subtract(4.61, 1.56)"}
+{"key": "7fed9154011ade8e909df43a513f1b9bf07c016fc0501f3974e6005a1e35c7fc", "out": "subtract(4.61, 1.56)"}
+{"key": "f38f0055a7463a8de27ef43f2783be96609fa2884113e0796afa37b7d310d621", "out": "multiply(14669, 43.89)"}
+{"key": "ac9b1ba9b7b23d6af3793a7d1546a6d1fbb34f5d8fe37db1481ad52808be1977", "out": "subtract(4.61, 1.56)"}
+{"key": "cf4e762fe00f5c48dde9815116c730a2c38fbd4b7495680531bf5b9d9c6b9d90", "out": "divide(14669, 138311810)"}
+{"key": "a8146336cfa2a9397485a56d614aed18a63db5ee40cc93254723d537bdfca8b4", "out": "table_sum('number of shares repurchased ( 1 )', 'none')"}
+{"key": "c44fa1e4ef0fb4f10fb60a6ba8f9ce169956a343dfaebb91ab614d05a3a9cab2", "out": "divide(14669, 138311810)"}
+{"key": "38af294c0b9bbe8d2fae263bee27e8c672fcb4123114015c77b5e62d6e1776d4", "out": "subtract(4819, 1703)"}
+{"key": "695afc489344389b8e32c8f2de1e13fb5da1b5aca4b7d46d0521913ff1da9faa", "out": "subtract(4819, 1703)"}
+{"key": "aa271651c4c04f1cac445808822edd180bc9bbbd8d041fc8cf8f61d62f18546f", "out": "subtract(4819, 1703)"}
+{"key": "4273e1a398aec42d0056392506a4f7688c50bd8e8c8171769df4e8e7a77c5ac0", "out": "subtract(1703, 1371)"}
+{"key": "c6205d530d19794dcfd5bf956ce3501a5fd27859606d725721a5579278e1900c", "out": "divide(subtract(116.61, 100.00), 100.00)"}
+{"key": "679cfbc5b19aad3958062bf47aff48fb3ae62ecc66d2b0bea8c3f3dba484e416", "out": "divide(subtract(116.61, 100.00), 100.00)"}
+{"key": "1760849d89bdc28d2d86c3ddb6cc364c56d717c3cd30d35974cbb33e14a3818b", "out": "divide(subtract(116.61, 100.00), 100.00)"}
+{"key": "ff59c7a95136f1db27b8fee13c72264abdb03eb8f282a51d49fbec7328236209", "out": "divide(subtract(116.61, 100.00), 100.00)"}
+{"key": "97acd8ef184d0ddc07c1d3d4641db2f6061a0268b4f0431ff08240a223c92237", "out": "subtract(252.7, 231.0)"}
+{"key": "4662c85680f73c0c8b56e201c420469741ec65f654c0108bd2d1247802a68fcc", "out": "subtract(252.7, 231.0)"}
+{"key": "1682257868e4c1066ae5a67133f1923a6e5008bb61590f6c6c379770f3643854", "out": "subtract(252.7, 231.0)"}
+{"key": "800bf652a45654eac6d3a9932d8d29fb9b3d21fd02b44d2ae5801bcb6e15818f", "out": "subtract(252.7, 231.0)"}
+{"key": "aaf985fa2ad37af049792da3c6a76156e180eb6e4bb0b13f865aab7896a9b307", "out": "subtract(1042661, 170800)"}
+{"key": "f6847f971c8855bbca000ef02b4a8d745f45d7defb95ca600a4272b8b01bb001", "out": "subtract(1042661, 170800)"}
+{"key": "86d4fe5aa49b6fe00dab0c727dac4c55a14216c15ca693a07368282bb1555230", "out": "subtract(1042661, 170800)"}
+{"key": "e72ef06d960829b0eb89843c3d0fc7c8f54796416a63be0046cb18f99cbeb069", "out": "subtract(1042661, 170800)"}
+{"key": "974cc9637e4e8b8316331a8b7076cd1876a23ec678ecc83cdb7cdfd76edde8ad", "out": "table_max(net rental expense, none)"}
+{"key": "ae6bee092f7192c2861553ff386f88c4fdeb77d413d7ad8e3a2be106d150329b", "out": "table_max(net rental expense, none)"}
+{"key": "5eb267da3e1c88ac47d4fe0974ea0888e58eb143a66ac9e817032b96557f021e", "out": "table_max(net rental expense, none)"}
+{"key": "96994ef1fe4c0a53c4309e8d4b084ae75addc12e1ff42218eea0e4b7be6085fe", "out": "table_max(net rental expense, none)"}
+{"key": "87a461397ae7c88f2cf92d161dbdbf730e405dfbdc2406b38c183c91d2785431", "out": "divide(6817, 11287)"}
+{"key": "4f6333c11fb00088d22de491798a41bd2dac970309e78e3047c5c6571d012b95", "out": "divide(6817, 11287)"}
+{"key": "2135ff31b145621afbb1cdb6a9239ccf53df3ba1c5f3c6f77cf7d0edb0755199", "out": "divide(6817, 11287)"}
+{"key": "997b57f45169e3a2d27cf287280e7263845659a87b8976c016e440e9a3631d2e", "out": "divide(6817, 11287)"}
+{"key": "d3159f7a5dca00083dd7ac62635b1ba9944045a8d3159c02178d9aaba9d4a3cf", "out": "divide(subtract(37.8, 34.4), 34.4)"}
+{"key": "2d7832b7fb00e0a95fb51ceb6ab15be7244e65884f71ad2905e267a83ef6a9b1", "out": "subtract(37.8, 34.4)"}
+{"key": "fb07b3c4d4fe25f85e5003a8446232d8c5b749074b8f54eccbcd84a5fa2b8095", "out": "divide(subtract(37.8, 34.4), 34.4)"}
+{"key": "11836b82795a1e1ee9f8503040ce5bb434385b152098aa6e933b1d042be62d45", "out": "divide(subtract(37.8, 34.4), 34.4)"}
+{"key": "0f4fb7ac3caee6689ebff2f6d0a8dde26e42f958269273361b6fa88a18532616", "out": "subtract(81.15, 64.48)"}
+{"key": "8bcc0e7c28cde6436daf2c9a113f879e5ae9f519918b96afba94b25b449b5bfd", "out": "subtract(81.15, 64.48)"}
+{"key": "2e5b2cdf4e73510ab775192a201e9bbb80167dee1621500f2a7b67b3608030c4", "out": "subtract(81.15, 64.48)"}
+{"key": "f5dc64b7a59fc22bde8518bfff3049735989b3b14e4a3949539778451e69619e", "out": "divide(subtract(81.15, 64.48), 64.48)"}
+{"key": "4a36854516d2ec572039d3ffe27aa167387368484ab53d55ce11c7c1807dbacf", "out": "add(multiply(108, const_1000), multiply(20, const_1000))"}
+{"key": "1f7348550fc6863f433ca52224dd29aa0a26ae4401b1ef04e4c5464dedbc38f8", "out": "add(multiply(108, const_7), multiply(20, const_8))"}
+{"key": "f03dd003ca7256f58e806ca5298e1efabf7893708c89a9384a8c69c9ffd142b7", "out": "add(multiply(108, const_7), multiply(20, const_8))"}
+{"key": "9add7a9fa803c4dd61503da6bb434a7fd825eefb4dd1452181ca9319348b1946", "out": "add(multiply(108, const_1000000), multiply(20, const_1000000))"}
+{"key": "c702bea8e8b4f8bfb0776e4a3582aac3c325ed5144fa04082cfe814e8c1b9773", "out": "subtract(3, 2)"}
+{"key": "fa3dbaa1937bacd2d58dcc9b4060bc68e585775ef767572155a770c9c609c48a", "out": "subtract(3, 2)"}
+{"key": "6f534fee7457f95018a0a5db2df9e34424966fc22d92f9e32830a2e4c854b185", "out": "subtract(3, 2)"}
+{"key": "5a8a5c72866f207a5fab9e427a38155be9cdbc3ad87b71a18159355e56ce1c91", "out": "subtract(3, 2)"}
+{"key": "e2e9d299c234118998f75406ca6b8da1cd1957b910a0c140089af8f6ed191a99", "out": "subtract(51.2, 47.4)"}
+{"key": "f08846d201f15c4133bd9bc41f39881761fc1c075d67abc19d328ba8a4d051d5", "out": "subtract(51.2, 47.4)"}
+{"key": "9cc5b63fe847e899887654efc045ed9dce34689f9b844d2de5eed269c6602377", "out": "subtract(51.2, 47.4)"}
+{"key": "5e41760d323f6aded81df8c8c9b806867ceefeb1df38882a9d6e1bf2290af33d", "out": "subtract(51.2, 47.4)"}
+{"key": "727a1980d32dd80479aeebc0475482b2fd2b234ca85e523efe04fc3b252c8ad6", "out": "divide(subtract(57.2, 49.0), 49.0)"}
+{"key": "e88b840aed65aa3b603ec13239bec08b887c8b27adc80aa85021fd7e70c06e98", "out": "divide(subtract(57.2, 49.0), 49.0)"}
+{"key": "d6936bd9a2349ebd2fbac96a519f09471b86277083d2f2f6087da0ef2ca0abdf", "out": "divide(subtract(57.2, 49.0), 49.0)"}
+{"key": "24b3fb6ef264a2095b25fea68a0468ecada025115c69c0488cc8b7171654a879", "out": "divide(subtract(57.2, 49.0), 49.0)"}
+{"key": "18a275e6a4ae0958c0cf5a3f8ccf33ab9e90c876684e70db30b9112067444fe9", "out": "divide(subtract(22.8, 27.4), 27.4)"}
+{"key": "6227f69e0bd87940df79d0302bd3e7fe3b7c01c20ff8ada71c17f75933b6d086", "out": "divide(subtract(22.8, 27.4), 27.4)"}
+{"key": "15c3f44c933c78d10cb557c0760c00926cd6c2e10683548a8a853d2e28671bc2", "out": "divide(subtract(22.8, 27.4), 27.4)"}
+{"key": "aea2567455c8030df20c762bc45d4ca46c00795c226eb70b3a8afdb53c268e0e", "out": "divide(subtract(22.8, 27.4), 27.4)"}
+{"key": "690ba1ac0d1a1ec0e1a5b580541727bcd31762ae9d34f4a2cd5f5367f7f56cac", "out": "divide(72629, 64553)"}
+{"key": "dfcad6c8ea7c9001361ac01412f9282d30976f36fd2822cafa7bdf2658db1e95", "out": "subtract(72629, 64553)"}
+{"key": "cc21c01f23877aea6fca0dadc88f623bcc9a4deef7fb1eca39ae1206a923d748", "out": "divide(72629, 64553)"}
+{"key": "751dd7675827a55ab63a54e46d0bb991c3b7c930bb1feaea7b16719a7f954468", "out": "divide(72629, 64553)"}
+{"key": "5ab56a96c1125b8ef74042f5c7a2254564f857d249e5f704b2e5b2bca5832687", "out": "divide(76.7, 397.2)"}
+{"key": "e79de99403630da951636d6e676cfbb6e7f496a4f415caaed1fe2f4bbfa48154", "out": "divide(76.7, 397.2)"}
+{"key": "ec0dfb7cd83d105f23fbe769d7468c9b4433d0145c86c49240dd85d0e2d75ca7", "out": "divide(76.7, 397.2)"}
+{"key": "9ff693c71ba9de192e8797858bcbf5632027505533dd4767d8cdc63520a40f76", "out": "divide(76.7, 397.2)"}
+{"key": "5794560ffc3f2e9693868ed8f2f2e40057ab03fbd3f884dd9abd709a80fc8554", "out": "divide(11, 83)"}
+{"key": "24bdc46f62ddcaa180318aef5d7ef86b91a183b007263fe13c6f327f779619c7", "out": "divide(11, 83)"}
+{"key": "17d490878e04c9c9cfa5d5476a87b3f6077fd580e41c9860908229a85c185ab0", "out": "divide(11, 83)"}
+{"key": "36933ac14a84a6105720b83e78c30e0429a41e5781db5f18b78d1d56b8fd4ae2", "out": "divide(11, add(43, add(3, add(11, 26))))"}
+{"key": "a56a9b1685b8c3c6ca9c0225a32b739f8a31ee3287e1a2aca9b85fb7a35db5ac", "out": "divide(87, 119)"}
+{"key": "fc3a9fa6d9b49dce5efa11be8bd7c9a4ccebdedc39afeec6d123bef1ad79330f", "out": "divide(87, 119)"}
+{"key": "886511ca3e07f2d936d2afa6b93aca7c59f4f55d37df9416480e565997d1b2ab", "out": "divide(87, 119)"}
+{"key": "5cfb2d273e736f96a53b14af6f2b5cf81929ea855af05b90f56afb3f388bf3e3", "out": "divide(87, 119)"}
+{"key": "85426c6a40556035e55b1c6bb216379551169b5904d37a7642544581c3fbb9d5", "out": "divide(106500, 4600)"}
+{"key": "15e33c40774e549998a14650908ceb7bc34c58c6d3c8f7965c7c0e7c33fae87b", "out": "divide(106500, 4600)"}
+{"key": "64e4151edf9a484d3f793bf86a0558e84e8cfc3f0ed8d640832cf639b457fc39", "out": "divide(106500, 4600)"}
+{"key": "97374cec69e735a07912337b390d6d55db65da0fa9f29d4dc9713baf0e1b8924", "out": "divide(106500, 4600)"}
+{"key": "229d039d2f542568d26fa1c5e8b424659b6d2c1e05c0681d1ae9d6e19b7ccafc", "out": "subtract(47, 54)"}
+{"key": "4e1f275d08ebe6073e4fb6e6f8193a5d63d2fa2b57ca49f22b8ab4d9b64ca546", "out": "subtract(54, 47)"}
+{"key": "31931ed7dec860f7d711db684036dc9601395f69927fcef282803767ccb95e5a", "out": "subtract(54, 47)"}
+{"key": "3ff728af144efbcf200d2005f93d58cfbb6d75b61902536af2d0ed9374a412a5", "out": "subtract(47, 37)"}
+{"key": "8d0d8d40dbdaaa5620c326153aab8c6c21adea8d67a34e0620ca071e19d7ac8d", "out": "divide(43.2, 68.9)"}
+{"key": "234bb83bd6280af03a11af16c4bedfabfa1435dc479ce97a470cee1292450f2c", "out": "divide(43.2, 68.9)"}
+{"key": "dac210e1d96d672f49fddc54418737d08ae992263409c09dc70bfed466d33119", "out": "divide(43.2, 68.9)"}
+{"key": "4b394664c939eb48a259b1743bd185177f145cc999707d87708b422e26f78251", "out": "divide(43.2, 68.9)"}
+{"key": "b6f516a7da9b7197fcd82815859a091de72455900f05c250b7cdb174bff1bb3f", "out": "divide(subtract(188.9, 153.9), 153.9)"}
+{"key": "d6d1065342ccbc59f6bdd60e3006556455c8b44e2329a2820d2166ba16d86f21", "out": "divide(subtract(188.9, 153.9), 153.9)"}
+{"key": "6f9228ee01e5b96af210fb6c04f9e3896f36722149b2e65ebc1ce33e4799b1dd", "out": "subtract(divide(subtract(188.9, 153.9), 153.9), 0)"}
+{"key": "841d216c59e6104a79cb38ecc336e405252bfff1a86d66839bba3d569381bd36", "out": "divide(subtract(188.9, 153.9), 153.9)"}
+{"key": "f8c27d885b15b766940cc70f6b726d3c272d93ee2e8c2381b39542e513377383", "out": "divide(3967866, 3972176)"}
+{"key": "d25d7420d7c029ad390d2aa450e8c0ab0fc4702f50d7c6251f3e0c0bfba502c3", "out": "divide(3967866, 3972176)"}
+{"key": "5e7284caa81c49205032314eb9a39c4231f8b9c310f760d75122021bb7057d5c", "out": "divide(3967866, 3972176)"}
+{"key": "02979063cbc1ffdc9fe1671853ed4a5c2ba2aed9090b35f52710b193bd0546cb", "out": "divide(3967866, 3972176)"}
+{"key": "6b6dd6e5db0aaf1f0d9e578070b3527274f5a409693789776de4892a83a99885", "out": "add(1654, add(1251, 1030))"}
+{"key": "afdf96751df0d9ba6272f95abda3e8649dc7795e884755c6ced28694e30e8aec", "out": "add(add(1654, 1251), 1030)"}
+{"key": "7273afcc07c5aff62dc415babf54a1b6904f78129e48125d9e52d5333ea0562e", "out": "add(add(1654, 1251), 1030)"}
+{"key": "2d2a16158aa712217f122d1fe0c79216951ae9b8a32c135b5ae36bb369d06df6", "out": "add(1654, add(1251, 1030))"}
+{"key": "01512b96ce6ee8661fbfef990f2f5b27f27d15ade4ff3aca1d4c91c676c5997b", "out": "divide(59.1, 98.0)"}
+{"key": "dd28c75e2d85911ceed7a69f256193b826c6685d70ac27c9fbfae0deff341703", "out": "divide(59.1, 98.0)"}
+{"key": "4628d03db18e69128567c4f03830834b6184b69ead3272e64889c931144b03b8", "out": "divide(59.1, 98.0)"}
+{"key": "b02f04c08a119287dc91e5b31c2c51bc8fd241880ef002f2c14753f05c220551", "out": "divide(59.1, 98.0)"}
+{"key": "df0a920e17774db537c82ff360137a007c8e5bc4b26ed28d74fa6443815f0d75", "out": "divide(subtract(97.37, 100.0), 100.0)"}
+{"key": "a0ea5e9f864affb9742e3eeee585869bef440b42138e96a84b79acd0cab42684", "out": "divide(subtract(97.37, 100.0), 100.0)"}
+{"key": "b7a2aa30fdc64ce366ab2272b47f10ee0c8e12fa1a374b09b3b2ee4bd39da597", "out": "divide(subtract(97.37, 100.0), 100.0)"}
+{"key": "7eaaed8ecca44431f847770345b1b984cf3c9ab98558c682cc430a76b12676b3", "out": "divide(subtract(97.37, 100.0), 100.0)"}
+{"key": "9a4e30a62f7493b24e35483c75ede6bfb185b1dded139b4bc4c9b11be941621f", "out": "average(add(82, 91))"}
+{"key": "c699c5e89abec300043612acdd2d558217cfa7d77ba4c361d7154966ea74a5c1", "out": "divide(add(82, 91), 2)"}
+{"key": "9fb62c926385f98ea8924d1c6ed2f6c0e68df68f8023d35a9875566691c7213e", "out": "average(add(82, 91))"}
+{"key": "ba7459df43fcdec244a7603f6f0ee6a939682ba4592e54c3af64b218f8bdbe10", "out": "divide(add(82, 91), 2)"}
+{"key": "248a134de7ed783925a5bd0e1f87a516bc6d5b1d2607c09b790052510d3625bc", "out": "subtract(13.2, 13.0)"}
+{"key": "a1170698ff550e31148bda31b95e0cd9d27ef2dbaa11cc6ceca8389368a54d1a", "out": "subtract(13.0, 13.2)"}
+{"key": "821d6b94d6cd45f4590e92a9ec675ea7f2b35d7f3009f8a27785fd86b27324d7", "out": "subtract(13.0, 13.2)"}
+{"key": "4829750cd78e29a6ec089cac12b850f2b326397eb2d1776dd8625c28a19a8aa4", "out": "subtract(13.0, 13.2)"}
+{"key": "6b18dec11591155f344e12f7949fe2447e5f016081c379933de54aeaf6125942", "out": "subtract(22.8, 21.9)"}
+{"key": "e6bde253e8e221302f9067e88bf76c279f360405bd0d24124841048f5b886efa", "out": "divide(subtract(22.8, 21.9), 21.9)"}
+{"key": "fd44f62606e403f25c0810db2e96dd4f93690b6f66b209813ec653325d809170", "out": "subtract(22.8, 21.9)"}
+{"key": "3de0e185b3aa9ae6485cd74b955cb5c484f83d0c30a5ec4d51e8b2458429fb8d", "out": "subtract(22.8, 21.9)"}
+{"key": "63e6fcd3353c8bf7163be8977622cc88d327609e86a94df77afbe3c0c729f97b", "out": "add(257, add(4533, 1018))"}
+{"key": "edb9737db32fe0220631f68c56332a32d9460f2fbf12d6faf1d993a833c2a3c4", "out": "sum(257, 4533, 1018)"}
+{"key": "82709800151f1cd382bbef9bb7b2756a9162669a484d6ec275aa4e29111f6d29", "out": "sum(257, 4533, 1018)"}
+{"key": "a23ac746c292f52e677afdfd370193b3000678ae1e920d471cb1df6768b1eabc", "out": "add(257, add(4533, 1018))"}
+{"key": "c73dc41696bd79ec45d75f26f1c3e4bce5ff30b2c45d69629125f3bacb7ec03f", "out": "divide(subtract(9857, 10686), 10686)"}
+{"key": "9ed85c59d0ed47ed5c12570b37e4b7a3a37d648427c1518f7870a0d3b37bc03a", "out": "multiply(divide(subtract(9857, 10686), 10686), const_100)"}
+{"key": "6a5365f20da079a20bb74d65b3a1a47987a5bee398c0ed14c5dab799ecbc9bf8", "out": "divide(subtract(9857, 10686), 10686)"}
+{"key": "9555d98c37f8b660e4b6edd005ceb192a4bfc460130da378064658d189e2d5ea", "out": "divide(subtract(9857, 10686), 10686)"}
+{"key": "4ac23629beaba7578955626bf8e4932b5cd9675f464fdfb568ba9cda8ae86dc8", "out": "divide(subtract(1891, 2383), 2383)"}
+{"key": "dad0d6cdfc414fd512c50528d6c519f9fea80d23d2dfd55d397fb060b3328cad", "out": "divide(subtract(1891, 2383), 2383)"}
+{"key": "37c2988be7bb008f820b2717125e7b9426a03480c578c3977d1d9c3400475487", "out": "divide(subtract(1891, 2383), 2383)"}
+{"key": "57628f31ae4b32eee8f4f662b87797154654028cd1c4113d03b19c915ceb408c", "out": "divide(subtract(1891, 2383), 2383)"}
+{"key": "e79b2e586e8dfd5de08baeb35e08c7e3f020048b298ec95295aad6df009b1bfa", "out": "divide(67489, 806357)"}
+{"key": "81a19cad62041aac7f5f1f2efc196742d3c88af9eb4ba83513ab796ff3c5039e", "out": "divide(67489, 806357)"}
+{"key": "2ced80ab8fae24585e8e5758848f4dfd23651987cb63e4391168c6c9eb030f1d", "out": "divide(67489, 806357)"}
+{"key": "283fcf3bd6ce235283f8c13081f973b96a3ba55cdf5b47e8c793fd01dbff45cb", "out": "divide(67489, 806357)"}
+{"key": "1771a5436e7e43406d93400fc36b023b5d9d1fff77e0751f6db62eac3dae2696", "out": "divide(58000, 1262000)"}
+{"key": "b48dc8ed6f30868054c450182f3e17577332b09164730fa3b94b08e940158c1f", "out": "divide(58, 821)"}
+{"key": "ea15499eebed7c557b35f15ab5ed440850eb32896e948be909e9a4cb07c6753f", "out": "divide(58000, 1262000)"}
+{"key": "541025f9887d44722067873a43485d9687643eb0309e962c99cb485b00d83809", "out": "divide(58, 1262)"}
+{"key": "bde6bf3e60523a30259e9a0cd7e8656eff085d081beeb492fc66d8f0d427ba60", "out": "divide(subtract(404436, 476915), 476915)"}
+{"key": "97a537f6e49f87cb4bd3dbceea977d1ea39d19e690514c6bd9a15e8cdc404fe2", "out": "divide(subtract(404436, 476915), 476915)"}
+{"key": "569e6c819b0e7f060d138a70fbe7d426d422cf8953733108b5b5c6512bb4a889", "out": "divide(subtract(404436, 476915), 476915)"}
+{"key": "5ec0ccf03e53c214673296560e6957c9143d5ce57bd4cc169bbfafd07fe5caa7", "out": "divide(subtract(404436, 476915), 476915)"}
+{"key": "a94994fde2740c9e91ddea86c93fda7284b47e46a5c5f0d832f66952d5918761", "out": "divide(multiply(431170, 48.11), const_1000000)"}
+{"key": "89a8eed43c68f073a30bee834b6d31b74ea353b4fd723bbcdaa0d42760a54047", "out": "divide(multiply(431170, 48.11), const_1000000)"}
+{"key": "17143f521c207b173ff47faa2ca00cfaf6557f38a5155540d28cb64ac9ad1fd3", "out": "divide(multiply(431170, 48.11), const_1000000)"}
+{"key": "722821fe65baf0d4e37c154c2ef439f104dacfeba9441c7a78412c3c0cb24d0a", "out": "divide(multiply(431170, 48.11), const_1000000)"}
+{"key": "bc82947c88e773c3b81aa4311322b5f9e7f7c8ca08a3d34bbcc3cd76797afe99", "out": "divide(77, 469)"}
+{"key": "868a8074e9ed157f622bbb6fee2692d9a6ca0105f768c898e60f7bc538bef268", "out": "divide(77, 392)"}
+{"key": "81d1474d9a8e102187e475d1ef2523c19d500ff2bf0ccb89bebc29f6a63c0f47", "out": "divide(77, 469)"}
+{"key": "956901fb9da996acaa8c08293248b0a50d4bd75cad9850a82705a68988ebec3d", "out": "divide(77, 392)"}
+{"key": "6c542d3818b054da4bbc56345a18c67f5cd36e5b0437b8461d881b651bb5dc50", "out": "subtract(148.92, 182.76)"}
+{"key": "a376e1784639d40a7a309e4f08ab23103eced84b0572721b43ee16f22b276bbb", "out": "subtract(divide(subtract(148.92, const_100), const_100), divide(subtract(182.76, const_100), const_100))"}
+{"key": "49fa8bd85e3d14f97f2d5a688336e1dbef85f13c0f29e341c83e9c5edb957034", "out": "subtract(subtract(148.92, 100.00), subtract(182.76, 100.00))"}
+{"key": "c912882e0a7321b3ab64d5a8cdfd31b8cbeb2055b74992fbbb9fe1abcba1d6f9", "out": "subtract(subtract(148.92, const_100), subtract(182.76, const_100))"}
+{"key": "cc81ef840317252cf3e9ce805209a4b0e4993858a929b6eb9b4730242815a96c", "out": "divide(1.10, 4.58)"}
+{"key": "fdf900514ac4c44ce2c0a417b29cf12b61f4312e8629c7569f2212b1556720bc", "out": "divide(1.10, 4.58)"}
+{"key": "c1bb1f85f5cea838ad6aaa9b0e20b63b3b69da0af31282c677ac39c4bd3b4132", "out": "divide(1.10, 4.58)"}
+{"key": "63e143de3e3ca3e50ddc8baa2873a8faf06aa8e7d0b4b888ea9a85f49ea51d71", "out": "divide(1.10, 4.58)"}
+{"key": "779468ec0613de36acf1393cc2f7565067071c4f2fdd97734e6b120796281ded", "out": "divide(447700, 2226300)"}
+{"key": "73752793c285fa27f891ee07961f5db25802db039de1b1a6b347db8e4eb6a298", "out": "divide(447700, 2226300)"}
+{"key": "edccf3a16d473f6c91a9d657c3b38110d1005437eb0ccff3bd4621282a9159be", "out": "divide(447700, 2226300)"}
+{"key": "8e8f556a5a41cb4e2d7260e5df386ddb4635fc457725bdfbf4450e572f387365", "out": "divide(447700, 2226300)"}
+{"key": "5a0a52b612d356bddbe5c645d835dc0751aab3d6a33d7fd8a49219cd3fdb44c5", "out": "divide(subtract(1211, 1194), 1194)"}
+{"key": "1c452c764688f995444909a25a538f59e5de5b7a1c8abde1c08d572a7ea1321e", "out": "divide(subtract(1211, 1194), 1194)"}
+{"key": "15289b5f28feae2508f38bda07b1dc42cace63a3203dcbd7000dac9990140d1e", "out": "divide(subtract(1211, 1194), 1194)"}
+{"key": "20d211d4a5d7299f5e32b4ef82f8e5e8b5a4f88c9c7967c9559ae39c51c438d0", "out": "divide(subtract(1211, 1194), 1194)"}
+{"key": "14ce1a5bb197e464399be35865780dadf7c1866ae98af93deb210d6975c675d1", "out": "divide(subtract(86, 53), 86)"}
+{"key": "34d96b7e4d72d66cec069434e4c055271465500f4905946ca31273db8dcb8d96", "out": "divide(subtract(86, 53), 86)"}
+{"key": "e81fb0d2f25912d201046447941eefa289a04481056276290ae0f7158b99584f", "out": "divide(subtract(86, 53), 86)"}
+{"key": "ef8c350f7fa719876a6f753325034605f6a6f5abd1f7ebcdb5ff4d5155dc9d06", "out": "divide(subtract(86, 53), 86)"}
+{"key": "ac9caf05e802c1270df2d921d82f14ac7afbfa19dcc299459e6d96183e532c14", "out": "table_max('gross margin percentage', 'none')"}
+{"key": "d6d19472c29a4982de9bf9ab0a3448483962f23c8633a79358672de24b0f19a0", "out": "table_max(gross margin percentage, none)"}
+{"key": "8b11e91b7517504f077f6f575e3fa5e24b3f8d017998fc4cf3cd14269638544d", "out": "table_max(gross margin percentage, none)"}
+{"key": "f461fedcfd20f29953c6784893f328323e756c8e84fa9fc90182eb7131f1c4e8", "out": "table_max(gross margin percentage, none)"}
+{"key": "29a5856d9136c2b77d34b34bed60bd9549d154f3fd3cd85f38443b5f56962fb7", "out": "divide(subtract(820, 852), 852)"}
+{"key": "79fbf1e54d8b7081970cb5ec729581aa7de3ee48de915f22a6cb381d3947f625", "out": "divide(subtract(820, 852), 852)"}
+{"key": "d6ec7324c89f97c4c5427a7b631fff71af91a314c365ae98c053e78ff1d34710", "out": "divide(subtract(820, 852), 852)"}
+{"key": "c92e833fb1d35922820420be5c4686282431bd3ec0a5e2571b0b2679cd9955e5", "out": "divide(subtract(820, 852), 852)"}
+{"key": "3ea101de7f4e9c099635e8013879d2124789132463169677120ee61c096b0e64", "out": "divide(9223, 26410)"}
+{"key": "78bd03bc1076d4c126fdd22cee3204951ab22275abc247fe94e43b0e77ea2656", "out": "divide(9223, 26410)"}
+{"key": "bd86111183b55be0a2626d2a3ff816fb3a6f0ba511acc0e3770806c032282ca8", "out": "divide(9223, 26410)"}
+{"key": "2d266c15a3bf386e5a8c61b67d8ea7fd85b3ffc3481e35da12f3a3a996050f94", "out": "divide(9223, 26410)"}
+{"key": "109aa3005931d6bd96aea3fb82428d984402353ffda26619bf4b4f7c13f4c035", "out": "divide(92.9, 1520.5)"}
+{"key": "bf721a66772c573e88a37d23ae2712cdea54c8b5567afe9aa0807d4fe0ec3400", "out": "divide(92.9, 1520.5)"}
+{"key": "353ba9faa4cf4931a7d1be970b25c34a5bd9a8b92bc2c2812227eeebe444e0f1", "out": "divide(92.9, 1520.5)"}
+{"key": "34c6ba051c46051830b7f0b01a44262434bac99f67bf5a0314b0eb0993ba193c", "out": "divide(92.9, 1520.5)"}
+{"key": "54f677f1136a322c766e0e9b817ac3deb4970731f36f15528ca2a1cc37874612", "out": "divide(subtract(-9402, -6826), -6826)"}
+{"key": "69756fb6c69e7f284e7093a0772c5c11f480aa2ba58e80de74bc06ab8b2fc2d0", "out": "divide(subtract(-9402, -6826), -6826)"}
+{"key": "a5758c8e22c4fb5d5a6bf70563cda6e20e468f8499c7add4ac47e0d201827e89", "out": "divide(subtract(-9402, -6826), -6826)"}
+{"key": "47c56b2b0f48930fd6e08c4daaee34413bc7723c9d37551bad7cd3cd8ca66ed8", "out": "divide(subtract(-9402, -6826), -6826)"}
+{"key": "3a5efd2cae1974a6faaced4463b5e7eb783b1e2a1f29aa7de6306ac0f86b5747", "out": "divide(subtract(34.50, 30.66), 30.66)"}
+{"key": "d38dc8cdc8d30e2d484ca52d345fcaa7419fac9e4058e06424381a5ae542910e", "out": "divide(subtract(34.50, 30.66), 30.66)"}
+{"key": "bdf767aae2527ae1df77c63220776306adc466e13bf27e882038cca309a23055", "out": "divide(subtract(34.50, 30.66), 30.66)"}
+{"key": "52cedfbdf9a716a0ebeb1ca619b5dcdc16fff09d19b3d73af36b6ef6287f9fba", "out": "divide(subtract(34.50, 30.66), 30.66)"}
+{"key": "ee959169f830497ae650f6306d4e6d7d33432265f13772786ae95d9f689be552", "out": "divide(396, 2455)"}
+{"key": "a859a5acb9dd96d53e243293171104536d739b7b5b2dbc7b56289ad07f8833fd", "out": "divide(396, 2455)"}
+{"key": "cfb30562aa4f3f2345d61b68b8b485ce8c0f7bcd36710bc06c5d83d074061745", "out": "divide(396, 2455)"}
+{"key": "ab05f59aaa8dc39d9b56a91b96c0c685bd7754f16ab00a9a25e9bd84ad7bcfea", "out": "divide(396, 2455)"}
+{"key": "321b10fe8b5df95bea2840990edf261c0a5be518e109702f18d081b77f4045bf", "out": "divide(subtract(7000.0, 5000.0), 5000.0)"}
+{"key": "0bbe7ecab7576eb12662375e837e76629ab2a02464759aa3cfff4f7e0c492a8c", "out": "divide(subtract(7.0, 5.0), 5.0)"}
+{"key": "363685f75b1a17100f45c7d930470d0247752dff3e63a90720d188dca2068a06", "out": "divide(subtract(7000.0, 5000.0), 5000.0)"}
+{"key": "6f4b93805ab95d423bb35ee0a0ec0d36d337f0445942453f0f882f613dcaea6b", "out": "divide(subtract(7.0, 5.0), 5.0)"}
+{"key": "269f75db25c84fdcf6e3d279a9a66b63623ca08a6b8ddd9dbc45135dd91dd669", "out": "divide(25048, 44572)"}
+{"key": "2dc527205a164be49a62b0538afba4ae22f871942d88e4ee54729018599c4e55", "out": "divide(25048, 44572)"}
+{"key": "8623b8b7bd2ddd9289aff3c0c7c9af5d05aed348ea52b38728bd5fa62d946d25", "out": "divide(25048, 44572)"}
+{"key": "3acb01583ebd9b35cde8f98fe0c03839edbe910b256c1bc862f02bd6122b3bb8", "out": "divide(25048, 44572)"}
+{"key": "427c4c040c499ef0057ac1bf60440c1d4878ea9c777094dc6a0246611b402809", "out": "divide(149, 385.373)"}
+{"key": "f7e7aee57765fcd8c3a2cff664bd488f1dc058d3768b6678ab9e9872b6178a40", "out": "divide(149, 385.373)"}
+{"key": "2d8941e9ebfaa9c7edac3f9f3874498644410efe6c4128ab07e6f7ef11783bfa", "out": "divide(149, 385373)"}
+{"key": "89a7415350b7f2ffb9feba87e2e84da803b672a13ce7da7d9ceae8980a9c6413", "out": "divide(149, 385.373)"}
+{"key": "8da06afcb362b257007fd88ae3a39c6a6094fa2e08d0325382e502a867ee6357", "out": "divide(6.1, subtract(442.3, 403.3))"}
+{"key": "2848e9f918c78d07ce6848f0c8dd9d43fa395470f9c4086c732d6b037bef043f", "out": "divide(6.1, subtract(442.3, 403.3))"}
+{"key": "174015acd5032969d9a82ddbfc7e9fdc4b2d42df361a0c1fd33a9f3f263fdfd0", "out": "divide(6.1, subtract(442.3, 403.3))"}
+{"key": "f436abfae06d52d69ebb4ac95995179438777179425f93c7d68ab4297930cd19", "out": "divide(6.1, subtract(442.3, 403.3))"}
+{"key": "abe85aa317540b04ff797c1ea11915d848e0180d5342c14b4009ce64acb21827", "out": "divide(231277, 3967008)"}
+{"key": "94b0686c813f9a3f3e75cb7e56a17a4265a736a7d0e38b33e23d48c5fef1b883", "out": "divide(189659, 3098341)"}
+{"key": "4efc769c449d7d3eec8d07dde2962a3b1ffc7a504365166f978752c642af7a1f", "out": "divide(231277, 3967008)"}
+{"key": "90a11114ec567f791d5ab014dc2bb8b3978c90e0b0e3ddb85dcf4a66933f7980", "out": "divide(231277, 3967008)"}
+{"key": "f4e506c33a1697d5abf1d8d5d82440b37cde7843dc961ceb3115f126625510d9", "out": "divide(subtract(96.5, 100.0), 100.0)"}
+{"key": "5f89b9a6e4b93657a142596c2ab6c4c4b38688510d131e5cbe5f6ea403afeee1", "out": "divide(subtract(96.50, const_100), const_100)"}
+{"key": "9e94b04b3791989269fa9eba7635f3fb778a239758aa5a5d3121b193eadafe7f", "out": "divide(subtract(96.5, 100.0), 100.0)"}
+{"key": "b029d1acb0071600ab558b28a362e0234458d5c504e93386b2c95ad2d5714dd3", "out": "divide(subtract(96.50, const_100), const_100)"}
+{"key": "09aff457d17158c95ead3dd3fc2fa3e802cb2d7157c135c07e81bd616e70d377", "out": "divide(6932, const_1000)"}
+{"key": "75bb28b196ca7ce3be15792293835a6b0aec7eaea301b1cd968d1df3ee712914", "out": "divide(6932, const_1000)"}
+{"key": "2fb740a816044d868ff19666593cfa824ac4c6b4bee563486442d683b9ab4513", "out": "subtract(6.0, 0.932)"}
+{"key": "ca4eebf1a334854a71a2ae2e49aae2882f6bfad015a02bc54d6198bf1ae93539", "out": "subtract(6.0, 0.932)"}
+{"key": "4df7fa373c29b7c6412c720304090d5c173dfcc9aeb32ec68efd8acf21845b0d", "out": "divide(339235, 1000000)"}
+{"key": "eb7f82eacc85f23ec9074ff68c7d7031144453b1db6573942fa03f6abd9fa8d2", "out": "divide(339235, 1000000)"}
+{"key": "7e31270fb99cb057b199b7cc271a1f5b5c60e8a5e7da42b30a649188f2cbadcc", "out": "divide(339235, 1000000)"}
+{"key": "a2b734558a4bd9a5496d4cc03ac0351208355c59cf62de4e88392dc5056ca78d", "out": "divide(339235, 1000000)"}
+{"key": "6deb0e59a536578ac03317d4d4233e718c05390b56f8876bfcad318e96a3638a", "out": "divide(7146, const_1000)"}
+{"key": "75c36654773711bad31b848e6d31f3e24c296dcd0413476d952b1b32fd4109be", "out": "divide(7146, 32%)"}
+{"key": "d1edfc7cc24d9abcd4055631630557791d517c8ca81c7970e65d288c5fabeba4", "out": "divide(7146, const_1000)"}
+{"key": "11ae91ed6af9945a62ddbbb18817b663469d8028fd3879f17a6aacf20dc095cb", "out": "divide(multiply(7146, 32%), const_1000)"}
+{"key": "93de3455ccf62189f142c32a09d9ceb16117d9e3a5edbaf44c664ba99efaae1d", "out": "add(503215, 462420)"}
+{"key": "621b164fcf83e09539fd9420ff86e485b8488dd1ebefae6643abe78bcee1723c", "out": "divide(add(503215, 462420), const_1000)"}
+{"key": "19aecf721f4d1c434517e7c3010a10352cc083945515604b6bfaa23a5ac7dc5e", "out": "divide(add(503215, 462420), const_1000)"}
+{"key": "8fa84d27a96a51dca1e4d34e3b551517e2896415c6d821c66eabdf6b3a45797a", "out": "add(503215, 462420)"}
+{"key": "600976f0a47e29b0293b25839d47c4615c098928b111f43b17b4bb76d1c5cb9b", "out": "divide(add(add(26, 28), 26), 3)"}
+{"key": "ce9c3fa85f294e587c9d24580bd8d90ca7669d94e13d4daafafa62622df16c69", "out": "table_average(effective tax rate, none)"}
+{"key": "b3602af2aff06e3637114980c133ff75b1a0859172565b941f30c6a75633a039", "out": "divide(add(26, add(28, 26)), const_3)"}
+{"key": "f4c1058931633a1b889ee855ce0410c014db9cb138b1a576c8689d1ed904d964", "out": "divide(add(add(26, 28), 26), 3)"}
+{"key": "8899241021e188da0e8c6afc5106777491d4f132604006a524e86d2add5cdbe1", "out": "divide(subtract(365.6, 377.0), 377.0)"}
+{"key": "fc5441600d5977c80f0d363a975e476c95a45bf8d02ea88ec2dba90eef7e03a0", "out": "divide(subtract(365.6, 377.0), 377.0)"}
+{"key": "d1e19027102ce62c328f347fc1709d5ec132d9e73510d6e2130ea55b7dceeca1", "out": "divide(subtract(365.6, 377.0), 377.0)"}
+{"key": "f695492d677931bd810ecd9f449af66843752403c0ed62168ed45ed4f3417518", "out": "divide(subtract(365.6, 377.0), 377.0)"}
+{"key": "6893c7ada02d73726dace2ec828a8aab3fbf2f502b291d492eb4e6e7e189da3a", "out": "divide(44.6, 420.1)"}
+{"key": "cce8ee6105ae3f36b072e236eb9ca761eec45ad35b53e5753e5e904b6c95a999", "out": "divide(44.6, 420.1)"}
+{"key": "0cd864724e6b3b1d78369d8136e370eb82855ec499b46a3243867324741350a0", "out": "divide(44.6, 420.1)"}
+{"key": "9bec1713f5e44d39450356a2d2aedb03f2883d8df3f93e32c27fabb6439c2a90", "out": "divide(44.6, 420.1)"}
+{"key": "7a5fc668dc2b7c617c5ebd4fb9099574ab24b266577521c49b437194a04a9ebc", "out": "divide(subtract(4.30, 3.95), 3.95)"}
+{"key": "3c792fd8ffa0261cc7d5348a5f6786fbb7e8e92afc357ef1fed2f22cf0f4bd13", "out": "divide(subtract(4.30, 3.95), 3.95)"}
+{"key": "ccdb37831d08e10cb7bbd122cdced1344b771927d3f3d0fdf5a584e5fe445876", "out": "divide(subtract(4.30, 3.95), 3.95)"}
+{"key": "2ddbac97d12bf9fd58513e62787f2fe7794eed4816674093fb44dd419db66ce8", "out": "divide(subtract(4.30, 3.95), 3.95)"}
+{"key": "de6ed4e7fac900b9d133dedefbd61c81d22d976e7c45a56984628e93fc41d6ab", "out": "table_sum(november 2018, none)"}
+{"key": "00d0893744d57cbd4923985ba83c7d704df7e4009e85ba9361e473e0125579c4", "out": "divide(3655945, 7673266)"}
+{"key": "799334e2307e3e52ccb44770b70ff12896832c642b3db33117102c808b22b40d", "out": "table_sum(november 2018)"}
+{"key": "e962a025863954db3b8537e4832474efc00da885acdb7dd92c6357ce76f9851e", "out": "divide(3655945, 7673266)"}
+{"key": "07f383e230704d1b7270956d461d19e24dbd922fae1659301622b22c9d46443c", "out": "divide(165000, 107000)"}
+{"key": "54c644861c2eae447795976c4f357267dc2d15fc7ba6222d9903d7b141454728", "out": "divide(165000, 107000)"}
+{"key": "496ef347be21228ecc7c6abcb9f23bb7e37558bebe08e1c0be9e2e860ba6aae6", "out": "divide(254000, 107000)"}
+{"key": "daf63628e8917a74d070d06f2e6d2c4c397f5be26b14e6c082a04d0cf550839a", "out": "divide(254000, 107000)"}
+{"key": "9596af7e0b24f8a1b561451132e6b1bdd8d7aec72bf1a27710c5a3ce7ecaea85", "out": "divide(subtract(165.84, 172.11), 172.11)"}
+{"key": "e75f520253ff9516c6c798c567500c88a571d8fdf5cb81a500a7a0ee4b6c45c2", "out": "divide(subtract(165.84, 172.11), 172.11)"}
+{"key": "4225994ee713776e0be520b97aa7668eddde2c58a6c8c68b8abbc6f7696e7527", "out": "divide(subtract(165.84, 172.11), 172.11)"}
+{"key": "7e1d2ee644300947a8146bac512dd8033841924dcaac51fc34183f41bb229502", "out": "divide(subtract(165.84, 172.11), 172.11)"}
+{"key": "1877c786342e4405d7b4782e886d9a355890f671dbd506e909a5d204a163e974", "out": "divide(202000, 267100)"}
+{"key": "fe2e5272645d7713e17225d69a6c157c5ee60b51715768c660bf43eaa47c3520", "out": "divide(202000, 267100)"}
+{"key": "faca39884a47f4f1dfbb683e952d1207b895a7e925191d93b35fa617ebc70a7e", "out": "divide(202000, 267100)"}
+{"key": "c85162121c1f6d21be63332eabf8a49e6c466cc180b72ee9d47b275ae90123b7", "out": "divide(202000, 267100)"}
+{"key": "ebf39bfa7f3b1f951edaa3eaaaadfa626f30a061eadea4f5335ac51e5983f030", "out": "divide(7367, 72238)"}
+{"key": "d0affda923a226a9c470f688f0ea8582f5787eaa65ad73b3651fa2814e55da9d", "out": "divide(7367, 72238)"}
+{"key": "648954f33035b5af04f1490c5fe2fbe7e516155a597d353b5ce999b2b2247160", "out": "divide(7367, 72238)"}
+{"key": "c55a4daeb9109f1f03f8ca678190a54a8c2797186b173f671f06befb64c28f97", "out": "divide(7367, 72238)"}
+{"key": "7d0e19f3959c263807736067e8aa92ebc6c59d3f2e0ac2a227dbf1b24c7c6349", "out": "divide(451.1, 65.5)"}
+{"key": "ca3255809cb9ee2d090244617bee89282607c011b985e7fdb811b920bdc970eb", "out": "divide(451.1, 65.5)"}
+{"key": "b2ebc2d7c693240d3bcf23cb712c83a1868a99e2bd9c481c9558dc0c27728442", "out": "divide(451.1, 65.5)"}
+{"key": "27611449fc12fcf56c2999e5be9849e25ff05d3b3c2b9967663a9377d0e75021", "out": "divide(451.1, 65.5)"}
+{"key": "b6c33809267f14298135fd31d03973a0d3f7882224df9e35bf5fdbfa87df7527", "out": "subtract(311.13, 100.00)"}
+{"key": "bc074687e6fb4ff793fbd460f2754e631b3d3fc24431af72dc57d37194eaf621", "out": "divide(subtract(311.13, const_100), const_100)"}
+{"key": "7e92ec65dbc3d51d91599d321444e3f2d3bb8f2b2419dee99bb8643a9764eed5", "out": "divide(subtract(311.13, 100.00), 100.00)"}
+{"key": "1eae9ebe749e226cd22cb22376e8b0045192225d3a873a39d712bfee7c7b27de", "out": "divide(subtract(311.13, const_100), const_100)"}
+{"key": "7d8f1a61398e9e5341e59629beb000824a4fa25d9a79dd68277fc95793967c50", "out": "divide(add(3.24, 3.98), const_2)"}
+{"key": "a693e337a204e9a52a050100b085d41e2f8020c5c84fc0c79cb9e78e691e8eef", "out": "divide(add(multiply(4468, 3.24), multiply(12850, 3.98)), add(4468, 12850))"}
+{"key": "dc2c2d18fe82ad3984fe1a51b5e1c54a5113574609fd02aacad350e94d088d45", "out": "divide(add(3.24, 3.98), const_2)"}
+{"key": "3af6948df3001d61feacb4f43e70a3172d66ec3dbbd139def2d80054900fada5", "out": "divide(add(multiply(4468, 3.24), multiply(12850, 3.98)), add(4468, 12850))"}
+{"key": "9f739cf024551b598e38b78dfdefd6d5b71b20df51f13acfa50d19bee76cce0a", "out": "add(414000, 364000)"}
+{"key": "f7b00fba70f72dd030d9455f294912b946fab30f800167fdc4f84504b1894797", "out": "table_sum(2601 research forest drive the woodlands texas, none)"}
+{"key": "6ca23454ab217f2da73814e7f02d6dc70b4f2c253d10b356b022bb5ab7079b13", "out": "add(414000, 364000)"}
+{"key": "051904c109682bb8592f73d2e815e58a69192b4b39d5efcc630c7aa42bee65d6", "out": "add(414000, 364000)"}
+{"key": "13a977da740cc13ed9e4815d1c37be22c4fc8ed4a4306894732255994f92f7f0", "out": "divide(3100000000, 4300000000)"}
+{"key": "6e138aa8e9f6bfedb84207f45a3477f745cf3f39a86ab67798ce619f485edbe7", "out": "divide(3100000000, 4300000000)"}
+{"key": "c0d29698afcc0160e87959cca8a5a3c7d106b52cca8b695809d4544b0e5ec396", "out": "divide(3100000000, 4300000000)"}
+{"key": "91a7878c1cca00fb29cd90569712ea95c8c76854d50d60e80b2972accdd47403", "out": "divide(3100000000, 4300000000)"}
+{"key": "1db3358660dfc5930f90530715e0ef9d31917d50d24270fb9a35171f530d78be", "out": "divide(40.6, 1934.2)"}
+{"key": "d7795f65e5a7460a7366012610a2b7ee42af914e26adfeb989c7c61b4ab54291", "out": "divide(40.6, 1934.2)"}
+{"key": "7fe3a8fea174eb17b685f71cdb068b6ccaa9dda7fb2920c74b620ea1c73120df", "out": "divide(40.6, 1934.2)"}
+{"key": "9143b040575fcedc108531e225c85b54427a6d139689094b2a12f347399da636", "out": "divide(40.6, 1934.2)"}
+{"key": "f8cb890d837a7296394934986c29b882f07c66d8234bd3989a1ff1d783c37cd1", "out": "divide(38, 188)"}
+{"key": "8ffa2aa36079b23590e91fb844f4a0b5ca2dadacb8c7c4093095b4c9fbd1429d", "out": "divide(38, 188)"}
+{"key": "c0bd4dac1495241582f643cdbb389b191c92c5d84a6915a23bb6d5f7812ae3ed", "out": "divide(38, 188)"}
+{"key": "b774b9cd1bb35e8d2dab1f66eecb597f010c8cce85377480ef35a951ffef13e9", "out": "divide(38, 188)"}
+{"key": "83b7247981edf1d32976659867a75bcc654773bb293b1a7ecba11ee248274544", "out": "divide(2899.5, 10973.1)"}
+{"key": "3185f2d258b63232224123e7696d314d5f51eab6f1b447e1a09bb34bda78f41d", "out": "divide(2899.5, 10973.1)"}
+{"key": "57f841e9b77c273eada53ad5ab2264ccd839e9c16c9fd8e5b5023c46329ca5a9", "out": "divide(2899.5, 10973.1)"}
+{"key": "fed0cb3ec48e9b20fdfa8e08cdfd07db926027e324612e16c438da05274ac301", "out": "divide(2899.5, 10973.1)"}
+{"key": "2e5b6e2a028c4efa3f6636a5dac31795b778dd169734e0b3bde325daaed9c5c7", "out": "subtract(81, 154)"}
+{"key": "762c66f720138cafd65cf4ada891d50be236565c74e830afd10f224a4c64606d", "out": "subtract(81, 154)"}
+{"key": "5b9597e09fb6bfcee4a367bebb2160041294b28ea6b34d673b65e16289b99b3e", "out": "subtract(81, 154)"}
+{"key": "01ae9fa509030365b274d040f13f1e42e403721fffb7615bbd7932e48aab344e", "out": "investment_income_2015 = 81\ngain_arris_2014 = 154\nsubtract(81, 154)"}
+{"key": "d3bb06eb56c49f1ce15509d72bc4fde5f792631cbc8fe0ace55e8f989ff5e2dc", "out": "subtract(12.8, 31.8)"}
+{"key": "3fa89b1b3834836aa70c255d9ba1b09bfa4e9fc061e6cd5eeb0c18cdd668fe41", "out": "subtract(12.8, 31.8)"}
+{"key": "a5f85ccca80a8aca182bdc140883161c73e43a134b4d64eb1904035ecb0bcf33", "out": "subtract(12.8, 31.8)"}
+{"key": "547f86f9dd737418846c4001e611851b4194800775d96de566610f5dcb692c21", "out": "subtract(12.8, 31.8)"}
+{"key": "c39eac10fab09519bf1973f74bed54649734e4dfbfb5c3ee14758887f3935427", "out": "average(table_2013, none)"}
+{"key": "6e78319057964a79be0edf31060884bf9ce5065e0118986431dee1081383e654", "out": "table_average(weighted average common shares outstanding for diluted computations, none)"}
+{"key": "f08b89f11173881b42f02e752e105ba62637d8d143c7d09362aa19545b4bbffd", "out": "table_average(weighted average common shares outstanding for diluted computations, none)"}
+{"key": "3a98f79e7020bea9f0beab81481803372625455a15c7ab65350bc998145affbb", "out": "table_average(weighted average common shares outstanding for diluted computations, none)"}
+{"key": "16b3543ac7b73b2d9af75538bc482fe772757d383792ead089cf0f1260f194bd", "out": "divide(subtract(-6826, -4190), -4190)"}
+{"key": "66084d54f87f72231edca8ca74984d928c158b1e3ef91e22a40e6754876732af", "out": "divide(subtract(-6826, -4190), -4190)"}
+{"key": "610a6fecd85459b7f12bff8622cb6d53585d435e36656575a0207095195363a9", "out": "divide(subtract(-6826, -4190), -4190)"}
+{"key": "9fd520100162f7a80dc4b2ebabd232d205d4d95cecd234ba2e4cff5fb0ab9046", "out": "divide(subtract(-6826, -4190), -4190)"}
+{"key": "309945d37ca5b6742ec6282aec935ca4c8baaa1f77a3c10e0ee282eb031f3a4e", "out": "divide(524, 7344)"}
+{"key": "f515f401d3a5ff11e84c27af08e9347f350895c39233081c706990ff84349101", "out": "divide(524, 7344)"}
+{"key": "6c3d83e71153a7e7c68bf876abac5aee30a63875c5b59ec4aa7182598a82eb07", "out": "divide(524, 7344)"}
+{"key": "af8b6656d64b495e0ef32619227f3bd087632f2f21814ba5658f449a61edda7f", "out": "divide(524, 7344)"}
+{"key": "f6fcd3dcd80f30ff1e967618aabcfe783011ce565276a0edfe9beb490be9e249", "out": "divide(subtract(6635, 5520), 5520)"}
+{"key": "76bfaa370b4717beb6f793a4249f9fe9f1d3a493f986fe2402e99b5bf95ca5b9", "out": "divide(subtract(6635, 5520), 5520)"}
+{"key": "a94152757c015ed0f59f16d23f1742fd1953ab7ce829655c3b34aaa0fbc50b59", "out": "divide(subtract(6635, 5520), 5520)"}
+{"key": "4a377b8754cd9924646a07c1105b74cf009708de9b74b40ab2b9234a12c9efc0", "out": "divide(subtract(6635, 5520), 5520)"}
+{"key": "faff070b51c41cdf5d474ff94aeedecc58759beb0168e64de1d2602c9b3f2311", "out": "multiply(5283.3, 0.26)"}
+{"key": "6a5bcfc530d67bdc87ae78ab53bc93dde69144ab77cc369438c076237bfe53e1", "out": "multiply(5283.3, 0.26)"}
+{"key": "e1acaf63c987789a6b6ac11f882fe69be602bef2a959476f7a5db3061fd00ffb", "out": "multiply(5283.3, 0.26)"}
+{"key": "59eff0f9943c4a5560d577c96e32933f286121e97440cb673af2c657ec200e32", "out": "multiply(5283.3, 0.26)"}
+{"key": "4007943705fb8b817f2a30c389bf802d71a51d1ae40e7ba2c89dcc250b20d501", "out": "divide(187.26, 108.59)"}
+{"key": "6c4fd0573fbe7c9e2b679bbb151cd1c2188b5be725a4a9752d38f00ace0b2447", "out": "divide(187.26, 108.59)"}
+{"key": "5d2e819a98077a982d9eb7aa74c624bea556cf544e090996157602eba4d76ab1", "out": "divide(187.26, 108.59)"}
+{"key": "a845b00ce331066c25c62a6ad65bead3b26d9b2cb000344ce9f35bde39232596", "out": "divide(187.26, 108.59)"}
+{"key": "068ffff0e2f23addaf5f93de7eab2a74d6e9603e5da93f0f9e4ede0f3613b9c7", "out": "divide(subtract(88.8, 90.5), 90.5)"}
+{"key": "3b6eb0f7d798dda2dc35d2a37445da7d1f746ba45d2d40595a9258df3df83915", "out": "divide(subtract(88.8, 90.5), 90.5)"}
+{"key": "336f8849a7ffb69a1ad7ba6225d4f5646c71755464b32e658ba9062f194df1b9", "out": "divide(subtract(88.8, 90.5), 90.5)"}
+{"key": "b4e3ca37c04e4542cd441ea88efcd3de5cd692756608724638ec76596cc4c0fc", "out": "divide(subtract(88.8, 90.5), 90.5)"}
+{"key": "4b8d3193aaab679685ecd5b82e7c6197a999d8950fa1a282d3143d3ec4c50a37", "out": "divide(subtract(47, 73), 73)"}
+{"key": "d8a83c9f6d51f48a4e6b852f9c08ee04108ae1036123a51c5a146dda307a5522", "out": "divide(subtract(47, 73), 73)"}
+{"key": "ee545d3ddd543ce5488c48bf33c7169fd9f0ef4a16a58f13c2ed9f3a913490be", "out": "divide(subtract(47, 73), 73)"}
+{"key": "6879b1fb5e3be12fd3a54aa126fab8af8b56566ed0004bc64d10928d843286cf", "out": "divide(subtract(47, 73), 73)"}
+{"key": "36a1428612374705909a3f5d8a05b01eab7584551a91f464eba34fbb21b932d2", "out": "divide(subtract(180.75, 100.0), 100.0)"}
+{"key": "400ccadf32e2a771faf7cd61060f7d4c87bbae2538041c03ddd664d18a49f1f8", "out": "multiply(divide(subtract(180.75, const_100), const_100), const_100)"}
+{"key": "d92d86b88084814c8fee03f911dd40fec4d61f3cb4db47030529ebe8b0ef22e8", "out": "divide(subtract(180.75, 100.0), 100.0)"}
+{"key": "2ff477e6dd6cc39b475ba5061a586598d3dc0ee5dca999bb4fe8930e4b4ca447", "out": "divide(subtract(180.75, 100.0), 100.0)"}
+{"key": "625e686b1086ac33a44b3c04f1198b6c867f10a10b5386ed22117d33955ce94c", "out": "subtract(246, 183)"}
+{"key": "fbe072b17940763446201f1fbb7645367b955c2d1f84d21d78bdc4a07164bd8b", "out": "subtract(246, 183)"}
+{"key": "5d30b32660fc1b40eedee5d786cda8549272ae4bb7613d9c2f024b610fbffbda", "out": "subtract(246, 183)"}
+{"key": "1e8b7c7b377ac5158ae4610ace1e443e372fdff680628b37d660078b2740d2f2", "out": "table_sum(august 1-31 2013, none)"}
+{"key": "63f65a55175b1f100e66c4a3d76f17ed6816b9856524c34448983f070669512b", "out": "subtract(246, 183)"}
+{"key": "4e4cd2f14688afd3a4d48fe4cca0290f1cc1c5a0e33b50310870bd1befba98c1", "out": "table_sum('august 1-31 2013', 'none')"}
+{"key": "d4668822fd3100fffeed9a7ce342ccd2c52c0cbeff37094b70d8bda995ad5f6e", "out": "table_sum(august 1-31 2013, none)"}
+{"key": "0e3c0d30b70e9637f38b8749ea89db9e2b646411a227416ba8a33e4633b6fa47", "out": "table_sum('august 1-31 2013', 'none')"}
+{"key": "7357f4f105f67772faf5c48a533c5042d9156c6a87c4d7900fd7fb32c3fc00b3", "out": "divide(513782, 310919)"}
+{"key": "b94dbeb9060689fda75ceb44a2abb902763de063f6e6b3a14d8e1491b0769395", "out": "divide(513782, 310919)"}
+{"key": "1c13cfca67a36a3829e1d73f082d2fef961088635b1d63723c5e4eb34c78be17", "out": "divide(513782, 310919)"}
+{"key": "ab4c47af2a5c00f24bf8675f84c57c81619c1c35aa4ada77c40835077d11621a", "out": "divide(513782, 310919)"}
+{"key": "4706c1921817c80bb7081ecbbd3887ec3856ae5665e630e592a126342202ec5f", "out": "table_average(2015, none)"}
+{"key": "86e8cb72c041fabb14171479bb1225607196ec0fad4dd47c78cb07b410a95231", "out": "table_average(2015, none)"}
+{"key": "90b331cb98392f031f5e362fce197a154cd4bd70812fee6f53353013beaf50d5", "out": "table_average(2015, none)"}
+{"key": "2f883bb4ffa2559713c750f552bacc5187717e1740a2502524e03f1f74ee797a", "out": "table_average('2015', 'none')"}
+{"key": "2cbfd63fb6b6316ef3d8fe6c9a10a57d86b6fae8184fe4b1d94247f20550004c", "out": "divide(subtract(1083, 1063), 1063)"}
+{"key": "25bb53d2cf40c11902fe8e253368b329d4419c20e6de52ae06692d9a9d2fe13f", "out": "divide(subtract(1083, 1063), 1063)"}
+{"key": "dc6d4e91b0d7f5cbbe3bba80c0f94f56e5f73c4a6726a08917a29712269e9157", "out": "divide(subtract(1083, 1063), 1063)"}
+{"key": "bed52c6bc331eea90b0d8ebadb61e3cd0f58d7bf36449ac99bc5ed761b18070b", "out": "divide(subtract(1083, 1063), 1063)"}
+{"key": "fe6b7f9832f28519bb74b3bc9a6b5462f0cadc7f4318c22ce1572d2ba5423d6c", "out": "divide(852, 17970)"}
+{"key": "072e5e5868c6655430f57e98a9c40d68cc61302116277dc5c71f6dd1aea8cbfc", "out": "divide(852, 17970)"}
+{"key": "5bcd53417e109463f7617bca2ee695f9c27cc91290bb026a6582a01c700a36e9", "out": "divide(852, 17970)"}
+{"key": "1c02da8efe96133e8ac274585aaca2329a2e83522053255255bb3b27f36c5289", "out": "divide(852, 17970)"}
+{"key": "02df047feba4b5613951a3a9590063a0972ce38ee51c23c99bed7d8143f660e4", "out": "divide(125, 22203)"}
+{"key": "677807972708f3ba7c1b609be6a74a6af78e48bd975120488c0d0bd2da536835", "out": "divide(125, 22203)"}
+{"key": "05a66bb0cd651c4981b5de54436e8e5fd9de62c78f2614922fdb9e00ee1dbb4c", "out": "divide(125, 22203)"}
+{"key": "77a585c528f22c640f0127f43ad71615d6bca8eca4570fa0124d9511d60d5d70", "out": "divide(125, 22203)"}
+{"key": "5126c03eee93ee101e63625ec3bcfb23cc67e9ad422b25f4046550d4ad3fd857", "out": "divide(subtract(31.00, 18.13), 18.13)"}
+{"key": "f915adec70b84ed31cb246ba3ad7ba18a0b41904fe7b4e14531fbb879044a3f0", "out": "divide(subtract(31.00, 18.13), 18.13)"}
+{"key": "e532fa4f30a4e374bd15a6d906c555f9db7fdb86e8e3e86c5d71f18ef8f76dca", "out": "subtract(31.00, 18.13)"}
+{"key": "9d7df7904b5dd1c0907bcfed4b025be34c0d12778bb92c017f026655e5be5fac", "out": "divide(subtract(31.00, 18.13), 18.13)"}
+{"key": "a92ffef0f76b00163fe9669a58fa1bbb137d8cca0fa8c0d349a4d2af46845b09", "out": "average(add(241, add(250, 205)))"}
+{"key": "3b65ded774512ea186487fe91ef57c21ef1573739fd2eea5a37cb41891f7fdfe", "out": "divide(add(add(205, 250), 241), const_3)"}
+{"key": "52be486dd016bcdea8d325ce1d31afa54f31aa3c23edb1f5119297dadfbe97f1", "out": "divide(add(241, add(250, 205)), const_3)"}
+{"key": "a84550c5c32dac760909352ad6721cbc95a3c8ea7f15861cd235bf055d28831e", "out": "divide(add(241, add(250, 205)), const_3)"}
+{"key": "85d8d5ceb5f5b89611a9b6352db4b59816c5ae35783e8c1a6bb67af4af6e42a8", "out": "divide(1001.3, 1625.1)"}
+{"key": "d402f91c110a8d95ebd1299c14af34466b6b84e4764191f81f071b97d00bd69b", "out": "divide(1001.3, 1625.1)"}
+{"key": "2977ac95474fc3e526153fd78d843a4b5f5447679ecce8720a73b2821630aa65", "out": "divide(1001.3, 1625.1)"}
+{"key": "cbbf9115a712d3acf214a96530d0ab0a4e09ddca7e6caf7c2d5ec1af0090e682", "out": "divide(1001.3, 1625.1)"}
+{"key": "c6d914d5d42e7079d84ff843f873ee90ec30e14355b2738543a89e5f00fc51ef", "out": "divide(60, 243)"}
+{"key": "ba8a898abe9f37995ac0f0bee14c3285f213a2aecfb35a964d72e10d6b3dafe9", "out": "multiply(divide(60, 243), const_100)"}
+{"key": "20a4187a263277995b5b9813c6efaaf11cbd604164b24e1181f1c06b532b41c8", "out": "divide(60, 243)"}
+{"key": "e89348e1f2011214dba6a0c35193a35d526bbade1ed5c042eb92730607bbf33d", "out": "multiply(divide(60, 243), const_100)"}
+{"key": "abd97c81b5e74e9ce7cb8b6977ffd5413341df32dc86c70ae6dbaacab0a708db", "out": "divide(subtract(196152, 172945), 172945)"}
+{"key": "ee8818b3aa2caf7f3830f04b85c260eb19164fedc4782bc7ef10b4afefe89675", "out": "divide(subtract(196152, 172945), 172945)"}
+{"key": "f421ed234e3e025ea049c13f4adbe9299155bed8bd19f14e52c8b41ed768cc75", "out": "divide(subtract(196152, 172945), 172945)"}
+{"key": "ec3753a29198100b920a5c22909bbe9a4720edbe6cebb199018c7fcbbf40027c", "out": "divide(subtract(196152, 172945), 172945)"}
+{"key": "533173dbfa987e7bf855feceb6598fb165646b868011818416b246c76f396902", "out": "divide(subtract(79.96, 100.00), 100.00)"}
+{"key": "6863016ce04a2df416c101c8549c201a4c8e332bef90f33852a79342994ff1e3", "out": "divide(subtract(79.96, const_100), const_100)"}
+{"key": "1930988f3d6f054fabdef5e487cbdba5b1aa1af76a697acfa9dc545bc8c2e8bd", "out": "divide(subtract(79.96, 100.00), 100.00)"}
+{"key": "df3233e91cd6c81d8d3b1a8bb6731ecb5aac5a8130c50b92ee2561addd1b1512", "out": "divide(subtract(79.96, const_100), const_100)"}
+{"key": "c685544529bbae2ada9ee611d8ad10340031abe9edb8299696b7cae9e8287dcb", "out": "divide(240, 52708)"}
+{"key": "76cc122b73ed2cbcdce3ad003ed09d1caf8a35e2c51c3fef6dc821b7b052d182", "out": "divide(240, 52708)"}
+{"key": "8a5939affad1af687a4a19f82d606c0b9f4a14203483a3a81e323ac77776489b", "out": "divide(240, 52708)"}
+{"key": "cd4f0f8a4ad65cc7fe89a0477d636035aec20b7d7d2281844dab5861dde6e647", "out": "divide(240, 52708)"}
+{"key": "a0e6e18735688ebca3b56d9b737c8fabb53251ad4057997c7a02f897c423c268", "out": "subtract(2778.3, 2559.8)"}
+{"key": "f99bf4a89b10ebd6c94d97ee887c04f6c375e45f925f5549459215763026bc66", "out": "subtract(2778.3, 2559.8)"}
+{"key": "fce7c0a49c98ae8df6ad4602e85c25783dee77559672e9bbca92db2429fbea5b", "out": "subtract(2778.3, 2559.8)"}
+{"key": "48c505b1007d1be33478296f6408a05d635b5d0b1591a059625f81ce9a7818da", "out": "subtract(2778.3, 2559.8)"}
+{"key": "889fd49367364007d6858207fdccc1e5b8180b110eaf3516ad7cfcfb827faad1", "out": "divide(828, 14669)"}
+{"key": "663598bbccd7eee1fcb13a14850f3815f2f464111f4ab05007e3d62bba4cf7a0", "out": "divide(828, 14669)"}
+{"key": "24461cd1d5ab68a1b03096e3960759654dc0193fc8e2f83df4255cffb91b9739", "out": "divide(828, 14669)"}
+{"key": "999269e57525ff9607741fb19d6811790bd46419e21b7be4db5c7a3eb765a705", "out": "divide(828, 14669)"}
+{"key": "1a7708f5941b6119ca82f6840edcdd82754d4d315db0dde37ade138bc0659bb6", "out": "divide(-162153, 3613429)"}
+{"key": "baeab35e64a8b612e11b892909a1cb35527b24e02c8facae8759bca7b49e53be", "out": "divide(162153, 3613429)"}
+{"key": "617a1e2c8c11734fa8104a11f45ef93dd4bc10152367154dbd794409aefa66fe", "out": "divide(-162153, 3613429)"}
+{"key": "bec30649f03545a92302686e66cfb3c0e820492d52e8dbcb7f62ef15f9f9610d", "out": "divide(162153, 3613429)"}
+{"key": "4154bef0443786fad61132fa7e775680f916ccdb7a6d60c1e8bcca9ba6f35aaf", "out": "table_average(backlog at year-end, none)"}
+{"key": "57263f09825473251623698089404645859585aaaea07ae136845e0bfc3bcbd0", "out": "divide(add(add(17400, 20300), 21400), const_3)"}
+{"key": "9ae178c54b37fc4da3fb296c0dde1e2f7c822f8e991fd18270af7e5b5fb1432c", "out": "divide(add(21400, add(20300, 17400)), const_3)"}
+{"key": "29502178e03625017ee82e2007a57bf7a73a1d8c1e5976057d9383980d9c71b8", "out": "divide(add(add(17400, 20300), 21400), const_3)"}
+{"key": "038497af924deca94e41ccc5919a6e3a05ad3fac43994d61d5583e49bca3bd95", "out": "divide(subtract(369, 373), 373)"}
+{"key": "a737fd13acc21a750807eda17218fbd5a652aede9f1d437b7ca19606f6e8ff26", "out": "divide(subtract(369, 373), 373)"}
+{"key": "257656a8f35730c5fc6b98c97a621fe86fe60014c22651278b905fe9b673d6e5", "out": "divide(subtract(369, 373), 373)"}
+{"key": "3063d773019d829416bde37d64718dc34607cf14f86942d81a129e6c92bf16d4", "out": "divide(subtract(369, 373), 373)"}
+{"key": "0212aaf3272fa18bc3143287e77b45d1a1243e02653ee619a42abc1ed75ddfee", "out": "table_average(operating profit, none)"}
+{"key": "84706f53f15a8231a94501c376e4a582055cabd24b3d5b7b4ba54ad3b0edc1bb", "out": "table_average(operating profit, none)"}
+{"key": "9344a3f020423c77ebce9088b3b898f84d65883dfa2ce55532257e5f8ffc099f", "out": "table_average(operating profit, none)"}
+{"key": "06f3803d0b00a4a749e06e3336554c2b88f61bf3ecc6bd21d6f6990fcdf2585c", "out": "table_average(operating profit, none)"}
+{"key": "3db30ab3397aa45cdefec7d9bc433a2ac2d3116271f1aa8e2313dcd3ddab0f47", "out": "divide(subtract(100, 45.6), 100)"}
+{"key": "2abfb97229cadd6558181f2c362e872b987994b7019a4ffa0088267c33ad798a", "out": "subtract(100, 45.6)"}
+{"key": "4ffcf4868e3e615c5c293fd1fd3e110458191b82a597cbd55a99f52a50447a4c", "out": "divide(subtract(100, 45.6), 100)"}
+{"key": "d3bf81a79c8ce2d18f7ec4a5bda53983759a030fae24c684ed6e1141629a5d29", "out": "divide(45.6, 100)"}
+{"key": "f5355d94208042a752be4dc7b1aa68cfb7652752b003b2c535331c012b609c9e", "out": "sum(1029, 1372, 697)"}
+{"key": "ef6cd702c362a6df7f61ec884fc3ae062ee39b32c849b1228e5caa91c9d0a115", "out": "add(1029, add(1372, 697))"}
+{"key": "2d087b6f88d41ec3746c93dca5a2bfccb2256049ffa5c288e95ad6bf83425122", "out": "add(1029, add(1372, 697))"}
+{"key": "1e853f3513ad811356aea851aee0899eba3c919258243a5b402458f8a1c5ed08", "out": "add(1029, add(1372, 697))"}
+{"key": "ec88b52804d40917b787e6f46a817cc24d3a778ed0ef7dfde4616d386b5dd368", "out": "add(385373, add(1110566, 270852))"}
+{"key": "3f8d0faf39703702cbc62180c2310abfe8c72691c92255d1fa6d843ee8e642e6", "out": "add(385373, add(1110566, 270852))"}
+{"key": "c328cfa69b53a34ca35c9573de3bacd54c9dd79f7ca2634ee8394f848b04c7dc", "out": "divide(add(add(385373, 1110566), 270852), const_1000)"}
+{"key": "89b37a1a78c1e4a4947be1e797af8ec37aa4a90ac6f3319aa4b384b877e41d0b", "out": "divide(add(add(385373, 1110566), 270852), const_1000)"}
+{"key": "761281ee469b89a7c0be8003b6d9254a0917a1094c45657fd288541815c64a65", "out": "divide(subtract(1.3, 0.4), 1.3)"}
+{"key": "f83e5b22a1d8d0354b7acff7aa1a3f46f39a807ff1811483709dc68157ee7471", "out": "divide(subtract(1.3, 0.4), 1.3)"}
+{"key": "9518c7018d6782cdca7b1e24501f0ac9f4d1e8293cc7ccfb37c4c5cf1ad4c3ec", "out": "divide(subtract(0.4, 1.3), 1.3)"}
+{"key": "60fe6e32bce5e7783b57b7ed29cfa06841f094250b3c69382dffc14bf98e4c92", "out": "multiply(15340810, 96.08)"}
+{"key": "f562e416450691372c0c72fbb5d533d9810539afcd7fecc1242789ab23584d19", "out": "divide(subtract(0.4, 1.3), 1.3)"}
+{"key": "72d97468ce4ccce8221d13c38eece2da40032cbd962e743a95b501254f444664", "out": "multiply(3915795, 98.19)"}
+{"key": "d438779f546cdbb341484669bfaaca9a0d2e918cef76e0a6f4219f81cce10919", "out": "multiply(3915795, 98.19)"}
+{"key": "f9beee884ff4936e8f35a73f187dfe11160ad1689e58e1f2af3e221ea0fc10b2", "out": "multiply(3915795, 98.19)"}
+{"key": "e51a27e0e8507fa6c596de53e5a24f067a532f1c4f513d79d0578757434f3f6f", "out": "subtract(442.3, 403.3)"}
+{"key": "41ec8a313ea8e39663e6baa18cfb70b35116d7f7ecabfe0d145b21da1e566f81", "out": "subtract(442.3, 403.3)"}
+{"key": "1cc242831c48f651d0873be7460df61fc22a86f0c23667178f73ea23033a3b30", "out": "subtract(442.3, 403.3)"}
+{"key": "0d5c0472825f059ed6ebbab1e0b94edeee07ac1ccf978e52bafd131b6a4c2288", "out": "subtract(442.3, 403.3)"}
+{"key": "f921a46c932864027ba7dd2b192feae0ea472486a292e613d3559702768df2e9", "out": "subtract(109, 100)"}
+{"key": "daf04293b02812419d6467ce0ac1a6bdadbfe1dc35dae8208f83569950d583f2", "out": "divide(subtract(109, const_100), const_100)"}
+{"key": "39d4da84b8ef382b1aaf695d0b50332ac41f345fa02354c61f423c558e2da3b3", "out": "subtract(109, 100)"}
+{"key": "6b053d3b50cefa6f8b13ea8a1df9a620cf494d92deb92a5d27aa0cb32fc7777f", "out": "divide(subtract(109, const_100), const_100)"}
+{"key": "b23db6ab3570c322d64fc46fcde8cc450745901ac6129980bc62691cd6364696", "out": "subtract(62, 62)"}
+{"key": "28b951e23b27036880e0d6df8718b4e0fe28b295024edb8e6bb0b65ce07855ce", "out": "subtract(62%, 62%)"}
+{"key": "51a4545880dae193c03a9fd7f6ccb84b3b0d9da4cc57c73d0427de2694180181", "out": "subtract(62%, 62%)"}
+{"key": "27d09ab3184f70d69695f60b143ce2327c0145460ff198ae8d01957c237ed53a", "out": "subtract(62, 62)"}
+{"key": "97c764d6b70ff1c93b48671bdcd4132283511dc86d7970fce5942625a138b574", "out": "divide(128, 1018)"}
+{"key": "badb977ff7f2b20ccc3a2687c9890ef3cefcf215580d96d5c293aff91a338b2f", "out": "divide(128, 1018)"}
+{"key": "e0ef818767351d807e66fa8f5265801a67ebecf3a8ace50bc0bd79dcb0059e40", "out": "divide(128, 1018)"}
+{"key": "227a5eb1f50183d71f9670929d78337a45bd7fa9918dc214d3bc2d8eaa100414", "out": "divide(128, 1018)"}
+{"key": "fc547d8c0d2374960f287b487b2bc5fe59a6448d8a36f27c725e0d07c7f8707a", "out": "table_average('available-for-sale ( 201cafs 201d ) investment securities ( average )', 'none')"}
+{"key": "c5ec9502239fdfdca0e03810c32f77f10e1f506c8e720b033f57038e5d898dc1", "out": "average(203449, 219345, 226892)"}
+{"key": "e37a1e150f9dd46511036c711d0bac35ff5bf343ed00fe5bbe09baac883cc109", "out": "divide(add(228681, add(200247, 236670)), const_3)"}
+{"key": "c668d1bf4fca9426dac6271c3f6d2a79066f28c470524755472ae33f24d83c5b", "out": "divide(add(203449, add(219345, 226892)), const_3)"}
+{"key": "bcf78ddeed38743b2124d112f13dcd002bde3fb85399e723df3dacbc1da26806", "out": "add(24.6, 23.6)"}
+{"key": "cec76369cd4e7e5269960d78bdb090a3a0683eb81fb205246fe5206457fc415c", "out": "add(24.6, 23.6)"}
+{"key": "b400bdd4f1285bafcbdf6d2263dde109aa132e4321189428f99aeb16791a71ee", "out": "add(24.6, 23.6)"}
+{"key": "ce89908d6f45f490c0b6f0b9a71b52be4429024d11a51cc291cd5f0d0ee14e96", "out": "add(24.6, 23.6)"}
+{"key": "88d24cdfca5fb38782a79db5842c449bf34371aa44c5b58b2cdf424c862d9fef", "out": "multiply(1583616, 9.32)"}
+{"key": "8f54e95092889b5cb8a61247357c0a903196883a6a2d1424434112423e4e9c53", "out": "multiply(1583616, 9.32)"}
+{"key": "becf6857cd5c7986a9a6dea2c7bb94a6dc9d18d8954bf9be82bf3dc62e35cf8f", "out": "multiply(1583616, 9.32)"}
+{"key": "a365fd31b5d9feafb12fb09c06bf56733263460dfd0a83736b26d66d19dc56cb", "out": "multiply(1583616, 9.32)"}
+{"key": "056865b97628983d30e0ec12c2dee12c0fd43626d39a5bcc51dedd67399bf05d", "out": "subtract(11503, 10815)"}
+{"key": "c004ac238c1f9ca66d3c4ba34eaab0d140dc2e01fbed3000e8a7b20dfa204cbc", "out": "divide(subtract(11503, 10815), 10815)"}
+{"key": "ee8d7e529eca7039ecf2712829c2f33a901a6a1e654b1cda4eda9099bbeed4a3", "out": "subtract(11503, 10815)"}
+{"key": "95b1ac4af14a7d22173a307f63be0bb3ffc2310dea166260205cfdf4a7f8f287", "out": "subtract(11503, 10815)"}
+{"key": "c3657cf62f28f18edfa29f5e752cd8da46fe89595b773d177583f876d3c21e00", "out": "divide(50000000, 5154639)"}
+{"key": "4cc185836291636b10f82607a7d5017dca5693fb428e11b1f84f7fee6f509e85", "out": "divide(67.8, 13.15)"}
+{"key": "f41e0850de5defb69f2aa9353f58282da534dae4f7f0884be6c632b0c94bae03", "out": "divide(50, 5.154639)"}
+{"key": "47b96797b18b6401bd6f759611469ee794716c6e2ac01d5d286fd2a1bb474f18", "out": "divide(67.8, 13.15)"}
+{"key": "4c906707f5108c5ac005e015912446d2fb1a73a127646158062586afd81b9f3a", "out": "divide(123.36, 112.13)"}
+{"key": "f141db87bff22727cff9bbb71a7edf64d39d986bcd7b8ed3c7285aec3ff02adc", "out": "divide(123.36, 112.13)"}
+{"key": "b8e6388a7f2640af346c65332cc8b5ed69be8bf2c481b67141fffc2add60eaa9", "out": "divide(123.36, 112.13)"}
+{"key": "109824a28f3a73000bd2897d77fc219d4de7e413387e6ba01b9734a7532412bd", "out": "divide(123.36, 112.13)"}
+{"key": "89dea6d3e887f47f34bf50edc7fd2b757dd7ec3f44fef88b886cc2b75feb7952", "out": "divide(298024, 403484)"}
+{"key": "5590415dd3cc246122914c0ee107c7822d6fd33d03c36412755351f0c4705a82", "out": "divide(298024, 403484)"}
+{"key": "62dfe4246517dd6c9404b168c7f35b484c224b4f4a7df51e845c48e0c1a5d7d9", "out": "divide(298024, 403484)"}
+{"key": "43f5a925ec2db6b0be24ce76b8954b668a74e5112d848fc853e69606c3ab72a0", "out": "divide(298024, 403484)"}
+{"key": "2b4fa78eb8d776ad226aa78caeb5859703da9ac6ab17f014ff1eb212bdfb3d01", "out": "divide(637, 5.0)"}
+{"key": "f56f0556f31d570d2169aba8285b5e284815552d6e4b97bb4217b9571513a0e1", "out": "divide(637, 5.0)"}
+{"key": "5575c4ebf60c46f3b69a6215add9ac4026b40af2528df013fbadca8457aa6241", "out": "divide(637, 5.0)"}
+{"key": "5188f66a89481ae01ed4c61cd2930b8874bf1b92fa2d635694a40469d555ea82", "out": "divide(637, 5.0)"}
+{"key": "65506abbc01d8d5ed4363a98f30ab5deff510c55e7f33927c4fd91a33038297c", "out": "divide(subtract(373, 394), 394)"}
+{"key": "83eef4524f831c35174bad3efb078feb6139fbab4e6f3b9dc6cb2ca190e6d466", "out": "divide(subtract(373, 394), 394)"}
+{"key": "c039888c0fcf863ba2453418ea94557d085ee6b8dc9bfff71e2614b5e71e010a", "out": "divide(subtract(373, 394), 394)"}
+{"key": "2e0d9b591f06f29ff4069532f8e2e06eacc0d56e925c6aa08c3fb2ca8bfe1be1", "out": "divide(subtract(373, 394), 394)"}
+{"key": "fdf92bb3e595319909554865254dba36854b8cf54f6e9b7b09ced4b75e599ba1", "out": "divide(75, 165)"}
+{"key": "1a88869e0b967e43614bdd759fba49144ff9d6a84c9e1f19e4b6e522f60aacd3", "out": "divide(75, 165)"}
+{"key": "70a1e9c9c1959b48939ccb3cfd546476c26df5bae0160d95d176bb920f7568eb", "out": "divide(multiply(75, const_1000000), 165)"}
+{"key": "432c0e316e056e2fcb30c118330e088947619cf79732c07aec274a3d2cf96e27", "out": "divide(2.2, 2.5)"}
+{"key": "08504c0b6d13779f5ecda435f7f5ddb52b95595fc58e84abe7d9aafbe60d0fce", "out": "divide(multiply(75, const_1000000), 165)"}
+{"key": "7555135d0971e47dab52c923a057a6b5a75846817e2aaffb39d6ff7d8ac5bbe7", "out": "divide(2.2, 2.5)"}
+{"key": "c697c7cefaf2298673b0824ec04f3893edd5945cb251eff53f53ad4b0b6d585a", "out": "divide(2200000000, 2500000000)"}
+{"key": "f624599d0f47f45cfdfa3c6e908b024deaf6504a74a122bef11be5bb13d66359", "out": "divide(2.2, 2.5)"}
+{"key": "3a4134a60b9df6239489429491c16eb6a4cd6ca59f4e4a812342c656dea15fd3", "out": "divide(subtract(0.45, 0.43), 0.43)"}
+{"key": "3b99daf8d154681e4d166d5a4a06423eb5e65a7065de7ae4bd80523a3fd71ff8", "out": "divide(subtract(0.45, 0.43), 0.43)"}
+{"key": "4d602c99ce4f38eb5d67729bea04c2956ac61d4a8dc035939850f4fdb7622435", "out": "divide(subtract(0.43, 0.450), 0.450)"}
+{"key": "53fe9f4a278e5800fc8c814d7127cb757a8368487d2d5b17e0650855925af1d5", "out": "divide(subtract(0.45, 0.43), 0.43)"}
+{"key": "8a268983c2c8f438f4e999f6acc669f12c7d2a63f8c61e4693aa38af45384a8f", "out": "subtract(326.5, 328.4)"}
+{"key": "17d3e03d1a4cbb7cf1f48903c75c5d686701774ed426e900ec858d6868fdc9a8", "out": "subtract(326.5, 328.4)"}
+{"key": "92ab84d5f48c6f9388d9cea677090f349555374091e93f24cdd8af8526d122cf", "out": "subtract(326.5, 328.4)"}
+{"key": "0d656f9457a3611f9e131e18c0484bd96a0f05b82fce04876efcd18f043d56f4", "out": "subtract(326.5, 328.4)"}
+{"key": "80eb60ecff4625cb92fff4fa4ed792a73d99d74efd1a3a6b9474db7f7300190a", "out": "divide(2710, 10530)"}
+{"key": "2839d37134edf3d44488fb314af18fced3d307d6156c95481164ab4f3816da22", "out": "divide(2710, 10530)"}
+{"key": "a42402ba0324ea692a917b0bc4dca6bf34f0e26d3781c12f617197291fd6dd29", "out": "divide(2710, 10530)"}
+{"key": "7e02975dfa85808614a59881cc29bbc5b78debb2c5578e4e85e042a25334b381", "out": "divide(2710, 10530)"}
+{"key": "716444138fe98565b0862bcd58ed0a266ca9643759506f33ae81ebeb8e0a9764", "out": "subtract(26.3, 19.5)"}
+{"key": "1fd653e3c4c736ecfbd5dffe3bdaa01c9880cd5d68dfc1c106080806957a8846", "out": "subtract(26.3, 19.5)"}
+{"key": "28a9360a39bde90e2a0b351e7e7c8c87a8b073aff73f8a104e9b4e8a8bc45bc1", "out": "subtract(26.3, 19.5)"}
+{"key": "f715e0129a5b2e887bbc6b37067f83865537bf31a2454c2c4ef2f2bf9efcd51d", "out": "subtract(26.3, 19.5)"}
+{"key": "04b79a2d5dc168f8821aaf04b2442d0ea285da65949862b47007c647123c0648", "out": "divide(2014, 80900)"}
+{"key": "41fec55cfb3a43f26eabd88c738c2bcbc01d2b8294a1b7f36b4002ff0b790c1d", "out": "divide(2014, 80.9)"}
+{"key": "2960c539ddeff1e49672aab0b46fbff99fe859168c49c882b1ca26ad618f09db", "out": "divide(2014, 80.9)"}
+{"key": "719d080d79c8d3d4800389db6f24ec5bf84a6adf84213dbdf86fd833923b3a63", "out": "divide(2014, 80900)"}
+{"key": "88b46d96b6210d71b1feb744efff46ef709d1b0fef53cff5b03486c1b5899e41", "out": "divide(subtract(28.7, 26.7), 26.7)"}
+{"key": "b6b3e7dd066bff2c6c394de207832ed5fa81060d7b4bcbc2d50b81e656e85a73", "out": "divide(subtract(28.7, 26.7), 26.7)"}
+{"key": "0433be3eaa131f37b7f6aa5f9c33385b275c16224aeabab3a3b3e9ddadf1cfe8", "out": "divide(subtract(28.7, 26.7), 26.7)"}
+{"key": "e9467d2ea938e18030b44e772ce1e07f8e756bac6b7af66e204023c5af959e66", "out": "divide(subtract(28.7, 26.7), 26.7)"}
+{"key": "2d4c8a1d1711f35569317f947ed262b40048c9ed652196834fd990bfd6d0d16a", "out": "multiply(250, 1.875%)"}
+{"key": "f226ef0feb08daceaf228706a2c2cbbd71b899a72068f2006159fb4431fe3a76", "out": "multiply(250, 0.01875)"}
+{"key": "b7ee622cc50521ba617630334bd47ed3410d47e72a2d26ab6d91ef921773b0f9", "out": "multiply(250, 0.01875)"}
+{"key": "f6b42f421455699077dafe39609dda57d5b4f73654a163835ba058697a2c9e03", "out": "multiply(250, 1.875%)"}
+{"key": "bc2ea17a1260c082eb7c1bfaddbf6748fd3014da10a3ce3ed4d86e832d8fc5a5", "out": "add(add(27, 24), 20)"}
+{"key": "f33fc0d01cdf443cd9cdb5f755161ff4e78508a534ca277abdb695bad6420c22", "out": "multiply(27, 3)"}
+{"key": "9f7e1436de5e1356c1ac802cc28ce482b49185df4d86e8285ca9dead9d351c07", "out": "table_sum(heavy fuel oil, none)"}
+{"key": "34a37d03c68627ebabfbe11ad3c7e3d20218c7d0d24dd15b1e84db8092590db9", "out": "add(add(27, 24), 20)"}
+{"key": "1baf1df5aaf827f6f878d01b3ed5596c9cfbc0a3e370f46f171acf802a816624", "out": "divide(subtract(110.59, 126.23), 126.23)"}
+{"key": "470677c99984dd136c94bd47c9d80f576002cecace2ef7698fffb38f72c35c68", "out": "divide(subtract(110.59, 126.23), 126.23)"}
+{"key": "e70ae2b14b5500205cb3c2e458061a13b9692076423aa1e88ecd2000fefa70b9", "out": "divide(subtract(110.59, 126.23), 126.23)"}
+{"key": "0ce0ecc6e9ac458892c775a917d18d5918eee1ab9af725003bd8d1d5889b858d", "out": "divide(subtract(110.59, 126.23), 126.23)"}
+{"key": "a3847d2559e2033f2a088f2bd9fa01ed233f034085e92ea44278ec7b6c3b2866", "out": "divide(412.0, 526.5)"}
+{"key": "e933a5ec9e22f74dac6771e4eff0e84840624f063a548b59b537e2f93962ee9d", "out": "divide(412.0, 526.5)"}
+{"key": "52547962f611cf60c80d41802fd4814141f79082eb4cad70b9a18374a9895780", "out": "divide(412.0, 526.5)"}
+{"key": "f5b3445098102a01da67426a9095d1a3ea134fe43f93eb1ead9920dcee1f0790", "out": "divide(412.0, 526.5)"}
+{"key": "3cd792ff816a9b4b78f7a5fcaa13a9a9b7fbb1d76b209ed851085a1474000b78", "out": "divide(284, 197)"}
+{"key": "5f3c4edb3eb51e3e0da678dcf4ea262fd06e640e8c0033fb4dbbadfba23788b4", "out": "divide(819, 3108)"}
+{"key": "b7b8d309f78e73a159c354dbd3530af2b096d1690fe5372abde68dd6a024804e", "out": "greater(subtract(284, 183), subtract(197, 200))"}
+{"key": "d7dcb518c33090cd28dabb8140bced180131ed54266c012200c4746af59c722b", "out": "subtract(644.2, 637.2)"}
+{"key": "db0cdfb5c15f869a8fd9f43d3c0ecfbeaa4c20c8453a2be67010c533a5968c67", "out": "divide(819, 3108)"}
+{"key": "925c60ac13906fb04fe400557b7ea89583db8f083c42bac08c7e0892d88d7293", "out": "subtract(644.2, 637.2)"}
+{"key": "37653dde75d9103ba934d5e5cfe0144286776bbae012236746f23d519c070d54", "out": "subtract(644.2, 637.2)"}
+{"key": "129ad8d90622d5328c788074ca27e9f63b0d34752fdb4c90f14723fd995124ee", "out": "subtract(644.2, 637.2)"}
+{"key": "94d3fdb1d4c373955df2dcbc5d03b7334a4988b2ca043f863adfcce66d70457a", "out": "subtract(2330, 308)"}
+{"key": "d2fb08d1e5c90342629b61c3e99c0f68578deb20ecd984503e5798a7560582a6", "out": "divide(subtract(2330, 308), 308)"}
+{"key": "f77fc16555d6a0d5bccc7e06c9f5b5201005b2d498a64e140ca5ae0067cf0358", "out": "subtract(2330, 308)"}
+{"key": "14bcba16e7f230ef87c4290f60b45f7f4ab7da084573a4d2a89d1a056812acee", "out": "subtract(2330, 308)"}
+{"key": "ffed9d18a9196c761d24c142c400b7609eb9221115d82e3b89ed9e576033ddbb", "out": "divide(3400, 15704)"}
+{"key": "39ba629e22b374da7df03c4d76c8712cd50670c5e2dee384c396846cad35737f", "out": "divide(3400, 15704)"}
+{"key": "fb867149a1512fc52a7dcf3f3f64dd35f6984ba26d59b1b946415530702bf38e", "out": "divide(3.4, 15.704)"}
+{"key": "58310ac1941eb7c81e31734af8e26942f5fc05e2a906a38c2abae78881d3847f", "out": "divide(3400, 15704)"}
+{"key": "76f5ebba1d69ef4e4a55a36b9d45d6be7900d8fb4096f5eb2a6a195a4c5983a4", "out": "add(469, 77)"}
+{"key": "e6bc6505861bc22bd63663ec2975e01c9af86fececa89f5af91b3ad90a46b5e0", "out": "add(469, 77)"}
+{"key": "10ceaf5d8504bb440310063187182cd16775892501fe9ff86ba3cbc3332dbb8d", "out": "add(469, 77)"}
+{"key": "754eaa8a3834aba263b773c02e3d36b2ddc806688a46ade30f958ffe9e71e7e2", "out": "add(469, 77)"}
+{"key": "05bb01abad091ebd4842a60069666bbfd02cd74c913e89297a9918a6a081e93e", "out": "divide(3658, 10521)"}
+{"key": "a1113c55de7a491bd2b64ccb13a5c81b2ab132245e4a35c0fb480a4f362e71a4", "out": "divide(3658, 10521)"}
+{"key": "d7ae361b392f8d663c861f3a33aa32751ccf190724250f77e569de97a5f6fc1b", "out": "divide(3658, 10521)"}
+{"key": "fd4809b10b2d4c8d95e69bff44ba042f70264026427dd5bdf2f671469d121ceb", "out": "divide(3658, 10521)"}
+{"key": "5757af7790d24c6ff0bbae7a6c6ddfaf8a524d6170243f364d9773f54a841a44", "out": "add(255.7, 327.1)"}
+{"key": "3009f8eb462aaa27da7b6913888770a8cd2548bd6473eb8ce1eb06016cc696be", "out": "add(327.1, 255.7)"}
+{"key": "47a606ad0f2603e881f58fb62a6ef61c79b3a548695177eef2ffe4b0015cd4ab", "out": "add(255.7, 327.1)"}
+{"key": "f78b1e5038b026fa257fe2272df12bab1e8dace1abd4edaaf40e210de6001e9f", "out": "add(327.1, 255.7)"}
+{"key": "a3f6f2d94c5a7d2e916d701a3a86708d64722b13fa655ad8d124f2b86b74498e", "out": "divide(subtract(137.81, 100.00), 100.00)"}
+{"key": "04ca20e16a969bf39398f9366a957732fe042cb257951cf66fc3d9b1f9956ec5", "out": "subtract(137.81, 100.00)"}
+{"key": "2a99b8f320d2cf15ef0e7a59a5eee14f181bd9072389f795df58b5f3b0bb1c64", "out": "divide(subtract(137.81, 100.00), 100.00)"}
+{"key": "ac4e594e44e88e3171e87216a24177c4d1a3f7f2cde480ee0d0b395006ec7b18", "out": "divide(subtract(137.81, 100.00), 100.00)"}
+{"key": "6f38fbadfa5d4fb1836c7cac0d1c9a7f6d0850e09e25e9b98cf0c6fd45e95d4d", "out": "divide(11798, 2430)"}
+{"key": "561299dfa98f431f674d3072a78a942500b16805528656a15e012f9a1ef96587", "out": "divide(11798, 2430)"}
+{"key": "756d80a84794bba33dcff25b9c7ab99b526667af8e42504ea84bbe18126a7155", "out": "divide(11798, 2430)"}
+{"key": "9b8dc7c5da697dc839106f0ca716ed8d54a074b81c89e1ad1ef0c4a2e1c03674", "out": "divide(11798, 2430)"}
+{"key": "f1b192b62a9a627f19b9de00c5ea98d6b7a71964bee32fd7d0112c5ffebe83a1", "out": "subtract(308, 570)"}
+{"key": "39d4185876e2f0a0cbdd714cee48dd6881f97307e38a09a4b534d794318ebec8", "out": "divide(subtract(308, 570), 570)"}
+{"key": "25feaf31358d36ad59f6811ecec20a1298a5b34354e97608e2e2384f81024371", "out": "divide(subtract(308, 570), 570)"}
+{"key": "c292f7ad50b8df7c9aed8c557e718086b54af4ca1e18676db125cf62353d7ad4", "out": "divide(148527, 867558)"}
+{"key": "093c7c4dadc7a7e99c59e74a92af49a9a5cf0127ba98702ab341206695cd4791", "out": "divide(subtract(308, 570), 570)"}
+{"key": "64afeab849aa9ddbb21010f339bf7768ae3054fc8aa15304234eb87de10da829", "out": "divide(148527, 867558)"}
+{"key": "5f0f62a7331933b48b896e58f9a614ad2aa5345bac7b882cb268ae4fc9ff317b", "out": "divide(148527, 867558)"}
+{"key": "51c079770af1c0ff31a172cce99a279dd1937037947ac068dab5042df1ead5d8", "out": "divide(148527, 867558)"}
+{"key": "c8a438a5a5af522e06a987b2dd6e9206b2de8da6cdc1d519f76037ba4064d2fd", "out": "subtract(311.13, 165.84)"}
+{"key": "ac167b61885ad9e52e38cacfbbbcca6d36a85501be3642fa779adfc4e5b6b0f4", "out": "subtract(divide(subtract(311.13, const_100), const_100), divide(subtract(165.84, const_100), const_100))"}
+{"key": "d15a40404a64a9806c3d6048a20972f4e3699eff082825c0978b1d7b9722ad9e", "out": "subtract(divide(subtract(311.13, 100.00), 100.00), divide(subtract(165.84, 100.00), 100.00))"}
+{"key": "9d1e6d020a3182665b54fff00ee5b78c235b3631ac684c9abab753b99cf52af1", "out": "subtract(divide(subtract(311.13, const_100), const_100), divide(subtract(165.84, const_100), const_100))"}
+{"key": "e1e7c5f9156d54b4ce817fa540f4dbcfe25c1a29571f4348642dbbc9fd72e546", "out": "divide(subtract(6305, 6197), 6197)"}
+{"key": "10212a35613974dd40e7fba6b02b476f83acc33f52133938cb496e619ea7f07b", "out": "divide(subtract(6305, 6197), 6197)"}
+{"key": "ce971de2e0a17f84cc09b7d5959e88c874ed51d0e4514f1d04ec98485a1de890", "out": "divide(subtract(6305, 6197), 6197)"}
+{"key": "aacea0c06183f891e14248cc3adae0043fc7e3365bfda661bd0330a005bf8d78", "out": "divide(subtract(6305, 6197), 6197)"}
+{"key": "e50f9cec8d48a7a79ee4118f03622366fcb4ea419337cf1e7bfbdb1fc49ca786", "out": "table_min(segment operating income, none)"}
+{"key": "9821da72053c54f8983b497c70687c6d170be9cd5af40563e8eec32e507b6641", "out": "table_min(segment operating income, none)"}
+{"key": "55d904ad7f3cb4c6fa5e39153f1f38b82df13a5edbd4cf69b9b3dc4cd9a19398", "out": "table_min(segment operating income, none)"}
+{"key": "8923f06f336c6825a207395fd5d06f40ae11e0d89b9b9d2689b962fe99f288ca", "out": "table_min(segment operating income, none)"}
+{"key": "164765749e4ea6176d993e7bc74d1c99aff6701c9f1eff6d958bed69607fac90", "out": "divide(subtract(40678, 2526), 40678)"}
+{"key": "e2ad4b14c46d12a1307e562880cd99330368c5aa9244f95b515341a7e86967a5", "out": "divide(2526, 40678)"}
+{"key": "b0e80e23833ba1be15fb55a55c9ac621d1248367ef01e3bcf2678c6782a777ff", "out": "divide(40678, 40678)"}
+{"key": "1873e012625faafb5c1405631cd27eb8aef92dbd8dc4e13109005a9ea263e524", "out": "divide(2526, 40678)"}
+{"key": "5defe7585228728a5948a4eaa96ddb69f9cb3a378b7e183ebedd2e61fa404e51", "out": "divide(70, 30)"}
+{"key": "c17cf2bc526f629d2da46f3baec004394aa56d0fd4c35d192553a11540a04e19", "out": "divide(70, 30)"}
+{"key": "55da40f81fd8b1617cb38e7b988a386cc6f186897bd0393757044e59671963a7", "out": "divide(70, 30)"}
+{"key": "93dde4144796bd01ca4caf607cc7523ef03dc55ebd94109beed37eaa3f3477a0", "out": "divide(70, 30)"}
+{"key": "281970d902c1a7ae162060a578203b36620efa78f07649c77e16520701032e4e", "out": "subtract(137.5, 79.3)"}
+{"key": "1405934ddcd48c9f6e52c19155bf27206831c027c51952dc6a79146148c83eb3", "out": "subtract(divide(subtract(79.3, 137.5), 137.5), const_1)"}
+{"key": "7a597d1f7448756fb2e38ff1324c995ea006e3feecfd79be6a783fbd3a198b57", "out": "subtract(79.3, 137.5)"}
+{"key": "e1c94db9577462054b6250d8c18277460480f353a08a05a25b5bfa03a4232ac8", "out": "divide(subtract(79.3, 137.5), 137.5)"}
+{"key": "1b76676cc39cbef14420f6d20eb0dd043d3e0313082dc82a461d6507964d68e5", "out": "divide(add(1031, 0), 10)"}
+{"key": "33986da0b8d0640295dc734cd1a12583743640108901e136bc69a09a4a329a51", "out": "divide(1031, 10)"}
+{"key": "15b37eb96283af86f0d92270659343afa47b669e554f17c83c9f7696e814399d", "out": "divide(multiply(1031, const_1000), 10)"}
+{"key": "fe5e3f748900b7be418f43b0680b658e5eb640bfd3ca60e5a67a8f2fae60d477", "out": "divide(multiply(1031, const_1000), 10)"}
+{"key": "e26b00023066184ea84fb4d09c8c15bbd520acfe274eeb4babfa4e33fb6fe8c2", "out": "subtract(15261, 6142)"}
+{"key": "c20ce07114c67acb80a0d5c3c80755f6793328d1f817ce0764f5e4bd2706c945", "out": "subtract(15261, 6142)"}
+{"key": "6214ec813683e09e89c8e75d77a789867071665fcd79019bbed85351105ae92b", "out": "subtract(15261, 6142)"}
+{"key": "c13657dff40214a9546c19cebf4edc168db45b7bdbe2fa90d958fb514b72ff98", "out": "subtract(15261, 6142)"}
+{"key": "01f4b532609a8c8391444e3425209800f5d68bd8e39fb4f10d20ad03f18e2d9c", "out": "divide(6012, 13777)"}
+{"key": "8f1efd57de51749bc091fb2dd224a4ae35aee86e154f61adc44c8003bc412003", "out": "divide(6012, 13777)"}
+{"key": "d5b4c40f88c0db45e63993f8c5c233ea5b9a412eee3e17bec2c4d44efcea2e77", "out": "divide(6012, 13777)"}
+{"key": "319d8b6609b5eefe005f3022eafab63385c65bac2ea8b42e51001068578f0d86", "out": "divide(6012, 13777)"}
+{"key": "e6cbc347c4a5eda71178f93213639386560350e24aa49d86201ee4e0b5f1fb35", "out": "table_sum(operating income, none)"}
+{"key": "ef121248cfe2404c5a80c5084f58cec5d8b7fdd50b9917296b865b541dd8bca6", "out": "table_sum(operating income, none)"}
+{"key": "833296010ce21ce8e8923f7f7508e8a343b0615c4123f29c699a03b35e42993d", "out": "operating income in 2013 = 318"}
+{"key": "bcc1d1584608bb44a0d9f95c2a9b296b3a74bdca39da873c4678095529bead46", "out": "table_sum(operating income, none)"}
+{"key": "f8faf65e0e1efae132b0fe77fc0419b7b24c09ee30d40d8a0d29201f3c85c2b2", "out": "divide(rider_revenue, subtract(2008_net_revenue, 2007_net_revenue))"}
+{"key": "36d70e520d258dd173281117bc4fe0a349e9e1ba993a90ce6066be933c63ce25", "out": "divide(3.9, subtract(252.7, 231.0))"}
+{"key": "dd45dc0b9cc37d958975aa1ff07f13c53b83a3973244dafe80f6c6e14eca968e", "out": "divide(3.9, subtract(252.7, 231.0))"}
+{"key": "d0d0440c47d8944a5dffb210cc570554ca7dfd536f81df0eb3a7cea830af8bb3", "out": "divide(3.9, subtract(252.7, 231.0))"}
+{"key": "c79983d2ea135c6ca52bf13d8e0a21dd927d5c14ed0ca7d688a3f4bedbec3b1e", "out": "average(205, 163, 110)"}
+{"key": "ed52d4f852b49e6d4a782857f2f440f5956f57973aeb156858ffcf982f5de6e1", "out": "divide(add(add(205, 163), 110), const_3)"}
+{"key": "27613540a42122dd9638940dbb55ef7dcd8bf926e7d77fd667c1a5db3fb53c17", "out": "divide(add(205, add(163, 110)), const_3)"}
+{"key": "7c170792f44e45f69d7116c246e0c45dfeac8c09d5a4d48d22e2f2dcaf710b28", "out": "divide(add(add(205, 163), 110), const_3)"}
+{"key": "582beb13ce0a3e88d46bfc2c85f1aa5951209f8bb0c817882f468460440cd2cf", "out": "subtract(62154, add(add(42721, 27954), add(2901, 2337)))"}
+{"key": "e617335a718fe152e72fb212c4a22b1b24a75d66b61c8b6472092571c0ff22e0", "out": "divide(subtract(62154, add(add(42721, 27954), 2901)), const_1000)"}
+{"key": "8ee5d6a4f83b642eb9d91b724ed64a623ca544b627ad890457aecbbcc45c9404", "out": "subtract(62154, add(add(add(42721, 27954), 2901), 2337))"}
+{"key": "b3b46508180810edc1b1524f5b932b00cc155a4b374150942d2360121ed20131", "out": "divide(62154, 265982)"}
+{"key": "599ed25a64d94be77b3efceb05b982f3aa75b8d268458cd57886503d2fe146dc", "out": "divide(135, 1286)"}
+{"key": "ff31f85f3a7c97409783a197034f40f536c9b77b2e8a6f0c6fbe22423bb5ea19", "out": "divide(135, 1286)"}
+{"key": "35a62a0efba04ecb641463413ea133285b66631d896be2cd9efed4d765e279d9", "out": "divide(135, 1286)"}
+{"key": "46d01373f6f1291563f3a1b01458b2531a4ca7d72175f64ed0f387b1f157f7ad", "out": "subtract(3.57, 0.95)"}
+{"key": "cedab95cca6aa4337dd70c568805db9f1671dcf85ef8f7a72a67c68408edf04d", "out": "divide(135, 1286)"}
+{"key": "efe22ee33738f809b480e532b80ec967cfc5482e711ff810097bbfd6de60adcd", "out": "subtract(3.57, 0.95)"}
+{"key": "bed1dd4aa077c70ba3041a64197ed9ab7dfef94d99ff1754d637957042c9bb23", "out": "subtract(3.57, 0.95)"}
+{"key": "82930328fd0a97b3cac24b5049f20e2058310bb1f1aea84f59e27cd0a316aaf4", "out": "subtract(3.57, 0.95)"}
+{"key": "c7955d282e9f431907e6360f66b37fc717387e87a0af3510d8ed6e9259de26d5", "out": "subtract(200, 50)"}
+{"key": "035f5e49a91ac0d718b11ff62d8a44404c3e67ee45329290ee5a1cb8e06a157a", "out": "subtract(50, 0)"}
+{"key": "b6d94bac49da8fd2ad2d692cf1288f8b009e8ed34a863bf00b585cbd37e2c709", "out": "divide(50, const_1000)"}
+{"key": "4d07985bfcb7d23a82ce4b6621e5a0e4402a0c95b17fadbcf5aea6c82d85f483", "out": "divide(50, const_1000)"}
+{"key": "aac34b61b8df781420e221bc5ffcecf553c143c12d89964245b497325cc157f1", "out": "divide(subtract(65.70, 100.00), 100.00)"}
+{"key": "3f760a84aafc955b98ecd628f7219656e7a346930587eb26a1873e60ae8c3119", "out": "divide(subtract(65.70, 100.00), 100.00)"}
+{"key": "4808948aa3885dbdfb57da5a1ad2f1d111f3be680ebcdcf9a8d75889969d7b85", "out": "divide(subtract(65.70, 100.00), 100.00)"}
+{"key": "1c61560716178255b2480eda523adc48c0940cc8e53da59785c2862bb5708bc5", "out": "divide(subtract(65.70, 100.00), 100.00)"}
+{"key": "fa6ad146a3bdc00677a9e9cce8c691e48b3ea814b5e0f025008ac251eed38f4e", "out": "divide(634203, 1848575)"}
+{"key": "fab02ab41a896ee3632d33ac0361c661172fa995e6c841624320b06c3b90378a", "out": "divide(634203, 1848575)"}
+{"key": "afa3b92cd1fc8208a080346a405e43d658db16c1080b8c7e735253ae5e0fdc7d", "out": "divide(634203, 1848575)"}
+{"key": "4bd7493b20ba117ba687c79b12114a9903735171cf3c270753a560ea2694ab55", "out": "divide(634203, 1848575)"}
+{"key": "486dc1013f91232f32acd4869cfc6f05de5388182819409e6108b61a168403f9", "out": "subtract(59, 60)"}
+{"key": "71a4e5e1d8ccc42819d6b35bd828621d1afb082620bbaa94dd8b7afea5a470f1", "out": "subtract(60, 59)"}
+{"key": "d16e07b0a0bb56a3040695b16e60c6934aa568d79cfcb303801eb253b9b298f9", "out": "subtract(59, 60)"}
+{"key": "0aca9f8ccffa29b34ac2638cf376b48fa074040e6a62d1943412e804dce922a6", "out": "subtract(60, 59)"}
+{"key": "e397be540c82a15b0d98d8ef496c7823e8038d2e8406f25dc50972473c0a4b3e", "out": "divide(2100, 21963)"}
+{"key": "439f28f4092d7a25a9eb1e6edf1a9c4a55655f8c094ec4f7e577f8aef5d66309", "out": "divide(multiply(2.1, const_1000), 21963)"}
+{"key": "4af6cf420a85dfca4c49adf801d9597fe4ce8ffc9402fa4df11b08533ea7bee8", "out": "divide(2100, 21963)"}
+{"key": "7b28a757bc3f11a657e097d975804f86594a73aa54813dbaec5e270c3354b3ab", "out": "divide(2.1, divide(21963, const_1000))"}
+{"key": "a696ded3ba120c4e1a36fc5a7667100981f9ab16c8ded788b52c05bd2398b385", "out": "divide(2400, 3278)"}
+{"key": "31580a5958628277a3ca683c53d7c02d61a192f700841732f4a49c4e9ba99d94", "out": "divide(2400, 3278)"}
+{"key": "ff7e88a7439aae431ed803d7536e640355d4ecb677527ff76cf8dd32b4899291", "out": "divide(2400, 3278)"}
+{"key": "a77cf4e8fb585e79148d7ecd38b7896f1f3e1c67df58ca2abf4021d024d76847", "out": "divide(2400, 3278)"}
+{"key": "3f36461b57342b4c3f6bdaf6a184bddea0c0d93fb2ad975d75ff4998fa5b8752", "out": "divide(13093.0, 17932.7)"}
+{"key": "86a60802743ece2bd7b43914038ae8dbb93cbf464becd058400084ccf85ca905", "out": "divide(13093.0, 17932.7)"}
+{"key": "535153e729f78cdb71838fbe88d2db35b7d592a5a8f9bb18a7d8c879016aa185", "out": "divide(13093.0, 17932.7)"}
+{"key": "42710d445cc61cf2d5e63b0a60ea76011decc869340022ae45551c8936599195", "out": "divide(13093.0, 17932.7)"}
+{"key": "fd3dbca2203e5959cce2b9f40770cfa3236d83a14f0a446216f59612b8f5c109", "out": "subtract(193.5, 230.9)"}
+{"key": "9d3bb0108ec770598601e568d19522d1db368f265965ee33c32863f1736e695e", "out": "subtract(divide(subtract(193.5, const_100), const_100), divide(subtract(230.9, const_100), const_100))"}
+{"key": "8d584dc311d462962c50c1f1351a053d54da52c4f88674197d07abc7eaba52f8", "out": "subtract(divide(subtract(193.5, 100.0), 100.0), divide(subtract(230.9, 100.0), 100.0))"}
+{"key": "30ccaebe0484c223d80a2e43ab3b0484f40aa3874754f6deda569c1b5614bcf9", "out": "subtract(divide(subtract(193.5, const_100), const_100), divide(subtract(230.9, const_100), const_100))"}
+{"key": "d7edf2ee28f31b1e604d9801c1076433eff9286cd07432d7df4d922128fa4f5d", "out": "average(table_currency translation adjustments, none)"}
+{"key": "37d191f3adad6e3da0824c702c7746aa008c6dcb5a117dc792c6a1f6c6976169", "out": "table_average(currency translation adjustments, none)"}
+{"key": "43daa2e79709925692e6bce00179b20db6352a6cde2b42023e95ad596313ad17", "out": "divide(add(add(-6129, -3929), -2207), const_3)"}
+{"key": "fe390ddcc1ac38fda05c827577d99a964083a405a8cf6205242582924ec97d42", "out": "table_average(currency translation adjustments, none)"}
+{"key": "9380f14485ee630207c05b6e1b97ebbcad658b7b22d72ec21d44ca7e74a80c0f", "out": "divide(203, 900)"}
+{"key": "88f09855b23128cb6571f4de6a5fe712b4a2ec749d9319c62b55e220dbcd52ef", "out": "divide(203, 900)"}
+{"key": "a2713b2e5797f86aaaca7fbb7b31e88931c449c24b543ab7190ff15108694e28", "out": "divide(203, 900)"}
+{"key": "6d75796fb0e62e6435d4bbcc490486bd949d08be509ff70a9f6d5154d80a4be7", "out": "divide(203, 900)"}
+{"key": "1885a595eabcede2ac72cfd1b4b6b4aa4a6b66220f407d46204f3b0afb464a00", "out": "divide(subtract(5309, 4938), 4938)"}
+{"key": "038b84de261798316b55e170c19a4d89569ac165b02cb08dd654e35fee16d43f", "out": "divide(subtract(5309, 4938), 4938)"}
+{"key": "8cecb2d6743b1b7c55a24d4385691718ef65a48d0cef5c99a287754c4c7003a2", "out": "divide(subtract(5309, 4938), 4938)"}
+{"key": "924575e9497a997e5bfb49a9a968d74700281a934abf1b60f74b36239b48c7c7", "out": "divide(subtract(5309, 4938), 4938)"}
+{"key": "6225fd45226c6a44aade86109fd5bf59b1244cbcee078d9b4a9cf7b3b45ea03a", "out": "divide(subtract(82551000, 68125000), 68125000)"}
+{"key": "9e862c41cc28df106b7af13d7290565f19f8043849aa2a6c95f03d46ae994757", "out": "subtract(divide(subtract(82551000, 68125000), 68125000), divide(subtract(1390000, 4645000), 4645000))"}
+{"key": "968d1e534b2e8fc550d3c6537174381daf922034c4960def7854513611cc75e0", "out": "subtract(\n  divide(subtract(82551000, 68125000), 68125000),\n  divide(subtract(-1390000, -4645000), -4645000)\n)"}
+{"key": "b0b276f1501ca0aba33f65ce2a1f869c2e78340230ff5ac01c3550b160ead056", "out": "subtract(divide(82551, 68125), divide(1390, 4645))"}
+{"key": "86148c21a66af7bf7670299a0ed9531f917bba440767896abcbe0209c12e4e7f", "out": "divide(subtract(7.3, 4.9), 4.9)"}
+{"key": "3f9fa4b397d0eeabb3f760d3d0b8928458784177a08089cc70969ee95140c9bc", "out": "divide(subtract(7.3, 4.9), 4.9)"}
+{"key": "940e3ba310a6a5d1189811e91555c5c8aded163115e65d7745ea3834362baff5", "out": "divide(subtract(7.3, 4.9), 4.9)"}
+{"key": "36903c5076be1be60ef2915c0b900c4b472913847799235c9fed54afce51895f", "out": "divide(subtract(7.3, 4.9), 4.9)"}
+{"key": "75350bca93424c93b2eef2a62aa27421e782f26f1816396e8ebaa4496e9ffca8", "out": "subtract(table_max(operating margin, none), table_average(operating margin, none))"}
+{"key": "fdf36bfd34c9e8c9a61783aecfb20950a6619194d0eec646b733481b8d92747a", "out": "table_average(operating margin, none)"}
+{"key": "cb2341bac82b24f2135073056e6347db2867050fcd5eb13d1c6c136fdd63a260", "out": "table_average(operating margin, none)"}
+{"key": "baebbf4ba90a6a003f8b4123f2decebfbbfa2669baf4aecc8c44d86bfe6dd314", "out": "subtract(table_max(operating margin, none), table_average(operating margin, none))"}

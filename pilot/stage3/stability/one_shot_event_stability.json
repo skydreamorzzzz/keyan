@@ -1,0 +1,30 @@
+{
+  "case_gt_strategy": {
+    "stage2_old_positive": 22,
+    "positive_in_at_least_one_new_run": 11,
+    "positive_in_both_new_runs": 10,
+    "at_least_one_new_rate": 0.5,
+    "both_new_rate": 0.45454545454545453
+  },
+  "strategy_gt_case": {
+    "stage2_old_positive": 14,
+    "positive_in_at_least_one_new_run": 10,
+    "positive_in_both_new_runs": 8,
+    "at_least_one_new_rate": 0.7142857142857143,
+    "both_new_rate": 0.5714285714285714
+  },
+  "case_gt_both_negative_interference": {
+    "stage2_old_positive": 7,
+    "positive_in_at_least_one_new_run": 3,
+    "positive_in_both_new_runs": 3,
+    "at_least_one_new_rate": 0.42857142857142855,
+    "both_new_rate": 0.42857142857142855
+  },
+  "strategy_gt_both_negative_interference": {
+    "stage2_old_positive": 6,
+    "positive_in_at_least_one_new_run": 3,
+    "positive_in_both_new_runs": 2,
+    "at_least_one_new_rate": 0.5,
+    "both_new_rate": 0.3333333333333333
+  }
+}
