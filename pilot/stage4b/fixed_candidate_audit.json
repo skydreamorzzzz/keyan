@@ -1,0 +1,405 @@
+{
+  "flat_delta/existing_meta_plus_compatibility": {
+    "fold_selections": [
+      {
+        "architecture": "flat_delta",
+        "feature_set": "existing_meta_plus_compatibility",
+        "threshold": 0.5,
+        "lambda": null,
+        "mean_utility": 0.7400874415799789,
+        "se_utility": 0.04281480629781574,
+        "coverage": 0.05502789084878637
+      },
+      {
+        "architecture": "flat_delta",
+        "feature_set": "existing_meta_plus_compatibility",
+        "threshold": 0.5,
+        "lambda": null,
+        "mean_utility": 0.7302879541685512,
+        "se_utility": 0.025313842927109368,
+        "coverage": 0.029850746268656716
+      },
+      {
+        "architecture": "flat_delta",
+        "feature_set": "existing_meta_plus_compatibility",
+        "threshold": 0.5,
+        "lambda": null,
+        "mean_utility": 0.7280516608874817,
+        "se_utility": 0.025815488748687766,
+        "coverage": 0.04982662445349013
+      },
+      {
+        "architecture": "flat_delta",
+        "feature_set": "existing_meta_plus_compatibility",
+        "threshold": 0.5,
+        "lambda": null,
+        "mean_utility": 0.735087190311071,
+        "se_utility": 0.03359705534570424,
+        "coverage": 0.03482587064676617
+      },
+      {
+        "architecture": "flat_delta",
+        "feature_set": "existing_meta_plus_compatibility",
+        "threshold": 0.5,
+        "lambda": null,
+        "mean_utility": 0.7901904618322528,
+        "se_utility": 0.042795533441125314,
+        "coverage": 0.03482587064676617
+      }
+    ],
+    "expected_evaluation": {
+      "accuracy": 0.7506666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0040000000000000036,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.04347826086956527,
+      "deviation_coverage": 0.024,
+      "deviation_count": 6,
+      "deviation_precision": 0.3333333333333333,
+      "harmful_deviation_rate": 0.16666666666666666,
+      "beneficial_deviation_count": 2,
+      "harmful_deviation_count": 1,
+      "choice_distribution": {
+        "both": 244,
+        "none": 6
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.004,
+        "ci95": [
+          -0.005509641873278236,
+          0.016129032258064516
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      }
+    },
+    "realized_by_replicate": {
+      "rn1": {
+        "policy_accuracy": 0.752,
+        "both_accuracy": 0.748,
+        "gain_vs_both": 0.0
+      },
+      "rn2": {
+        "policy_accuracy": 0.748,
+        "both_accuracy": 0.744,
+        "gain_vs_both": 0.0
+      },
+      "rn3": {
+        "policy_accuracy": 0.752,
+        "both_accuracy": 0.748,
+        "gain_vs_both": 0.0
+      },
+      "_summary": {
+        "mean_gain": 0.0,
+        "min_gain": 0.0,
+        "max_gain": 0.0,
+        "range": 0.0
+      }
+    }
+  },
+  "hierarchical/existing_meta_plus_compatibility": {
+    "fold_selections": [
+      {
+        "architecture": "hierarchical",
+        "feature_set": "existing_meta_plus_compatibility",
+        "threshold": 0.8,
+        "lambda": null,
+        "mean_utility": 0.7501130710085934,
+        "se_utility": 0.039783430879080234,
+        "coverage": 0.08970300015076135
+      },
+      {
+        "architecture": "hierarchical",
+        "feature_set": "existing_meta_plus_compatibility",
+        "threshold": 0.8,
+        "lambda": null,
+        "mean_utility": 0.7352630785466606,
+        "se_utility": 0.02226611173211954,
+        "coverage": 0.0946781245288708
+      },
+      {
+        "architecture": "hierarchical",
+        "feature_set": "existing_meta_plus_compatibility",
+        "threshold": 0.8,
+        "lambda": null,
+        "mean_utility": 0.7197849138147646,
+        "se_utility": 0.02569903248219529,
+        "coverage": 0.10485451530227649
+      },
+      {
+        "architecture": "hierarchical",
+        "feature_set": "existing_meta_plus_compatibility",
+        "threshold": 0.8,
+        "lambda": null,
+        "mean_utility": 0.7350871903110708,
+        "se_utility": 0.04050062494794287,
+        "coverage": 0.06482737826021408
+      },
+      {
+        "architecture": "hierarchical",
+        "feature_set": "existing_meta_plus_compatibility",
+        "threshold": 0.8,
+        "lambda": null,
+        "mean_utility": 0.7901904618322528,
+        "se_utility": 0.042795533441125314,
+        "coverage": 0.06995326398311473
+      }
+    ],
+    "expected_evaluation": {
+      "accuracy": 0.736,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.010666666666666713,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.11594202898550779,
+      "deviation_coverage": 0.096,
+      "deviation_count": 24,
+      "deviation_precision": 0.08333333333333333,
+      "harmful_deviation_rate": 0.20833333333333334,
+      "beneficial_deviation_count": 2,
+      "harmful_deviation_count": 5,
+      "choice_distribution": {
+        "both": 226,
+        "none": 16,
+        "strategy": 8
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.010666666666666666,
+        "ci95": [
+          -0.03162055335968379,
+          0.008547008547008548
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      }
+    },
+    "realized_by_replicate": {
+      "rn1": {
+        "policy_accuracy": 0.74,
+        "both_accuracy": 0.748,
+        "gain_vs_both": 0.0
+      },
+      "rn2": {
+        "policy_accuracy": 0.732,
+        "both_accuracy": 0.744,
+        "gain_vs_both": 0.0
+      },
+      "rn3": {
+        "policy_accuracy": 0.736,
+        "both_accuracy": 0.748,
+        "gain_vs_both": 0.0
+      },
+      "_summary": {
+        "mean_gain": 0.0,
+        "min_gain": 0.0,
+        "max_gain": 0.0,
+        "range": 0.0
+      }
+    }
+  },
+  "hierarchical/synthetic_interaction": {
+    "fold_selections": [
+      {
+        "architecture": "hierarchical",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.8,
+        "lambda": null,
+        "mean_utility": 0.7451379466304839,
+        "se_utility": 0.043692057912973224,
+        "coverage": 0.03490125131916177
+      },
+      {
+        "architecture": "hierarchical",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.8,
+        "lambda": null,
+        "mean_utility": 0.7352630785466606,
+        "se_utility": 0.02226611173211954,
+        "coverage": 0.039951756369666816
+      },
+      {
+        "architecture": "hierarchical",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.8,
+        "lambda": null,
+        "mean_utility": 0.7297351625709835,
+        "se_utility": 0.02459883682292539,
+        "coverage": 0.04002713704206241
+      },
+      {
+        "architecture": "hierarchical",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.8,
+        "lambda": null,
+        "mean_utility": 0.7451128197396854,
+        "se_utility": 0.03750106307874806,
+        "coverage": 0.04982662445349012
+      },
+      {
+        "architecture": "hierarchical",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.8,
+        "lambda": null,
+        "mean_utility": 0.7852153374541434,
+        "se_utility": 0.046815077205516024,
+        "coverage": 0.04002713704206241
+      }
+    ],
+    "expected_evaluation": {
+      "accuracy": 0.756,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.009333333333333305,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.10144927536231856,
+      "deviation_coverage": 0.044,
+      "deviation_count": 11,
+      "deviation_precision": 0.2727272727272727,
+      "harmful_deviation_rate": 0.09090909090909091,
+      "beneficial_deviation_count": 3,
+      "harmful_deviation_count": 1,
+      "choice_distribution": {
+        "both": 239,
+        "none": 6,
+        "case": 2,
+        "strategy": 3
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.009333333333333334,
+        "ci95": [
+          -0.0037593984962406013,
+          0.024793388429752067
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      }
+    },
+    "realized_by_replicate": {
+      "rn1": {
+        "policy_accuracy": 0.76,
+        "both_accuracy": 0.748,
+        "gain_vs_both": 0.0
+      },
+      "rn2": {
+        "policy_accuracy": 0.752,
+        "both_accuracy": 0.744,
+        "gain_vs_both": 0.0
+      },
+      "rn3": {
+        "policy_accuracy": 0.756,
+        "both_accuracy": 0.748,
+        "gain_vs_both": 0.0
+      },
+      "_summary": {
+        "mean_gain": 0.0,
+        "min_gain": 0.0,
+        "max_gain": 0.0,
+        "range": 0.0
+      }
+    }
+  },
+  "gain_harm/synthetic_interaction": {
+    "fold_selections": [
+      {
+        "architecture": "gain_harm",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.5,
+        "lambda": 3.0,
+        "mean_utility": 0.7484546962158902,
+        "se_utility": 0.04108299665262755,
+        "coverage": 0.015151515151515152
+      },
+      {
+        "architecture": "gain_harm",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.5,
+        "lambda": 3.0,
+        "mean_utility": 0.7336047037539575,
+        "se_utility": 0.025069032335769462,
+        "coverage": 0.009950248756218905
+      },
+      {
+        "architecture": "gain_harm",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.5,
+        "lambda": 3.0,
+        "mean_utility": 0.7280516608874817,
+        "se_utility": 0.025815488748687766,
+        "coverage": 0.005050505050505051
+      },
+      {
+        "architecture": "gain_harm",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.5,
+        "lambda": 3.0,
+        "mean_utility": 0.7401376953615759,
+        "se_utility": 0.034705636568165624,
+        "coverage": 0.029926126941052313
+      },
+      {
+        "architecture": "gain_harm",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.5,
+        "lambda": 3.0,
+        "mean_utility": 0.7885320870395497,
+        "se_utility": 0.04852716723009076,
+        "coverage": 0.020202020202020204
+      }
+    ],
+    "expected_evaluation": {
+      "accuracy": 0.7466666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.0,
+      "deviation_coverage": 0.004,
+      "deviation_count": 1,
+      "deviation_precision": 0.0,
+      "harmful_deviation_rate": 0.0,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 0,
+      "choice_distribution": {
+        "both": 249,
+        "none": 1
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      }
+    },
+    "realized_by_replicate": {
+      "rn1": {
+        "policy_accuracy": 0.748,
+        "both_accuracy": 0.748,
+        "gain_vs_both": 0.0
+      },
+      "rn2": {
+        "policy_accuracy": 0.744,
+        "both_accuracy": 0.744,
+        "gain_vs_both": 0.0
+      },
+      "rn3": {
+        "policy_accuracy": 0.748,
+        "both_accuracy": 0.748,
+        "gain_vs_both": 0.0
+      },
+      "_summary": {
+        "mean_gain": 0.0,
+        "min_gain": 0.0,
+        "max_gain": 0.0,
+        "range": 0.0
+      }
+    }
+  }
+}

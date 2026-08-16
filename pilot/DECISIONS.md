@@ -212,3 +212,41 @@
 - **WEAK BUT PROMISING — IMPROVE OBSERVABILITY**。
 - stable heterogeneity 已存在，但当前 inference-time observable state 对 unseen annual reports 只有弱预测力；还不能进入正式 method development。
 - 下一步应增强 retrieved-content compatibility observability：operand-role alignment、scale/unit verification、case/strategy operation consistency，以及更严格 confidence gate。
+
+## 14. Stage 4B Conservative Router Freeze & Confirmatory Holdout（2026-08-16）
+
+### protocol hardening
+- 新增 `pilot/stage4b/`，主 grouping 固定为 `annual_report_group=COMPANY/YEAR`；page-level grouping 不作为主结果。
+- 修复 Stage 4A 协议风险：`DictVectorizer`/preprocessing 只在 outer-train fold 内 fit；outer GroupKFold 仅用于最终 OOF；inner grouped CV 负责 feature set、formulation、model、threshold、lambda 全部选择。
+- confidence gate tie-breaking 改成保守规则：utility 相同或 one-standard-error 内接近最佳时，优先低 coverage、高 threshold、高 harm penalty、高 abstention；原则为不确定即 Both。
+- `pilot/stage3/stability_run.py` 增加 run-level runtime guard：同一 cache namespace 内若 response model / fingerprint / runtime config 漂移，则停止而非混合。
+
+### fully nested development result
+- 250-query runtime-normalized development subset 上，fully nested annual-report GroupKFold OOF policy 选择 0 个 deviation，等同 Always Both。
+- Expected accuracy：Always Both 0.7467，fully nested policy 0.7467，Oracle 0.8387；gain vs Both 0.0000，Oracle Gap Recovery 0.0%，annual-report cluster CI [0.0000, 0.0000]。
+- realized single-run evaluation：rn1/rn2/rn3 policy accuracy 分别 0.7480/0.7440/0.7480，与 Both 完全相同；mean gain 0.0。
+
+### hierarchical router audit
+- 固定候选 audit 仅作 exploratory，不用于 freeze：
+  - flat delta + compatibility：0.7507，+0.40pp，coverage 2.4%，CI [-0.55pp, +1.61pp]。
+  - hierarchical + compatibility：0.7360，-1.07pp，coverage 9.6%。
+  - hierarchical + synthetic interaction：0.7560，+0.93pp，coverage 4.4%，CI [-0.38pp, +2.48pp]。
+  - gain/harm + synthetic interaction：0.7467，+0.00pp。
+- hierarchical architecture 目前没有稳定优于旧 marginal heads；正向结果仍跨 0，且不能作为 confirmatory claim。
+
+### frozen router / holdout
+- 冻结 router：`conservative_no_override_router`，配置见 `pilot/stage4b/stage4b_frozen_router_config.json`，规范见 `pilot/stage4b/FROZEN_ROUTER_SPEC.md`。
+- frozen policy 明确为 Always Both；holdout 结果不得用于重新启用 deviation 或修改 threshold/feature/model。
+- fresh holdout 使用 `data/finqa/test.json` 中 annual report 同时 disjoint from train.json 和 dev[:492] 的 primary subset：97 queries，33 annual reports。private_test 无 executable gold label，不用于 accuracy。
+- holdout 两轮 confirmatory execution 只跑 Both（frozen router coverage 0）：h1 0.7526，h2 0.7629；router gain 均 0.0000，cluster CI 均 [0.0000, 0.0000]。
+- runtime provenance：DeepSeek official API，requested/effective/response model `deepseek-v4-flash`，non-thinking，temperature 0，max_tokens 600，fingerprint `a26a7955944dc5c60445bff77fac9c8e`。
+- API 使用：194 次 Both execution calls；0 次 selected deviation calls；0 次 holdout synthetic feature calls。
+
+### accuracy-memory tradeoff
+- development Pareto：None 0.6933 / 0 memory tokens；Strategy 0.7053 / 209 tokens；Case 0.7160 / 413 tokens；Both 0.7467 / 623 tokens；frozen router 0.7467 / 623 tokens。
+- holdout token estimate：Both/frozen router 平均 prompt tokens 1275.2，memory tokens 611.4；没有 memory-cost reduction。
+
+### 判定
+- **DEVELOPMENT SIGNAL DID NOT REPLICATE**。
+- Stage 4B 不否定 fixed-runtime marginal-utility heterogeneity；它否定的是“当前 Stage 4A inference-safe features/model-search 已足以冻结一个 conservative unseen-query router”的更强 claim。
+- 下一步不要继续在同一 250 条上调分；应先提高 observable state：retrieved-content reasoning、operand-role verification、scale/unit consistency、Case/Strategy conflict modeling，然后预注册新 router 并在新 holdout 上确认。

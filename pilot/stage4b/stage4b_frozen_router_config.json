@@ -1,0 +1,39 @@
+{
+  "stage": "4B",
+  "router_name": "conservative_no_override_router",
+  "frozen_at": "2026-08-16",
+  "decision_reason": "Fully nested annual-report GroupKFold with fold-local preprocessing and one-standard-error conservative selection selected zero deviations on development OOF.",
+  "default_action": "both",
+  "allowed_deviation_actions": ["none", "case", "strategy"],
+  "frozen_policy": {
+    "type": "always_default",
+    "action": "both",
+    "override_gate": "disabled"
+  },
+  "development_protocol": {
+    "outer_grouping": "annual_report_group",
+    "inner_grouping": "annual_report_group within outer train",
+    "preprocessing": "fold-local DictVectorizer only",
+    "selection_rule": "one-standard-error conservative rule; prefer lower coverage, higher threshold, higher harm penalty",
+    "candidate_architectures": ["flat_delta", "gain_harm", "hierarchical"],
+    "candidate_feature_sets": [
+      "existing_meta",
+      "existing_meta_plus_compatibility",
+      "synthetic_interaction",
+      "existing_meta_plus_interaction"
+    ]
+  },
+  "runtime": {
+    "provider": "DeepSeek",
+    "requested_model": "deepseek-v4-flash",
+    "thinking_mode": false,
+    "temperature": 0,
+    "max_tokens": 600
+  },
+  "holdout_rule_frozen_before_execution": {
+    "dataset": "data/finqa/test.json",
+    "primary_subset": "annual_report_group disjoint from train.json and dev[:492]",
+    "secondary_subset": "full public test optional only",
+    "gold_required": true
+  }
+}

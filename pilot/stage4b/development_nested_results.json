@@ -1,0 +1,1393 @@
+{
+  "protocol": {
+    "outer": "GroupKFold by annual_report_group",
+    "inner": "GroupKFold on outer train only",
+    "preprocessing": "DictVectorizer fit inside each train fold only",
+    "selection": "one-standard-error conservative selection; tie prefers lower coverage/higher threshold/higher lambda",
+    "candidate_feature_sets": [
+      "existing_meta",
+      "existing_meta_plus_compatibility",
+      "synthetic_interaction",
+      "existing_meta_plus_interaction"
+    ],
+    "candidate_architectures": [
+      "flat_delta",
+      "gain_harm",
+      "hierarchical"
+    ]
+  },
+  "fold_selections": [
+    {
+      "fold": 1,
+      "selected": {
+        "architecture": "flat_delta",
+        "feature_set": "existing_meta",
+        "threshold": 0.5,
+        "lambda": null,
+        "mean_utility": 0.7484546962158902,
+        "se_utility": 0.04108299665262755,
+        "coverage": 0.0
+      },
+      "test_n": 50,
+      "test_groups": 31
+    },
+    {
+      "fold": 2,
+      "selected": {
+        "architecture": "flat_delta",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.5,
+        "lambda": null,
+        "mean_utility": 0.7336047037539575,
+        "se_utility": 0.025069032335769462,
+        "coverage": 0.0
+      },
+      "test_n": 50,
+      "test_groups": 31
+    },
+    {
+      "fold": 3,
+      "selected": {
+        "architecture": "flat_delta",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.5,
+        "lambda": null,
+        "mean_utility": 0.7280516608874817,
+        "se_utility": 0.025815488748687766,
+        "coverage": 0.0
+      },
+      "test_n": 50,
+      "test_groups": 32
+    },
+    {
+      "fold": 4,
+      "selected": {
+        "architecture": "flat_delta",
+        "feature_set": "existing_meta",
+        "threshold": 0.5,
+        "lambda": null,
+        "mean_utility": 0.735087190311071,
+        "se_utility": 0.03359705534570424,
+        "coverage": 0.014925373134328358
+      },
+      "test_n": 50,
+      "test_groups": 32
+    },
+    {
+      "fold": 5,
+      "selected": {
+        "architecture": "flat_delta",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.5,
+        "lambda": null,
+        "mean_utility": 0.7885320870395497,
+        "se_utility": 0.04852716723009076,
+        "coverage": 0.0
+      },
+      "test_n": 50,
+      "test_groups": 32
+    }
+  ],
+  "choices": [
+    {
+      "sample_index": 0,
+      "choice": "both",
+      "annual_report_group": "V/2008"
+    },
+    {
+      "sample_index": 2,
+      "choice": "both",
+      "annual_report_group": "DVN/2007"
+    },
+    {
+      "sample_index": 4,
+      "choice": "both",
+      "annual_report_group": "ETR/2004"
+    },
+    {
+      "sample_index": 5,
+      "choice": "both",
+      "annual_report_group": "PM/2017"
+    },
+    {
+      "sample_index": 9,
+      "choice": "both",
+      "annual_report_group": "PNC/2013"
+    },
+    {
+      "sample_index": 11,
+      "choice": "both",
+      "annual_report_group": "PKG/2009"
+    },
+    {
+      "sample_index": 12,
+      "choice": "both",
+      "annual_report_group": "LMT/2013"
+    },
+    {
+      "sample_index": 18,
+      "choice": "both",
+      "annual_report_group": "ABMD/2006"
+    },
+    {
+      "sample_index": 20,
+      "choice": "both",
+      "annual_report_group": "DVN/2014"
+    },
+    {
+      "sample_index": 24,
+      "choice": "both",
+      "annual_report_group": "ETR/2015"
+    },
+    {
+      "sample_index": 27,
+      "choice": "both",
+      "annual_report_group": "HOLX/2015"
+    },
+    {
+      "sample_index": 28,
+      "choice": "both",
+      "annual_report_group": "ETR/2017"
+    },
+    {
+      "sample_index": 32,
+      "choice": "both",
+      "annual_report_group": "MAS/2012"
+    },
+    {
+      "sample_index": 33,
+      "choice": "both",
+      "annual_report_group": "AON/2010"
+    },
+    {
+      "sample_index": 34,
+      "choice": "both",
+      "annual_report_group": "AES/2002"
+    },
+    {
+      "sample_index": 35,
+      "choice": "both",
+      "annual_report_group": "CB/2010"
+    },
+    {
+      "sample_index": 38,
+      "choice": "both",
+      "annual_report_group": "ZBH/2003"
+    },
+    {
+      "sample_index": 41,
+      "choice": "both",
+      "annual_report_group": "LMT/2012"
+    },
+    {
+      "sample_index": 42,
+      "choice": "both",
+      "annual_report_group": "MAS/2018"
+    },
+    {
+      "sample_index": 43,
+      "choice": "both",
+      "annual_report_group": "SYY/2019"
+    },
+    {
+      "sample_index": 45,
+      "choice": "both",
+      "annual_report_group": "ZBH/2003"
+    },
+    {
+      "sample_index": 46,
+      "choice": "both",
+      "annual_report_group": "AMT/2010"
+    },
+    {
+      "sample_index": 47,
+      "choice": "both",
+      "annual_report_group": "PM/2014"
+    },
+    {
+      "sample_index": 49,
+      "choice": "both",
+      "annual_report_group": "PM/2015"
+    },
+    {
+      "sample_index": 50,
+      "choice": "both",
+      "annual_report_group": "RSG/2016"
+    },
+    {
+      "sample_index": 51,
+      "choice": "both",
+      "annual_report_group": "SNPS/2006"
+    },
+    {
+      "sample_index": 60,
+      "choice": "both",
+      "annual_report_group": "GS/2017"
+    },
+    {
+      "sample_index": 62,
+      "choice": "both",
+      "annual_report_group": "SLB/2012"
+    },
+    {
+      "sample_index": 63,
+      "choice": "both",
+      "annual_report_group": "GIS/2012"
+    },
+    {
+      "sample_index": 64,
+      "choice": "both",
+      "annual_report_group": "PM/2017"
+    },
+    {
+      "sample_index": 65,
+      "choice": "both",
+      "annual_report_group": "IP/2007"
+    },
+    {
+      "sample_index": 66,
+      "choice": "both",
+      "annual_report_group": "GS/2017"
+    },
+    {
+      "sample_index": 67,
+      "choice": "both",
+      "annual_report_group": "IPG/2009"
+    },
+    {
+      "sample_index": 69,
+      "choice": "both",
+      "annual_report_group": "IP/2006"
+    },
+    {
+      "sample_index": 70,
+      "choice": "both",
+      "annual_report_group": "CDNS/2018"
+    },
+    {
+      "sample_index": 71,
+      "choice": "both",
+      "annual_report_group": "L/2015"
+    },
+    {
+      "sample_index": 72,
+      "choice": "both",
+      "annual_report_group": "ILMN/2007"
+    },
+    {
+      "sample_index": 73,
+      "choice": "both",
+      "annual_report_group": "ADI/2011"
+    },
+    {
+      "sample_index": 77,
+      "choice": "both",
+      "annual_report_group": "IP/2007"
+    },
+    {
+      "sample_index": 79,
+      "choice": "both",
+      "annual_report_group": "FBHS/2017"
+    },
+    {
+      "sample_index": 81,
+      "choice": "both",
+      "annual_report_group": "PM/2015"
+    },
+    {
+      "sample_index": 82,
+      "choice": "both",
+      "annual_report_group": "AON/2009"
+    },
+    {
+      "sample_index": 83,
+      "choice": "both",
+      "annual_report_group": "CDNS/2006"
+    },
+    {
+      "sample_index": 85,
+      "choice": "both",
+      "annual_report_group": "AES/2016"
+    },
+    {
+      "sample_index": 89,
+      "choice": "both",
+      "annual_report_group": "HWM/2017"
+    },
+    {
+      "sample_index": 92,
+      "choice": "both",
+      "annual_report_group": "AAP/2011"
+    },
+    {
+      "sample_index": 94,
+      "choice": "both",
+      "annual_report_group": "LKQ/2010"
+    },
+    {
+      "sample_index": 99,
+      "choice": "both",
+      "annual_report_group": "LMT/2006"
+    },
+    {
+      "sample_index": 101,
+      "choice": "both",
+      "annual_report_group": "AMT/2005"
+    },
+    {
+      "sample_index": 103,
+      "choice": "both",
+      "annual_report_group": "DISH/2013"
+    },
+    {
+      "sample_index": 104,
+      "choice": "both",
+      "annual_report_group": "PM/2018"
+    },
+    {
+      "sample_index": 106,
+      "choice": "both",
+      "annual_report_group": "LMT/2013"
+    },
+    {
+      "sample_index": 107,
+      "choice": "both",
+      "annual_report_group": "ETR/2003"
+    },
+    {
+      "sample_index": 110,
+      "choice": "both",
+      "annual_report_group": "UNP/2008"
+    },
+    {
+      "sample_index": 111,
+      "choice": "both",
+      "annual_report_group": "APD/2016"
+    },
+    {
+      "sample_index": 116,
+      "choice": "both",
+      "annual_report_group": "ADBE/2018"
+    },
+    {
+      "sample_index": 117,
+      "choice": "both",
+      "annual_report_group": "APD/2019"
+    },
+    {
+      "sample_index": 118,
+      "choice": "both",
+      "annual_report_group": "UNP/2015"
+    },
+    {
+      "sample_index": 119,
+      "choice": "both",
+      "annual_report_group": "ETR/2008"
+    },
+    {
+      "sample_index": 120,
+      "choice": "both",
+      "annual_report_group": "IPG/2008"
+    },
+    {
+      "sample_index": 122,
+      "choice": "both",
+      "annual_report_group": "JPM/2005"
+    },
+    {
+      "sample_index": 123,
+      "choice": "both",
+      "annual_report_group": "BLK/2014"
+    },
+    {
+      "sample_index": 124,
+      "choice": "both",
+      "annual_report_group": "ETR/2008"
+    },
+    {
+      "sample_index": 128,
+      "choice": "both",
+      "annual_report_group": "MRO/2004"
+    },
+    {
+      "sample_index": 129,
+      "choice": "both",
+      "annual_report_group": "AON/2014"
+    },
+    {
+      "sample_index": 130,
+      "choice": "both",
+      "annual_report_group": "MAS/2018"
+    },
+    {
+      "sample_index": 132,
+      "choice": "both",
+      "annual_report_group": "ETR/2017"
+    },
+    {
+      "sample_index": 136,
+      "choice": "both",
+      "annual_report_group": "JPM/2018"
+    },
+    {
+      "sample_index": 137,
+      "choice": "both",
+      "annual_report_group": "MRO/2015"
+    },
+    {
+      "sample_index": 138,
+      "choice": "both",
+      "annual_report_group": "AMAT/2014"
+    },
+    {
+      "sample_index": 140,
+      "choice": "both",
+      "annual_report_group": "APD/2013"
+    },
+    {
+      "sample_index": 141,
+      "choice": "both",
+      "annual_report_group": "HIG/2011"
+    },
+    {
+      "sample_index": 142,
+      "choice": "both",
+      "annual_report_group": "PNC/2015"
+    },
+    {
+      "sample_index": 143,
+      "choice": "both",
+      "annual_report_group": "MRO/2017"
+    },
+    {
+      "sample_index": 144,
+      "choice": "both",
+      "annual_report_group": "PNC/2009"
+    },
+    {
+      "sample_index": 145,
+      "choice": "both",
+      "annual_report_group": "IP/2005"
+    },
+    {
+      "sample_index": 150,
+      "choice": "both",
+      "annual_report_group": "AON/2009"
+    },
+    {
+      "sample_index": 152,
+      "choice": "both",
+      "annual_report_group": "RSG/2015"
+    },
+    {
+      "sample_index": 153,
+      "choice": "both",
+      "annual_report_group": "MMM/2005"
+    },
+    {
+      "sample_index": 156,
+      "choice": "both",
+      "annual_report_group": "LMT/2015"
+    },
+    {
+      "sample_index": 157,
+      "choice": "both",
+      "annual_report_group": "DVN/2007"
+    },
+    {
+      "sample_index": 158,
+      "choice": "both",
+      "annual_report_group": "INTC/2013"
+    },
+    {
+      "sample_index": 159,
+      "choice": "both",
+      "annual_report_group": "OKE/2008"
+    },
+    {
+      "sample_index": 162,
+      "choice": "both",
+      "annual_report_group": "FRT/2005"
+    },
+    {
+      "sample_index": 163,
+      "choice": "both",
+      "annual_report_group": "MRO/2007"
+    },
+    {
+      "sample_index": 164,
+      "choice": "both",
+      "annual_report_group": "AES/2016"
+    },
+    {
+      "sample_index": 165,
+      "choice": "both",
+      "annual_report_group": "STZ/2006"
+    },
+    {
+      "sample_index": 168,
+      "choice": "both",
+      "annual_report_group": "GPN/2017"
+    },
+    {
+      "sample_index": 170,
+      "choice": "both",
+      "annual_report_group": "BLK/2012"
+    },
+    {
+      "sample_index": 173,
+      "choice": "both",
+      "annual_report_group": "FBHS/2017"
+    },
+    {
+      "sample_index": 175,
+      "choice": "both",
+      "annual_report_group": "MRO/2015"
+    },
+    {
+      "sample_index": 176,
+      "choice": "both",
+      "annual_report_group": "HOLX/2010"
+    },
+    {
+      "sample_index": 178,
+      "choice": "both",
+      "annual_report_group": "AES/2015"
+    },
+    {
+      "sample_index": 181,
+      "choice": "both",
+      "annual_report_group": "VLO/2018"
+    },
+    {
+      "sample_index": 183,
+      "choice": "both",
+      "annual_report_group": "LMT/2012"
+    },
+    {
+      "sample_index": 184,
+      "choice": "both",
+      "annual_report_group": "ETFC/2013"
+    },
+    {
+      "sample_index": 186,
+      "choice": "both",
+      "annual_report_group": "DRE/2002"
+    },
+    {
+      "sample_index": 188,
+      "choice": "both",
+      "annual_report_group": "ETR/2008"
+    },
+    {
+      "sample_index": 189,
+      "choice": "both",
+      "annual_report_group": "AON/2014"
+    },
+    {
+      "sample_index": 190,
+      "choice": "both",
+      "annual_report_group": "ETR/2008"
+    },
+    {
+      "sample_index": 191,
+      "choice": "both",
+      "annual_report_group": "CDNS/2006"
+    },
+    {
+      "sample_index": 192,
+      "choice": "both",
+      "annual_report_group": "UA/2015"
+    },
+    {
+      "sample_index": 194,
+      "choice": "both",
+      "annual_report_group": "PNC/2009"
+    },
+    {
+      "sample_index": 196,
+      "choice": "both",
+      "annual_report_group": "ADBE/2018"
+    },
+    {
+      "sample_index": 197,
+      "choice": "both",
+      "annual_report_group": "DRE/2013"
+    },
+    {
+      "sample_index": 199,
+      "choice": "both",
+      "annual_report_group": "UNP/2006"
+    },
+    {
+      "sample_index": 200,
+      "choice": "both",
+      "annual_report_group": "STZ/2006"
+    },
+    {
+      "sample_index": 201,
+      "choice": "both",
+      "annual_report_group": "AES/2017"
+    },
+    {
+      "sample_index": 202,
+      "choice": "both",
+      "annual_report_group": "AMT/2004"
+    },
+    {
+      "sample_index": 203,
+      "choice": "both",
+      "annual_report_group": "PM/2015"
+    },
+    {
+      "sample_index": 204,
+      "choice": "both",
+      "annual_report_group": "K/2013"
+    },
+    {
+      "sample_index": 208,
+      "choice": "both",
+      "annual_report_group": "C/2017"
+    },
+    {
+      "sample_index": 209,
+      "choice": "both",
+      "annual_report_group": "PNC/2013"
+    },
+    {
+      "sample_index": 210,
+      "choice": "both",
+      "annual_report_group": "LMT/2017"
+    },
+    {
+      "sample_index": 212,
+      "choice": "both",
+      "annual_report_group": "HOLX/2008"
+    },
+    {
+      "sample_index": 213,
+      "choice": "both",
+      "annual_report_group": "DRE/2009"
+    },
+    {
+      "sample_index": 214,
+      "choice": "both",
+      "annual_report_group": "ETFC/2007"
+    },
+    {
+      "sample_index": 216,
+      "choice": "both",
+      "annual_report_group": "ADBE/2018"
+    },
+    {
+      "sample_index": 217,
+      "choice": "both",
+      "annual_report_group": "C/2017"
+    },
+    {
+      "sample_index": 219,
+      "choice": "both",
+      "annual_report_group": "ETR/2011"
+    },
+    {
+      "sample_index": 223,
+      "choice": "both",
+      "annual_report_group": "MSI/2006"
+    },
+    {
+      "sample_index": 224,
+      "choice": "both",
+      "annual_report_group": "CDNS/2018"
+    },
+    {
+      "sample_index": 225,
+      "choice": "both",
+      "annual_report_group": "HWM/2016"
+    },
+    {
+      "sample_index": 227,
+      "choice": "both",
+      "annual_report_group": "ABMD/2006"
+    },
+    {
+      "sample_index": 228,
+      "choice": "both",
+      "annual_report_group": "BDX/2019"
+    },
+    {
+      "sample_index": 229,
+      "choice": "both",
+      "annual_report_group": "UNP/2013"
+    },
+    {
+      "sample_index": 231,
+      "choice": "both",
+      "annual_report_group": "MRO/2009"
+    },
+    {
+      "sample_index": 235,
+      "choice": "both",
+      "annual_report_group": "IPG/2015"
+    },
+    {
+      "sample_index": 238,
+      "choice": "both",
+      "annual_report_group": "DRE/2009"
+    },
+    {
+      "sample_index": 240,
+      "choice": "both",
+      "annual_report_group": "ILMN/2007"
+    },
+    {
+      "sample_index": 245,
+      "choice": "both",
+      "annual_report_group": "ETR/2002"
+    },
+    {
+      "sample_index": 246,
+      "choice": "both",
+      "annual_report_group": "PNC/2011"
+    },
+    {
+      "sample_index": 247,
+      "choice": "both",
+      "annual_report_group": "UNP/2011"
+    },
+    {
+      "sample_index": 250,
+      "choice": "both",
+      "annual_report_group": "MSI/2009"
+    },
+    {
+      "sample_index": 254,
+      "choice": "both",
+      "annual_report_group": "IPG/2008"
+    },
+    {
+      "sample_index": 258,
+      "choice": "both",
+      "annual_report_group": "AMT/2005"
+    },
+    {
+      "sample_index": 260,
+      "choice": "both",
+      "annual_report_group": "L/2015"
+    },
+    {
+      "sample_index": 261,
+      "choice": "both",
+      "annual_report_group": "AAPL/2003"
+    },
+    {
+      "sample_index": 263,
+      "choice": "both",
+      "annual_report_group": "GPN/2009"
+    },
+    {
+      "sample_index": 264,
+      "choice": "both",
+      "annual_report_group": "CAG/2008"
+    },
+    {
+      "sample_index": 267,
+      "choice": "both",
+      "annual_report_group": "DISCA/2012"
+    },
+    {
+      "sample_index": 268,
+      "choice": "both",
+      "annual_report_group": "PM/2015"
+    },
+    {
+      "sample_index": 269,
+      "choice": "both",
+      "annual_report_group": "CME/2012"
+    },
+    {
+      "sample_index": 270,
+      "choice": "both",
+      "annual_report_group": "APD/2013"
+    },
+    {
+      "sample_index": 272,
+      "choice": "both",
+      "annual_report_group": "PM/2015"
+    },
+    {
+      "sample_index": 273,
+      "choice": "both",
+      "annual_report_group": "ETR/2016"
+    },
+    {
+      "sample_index": 274,
+      "choice": "both",
+      "annual_report_group": "CDNS/2018"
+    },
+    {
+      "sample_index": 275,
+      "choice": "both",
+      "annual_report_group": "SNA/2012"
+    },
+    {
+      "sample_index": 277,
+      "choice": "both",
+      "annual_report_group": "C/2010"
+    },
+    {
+      "sample_index": 278,
+      "choice": "both",
+      "annual_report_group": "MRO/2009"
+    },
+    {
+      "sample_index": 279,
+      "choice": "both",
+      "annual_report_group": "CMCSA/2015"
+    },
+    {
+      "sample_index": 280,
+      "choice": "both",
+      "annual_report_group": "STZ/2006"
+    },
+    {
+      "sample_index": 285,
+      "choice": "both",
+      "annual_report_group": "KHC/2016"
+    },
+    {
+      "sample_index": 286,
+      "choice": "both",
+      "annual_report_group": "IPG/2008"
+    },
+    {
+      "sample_index": 287,
+      "choice": "both",
+      "annual_report_group": "C/2010"
+    },
+    {
+      "sample_index": 289,
+      "choice": "both",
+      "annual_report_group": "BLL/2010"
+    },
+    {
+      "sample_index": 292,
+      "choice": "both",
+      "annual_report_group": "ETFC/2011"
+    },
+    {
+      "sample_index": 294,
+      "choice": "both",
+      "annual_report_group": "FIS/2007"
+    },
+    {
+      "sample_index": 299,
+      "choice": "both",
+      "annual_report_group": "APD/2013"
+    },
+    {
+      "sample_index": 300,
+      "choice": "both",
+      "annual_report_group": "RSG/2017"
+    },
+    {
+      "sample_index": 301,
+      "choice": "both",
+      "annual_report_group": "MS/2017"
+    },
+    {
+      "sample_index": 307,
+      "choice": "both",
+      "annual_report_group": "PNC/2016"
+    },
+    {
+      "sample_index": 308,
+      "choice": "both",
+      "annual_report_group": "AES/2015"
+    },
+    {
+      "sample_index": 310,
+      "choice": "both",
+      "annual_report_group": "PNC/2018"
+    },
+    {
+      "sample_index": 311,
+      "choice": "both",
+      "annual_report_group": "V/2013"
+    },
+    {
+      "sample_index": 316,
+      "choice": "both",
+      "annual_report_group": "MRO/2007"
+    },
+    {
+      "sample_index": 317,
+      "choice": "both",
+      "annual_report_group": "BLK/2012"
+    },
+    {
+      "sample_index": 318,
+      "choice": "both",
+      "annual_report_group": "PPG/2013"
+    },
+    {
+      "sample_index": 319,
+      "choice": "both",
+      "annual_report_group": "ETR/2008"
+    },
+    {
+      "sample_index": 325,
+      "choice": "both",
+      "annual_report_group": "L/2015"
+    },
+    {
+      "sample_index": 326,
+      "choice": "both",
+      "annual_report_group": "HOLX/2007"
+    },
+    {
+      "sample_index": 329,
+      "choice": "both",
+      "annual_report_group": "PNC/2011"
+    },
+    {
+      "sample_index": 331,
+      "choice": "both",
+      "annual_report_group": "JPM/2018"
+    },
+    {
+      "sample_index": 332,
+      "choice": "both",
+      "annual_report_group": "PNC/2011"
+    },
+    {
+      "sample_index": 333,
+      "choice": "both",
+      "annual_report_group": "ILMN/2007"
+    },
+    {
+      "sample_index": 335,
+      "choice": "both",
+      "annual_report_group": "EW/2016"
+    },
+    {
+      "sample_index": 337,
+      "choice": "both",
+      "annual_report_group": "PM/2018"
+    },
+    {
+      "sample_index": 338,
+      "choice": "both",
+      "annual_report_group": "IP/2005"
+    },
+    {
+      "sample_index": 339,
+      "choice": "both",
+      "annual_report_group": "UPS/2006"
+    },
+    {
+      "sample_index": 340,
+      "choice": "both",
+      "annual_report_group": "AAL/2015"
+    },
+    {
+      "sample_index": 344,
+      "choice": "both",
+      "annual_report_group": "LMT/2010"
+    },
+    {
+      "sample_index": 346,
+      "choice": "both",
+      "annual_report_group": "C/2008"
+    },
+    {
+      "sample_index": 352,
+      "choice": "both",
+      "annual_report_group": "AES/2017"
+    },
+    {
+      "sample_index": 354,
+      "choice": "both",
+      "annual_report_group": "VTR/2007"
+    },
+    {
+      "sample_index": 356,
+      "choice": "both",
+      "annual_report_group": "CNP/2010"
+    },
+    {
+      "sample_index": 357,
+      "choice": "both",
+      "annual_report_group": "LMT/2015"
+    },
+    {
+      "sample_index": 358,
+      "choice": "both",
+      "annual_report_group": "HUM/2017"
+    },
+    {
+      "sample_index": 362,
+      "choice": "both",
+      "annual_report_group": "ZBH/2003"
+    },
+    {
+      "sample_index": 364,
+      "choice": "both",
+      "annual_report_group": "DISH/2013"
+    },
+    {
+      "sample_index": 365,
+      "choice": "both",
+      "annual_report_group": "UNP/2011"
+    },
+    {
+      "sample_index": 367,
+      "choice": "both",
+      "annual_report_group": "ETR/2013"
+    },
+    {
+      "sample_index": 374,
+      "choice": "both",
+      "annual_report_group": "IPG/2015"
+    },
+    {
+      "sample_index": 375,
+      "choice": "both",
+      "annual_report_group": "STT/2009"
+    },
+    {
+      "sample_index": 376,
+      "choice": "both",
+      "annual_report_group": "MO/2012"
+    },
+    {
+      "sample_index": 378,
+      "choice": "both",
+      "annual_report_group": "DRE/2007"
+    },
+    {
+      "sample_index": 379,
+      "choice": "both",
+      "annual_report_group": "AMT/2005"
+    },
+    {
+      "sample_index": 380,
+      "choice": "both",
+      "annual_report_group": "CME/2017"
+    },
+    {
+      "sample_index": 382,
+      "choice": "both",
+      "annual_report_group": "EW/2017"
+    },
+    {
+      "sample_index": 390,
+      "choice": "both",
+      "annual_report_group": "STT/2011"
+    },
+    {
+      "sample_index": 392,
+      "choice": "both",
+      "annual_report_group": "AMT/2010"
+    },
+    {
+      "sample_index": 394,
+      "choice": "both",
+      "annual_report_group": "ETFC/2014"
+    },
+    {
+      "sample_index": 397,
+      "choice": "both",
+      "annual_report_group": "C/2017"
+    },
+    {
+      "sample_index": 398,
+      "choice": "both",
+      "annual_report_group": "JPM/2014"
+    },
+    {
+      "sample_index": 399,
+      "choice": "both",
+      "annual_report_group": "HIG/2008"
+    },
+    {
+      "sample_index": 400,
+      "choice": "both",
+      "annual_report_group": "APD/2014"
+    },
+    {
+      "sample_index": 402,
+      "choice": "both",
+      "annual_report_group": "GPN/2009"
+    },
+    {
+      "sample_index": 403,
+      "choice": "both",
+      "annual_report_group": "ADBE/2018"
+    },
+    {
+      "sample_index": 405,
+      "choice": "both",
+      "annual_report_group": "AON/2009"
+    },
+    {
+      "sample_index": 406,
+      "choice": "both",
+      "annual_report_group": "ETR/2008"
+    },
+    {
+      "sample_index": 409,
+      "choice": "both",
+      "annual_report_group": "JPM/2007"
+    },
+    {
+      "sample_index": 410,
+      "choice": "both",
+      "annual_report_group": "JPM/2013"
+    },
+    {
+      "sample_index": 411,
+      "choice": "both",
+      "annual_report_group": "ETR/2002"
+    },
+    {
+      "sample_index": 412,
+      "choice": "both",
+      "annual_report_group": "EW/2016"
+    },
+    {
+      "sample_index": 413,
+      "choice": "both",
+      "annual_report_group": "C/2010"
+    },
+    {
+      "sample_index": 415,
+      "choice": "both",
+      "annual_report_group": "AES/2017"
+    },
+    {
+      "sample_index": 416,
+      "choice": "both",
+      "annual_report_group": "HII/2017"
+    },
+    {
+      "sample_index": 421,
+      "choice": "both",
+      "annual_report_group": "HOLX/2012"
+    },
+    {
+      "sample_index": 423,
+      "choice": "both",
+      "annual_report_group": "ETR/2008"
+    },
+    {
+      "sample_index": 424,
+      "choice": "both",
+      "annual_report_group": "AON/2009"
+    },
+    {
+      "sample_index": 427,
+      "choice": "both",
+      "annual_report_group": "PM/2017"
+    },
+    {
+      "sample_index": 428,
+      "choice": "both",
+      "annual_report_group": "IPG/2008"
+    },
+    {
+      "sample_index": 429,
+      "choice": "both",
+      "annual_report_group": "BLK/2013"
+    },
+    {
+      "sample_index": 433,
+      "choice": "both",
+      "annual_report_group": "VLO/2018"
+    },
+    {
+      "sample_index": 434,
+      "choice": "both",
+      "annual_report_group": "APD/2014"
+    },
+    {
+      "sample_index": 435,
+      "choice": "both",
+      "annual_report_group": "CME/2012"
+    },
+    {
+      "sample_index": 436,
+      "choice": "both",
+      "annual_report_group": "BLK/2017"
+    },
+    {
+      "sample_index": 438,
+      "choice": "both",
+      "annual_report_group": "ETR/2011"
+    },
+    {
+      "sample_index": 439,
+      "choice": "both",
+      "annual_report_group": "APD/2019"
+    },
+    {
+      "sample_index": 442,
+      "choice": "both",
+      "annual_report_group": "BLL/2007"
+    },
+    {
+      "sample_index": 446,
+      "choice": "both",
+      "annual_report_group": "ETFC/2007"
+    },
+    {
+      "sample_index": 449,
+      "choice": "both",
+      "annual_report_group": "MA/2008"
+    },
+    {
+      "sample_index": 450,
+      "choice": "both",
+      "annual_report_group": "AWK/2013"
+    },
+    {
+      "sample_index": 455,
+      "choice": "both",
+      "annual_report_group": "ETR/2015"
+    },
+    {
+      "sample_index": 456,
+      "choice": "both",
+      "annual_report_group": "VNO/2012"
+    },
+    {
+      "sample_index": 459,
+      "choice": "both",
+      "annual_report_group": "HII/2017"
+    },
+    {
+      "sample_index": 460,
+      "choice": "both",
+      "annual_report_group": "VRTX/2003"
+    },
+    {
+      "sample_index": 464,
+      "choice": "both",
+      "annual_report_group": "AON/2011"
+    },
+    {
+      "sample_index": 466,
+      "choice": "both",
+      "annual_report_group": "DRE/2009"
+    },
+    {
+      "sample_index": 470,
+      "choice": "both",
+      "annual_report_group": "PM/2015"
+    },
+    {
+      "sample_index": 471,
+      "choice": "both",
+      "annual_report_group": "LMT/2012"
+    },
+    {
+      "sample_index": 472,
+      "choice": "both",
+      "annual_report_group": "AAPL/2005"
+    },
+    {
+      "sample_index": 473,
+      "choice": "both",
+      "annual_report_group": "PM/2014"
+    },
+    {
+      "sample_index": 474,
+      "choice": "both",
+      "annual_report_group": "ETR/2013"
+    },
+    {
+      "sample_index": 475,
+      "choice": "both",
+      "annual_report_group": "HOLX/2007"
+    },
+    {
+      "sample_index": 476,
+      "choice": "both",
+      "annual_report_group": "GIS/2019"
+    },
+    {
+      "sample_index": 480,
+      "choice": "both",
+      "annual_report_group": "MRO/2009"
+    },
+    {
+      "sample_index": 481,
+      "choice": "both",
+      "annual_report_group": "UNP/2014"
+    },
+    {
+      "sample_index": 482,
+      "choice": "both",
+      "annual_report_group": "RSG/2017"
+    },
+    {
+      "sample_index": 484,
+      "choice": "both",
+      "annual_report_group": "AES/2002"
+    },
+    {
+      "sample_index": 485,
+      "choice": "both",
+      "annual_report_group": "UPS/2006"
+    }
+  ],
+  "expected_evaluation": {
+    "accuracy": 0.7466666666666667,
+    "always_both": 0.7466666666666667,
+    "oracle": 0.8386666666666667,
+    "gain_vs_both": 0.0,
+    "oracle_gap": 0.09199999999999997,
+    "oracle_gap_recovery": 0.0,
+    "deviation_coverage": 0.0,
+    "deviation_count": 0,
+    "deviation_precision": 0.0,
+    "harmful_deviation_rate": 0.0,
+    "beneficial_deviation_count": 0,
+    "harmful_deviation_count": 0,
+    "choice_distribution": {
+      "both": 250
+    },
+    "cluster_bootstrap": {
+      "point_estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_resamples": 10000,
+      "random_seed": 20260816,
+      "procedure": "cluster percentile bootstrap by annual_report_group"
+    }
+  },
+  "realized_by_replicate": {
+    "rn1": {
+      "policy_accuracy": 0.748,
+      "both_accuracy": 0.748,
+      "gain_vs_both": 0.0
+    },
+    "rn2": {
+      "policy_accuracy": 0.744,
+      "both_accuracy": 0.744,
+      "gain_vs_both": 0.0
+    },
+    "rn3": {
+      "policy_accuracy": 0.748,
+      "both_accuracy": 0.748,
+      "gain_vs_both": 0.0
+    },
+    "_summary": {
+      "mean_gain": 0.0,
+      "min_gain": 0.0,
+      "max_gain": 0.0,
+      "range": 0.0
+    }
+  }
+}
