@@ -463,3 +463,38 @@
 ### decision
 - **FREEZE HYDE STRATEGY RETRIEVAL FOR TAT-QA FOUR-ARM SMALL DRY-RUN**。
 - HyDE 在 frozen audit 下比 question-only 和 rewrite 提供更强 retrieval alignment，但 exact schema top3 仍低于 0.4；下一轮若进入 dry-run，应保持小规模，并把 source/scale schema confusion 作为主要风险记录。
+
+## 22. TAT-QA Four-Arm Small Dry-Run（2026-08-16）
+
+### scope
+- 只做 TAT-QA dev 30-sample four-arm dry-run；未调样本、prompt、retrieval、memory 或 evaluator。
+- Sample 固定为上一轮 Strategy audit 120 dev sample 的前 30 条，seed `20260816`。
+- Arms：None / Case / Strategy / Both。
+- Case：现有 TAT-QA train Case Memory top-4，带 source_id exclusion。
+- Strategy：冻结 HyDE query + frozen 30-strategy memory top-3。
+
+### runtime/cache/evaluator
+- Execution runtime：DeepSeek official OpenAI-compatible API，requested/effective response model 均为 `deepseek-v4-flash`，temperature=0，non-thinking。
+- Observed execution fingerprint：`a26a7955944dc5c60445bff77fac9c8e` for 120 / 120 calls。
+- Cold execution run：120 calls；cache dry-run 复现：0 API calls，120 cache hits。
+- Model output parsed as JSON `answer` + `scale`，使用 official TAT-QA `TaTQAEmAndF1` wrapper 评价。
+
+### results
+- Parse failures：0；invalid-scale parse errors：0。
+- EM / F1：
+  - None：0.567 / 0.685。
+  - Case：0.533 / 0.620。
+  - Strategy：0.533 / 0.662。
+  - Both：0.500 / 0.592。
+- Best Fixed：None EM 0.567。
+- Sample Oracle EM：0.600。
+- Memory effect events：case-only 0；strategy-only 1；none-only 0；both-only 0；None > Both 2；Case > Both 1；Strategy > Both 2。
+
+### interpretation
+- Pipeline is technically usable: retrieval, prompt execution, JSON parsing, scale handling, official evaluation, cache replay, and runtime provenance all completed without evaluator/parser failures.
+- Memory effect is not positive in this tiny 30-sample dry-run. Both underperforms None, and sample oracle headroom is only +3.3pp over Best Fixed.
+- The most visible issue is memory-induced scale/answer-format pollution, especially outputs like `$46.4 million` with scale `million` versus numeric `46.4` with scale `million`.
+
+### decision
+- **PROCEED**, but only to a larger diagnostic dry-run with frozen pipeline and explicit scale/format failure audit.
+- Do not interpret this as evidence that TAT-QA memory helps yet; it only clears the pipeline-validity gate.
