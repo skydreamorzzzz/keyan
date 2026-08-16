@@ -1,0 +1,3115 @@
+[
+  {
+    "strategy_id": "tatqa_strategy:c6a4ddd06d027da3",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "span_lookup",
+    "family": "span_lookup:text:scale=none",
+    "schema_key": "span_lookup|span_lookup:text:scale=none|from=text|scale=none",
+    "answer_from": "text",
+    "scale": "none",
+    "source_support_count": 2704,
+    "source_sample_ids": [
+      "tatqa:train:dd2a72ca-f65c-4673-9820-f7cefcb06ee4",
+      "tatqa:train:d4919a15-b02b-4392-99ae-9eccd114e0ff",
+      "tatqa:train:05236c86-d05a-40d9-b15f-8eb197e2e158",
+      "tatqa:train:f14ec8e3-78ca-490c-afcd-fb53de9e3d0a",
+      "tatqa:train:d6a3a306-fb34-48dc-838e-3d109f60d685",
+      "tatqa:train:2497017d-3e7d-475a-bbfd-e1f53db71e5c",
+      "tatqa:train:4af6718b-f4d3-40c4-a966-5a58d9c88fd4",
+      "tatqa:train:6ae2c15d-9722-4ce8-8c70-0e27577d55f1",
+      "tatqa:train:a5dbd519-b3f0-4124-867a-86e28524d354",
+      "tatqa:train:ef3a55f8-f528-4b2f-bda7-3cd64af867b3",
+      "tatqa:train:2dfe3479-605d-4b6e-ba8f-2640977e24a4",
+      "tatqa:train:31010234-251c-4e67-854a-5a41fc8a65ab",
+      "tatqa:train:ab907d38-5eba-496d-ab2b-7c3f5893cbba",
+      "tatqa:train:1bb0d605-4ca8-45dd-ac2a-2e68975f9b1f",
+      "tatqa:train:71f35ae8-fd4a-4251-bf08-d4f9d22815aa",
+      "tatqa:train:81d03c03-a928-4e8e-aaa7-2bf3b1c18484",
+      "tatqa:train:d2039910-5745-4641-a441-0476c4685298",
+      "tatqa:train:0f4b6b17-5a03-4f49-9308-c208107a8bfb",
+      "tatqa:train:4db7e072-24ef-4ea1-9f0c-a2ad24811617",
+      "tatqa:train:5e5b89e8-a5cc-44ee-b657-b951cfdd3013"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "how was internally developed software capitalised?",
+        "answer_from": "text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "why did the operating revenues decreased from <num> to <num>?",
+        "answer_from": "text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "why did the operating costs decreased from <num> to <num>?",
+        "answer_from": "text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "why did the gross margin decreased from <num> to <num>?",
+        "answer_from": "text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what led to increase in the revenue of adg on sequential basis?",
+        "answer_from": "text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what led to increase in the revenue of ams on sequential basis?",
+        "answer_from": "text",
+        "scale": "none",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use this strategy when a question asks for the reason behind a change, trend, or accounting practice, and the answer is explicitly stated in the text rather than requiring calculation or table lookup.",
+    "evidence_guidance": [
+      "Search for sentences containing causal connectors such as 'due to', 'because of', 'resulting from', or 'primarily attributable to'.",
+      "Look near the reported metric or item mentioned in the question, often in the same paragraph or adjacent section.",
+      "Prioritize management discussion or notes sections where explanations are typically provided.",
+      "If the question references a change between two periods, locate the paragraph discussing that specific change."
+    ],
+    "operand_roles": [
+      "metric label: the financial or operational item whose change or treatment is questioned",
+      "reporting period: the time frame(s) mentioned in the question, used to narrow the search",
+      "causal factor: the underlying reason or event described in the text",
+      "context qualifier: any additional descriptors (e.g., segment, product line) that refine the scope"
+    ],
+    "answer_form": "A concise textual explanation that identifies the underlying cause or accounting treatment, phrased as a general statement without specific figures.",
+    "scale_notes": [
+      "No numeric scale is involved; the answer is purely textual.",
+      "Do not convert or normalize any units; ignore magnitude unless it is part of the causal explanation.",
+      "If the text mentions percentages or amounts, treat them as supporting context, not as the answer itself."
+    ],
+    "risk_notes": [
+      "The answer may be implicit, requiring inference from surrounding sentences rather than a direct match.",
+      "Multiple causes may be listed; ensure the answer captures the primary reason or all mentioned factors.",
+      "Avoid copying numbers from the question; focus on the qualitative explanation."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "cdb7d216c45bceb613112ca27d55938cd4f7e73c1d6c16644d024d12ae66cbc5",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: span_lookup\nFamily: span_lookup:text:scale=none\nEvidence source: text\nScale: none\nDescription: Use this strategy when a question asks for the reason behind a change, trend, or accounting practice, and the answer is explicitly stated in the text rather than requiring calculation or table lookup.\nEvidence guidance: Search for sentences containing causal connectors such as 'due to', 'because of', 'resulting from', or 'primarily attributable to'. ; Look near the reported metric or item mentioned in the question, often in the same paragraph or adjacent section. ; Prioritize management discussion or notes sections where explanations are typically provided. ; If the question references a change between two periods, locate the paragraph discussing that specific change.\nOperand roles: metric label: the financial or operational item whose change or treatment is questioned ; reporting period: the time frame(s) mentioned in the question, used to narrow the search ; causal factor: the underlying reason or event described in the text ; context qualifier: any additional descriptors (e.g., segment, product line) that refine the scope\nAnswer form: A concise textual explanation that identifies the underlying cause or accounting treatment, phrased as a general statement without specific figures.\nScale notes: No numeric scale is involved; the answer is purely textual. ; Do not convert or normalize any units; ignore magnitude unless it is part of the causal explanation. ; If the text mentions percentages or amounts, treat them as supporting context, not as the answer itself.\nRisks: The answer may be implicit, requiring inference from surrounding sentences rather than a direct match. ; Multiple causes may be listed; ensure the answer captures the primary reason or all mentioned factors. ; Avoid copying numbers from the question; focus on the qualitative explanation."
+  },
+  {
+    "strategy_id": "tatqa_strategy:0558c413ad491400",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:percent_change",
+    "schema_key": "arithmetic|arithmetic:percent_change|from=table|scale=percent",
+    "answer_from": "table",
+    "scale": "percent",
+    "source_support_count": 903,
+    "source_sample_ids": [
+      "tatqa:train:aa051557-3b4c-497f-b14e-2c8b8b2c99ef",
+      "tatqa:train:1c78b8ad-5dd7-471e-bafd-71e1515afaa3",
+      "tatqa:train:904679f4-77f5-4575-975a-2b7b18eedbcf",
+      "tatqa:train:ae97568d-fcde-469c-a9a9-118d339cccb5",
+      "tatqa:train:35096122-545b-4be2-8ea2-ebafd94c687f",
+      "tatqa:train:7cb6c6fb-52fa-465e-bd3a-ca97f686fdaa",
+      "tatqa:train:8040fbab-d3ac-4a11-a98e-ba7c7a5dfc6c",
+      "tatqa:train:5964b119-824e-4277-8f83-ef83a15dead0",
+      "tatqa:train:b10455a5-8132-4593-b8c4-6ba2021a8ae6",
+      "tatqa:train:c46605d2-5d2b-49e6-a84c-5b75365fb89d",
+      "tatqa:train:b55a0581-b496-4d82-8b51-2a041d6e7729",
+      "tatqa:train:f8e86ea6-bee8-494e-bd02-d44130b43e91",
+      "tatqa:train:cc088d02-efb7-4b63-a00d-c5c3ee514dcc",
+      "tatqa:train:cbde27b6-5c33-4d93-a59b-b0881a27da1f",
+      "tatqa:train:41f11c5b-c73d-4ec1-88f7-4216ae207eb4",
+      "tatqa:train:261cec47-33d2-4cec-8baf-5eb81ecf089c",
+      "tatqa:train:40e4d35b-dbaf-4da4-8c0e-ea6188c9a847",
+      "tatqa:train:db19f32b-c525-48c6-a233-581a61e746d8",
+      "tatqa:train:e417cb77-bde3-424a-82c8-1197c3526e52",
+      "tatqa:train:4a0898e9-3b33-4554-b9f5-97dd226b89f3"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what was the percentage change in cost of software under development between <num> and <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the percentage change in net sales from frozen kefir between <num> and <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the percentage change in the total number of shares in <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the percentage change in net income(loss) between <num> and <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the percentage change in basic weighted average number of common shares outstanding between <num> and <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the percentage change in sales in fy2<num> from fy2<num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for relative change between a new value and a prior/base value.",
+    "evidence_guidance": [
+      "Locate the same metric for the compared periods or conditions.",
+      "Use the newer/current value as the changed amount endpoint and the prior/base value as denominator."
+    ],
+    "operand_roles": [
+      "new_or_current_value",
+      "prior_or_base_value",
+      "metric_label"
+    ],
+    "answer_form": "Return a relative change using the requested percent convention.",
+    "scale_notes": [
+      "Treat percent output carefully; distinguish percentage points from percent change."
+    ],
+    "risk_notes": [
+      "Do not reverse the numerator order.",
+      "Do not report the raw difference when a relative change is requested."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:percent_change\nEvidence source: table\nScale: percent\nDescription: Use when the question asks for relative change between a new value and a prior/base value.\nEvidence guidance: Locate the same metric for the compared periods or conditions. ; Use the newer/current value as the changed amount endpoint and the prior/base value as denominator.\nOperand roles: new_or_current_value ; prior_or_base_value ; metric_label\nAnswer form: Return a relative change using the requested percent convention.\nScale notes: Treat percent output carefully; distinguish percentage points from percent change.\nRisks: Do not reverse the numerator order. ; Do not report the raw difference when a relative change is requested."
+  },
+  {
+    "strategy_id": "tatqa_strategy:23fb96da95dead74",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "comparison",
+    "family": "comparison:table:scale=none",
+    "schema_key": "comparison|comparison:table:scale=none|from=table|scale=none",
+    "answer_from": "table",
+    "scale": "none",
+    "source_support_count": 591,
+    "source_sample_ids": [
+      "tatqa:train:f46b8d2a-06aa-4e51-a05d-f3beb255f73c",
+      "tatqa:train:43534a69-ffbb-4c73-8605-7b787ff86979",
+      "tatqa:train:c5027ca9-2d3e-4ad0-b165-69f9ab58b2be",
+      "tatqa:train:9b283f98-aad5-4a3a-b7a0-f93097589531",
+      "tatqa:train:eb8da4d7-ae0f-4d68-8b31-e573f265be13",
+      "tatqa:train:8c3a50c6-0809-4c4a-ba07-dcd9ba2d751e",
+      "tatqa:train:c869860b-4a3d-4f26-b503-00d58409627b",
+      "tatqa:train:1c133047-e880-4445-b7f5-324d35b1bc5e",
+      "tatqa:train:e8071dbc-d72c-46b0-a3f6-ef9097f8da48",
+      "tatqa:train:38b03427-5bf1-4075-8ab8-64821ddea967",
+      "tatqa:train:53ef0bfa-574b-48d2-bd06-531185c3bc98",
+      "tatqa:train:3abe9a61-09e8-4ba7-933c-fc836865c90d",
+      "tatqa:train:6cb88a98-5578-463c-b9ca-092348fbec99",
+      "tatqa:train:f1ad3da8-6d65-4b83-af29-eb1ad166d506",
+      "tatqa:train:7d2815cd-b299-4bb2-8058-0d368e069dcb",
+      "tatqa:train:654f5a41-0690-4968-badf-03ecaf2d9dd4",
+      "tatqa:train:24c72dfb-9e6c-460f-9bb8-528ab51a9058",
+      "tatqa:train:1b56f13f-b686-4ae3-94bb-4d05e05ed9ed",
+      "tatqa:train:d921608e-47e9-429f-b66d-9fd59c5e7516",
+      "tatqa:train:5e98b9bc-1ec9-46d1-ac75-01036e604b1c"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "which year have greater total accumulated amortisation?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": true
+      },
+      {
+        "question_template": "in which year was estimated grant date fair value per ordinary share less than <num>?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": true
+      },
+      {
+        "question_template": "in which year was current earnings from discontinued operations after taxes larger?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": true
+      },
+      {
+        "question_template": "in which year is the weighted average share price higher?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": true
+      },
+      {
+        "question_template": "which year has a higher revenue?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": true
+      },
+      {
+        "question_template": "in which year was net carrying amount of long-term debt less than <num> thousands?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": true
+      }
+    ],
+    "description": "Use when the question asks to identify a reporting period (e.g., a year) where a specific numeric metric is greater than, less than, or equal to another period's value or a given threshold, and the answer must be drawn directly from a table.",
+    "evidence_guidance": [
+      "Locate the table row or column that contains the metric label (e.g., 'revenue', 'amortisation', 'fair value per share').",
+      "Identify the column or row headers that represent reporting periods (e.g., years, quarters).",
+      "Extract the numeric values for each period under that metric, ensuring the correct unit (e.g., thousands, millions) is noted.",
+      "If a threshold is given in the question, compare each period's value against that threshold; otherwise, compare values across periods to find the maximum or minimum."
+    ],
+    "operand_roles": [
+      "Metric label: the specific financial item being compared (e.g., revenue, net carrying amount).",
+      "Reporting period set: the list of time periods (e.g., years) from which the answer is selected.",
+      "Comparison condition: the relational operator (greater, less, equal) and optional threshold value.",
+      "Unit context: the scale or denomination of the numeric values (e.g., thousands, millions) that must be consistent across periods."
+    ],
+    "answer_form": "A single reporting period label (e.g., a year or quarter) that satisfies the comparison condition, or a list of such labels if multiple periods tie.",
+    "scale_notes": [
+      "The scale is 'none', meaning no unit conversion is needed, but always verify that all values are in the same unit as stated in the table header.",
+      "If the table header indicates a unit (e.g., 'in thousands'), do not convert to absolute numbers unless the question explicitly asks for a different scale.",
+      "When comparing values, ignore any scale suffix in the question (e.g., 'thousands') if the table already uses that scale; otherwise, adjust the threshold accordingly."
+    ],
+    "risk_notes": [
+      "Do not assume the metric appears in every period; handle missing values or nulls explicitly.",
+      "Ensure the comparison uses the same unit across all periods; mixing units (e.g., thousands vs. millions) can lead to wrong answers.",
+      "Watch for questions that ask for the period with the 'highest' or 'lowest' value versus those that ask for a period meeting a threshold; the latter may have multiple answers."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "0f343ed3a8293681440b07536d8ea22b4f9c302614ba980d5b511aa58646599e",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: comparison\nFamily: comparison:table:scale=none\nEvidence source: table\nScale: none\nDescription: Use when the question asks to identify a reporting period (e.g., a year) where a specific numeric metric is greater than, less than, or equal to another period's value or a given threshold, and the answer must be drawn directly from a table.\nEvidence guidance: Locate the table row or column that contains the metric label (e.g., 'revenue', 'amortisation', 'fair value per share'). ; Identify the column or row headers that represent reporting periods (e.g., years, quarters). ; Extract the numeric values for each period under that metric, ensuring the correct unit (e.g., thousands, millions) is noted. ; If a threshold is given in the question, compare each period's value against that threshold; otherwise, compare values across periods to find the maximum or minimum.\nOperand roles: Metric label: the specific financial item being compared (e.g., revenue, net carrying amount). ; Reporting period set: the list of time periods (e.g., years) from which the answer is selected. ; Comparison condition: the relational operator (greater, less, equal) and optional threshold value. ; Unit context: the scale or denomination of the numeric values (e.g., thousands, millions) that must be consistent across periods.\nAnswer form: A single reporting period label (e.g., a year or quarter) that satisfies the comparison condition, or a list of such labels if multiple periods tie.\nScale notes: The scale is 'none', meaning no unit conversion is needed, but always verify that all values are in the same unit as stated in the table header. ; If the table header indicates a unit (e.g., 'in thousands'), do not convert to absolute numbers unless the question explicitly asks for a different scale. ; When comparing values, ignore any scale suffix in the question (e.g., 'thousands') if the table already uses that scale; otherwise, adjust the threshold accordingly.\nRisks: Do not assume the metric appears in every period; handle missing values or nulls explicitly. ; Ensure the comparison uses the same unit across all periods; mixing units (e.g., thousands vs. millions) can lead to wrong answers. ; Watch for questions that ask for the period with the 'highest' or 'lowest' value versus those that ask for a period meeting a threshold; the latter may have multiple answers."
+  },
+  {
+    "strategy_id": "tatqa_strategy:13d6c9a655c6fcd2",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "span_lookup",
+    "family": "span_lookup:table-text:scale=thousand",
+    "schema_key": "span_lookup|span_lookup:table-text:scale=thousand|from=table-text|scale=thousand",
+    "answer_from": "table-text",
+    "scale": "thousand",
+    "source_support_count": 574,
+    "source_sample_ids": [
+      "tatqa:train:ca296636-064f-4bb6-9363-aadb51392f5f",
+      "tatqa:train:fd39359f-cea8-44b7-b5b9-7f7566db09c3",
+      "tatqa:train:b3ea3adb-8658-4ebb-a2fa-bfcb61a5a55a",
+      "tatqa:train:92d9a52b-2c32-4736-b863-6055a605f183",
+      "tatqa:train:5c8b5f35-8146-4113-9b05-23d186191106",
+      "tatqa:train:0f6125b2-42b7-46dd-9d6a-75b39dece141",
+      "tatqa:train:2a330cfc-863a-4682-a270-7159a11eee8b",
+      "tatqa:train:4a5ed1dc-aa28-4baa-852a-2ddb475d6a84",
+      "tatqa:train:6f99edf8-cdb9-4033-891a-a317f7948a83",
+      "tatqa:train:321846cc-12d5-4426-bf40-9ee4d5358894",
+      "tatqa:train:32588ade-b455-46a4-9077-8466ddf1689e",
+      "tatqa:train:14277a21-e68b-4809-a480-803c3c9f33dc",
+      "tatqa:train:db06dbbe-eb39-40bb-9cce-94f42b302247",
+      "tatqa:train:059d3af0-fd85-442d-b214-e204bcc404b6",
+      "tatqa:train:ccaa97ed-ec32-4694-a9dd-8df22ff9ead2",
+      "tatqa:train:8ab1ce53-a8c3-4c8e-af4a-15617ec32c4e",
+      "tatqa:train:9bad213f-ccf8-4427-9bb8-ac113829602a",
+      "tatqa:train:f773a0bb-d8bb-49ca-9799-230a678f1a63",
+      "tatqa:train:1c4216e2-ae51-484b-96bc-eb8b2526b57c",
+      "tatqa:train:cbd168ec-cc98-4b2d-a46b-5cd107290605"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what was the net income(loss) in <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the amount of finished products in <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the amount of employee stock purchase rights including accelerated stock-based compensation expense at the end of <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the value of equipment under capital lease as of december <num>, <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the accumulated other comprehensive income at the beginning of <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the amount of research and development in <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use this strategy when a question asks for a specific financial metric value at a given point in time or period, and the answer is a direct lookup from the table or text without any calculation or comparison.",
+    "evidence_guidance": [
+      "Locate the row or text segment that contains the exact metric label mentioned in the question.",
+      "Identify the column or sentence that corresponds to the specified reporting period (e.g., a date or year).",
+      "If the metric is not in the table, search the accompanying text for the same label and period.",
+      "Cross-check that the value is not a subtotal or total unless the question explicitly asks for it."
+    ],
+    "operand_roles": [
+      "metric label: the specific financial item or account name (e.g., net income, finished products, accumulated other comprehensive income).",
+      "reporting period: the time point or interval (e.g., a fiscal year end, a quarter, a specific date) for which the value is requested.",
+      "context qualifier: any additional descriptors that narrow the metric (e.g., 'under capital lease', 'including accelerated stock-based compensation expense')."
+    ],
+    "answer_form": "A single numeric value expressed in thousands, with no additional explanation or comparison.",
+    "scale_notes": [
+      "All values in this strategy are reported in thousands; do not convert or adjust the scale.",
+      "If the source shows a value in millions, it must be multiplied by a numeric value to match the thousand scale, but such cases are rare and should be flagged.",
+      "When extracting from text, ensure the number is not a percentage or a ratio unless the metric label explicitly indicates so."
+    ],
+    "risk_notes": [
+      "The metric label may appear in both table and text with slightly different wording; ensure exact match or use synonyms.",
+      "The reporting period may be ambiguous (e.g., 'beginning of' vs. 'end of'); verify the exact time reference.",
+      "The value might be presented in different units (e.g., millions vs. thousands) in different parts of the document; always confirm the scale."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "350e093c96fb6debc068743f61ab1934086efce5784959f08d6b85d445b14f03",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: span_lookup\nFamily: span_lookup:table-text:scale=thousand\nEvidence source: table-text\nScale: thousand\nDescription: Use this strategy when a question asks for a specific financial metric value at a given point in time or period, and the answer is a direct lookup from the table or text without any calculation or comparison.\nEvidence guidance: Locate the row or text segment that contains the exact metric label mentioned in the question. ; Identify the column or sentence that corresponds to the specified reporting period (e.g., a date or year). ; If the metric is not in the table, search the accompanying text for the same label and period. ; Cross-check that the value is not a subtotal or total unless the question explicitly asks for it.\nOperand roles: metric label: the specific financial item or account name (e.g., net income, finished products, accumulated other comprehensive income). ; reporting period: the time point or interval (e.g., a fiscal year end, a quarter, a specific date) for which the value is requested. ; context qualifier: any additional descriptors that narrow the metric (e.g., 'under capital lease', 'including accelerated stock-based compensation expense').\nAnswer form: A single numeric value expressed in thousands, with no additional explanation or comparison.\nScale notes: All values in this strategy are reported in thousands; do not convert or adjust the scale. ; If the source shows a value in millions, it must be multiplied by a numeric value to match the thousand scale, but such cases are rare and should be flagged. ; When extracting from text, ensure the number is not a percentage or a ratio unless the metric label explicitly indicates so.\nRisks: The metric label may appear in both table and text with slightly different wording; ensure exact match or use synonyms. ; The reporting period may be ambiguous (e.g., 'beginning of' vs. 'end of'); verify the exact time reference. ; The value might be presented in different units (e.g., millions vs. thousands) in different parts of the document; always confirm the scale."
+  },
+  {
+    "strategy_id": "tatqa_strategy:d3818077874e80e6",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "multi_span_lookup",
+    "family": "multi_span_lookup:table-text:scale=none",
+    "schema_key": "multi_span_lookup|multi_span_lookup:table-text:scale=none|from=table-text|scale=none",
+    "answer_from": "table-text",
+    "scale": "none",
+    "source_support_count": 558,
+    "source_sample_ids": [
+      "tatqa:train:fd851472-5853-43f3-805a-de69a4637d56",
+      "tatqa:train:8ee547bf-784c-4fbd-a5b1-adc151550fdd",
+      "tatqa:train:15c0a851-5b49-4515-a264-b480faf0c64f",
+      "tatqa:train:517141b9-4b42-49d0-ba52-c6347756e05d",
+      "tatqa:train:6af1c088-96cd-477d-943c-f49daccbcb6f",
+      "tatqa:train:73c7f3fa-75d2-4759-af01-5e51105b896e",
+      "tatqa:train:694c5c87-e47f-43d8-bd55-d9c47eb54c94",
+      "tatqa:train:8d12d881-995b-4e44-b59d-3421ac564632",
+      "tatqa:train:939a904c-6df5-487a-9618-ecb5f6033c22",
+      "tatqa:train:53cf95f3-bc38-4c03-96e7-e73c76a35a84",
+      "tatqa:train:5f5bda57-f589-4650-9138-f83e0b097c94",
+      "tatqa:train:d09bbaed-8adf-4758-adee-e88840ab1cca",
+      "tatqa:train:4abfe6dd-6169-4f50-a157-cdfa38eec075",
+      "tatqa:train:76ed6ed6-8581-408e-b54a-3d19e1f5be9d",
+      "tatqa:train:206c655a-e238-4aff-a4a8-986510850ddf",
+      "tatqa:train:a28af36a-94c1-4e74-abc0-56c4047e8b4e",
+      "tatqa:train:4ba330c0-1173-48a4-a9cd-c07c9da7786e",
+      "tatqa:train:b4e7b8b8-5f36-4e0d-80fc-cf7657a9fef6",
+      "tatqa:train:19cf3858-9668-4af2-8e7d-57d19c9b5068",
+      "tatqa:train:b2aed183-8542-4130-8c8d-082d8d30b19f"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "which years does the table provide information for the components of inventories?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what are the respective pension discount rates for actuarial benefit obligation in <num> and <num> respectively?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what are the respective pension discount rates for benefit costs in <num> and <num> respectively?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "which assumption variables in the table are further elaborated in the text?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what are the different segments of other current assets highlighted in the table?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what are the components analyzed under interest and other in the table?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks to enumerate or identify categories, components, segments, or variables that are listed in a table and may be further described or elaborated in the accompanying text.",
+    "evidence_guidance": [
+      "Locate the table row or column header that matches the broad category named in the question (e.g., components, segments, rates, variables).",
+      "Scan the table cells under that header for distinct labels or item names; these are the primary candidates for the answer.",
+      "If the question asks for 'respective' values or elaborations, cross-reference each label with the text paragraphs that mention the same label to extract the corresponding detail.",
+      "Check for any footnotes or sub-tables that break down the category further, as they may contain additional items not in the main table body."
+    ],
+    "operand_roles": [
+      "Category header: the broad metric or account name that groups the items (e.g., 'components of inventories', 'pension discount rates', 'other current assets').",
+      "Item list: the individual labels or subcategories listed under the category header in the table.",
+      "Context qualifier: any additional condition in the question (e.g., 'for actuarial benefit obligation' vs. 'for benefit costs') that narrows which subset of items to report.",
+      "Text elaboration: the narrative text that provides extra description or values for the table items, used when the answer requires combining table and text."
+    ],
+    "answer_form": "A list of textual labels or short phrases extracted from the table, optionally paired with corresponding values from the text when the question asks for respective items.",
+    "scale_notes": [
+      "This strategy typically does not require numeric scaling because the answer is a list of labels or names, not computed values.",
+      "If the question asks for 'respective' values, note that the values may be in different units (e.g., percentages vs. absolute amounts) depending on the item; do not convert or normalize them.",
+      "When extracting values from text, preserve the original units as stated (e.g., percent sign, currency) without applying any conversion."
+    ],
+    "risk_notes": [
+      "Do not assume the table lists all possible items; the text may introduce additional items not present in the table, so verify against the question's scope.",
+      "Be careful with hierarchical or nested categories; the question may target only a specific sub-level, not the top-level grouping.",
+      "Avoid mixing items from different categories if the question specifies a particular context; ensure each item belongs to the correct subset."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "970515a99dc959dcc1917ab8409c3da044b8bed25619cbf8a03063dde6bd15dd",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: multi_span_lookup\nFamily: multi_span_lookup:table-text:scale=none\nEvidence source: table-text\nScale: none\nDescription: Use when the question asks to enumerate or identify categories, components, segments, or variables that are listed in a table and may be further described or elaborated in the accompanying text.\nEvidence guidance: Locate the table row or column header that matches the broad category named in the question (e.g., components, segments, rates, variables). ; Scan the table cells under that header for distinct labels or item names; these are the primary candidates for the answer. ; If the question asks for 'respective' values or elaborations, cross-reference each label with the text paragraphs that mention the same label to extract the corresponding detail. ; Check for any footnotes or sub-tables that break down the category further, as they may contain additional items not in the main table body.\nOperand roles: Category header: the broad metric or account name that groups the items (e.g., 'components of inventories', 'pension discount rates', 'other current assets'). ; Item list: the individual labels or subcategories listed under the category header in the table. ; Context qualifier: any additional condition in the question (e.g., 'for actuarial benefit obligation' vs. 'for benefit costs') that narrows which subset of items to report. ; Text elaboration: the narrative text that provides extra description or values for the table items, used when the answer requires combining table and text.\nAnswer form: A list of textual labels or short phrases extracted from the table, optionally paired with corresponding values from the text when the question asks for respective items.\nScale notes: This strategy typically does not require numeric scaling because the answer is a list of labels or names, not computed values. ; If the question asks for 'respective' values, note that the values may be in different units (e.g., percentages vs. absolute amounts) depending on the item; do not convert or normalize them. ; When extracting values from text, preserve the original units as stated (e.g., percent sign, currency) without applying any conversion.\nRisks: Do not assume the table lists all possible items; the text may introduce additional items not present in the table, so verify against the question's scope. ; Be careful with hierarchical or nested categories; the question may target only a specific sub-level, not the top-level grouping. ; Avoid mixing items from different categories if the question specifies a particular context; ensure each item belongs to the correct subset."
+  },
+  {
+    "strategy_id": "tatqa_strategy:83818188dec82af3",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:difference",
+    "schema_key": "arithmetic|arithmetic:difference|from=table|scale=million",
+    "answer_from": "table",
+    "scale": "million",
+    "source_support_count": 516,
+    "source_sample_ids": [
+      "tatqa:train:1e0575a4-28dc-4e64-acdf-46cf9242fd67",
+      "tatqa:train:98233a9f-6710-4f3c-bb69-057f83d7932d",
+      "tatqa:train:0d18801f-5b34-48eb-91d2-87c98fa9c523",
+      "tatqa:train:33e1f138-3e4e-4ec6-a92a-9853bcec45b7",
+      "tatqa:train:a0ba1379-d964-409b-a1c3-8c0e45c4c859",
+      "tatqa:train:4bca4aeb-f8db-43ba-a10a-b94783d5d295",
+      "tatqa:train:7003ed08-c3d1-4d01-b45e-2644a392b37c",
+      "tatqa:train:907f95a3-71a5-4a05-830f-082c0c1dd701",
+      "tatqa:train:328d71e0-cd40-46ef-b1f1-a92ffa2bef63",
+      "tatqa:train:38ecd3f0-e34d-439f-b9ff-ff60e6106a15",
+      "tatqa:train:bd201a3b-d023-4729-9e5c-77a8a5ad7462",
+      "tatqa:train:6349e186-e6e7-40bf-98da-6a7592ea798c",
+      "tatqa:train:7fd23716-2942-453c-b760-9d1734ffa0f5",
+      "tatqa:train:efe48874-070b-47ca-82c1-cc57798294e6",
+      "tatqa:train:772fac33-70a1-47b1-9c37-279ad9692137",
+      "tatqa:train:fd8f971e-072d-41a1-beeb-59535f71764e",
+      "tatqa:train:35dac8cf-104c-4f5c-ab03-361cea5e42fb",
+      "tatqa:train:b7f38920-34f6-4c5f-b0c2-e6ff933d03b8",
+      "tatqa:train:a33f7d58-4bd1-4b2c-8811-8b2ec42d51ce",
+      "tatqa:train:3fcf5adf-273a-4265-a488-c524c0881937"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what is the difference between the unused lines of credit for <num> and <num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the change in sales in fy2<num> from fy2<num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the change in the employee benefit from <num> to <num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the change between foreign exchange forward contracts purchased for march <num>, <num> and march <num>, <num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the change in contract assets in <num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the change in foreign in <num> from <num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for an absolute difference or change between two values.",
+    "evidence_guidance": [
+      "Locate two comparable values for the same metric or requested pair.",
+      "Subtract in the direction implied by the question wording."
+    ],
+    "operand_roles": [
+      "minuend_value",
+      "subtrahend_value",
+      "metric_or_item_label"
+    ],
+    "answer_form": "Return the absolute difference in the requested unit.",
+    "scale_notes": [
+      "Express the answer in million units when the task requires that scale."
+    ],
+    "risk_notes": [
+      "Check whether the wording asks for increase, decrease, or simple difference.",
+      "Do not convert to percent unless explicitly requested."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:difference\nEvidence source: table\nScale: million\nDescription: Use when the question asks for an absolute difference or change between two values.\nEvidence guidance: Locate two comparable values for the same metric or requested pair. ; Subtract in the direction implied by the question wording.\nOperand roles: minuend_value ; subtrahend_value ; metric_or_item_label\nAnswer form: Return the absolute difference in the requested unit.\nScale notes: Express the answer in million units when the task requires that scale.\nRisks: Check whether the wording asks for increase, decrease, or simple difference. ; Do not convert to percent unless explicitly requested."
+  },
+  {
+    "strategy_id": "tatqa_strategy:f34fac3e1b266e36",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:difference",
+    "schema_key": "arithmetic|arithmetic:difference|from=table-text|scale=thousand",
+    "answer_from": "table-text",
+    "scale": "thousand",
+    "source_support_count": 486,
+    "source_sample_ids": [
+      "tatqa:train:d9f8146d-7566-48ce-b531-cd5f3fd6c966",
+      "tatqa:train:9c5661de-0551-4e6e-bae8-b5171c27634f",
+      "tatqa:train:b4e1946b-4ac4-4d54-9560-386497b0c5a8",
+      "tatqa:train:7abea844-a63e-4e8b-9181-446f9c66da92",
+      "tatqa:train:b8453dd7-40b1-4d57-8168-97a6a687351c",
+      "tatqa:train:61536c36-8e29-4a92-b8ec-a3481e16d146",
+      "tatqa:train:33ec4884-253e-4a19-9f11-4ad93a5f4730",
+      "tatqa:train:a09be770-41ad-401b-b21c-f53b8b613a55",
+      "tatqa:train:ff99e26a-38be-43d5-aff7-10ee224b3612",
+      "tatqa:train:4e5da616-de39-48fc-8f9b-24db6b54dcbf",
+      "tatqa:train:1316593a-c2e1-4425-851c-86868dea90c6",
+      "tatqa:train:06fec2d0-c023-4eb0-bcfe-0a43cf26e2fe",
+      "tatqa:train:aa0b366a-fac7-446a-b5da-61289d4bc68c",
+      "tatqa:train:84d23eb6-ad29-4f14-9127-72c278beabe2",
+      "tatqa:train:73a438f4-f4d9-4733-9910-2691c05a466e",
+      "tatqa:train:33ba4de7-7f92-4916-bb4b-786db411884b",
+      "tatqa:train:9da3a737-51ab-46fb-bbdf-01f15e4db912",
+      "tatqa:train:8b08afaf-e692-4891-9595-386a78e4de56",
+      "tatqa:train:a9220f96-5d34-4825-8bfa-50fe8828f77b",
+      "tatqa:train:42b056e9-665f-4d90-8876-826757889087"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what is the change in total revenues between <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the change in materials and purchased parts from <num> to <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the change between the value of machinery, equipment and furniture between <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the change in the number of unvested rsus between <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the change in non-cash impairment charges in <num> from <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "in <num>, what is the difference in revenue between south korea and singapore?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for an absolute difference or change between two values.",
+    "evidence_guidance": [
+      "Locate two comparable values for the same metric or requested pair.",
+      "Subtract in the direction implied by the question wording.",
+      "Combine table values with nearby textual qualifiers when the evidence source is mixed."
+    ],
+    "operand_roles": [
+      "minuend_value",
+      "subtrahend_value",
+      "metric_or_item_label"
+    ],
+    "answer_form": "Return the absolute difference in the requested unit.",
+    "scale_notes": [
+      "Express the answer in thousand units when the task requires that scale."
+    ],
+    "risk_notes": [
+      "Check whether the wording asks for increase, decrease, or simple difference.",
+      "Do not convert to percent unless explicitly requested."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:difference\nEvidence source: table-text\nScale: thousand\nDescription: Use when the question asks for an absolute difference or change between two values.\nEvidence guidance: Locate two comparable values for the same metric or requested pair. ; Subtract in the direction implied by the question wording. ; Combine table values with nearby textual qualifiers when the evidence source is mixed.\nOperand roles: minuend_value ; subtrahend_value ; metric_or_item_label\nAnswer form: Return the absolute difference in the requested unit.\nScale notes: Express the answer in thousand units when the task requires that scale.\nRisks: Check whether the wording asks for increase, decrease, or simple difference. ; Do not convert to percent unless explicitly requested."
+  },
+  {
+    "strategy_id": "tatqa_strategy:86258a5f531ea6dc",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "span_lookup",
+    "family": "span_lookup:table-text:scale=none",
+    "schema_key": "span_lookup|span_lookup:table-text:scale=none|from=table-text|scale=none",
+    "answer_from": "table-text",
+    "scale": "none",
+    "source_support_count": 401,
+    "source_sample_ids": [
+      "tatqa:train:49e19b33-4aa5-47dc-aeb1-3370f08ead0a",
+      "tatqa:train:a9d259dd-ecc0-4c47-aa63-eec04e443241",
+      "tatqa:train:f0f9fe93-181b-4c86-b8c1-0af4bd082b8b",
+      "tatqa:train:6789edf0-b644-4d5b-b001-b8dc2fb6633f",
+      "tatqa:train:db05d90b-fee2-4ff8-afde-ffaae85ef0ab",
+      "tatqa:train:ecbc5209-1b5b-4954-b616-f1644fbd9bae",
+      "tatqa:train:753ba01d-4ca0-44ba-bb70-d8fa78d14d6e",
+      "tatqa:train:d92aee14-a527-4ff0-b7bf-858eebf7bce3",
+      "tatqa:train:02595c55-1071-49fd-94c7-b9ad7deaae2f",
+      "tatqa:train:368821d1-fd61-437a-a678-f7e04a67a71c",
+      "tatqa:train:b2895386-064a-4847-b334-44d839abfab9",
+      "tatqa:train:5e472138-4196-41b8-bff0-e7d7c3377552",
+      "tatqa:train:132b5602-5143-4c47-a3da-aa6df4876b88",
+      "tatqa:train:a0da10b4-7000-4a3a-8d19-e9f3a65aaa47",
+      "tatqa:train:f8a50026-ae51-441b-b74c-8f5f750cadc6",
+      "tatqa:train:f0acb7ba-4f34-4561-833d-b3903bd920cc",
+      "tatqa:train:90384e3e-13a6-43a9-9696-35918771cd39",
+      "tatqa:train:151b1bb1-cda4-457d-95df-a36a0dc419f5",
+      "tatqa:train:7f3d56c1-7f64-41ed-986a-be31e82b4524",
+      "tatqa:train:e224a10b-a9e2-4727-aa6e-cea97fef9b3d"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "how many common shares did bce repurchase in <num>?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what does the table explain?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the change in revenue from <num> to <num>?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the change in interest income in <num>?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the change in interest expense in <num>?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the basic earnings per common share in <num>?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for a single fact, value, or brief description that can be found directly in the table or its accompanying text, without requiring any arithmetic or cross-period comparison.",
+    "evidence_guidance": [
+      "Locate the table row or text passage that explicitly mentions the metric or topic named in the question.",
+      "If the question specifies a reporting period, match that period to the corresponding column or text segment.",
+      "If the question asks for a change or difference, look for a column or sentence that explicitly states the change, not compute it yourself.",
+      "For descriptive questions, scan the table title, headers, or nearby text for the explanation."
+    ],
+    "operand_roles": [
+      "metric label: the specific financial or operational term being asked about (e.g., share repurchase, earnings per share, revenue).",
+      "reporting period: the time frame mentioned in the question, if any, used to select the correct row or column.",
+      "comparison anchor: the base period or item that the change is measured against, if the question implies a change.",
+      "item list: any enumerated items or categories that the question refers to, for locating the relevant row."
+    ],
+    "answer_form": "A short phrase or sentence that directly states the requested value or description, without additional explanation.",
+    "scale_notes": [
+      "Report the value exactly as presented in the source, without converting units.",
+      "If the source uses a scale (e.g., thousands, millions), preserve that scale in the answer.",
+      "Do not apply any scaling or rounding unless the question explicitly requests it."
+    ],
+    "risk_notes": [
+      "Do not assume a change is asked for when the question only asks for a level; verify the wording.",
+      "Avoid using values from a different reporting period than specified.",
+      "Do not confuse table values with text explanations; ensure the source matches the question's intent."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "f16eaf5b280e53d898389166578b082120053b49f2f06ba1874760692113455b",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: span_lookup\nFamily: span_lookup:table-text:scale=none\nEvidence source: table-text\nScale: none\nDescription: Use when the question asks for a single fact, value, or brief description that can be found directly in the table or its accompanying text, without requiring any arithmetic or cross-period comparison.\nEvidence guidance: Locate the table row or text passage that explicitly mentions the metric or topic named in the question. ; If the question specifies a reporting period, match that period to the corresponding column or text segment. ; If the question asks for a change or difference, look for a column or sentence that explicitly states the change, not compute it yourself. ; For descriptive questions, scan the table title, headers, or nearby text for the explanation.\nOperand roles: metric label: the specific financial or operational term being asked about (e.g., share repurchase, earnings per share, revenue). ; reporting period: the time frame mentioned in the question, if any, used to select the correct row or column. ; comparison anchor: the base period or item that the change is measured against, if the question implies a change. ; item list: any enumerated items or categories that the question refers to, for locating the relevant row.\nAnswer form: A short phrase or sentence that directly states the requested value or description, without additional explanation.\nScale notes: Report the value exactly as presented in the source, without converting units. ; If the source uses a scale (e.g., thousands, millions), preserve that scale in the answer. ; Do not apply any scaling or rounding unless the question explicitly requests it.\nRisks: Do not assume a change is asked for when the question only asks for a level; verify the wording. ; Avoid using values from a different reporting period than specified. ; Do not confuse table values with text explanations; ensure the source matches the question's intent."
+  },
+  {
+    "strategy_id": "tatqa_strategy:6a1aa75493114b69",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "span_lookup",
+    "family": "span_lookup:table:scale=none",
+    "schema_key": "span_lookup|span_lookup:table:scale=none|from=table|scale=none",
+    "answer_from": "table",
+    "scale": "none",
+    "source_support_count": 382,
+    "source_sample_ids": [
+      "tatqa:train:0743385d-68cd-4a00-aa67-a593bf2638bd",
+      "tatqa:train:fe9fd625-2577-47f7-b57b-32d162c38622",
+      "tatqa:train:afae0de9-8348-4104-9180-f32ba06523fb",
+      "tatqa:train:75676b82-43bc-4f16-ab77-9dcb685354e2",
+      "tatqa:train:25b420c6-e7ea-4916-81bc-0d4c96e39f4b",
+      "tatqa:train:b2b779d4-0587-4f88-8b98-cf2689653d40",
+      "tatqa:train:d6a1e18b-fb18-4a23-916c-bcc2e485d64c",
+      "tatqa:train:60879667-ff0e-438b-8cae-5f7915085e9b",
+      "tatqa:train:8506e3e7-f537-40d4-9689-68613d58cabd",
+      "tatqa:train:f02b4b5a-473a-4ead-b777-6174c726dd77",
+      "tatqa:train:17129010-7e1b-4b29-803c-65bc6086e76e",
+      "tatqa:train:c63b4611-e61d-4040-a1d4-0835cee8c659",
+      "tatqa:train:2003fe24-543d-4211-b62d-06b95e24f3ea",
+      "tatqa:train:9cf7907d-620e-4022-9b10-aa835d732015",
+      "tatqa:train:f26c1d76-bcb3-4e8a-94e0-56c506b6dd64",
+      "tatqa:train:124f6443-f713-4df7-a8af-f228d4e215f3",
+      "tatqa:train:4b583eef-3f6f-42c4-9497-d395c3b73658",
+      "tatqa:train:56556bb7-aedf-4478-929a-01a59a7a96ef",
+      "tatqa:train:fa8764f2-e366-48ae-92ed-19f55f306b60",
+      "tatqa:train:3e16eca4-992f-4f55-94cc-834524616106"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what is the amount of stated capital outstanding on december <num>, <num>",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the final dividend of <num> cents per share comprised of?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the increase / (decrease) in dozen produced in <num> compared to <num>?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "who is the executive chairman of the board of directors?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "who is the chief financial officer of the <entity>?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the base currency used for the table?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for a specific fact, amount, name, or attribute that is explicitly stated in a table, without requiring any calculation or comparison.",
+    "evidence_guidance": [
+      "Identify the table that contains the relevant metric or attribute label (e.g., 'stated capital', 'dividend', 'production volume', 'executive name').",
+      "Match the reporting period or date mentioned in the question to the corresponding row or column header in the table.",
+      "If the question asks for a person or entity, locate the row or column that lists names under the relevant role or title.",
+      "For currency or unit-related questions, find the table's stated base currency or unit in headers or footnotes."
+    ],
+    "operand_roles": [
+      "metric label: the specific financial or operational term being asked about (e.g., 'stated capital', 'dividend', 'production volume').",
+      "reporting period: the date or time frame that identifies the correct row or column (e.g., a specific fiscal year-end or interim date).",
+      "attribute qualifier: any additional descriptor that narrows the lookup (e.g., 'final', 'comprised of', 'executive chairman').",
+      "entity or role: the organization or position name if the question asks for a person or entity."
+    ],
+    "answer_form": "A single value, name, or short phrase extracted directly from a table cell.",
+    "scale_notes": [
+      "The answer should be reported exactly as shown in the table, without converting units or applying any scaling factor.",
+      "If the table uses a specific unit (e.g., thousands, millions), the answer should reflect that unit unless the question explicitly asks for a different scale.",
+      "For currency amounts, confirm the base currency from the table header or notes; do not assume a standard currency."
+    ],
+    "risk_notes": [
+      "The answer may be in a different table than initially assumed; check all tables for the same metric label.",
+      "The question may use synonyms or abbreviations for the metric label; search for the underlying concept.",
+      "The table may contain multiple rows for the same period (e.g., restated or supplementary data); verify the correct row based on context."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "ad90c9daa16982690642cb0dcafb53b1932b88e81eec23e940de51c389d148cc",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: span_lookup\nFamily: span_lookup:table:scale=none\nEvidence source: table\nScale: none\nDescription: Use when the question asks for a specific fact, amount, name, or attribute that is explicitly stated in a table, without requiring any calculation or comparison.\nEvidence guidance: Identify the table that contains the relevant metric or attribute label (e.g., 'stated capital', 'dividend', 'production volume', 'executive name'). ; Match the reporting period or date mentioned in the question to the corresponding row or column header in the table. ; If the question asks for a person or entity, locate the row or column that lists names under the relevant role or title. ; For currency or unit-related questions, find the table's stated base currency or unit in headers or footnotes.\nOperand roles: metric label: the specific financial or operational term being asked about (e.g., 'stated capital', 'dividend', 'production volume'). ; reporting period: the date or time frame that identifies the correct row or column (e.g., a specific fiscal year-end or interim date). ; attribute qualifier: any additional descriptor that narrows the lookup (e.g., 'final', 'comprised of', 'executive chairman'). ; entity or role: the organization or position name if the question asks for a person or entity.\nAnswer form: A single value, name, or short phrase extracted directly from a table cell.\nScale notes: The answer should be reported exactly as shown in the table, without converting units or applying any scaling factor. ; If the table uses a specific unit (e.g., thousands, millions), the answer should reflect that unit unless the question explicitly asks for a different scale. ; For currency amounts, confirm the base currency from the table header or notes; do not assume a standard currency.\nRisks: The answer may be in a different table than initially assumed; check all tables for the same metric label. ; The question may use synonyms or abbreviations for the metric label; search for the underlying concept. ; The table may contain multiple rows for the same period (e.g., restated or supplementary data); verify the correct row based on context."
+  },
+  {
+    "strategy_id": "tatqa_strategy:5391a6ff8f15af23",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "multi_span_lookup",
+    "family": "multi_span_lookup:table:scale=none",
+    "schema_key": "multi_span_lookup|multi_span_lookup:table:scale=none|from=table|scale=none",
+    "answer_from": "table",
+    "scale": "none",
+    "source_support_count": 368,
+    "source_sample_ids": [
+      "tatqa:train:9c569bea-e036-4c27-8e41-82c6efab1d31",
+      "tatqa:train:e87b913f-bd08-43e0-9539-f828bd2ff3eb",
+      "tatqa:train:76fab682-8963-4855-90a2-e68df40d6f4c",
+      "tatqa:train:a258f2ec-3953-428d-94b9-96e0e7dfb6ee",
+      "tatqa:train:f57cbe0b-2e43-4665-8631-d0543bd8c267",
+      "tatqa:train:ce0b4561-a2b4-4a83-a943-9c501e86c60b",
+      "tatqa:train:bb9f53c0-2fe6-49f6-a26b-b2f8952b1d21",
+      "tatqa:train:783c2a69-8e72-4315-8f24-6424c431bbd1",
+      "tatqa:train:f5227355-dc37-4c35-bb80-b07f6bc30c2c",
+      "tatqa:train:ce22262d-913f-4b24-a50a-df7fe59b0d1b",
+      "tatqa:train:63f9e690-b4d6-479f-bd7f-48bfa00c4f31",
+      "tatqa:train:223975f5-30fd-4ecc-bc68-0db03d540ec8",
+      "tatqa:train:470bb13c-51db-4653-a41a-64aa1150d4f0",
+      "tatqa:train:952c2131-59a2-42ce-8121-26d53c9d78be",
+      "tatqa:train:5211abcb-d90d-47b4-a9f2-2965427f0737",
+      "tatqa:train:e6c16758-a451-483c-b9a4-10226a42416c",
+      "tatqa:train:8a386578-b085-4f82-8298-d5f61fba6d52",
+      "tatqa:train:56e08b8e-4741-4e5e-8720-c4cda7aa30c0",
+      "tatqa:train:33047ebf-ad4e-49c7-9712-b304643b3710",
+      "tatqa:train:b7481c4c-0117-4c59-a219-ea71415a0aa8"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what does the weighted average actuarial assumptions consist of?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "which financial years' information is shown in the table?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the expected term (in years) in <num>, <num> and <num> respectively?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what years are included in the table?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what were the components factored in during the calculation of current earnings from discontinued operations before taxes?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "how much would the pension change if there is a <num> increase and a <num> decrease respectively in the discount rate?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for a set of components, categories, or periods that are explicitly listed in a table, without requiring any arithmetic or cross-table comparison.",
+    "evidence_guidance": [
+      "Locate the table whose header or row labels match the subject of the question (e.g., actuarial assumptions, financial years, components).",
+      "Identify the column or row that contains the list of items; ensure the relevant rows/columns are within the same table.",
+      "If the question specifies multiple instances (e.g., 'in <num>, <num>, and <num>'), find the corresponding cells for each instance and extract them in the same order."
+    ],
+    "operand_roles": [
+      "metric label: the category or component name being asked for (e.g., assumption type, year, component).",
+      "reporting period: the time frame or identifier that distinguishes multiple entries (e.g., specific years or periods).",
+      "item list: the set of values or labels to be extracted from the table."
+    ],
+    "answer_form": "A list of items, labels, or values extracted directly from the table, presented in the order they appear or as requested.",
+    "scale_notes": [
+      "No unit conversion or scaling is needed; values are taken as-is from the table.",
+      "If the table uses a common unit (e.g., years, percentages), preserve that unit in the answer.",
+      "Do not apply any rounding or formatting changes unless the table itself indicates them."
+    ],
+    "risk_notes": [
+      "Do not assume a value is present if it is not explicitly in the table; the answer must come from the table only.",
+      "Be careful with row/column orientation—ensure the extracted items correspond to the correct axis.",
+      "Avoid including derived or calculated values unless the question explicitly asks for them."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "4b0bed7a072d305c42e3b9c6ffd6ce79de8b1907bbc8766c7928f8c839876e41",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: multi_span_lookup\nFamily: multi_span_lookup:table:scale=none\nEvidence source: table\nScale: none\nDescription: Use when the question asks for a set of components, categories, or periods that are explicitly listed in a table, without requiring any arithmetic or cross-table comparison.\nEvidence guidance: Locate the table whose header or row labels match the subject of the question (e.g., actuarial assumptions, financial years, components). ; Identify the column or row that contains the list of items; ensure the relevant rows/columns are within the same table. ; If the question specifies multiple instances (e.g., 'in <num>, <num>, and <num>'), find the corresponding cells for each instance and extract them in the same order.\nOperand roles: metric label: the category or component name being asked for (e.g., assumption type, year, component). ; reporting period: the time frame or identifier that distinguishes multiple entries (e.g., specific years or periods). ; item list: the set of values or labels to be extracted from the table.\nAnswer form: A list of items, labels, or values extracted directly from the table, presented in the order they appear or as requested.\nScale notes: No unit conversion or scaling is needed; values are taken as-is from the table. ; If the table uses a common unit (e.g., years, percentages), preserve that unit in the answer. ; Do not apply any rounding or formatting changes unless the table itself indicates them.\nRisks: Do not assume a value is present if it is not explicitly in the table; the answer must come from the table only. ; Be careful with row/column orientation—ensure the extracted items correspond to the correct axis. ; Avoid including derived or calculated values unless the question explicitly asks for them."
+  },
+  {
+    "strategy_id": "tatqa_strategy:9f071422670e8fe7",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "span_lookup",
+    "family": "span_lookup:table-text:scale=million",
+    "schema_key": "span_lookup|span_lookup:table-text:scale=million|from=table-text|scale=million",
+    "answer_from": "table-text",
+    "scale": "million",
+    "source_support_count": 358,
+    "source_sample_ids": [
+      "tatqa:train:fe42645d-c4c4-4892-ac79-a605c0f4e0cf",
+      "tatqa:train:755f5ff9-5377-4a94-98b2-ddb64bc92a45",
+      "tatqa:train:9ebf4b6d-f044-4c54-a115-4167c8da3c3b",
+      "tatqa:train:9729e264-6b1f-4595-8239-5b73109247eb",
+      "tatqa:train:7db61e5a-a26a-42d1-9cf3-ef63dca7998f",
+      "tatqa:train:7f5350d9-79f2-4349-abe1-9b2c7753164b",
+      "tatqa:train:008b9936-2795-43fb-b82a-88760033f21d",
+      "tatqa:train:a95d0f4c-208c-41d8-98bb-cce6c51108b1",
+      "tatqa:train:980401db-3617-410f-b530-e18886a6a036",
+      "tatqa:train:d87757fc-a67e-47b6-a659-aa8c4a15d7fc",
+      "tatqa:train:b3c2c65c-2130-414c-bcf9-632b91855072",
+      "tatqa:train:fc0dee69-961a-4040-b4e5-f45dcd1e31cd",
+      "tatqa:train:0e70c4e1-4bc8-47c4-949a-4ad6546b4cbb",
+      "tatqa:train:8e6e658a-f6a3-4278-9a54-2b3228e563bd",
+      "tatqa:train:7ae4e510-598a-4229-93d3-78d26cf36c92",
+      "tatqa:train:f3ff3e84-850c-43f7-9078-c9a18cf6040e",
+      "tatqa:train:0f224107-ba64-4661-a130-6eb1a20a5e72",
+      "tatqa:train:9ecab54d-a157-4770-a243-9a5e4ee0d61b",
+      "tatqa:train:a1cd5169-024a-4579-a31a-29130daf845b",
+      "tatqa:train:cfb2fa70-58fa-4731-afea-8e41d68c4c7f"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what was the amount of raw materials in <num>?",
+        "answer_from": "table-text",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what were the operating expenses for software solutions?",
+        "answer_from": "table-text",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what were the total transition and integration costs?",
+        "answer_from": "table-text",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the consolidated net income in <num>?",
+        "answer_from": "table-text",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the fair value of plan assets in <num>?",
+        "answer_from": "table-text",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what were the benefit obligations in <num>?",
+        "answer_from": "table-text",
+        "scale": "million",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use this strategy when a question asks for a specific financial metric value that is directly stated in the table or text, without requiring any comparison, aggregation, or calculation.",
+    "evidence_guidance": [
+      "Locate the row or sentence that explicitly names the requested metric (e.g., 'raw materials', 'operating expenses', 'net income').",
+      "If the metric appears in the table, read the value from the column corresponding to the specified reporting period.",
+      "If the metric is only in the text, search for the exact metric label and extract the number immediately following it, ensuring it is in the same context.",
+      "Cross-check the table and text for the same metric to confirm the value is consistent; if only one source has it, use that source."
+    ],
+    "operand_roles": [
+      "metric label: the specific financial item or account name being asked about (e.g., 'raw materials', 'net income').",
+      "reporting period: the time frame (e.g., a fiscal year or quarter) that the question specifies, used to select the correct value.",
+      "context qualifier: any additional descriptor that narrows the metric (e.g., 'consolidated', 'total', 'fair value') to avoid ambiguity."
+    ],
+    "answer_form": "A single numeric value expressed in millions, with no additional commentary or units unless the source explicitly states otherwise.",
+    "scale_notes": [
+      "All values are expected to be in millions; if the table header or text states a different scale, convert to millions before answering.",
+      "When extracting from text, check for explicit scale indicators like 'in millions' or 'in thousands' near the number.",
+      "If the value is given as a range or with a qualifier like 'approximately', report the exact figure as stated, but note the approximation in the answer if necessary."
+    ],
+    "risk_notes": [
+      "The metric may appear in both table and text with different values; always prefer the table if the row matches the period, otherwise use text and note the source.",
+      "The question may omit the period, but the table may have multiple columns; default to the most recent period or the one implied by surrounding context.",
+      "The value might be expressed in different units (e.g., thousands vs. millions) in text; verify the scale before extracting."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "b941cf2066fbd6cea6934e09ddb7a2145d2431d6f18fd0a4d7e36c16a59cbeb6",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: span_lookup\nFamily: span_lookup:table-text:scale=million\nEvidence source: table-text\nScale: million\nDescription: Use this strategy when a question asks for a specific financial metric value that is directly stated in the table or text, without requiring any comparison, aggregation, or calculation.\nEvidence guidance: Locate the row or sentence that explicitly names the requested metric (e.g., 'raw materials', 'operating expenses', 'net income'). ; If the metric appears in the table, read the value from the column corresponding to the specified reporting period. ; If the metric is only in the text, search for the exact metric label and extract the number immediately following it, ensuring it is in the same context. ; Cross-check the table and text for the same metric to confirm the value is consistent; if only one source has it, use that source.\nOperand roles: metric label: the specific financial item or account name being asked about (e.g., 'raw materials', 'net income'). ; reporting period: the time frame (e.g., a fiscal year or quarter) that the question specifies, used to select the correct value. ; context qualifier: any additional descriptor that narrows the metric (e.g., 'consolidated', 'total', 'fair value') to avoid ambiguity.\nAnswer form: A single numeric value expressed in millions, with no additional commentary or units unless the source explicitly states otherwise.\nScale notes: All values are expected to be in millions; if the table header or text states a different scale, convert to millions before answering. ; When extracting from text, check for explicit scale indicators like 'in millions' or 'in thousands' near the number. ; If the value is given as a range or with a qualifier like 'approximately', report the exact figure as stated, but note the approximation in the answer if necessary.\nRisks: The metric may appear in both table and text with different values; always prefer the table if the row matches the period, otherwise use text and note the source. ; The question may omit the period, but the table may have multiple columns; default to the most recent period or the one implied by surrounding context. ; The value might be expressed in different units (e.g., thousands vs. millions) in text; verify the scale before extracting."
+  },
+  {
+    "strategy_id": "tatqa_strategy:79f6cbef94853c0b",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:difference",
+    "schema_key": "arithmetic|arithmetic:difference|from=table|scale=thousand",
+    "answer_from": "table",
+    "scale": "thousand",
+    "source_support_count": 344,
+    "source_sample_ids": [
+      "tatqa:train:6a462285-d663-4da7-b614-77a0dfb56a8c",
+      "tatqa:train:847400ae-6d72-4afa-9b2c-c9677578034a",
+      "tatqa:train:b4e6df38-40a7-4ab3-aad6-ad9667ded6a9",
+      "tatqa:train:19085aa8-9c96-4748-b796-43cdac1579a5",
+      "tatqa:train:337c485d-fbd5-410a-9e53-b2cd8a46cb27",
+      "tatqa:train:36719d75-6c38-485f-96f7-aab74dc5eb11",
+      "tatqa:train:6d7d74ea-929c-45a5-9fbc-66dc8e9d6ec2",
+      "tatqa:train:eb59d26d-4657-4323-9580-d647283dd3de",
+      "tatqa:train:9bf54413-077e-493a-a1e6-e50c0d56d828",
+      "tatqa:train:36817069-ab51-4eff-94b9-4825dfb6a10e",
+      "tatqa:train:8b7e3c3d-8392-4fad-a576-e8714eb91147",
+      "tatqa:train:058d94f1-d1c9-4bc6-b570-22db3be6fe71",
+      "tatqa:train:1f2526ba-db90-4388-8499-8fda51621e85",
+      "tatqa:train:2cae4fb7-d8f5-4272-af61-9c94a63b7bac",
+      "tatqa:train:50ffe3d3-71f5-4e4d-8406-9e2b50b6387c",
+      "tatqa:train:37cee040-7f2d-49f5-baf9-766e2fb858c3",
+      "tatqa:train:3be1cf35-fce6-4d5c-b73e-49f3f36db57a",
+      "tatqa:train:183950f7-9f69-4bcb-8044-c80b1b50afc3",
+      "tatqa:train:551232e7-5061-439c-8272-f2e92422eb82",
+      "tatqa:train:8250ebde-65db-4c0e-bcb7-57ad3a92e75d"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what was the difference between total opening and closing net book account in <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the change in the net sales for cheese between <num> and <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the increase/ (decrease) in net operating cash flows from year ended december <num>, <num> to december <num>, <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the increase/ (decrease) in net financing cash flows from year ended december <num>, <num> to december <num>, <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the increase/ (decrease) in net investing cash flows from year ended december <num>, <num> to december <num>, <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the change in the principal from <num> to <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for an absolute difference or change between two values.",
+    "evidence_guidance": [
+      "Locate two comparable values for the same metric or requested pair.",
+      "Subtract in the direction implied by the question wording."
+    ],
+    "operand_roles": [
+      "minuend_value",
+      "subtrahend_value",
+      "metric_or_item_label"
+    ],
+    "answer_form": "Return the absolute difference in the requested unit.",
+    "scale_notes": [
+      "Express the answer in thousand units when the task requires that scale."
+    ],
+    "risk_notes": [
+      "Check whether the wording asks for increase, decrease, or simple difference.",
+      "Do not convert to percent unless explicitly requested."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:difference\nEvidence source: table\nScale: thousand\nDescription: Use when the question asks for an absolute difference or change between two values.\nEvidence guidance: Locate two comparable values for the same metric or requested pair. ; Subtract in the direction implied by the question wording.\nOperand roles: minuend_value ; subtrahend_value ; metric_or_item_label\nAnswer form: Return the absolute difference in the requested unit.\nScale notes: Express the answer in thousand units when the task requires that scale.\nRisks: Check whether the wording asks for increase, decrease, or simple difference. ; Do not convert to percent unless explicitly requested."
+  },
+  {
+    "strategy_id": "tatqa_strategy:6d285326244a97f5",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:percent_change",
+    "schema_key": "arithmetic|arithmetic:percent_change|from=table-text|scale=percent",
+    "answer_from": "table-text",
+    "scale": "percent",
+    "source_support_count": 331,
+    "source_sample_ids": [
+      "tatqa:train:77191f82-0a18-4050-8911-bff9f1a401d9",
+      "tatqa:train:c065451d-f348-422a-bc61-940a3ecca042",
+      "tatqa:train:3597746f-7238-4a6c-a6eb-531daed6548a",
+      "tatqa:train:09be2281-6e4c-49d5-8131-798d29492337",
+      "tatqa:train:27c35832-3665-49c5-98df-e669b51effaf",
+      "tatqa:train:6de8a59a-e05e-4ff0-9c45-da1e4ebfb463",
+      "tatqa:train:d5cd8f7d-fadd-4640-bcda-53a99b9b11f6",
+      "tatqa:train:f1397c38-a7f5-425b-8e5d-05cdf9468572",
+      "tatqa:train:0aac85bd-2c6c-4522-8f04-0b18ee0b2ba1",
+      "tatqa:train:4858d688-889d-49bc-9817-bbf98543ffd2",
+      "tatqa:train:cca74d6f-5b53-4928-8534-4ddc1453522c",
+      "tatqa:train:8b895bdb-e0dc-49d7-8b26-e62657c63772",
+      "tatqa:train:63e16af0-27a4-4ab7-a902-16b95e815ff5",
+      "tatqa:train:dfd4d6c9-dfdd-413f-85bf-6d1173a77908",
+      "tatqa:train:2119a070-2a77-4436-9f28-890068d2bcde",
+      "tatqa:train:a465f352-ff55-485d-9b00-c1000aed2e42",
+      "tatqa:train:400c5b71-626c-44a7-965f-4d13586e00b8",
+      "tatqa:train:2593e227-a34d-4426-8510-77a9051af505",
+      "tatqa:train:7043623d-9230-42a9-ac65-42c8ef0b3f5f",
+      "tatqa:train:bb1d7b83-f46d-4fa7-94c1-4284383398e4"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what was the percentage change in total inventories between <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the percentage change in net inventories from <num> to <num>?",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the percentage change in the cost of goods sold from operations in <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the percentage change in selling, general and administrative expenses from operations in <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the percentage change in unfunded obligations between <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the percentage change in research and development in <num> from <num>?",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for relative change between a new value and a prior/base value.",
+    "evidence_guidance": [
+      "Locate the same metric for the compared periods or conditions.",
+      "Use the newer/current value as the changed amount endpoint and the prior/base value as denominator.",
+      "Combine table values with nearby textual qualifiers when the evidence source is mixed."
+    ],
+    "operand_roles": [
+      "new_or_current_value",
+      "prior_or_base_value",
+      "metric_label"
+    ],
+    "answer_form": "Return a relative change using the requested percent convention.",
+    "scale_notes": [
+      "Treat percent output carefully; distinguish percentage points from percent change."
+    ],
+    "risk_notes": [
+      "Do not reverse the numerator order.",
+      "Do not report the raw difference when a relative change is requested."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:percent_change\nEvidence source: table-text\nScale: percent\nDescription: Use when the question asks for relative change between a new value and a prior/base value.\nEvidence guidance: Locate the same metric for the compared periods or conditions. ; Use the newer/current value as the changed amount endpoint and the prior/base value as denominator. ; Combine table values with nearby textual qualifiers when the evidence source is mixed.\nOperand roles: new_or_current_value ; prior_or_base_value ; metric_label\nAnswer form: Return a relative change using the requested percent convention.\nScale notes: Treat percent output carefully; distinguish percentage points from percent change.\nRisks: Do not reverse the numerator order. ; Do not report the raw difference when a relative change is requested."
+  },
+  {
+    "strategy_id": "tatqa_strategy:797dd57f1e05a9a4",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:division_composition",
+    "schema_key": "arithmetic|arithmetic:division_composition|from=table|scale=million",
+    "answer_from": "table",
+    "scale": "million",
+    "source_support_count": 315,
+    "source_sample_ids": [
+      "tatqa:train:60b4a92c-0acc-42b0-bbce-f66df867e4ca",
+      "tatqa:train:2c6cdd11-6b7e-44d0-be4b-e582a1c6f389",
+      "tatqa:train:897c5ed0-edb7-43a1-95a1-a693b827535a",
+      "tatqa:train:96be48fe-a8ae-4a43-a8ec-e09121053df7",
+      "tatqa:train:7b2b81fe-e9ae-4c86-9108-3d6f381d8e90",
+      "tatqa:train:178d1e14-17a4-4a31-b29d-db84fd5d8943",
+      "tatqa:train:d3647bf7-edb2-401d-b33f-822725245786",
+      "tatqa:train:e4c66bcf-1360-4805-9014-7dd312e5f0d3",
+      "tatqa:train:6b008a72-3d90-40fe-8a92-048341e79634",
+      "tatqa:train:f944b361-6e00-45c8-a7e1-1f5c6e0fd6b1",
+      "tatqa:train:64a086c9-db3e-4376-bde3-0320d697d7b9",
+      "tatqa:train:2892fc21-7f00-48d6-8b39-a752a2eed7c6",
+      "tatqa:train:d5a668d9-4665-4980-a4b9-5d56cdeed2ba",
+      "tatqa:train:a322bacb-19e7-4912-a322-f01620a8d4ff",
+      "tatqa:train:22e17140-c3c8-4888-819b-e4b234aa2888",
+      "tatqa:train:92f49d29-6f59-4da1-b108-7769683f3f94",
+      "tatqa:train:b3618146-eebd-4d6e-83f7-1046acc9e8b1",
+      "tatqa:train:9fb21da5-ca15-4ee1-a27f-a26f3eb453f9",
+      "tatqa:train:cc42e86a-c56d-4638-b94c-bf4cc5ebd7c5",
+      "tatqa:train:865936a8-7148-46ed-a9b1-f83b565c693a"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what is the average net revenues from automotive and discrete <entity> (adg) for the period december <num>, <num> and <num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the average net revenues from analog, mems and sensors <entity> (ams) for the period december <num>, <num> and <num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the average net revenues from microcontrollers and digital ics <entity> (mdg) for the period december <num>, <num> and <num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the average cloud & cognitive software external revenue in <num> and <num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the average of cloud & data platforms in <num> and <num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the average tax loss and credit carry forward for <num> and <num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question requires a composed arithmetic calculation following the frozen operator sequence.",
+    "evidence_guidance": [
+      "Locate all operands required by the normalized formula.",
+      "Execute operations in the preserved parenthesis/order structure."
+    ],
+    "operand_roles": [
+      "formula_operands",
+      "intermediate_values",
+      "final_result"
+    ],
+    "answer_form": "Return the final numeric result in the requested scale.",
+    "scale_notes": [
+      "Express the answer in million units when the task requires that scale."
+    ],
+    "risk_notes": [
+      "Respect operation order and parentheses.",
+      "Check unit compatibility before combining operands."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:division_composition\nEvidence source: table\nScale: million\nDescription: Use when the question requires a composed arithmetic calculation following the frozen operator sequence.\nEvidence guidance: Locate all operands required by the normalized formula. ; Execute operations in the preserved parenthesis/order structure.\nOperand roles: formula_operands ; intermediate_values ; final_result\nAnswer form: Return the final numeric result in the requested scale.\nScale notes: Express the answer in million units when the task requires that scale.\nRisks: Respect operation order and parentheses. ; Check unit compatibility before combining operands."
+  },
+  {
+    "strategy_id": "tatqa_strategy:717eb3bac6ac84b0",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:difference",
+    "schema_key": "arithmetic|arithmetic:difference|from=table-text|scale=million",
+    "answer_from": "table-text",
+    "scale": "million",
+    "source_support_count": 315,
+    "source_sample_ids": [
+      "tatqa:train:0dc550d6-ba0a-4f46-b606-b102f5441631",
+      "tatqa:train:b21b7d73-a581-4e3f-8847-58280b20d59a",
+      "tatqa:train:89f44070-0740-42f3-88bb-fa108d0e54c2",
+      "tatqa:train:0aa035e4-f009-4067-9904-b7d249900f1f",
+      "tatqa:train:0d92fff4-72fa-4feb-9b9c-d40aa45fd7ac",
+      "tatqa:train:5a4e7cbc-ee3e-407a-96a6-95d25be8b1a6",
+      "tatqa:train:10614ac9-04ed-4232-804e-24882a9ab1b5",
+      "tatqa:train:b8f9aacd-0cf5-47e9-90d4-66402d89a066",
+      "tatqa:train:8abfdf40-d451-474b-bf1c-c294663462a2",
+      "tatqa:train:da7d5d5e-2bd2-4f2c-bafd-96f13cbcefcc",
+      "tatqa:train:1cd257c6-d908-49d7-81aa-fdf6ddc24569",
+      "tatqa:train:a04af10c-2182-4b75-b70c-751065c7f0dc",
+      "tatqa:train:33fead4b-2f0c-4dd3-a95f-da7b84111861",
+      "tatqa:train:791ef16d-c4e7-4045-bc37-1fc333d353ba",
+      "tatqa:train:b918b73e-c954-46bf-9520-723c64d1a859",
+      "tatqa:train:925fc592-e42f-49c5-80c3-a3191ce3a412",
+      "tatqa:train:e7b428ad-5a8d-4508-a71e-02a6053caf46",
+      "tatqa:train:08b0a9d1-7080-4412-8080-f5b5114ebd4a",
+      "tatqa:train:a4ec14c0-8bce-4d58-9e83-f6b005682d54",
+      "tatqa:train:a70727ea-baf8-4ac7-97d7-62d44e5bb2a4"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what was the change in raw materials between <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the <num> deferred tax on overseas earnings, excluding the <num>€m charge relating to the combination of vodafone india with idea cellular?",
+        "answer_from": "table-text",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "how much money has not been committed as of december <num>, <num> for total available lines of credit?",
+        "answer_from": "table-text",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the difference in the ebitda between software solutions and data and analytics?",
+        "answer_from": "table-text",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the difference between total assets and total goodwill?",
+        "answer_from": "table-text",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the difference in depreciation and amortization between software solutions and corporate and other?",
+        "answer_from": "table-text",
+        "scale": "million",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for an absolute difference or change between two values.",
+    "evidence_guidance": [
+      "Locate two comparable values for the same metric or requested pair.",
+      "Subtract in the direction implied by the question wording.",
+      "Combine table values with nearby textual qualifiers when the evidence source is mixed."
+    ],
+    "operand_roles": [
+      "minuend_value",
+      "subtrahend_value",
+      "metric_or_item_label"
+    ],
+    "answer_form": "Return the absolute difference in the requested unit.",
+    "scale_notes": [
+      "Express the answer in million units when the task requires that scale."
+    ],
+    "risk_notes": [
+      "Check whether the wording asks for increase, decrease, or simple difference.",
+      "Do not convert to percent unless explicitly requested."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:difference\nEvidence source: table-text\nScale: million\nDescription: Use when the question asks for an absolute difference or change between two values.\nEvidence guidance: Locate two comparable values for the same metric or requested pair. ; Subtract in the direction implied by the question wording. ; Combine table values with nearby textual qualifiers when the evidence source is mixed.\nOperand roles: minuend_value ; subtrahend_value ; metric_or_item_label\nAnswer form: Return the absolute difference in the requested unit.\nScale notes: Express the answer in million units when the task requires that scale.\nRisks: Check whether the wording asks for increase, decrease, or simple difference. ; Do not convert to percent unless explicitly requested."
+  },
+  {
+    "strategy_id": "tatqa_strategy:3036387122e820a5",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:ratio",
+    "schema_key": "arithmetic|arithmetic:ratio|from=table|scale=percent",
+    "answer_from": "table",
+    "scale": "percent",
+    "source_support_count": 313,
+    "source_sample_ids": [
+      "tatqa:train:e247fa90-8c58-4582-8a69-fcc098340c41",
+      "tatqa:train:d27c3a03-0030-4fdb-b7ca-8e1eb499feba",
+      "tatqa:train:653a69a6-cd74-4d67-b1db-9e31a0f2aa8d",
+      "tatqa:train:664bb285-5d67-45f0-916e-0ec7ec3188eb",
+      "tatqa:train:c9c00b29-c397-4f31-a356-ef9bc68d07ed",
+      "tatqa:train:94c42d23-79f6-44ea-9282-35cca09250c7",
+      "tatqa:train:775e8c59-63c8-48ca-845a-1227125e06ea",
+      "tatqa:train:15d22681-9344-4f4c-802e-8efe7974efcb",
+      "tatqa:train:1877d0a3-86a2-4bc4-84c0-d0ef3926414c",
+      "tatqa:train:e47b7f46-e159-401d-8642-1fdb455c6bb1",
+      "tatqa:train:9952be36-ae20-4c23-a3f3-0362cfe2b4cb",
+      "tatqa:train:10ee265b-ed53-464f-ac00-f94e096c8bde",
+      "tatqa:train:14396f6f-bfc5-4e8e-88d8-9452bb21cb95",
+      "tatqa:train:58d222a8-62db-4bfc-b482-e122aa8f8fc6",
+      "tatqa:train:1ff18612-f679-43dc-b015-b2de291063a6",
+      "tatqa:train:5774b133-be7d-4c12-b0b8-66cd0a573fe9",
+      "tatqa:train:b7e32477-3f78-48df-ab59-2764f0e097e9",
+      "tatqa:train:679adde7-2617-49e3-81f5-031a07677719",
+      "tatqa:train:a347ddd0-24f2-43c2-a309-aee12931b3ac",
+      "tatqa:train:b7ab765e-f296-46b6-87a2-b97737cd1115"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what is the percentage of used lines of credit to total available lines of credit as of december <num>, <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what percentage of cloud & cognitive software external revenue was transaction processing platforms in <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "how many percent of total segment revenues is the vas segment revenue?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "how many percent of total depreciation was the vas depreciation?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "how many percent of total amortisation was the vas amortisation?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the percentage constitution of the commitments for operating leases for year ending <num> among the total commitments for operating leases?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for one quantity divided by another quantity.",
+    "evidence_guidance": [
+      "Locate numerator and denominator values from the requested evidence source.",
+      "Confirm both operands use compatible units before division."
+    ],
+    "operand_roles": [
+      "numerator_value",
+      "denominator_value",
+      "ratio_metric"
+    ],
+    "answer_form": "Return the quotient or percentage according to the requested scale.",
+    "scale_notes": [
+      "Treat percent output carefully; distinguish percentage points from percent change."
+    ],
+    "risk_notes": [
+      "Do not swap numerator and denominator.",
+      "Watch for percent versus raw ratio output."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:ratio\nEvidence source: table\nScale: percent\nDescription: Use when the question asks for one quantity divided by another quantity.\nEvidence guidance: Locate numerator and denominator values from the requested evidence source. ; Confirm both operands use compatible units before division.\nOperand roles: numerator_value ; denominator_value ; ratio_metric\nAnswer form: Return the quotient or percentage according to the requested scale.\nScale notes: Treat percent output carefully; distinguish percentage points from percent change.\nRisks: Do not swap numerator and denominator. ; Watch for percent versus raw ratio output."
+  },
+  {
+    "strategy_id": "tatqa_strategy:c267579c9eac5a26",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "span_lookup",
+    "family": "span_lookup:table:scale=million",
+    "schema_key": "span_lookup|span_lookup:table:scale=million|from=table|scale=million",
+    "answer_from": "table",
+    "scale": "million",
+    "source_support_count": 290,
+    "source_sample_ids": [
+      "tatqa:train:472e6515-b67f-401c-b7b7-2a3bf499a9d7",
+      "tatqa:train:454fe6ef-138e-4541-9855-2b26ea94b464",
+      "tatqa:train:86a0370b-6e47-4987-b066-00b190b527c1",
+      "tatqa:train:e2084d2f-fb7b-4098-b00b-4f6e1c6735e8",
+      "tatqa:train:db0d0837-fcc1-4f9c-9eb7-b7ed33c167fe",
+      "tatqa:train:04c32463-200c-49c8-8ac4-91b2fcc93476",
+      "tatqa:train:06d2c49f-1e1a-4b0c-8806-ca59684b70f2",
+      "tatqa:train:b32ebe59-91be-47a3-8ccd-f70f4c2f0ff7",
+      "tatqa:train:9e23566f-2072-4489-92db-c93bc42f7a10",
+      "tatqa:train:588d7900-a924-486c-885d-7250ae3a2594",
+      "tatqa:train:e26d0c78-86ae-4180-b8ed-0c8c77d5d13e",
+      "tatqa:train:7108fbae-7a5f-477f-9f6f-aa055bb5701f",
+      "tatqa:train:c095a6f0-14eb-438f-a337-7ed5658db35d",
+      "tatqa:train:aa5d9c45-f257-45b0-b08c-c8a8ea33bdd6",
+      "tatqa:train:26011926-144c-4da4-a060-e2463fe72c29",
+      "tatqa:train:495af2b8-ee5a-4a88-ad2e-394bf4ea37ec",
+      "tatqa:train:e43d140b-5ea5-42f5-a8d1-cd262a1bf1a5",
+      "tatqa:train:4b2450d6-9328-44ac-b74d-dc51dcefdfad",
+      "tatqa:train:1505f4cb-e89e-4621-974d-5f8650104b55",
+      "tatqa:train:d8dcdb9c-4c01-4879-915f-5b02f3f471c6"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "how much is the <num> aggregated expected income expense ?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the foreign exchange forward contracts sold as of march <num>, <num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "how much is the vas segment revenue?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "how much is the vas gross profit?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "how much is the vas depreciation?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the amount of contract assets in <num>?",
+        "answer_from": "table",
+        "scale": "million",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for a specific financial metric value that is directly stated in a table, without requiring any calculation or comparison.",
+    "evidence_guidance": [
+      "Locate the table row that matches the metric label (e.g., revenue, expense, asset) and the relevant reporting period or segment.",
+      "Identify the column header that corresponds to the requested time period or category.",
+      "Extract the numeric value from the intersecting cell, ensuring it is in the correct scale."
+    ],
+    "operand_roles": [
+      "metric label: the financial item being queried (e.g., revenue, profit, asset).",
+      "reporting period: the time frame or date for which the value is requested.",
+      "segment or category: optional qualifier such as a business segment or contract type."
+    ],
+    "answer_form": "A single numeric value expressed in the specified scale (e.g., millions), taken directly from a table cell.",
+    "scale_notes": [
+      "All values are reported in the specified scale (e.g., millions); do not convert unless explicitly stated.",
+      "Check if the table header indicates a different scale than the question; if so, adjust accordingly.",
+      "Be cautious of values that are already in absolute units but labeled as millions in the question."
+    ],
+    "risk_notes": [
+      "Ensure the correct row is selected when multiple rows share similar labels (e.g., gross vs. net).",
+      "Verify the scale (e.g., millions vs. thousands) to avoid off-by-factor errors.",
+      "Do not confuse table values with values from accompanying text or notes."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "858dbcf4c39f92ba7d3c0577add748e57dc44876b34f9e69210a994ba740e5e8",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: span_lookup\nFamily: span_lookup:table:scale=million\nEvidence source: table\nScale: million\nDescription: Use when the question asks for a specific financial metric value that is directly stated in a table, without requiring any calculation or comparison.\nEvidence guidance: Locate the table row that matches the metric label (e.g., revenue, expense, asset) and the relevant reporting period or segment. ; Identify the column header that corresponds to the requested time period or category. ; Extract the numeric value from the intersecting cell, ensuring it is in the correct scale.\nOperand roles: metric label: the financial item being queried (e.g., revenue, profit, asset). ; reporting period: the time frame or date for which the value is requested. ; segment or category: optional qualifier such as a business segment or contract type.\nAnswer form: A single numeric value expressed in the specified scale (e.g., millions), taken directly from a table cell.\nScale notes: All values are reported in the specified scale (e.g., millions); do not convert unless explicitly stated. ; Check if the table header indicates a different scale than the question; if so, adjust accordingly. ; Be cautious of values that are already in absolute units but labeled as millions in the question.\nRisks: Ensure the correct row is selected when multiple rows share similar labels (e.g., gross vs. net). ; Verify the scale (e.g., millions vs. thousands) to avoid off-by-factor errors. ; Do not confuse table values with values from accompanying text or notes."
+  },
+  {
+    "strategy_id": "tatqa_strategy:d46acc82b15f5f59",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:difference",
+    "schema_key": "arithmetic|arithmetic:difference|from=table|scale=none",
+    "answer_from": "table",
+    "scale": "none",
+    "source_support_count": 273,
+    "source_sample_ids": [
+      "tatqa:train:24e5d679-e4f1-47b4-a0ca-77550ef8c4be",
+      "tatqa:train:d9b0bdec-a7fe-4a48-9762-94cf0ab84a75",
+      "tatqa:train:f4abf4ae-2015-4e76-bbfb-c157c005e96d",
+      "tatqa:train:2653a50b-6ee7-4b05-ab4c-89166cc5ae25",
+      "tatqa:train:e8e6c720-7a8e-4b08-9ea8-d1cf1274b205",
+      "tatqa:train:fa09db3f-9a02-4224-8e6e-270a2a174a48",
+      "tatqa:train:a2420f39-7430-4b9e-a076-c75223f6280d",
+      "tatqa:train:d5e8cfb8-7686-4b87-beb0-7dae288e7f71",
+      "tatqa:train:b4166246-1d4e-4b3f-9ef2-988278df41b6",
+      "tatqa:train:a376d2ca-8bdf-4362-a765-57e1d6bc1598",
+      "tatqa:train:ef0cd7b1-edd5-446b-8557-1d15d825b518",
+      "tatqa:train:1788c0f3-62d3-4cae-8033-bc4525f1becc",
+      "tatqa:train:646aab9f-4fe4-405e-8e45-a9d968bf1fcc",
+      "tatqa:train:80cce19b-29b2-47ba-bc15-ee8c6673242f",
+      "tatqa:train:6a2ee20a-79d6-4aa6-9fcb-512ecf694950",
+      "tatqa:train:1525bab0-43e2-4ed0-a13c-641d671741ea",
+      "tatqa:train:8ef11c10-24d1-4bf3-8997-e7f6508cfe77",
+      "tatqa:train:106e362b-8b6c-43da-afa9-3e0d446f4478",
+      "tatqa:train:da569220-7e62-4e82-83e3-c5c926ff4dde",
+      "tatqa:train:eb215d71-559e-41b3-a75b-ad06ae9c7100"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what was the increase / (decrease) in the net additions of primary service units in <num> from <num>?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the difference in pension amount if the future salary growth had a <num> increase and a <num> decrease?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the difference in pension amount if the discount rate had a <num> increase and a <num> decrease?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the change in metro ag in <num> from <num>?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the change in balance at start of year from <num> to <num>?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the increase / (decrease) in net additions (losses) for the primary service units from <num> aug <num> to <num> aug <num>?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for an absolute difference or change between two values.",
+    "evidence_guidance": [
+      "Locate two comparable values for the same metric or requested pair.",
+      "Subtract in the direction implied by the question wording."
+    ],
+    "operand_roles": [
+      "minuend_value",
+      "subtrahend_value",
+      "metric_or_item_label"
+    ],
+    "answer_form": "Return the absolute difference in the requested unit.",
+    "scale_notes": [
+      "Preserve the answer scale requested by the question and evidence."
+    ],
+    "risk_notes": [
+      "Check whether the wording asks for increase, decrease, or simple difference.",
+      "Do not convert to percent unless explicitly requested."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:difference\nEvidence source: table\nScale: none\nDescription: Use when the question asks for an absolute difference or change between two values.\nEvidence guidance: Locate two comparable values for the same metric or requested pair. ; Subtract in the direction implied by the question wording.\nOperand roles: minuend_value ; subtrahend_value ; metric_or_item_label\nAnswer form: Return the absolute difference in the requested unit.\nScale notes: Preserve the answer scale requested by the question and evidence.\nRisks: Check whether the wording asks for increase, decrease, or simple difference. ; Do not convert to percent unless explicitly requested."
+  },
+  {
+    "strategy_id": "tatqa_strategy:bcd50b3d6f019fb3",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:division_composition",
+    "schema_key": "arithmetic|arithmetic:division_composition|from=table|scale=none",
+    "answer_from": "table",
+    "scale": "none",
+    "source_support_count": 222,
+    "source_sample_ids": [
+      "tatqa:train:edfade0f-df94-4bdb-85b2-0b9862dae1ee",
+      "tatqa:train:c502823a-fa1d-49e3-b14e-6973d72afc2f",
+      "tatqa:train:1538ad85-dec0-4047-8242-0d194ff30942",
+      "tatqa:train:64a6c46c-a5cd-4065-bbc2-3156a4d50eda",
+      "tatqa:train:bb8e40ba-814b-4e93-9def-4d713369f1da",
+      "tatqa:train:7bf374f2-55d4-4d8c-896e-74e740e092fe",
+      "tatqa:train:80fd3023-eb50-4db7-a299-ffcd06d604fa",
+      "tatqa:train:d3b0cafc-c9a3-45f5-aa55-d0615c139462",
+      "tatqa:train:25f86de2-aa95-4872-afc3-4a3fb3ebbb90",
+      "tatqa:train:b6efcb03-9a41-47c7-9241-66a0d3a4de57",
+      "tatqa:train:bc012d28-d692-4c81-bf38-ba522521a229",
+      "tatqa:train:bb358043-b480-47e9-9da4-48bb3d75fc67",
+      "tatqa:train:a8523b56-e4c4-4abd-b86e-b48e9b0cd5ba",
+      "tatqa:train:1ee05281-0e22-4600-9ddc-09ae1aeada6e",
+      "tatqa:train:d49539d7-ec5c-4191-b189-d30e2254ca67",
+      "tatqa:train:a38a3eb6-aa72-4ea7-a0c8-f43b168a5f3f",
+      "tatqa:train:b332505c-03f8-4519-acc8-adb2784a38c4",
+      "tatqa:train:f4518ad2-3cf5-4cad-8b8d-ac98a45d4917",
+      "tatqa:train:3d2d4b31-1c36-4526-a31e-6d0a2b5cef96",
+      "tatqa:train:b27aeb06-3f43-49c4-9b7e-07579939bd94"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what was the average increase / (decrease) in the internet service customers between <num> and <num>?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the average increase / (decrease) in video service customers between <num> and <num>?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the average expected life over <num> and <num>?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the proportion of deferred license fees and nre revenues over total deferred revenues for the year ended december <num>, <num>?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the average net additions (losses) for internet service customers?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the average net additions (losses) for video service customers?",
+        "answer_from": "table",
+        "scale": "none",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question requires a composed arithmetic calculation following the frozen operator sequence.",
+    "evidence_guidance": [
+      "Locate all operands required by the normalized formula.",
+      "Execute operations in the preserved parenthesis/order structure."
+    ],
+    "operand_roles": [
+      "formula_operands",
+      "intermediate_values",
+      "final_result"
+    ],
+    "answer_form": "Return the final numeric result in the requested scale.",
+    "scale_notes": [
+      "Preserve the answer scale requested by the question and evidence."
+    ],
+    "risk_notes": [
+      "Respect operation order and parentheses.",
+      "Check unit compatibility before combining operands."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:division_composition\nEvidence source: table\nScale: none\nDescription: Use when the question requires a composed arithmetic calculation following the frozen operator sequence.\nEvidence guidance: Locate all operands required by the normalized formula. ; Execute operations in the preserved parenthesis/order structure.\nOperand roles: formula_operands ; intermediate_values ; final_result\nAnswer form: Return the final numeric result in the requested scale.\nScale notes: Preserve the answer scale requested by the question and evidence.\nRisks: Respect operation order and parentheses. ; Check unit compatibility before combining operands."
+  },
+  {
+    "strategy_id": "tatqa_strategy:0cc1a545069da2a8",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:division_composition",
+    "schema_key": "arithmetic|arithmetic:division_composition|from=table|scale=thousand",
+    "answer_from": "table",
+    "scale": "thousand",
+    "source_support_count": 221,
+    "source_sample_ids": [
+      "tatqa:train:125b026f-2d4f-496e-abf7-6635c605d7ee",
+      "tatqa:train:c992503d-385a-4458-9623-9d5988e17bc9",
+      "tatqa:train:031cd280-2205-4949-9d7c-e9651179341e",
+      "tatqa:train:918c1037-ee49-4906-93d5-1517bfb17825",
+      "tatqa:train:9a52b937-14f4-4a2b-8685-524ff2187057",
+      "tatqa:train:9d951112-ed87-4794-84d1-ebcdc32e8516",
+      "tatqa:train:76963240-fea9-43fc-a228-da19a52f4c18",
+      "tatqa:train:69704df1-624e-4f15-af1c-173ed7f96c0a",
+      "tatqa:train:ac7f697b-455e-48d6-8d06-038619de3a93",
+      "tatqa:train:b11bd2c7-36da-437a-af89-face31263fee",
+      "tatqa:train:eda72068-7f51-4167-be0d-e685a748ec47",
+      "tatqa:train:2fa73896-2c1a-430f-8024-123ec374657b",
+      "tatqa:train:d9218c5e-78b9-436c-b54f-e41ab63515b4",
+      "tatqa:train:b0010819-ca71-411a-81ba-fe3a4e3989f5",
+      "tatqa:train:2192f39a-be86-43f9-9c50-ca014fba19cc",
+      "tatqa:train:35c016f0-c636-410e-80c0-3bd7d4b98406",
+      "tatqa:train:36915333-341a-49b2-a1de-8ce136c1e87c",
+      "tatqa:train:b79590ed-c3b7-4f2a-9be5-c15d5d61f22d",
+      "tatqa:train:639ff7be-b1c7-4ab7-a6d4-8f55266b65ee",
+      "tatqa:train:4b7f0d44-b976-4e71-9e11-a8186788f749"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what is the <entity>'s average revenue in <num> and <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the <entity>'s average cost of goods sold in <num> and <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the <entity>'s average gross profit in <num> and <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the average unamortized debt discount for <num> and <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the average charter aircraft expense for fiscal years <num> and <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the average employee stock ownership plan (\"esop\") expense for fiscal years <num> and <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question requires a composed arithmetic calculation following the frozen operator sequence.",
+    "evidence_guidance": [
+      "Locate all operands required by the normalized formula.",
+      "Execute operations in the preserved parenthesis/order structure."
+    ],
+    "operand_roles": [
+      "formula_operands",
+      "intermediate_values",
+      "final_result"
+    ],
+    "answer_form": "Return the final numeric result in the requested scale.",
+    "scale_notes": [
+      "Express the answer in thousand units when the task requires that scale."
+    ],
+    "risk_notes": [
+      "Respect operation order and parentheses.",
+      "Check unit compatibility before combining operands."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:division_composition\nEvidence source: table\nScale: thousand\nDescription: Use when the question requires a composed arithmetic calculation following the frozen operator sequence.\nEvidence guidance: Locate all operands required by the normalized formula. ; Execute operations in the preserved parenthesis/order structure.\nOperand roles: formula_operands ; intermediate_values ; final_result\nAnswer form: Return the final numeric result in the requested scale.\nScale notes: Express the answer in thousand units when the task requires that scale.\nRisks: Respect operation order and parentheses. ; Check unit compatibility before combining operands."
+  },
+  {
+    "strategy_id": "tatqa_strategy:2d0e12c81df1a24c",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "span_lookup",
+    "family": "span_lookup:table:scale=thousand",
+    "schema_key": "span_lookup|span_lookup:table:scale=thousand|from=table|scale=thousand",
+    "answer_from": "table",
+    "scale": "thousand",
+    "source_support_count": 219,
+    "source_sample_ids": [
+      "tatqa:train:f4410a2a-6ce4-484c-ba08-0261a6c74893",
+      "tatqa:train:b3091542-8205-4661-9a7d-4d466cdf3134",
+      "tatqa:train:9ad8bdbc-9a6d-4076-8d9c-51f83f66b4e9",
+      "tatqa:train:04cc9d38-f0e7-4315-960a-e76f05eefed5",
+      "tatqa:train:9f415b93-4a5f-48e1-a0ea-9ef01a1f23bd",
+      "tatqa:train:af5c91cd-f088-4f64-bec0-dd47230d6ee3",
+      "tatqa:train:5d1c6495-ee76-4572-b920-1462c4245a4d",
+      "tatqa:train:5d61ef61-0708-43e7-b5d1-eebfab9d3b7b",
+      "tatqa:train:66d2343a-29b3-47ea-ade5-cf2d54682363",
+      "tatqa:train:85e595ae-e3b8-46cd-b133-2572adbd836d",
+      "tatqa:train:ef1ddca8-fe3a-486b-9453-16dfaf21ecdf",
+      "tatqa:train:346a81b6-0808-471c-acc7-921ccb540386",
+      "tatqa:train:2335a2d6-b4f9-40fd-82a9-3e1b346e8cb6",
+      "tatqa:train:61ad62bd-4e07-43b6-8420-a5f76c131060",
+      "tatqa:train:28141973-7ae4-4107-acbf-9049508d083a",
+      "tatqa:train:1678b097-a065-49c3-9e16-15e51bff64da",
+      "tatqa:train:07355bbc-e0f7-4c33-a571-dae48ab61794",
+      "tatqa:train:52b44c84-d797-4acd-8eec-5c769054428f",
+      "tatqa:train:c21534d2-c16f-4fc2-a57e-71989a8a9686",
+      "tatqa:train:314b73e9-2b2f-489b-bf7d-1cfe8704a1ac"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "how much was the closing net book amount for software under development in <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the total cost for <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the net carrying amount of long-term debt in <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the total intangible assets in <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the research and development expense in <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what are the total commitments towards operating leases?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for a specific financial figure that is directly stated in a table cell, with no calculation or comparison required.",
+    "evidence_guidance": [
+      "Locate the table row whose label matches the metric or item named in the question.",
+      "Identify the column corresponding to the reporting period or category mentioned in the question.",
+      "Read the value at the intersection of that row and column; verify the unit/scale from the table header or context."
+    ],
+    "operand_roles": [
+      "metric label: the financial item or account name to look up (e.g., a type of asset, expense, or liability).",
+      "reporting period: the time frame or category that selects the correct column.",
+      "unit/scale indicator: the implicit or explicit multiplier (e.g., thousands) that must be preserved in the answer."
+    ],
+    "answer_form": "A single numeric value expressed in the stated unit (e.g., thousands), without additional commentary.",
+    "scale_notes": [
+      "Always report the value in the same scale as presented in the table (e.g., thousands).",
+      "Do not convert to other units unless explicitly asked.",
+      "If the table header indicates a different scale than the question implies, follow the table's scale."
+    ],
+    "risk_notes": [
+      "Do not confuse similar row labels; check for exact wording or footnotes.",
+      "Ensure the correct column is chosen when multiple periods or categories are present.",
+      "Do not apply any arithmetic; the answer must be the raw cell value."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "4af639827188fa6c7e9d8c163d550298b44c17e5c9c1ae98564bd2c19134164a",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: span_lookup\nFamily: span_lookup:table:scale=thousand\nEvidence source: table\nScale: thousand\nDescription: Use when the question asks for a specific financial figure that is directly stated in a table cell, with no calculation or comparison required.\nEvidence guidance: Locate the table row whose label matches the metric or item named in the question. ; Identify the column corresponding to the reporting period or category mentioned in the question. ; Read the value at the intersection of that row and column; verify the unit/scale from the table header or context.\nOperand roles: metric label: the financial item or account name to look up (e.g., a type of asset, expense, or liability). ; reporting period: the time frame or category that selects the correct column. ; unit/scale indicator: the implicit or explicit multiplier (e.g., thousands) that must be preserved in the answer.\nAnswer form: A single numeric value expressed in the stated unit (e.g., thousands), without additional commentary.\nScale notes: Always report the value in the same scale as presented in the table (e.g., thousands). ; Do not convert to other units unless explicitly asked. ; If the table header indicates a different scale than the question implies, follow the table's scale.\nRisks: Do not confuse similar row labels; check for exact wording or footnotes. ; Ensure the correct column is chosen when multiple periods or categories are present. ; Do not apply any arithmetic; the answer must be the raw cell value."
+  },
+  {
+    "strategy_id": "tatqa_strategy:300a3081e5a46e73",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "multi_span_lookup",
+    "family": "multi_span_lookup:table-text:scale=thousand",
+    "schema_key": "multi_span_lookup|multi_span_lookup:table-text:scale=thousand|from=table-text|scale=thousand",
+    "answer_from": "table-text",
+    "scale": "thousand",
+    "source_support_count": 218,
+    "source_sample_ids": [
+      "tatqa:train:d00c1841-9ef2-426d-b16b-903b6f5b0a78",
+      "tatqa:train:7446127e-68e4-4d89-8e6d-b20085019e32",
+      "tatqa:train:ab977096-61e7-46d3-a120-6cdbcf00740c",
+      "tatqa:train:4f8f575d-d1c3-429f-ac18-1cf0beef2c54",
+      "tatqa:train:eac9a6a8-dca4-41a0-81d6-41a846aa78a2",
+      "tatqa:train:8bbd7b05-c59e-4a1c-a457-255cfbaee259",
+      "tatqa:train:ba04e756-de36-451e-8224-fa7e4f5706e7",
+      "tatqa:train:fe239165-ebbf-4eaa-8b6c-6925b6a721a2",
+      "tatqa:train:599d5a31-f968-47b6-8b9d-a67a9c9e280e",
+      "tatqa:train:9fc74fd9-bae1-421a-9a48-b91b01abe241",
+      "tatqa:train:938c285f-27e3-4274-baf9-74c3b6e61575",
+      "tatqa:train:48750149-0e75-40b3-a6ac-66ac2b4425c1",
+      "tatqa:train:bd6df988-8618-4d50-b04d-f6dd124b16e7",
+      "tatqa:train:4ffbb592-21cc-4ea6-84b3-78b0e5240f13",
+      "tatqa:train:fadce2ab-bef5-4a96-b6ae-c17185521d3c",
+      "tatqa:train:dc53690e-8a82-43b5-ab8e-6a31c4692ce1",
+      "tatqa:train:9d0b3c38-acbb-4ed7-97f0-94671b801214",
+      "tatqa:train:f74103e3-4c35-4156-83a4-340ac44d9153",
+      "tatqa:train:2681739e-ce1f-4ae0-9bd2-e26aea260e5f",
+      "tatqa:train:66199eac-c59e-4364-bc7a-67b2ffecd116"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what is the total asia pacific revenues in <num> and <num> respectively?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the total europe revenues in <num> and <num> respectively?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what are the respective federal income tax expense at statutory rates in <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what are the respective state income taxes, net of federal benefit in <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what are the respective revenues from operations in <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what are the respective cost of goods sold from operations in <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when a question asks for the same financial metric (e.g., revenue, tax expense, cost) for two or more distinct reporting periods, and the values are found in a table with possible supporting text.",
+    "evidence_guidance": [
+      "Locate the table rows or columns that match the metric label (e.g., 'revenues', 'income tax expense') and the reporting period identifiers.",
+      "If the table lacks a value for a period, search the surrounding text for the same metric and period combination.",
+      "Ensure the metric label is exact or semantically equivalent (e.g., 'total revenues' vs 'revenues')."
+    ],
+    "operand_roles": [
+      "metric label: the financial item being queried (e.g., revenue, tax expense, cost).",
+      "reporting period: the time identifiers (e.g., fiscal years) for which values are requested.",
+      "value list: the set of numeric figures to extract, one per period, in the order asked."
+    ],
+    "answer_form": "Report the requested metric values for each specified reporting period, in the same order as the periods are asked, separated by commas or listed clearly.",
+    "scale_notes": [
+      "All values are reported in thousands; do not convert or add extra zeros.",
+      "When extracting, keep the raw numeric value as it appears; do not apply any scaling.",
+      "If the table uses a different unit (e.g., millions), note the discrepancy but do not adjust unless explicitly instructed."
+    ],
+    "risk_notes": [
+      "Do not confuse similar metric labels (e.g., 'total revenues' vs 'net revenues').",
+      "Ensure the period order matches the question order; swapping values is a common error.",
+      "If a value is missing in the table, do not infer from unrelated rows; check text carefully."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "d29e5fa0b5d6cf82b3e7e77192fa9ca89d1da709351de807e4023933ffefeb02",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: multi_span_lookup\nFamily: multi_span_lookup:table-text:scale=thousand\nEvidence source: table-text\nScale: thousand\nDescription: Use when a question asks for the same financial metric (e.g., revenue, tax expense, cost) for two or more distinct reporting periods, and the values are found in a table with possible supporting text.\nEvidence guidance: Locate the table rows or columns that match the metric label (e.g., 'revenues', 'income tax expense') and the reporting period identifiers. ; If the table lacks a value for a period, search the surrounding text for the same metric and period combination. ; Ensure the metric label is exact or semantically equivalent (e.g., 'total revenues' vs 'revenues').\nOperand roles: metric label: the financial item being queried (e.g., revenue, tax expense, cost). ; reporting period: the time identifiers (e.g., fiscal years) for which values are requested. ; value list: the set of numeric figures to extract, one per period, in the order asked.\nAnswer form: Report the requested metric values for each specified reporting period, in the same order as the periods are asked, separated by commas or listed clearly.\nScale notes: All values are reported in thousands; do not convert or add extra zeros. ; When extracting, keep the raw numeric value as it appears; do not apply any scaling. ; If the table uses a different unit (e.g., millions), note the discrepancy but do not adjust unless explicitly instructed.\nRisks: Do not confuse similar metric labels (e.g., 'total revenues' vs 'net revenues'). ; Ensure the period order matches the question order; swapping values is a common error. ; If a value is missing in the table, do not infer from unrelated rows; check text carefully."
+  },
+  {
+    "strategy_id": "tatqa_strategy:3868af8a62037d57",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "count",
+    "family": "count:table-text:scale=none",
+    "schema_key": "count|count:table-text:scale=none|from=table-text|scale=none",
+    "answer_from": "table-text",
+    "scale": "none",
+    "source_support_count": 213,
+    "source_sample_ids": [
+      "tatqa:train:2965da5c-4d2a-402c-85c6-c1514f998285",
+      "tatqa:train:34c51b4d-4240-4767-b57c-363250b74a64",
+      "tatqa:train:cf515095-b229-46d5-992c-0eb53db58776",
+      "tatqa:train:4ea20517-84a8-41c2-b479-9ba0e0f5c644",
+      "tatqa:train:aee40f29-4bb1-4d0b-810a-01404c52d991",
+      "tatqa:train:2bcad99d-c7b7-4751-8a73-5ff484496a59",
+      "tatqa:train:57057d73-cc92-4fc3-bd87-b6e778a81f3b",
+      "tatqa:train:ba403980-dfb2-4223-8dbe-c66f2722ca1c",
+      "tatqa:train:30f776dd-c54b-43ca-9de5-75ed0892287c",
+      "tatqa:train:8230c207-cb95-4373-95be-1b1be0c5a653",
+      "tatqa:train:f86b1035-3bfb-4489-8734-2f6c49e548a1",
+      "tatqa:train:df22f32b-c85a-4c5b-beb6-856eaec66be9",
+      "tatqa:train:286b04f6-47b5-46a6-8da4-687b619c18c3",
+      "tatqa:train:550700ee-01d2-4cfc-b8f0-1560d3fde1fd",
+      "tatqa:train:a1b054d4-cba8-4c3b-8712-7d926eabbf20",
+      "tatqa:train:98eb8faf-2ea6-4769-9a2a-1a5d0c1e32af",
+      "tatqa:train:67526166-f904-424c-ad4f-a1ef67b96f71",
+      "tatqa:train:45212b39-be0b-47c4-a3b2-bde7e3aaa2c5",
+      "tatqa:train:224ddd6b-995b-408d-96d3-844651396705",
+      "tatqa:train:74727dc1-d48a-4232-83d6-9101f039aca2"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "how many product categories are available?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "how many years did the amount of finished goods exceed <num> million?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "in <num>, how many geographic regions have total revenues of more than <num> thousand?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "in <num>, how many countries have revenues of less than <num> thousand?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "how many years did accrued expenses exceed <num> thousand?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "how many years did total cost of revenue exceed <num> thousand?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for a count of distinct items (e.g., years, regions, product categories) that meet a numeric threshold or are simply listed, and the answer must be derived from table values possibly with supporting text.",
+    "evidence_guidance": [
+      "Locate the table rows or columns that correspond to the item type being counted (e.g., each year, each region, each category).",
+      "Identify the numeric column or row that contains the metric to be compared against the threshold (e.g., revenue, cost, expense).",
+      "If the table lacks explicit values, scan the surrounding text for the same metric and item labels to fill gaps.",
+      "Count only those items that satisfy the condition (e.g., exceed or fall below a given threshold) or that are explicitly listed as available."
+    ],
+    "operand_roles": [
+      "Item type: the category of entities being counted (e.g., years, regions, product categories).",
+      "Metric label: the financial measure to evaluate (e.g., revenue, cost, expense).",
+      "Threshold condition: the comparison criterion (e.g., greater than, less than) with a numeric bound.",
+      "Reporting period: the time frame or context (e.g., a specific year) that restricts which items are considered."
+    ],
+    "answer_form": "A non-negative integer that counts the number of qualifying items (e.g., years, regions, categories) that satisfy a stated condition.",
+    "scale_notes": [
+      "The final answer is a unitless integer; no scale prefix is applied.",
+      "When comparing table values to a threshold, verify that both are expressed in the same unit (e.g., thousands) to avoid misclassification.",
+      "If the question mentions a unit (e.g., 'thousand' or 'million'), ensure the threshold is interpreted in that same unit; do not convert unless explicitly required."
+    ],
+    "risk_notes": [
+      "Do not confuse the count with the sum or average of the metric values; only the number of qualifying items is needed.",
+      "Ensure the condition is applied consistently across all items; missing values in the table may require text evidence to avoid undercounting.",
+      "Watch for units (e.g., thousands vs. millions) when comparing to the threshold; convert all values to the same scale before counting."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "8794c37d2560570d78d62264c41599f24214f9a53adc67ccbd57bc6bd849a614",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: count\nFamily: count:table-text:scale=none\nEvidence source: table-text\nScale: none\nDescription: Use when the question asks for a count of distinct items (e.g., years, regions, product categories) that meet a numeric threshold or are simply listed, and the answer must be derived from table values possibly with supporting text.\nEvidence guidance: Locate the table rows or columns that correspond to the item type being counted (e.g., each year, each region, each category). ; Identify the numeric column or row that contains the metric to be compared against the threshold (e.g., revenue, cost, expense). ; If the table lacks explicit values, scan the surrounding text for the same metric and item labels to fill gaps. ; Count only those items that satisfy the condition (e.g., exceed or fall below a given threshold) or that are explicitly listed as available.\nOperand roles: Item type: the category of entities being counted (e.g., years, regions, product categories). ; Metric label: the financial measure to evaluate (e.g., revenue, cost, expense). ; Threshold condition: the comparison criterion (e.g., greater than, less than) with a numeric bound. ; Reporting period: the time frame or context (e.g., a specific year) that restricts which items are considered.\nAnswer form: A non-negative integer that counts the number of qualifying items (e.g., years, regions, categories) that satisfy a stated condition.\nScale notes: The final answer is a unitless integer; no scale prefix is applied. ; When comparing table values to a threshold, verify that both are expressed in the same unit (e.g., thousands) to avoid misclassification. ; If the question mentions a unit (e.g., 'thousand' or 'million'), ensure the threshold is interpreted in that same unit; do not convert unless explicitly required.\nRisks: Do not confuse the count with the sum or average of the metric values; only the number of qualifying items is needed. ; Ensure the condition is applied consistently across all items; missing values in the table may require text evidence to avoid undercounting. ; Watch for units (e.g., thousands vs. millions) when comparing to the threshold; convert all values to the same scale before counting."
+  },
+  {
+    "strategy_id": "tatqa_strategy:a31c1e6c2eab56ab",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "multi_span_lookup",
+    "family": "multi_span_lookup:text:scale=none",
+    "schema_key": "multi_span_lookup|multi_span_lookup:text:scale=none|from=text|scale=none",
+    "answer_from": "text",
+    "scale": "none",
+    "source_support_count": 208,
+    "source_sample_ids": [
+      "tatqa:train:f1eeaafb-40e5-47aa-8614-5667480515b0",
+      "tatqa:train:7bdf70f2-45b5-485b-b3b3-c967f28f38f1",
+      "tatqa:train:9a017e35-1279-498d-8b7d-15c0c01ccb15",
+      "tatqa:train:b9e41e7c-bf5d-4d23-b0cf-7fe5988f7229",
+      "tatqa:train:7ed3de13-5ebd-49f6-9727-5dc4322f8fb5",
+      "tatqa:train:9b3e95c6-ca16-464f-9a45-611acc84227a",
+      "tatqa:train:40cd51a2-21e2-42ea-b966-302cd0d6b2be",
+      "tatqa:train:b1424eff-b7af-40dd-a470-9cc1945329c6",
+      "tatqa:train:ccba5163-8869-4c1d-8964-29425c616a40",
+      "tatqa:train:db6347b8-9787-4263-a6bd-1b4d24bc8690",
+      "tatqa:train:0f090d90-18d8-446a-bfb2-9d485fd76a78",
+      "tatqa:train:7aedaefb-b813-49c7-9dd5-9f6fb8762504",
+      "tatqa:train:9cc1cf50-1990-4dd7-8054-14e961af8281",
+      "tatqa:train:6cf83053-db59-47c1-b4b7-b3c347cb5f1a",
+      "tatqa:train:59c9f895-ff60-4517-9951-e6cfa52b208d",
+      "tatqa:train:d2162a68-6242-46a7-84f0-828dd91ce5d4",
+      "tatqa:train:7102c8f6-65bd-4bfa-aed4-11676f81d48a",
+      "tatqa:train:a0e2ffde-2955-4bf8-8a84-5891ed4a9757",
+      "tatqa:train:27c714e5-1840-42e9-b17f-228bd9041ced",
+      "tatqa:train:cc205943-284f-4fc5-a226-30c3bb833571"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "how will the trend rates for canadian post-retirement plans change between the current period to <num> and in <num> and after respectively?",
+        "answer_from": "text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what comprised of the total cost that went into the repurchase of common shares in <num>?",
+        "answer_from": "text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "how much does the <entity> expect to make contributions to to the defined benefit plans and the defined contribution plan respectively during the next fiscal year?",
+        "answer_from": "text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "how many ships on average are operating in <num> and <num> respectively?",
+        "answer_from": "text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what does costs capitalised include?",
+        "answer_from": "text",
+        "scale": "none",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the amount of maintenance and repairs charged to operations for <num> and <num> respectively?",
+        "answer_from": "text",
+        "scale": "none",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for a set of items, components, or values that are explicitly listed in the text, often with a conjunction like 'and' or 'respectively', and the answer is a direct extraction of those listed items without any calculation or comparison.",
+    "evidence_guidance": [
+      "Locate the section of the report that discusses the topic named in the question (e.g., post-retirement plans, share repurchase, contributions, ship operations, costs capitalized, maintenance charges).",
+      "Search for the exact metric label or category mentioned (e.g., 'trend rates', 'total cost', 'contributions', 'average ships', 'costs capitalised', 'maintenance and repairs').",
+      "Identify the sentence or bullet list that enumerates the components or values; the answer spans are the text fragments that name or quantify each component.",
+      "If the question specifies multiple periods or entities, find the corresponding values listed for each period or entity, often in the same sentence or adjacent lines."
+    ],
+    "operand_roles": [
+      "metric label: the specific term or phrase that names the quantity or category being asked about (e.g., 'trend rates', 'total cost', 'contributions', 'average ships', 'costs capitalised', 'maintenance and repairs').",
+      "reporting period or entity: the time frame or named entity (e.g., a plan, a company segment) that the question restricts the search to; may be singular or multiple.",
+      "item list: the set of components or sub-items that constitute the answer; these are the text spans to extract.",
+      "context qualifier: any additional descriptive phrase that narrows the scope (e.g., 'for the next fiscal year', 'charged to operations')."
+    ],
+    "answer_form": "A list of text spans extracted verbatim from the report, each corresponding to one requested item or period, presented in the order the question asks.",
+    "scale_notes": [
+      "No unit conversion or scaling is needed; the answer is taken directly from the text as written.",
+      "Be cautious of numbers that appear in the same sentence but are not part of the requested list; only extract spans that correspond to the asked items.",
+      "If the text uses abbreviations or symbols (e.g., '$', 'million'), preserve them as part of the span if they are attached to the value."
+    ],
+    "risk_notes": [
+      "The question may use synonyms or paraphrases for the metric label; ensure the evidence search covers alternative wording.",
+      "The listed items may be embedded in a longer sentence with additional numbers or descriptions; extract only the relevant spans that directly answer the question.",
+      "If the question asks for 'respectively', the order of the extracted spans must match the order of the periods or entities mentioned in the question."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "40a6bbc63688311fe0f3242dbf972eb984a62257d4e6ac1729e7d54f9b0a34c1",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: multi_span_lookup\nFamily: multi_span_lookup:text:scale=none\nEvidence source: text\nScale: none\nDescription: Use when the question asks for a set of items, components, or values that are explicitly listed in the text, often with a conjunction like 'and' or 'respectively', and the answer is a direct extraction of those listed items without any calculation or comparison.\nEvidence guidance: Locate the section of the report that discusses the topic named in the question (e.g., post-retirement plans, share repurchase, contributions, ship operations, costs capitalized, maintenance charges). ; Search for the exact metric label or category mentioned (e.g., 'trend rates', 'total cost', 'contributions', 'average ships', 'costs capitalised', 'maintenance and repairs'). ; Identify the sentence or bullet list that enumerates the components or values; the answer spans are the text fragments that name or quantify each component. ; If the question specifies multiple periods or entities, find the corresponding values listed for each period or entity, often in the same sentence or adjacent lines.\nOperand roles: metric label: the specific term or phrase that names the quantity or category being asked about (e.g., 'trend rates', 'total cost', 'contributions', 'average ships', 'costs capitalised', 'maintenance and repairs'). ; reporting period or entity: the time frame or named entity (e.g., a plan, a company segment) that the question restricts the search to; may be singular or multiple. ; item list: the set of components or sub-items that constitute the answer; these are the text spans to extract. ; context qualifier: any additional descriptive phrase that narrows the scope (e.g., 'for the next fiscal year', 'charged to operations').\nAnswer form: A list of text spans extracted verbatim from the report, each corresponding to one requested item or period, presented in the order the question asks.\nScale notes: No unit conversion or scaling is needed; the answer is taken directly from the text as written. ; Be cautious of numbers that appear in the same sentence but are not part of the requested list; only extract spans that correspond to the asked items. ; If the text uses abbreviations or symbols (e.g., '$', 'million'), preserve them as part of the span if they are attached to the value.\nRisks: The question may use synonyms or paraphrases for the metric label; ensure the evidence search covers alternative wording. ; The listed items may be embedded in a longer sentence with additional numbers or descriptions; extract only the relevant spans that directly answer the question. ; If the question asks for 'respectively', the order of the extracted spans must match the order of the periods or entities mentioned in the question."
+  },
+  {
+    "strategy_id": "tatqa_strategy:3d493b29517d57ca",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "comparison",
+    "family": "comparison:table-text:scale=none",
+    "schema_key": "comparison|comparison:table-text:scale=none|from=table-text|scale=none",
+    "answer_from": "table-text",
+    "scale": "none",
+    "source_support_count": 149,
+    "source_sample_ids": [
+      "tatqa:train:f8d70551-f40e-4888-8688-ab207af1679e",
+      "tatqa:train:545ec5e2-d221-47fc-8f7e-9470f3d50199",
+      "tatqa:train:7ddb8d63-daa6-48f6-8520-445b5a477513",
+      "tatqa:train:26594b63-42e7-49de-ba14-d8ea2929c157",
+      "tatqa:train:888078c7-954e-40a4-a1bb-7c91db5b4ad4",
+      "tatqa:train:36fa8c8b-12ef-453b-9a59-feca388f56a6",
+      "tatqa:train:93ebf022-af7c-4744-99a8-849d0dd68acb",
+      "tatqa:train:02e797b6-10e0-4d8d-ac86-f6a3d7f142be",
+      "tatqa:train:cb76eafd-c35f-4071-a08a-22b42d549199",
+      "tatqa:train:dd7e61f8-8d49-4793-b0e8-2d354fdd9426",
+      "tatqa:train:f46c8576-7a13-417b-b58c-b28629ca6308",
+      "tatqa:train:474f51f3-4026-4a40-ba22-8060b64bd884",
+      "tatqa:train:7e2156a8-0c93-4810-b959-5ec39b6de6b2",
+      "tatqa:train:378e7b2e-790f-40de-920d-0fd6b8f93b63",
+      "tatqa:train:8f73ba3a-57d7-47ed-b64f-eeae6ec19dbd",
+      "tatqa:train:00647551-cbe0-4445-95de-ecb28370d36e",
+      "tatqa:train:e3b7f64c-3158-4891-947c-c1712694741a",
+      "tatqa:train:bfca659a-adde-46eb-ac33-19fd829e2df2",
+      "tatqa:train:dd3ca815-d17f-41df-b44d-85c3b9383516",
+      "tatqa:train:d40e95ab-3990-489b-8477-7b13d33ade39"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "in which year is the value of finished products higher?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": true
+      },
+      {
+        "question_template": "in which year is the actual income tax expense the highest?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": true
+      },
+      {
+        "question_template": "in which year was the amount of research and development largest?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": true
+      },
+      {
+        "question_template": "which years did cash and cash equivalents and restricted cash exceed <num>?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": true
+      },
+      {
+        "question_template": "in which year was the issuance of shares under employee stock plans larger?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": true
+      },
+      {
+        "question_template": "which quarters ended did the gross margin exceed <num> thousand?",
+        "answer_from": "table-text",
+        "scale": "none",
+        "req_comparison": true
+      }
+    ],
+    "description": "Use when a question asks to identify the reporting period(s) in which a specified financial metric reaches an extreme (highest, lowest, largest, etc.) or exceeds a given threshold, and the evidence is spread across both the table and the accompanying text.",
+    "evidence_guidance": [
+      "Locate the metric label in the table's row or column headers; if absent, search the text for the metric's definition or alternative phrasing.",
+      "Scan the table for the metric's values across all reporting periods; note any periods where the value is missing or marked as not applicable.",
+      "Check the text for footnotes, adjustments, or clarifications that may alter the metric's value for certain periods.",
+      "If the question involves a threshold, identify the threshold value from the question and compare it against the table values, using text for any periods not covered in the table."
+    ],
+    "operand_roles": [
+      "Metric label: the financial item being compared (e.g., a product value, expense, asset amount, or ratio).",
+      "Reporting period: the time unit (year, quarter, etc.) over which the metric is measured.",
+      "Comparison condition: the requested relation (e.g., highest, lowest, exceed) that determines which period(s) to select.",
+      "Threshold (optional): a numeric bound used when the condition is an exceedance rather than an extreme."
+    ],
+    "answer_form": "A year, quarter, or other reporting period label (or a list of such labels) that identifies the period(s) satisfying the comparison condition.",
+    "scale_notes": [
+      "Verify that all compared values are in the same unit; if the table uses a different scale than the text, convert before comparing.",
+      "If the question includes a threshold, ensure the threshold is in the same unit as the evidence values.",
+      "When the metric is a ratio or percentage, no scaling is needed, but confirm the values are not expressed as decimals vs. percentages inconsistently."
+    ],
+    "risk_notes": [
+      "Do not assume the table contains all periods; text may include additional periods or restated values.",
+      "Be cautious of units (e.g., thousands vs. millions) that may differ between table and text; ensure consistent scaling before comparing.",
+      "Avoid selecting a period based on a single source if the table and text conflict; reconcile using the text's explanatory notes."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "2f5523c2437ce451da84d3d15fe2e8b4f49d9c6df53130a94514901a219328fb",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: comparison\nFamily: comparison:table-text:scale=none\nEvidence source: table-text\nScale: none\nDescription: Use when a question asks to identify the reporting period(s) in which a specified financial metric reaches an extreme (highest, lowest, largest, etc.) or exceeds a given threshold, and the evidence is spread across both the table and the accompanying text.\nEvidence guidance: Locate the metric label in the table's row or column headers; if absent, search the text for the metric's definition or alternative phrasing. ; Scan the table for the metric's values across all reporting periods; note any periods where the value is missing or marked as not applicable. ; Check the text for footnotes, adjustments, or clarifications that may alter the metric's value for certain periods. ; If the question involves a threshold, identify the threshold value from the question and compare it against the table values, using text for any periods not covered in the table.\nOperand roles: Metric label: the financial item being compared (e.g., a product value, expense, asset amount, or ratio). ; Reporting period: the time unit (year, quarter, etc.) over which the metric is measured. ; Comparison condition: the requested relation (e.g., highest, lowest, exceed) that determines which period(s) to select. ; Threshold (optional): a numeric bound used when the condition is an exceedance rather than an extreme.\nAnswer form: A year, quarter, or other reporting period label (or a list of such labels) that identifies the period(s) satisfying the comparison condition.\nScale notes: Verify that all compared values are in the same unit; if the table uses a different scale than the text, convert before comparing. ; If the question includes a threshold, ensure the threshold is in the same unit as the evidence values. ; When the metric is a ratio or percentage, no scaling is needed, but confirm the values are not expressed as decimals vs. percentages inconsistently.\nRisks: Do not assume the table contains all periods; text may include additional periods or restated values. ; Be cautious of units (e.g., thousands vs. millions) that may differ between table and text; ensure consistent scaling before comparing. ; Avoid selecting a period based on a single source if the table and text conflict; reconcile using the text's explanatory notes."
+  },
+  {
+    "strategy_id": "tatqa_strategy:78278cd119e398d4",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "multi_span_lookup",
+    "family": "multi_span_lookup:table:scale=thousand",
+    "schema_key": "multi_span_lookup|multi_span_lookup:table:scale=thousand|from=table|scale=thousand",
+    "answer_from": "table",
+    "scale": "thousand",
+    "source_support_count": 134,
+    "source_sample_ids": [
+      "tatqa:train:9ef99ae1-e17b-4b51-b81e-48cc48a481d1",
+      "tatqa:train:49995e73-6740-40f5-9322-cfa4f0a4377d",
+      "tatqa:train:0a36372a-151d-432f-becb-5b2d738f0e56",
+      "tatqa:train:da15f763-c70e-4a55-a26e-9318b7b998e6",
+      "tatqa:train:4d1e4cdf-1819-4903-9f27-761f72ed89e1",
+      "tatqa:train:84a505ca-674c-4652-9f39-7ed9ec43ad09",
+      "tatqa:train:a190ca58-5db9-4a80-a397-ff76bf4c144a",
+      "tatqa:train:04eae13c-154a-48df-aba9-5ba611f242c5",
+      "tatqa:train:84ae0b51-13ad-4e63-be66-01ef2103fc13",
+      "tatqa:train:aa6458e0-8d8f-4dae-88ad-83eeee8690d3",
+      "tatqa:train:f712bea3-26e2-47b6-9433-e0917a9efb97",
+      "tatqa:train:857618e6-9cb8-4348-bb84-4d4414951718",
+      "tatqa:train:de31b710-b046-43d8-b1cb-2f41f03dd632",
+      "tatqa:train:80e685a4-2dcb-4d01-8bb7-84c562af3b9e",
+      "tatqa:train:436e18aa-5ae5-4817-b0a6-d4e7c36eeadf",
+      "tatqa:train:3c256b48-526d-4284-958d-1eb8c1167921",
+      "tatqa:train:de4f45b1-496e-4273-9c36-b30af39cebff",
+      "tatqa:train:f6ca8603-acce-452a-8f3c-5ccfc3110c6f",
+      "tatqa:train:b4ebd0dd-019b-4dfd-b287-e02dc0c137d4",
+      "tatqa:train:391df162-a6a5-4bf6-a8c4-1907003bdae6"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what is net sales from cheese in <num> and <num> respectively?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is net sales from cream and other in <num> and <num> respectively?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is net sales from probugs kefir in <num> and <num> respectively?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what are the <entity>'s respective revenue in <num> and <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what are the <entity>'s respective cost of goods sold in <num> and <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what are the <entity>'s respective gross profit in <num> and <num>?",
+        "answer_from": "table",
+        "scale": "thousand",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when a question asks for the same financial metric (e.g., revenue, cost, profit) for a specific product or segment across two or more distinct reporting periods, and the answer values are directly retrievable from a single table row or column without any arithmetic or comparison.",
+    "evidence_guidance": [
+      "Locate the table row that corresponds to the named product, segment, or entity.",
+      "Identify the columns that correspond to the requested reporting periods (e.g., fiscal years or quarters).",
+      "Extract the cell values at the intersection of that row and those columns, preserving the order of the periods in the question."
+    ],
+    "operand_roles": [
+      "metric label: the financial measure being asked (e.g., net sales, cost of goods sold, gross profit).",
+      "item identifier: the specific product, segment, or entity whose metric is requested.",
+      "reporting period list: the two or more periods for which the metric values are needed."
+    ],
+    "answer_form": "A list of numeric values, one for each requested reporting period, in the same order as the periods appear in the question.",
+    "scale_notes": [
+      "All extracted values must be expressed in the specified scale (e.g., thousands) as indicated by the schema.",
+      "If the table's native unit differs from the required scale, apply a uniform conversion factor to all values.",
+      "Do not mix scales across the answer list; ensure consistency for all periods."
+    ],
+    "risk_notes": [
+      "Ensure the metric label matches exactly the row or column header in the table; synonyms may cause misalignment.",
+      "Do not confuse the order of periods in the question with the table's column order; always map to the question's sequence.",
+      "If the table uses a different scale (e.g., millions vs. thousands), the extracted values must be converted to the required scale before reporting."
+    ],
+    "generation": {
+      "method": "llm_semantic_abstraction",
+      "llm_cache_key": "d66daa5b786c4568a460c92d42a87a09e0bd83a4aee1f37a2fb3cb9a98905320",
+      "runtime": {
+        "provider": "DeepSeek",
+        "backend": "deepseek_openai_compatible",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-v4-flash",
+        "effective_model": "deepseek-v4-flash",
+        "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+        "temperature": 0,
+        "max_tokens": 700,
+        "thinking_mode": false,
+        "response_model": "deepseek-v4-flash",
+        "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+        "endpoint": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    "retrieval_text": "Type: multi_span_lookup\nFamily: multi_span_lookup:table:scale=thousand\nEvidence source: table\nScale: thousand\nDescription: Use when a question asks for the same financial metric (e.g., revenue, cost, profit) for a specific product or segment across two or more distinct reporting periods, and the answer values are directly retrievable from a single table row or column without any arithmetic or comparison.\nEvidence guidance: Locate the table row that corresponds to the named product, segment, or entity. ; Identify the columns that correspond to the requested reporting periods (e.g., fiscal years or quarters). ; Extract the cell values at the intersection of that row and those columns, preserving the order of the periods in the question.\nOperand roles: metric label: the financial measure being asked (e.g., net sales, cost of goods sold, gross profit). ; item identifier: the specific product, segment, or entity whose metric is requested. ; reporting period list: the two or more periods for which the metric values are needed.\nAnswer form: A list of numeric values, one for each requested reporting period, in the same order as the periods appear in the question.\nScale notes: All extracted values must be expressed in the specified scale (e.g., thousands) as indicated by the schema. ; If the table's native unit differs from the required scale, apply a uniform conversion factor to all values. ; Do not mix scales across the answer list; ensure consistency for all periods.\nRisks: Ensure the metric label matches exactly the row or column header in the table; synonyms may cause misalignment. ; Do not confuse the order of periods in the question with the table's column order; always map to the question's sequence. ; If the table uses a different scale (e.g., millions vs. thousands), the extracted values must be converted to the required scale before reporting."
+  },
+  {
+    "strategy_id": "tatqa_strategy:34a999af43570bd0",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:division_composition",
+    "schema_key": "arithmetic|arithmetic:division_composition|from=table-text|scale=thousand",
+    "answer_from": "table-text",
+    "scale": "thousand",
+    "source_support_count": 128,
+    "source_sample_ids": [
+      "tatqa:train:3573ba23-bae6-4f8c-a772-831316b7b549",
+      "tatqa:train:624ff820-38d0-49a2-b584-9af029e87684",
+      "tatqa:train:d2bf0ce9-7da4-4764-bc98-69290c3bba56",
+      "tatqa:train:e7b20fd3-ca7e-4fc0-8c52-a07296ef7de3",
+      "tatqa:train:32c76bc1-509e-46c0-b5f4-6aac48c09948",
+      "tatqa:train:3c13ce1e-c1f6-4649-93b4-17d4901a1ce4",
+      "tatqa:train:75a0750c-5433-4bae-9072-ffc4ec196fdd",
+      "tatqa:train:7d48bdc4-ed4a-492a-9c00-b994ceb53b75",
+      "tatqa:train:53474701-aa7d-4a97-a9d2-eebd3a45acfe",
+      "tatqa:train:0a4b7003-409c-4c68-8807-127d1f6f816e",
+      "tatqa:train:a0284ac1-abb3-4e82-bb8c-409ec89c5a54",
+      "tatqa:train:1fee7f4b-1524-4be9-9a20-ad20999eb7a5",
+      "tatqa:train:2a5ae7fc-83e1-458d-a940-fb8a7be46f84",
+      "tatqa:train:27bffe94-56f1-4b23-8883-34b5e3809efe",
+      "tatqa:train:a9d256bc-dda7-4fb8-b4bf-53ab514d878e",
+      "tatqa:train:dcf89b57-060d-4057-908d-c63ba75937ed",
+      "tatqa:train:bfd7fc68-610e-4077-bbf3-e36dced32142",
+      "tatqa:train:0bf2ec0e-36b1-4315-aebf-d970ea0a5f27",
+      "tatqa:train:ad5d7491-c881-4cb0-9f1f-a0346745d03c",
+      "tatqa:train:6453b6e0-3969-42fe-82c2-0cedf55dcc11"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what is the average of the total asia pacific revenues in <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the average federal income tax expense at statutory rates in <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the average state income taxes, net of federal benefit in <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the average revenues from operations in <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the average value of buildings and building improvements in <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the average value of finished goods in <num> and <num>?",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question requires a composed arithmetic calculation following the frozen operator sequence.",
+    "evidence_guidance": [
+      "Locate all operands required by the normalized formula.",
+      "Execute operations in the preserved parenthesis/order structure.",
+      "Combine table values with nearby textual qualifiers when the evidence source is mixed."
+    ],
+    "operand_roles": [
+      "formula_operands",
+      "intermediate_values",
+      "final_result"
+    ],
+    "answer_form": "Return the final numeric result in the requested scale.",
+    "scale_notes": [
+      "Express the answer in thousand units when the task requires that scale."
+    ],
+    "risk_notes": [
+      "Respect operation order and parentheses.",
+      "Check unit compatibility before combining operands."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:division_composition\nEvidence source: table-text\nScale: thousand\nDescription: Use when the question requires a composed arithmetic calculation following the frozen operator sequence.\nEvidence guidance: Locate all operands required by the normalized formula. ; Execute operations in the preserved parenthesis/order structure. ; Combine table values with nearby textual qualifiers when the evidence source is mixed.\nOperand roles: formula_operands ; intermediate_values ; final_result\nAnswer form: Return the final numeric result in the requested scale.\nScale notes: Express the answer in thousand units when the task requires that scale.\nRisks: Respect operation order and parentheses. ; Check unit compatibility before combining operands."
+  },
+  {
+    "strategy_id": "tatqa_strategy:99956ecab1556674",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:difference",
+    "schema_key": "arithmetic|arithmetic:difference|from=table|scale=percent",
+    "answer_from": "table",
+    "scale": "percent",
+    "source_support_count": 125,
+    "source_sample_ids": [
+      "tatqa:train:4512f332-f703-4af4-ac40-594f459f6d8d",
+      "tatqa:train:cf48b4ac-52c8-40b7-a553-81c3c6a0fcf3",
+      "tatqa:train:8cd9b335-f67d-4687-8316-99a081e57841",
+      "tatqa:train:7a6c059d-c900-4878-a926-caf29c23f85a",
+      "tatqa:train:d869b8d1-5857-4921-ad7e-56e9bb6e184d",
+      "tatqa:train:2b994607-bb8d-4b32-acd4-14a3c5f807fb",
+      "tatqa:train:dea7163b-1497-40b9-81a2-471502b6e0c9",
+      "tatqa:train:ba876dea-ea46-4d80-80c3-773b1013409c",
+      "tatqa:train:5cf5fd53-5f41-44c6-9647-3196e59ff4ac",
+      "tatqa:train:9396bbb6-54c1-464d-af89-0ffd7020c11d",
+      "tatqa:train:69a67ef4-6dea-4dc5-bc9a-cff1ed3930d1",
+      "tatqa:train:ac3279cb-69ae-4313-9859-b7bf479e88e2",
+      "tatqa:train:31768923-3951-4b6e-8487-d1563498b84a",
+      "tatqa:train:8de27848-045a-4e79-a42b-991a4c571bec",
+      "tatqa:train:eb92a24d-a751-48c1-bb6f-6c83030d24bb",
+      "tatqa:train:058c84dc-5f93-4a08-b4e5-abe8b2cedc10",
+      "tatqa:train:34ccc237-124f-49af-91ab-ebf350859226",
+      "tatqa:train:bc726c6b-ea11-436a-a45b-4768544802e2",
+      "tatqa:train:22d57089-2d47-4ae0-a0bf-7d6a3d9ad87e",
+      "tatqa:train:741207c7-eec2-4356-a6a1-67488ddfee4e"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what was the change in the risk-free interest rate from <num> to <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the change in the expected volatility in <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the change in the increase resulting from permanent differences between <num> and <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the percentage change in industrial solutions in <num> from <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the percentage change in transportation solutions in <num> from <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the change in the applicable statutory tax rate from <num> to <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for an absolute difference or change between two values.",
+    "evidence_guidance": [
+      "Locate two comparable values for the same metric or requested pair.",
+      "Subtract in the direction implied by the question wording."
+    ],
+    "operand_roles": [
+      "minuend_value",
+      "subtrahend_value",
+      "metric_or_item_label"
+    ],
+    "answer_form": "Return the absolute difference in the requested unit.",
+    "scale_notes": [
+      "Treat percent output carefully; distinguish percentage points from percent change."
+    ],
+    "risk_notes": [
+      "Check whether the wording asks for increase, decrease, or simple difference.",
+      "Do not convert to percent unless explicitly requested."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:difference\nEvidence source: table\nScale: percent\nDescription: Use when the question asks for an absolute difference or change between two values.\nEvidence guidance: Locate two comparable values for the same metric or requested pair. ; Subtract in the direction implied by the question wording.\nOperand roles: minuend_value ; subtrahend_value ; metric_or_item_label\nAnswer form: Return the absolute difference in the requested unit.\nScale notes: Treat percent output carefully; distinguish percentage points from percent change.\nRisks: Check whether the wording asks for increase, decrease, or simple difference. ; Do not convert to percent unless explicitly requested."
+  },
+  {
+    "strategy_id": "tatqa_strategy:9f34b39b7346a04b",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:change_or_composed_ratio",
+    "schema_key": "arithmetic|arithmetic:change_or_composed_ratio|from=table|scale=percent",
+    "answer_from": "table",
+    "scale": "percent",
+    "source_support_count": 109,
+    "source_sample_ids": [
+      "tatqa:train:2cec8a99-3a83-409b-886b-dbb65a05fb25",
+      "tatqa:train:d161e8c3-56f2-44bb-8c38-635fca79b1aa",
+      "tatqa:train:760137be-d844-4ad8-8b8f-6fc72bdeba75",
+      "tatqa:train:7391aa6b-0d02-476e-9031-6f58ae275832",
+      "tatqa:train:858940e9-21f1-45db-acf2-21f298e367e5",
+      "tatqa:train:7556aa13-beae-4871-b4f4-3b55a261cbbe",
+      "tatqa:train:857dba26-b5c3-4eb3-9668-eb98d65e3497",
+      "tatqa:train:72d770a9-bb69-418f-ac6e-31171b633f2b",
+      "tatqa:train:ba37b280-9a37-4f68-872e-c142b0d4e7dd",
+      "tatqa:train:a328c6da-309c-4e2e-b8b2-e4b8e661c6e7",
+      "tatqa:train:7dd9e6c9-76f7-4600-8dd5-1d1820a42462",
+      "tatqa:train:87f02a59-385c-4e48-a20b-719865efd52f",
+      "tatqa:train:8ab582b3-e783-426e-b72c-9d7af5089b50",
+      "tatqa:train:0ccce335-dd41-498d-938a-cf526b7f6357",
+      "tatqa:train:ab9cb6f0-dc76-4431-ba2b-d7ae6abd98d8",
+      "tatqa:train:99958abe-0476-49a0-afc1-c2bf2abf9bce",
+      "tatqa:train:460b015c-ac5a-419f-9566-661a01a8e2fa",
+      "tatqa:train:8fb16496-4bed-4e19-b230-a83de9ee6a59",
+      "tatqa:train:86329f59-3c72-4956-a7c7-20062ebeac8a",
+      "tatqa:train:7d08258a-46d0-47d5-8495-51df3bf428b6"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what is the difference between <num> average rate of inflation and <num> average rate of increase in salaries?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the percentage change in total net sales of international and refrigerated & frozen from the fiscal year <num> to <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the percentage increase / (decrease) in the net income - insurance segment from <num> to <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the percentage increase / (decrease) in the gain on bargain purchase from <num> to <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what was the percentage change in interest expense between <num> and <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the percentage increase / (decrease) of total capital from <num> to <num>?",
+        "answer_from": "table",
+        "scale": "percent",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question requires a composed arithmetic calculation following the frozen operator sequence.",
+    "evidence_guidance": [
+      "Locate all operands required by the normalized formula.",
+      "Execute operations in the preserved parenthesis/order structure."
+    ],
+    "operand_roles": [
+      "formula_operands",
+      "intermediate_values",
+      "final_result"
+    ],
+    "answer_form": "Return the final numeric result in the requested scale.",
+    "scale_notes": [
+      "Treat percent output carefully; distinguish percentage points from percent change."
+    ],
+    "risk_notes": [
+      "Respect operation order and parentheses.",
+      "Check unit compatibility before combining operands."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:change_or_composed_ratio\nEvidence source: table\nScale: percent\nDescription: Use when the question requires a composed arithmetic calculation following the frozen operator sequence.\nEvidence guidance: Locate all operands required by the normalized formula. ; Execute operations in the preserved parenthesis/order structure.\nOperand roles: formula_operands ; intermediate_values ; final_result\nAnswer form: Return the final numeric result in the requested scale.\nScale notes: Treat percent output carefully; distinguish percentage points from percent change.\nRisks: Respect operation order and parentheses. ; Check unit compatibility before combining operands."
+  },
+  {
+    "strategy_id": "tatqa_strategy:eab0632e9d6f2916",
+    "dataset_id": "tatqa",
+    "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+    "strategy_type": "arithmetic",
+    "family": "arithmetic:ratio",
+    "schema_key": "arithmetic|arithmetic:ratio|from=table-text|scale=percent",
+    "answer_from": "table-text",
+    "scale": "percent",
+    "source_support_count": 89,
+    "source_sample_ids": [
+      "tatqa:train:796cc45e-494b-4a3a-bab6-29f934aba650",
+      "tatqa:train:0d3a1b7b-890b-455a-b55a-082bb5fe6ceb",
+      "tatqa:train:e94e3b01-1ce3-4dba-8aa8-4aaff5af3381",
+      "tatqa:train:8f360368-0dea-49a3-8a42-65c50607b265",
+      "tatqa:train:72723b56-7159-4895-a26d-308dd425d6cd",
+      "tatqa:train:33d25508-280a-4cb8-8b33-356b8a19d758",
+      "tatqa:train:34320827-bc7b-428e-aee7-379c7593f96b",
+      "tatqa:train:f69cd9f7-cf4d-4df8-806a-047eb0210e50",
+      "tatqa:train:7d2a24d5-05ab-40db-a34a-6bb473f53ea9",
+      "tatqa:train:0b091f6c-11ff-41d1-8f98-4b2c60f86035",
+      "tatqa:train:aba86fa7-2b61-4391-91fb-c57a52c84fb4",
+      "tatqa:train:91358fc6-a6ea-4eb9-a5b7-1edee7df0f79",
+      "tatqa:train:4a46f3f6-8b69-49ad-b8b7-6fe389f81740",
+      "tatqa:train:abb80589-b481-4679-8766-19a3e3fafbbc",
+      "tatqa:train:fb79b0e3-57d1-4b20-bd9e-d21cd9c66d46",
+      "tatqa:train:3b8b69c9-a0c6-40c1-9f1a-539f05a5dd3f",
+      "tatqa:train:1e93b1a5-f4fe-4b7b-b080-3e2758b167c9",
+      "tatqa:train:c2a1e2c1-05ea-4f87-a90c-fd77b8432228",
+      "tatqa:train:732de49d-8c7a-41c9-94bd-1c27297a713e",
+      "tatqa:train:c0392c0c-d814-4798-94ad-098ad68a8d1f"
+    ],
+    "representative_examples_sanitized": [
+      {
+        "question_template": "what is the proportion (in percentage) of sales from innovation in the frontera brand over refrigerated & frozen’s net sales in the fiscal year <num>?",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the percentage of deferred tax assets in foreign items to valuation allowance in <num>?",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the number of unvested restricted stock units as a percentage of the total weighted-average common shares, diluted in <num>?",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the number of potentially dilutive stock options as a percentage of the total weighted-average common shares, diluted in <num>?",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the patent litigation & arbitration settlements expressed as a percentage of equipment revenue in <num>?",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "req_comparison": false
+      },
+      {
+        "question_template": "what is the percentage of israel's loss from continuing operations, before taxes on income, for the year ended <num>?",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "req_comparison": false
+      }
+    ],
+    "description": "Use when the question asks for one quantity divided by another quantity.",
+    "evidence_guidance": [
+      "Locate numerator and denominator values from the requested evidence source.",
+      "Confirm both operands use compatible units before division.",
+      "Combine table values with nearby textual qualifiers when the evidence source is mixed."
+    ],
+    "operand_roles": [
+      "numerator_value",
+      "denominator_value",
+      "ratio_metric"
+    ],
+    "answer_form": "Return the quotient or percentage according to the requested scale.",
+    "scale_notes": [
+      "Treat percent output carefully; distinguish percentage points from percent change."
+    ],
+    "risk_notes": [
+      "Do not swap numerator and denominator.",
+      "Watch for percent versus raw ratio output."
+    ],
+    "generation": {
+      "method": "deterministic_arithmetic_template",
+      "llm_cache_key": null
+    },
+    "retrieval_text": "Type: arithmetic\nFamily: arithmetic:ratio\nEvidence source: table-text\nScale: percent\nDescription: Use when the question asks for one quantity divided by another quantity.\nEvidence guidance: Locate numerator and denominator values from the requested evidence source. ; Confirm both operands use compatible units before division. ; Combine table values with nearby textual qualifiers when the evidence source is mixed.\nOperand roles: numerator_value ; denominator_value ; ratio_metric\nAnswer form: Return the quotient or percentage according to the requested scale.\nScale notes: Treat percent output carefully; distinguish percentage points from percent change.\nRisks: Do not swap numerator and denominator. ; Watch for percent versus raw ratio output."
+  }
+]

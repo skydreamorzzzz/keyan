@@ -377,3 +377,33 @@
 - 排除/低置信：缺 answer_type 或 arithmetic derivation 无可解析 operator 的样本；当前 train 中未形成实际覆盖损失。
 - 下一轮值得做少量 LLM semantic abstraction，重点用于 lookup/comparison 的证据定位表述，而不是重新发明 arithmetic families。
 - 产物：`pilot/multibench/output/tatqa/TATQA_STRATEGY_STRUCTURE_AUDIT.md` 与 `tatqa_strategy_structure_audit.json`。
+
+## 19. TAT-QA Strategy Memory v0 Pilot（2026-08-16）
+
+### scope
+- 只做 TAT-QA Strategy Memory v0 小规模 pilot；未跑 retrieval audit、四臂实验、router 或 dev 调参。
+- 冻结 Stage 18 的 deterministic schema/family；没有重新聚类或调整 family 定义。
+
+### construction
+- Strategy unit：train support top-30 schema families。
+- Arithmetic schema：直接由 deterministic structure 模板生成，不调用 LLM 重新发明公式。
+- `span_lookup` / `multi_span_lookup` / `count` / `comparison` 高频 schema：每个 schema 取 4-6 个 sanitized train question templates，调用一次 LLM 生成 evidence locating / operand role / answer-form / scale / risk guidance。
+- LLM prompt 不包含答案、derivation、表格值、段落原文、公司名、具体年份或具体数值。
+- raw response cache：`pilot/multibench/output/tatqa/tatqa_strategy_memory_v0_llm_cache.jsonl`。
+
+### results
+- Strategy Memory：`data/tatqa/processed/tatqa_strategy_memory_v0.json`，共 30 条。
+- Generation counts：LLM semantic abstraction 15；deterministic arithmetic template 15。
+- LLM cache records：15，符合 ≤20 calls 预算；dry-run 可从 cache 重建。
+- Train support covered：12,057 / 13,215 = 0.912。
+- Strategy types：span_lookup 7；arithmetic 15；comparison 2；multi_span_lookup 5；count 1。
+
+### offline QC
+- Schema legal rate：1.000。
+- Leak failures：0（对生成语义文本扫描 concrete years / currency-large numbers / decimals / standalone numbers）。
+- Duplicate descriptions：11，主要来自 deterministic arithmetic 模板跨不同 source/scale schema 复用；retrieval_text duplicate 为 0。
+- 对一次 LLM 输出中的具体 scale factor 做 deterministic sanitization；raw response 保留在 cache，memory 中只保留抽象表述。
+
+### decision
+- **READY FOR TAT-QA STRATEGY RETRIEVAL AUDIT**。
+- 下一轮应固定这份 v0 strategy memory，先做离线 retrieval audit；不要直接进入四臂 execution。

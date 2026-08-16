@@ -1,0 +1,307 @@
+{
+  "version": "tatqa_strategy_memory_v0_top30_schema_frozen_v1",
+  "total_train": 13215,
+  "top_schema_n": 30,
+  "llm_call_budget": 20,
+  "planned_llm_groups": [
+    "span_lookup|span_lookup:text:scale=none|from=text|scale=none",
+    "comparison|comparison:table:scale=none|from=table|scale=none",
+    "span_lookup|span_lookup:table-text:scale=thousand|from=table-text|scale=thousand",
+    "multi_span_lookup|multi_span_lookup:table-text:scale=none|from=table-text|scale=none",
+    "span_lookup|span_lookup:table-text:scale=none|from=table-text|scale=none",
+    "span_lookup|span_lookup:table:scale=none|from=table|scale=none",
+    "multi_span_lookup|multi_span_lookup:table:scale=none|from=table|scale=none",
+    "span_lookup|span_lookup:table-text:scale=million|from=table-text|scale=million",
+    "span_lookup|span_lookup:table:scale=million|from=table|scale=million",
+    "span_lookup|span_lookup:table:scale=thousand|from=table|scale=thousand",
+    "multi_span_lookup|multi_span_lookup:table-text:scale=thousand|from=table-text|scale=thousand",
+    "count|count:table-text:scale=none|from=table-text|scale=none",
+    "multi_span_lookup|multi_span_lookup:text:scale=none|from=text|scale=none",
+    "comparison|comparison:table-text:scale=none|from=table-text|scale=none",
+    "multi_span_lookup|multi_span_lookup:table:scale=thousand|from=table|scale=thousand"
+  ],
+  "planned_llm_group_count": 15,
+  "llm_calls_made": 0,
+  "llm_cache_hits": 15,
+  "llm_cache_record_count_after": 15,
+  "runtime_request": {
+    "provider": "DeepSeek",
+    "backend": "deepseek_openai_compatible",
+    "base_url": "https://api.deepseek.com",
+    "requested_model": "deepseek-v4-flash",
+    "effective_model": null,
+    "model_version": null,
+    "temperature": 0.0,
+    "max_tokens": 2500,
+    "thinking_mode": false
+  },
+  "qc": {
+    "strategy_count": 30,
+    "schema_legal_rate": 1.0,
+    "schema_legal_failures": [],
+    "leak_failure_count": 0,
+    "leak_failures": [],
+    "duplicate_description_count": 11,
+    "duplicate_retrieval_text_count": 0,
+    "covered_train_support": 12057,
+    "covered_train_rate": 0.912372304199773,
+    "top_schema_n": 30,
+    "top_schema_support": 12057,
+    "top_schema_support_rate": 0.912372304199773,
+    "selected_schema_keys": [
+      "arithmetic|arithmetic:change_or_composed_ratio|from=table|scale=percent",
+      "arithmetic|arithmetic:difference|from=table-text|scale=million",
+      "arithmetic|arithmetic:difference|from=table-text|scale=thousand",
+      "arithmetic|arithmetic:difference|from=table|scale=million",
+      "arithmetic|arithmetic:difference|from=table|scale=none",
+      "arithmetic|arithmetic:difference|from=table|scale=percent",
+      "arithmetic|arithmetic:difference|from=table|scale=thousand",
+      "arithmetic|arithmetic:division_composition|from=table-text|scale=thousand",
+      "arithmetic|arithmetic:division_composition|from=table|scale=million",
+      "arithmetic|arithmetic:division_composition|from=table|scale=none",
+      "arithmetic|arithmetic:division_composition|from=table|scale=thousand",
+      "arithmetic|arithmetic:percent_change|from=table-text|scale=percent",
+      "arithmetic|arithmetic:percent_change|from=table|scale=percent",
+      "arithmetic|arithmetic:ratio|from=table-text|scale=percent",
+      "arithmetic|arithmetic:ratio|from=table|scale=percent",
+      "comparison|comparison:table-text:scale=none|from=table-text|scale=none",
+      "comparison|comparison:table:scale=none|from=table|scale=none",
+      "count|count:table-text:scale=none|from=table-text|scale=none",
+      "multi_span_lookup|multi_span_lookup:table-text:scale=none|from=table-text|scale=none",
+      "multi_span_lookup|multi_span_lookup:table-text:scale=thousand|from=table-text|scale=thousand",
+      "multi_span_lookup|multi_span_lookup:table:scale=none|from=table|scale=none",
+      "multi_span_lookup|multi_span_lookup:table:scale=thousand|from=table|scale=thousand",
+      "multi_span_lookup|multi_span_lookup:text:scale=none|from=text|scale=none",
+      "span_lookup|span_lookup:table-text:scale=million|from=table-text|scale=million",
+      "span_lookup|span_lookup:table-text:scale=none|from=table-text|scale=none",
+      "span_lookup|span_lookup:table-text:scale=thousand|from=table-text|scale=thousand",
+      "span_lookup|span_lookup:table:scale=million|from=table|scale=million",
+      "span_lookup|span_lookup:table:scale=none|from=table|scale=none",
+      "span_lookup|span_lookup:table:scale=thousand|from=table|scale=thousand",
+      "span_lookup|span_lookup:text:scale=none|from=text|scale=none"
+    ],
+    "strategy_type_counts": {
+      "span_lookup": 7,
+      "arithmetic": 15,
+      "comparison": 2,
+      "multi_span_lookup": 5,
+      "count": 1
+    },
+    "generation_counts": {
+      "llm_semantic_abstraction": 15,
+      "deterministic_arithmetic_template": 15
+    }
+  },
+  "strategy_index": [
+    {
+      "strategy_id": "tatqa_strategy:c6a4ddd06d027da3",
+      "schema_key": "span_lookup|span_lookup:text:scale=none|from=text|scale=none",
+      "strategy_type": "span_lookup",
+      "support": 2704,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:0558c413ad491400",
+      "schema_key": "arithmetic|arithmetic:percent_change|from=table|scale=percent",
+      "strategy_type": "arithmetic",
+      "support": 903,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:23fb96da95dead74",
+      "schema_key": "comparison|comparison:table:scale=none|from=table|scale=none",
+      "strategy_type": "comparison",
+      "support": 591,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:13d6c9a655c6fcd2",
+      "schema_key": "span_lookup|span_lookup:table-text:scale=thousand|from=table-text|scale=thousand",
+      "strategy_type": "span_lookup",
+      "support": 574,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:d3818077874e80e6",
+      "schema_key": "multi_span_lookup|multi_span_lookup:table-text:scale=none|from=table-text|scale=none",
+      "strategy_type": "multi_span_lookup",
+      "support": 558,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:83818188dec82af3",
+      "schema_key": "arithmetic|arithmetic:difference|from=table|scale=million",
+      "strategy_type": "arithmetic",
+      "support": 516,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:f34fac3e1b266e36",
+      "schema_key": "arithmetic|arithmetic:difference|from=table-text|scale=thousand",
+      "strategy_type": "arithmetic",
+      "support": 486,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:86258a5f531ea6dc",
+      "schema_key": "span_lookup|span_lookup:table-text:scale=none|from=table-text|scale=none",
+      "strategy_type": "span_lookup",
+      "support": 401,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:6a1aa75493114b69",
+      "schema_key": "span_lookup|span_lookup:table:scale=none|from=table|scale=none",
+      "strategy_type": "span_lookup",
+      "support": 382,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:5391a6ff8f15af23",
+      "schema_key": "multi_span_lookup|multi_span_lookup:table:scale=none|from=table|scale=none",
+      "strategy_type": "multi_span_lookup",
+      "support": 368,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:9f071422670e8fe7",
+      "schema_key": "span_lookup|span_lookup:table-text:scale=million|from=table-text|scale=million",
+      "strategy_type": "span_lookup",
+      "support": 358,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:79f6cbef94853c0b",
+      "schema_key": "arithmetic|arithmetic:difference|from=table|scale=thousand",
+      "strategy_type": "arithmetic",
+      "support": 344,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:6d285326244a97f5",
+      "schema_key": "arithmetic|arithmetic:percent_change|from=table-text|scale=percent",
+      "strategy_type": "arithmetic",
+      "support": 331,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:797dd57f1e05a9a4",
+      "schema_key": "arithmetic|arithmetic:division_composition|from=table|scale=million",
+      "strategy_type": "arithmetic",
+      "support": 315,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:717eb3bac6ac84b0",
+      "schema_key": "arithmetic|arithmetic:difference|from=table-text|scale=million",
+      "strategy_type": "arithmetic",
+      "support": 315,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:3036387122e820a5",
+      "schema_key": "arithmetic|arithmetic:ratio|from=table|scale=percent",
+      "strategy_type": "arithmetic",
+      "support": 313,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:c267579c9eac5a26",
+      "schema_key": "span_lookup|span_lookup:table:scale=million|from=table|scale=million",
+      "strategy_type": "span_lookup",
+      "support": 290,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:d46acc82b15f5f59",
+      "schema_key": "arithmetic|arithmetic:difference|from=table|scale=none",
+      "strategy_type": "arithmetic",
+      "support": 273,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:bcd50b3d6f019fb3",
+      "schema_key": "arithmetic|arithmetic:division_composition|from=table|scale=none",
+      "strategy_type": "arithmetic",
+      "support": 222,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:0cc1a545069da2a8",
+      "schema_key": "arithmetic|arithmetic:division_composition|from=table|scale=thousand",
+      "strategy_type": "arithmetic",
+      "support": 221,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:2d0e12c81df1a24c",
+      "schema_key": "span_lookup|span_lookup:table:scale=thousand|from=table|scale=thousand",
+      "strategy_type": "span_lookup",
+      "support": 219,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:300a3081e5a46e73",
+      "schema_key": "multi_span_lookup|multi_span_lookup:table-text:scale=thousand|from=table-text|scale=thousand",
+      "strategy_type": "multi_span_lookup",
+      "support": 218,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:3868af8a62037d57",
+      "schema_key": "count|count:table-text:scale=none|from=table-text|scale=none",
+      "strategy_type": "count",
+      "support": 213,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:a31c1e6c2eab56ab",
+      "schema_key": "multi_span_lookup|multi_span_lookup:text:scale=none|from=text|scale=none",
+      "strategy_type": "multi_span_lookup",
+      "support": 208,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:3d493b29517d57ca",
+      "schema_key": "comparison|comparison:table-text:scale=none|from=table-text|scale=none",
+      "strategy_type": "comparison",
+      "support": 149,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:78278cd119e398d4",
+      "schema_key": "multi_span_lookup|multi_span_lookup:table:scale=thousand|from=table|scale=thousand",
+      "strategy_type": "multi_span_lookup",
+      "support": 134,
+      "generation_method": "llm_semantic_abstraction"
+    },
+    {
+      "strategy_id": "tatqa_strategy:34a999af43570bd0",
+      "schema_key": "arithmetic|arithmetic:division_composition|from=table-text|scale=thousand",
+      "strategy_type": "arithmetic",
+      "support": 128,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:99956ecab1556674",
+      "schema_key": "arithmetic|arithmetic:difference|from=table|scale=percent",
+      "strategy_type": "arithmetic",
+      "support": 125,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:9f34b39b7346a04b",
+      "schema_key": "arithmetic|arithmetic:change_or_composed_ratio|from=table|scale=percent",
+      "strategy_type": "arithmetic",
+      "support": 109,
+      "generation_method": "deterministic_arithmetic_template"
+    },
+    {
+      "strategy_id": "tatqa_strategy:eab0632e9d6f2916",
+      "schema_key": "arithmetic|arithmetic:ratio|from=table-text|scale=percent",
+      "strategy_type": "arithmetic",
+      "support": 89,
+      "generation_method": "deterministic_arithmetic_template"
+    }
+  ]
+}
