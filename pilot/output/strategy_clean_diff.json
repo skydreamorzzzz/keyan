@@ -1,0 +1,266 @@
+[
+ {
+  "old_id": "S001",
+  "old_name": "Part-to-Whole Ratio",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S002",
+  "old_name": "percentage_change",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S003",
+  "old_name": "proportion_of_change",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S004",
+  "old_name": "Absolute Difference Between Two Values",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S005",
+  "old_name": "Sum of two or more values",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S006",
+  "old_name": "part_to_whole_ratio",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S007",
+  "old_name": "average_of_two_values",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S008",
+  "old_name": "ratio_of_two_aggregates",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S009",
+  "old_name": "multiply_price_by_quantity",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S010",
+  "old_name": "multiply_value_by_percentage",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S011",
+  "old_name": "Sum of multi-year values",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S012",
+  "old_name": "Part-to-whole percentage with unit conversion",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S013",
+  "old_name": "Per-unit value from total amount and quantity",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S014",
+  "old_name": "Average annual expense from total and period",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S015",
+  "old_name": "Direct comparison of two values",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S016",
+  "old_name": "Simple average of multiple values",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S017",
+  "old_name": "Proportion of a part to total",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S018",
+  "old_name": "Average of a table row over years",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S019",
+  "old_name": "percentage_change_from_absolute_values",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S020",
+  "old_name": "reverse_engineering_from_percentage_change",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S021",
+  "old_name": "unit_conversion_and_subtraction",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S022",
+  "old_name": "percentage_change",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S023",
+  "old_name": "investment_return",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S024",
+  "old_name": "Sum of quarterly or component values",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S025",
+  "old_name": "Average of multiple values",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S026",
+  "old_name": "Maximum value extraction from a table column",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S027",
+  "old_name": "cumulative_return_difference",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S028",
+  "old_name": "percentage_of_part",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S029",
+  "old_name": "projected_value_with_same_rate",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S030",
+  "old_name": "annualized_expense",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S031",
+  "old_name": "share_of_total",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S032",
+  "old_name": "tax_rate_from_after_tax",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S033",
+  "old_name": "Minimum value extraction from a table column",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S034",
+  "old_name": "Sum of row values across periods",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S035",
+  "old_name": "sum_of_absolute_values_with_opposite_sign_adjustment",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S036",
+  "old_name": "difference_between_combined_and_single_period",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S037",
+  "old_name": "interval_calculation_from_midpoint_and_range",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S038",
+  "old_name": "Adjusted Value with Unit Conversion",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S039",
+  "old_name": "Basis Point Change from Percentage Difference",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S040",
+  "old_name": "Reverse Percentage Increase",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S041",
+  "old_name": "Sum of future annual commitments",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S042",
+  "old_name": "relative_performance_difference",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S043",
+  "old_name": "operating_expense_variation",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ },
+ {
+  "old_id": "S044",
+  "old_name": "compound_interest_maturity_value",
+  "disposition": "MERGED",
+  "note": "see clean pool"
+ }
+]

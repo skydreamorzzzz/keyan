@@ -1,0 +1,45 @@
+{
+  "n": 492,
+  "predicted_query_family_vs_gold_operation": {
+    "exact_accuracy": 0.31097560975609756,
+    "compatible_accuracy": 0.4268292682926829,
+    "predicted_distribution": {
+      "average": 44,
+      "ratio": 139,
+      "percentage_change": 108,
+      "difference": 45,
+      "aggregation": 44,
+      "unit_scaling": 14,
+      "other": 59,
+      "multi_step": 22,
+      "comparison": 17
+    },
+    "gold_distribution": {
+      "ratio": 221,
+      "change": 124,
+      "aggregation": 24,
+      "other": 80,
+      "table_aggregation": 20,
+      "scaling": 19,
+      "comparison": 4
+    }
+  },
+  "case_predicted_family_agreement_as_proxy_for_gold_struct_hit": {
+    "tp": 295,
+    "fp": 89,
+    "fn": 66,
+    "tn": 42,
+    "precision": 0.7682291666666666,
+    "recall": 0.817174515235457,
+    "accuracy": 0.6849593495934959
+  },
+  "strategy_predicted_family_agreement_as_proxy_for_gold_struct_hit": {
+    "tp": 324,
+    "fp": 79,
+    "fn": 59,
+    "tn": 30,
+    "precision": 0.8039702233250621,
+    "recall": 0.8459530026109661,
+    "accuracy": 0.7195121951219512
+  }
+}

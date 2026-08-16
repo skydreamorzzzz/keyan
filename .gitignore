@@ -1,0 +1,30 @@
+# Local agent/editor state
+.agents/
+.codex/
+.claude/
+
+# Python/runtime caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Raw data and large downloaded inputs
+data/finqa/
+data/*.pdf
+data/*.pdf:Zone.Identifier
+
+# Generated caches and embeddings
+pilot/output/*cache*.jsonl
+pilot/output/*.npy
+pilot/output/paper_*.txt
+pilot/stage2/output/*cache*.jsonl
+pilot/stage2_official/output/*cache*.jsonl
+
+# Logs and local environment
+*.log
+.env
+.env.*
+
+# This environment exposes .git as a read-only placeholder, so local git state
+# may be stored here for the initial push.
+.gitreal/

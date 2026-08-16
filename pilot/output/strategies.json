@@ -1,0 +1,1405 @@
+[
+ {
+  "name": "Part-to-Whole Ratio",
+  "problem_type": "ratio",
+  "problem_pattern": "when the question asks for a percentage or portion of a total (e.g., percentage increase, margin, expense ratio, share of total), the method is to divide the part by the whole.",
+  "operand_roles": "V1=part (the specific value of interest), V2=whole (the total or base value)",
+  "procedure": "1. Identify the part value (the numerator) from the facts. 2. Identify the whole value (the denominator) from the facts. 3. Divide the part by the whole. 4. Express the result as a decimal or percentage as needed.",
+  "formula": "result = part / whole",
+  "template": "divide(V1, V2)",
+  "units_convention": "The result is a fraction (0 to 1). If the question asks for percentage, the answer is typically given as a decimal (e.g., 0.05995) not multiplied by 100. No unit conversion needed.",
+  "caveats": "Ensure the part and whole are from the same time period or category. Watch for units (e.g., millions vs thousands) and ensure they match. The whole must be the correct base (e.g., total revenue, total obligations, total net revenue).",
+  "example_count": "6",
+  "source_struct": [
+   "divide"
+  ],
+  "example_ids": [
+   "AAP/2006/page_85.pdf-1",
+   "PKG/2006/page_27.pdf-1",
+   "ETR/2011/page_145.pdf-2",
+   "CCI/2003/page_21.pdf-1",
+   "C/2008/page_176.pdf-1",
+   "GS/2017/page_74.pdf-2"
+  ],
+  "strategy_id": "S001",
+  "retrieval_text": "Example questions this strategy answers: what is the percentage increase in inventories due to the adoption of lifo in 2006? | what was the operating income margin for 2005? | what portion of the total future minimum lease payments is expected to go for interest? | what is the operating expense ratio for ccuk ( in millions ) ?\n[Strategy: Part-to-Whole Ratio; Type: ratio; Template: divide(V1, V2)]",
+  "example_questions": [
+   "what is the percentage increase in inventories due to the adoption of lifo in 2006?",
+   "what was the operating income margin for 2005?",
+   "what portion of the total future minimum lease payments is expected to go for interest?",
+   "what is the operating expense ratio for ccuk ( in millions ) ?"
+  ]
+ },
+ {
+  "name": "percentage_change",
+  "problem_type": "percentage_change",
+  "problem_pattern": "when the question asks for the rate of return, percentage change, growth rate, or percent increase/decrease between two values, the method is to compute the difference between the new and old values, then divide by the old value.",
+  "operand_roles": "V1=new_value, V2=old_value",
+  "procedure": "1. Identify the new value (the value at the later period or the value after the change). 2. Identify the old value (the value at the earlier period or the value before the change). 3. Subtract the old value from the new value. 4. Divide the result by the old value.",
+  "formula": "result = (new_value - old_value) / old_value",
+  "template": "divide(subtract(V1, V2), V2)",
+  "units_convention": "The result is a fraction (e.g., -0.05 for -5%). If the question asks for a percentage, the answer is typically expressed as a decimal in the benchmark, but may be converted to a percentage in the final answer.",
+  "caveats": "Ensure the correct order: new minus old, not old minus new. The old value must be the denominator, not the new value. Watch for negative results indicating a decrease.",
+  "example_count": "5",
+  "source_struct": [
+   "subtract",
+   "divide"
+  ],
+  "example_ids": [
+   "AAP/2016/page_26.pdf-1",
+   "JPM/2017/page_83.pdf-2",
+   "GPN/2010/page_41.pdf-2",
+   "ETR/2016/page_17.pdf-2",
+   "ETR/2008/page_27.pdf-3",
+   "GIS/2014/page_25.pdf-1"
+  ],
+  "strategy_id": "S002",
+  "retrieval_text": "Example questions this strategy answers: what is the rate of return on an investment in advance auto parts from 2015 to 2016? | what was the percentage change in the average interest-earning assets excluding cib markets in 2017 | what was the percentage that net income attributable to noncontrolling interests , net of tax noncontrolling interest , net of tax increased from 2008 to 2009? | what portion of the net change in net revenue is due to retail electric price?\n[Strategy: percentage_change; Type: percentage_change; Template: divide(subtract(V1, V2), V2)]",
+  "example_questions": [
+   "what is the rate of return on an investment in advance auto parts from 2015 to 2016?",
+   "what was the percentage change in the average interest-earning assets excluding cib markets in 2017",
+   "what was the percentage that net income attributable to noncontrolling interests , net of tax noncontrolling interest , net of tax increased from 2008 to 2009?",
+   "what portion of the net change in net revenue is due to retail electric price?"
+  ]
+ },
+ {
+  "name": "proportion_of_change",
+  "problem_type": "proportion",
+  "problem_pattern": "when the question asks what portion or percentage of a change is due to a specific component, the method is to divide the component's change (or value) by the total change.",
+  "operand_roles": "V1=component_value (the part of the change), V2=total_change (the overall change, computed as new_total - old_total)",
+  "procedure": "1. Identify the component value that is the part of the change (e.g., a specific price effect). 2. Compute the total change by subtracting the old total from the new total. 3. Divide the component value by the total change.",
+  "formula": "result = component_value / (new_total - old_total)",
+  "template": "divide(V1, subtract(V2, V3))",
+  "units_convention": "The result is a fraction (e.g., 0.8257 for 82.57%). The component value and the totals must be in the same units.",
+  "caveats": "The component value must be the absolute change attributable to that component, not the total value of the component. Ensure the total change is computed correctly (new minus old).",
+  "example_count": "1",
+  "source_struct": [
+   "subtract",
+   "divide"
+  ],
+  "example_ids": [
+   "AAP/2016/page_26.pdf-1",
+   "JPM/2017/page_83.pdf-2",
+   "GPN/2010/page_41.pdf-2",
+   "ETR/2016/page_17.pdf-2",
+   "ETR/2008/page_27.pdf-3",
+   "GIS/2014/page_25.pdf-1"
+  ],
+  "strategy_id": "S003",
+  "retrieval_text": "Example questions this strategy answers: what is the rate of return on an investment in advance auto parts from 2015 to 2016? | what was the percentage change in the average interest-earning assets excluding cib markets in 2017 | what was the percentage that net income attributable to noncontrolling interests , net of tax noncontrolling interest , net of tax increased from 2008 to 2009? | what portion of the net change in net revenue is due to retail electric price?\n[Strategy: proportion_of_change; Type: proportion; Template: divide(V1, subtract(V2, V3))]",
+  "example_questions": [
+   "what is the rate of return on an investment in advance auto parts from 2015 to 2016?",
+   "what was the percentage change in the average interest-earning assets excluding cib markets in 2017",
+   "what was the percentage that net income attributable to noncontrolling interests , net of tax noncontrolling interest , net of tax increased from 2008 to 2009?",
+   "what portion of the net change in net revenue is due to retail electric price?"
+  ]
+ },
+ {
+  "name": "Absolute Difference Between Two Values",
+  "problem_type": "difference",
+  "problem_pattern": "when the question asks for the difference, amount different, or by what amount between two values (often across years or between two categories), the method is to subtract the second value from the first value.",
+  "operand_roles": "V1 = first value (e.g., later year, larger category, or value to subtract from), V2 = second value (e.g., earlier year, smaller category, or value being subtracted)",
+  "procedure": "1. Identify the two values mentioned in the question (e.g., from different years or categories). 2. Determine which value is the minuend (V1) and which is the subtrahend (V2) based on the question's phrasing (e.g., 'from 2010 to 2011' implies V1=2011 value, V2=2010 value). 3. Subtract V2 from V1. 4. Report the result as the absolute difference (or signed difference if the question implies direction).",
+  "formula": "result = V1 - V2",
+  "template": "subtract(V1, V2)",
+  "units_convention": "Answer is in the same units as the input values (e.g., millions, dollars). No percentage conversion unless explicitly asked. If values are negative, the result may be negative; the question may ask for 'difference' which could be absolute, but the program uses direct subtraction.",
+  "caveats": "Ensure the correct order of subtraction based on the question's phrasing (e.g., 'from 2010 to 2011' means 2011 minus 2010). Watch for negative values in the facts (e.g., losses) and handle them correctly. If the question asks for 'difference' without direction, the program still uses direct subtraction; the sign may be negative.",
+  "example_count": 6,
+  "source_struct": [
+   "subtract"
+  ],
+  "example_ids": [
+   "MAS/2012/page_86.pdf-4",
+   "GS/2012/page_152.pdf-1",
+   "GIS/2018/page_82.pdf-2",
+   "GS/2013/page_91.pdf-3",
+   "UNP/2012/page_34.pdf-1",
+   "V/2013/page_113.pdf-1"
+  ],
+  "strategy_id": "S004",
+  "retrieval_text": "Example questions this strategy answers: what was the difference in income from financial investments net in millions from 2010 to 2011? | by what amount is the total gains/ ( losses ) on financial assets and financial liabilities at fair value at 2018 different from 2017? | what is the difference between carrying amounts of long-term debt and fair value? | what is the difference in millions , between additional collateral or termination payments for a two-notch downgrade and additional collateral or termination pa\n[Strategy: Absolute Difference Between Two Values; Type: difference; Template: subtract(V1, V2)]",
+  "example_questions": [
+   "what was the difference in income from financial investments net in millions from 2010 to 2011?",
+   "by what amount is the total gains/ ( losses ) on financial assets and financial liabilities at fair value at 2018 different from 2017?",
+   "what is the difference between carrying amounts of long-term debt and fair value?",
+   "what is the difference in millions , between additional collateral or termination payments for a two-notch downgrade and additional collateral or termination pa"
+  ]
+ },
+ {
+  "name": "Sum of two or more values",
+  "problem_type": "total_sum",
+  "problem_pattern": "when the question asks for the total or combined amount of two or more explicitly given values, the method is to add them together.",
+  "operand_roles": "V1=first value, V2=second value (and optionally more values if needed)",
+  "procedure": "1. Identify all the values that need to be summed from the facts. 2. Add them together using the add operator. 3. The result is the total.",
+  "formula": "result = V1 + V2",
+  "template": "add(V1, V2)",
+  "units_convention": "The result is in the same units as the inputs (e.g., millions, thousands). No percentage conversion needed.",
+  "caveats": "Ensure all values are in the same units before adding. Sometimes a constant may be used if a value is not explicitly stated but implied (e.g., const_9).",
+  "example_count": "6",
+  "source_struct": [
+   "add"
+  ],
+  "example_ids": [
+   "PNC/2012/page_110.pdf-3",
+   "RE/2014/page_125.pdf-4",
+   "RE/2014/page_40.pdf-1",
+   "MRO/2011/page_39.pdf-2",
+   "MRO/2008/page_142.pdf-2",
+   "DISCA/2017/page_22.pdf-2"
+  ],
+  "strategy_id": "S005",
+  "retrieval_text": "Example questions this strategy answers: in millions , what is the total of home equity lines of credit? | what is the total amount of notes issued by kilimanjaro in 2014 , in thousands? | what are the total pre-tax catastrophe losses in the last 2 years?\\\\n | what was the total revenues for 2011 and 2010 , in millions?\n[Strategy: Sum of two or more values; Type: total_sum; Template: add(V1, V2)]",
+  "example_questions": [
+   "in millions , what is the total of home equity lines of credit?",
+   "what is the total amount of notes issued by kilimanjaro in 2014 , in thousands?",
+   "what are the total pre-tax catastrophe losses in the last 2 years?\\\\n",
+   "what was the total revenues for 2011 and 2010 , in millions?"
+  ]
+ },
+ {
+  "name": "part_to_whole_ratio",
+  "problem_type": "ratio",
+  "problem_pattern": "when the question asks for the ratio or percentage of a part relative to a total composed of that part plus other components, the method is to divide the part by the sum of all components.",
+  "operand_roles": "V1=part (the value of interest), V2=other component(s) that together with V1 form the whole",
+  "procedure": "1. Identify the part (V1) and the other component(s) (V2, V3, ...) that make up the whole. 2. Sum all components to get the whole. 3. Divide the part by the whole.",
+  "formula": "result = V1 / (V1 + V2 + ...)",
+  "template": "divide(V1, add(V1, V2))",
+  "units_convention": "result is a fraction (0-1) unless multiplied by 100 for percentage; no unit conversion needed.",
+  "caveats": "Ensure the components are mutually exclusive and exhaustive for the whole; watch for negative values that may represent reductions.",
+  "example_count": 4,
+  "source_struct": [
+   "add",
+   "divide"
+  ],
+  "example_ids": [
+   "DRE/2009/page_60.pdf-2",
+   "PNC/2013/page_232.pdf-1",
+   "AMT/2010/page_41.pdf-1",
+   "UNP/2014/page_80.pdf-3",
+   "RCL/2012/page_80.pdf-3",
+   "RE/2010/page_138.pdf-6"
+  ],
+  "strategy_id": "S006",
+  "retrieval_text": "Example questions this strategy answers: what was the ratio of the net fair value of acquired assets and liabilities to the advances and equity | what was the average potential maximum exposure under the loss share arrangements in december 31 , 2013 and december 31 , 2012 in billions? | what portion of the new sites acquired or constructed during 2010 is located in united states? | what percentage of total minimum lease payments are capital leases?\n[Strategy: part_to_whole_ratio; Type: ratio; Template: divide(V1, add(V1, V2))]",
+  "example_questions": [
+   "what was the ratio of the net fair value of acquired assets and liabilities to the advances and equity",
+   "what was the average potential maximum exposure under the loss share arrangements in december 31 , 2013 and december 31 , 2012 in billions?",
+   "what portion of the new sites acquired or constructed during 2010 is located in united states?",
+   "what percentage of total minimum lease payments are capital leases?"
+  ]
+ },
+ {
+  "name": "average_of_two_values",
+  "problem_type": "average",
+  "problem_pattern": "when the question asks for the average of two values (e.g., at two different dates), the method is to sum the two values and divide by 2.",
+  "operand_roles": "V1=first value, V2=second value",
+  "procedure": "1. Identify the two values to average. 2. Sum them. 3. Divide by 2.",
+  "formula": "result = (V1 + V2) / 2",
+  "template": "divide(add(V1, V2), const_2)",
+  "units_convention": "result is in the same units as the inputs; if inputs are in billions, result is in billions.",
+  "caveats": "Ensure the two values are comparable (same units, same type of measure).",
+  "example_count": 1,
+  "source_struct": [
+   "add",
+   "divide"
+  ],
+  "example_ids": [
+   "DRE/2009/page_60.pdf-2",
+   "PNC/2013/page_232.pdf-1",
+   "AMT/2010/page_41.pdf-1",
+   "UNP/2014/page_80.pdf-3",
+   "RCL/2012/page_80.pdf-3",
+   "RE/2010/page_138.pdf-6"
+  ],
+  "strategy_id": "S007",
+  "retrieval_text": "Example questions this strategy answers: what was the ratio of the net fair value of acquired assets and liabilities to the advances and equity | what was the average potential maximum exposure under the loss share arrangements in december 31 , 2013 and december 31 , 2012 in billions? | what portion of the new sites acquired or constructed during 2010 is located in united states? | what percentage of total minimum lease payments are capital leases?\n[Strategy: average_of_two_values; Type: average; Template: divide(add(V1, V2), const_2)]",
+  "example_questions": [
+   "what was the ratio of the net fair value of acquired assets and liabilities to the advances and equity",
+   "what was the average potential maximum exposure under the loss share arrangements in december 31 , 2013 and december 31 , 2012 in billions?",
+   "what portion of the new sites acquired or constructed during 2010 is located in united states?",
+   "what percentage of total minimum lease payments are capital leases?"
+  ]
+ },
+ {
+  "name": "ratio_of_two_aggregates",
+  "problem_type": "ratio",
+  "problem_pattern": "when the question asks for the ratio of one aggregate (e.g., net benefit) to another aggregate (e.g., sum of expenses over multiple periods), the method is to divide the first aggregate by the sum of the second aggregate's components.",
+  "operand_roles": "V1=numerator aggregate (e.g., net benefit in a specific year), V2=first component of denominator, V3=second component of denominator",
+  "procedure": "1. Identify the numerator (V1) and the denominator components (V2, V3, ...). 2. Sum the denominator components. 3. Divide the numerator by the sum.",
+  "formula": "result = V1 / (V2 + V3 + ...)",
+  "template": "divide(V1, add(V2, V3))",
+  "units_convention": "result is a dimensionless ratio (can be >1).",
+  "caveats": "Ensure the numerator and denominator are in the same units; watch for negative values in the denominator that might affect interpretation.",
+  "example_count": 1,
+  "source_struct": [
+   "add",
+   "divide"
+  ],
+  "example_ids": [
+   "DRE/2009/page_60.pdf-2",
+   "PNC/2013/page_232.pdf-1",
+   "AMT/2010/page_41.pdf-1",
+   "UNP/2014/page_80.pdf-3",
+   "RCL/2012/page_80.pdf-3",
+   "RE/2010/page_138.pdf-6"
+  ],
+  "strategy_id": "S008",
+  "retrieval_text": "Example questions this strategy answers: what was the ratio of the net fair value of acquired assets and liabilities to the advances and equity | what was the average potential maximum exposure under the loss share arrangements in december 31 , 2013 and december 31 , 2012 in billions? | what portion of the new sites acquired or constructed during 2010 is located in united states? | what percentage of total minimum lease payments are capital leases?\n[Strategy: ratio_of_two_aggregates; Type: ratio; Template: divide(V1, add(V2, V3))]",
+  "example_questions": [
+   "what was the ratio of the net fair value of acquired assets and liabilities to the advances and equity",
+   "what was the average potential maximum exposure under the loss share arrangements in december 31 , 2013 and december 31 , 2012 in billions?",
+   "what portion of the new sites acquired or constructed during 2010 is located in united states?",
+   "what percentage of total minimum lease payments are capital leases?"
+  ]
+ },
+ {
+  "name": "multiply_price_by_quantity",
+  "problem_type": "per_unit",
+  "problem_pattern": "when the question asks for a total dollar value or cost given a per-unit price and a quantity (shares, units, etc.), the method is to multiply the price per unit by the number of units.",
+  "operand_roles": "V1=price per unit (e.g., average price paid per share), V2=quantity (e.g., number of shares or units)",
+  "procedure": "1. Identify the per-unit price from the facts. 2. Identify the corresponding quantity. 3. Multiply the price by the quantity to get the total value.",
+  "formula": "total_value = price_per_unit * quantity",
+  "template": "multiply(V1, V2)",
+  "units_convention": "The result is in the same currency unit as the price (e.g., dollars, thousands, millions). If the question specifies a unit (e.g., in thousands), ensure the result is expressed accordingly. Percentages are used as decimals (e.g., 0.7% = 0.007).",
+  "caveats": "Ensure the price and quantity correspond to the same time period or category. Watch for units (e.g., shares vs. thousands of shares). If the price is given as a percentage (e.g., dividend yield), multiply by the stock price to get the per-share amount.",
+  "example_count": 5,
+  "source_struct": [
+   "multiply"
+  ],
+  "example_ids": [
+   "FIS/2010/page_93.pdf-2",
+   "PNC/2016/page_44.pdf-2",
+   "VNO/2011/page_85.pdf-1",
+   "PNC/2014/page_161.pdf-1",
+   "IPG/2013/page_22.pdf-1",
+   "VTR/2006/page_48.pdf-1"
+  ],
+  "strategy_id": "S009",
+  "retrieval_text": "Example questions this strategy answers: assuming a stock price of $ 22.97 in 2010 , what would be the dividend per share? | for the fourth quarter of 2016 , what was the total amount spent to repurchase shares ( in thousands ) ?\\\\n | in december 2011 , what was the total dollar value of the vornado common shares rceived as payment for the exercise of certain employee options? | what was the dollar amount in millions for net reclassifications for the year ended december 31 , 2014 due to the commercial portfolio?\n[Strategy: multiply_price_by_quantity; Type: per_unit; Template: multiply(V1, V2)]",
+  "example_questions": [
+   "assuming a stock price of $ 22.97 in 2010 , what would be the dividend per share?",
+   "for the fourth quarter of 2016 , what was the total amount spent to repurchase shares ( in thousands ) ?\\\\n",
+   "in december 2011 , what was the total dollar value of the vornado common shares rceived as payment for the exercise of certain employee options?",
+   "what was the dollar amount in millions for net reclassifications for the year ended december 31 , 2014 due to the commercial portfolio?"
+  ]
+ },
+ {
+  "name": "multiply_value_by_percentage",
+  "problem_type": "proportion",
+  "problem_pattern": "when the question asks for a portion of a total amount based on a percentage (e.g., what amount belongs to a specific portfolio), the method is to multiply the total by the percentage.",
+  "operand_roles": "V1=total amount (e.g., net reclassifications), V2=percentage (as a decimal fraction)",
+  "procedure": "1. Identify the total amount from the facts. 2. Identify the percentage that applies to the desired subset. 3. Multiply the total by the percentage (converted to a decimal) to get the subset amount.",
+  "formula": "subset_amount = total_amount * percentage",
+  "template": "multiply(V1, V2)",
+  "units_convention": "The result is in the same units as the total amount. Percentages must be converted to decimals (e.g., 93% = 0.93).",
+  "caveats": "Ensure the percentage is applied to the correct base amount. Watch for percentage signs in the facts; convert them properly.",
+  "example_count": 1,
+  "source_struct": [
+   "multiply"
+  ],
+  "example_ids": [
+   "FIS/2010/page_93.pdf-2",
+   "PNC/2016/page_44.pdf-2",
+   "VNO/2011/page_85.pdf-1",
+   "PNC/2014/page_161.pdf-1",
+   "IPG/2013/page_22.pdf-1",
+   "VTR/2006/page_48.pdf-1"
+  ],
+  "strategy_id": "S010",
+  "retrieval_text": "Example questions this strategy answers: assuming a stock price of $ 22.97 in 2010 , what would be the dividend per share? | for the fourth quarter of 2016 , what was the total amount spent to repurchase shares ( in thousands ) ?\\\\n | in december 2011 , what was the total dollar value of the vornado common shares rceived as payment for the exercise of certain employee options? | what was the dollar amount in millions for net reclassifications for the year ended december 31 , 2014 due to the commercial portfolio?\n[Strategy: multiply_value_by_percentage; Type: proportion; Template: multiply(V1, V2)]",
+  "example_questions": [
+   "assuming a stock price of $ 22.97 in 2010 , what would be the dividend per share?",
+   "for the fourth quarter of 2016 , what was the total amount spent to repurchase shares ( in thousands ) ?\\\\n",
+   "in december 2011 , what was the total dollar value of the vornado common shares rceived as payment for the exercise of certain employee options?",
+   "what was the dollar amount in millions for net reclassifications for the year ended december 31 , 2014 due to the commercial portfolio?"
+  ]
+ },
+ {
+  "name": "Sum of multi-year values",
+  "problem_type": "total_sum",
+  "problem_pattern": "when the question asks for the total or sum of a metric over multiple periods (e.g., last three years), the method is to add the values for each period.",
+  "operand_roles": "V1, V2, V3 = values for each period (e.g., year1, year2, year3)",
+  "procedure": "1. Identify the metric and the periods mentioned in the question. 2. Extract the value for each period from the text/table. 3. Sum all values sequentially using addition.",
+  "formula": "result = V1 + V2 + V3",
+  "template": "add(add(V1, V2), V3)",
+  "units_convention": "Values are typically in millions; result is in the same unit. No percentage conversion.",
+  "caveats": "Ensure the values are for the correct periods and in the same unit. Watch for values that may be negative or need sign adjustment.",
+  "example_count": "6",
+  "source_struct": [
+   "add",
+   "add"
+  ],
+  "example_ids": [
+   "DG/2006/page_58.pdf-1",
+   "RE/2014/page_40.pdf-2",
+   "GIS/2018/page_77.pdf-2",
+   "GS/2016/page_183.pdf-2",
+   "GIS/2019/page_38.pdf-2",
+   "HFC/2017/page_103.pdf-2"
+  ],
+  "strategy_id": "S011",
+  "retrieval_text": "Example questions this strategy answers: what is the total impairment charge recorded in the lat three years , in millions? | what are the total pre-tax catastrophe losses in the last 3 years?\\\\n | what is the total amount paid in cash related to restructuring initiatives for the last three years? | what was total rent charged to operating expense in millions for 2016 , 2015 and 2014?\n[Strategy: Sum of multi-year values; Type: total_sum; Template: add(add(V1, V2), V3)]",
+  "example_questions": [
+   "what is the total impairment charge recorded in the lat three years , in millions?",
+   "what are the total pre-tax catastrophe losses in the last 3 years?\\\\n",
+   "what is the total amount paid in cash related to restructuring initiatives for the last three years?",
+   "what was total rent charged to operating expense in millions for 2016 , 2015 and 2014?"
+  ]
+ },
+ {
+  "name": "Part-to-whole percentage with unit conversion",
+  "problem_type": "proportion",
+  "problem_pattern": "when the question asks what percentage a subcomponent (often in different units, e.g., billions) is of a total (often in millions), the method is to convert the subcomponent to the same unit as the total, then divide the subcomponent by the total.",
+  "operand_roles": "V1 = subcomponent value (in original unit, e.g., billions), V2 = total value (in target unit, e.g., millions), const_1000 = conversion factor from billions to millions (or const_1000000 for millions to units)",
+  "procedure": "1. Identify the subcomponent value and the total value. 2. Convert the subcomponent to the same unit as the total using the appropriate constant (e.g., multiply by 1000 if converting billions to millions). 3. Divide the converted subcomponent by the total. 4. The result is a fraction; if needed, multiply by 100 to express as percentage.",
+  "formula": "result = (V1 * conversion_factor) / V2",
+  "template": "divide(multiply(V1, const_1000), V2)",
+  "units_convention": "Answer is a fraction (e.g., 0.45 for 45%). If the question asks for percentage, the fraction is the answer; no additional multiplication by 100 in the program. Conversion constants: const_1000 for billions to millions, const_1000000 for millions to units.",
+  "caveats": "Ensure the conversion factor matches the units (e.g., billions to millions uses 1000, not 1e6). The total must be in the same unit as the converted subcomponent. Watch for cases where the subcomponent is already in the same unit; then no conversion is needed.",
+  "example_count": 2,
+  "source_struct": [
+   "multiply",
+   "divide"
+  ],
+  "example_ids": [
+   "IP/2012/page_56.pdf-2",
+   "IP/2014/page_66.pdf-2",
+   "VRTX/2006/page_112.pdf-1",
+   "AES/2011/page_269.pdf-1",
+   "GPN/2013/page_98.pdf-3",
+   "ABMD/2012/page_75.pdf-2"
+  ],
+  "strategy_id": "S012",
+  "retrieval_text": "Example questions this strategy answers: what percentage of printing paper sales where north american printing papers sales in 2011? | what percentage where north american consumer packaging net sales of consumer packaging sales in 2013? | what was the average price per share , in dollars , of the stock the company sold in august 2006? | how much of the dpl purchase price was funded by existing credit facilities as opposed to new borrowing?\n[Strategy: Part-to-whole percentage with unit conversion; Type: proportion; Template: divide(multiply(V1, const_1000), V2)]",
+  "example_questions": [
+   "what percentage of printing paper sales where north american printing papers sales in 2011?",
+   "what percentage where north american consumer packaging net sales of consumer packaging sales in 2013?",
+   "what was the average price per share , in dollars , of the stock the company sold in august 2006?",
+   "how much of the dpl purchase price was funded by existing credit facilities as opposed to new borrowing?"
+  ]
+ },
+ {
+  "name": "Per-unit value from total amount and quantity",
+  "problem_type": "per_unit",
+  "problem_pattern": "when the question asks for the average price per share or per unit, given a total monetary amount and a quantity, the method is to divide the total amount (converted to base units) by the quantity.",
+  "operand_roles": "V1 = total monetary amount (in millions or billions), V2 = quantity (number of shares/units), const_1000000 = conversion factor from millions to base units (or const_1000 for billions to millions, etc.)",
+  "procedure": "1. Identify the total monetary amount and the quantity. 2. Convert the monetary amount to base units (e.g., dollars) using the appropriate constant (e.g., multiply by 1,000,000 if amount is in millions). 3. Divide the converted amount by the quantity to get the per-unit value.",
+  "formula": "result = (V1 * conversion_factor) / V2",
+  "template": "divide(multiply(V1, const_1000000), V2)",
+  "units_convention": "Answer is in base units (e.g., dollars per share). The conversion factor depends on the unit of V1: const_1000000 for millions, const_1000 for billions (if converting to millions, but typically to base units).",
+  "caveats": "Ensure the conversion factor is correct for the unit of V1. The quantity must be in the same unit as the denominator (e.g., shares). The result may be a decimal; no rounding is applied in the program.",
+  "example_count": 2,
+  "source_struct": [
+   "multiply",
+   "divide"
+  ],
+  "example_ids": [
+   "IP/2012/page_56.pdf-2",
+   "IP/2014/page_66.pdf-2",
+   "VRTX/2006/page_112.pdf-1",
+   "AES/2011/page_269.pdf-1",
+   "GPN/2013/page_98.pdf-3",
+   "ABMD/2012/page_75.pdf-2"
+  ],
+  "strategy_id": "S013",
+  "retrieval_text": "Example questions this strategy answers: what percentage of printing paper sales where north american printing papers sales in 2011? | what percentage where north american consumer packaging net sales of consumer packaging sales in 2013? | what was the average price per share , in dollars , of the stock the company sold in august 2006? | how much of the dpl purchase price was funded by existing credit facilities as opposed to new borrowing?\n[Strategy: Per-unit value from total amount and quantity; Type: per_unit; Template: divide(multiply(V1, const_1000000), V2)]",
+  "example_questions": [
+   "what percentage of printing paper sales where north american printing papers sales in 2011?",
+   "what percentage where north american consumer packaging net sales of consumer packaging sales in 2013?",
+   "what was the average price per share , in dollars , of the stock the company sold in august 2006?",
+   "how much of the dpl purchase price was funded by existing credit facilities as opposed to new borrowing?"
+  ]
+ },
+ {
+  "name": "Average annual expense from total and period",
+  "problem_type": "average",
+  "problem_pattern": "when the question asks for the average expense per year over a period, given a total expense and a number of years, the method is to divide the total expense (converted to base units) by the number of years.",
+  "operand_roles": "V1 = total expense (in millions), V2 = number of years (period), const_1000000 = conversion factor from millions to base units",
+  "procedure": "1. Identify the total expense and the period in years. 2. Convert the total expense to base units (e.g., dollars) using the appropriate constant (e.g., multiply by 1,000,000 if in millions). 3. Divide the converted total by the number of years to get the average annual expense.",
+  "formula": "result = (V1 * conversion_factor) / V2",
+  "template": "divide(multiply(V1, const_1000000), V2)",
+  "units_convention": "Answer is in base units per year (e.g., dollars per year). The conversion factor is const_1000000 for millions to base units.",
+  "caveats": "Ensure the period is in years (not months). The total expense must be converted to the same unit as the desired answer. The result may be a large number; no rounding is applied.",
+  "example_count": 1,
+  "source_struct": [
+   "multiply",
+   "divide"
+  ],
+  "example_ids": [
+   "IP/2012/page_56.pdf-2",
+   "IP/2014/page_66.pdf-2",
+   "VRTX/2006/page_112.pdf-1",
+   "AES/2011/page_269.pdf-1",
+   "GPN/2013/page_98.pdf-3",
+   "ABMD/2012/page_75.pdf-2"
+  ],
+  "strategy_id": "S014",
+  "retrieval_text": "Example questions this strategy answers: what percentage of printing paper sales where north american printing papers sales in 2011? | what percentage where north american consumer packaging net sales of consumer packaging sales in 2013? | what was the average price per share , in dollars , of the stock the company sold in august 2006? | how much of the dpl purchase price was funded by existing credit facilities as opposed to new borrowing?\n[Strategy: Average annual expense from total and period; Type: average; Template: divide(multiply(V1, const_1000000), V2)]",
+  "example_questions": [
+   "what percentage of printing paper sales where north american printing papers sales in 2011?",
+   "what percentage where north american consumer packaging net sales of consumer packaging sales in 2013?",
+   "what was the average price per share , in dollars , of the stock the company sold in august 2006?",
+   "how much of the dpl purchase price was funded by existing credit facilities as opposed to new borrowing?"
+  ]
+ },
+ {
+  "name": "Direct comparison of two values",
+  "problem_type": "comparison",
+  "problem_pattern": "when the question asks whether one value is greater than another (e.g., interest rates, vesting periods, expense increases, cash amounts, index values, balances vs. obligations), the method is to directly compare the two given values.",
+  "operand_roles": "V1 = first value to compare, V2 = second value to compare",
+  "procedure": "1. Identify the two values mentioned in the question. 2. Use the greater operator to compare them. 3. Return the boolean result (yes/no).",
+  "formula": "result = (V1 > V2)",
+  "template": "greater(V1, V2)",
+  "units_convention": "Values are used as given; no percentage conversion or unit scaling needed.",
+  "caveats": "Ensure the correct values are extracted from the text/table; watch for units (e.g., millions) but they are consistent within the comparison.",
+  "example_count": "6",
+  "source_struct": [
+   "greater"
+  ],
+  "example_ids": [
+   "AWK/2018/page_103.pdf-2",
+   "ABMD/2003/page_27.pdf-1",
+   "UNP/2012/page_30.pdf-2",
+   "JKHY/2008/page_30.pdf-2",
+   "JPM/2015/page_77.pdf-1",
+   "UNP/2012/page_39.pdf-1"
+  ],
+  "strategy_id": "S015",
+  "retrieval_text": "Example questions this strategy answers: was the weighted average interest rate on awcc short-term borrowings greater for the year ended december 31 , 2018 then 2017? | is the vesting under the 2000 employee equity plan potentially longer than under the directors 1989 plan? | did contract services expense increase more in 2012 than in 2011? | during fiscal 2007 , was the net cash used in financing activities included the repurchase of our common stock greater than cash for payment of dividends?\n[Strategy: Direct comparison of two values; Type: comparison; Template: greater(V1, V2)]",
+  "example_questions": [
+   "was the weighted average interest rate on awcc short-term borrowings greater for the year ended december 31 , 2018 then 2017?",
+   "is the vesting under the 2000 employee equity plan potentially longer than under the directors 1989 plan?",
+   "did contract services expense increase more in 2012 than in 2011?",
+   "during fiscal 2007 , was the net cash used in financing activities included the repurchase of our common stock greater than cash for payment of dividends?"
+  ]
+ },
+ {
+  "name": "Simple average of multiple values",
+  "problem_type": "average",
+  "problem_pattern": "when the question asks for the average (mean) of a set of values over a period or across categories, the method is to sum all the values and divide by the count of values.",
+  "operand_roles": "V1, V2, V3, ... = individual values to be averaged; count = number of values (often a constant like const_3 or const_2)",
+  "procedure": "1. Identify all values to be averaged. 2. Sum them using add operations. 3. Divide the sum by the number of values (using a constant for the count).",
+  "formula": "average = (V1 + V2 + ... + Vn) / n",
+  "template": "divide(add(add(V1, V2), V3), const_n)",
+  "units_convention": "Result is in the same units as the input values. If inputs are in millions, result is in millions. No percentage conversion.",
+  "caveats": "Ensure all values are included and the count matches the number of values. Watch for cases where the count is not explicitly given but implied by the period (e.g., 3 years).",
+  "example_count": "5",
+  "source_struct": [
+   "add",
+   "add",
+   "divide"
+  ],
+  "example_ids": [
+   "RCL/2017/page_38.pdf-3",
+   "ANSS/2008/page_85.pdf-2",
+   "AWK/2013/page_123.pdf-2",
+   "PNC/2011/page_44.pdf-3",
+   "HUM/2004/page_78.pdf-2",
+   "IPG/2018/page_39.pdf-1"
+  ],
+  "strategy_id": "S016",
+  "retrieval_text": "Example questions this strategy answers: what is the mathematical mean for all three investments as of dec 31 , 2017? | what was the average expenses related to the company 2019s retirement programs from 2006 to 2008 in millions | what was the average decrease in the tax position from 2011 to 2013 | in 2011 and 2010 what was the average net interest income in millions\n[Strategy: Simple average of multiple values; Type: average; Template: divide(add(add(V1, V2), V3), const_n)]",
+  "example_questions": [
+   "what is the mathematical mean for all three investments as of dec 31 , 2017?",
+   "what was the average expenses related to the company 2019s retirement programs from 2006 to 2008 in millions",
+   "what was the average decrease in the tax position from 2011 to 2013",
+   "in 2011 and 2010 what was the average net interest income in millions"
+  ]
+ },
+ {
+  "name": "Proportion of a part to total",
+  "problem_type": "proportion",
+  "problem_pattern": "when the question asks for the percentage or fraction of a specific component relative to a total that includes that component and possibly other components, the method is to divide the component value by the sum of all relevant components.",
+  "operand_roles": "V1 = the component of interest (part), V2 = another component, V3 = another component (if any), total = sum of all components including V1",
+  "procedure": "1. Identify the component value (part). 2. Identify all other components that make up the total. 3. Sum all components to get the total. 4. Divide the part by the total.",
+  "formula": "proportion = part / (sum of all components)",
+  "template": "divide(V1, add(V2, add(V3, V1)))",
+  "units_convention": "Result is a fraction (0 to 1). If the question asks for percentage, multiply by 100 (but in FinQA, often the answer is the fraction).",
+  "caveats": "Ensure the total includes the part itself. Watch for negative signs in the facts (e.g., liabilities shown as negative) – use absolute values when summing for total.",
+  "example_count": "1",
+  "source_struct": [
+   "add",
+   "add",
+   "divide"
+  ],
+  "example_ids": [
+   "RCL/2017/page_38.pdf-3",
+   "ANSS/2008/page_85.pdf-2",
+   "AWK/2013/page_123.pdf-2",
+   "PNC/2011/page_44.pdf-3",
+   "HUM/2004/page_78.pdf-2",
+   "IPG/2018/page_39.pdf-1"
+  ],
+  "strategy_id": "S017",
+  "retrieval_text": "Example questions this strategy answers: what is the mathematical mean for all three investments as of dec 31 , 2017? | what was the average expenses related to the company 2019s retirement programs from 2006 to 2008 in millions | what was the average decrease in the tax position from 2011 to 2013 | in 2011 and 2010 what was the average net interest income in millions\n[Strategy: Proportion of a part to total; Type: proportion; Template: divide(V1, add(V2, add(V3, V1)))]",
+  "example_questions": [
+   "what is the mathematical mean for all three investments as of dec 31 , 2017?",
+   "what was the average expenses related to the company 2019s retirement programs from 2006 to 2008 in millions",
+   "what was the average decrease in the tax position from 2011 to 2013",
+   "in 2011 and 2010 what was the average net interest income in millions"
+  ]
+ },
+ {
+  "name": "Average of a table row over years",
+  "problem_type": "average",
+  "problem_pattern": "when the question asks for the average value of a specific line item over a range of years, the method is to take the table average of that line item across the specified years.",
+  "operand_roles": "V1 = the table row label (e.g., 'operating profit', 'net earnings')",
+  "procedure": "1. Identify the row label from the question. 2. Use the table_average operator on that row label, which automatically averages the values for the years in the table (or the specified range). 3. The result is the average value.",
+  "formula": "average = (sum of row values over years) / (number of years)",
+  "template": "table_average(V1, none)",
+  "units_convention": "The result is in the same units as the row values (e.g., millions, dollars, percent). If the row values are in millions, the average is in millions. Percentages are averaged as given (not multiplied by 100).",
+  "caveats": "Ensure the row label exactly matches the table header. If the question specifies a subset of years, the table_average operator should only consider those years (in the FinQA dataset, the table is pre-filtered to the relevant years).",
+  "example_count": "6",
+  "source_struct": [
+   "table_average"
+  ],
+  "example_ids": [
+   "AON/2018/page_90.pdf-4",
+   "MAS/2010/page_89.pdf-2",
+   "LMT/2013/page_45.pdf-4",
+   "ADBE/2011/page_101.pdf-2",
+   "MRO/2006/page_61.pdf-3",
+   "LMT/2005/page_76.pdf-2"
+  ],
+  "strategy_id": "S018",
+  "retrieval_text": "Example questions this strategy answers: considering the years 2016-2018 , what is the average expense for the significant plans in the u.k.? | considering the years 2008-2010 , what is the average income from cash and cash investments , in millions? | what were average operating profit for is&gs from 2011 to 2013 , in millions? | what was the average ending balance of allowance for unrecognized tax positions?\n[Strategy: Average of a table row over years; Type: average; Template: table_average(V1, none)]",
+  "example_questions": [
+   "considering the years 2016-2018 , what is the average expense for the significant plans in the u.k.?",
+   "considering the years 2008-2010 , what is the average income from cash and cash investments , in millions?",
+   "what were average operating profit for is&gs from 2011 to 2013 , in millions?",
+   "what was the average ending balance of allowance for unrecognized tax positions?"
+  ]
+ },
+ {
+  "name": "percentage_change_from_absolute_values",
+  "problem_type": "percentage_change",
+  "problem_pattern": "when the question asks for the percentual increase or expected increase between two values (e.g., new_value vs old_value), the method is to compute the ratio of new_value to old_value and subtract 1.",
+  "operand_roles": "V1=new_value (the later or current period value), V2=old_value (the earlier or base period value)",
+  "procedure": "1. Identify the new value (V1) and the old value (V2) from the facts. 2. Divide V1 by V2 to get the ratio. 3. Subtract 1 from the ratio to get the percentage change as a fraction. 4. If needed, convert to percentage by multiplying by 100.",
+  "formula": "percentage_change = (new_value / old_value) - 1",
+  "template": "subtract(divide(V1, V2), const_1)",
+  "units_convention": "The result is a fraction (e.g., 0.37795) representing the percentage change. If the question asks for percent, the answer is the fraction itself (not multiplied by 100) in FinQA convention.",
+  "caveats": "Ensure the values are in the same units (e.g., both in millions or both in billions). If the values are negative (e.g., capital expenditures shown as negative), use absolute values for the ratio. The old value must not be zero.",
+  "example_count": 4,
+  "source_struct": [
+   "divide",
+   "subtract"
+  ],
+  "example_ids": [
+   "APD/2019/page_53.pdf-1",
+   "C/2009/page_38.pdf-1",
+   "UNP/2018/page_50.pdf-1",
+   "EOG/2017/page_102.pdf-2",
+   "FRT/2006/page_133.pdf-1",
+   "AON/2018/page_41.pdf-3"
+  ],
+  "strategy_id": "S019",
+  "retrieval_text": "Example questions this strategy answers: what is the expected increase in the pension expense's amortization of actuarial losses in 2020 , in comparison with 2019? | what was the revenues , net of interest expense in billions in 2008 reflecting the overall difficult market conditions . | in billions , what would 2018 total operating revenues have been without the mexico business? | considering the twelve months ended december 31 , 2017 , what was the percentual increase observed in total puds?\n[Strategy: percentage_change_from_absolute_values; Type: percentage_change; Template: subtract(divide(V1, V2), const_1)]",
+  "example_questions": [
+   "what is the expected increase in the pension expense's amortization of actuarial losses in 2020 , in comparison with 2019?",
+   "what was the revenues , net of interest expense in billions in 2008 reflecting the overall difficult market conditions .",
+   "in billions , what would 2018 total operating revenues have been without the mexico business?",
+   "considering the twelve months ended december 31 , 2017 , what was the percentual increase observed in total puds?"
+  ]
+ },
+ {
+  "name": "reverse_engineering_from_percentage_change",
+  "problem_type": "other",
+  "problem_pattern": "when the question asks for a base value given a percentage decrease and the absolute change amount, the method is to divide the absolute change by the percentage (as a fraction) to get the original value, then subtract the absolute change to get the new value.",
+  "operand_roles": "V1=absolute_change (the dollar amount of change), V2=percentage_change (as a fraction, e.g., 2% = 0.02), V3=absolute_change (same as V1, used for subtraction)",
+  "procedure": "1. Identify the absolute change amount (V1) and the percentage change (V2) from the facts. 2. Divide V1 by V2 to get the original (base) value. 3. Subtract V1 from the base value to get the new value (the value after the change).",
+  "formula": "new_value = (absolute_change / percentage_change) - absolute_change",
+  "template": "subtract(divide(V1, V2), V3)",
+  "units_convention": "The result is in the same units as the absolute change (e.g., billions). The percentage must be expressed as a fraction (e.g., 2% = 0.02) in the division.",
+  "caveats": "The percentage change must be a decrease (or increase) relative to the base; ensure the sign is correct. The absolute change and the percentage must refer to the same period and metric.",
+  "example_count": 1,
+  "source_struct": [
+   "divide",
+   "subtract"
+  ],
+  "example_ids": [
+   "APD/2019/page_53.pdf-1",
+   "C/2009/page_38.pdf-1",
+   "UNP/2018/page_50.pdf-1",
+   "EOG/2017/page_102.pdf-2",
+   "FRT/2006/page_133.pdf-1",
+   "AON/2018/page_41.pdf-3"
+  ],
+  "strategy_id": "S020",
+  "retrieval_text": "Example questions this strategy answers: what is the expected increase in the pension expense's amortization of actuarial losses in 2020 , in comparison with 2019? | what was the revenues , net of interest expense in billions in 2008 reflecting the overall difficult market conditions . | in billions , what would 2018 total operating revenues have been without the mexico business? | considering the twelve months ended december 31 , 2017 , what was the percentual increase observed in total puds?\n[Strategy: reverse_engineering_from_percentage_change; Type: other; Template: subtract(divide(V1, V2), V3)]",
+  "qc_note": "low confidence: template likely over-specific to one case; monitor",
+  "example_questions": [
+   "what is the expected increase in the pension expense's amortization of actuarial losses in 2020 , in comparison with 2019?",
+   "what was the revenues , net of interest expense in billions in 2008 reflecting the overall difficult market conditions .",
+   "in billions , what would 2018 total operating revenues have been without the mexico business?",
+   "considering the twelve months ended december 31 , 2017 , what was the percentual increase observed in total puds?"
+  ]
+ },
+ {
+  "name": "unit_conversion_and_subtraction",
+  "problem_type": "unit_conversion",
+  "problem_pattern": "when the question asks for a value in a different unit (e.g., billions) and a component needs to be subtracted, the method is to convert the given value to the target unit using a constant (e.g., divide by 1000 to go from millions to billions) and then subtract the component.",
+  "operand_roles": "V1=value_in_original_unit (e.g., millions), V2=component_to_subtract (in target unit, e.g., billions)",
+  "procedure": "1. Identify the total value (V1) in the original unit. 2. Convert V1 to the target unit by dividing by the appropriate constant (e.g., const_1000 for millions to billions). 3. Subtract the component (V2) from the converted value.",
+  "formula": "result = (value_in_original_unit / conversion_factor) - component",
+  "template": "subtract(divide(V1, const_1000), V2)",
+  "units_convention": "The constant (e.g., const_1000) is used for unit conversion. The final answer is in the target unit (e.g., billions).",
+  "caveats": "Ensure the conversion factor is correct (e.g., 1000 for millions to billions). The component to subtract must be in the same unit as the target unit.",
+  "example_count": 1,
+  "source_struct": [
+   "divide",
+   "subtract"
+  ],
+  "example_ids": [
+   "APD/2019/page_53.pdf-1",
+   "C/2009/page_38.pdf-1",
+   "UNP/2018/page_50.pdf-1",
+   "EOG/2017/page_102.pdf-2",
+   "FRT/2006/page_133.pdf-1",
+   "AON/2018/page_41.pdf-3"
+  ],
+  "strategy_id": "S021",
+  "retrieval_text": "Example questions this strategy answers: what is the expected increase in the pension expense's amortization of actuarial losses in 2020 , in comparison with 2019? | what was the revenues , net of interest expense in billions in 2008 reflecting the overall difficult market conditions . | in billions , what would 2018 total operating revenues have been without the mexico business? | considering the twelve months ended december 31 , 2017 , what was the percentual increase observed in total puds?\n[Strategy: unit_conversion_and_subtraction; Type: unit_conversion; Template: subtract(divide(V1, const_1000), V2)]",
+  "example_questions": [
+   "what is the expected increase in the pension expense's amortization of actuarial losses in 2020 , in comparison with 2019?",
+   "what was the revenues , net of interest expense in billions in 2008 reflecting the overall difficult market conditions .",
+   "in billions , what would 2018 total operating revenues have been without the mexico business?",
+   "considering the twelve months ended december 31 , 2017 , what was the percentual increase observed in total puds?"
+  ]
+ },
+ {
+  "name": "percentage_change",
+  "problem_type": "percentage_change",
+  "problem_pattern": "when the question asks for the percentage increase or percent change between two values (often across years), the method is to compute the difference between the new and old value, divide by the old value, and multiply by 100.",
+  "operand_roles": "V1=new_value, V2=old_value",
+  "procedure": "1. Identify the new value and the old value from the context. 2. Subtract the old value from the new value. 3. Divide the result by the old value. 4. Multiply by 100 to express as a percentage.",
+  "formula": "result = ((new_value - old_value) / old_value) * 100",
+  "template": "multiply(divide(subtract(V1, V2), V2), const_100)",
+  "units_convention": "The result is a percentage (already multiplied by 100). No additional unit conversion needed.",
+  "caveats": "Ensure the correct order of subtraction (new minus old). If the question asks for decrease, the result will be negative. Watch for cases where the old value is not explicitly given but must be derived (e.g., from a difference and new value).",
+  "example_count": "5",
+  "source_struct": [
+   "subtract",
+   "divide",
+   "multiply"
+  ],
+  "example_ids": [
+   "RCL/2014/page_16.pdf-4",
+   "DRE/2002/page_30.pdf-3",
+   "RCL/2012/page_17.pdf-3",
+   "DRE/2002/page_13.pdf-1",
+   "IPG/2014/page_36.pdf-4",
+   "TFX/2015/page_42.pdf-2"
+  ],
+  "strategy_id": "S022",
+  "retrieval_text": "Example questions this strategy answers: what is the estimated percentage increase , from 2012 to 2014 , in total global cruise guests? | what is the percent change in basic net income available for common shares from 2001 to 2002? | what was the percentage increase of global cruise guests from 2008-2012? | what is the percent change in gain on land sales from 2001 to 2002?\n[Strategy: percentage_change; Type: percentage_change; Template: multiply(divide(subtract(V1, V2), V2), const_100)]",
+  "example_questions": [
+   "what is the estimated percentage increase , from 2012 to 2014 , in total global cruise guests?",
+   "what is the percent change in basic net income available for common shares from 2001 to 2002?",
+   "what was the percentage increase of global cruise guests from 2008-2012?",
+   "what is the percent change in gain on land sales from 2001 to 2002?"
+  ]
+ },
+ {
+  "name": "investment_return",
+  "problem_type": "other",
+  "problem_pattern": "when the question asks for the total return of an investment given an initial investment amount, an index value at start, and an index value at end, the method is to compute the number of units bought (investment divided by start index) and multiply by the index change.",
+  "operand_roles": "V1=initial_investment, V2=start_index_value, V3=end_index_value",
+  "procedure": "1. Identify the initial investment amount, the index value at the start period, and the index value at the end period. 2. Compute the number of units by dividing the investment by the start index. 3. Compute the index change by subtracting the start index from the end index. 4. Multiply the number of units by the index change to get the total return.",
+  "formula": "result = (initial_investment / start_index) * (end_index - start_index)",
+  "template": "multiply(divide(V1, V2), subtract(V3, V2))",
+  "units_convention": "The result is in the same currency as the initial investment. No percentage conversion.",
+  "caveats": "Ensure the index values are on the same scale (e.g., both are index points). The start index must be the denominator in the unit calculation. The result is the absolute return, not the percentage return.",
+  "example_count": "1",
+  "source_struct": [
+   "subtract",
+   "divide",
+   "multiply"
+  ],
+  "example_ids": [
+   "RCL/2014/page_16.pdf-4",
+   "DRE/2002/page_30.pdf-3",
+   "RCL/2012/page_17.pdf-3",
+   "DRE/2002/page_13.pdf-1",
+   "IPG/2014/page_36.pdf-4",
+   "TFX/2015/page_42.pdf-2"
+  ],
+  "strategy_id": "S023",
+  "retrieval_text": "Example questions this strategy answers: what is the estimated percentage increase , from 2012 to 2014 , in total global cruise guests? | what is the percent change in basic net income available for common shares from 2001 to 2002? | what was the percentage increase of global cruise guests from 2008-2012? | what is the percent change in gain on land sales from 2001 to 2002?\n[Strategy: investment_return; Type: other; Template: multiply(divide(V1, V2), subtract(V3, V2))]",
+  "example_questions": [
+   "what is the estimated percentage increase , from 2012 to 2014 , in total global cruise guests?",
+   "what is the percent change in basic net income available for common shares from 2001 to 2002?",
+   "what was the percentage increase of global cruise guests from 2008-2012?",
+   "what is the percent change in gain on land sales from 2001 to 2002?"
+  ]
+ },
+ {
+  "name": "Sum of quarterly or component values",
+  "problem_type": "total_sum",
+  "problem_pattern": "when the question asks for a total or combined amount across multiple periods, regions, or components, the method is to sum all relevant values.",
+  "operand_roles": "V1, V2, V3, ... = individual component values to be summed",
+  "procedure": "Identify all values that contribute to the total. Add them sequentially using the add operator.",
+  "formula": "result = V1 + V2 + V3 + ...",
+  "template": "add(add(add(V1, V2), V3), V4)",
+  "units_convention": "Values are in the same unit as given (e.g., millions, square feet, shares). No percentage conversion needed.",
+  "caveats": "Ensure all relevant components are included; watch for values that may be excluded (e.g., unvested units) and add them if the question implies inclusion.",
+  "example_count": "6",
+  "source_struct": [
+   "add",
+   "add",
+   "add"
+  ],
+  "example_ids": [
+   "HII/2015/page_120.pdf-1",
+   "PNC/2012/page_98.pdf-3",
+   "MS/2017/page_180.pdf-1",
+   "ALXN/2015/page_59.pdf-2",
+   "AMT/2015/page_58.pdf-3",
+   "AAPL/2007/page_117.pdf-1"
+  ],
+  "strategy_id": "S024",
+  "retrieval_text": "Example questions this strategy answers: what is the total revenue for the fiscal year of 2015? | how much in combined repurchase claims , in millions , were recorded in the first quarter of 2005 , 2006 , 2007 , 2008? | what was the total discrete tax benefit from employee share-based awards in 2017 in millions? | how many square feet are leased by alexion pharmaceuticals , inc?\n[Strategy: Sum of quarterly or component values; Type: total_sum; Template: add(add(add(V1, V2), V3), V4)]",
+  "example_questions": [
+   "what is the total revenue for the fiscal year of 2015?",
+   "how much in combined repurchase claims , in millions , were recorded in the first quarter of 2005 , 2006 , 2007 , 2008?",
+   "what was the total discrete tax benefit from employee share-based awards in 2017 in millions?",
+   "how many square feet are leased by alexion pharmaceuticals , inc?"
+  ]
+ },
+ {
+  "name": "Average of multiple values",
+  "problem_type": "average",
+  "problem_pattern": "when the question asks for the average of a set of values over a period or across categories, the method is to sum all the values and divide by the count of values.",
+  "operand_roles": "V1, V2, V3, ... = individual values to be averaged; const_3 = number of values (if 3 values); const_2 = divisor (count of values) after summing",
+  "procedure": "1. Identify all the values to be averaged. 2. Sum all the values. 3. Divide the sum by the number of values. 4. If the values are percentages, keep them as percentages in the sum and divide by count to get average percentage.",
+  "formula": "average = (V1 + V2 + V3 + ... + Vn) / n",
+  "template": "divide(add(add(V1, V2), V3), const_2)",
+  "units_convention": "If values are in millions or billions, the result is in the same unit. If values are percentages, the result is a percentage (not multiplied by 100).",
+  "caveats": "Ensure all values are in the same unit. The divisor must be the count of values, not the number of years if there are missing values. The const_2 is used as the divisor after summing; sometimes the program uses const_3 as an intermediate step for adding the count, but the final division is by the count.",
+  "example_count": 6,
+  "source_struct": [
+   "add",
+   "add",
+   "add",
+   "divide"
+  ],
+  "example_ids": [
+   "MSI/2009/page_67.pdf-2",
+   "AMT/2008/page_14.pdf-2",
+   "IP/2014/page_66.pdf-4",
+   "CMCSA/2008/page_59.pdf-3",
+   "SNA/2007/page_80.pdf-4",
+   "EMN/2016/page_104.pdf-4"
+  ],
+  "strategy_id": "S025",
+  "retrieval_text": "Example questions this strategy answers: what was the average segment net sales from 2007 to 2009 in millions | what portion of total owned sites is located in united states? | what was the average net sales for north american consumer packaging from 2012 | what was the average net investment income from 2006 to 2008\n[Strategy: Average of multiple values; Type: average; Template: divide(add(add(V1, V2), V3), const_2)]",
+  "example_questions": [
+   "what was the average segment net sales from 2007 to 2009 in millions",
+   "what portion of total owned sites is located in united states?",
+   "what was the average net sales for north american consumer packaging from 2012",
+   "what was the average net investment income from 2006 to 2008"
+  ]
+ },
+ {
+  "name": "Maximum value extraction from a table column",
+  "problem_type": "table_aggregation",
+  "problem_pattern": "when the question asks for the largest, highest, or maximum value of a specific financial metric across multiple periods or categories, the method is to identify the column and apply the table_max operator.",
+  "operand_roles": "V1 = the column name (metric) from which the maximum is to be extracted",
+  "procedure": "1. Identify the financial metric (column) mentioned in the question. 2. Apply the table_max operator to that column to find the maximum value. 3. Return the maximum value.",
+  "formula": "result = max(column_values)",
+  "template": "table_max(V1, none)",
+  "units_convention": "The answer is in the same units as the column values (e.g., millions, dollars, percentage). If the column is a percentage, the answer is returned as a decimal fraction (e.g., 5.81% becomes 0.0581).",
+  "caveats": "Ensure the correct column is selected; the question may use synonyms (e.g., 'largest' vs 'highest'). Also, be careful with percentage columns – the raw value may be in percent units, but the answer is expected as a fraction.",
+  "example_count": "6",
+  "source_struct": [
+   "table_max"
+  ],
+  "example_ids": [
+   "AAPL/2005/page_38.pdf-2",
+   "GS/2018/page_108.pdf-2",
+   "AAPL/2006/page_93.pdf-3",
+   "JPM/2010/page_236.pdf-3",
+   "AON/2009/page_102.pdf-4",
+   "IP/2018/page_83.pdf-4"
+  ],
+  "strategy_id": "S026",
+  "retrieval_text": "Example questions this strategy answers: what was the largest gross margin in millions dollars over the three year period? | for asset category for positions accounted for at fair value , that are not included in var , in millions for 2018 and 2017 , what was the maximum debt value? | what was the greatest beginning allowance balance , in millions? | what was the highest three year accretable yield percentage?\n[Strategy: Maximum value extraction from a table column; Type: table_aggregation; Template: table_max(V1, none)]",
+  "example_questions": [
+   "what was the largest gross margin in millions dollars over the three year period?",
+   "for asset category for positions accounted for at fair value , that are not included in var , in millions for 2018 and 2017 , what was the maximum debt value?",
+   "what was the greatest beginning allowance balance , in millions?",
+   "what was the highest three year accretable yield percentage?"
+  ]
+ },
+ {
+  "name": "cumulative_return_difference",
+  "problem_type": "difference",
+  "problem_pattern": "when the question asks for the difference in percentage cumulative total return between two entities over a period, the method is to compute each entity's cumulative return as (final_value - initial_value) / initial_value and subtract one from the other.",
+  "operand_roles": "V1=final_value_entity1, V2=initial_value_entity1 (usually 100), V3=final_value_entity2, V4=initial_value_entity2 (usually 100)",
+  "procedure": "1. Identify the final value and initial value (often 100) for the first entity. 2. Compute its cumulative return: (final - initial) / initial. 3. Repeat for the second entity. 4. Subtract the second entity's return from the first entity's return.",
+  "formula": "result = ((V1 - V2) / V2) - ((V3 - V4) / V4)",
+  "template": "subtract(divide(subtract(V1, V2), V2), divide(subtract(V3, V4), V4))",
+  "units_convention": "Returns are expressed as fractions (e.g., 0.67 for 67%). The initial value is often a constant 100, but may be given explicitly. No percentage sign in final answer.",
+  "caveats": "Ensure the initial values are correctly identified (often 100 but may be given as a specific number). The order of subtraction matters (entity1 minus entity2). The result can be negative if entity2 outperforms entity1.",
+  "example_count": "6",
+  "source_struct": [
+   "subtract",
+   "divide",
+   "subtract",
+   "divide",
+   "subtract"
+  ],
+  "example_ids": [
+   "AAPL/2018/page_23.pdf-1",
+   "UPS/2017/page_31.pdf-3",
+   "AAPL/2013/page_27.pdf-2",
+   "CMCSA/2015/page_42.pdf-2",
+   "UPS/2007/page_32.pdf-4",
+   "BKNG/2017/page_35.pdf-3"
+  ],
+  "strategy_id": "S027",
+  "retrieval_text": "Example questions this strategy answers: what is the difference in percentage cumulative total return between apple inc . and the s&p 500 index for the five year period ended september 2018? | what is the difference in percentage cumulative total shareowners return for united parcel service inc . versus the dow jones transportation average for the fiv | by how much did apple inc . outperform the s&p computer hardware index over the above mentioned 6 year period? | what was the differencet in percentage 5 year cumulative total return for comcast class a stock and the s&p 500 stock index for the year ended 2015?\n[Strategy: cumulative_return_difference; Type: difference; Template: subtract(divide(subtract(V1, V2), V2), divide(subtract(V3, V4), V4))]",
+  "example_questions": [
+   "what is the difference in percentage cumulative total return between apple inc . and the s&p 500 index for the five year period ended september 2018?",
+   "what is the difference in percentage cumulative total shareowners return for united parcel service inc . versus the dow jones transportation average for the fiv",
+   "by how much did apple inc . outperform the s&p computer hardware index over the above mentioned 6 year period?",
+   "what was the differencet in percentage 5 year cumulative total return for comcast class a stock and the s&p 500 stock index for the year ended 2015?"
+  ]
+ },
+ {
+  "name": "percentage_of_part",
+  "problem_type": "ratio",
+  "problem_pattern": "when the question asks what percentage one value is of another, the method is to divide the part by the whole and multiply by 100.",
+  "operand_roles": "V1=part (the value being compared), V2=whole (the reference value)",
+  "procedure": "1. Identify the part (the value that is the subject of the percentage question). 2. Identify the whole (the reference value that the part is compared against). 3. Divide the part by the whole. 4. Multiply the result by 100 to express as a percentage.",
+  "formula": "result = (part / whole) * 100",
+  "template": "multiply(divide(V1, V2), const_100)",
+  "units_convention": "The result is expressed as a percentage (0-100 scale). The const_100 is used to convert the fraction to a percentage.",
+  "caveats": "Ensure the part and whole are in the same units. If the question asks for a fraction (not percentage), omit the multiplication by 100.",
+  "example_count": 4,
+  "source_struct": [
+   "divide",
+   "multiply"
+  ],
+  "example_ids": [
+   "CAT/2017/page_103.pdf-2",
+   "AMT/2007/page_114.pdf-4",
+   "DRE/2010/page_56.pdf-2",
+   "RCL/2005/page_40.pdf-4",
+   "DVN/2010/page_70.pdf-2",
+   "DRE/2016/page_64.pdf-2"
+  ],
+  "strategy_id": "S028",
+  "retrieval_text": "Example questions this strategy answers: assuming the same rate of change as in 2017 , what would the 2018 total amount of interest and penalties accrued equal in millions? | what is the yearly amortization expense for the economic rights agreement assuming an 11 year effective life? | what is the basic net income ( loss ) attributable to common shareholders as a percentage of diluted net income ( loss ) attributable to common shareholders in  | what percentage of debt maturity was there in 2010 , relative to 2006?\n[Strategy: percentage_of_part; Type: ratio; Template: multiply(divide(V1, V2), const_100)]",
+  "example_questions": [
+   "assuming the same rate of change as in 2017 , what would the 2018 total amount of interest and penalties accrued equal in millions?",
+   "what is the yearly amortization expense for the economic rights agreement assuming an 11 year effective life?",
+   "what is the basic net income ( loss ) attributable to common shareholders as a percentage of diluted net income ( loss ) attributable to common shareholders in ",
+   "what percentage of debt maturity was there in 2010 , relative to 2006?"
+  ]
+ },
+ {
+  "name": "projected_value_with_same_rate",
+  "problem_type": "growth_rate",
+  "problem_pattern": "when the question asks for a future value assuming the same rate of change as a previous period, the method is to compute the rate of change from the previous two periods and apply it to the most recent value.",
+  "operand_roles": "V1=current_value (the most recent value), V2=previous_value (the value from the prior period)",
+  "procedure": "1. Identify the current value (the most recent period's value). 2. Identify the previous value (the value from the period before the current). 3. Compute the rate of change by dividing the current value by the previous value. 4. Multiply the current value by this rate to project the next period's value.",
+  "formula": "result = current_value * (current_value / previous_value)",
+  "template": "multiply(divide(V1, V2), V1)",
+  "units_convention": "The result is in the same units as the input values. No percentage conversion is applied.",
+  "caveats": "This assumes a constant multiplicative rate of change. Ensure the values are from consecutive periods and are in the same units.",
+  "example_count": 1,
+  "source_struct": [
+   "divide",
+   "multiply"
+  ],
+  "example_ids": [
+   "CAT/2017/page_103.pdf-2",
+   "AMT/2007/page_114.pdf-4",
+   "DRE/2010/page_56.pdf-2",
+   "RCL/2005/page_40.pdf-4",
+   "DVN/2010/page_70.pdf-2",
+   "DRE/2016/page_64.pdf-2"
+  ],
+  "strategy_id": "S029",
+  "retrieval_text": "Example questions this strategy answers: assuming the same rate of change as in 2017 , what would the 2018 total amount of interest and penalties accrued equal in millions? | what is the yearly amortization expense for the economic rights agreement assuming an 11 year effective life? | what is the basic net income ( loss ) attributable to common shareholders as a percentage of diluted net income ( loss ) attributable to common shareholders in  | what percentage of debt maturity was there in 2010 , relative to 2006?\n[Strategy: projected_value_with_same_rate; Type: growth_rate; Template: multiply(divide(V1, V2), V1)]",
+  "example_questions": [
+   "assuming the same rate of change as in 2017 , what would the 2018 total amount of interest and penalties accrued equal in millions?",
+   "what is the yearly amortization expense for the economic rights agreement assuming an 11 year effective life?",
+   "what is the basic net income ( loss ) attributable to common shareholders as a percentage of diluted net income ( loss ) attributable to common shareholders in ",
+   "what percentage of debt maturity was there in 2010 , relative to 2006?"
+  ]
+ },
+ {
+  "name": "annualized_expense",
+  "problem_type": "per_unit",
+  "problem_pattern": "when the question asks for a yearly expense based on a total cost and a number of years, the method is to divide the total cost by the number of years.",
+  "operand_roles": "V1=total_cost (the aggregate cost to be amortized), V2=number_of_years (the effective life in years)",
+  "procedure": "1. Identify the total cost to be amortized. 2. Identify the number of years over which it is amortized. 3. Divide the total cost by the number of years to get the annual expense. 4. If the total cost is in millions, multiply by 1,000,000 to express in actual units.",
+  "formula": "result = (total_cost / number_of_years) * unit_conversion_factor",
+  "template": "multiply(divide(V1, V2), const_1000000)",
+  "units_convention": "The result is in the same unit as the total cost after applying the unit conversion factor (e.g., from millions to actual units). The const_1000000 is used when the input is in millions.",
+  "caveats": "Ensure the total cost and number of years are in consistent units. The unit conversion factor should be applied only if the input is in millions or thousands.",
+  "example_count": 1,
+  "source_struct": [
+   "divide",
+   "multiply"
+  ],
+  "example_ids": [
+   "CAT/2017/page_103.pdf-2",
+   "AMT/2007/page_114.pdf-4",
+   "DRE/2010/page_56.pdf-2",
+   "RCL/2005/page_40.pdf-4",
+   "DVN/2010/page_70.pdf-2",
+   "DRE/2016/page_64.pdf-2"
+  ],
+  "strategy_id": "S030",
+  "retrieval_text": "Example questions this strategy answers: assuming the same rate of change as in 2017 , what would the 2018 total amount of interest and penalties accrued equal in millions? | what is the yearly amortization expense for the economic rights agreement assuming an 11 year effective life? | what is the basic net income ( loss ) attributable to common shareholders as a percentage of diluted net income ( loss ) attributable to common shareholders in  | what percentage of debt maturity was there in 2010 , relative to 2006?\n[Strategy: annualized_expense; Type: per_unit; Template: multiply(divide(V1, V2), const_1000000)]",
+  "example_questions": [
+   "assuming the same rate of change as in 2017 , what would the 2018 total amount of interest and penalties accrued equal in millions?",
+   "what is the yearly amortization expense for the economic rights agreement assuming an 11 year effective life?",
+   "what is the basic net income ( loss ) attributable to common shareholders as a percentage of diluted net income ( loss ) attributable to common shareholders in ",
+   "what percentage of debt maturity was there in 2010 , relative to 2006?"
+  ]
+ },
+ {
+  "name": "share_of_total",
+  "problem_type": "proportion",
+  "problem_pattern": "when the question asks what share or proportion a specific component represents of a total (e.g., revenue from a program as a share of total revenue), the method is to divide the component value by the total value, ensuring both are in the same units.",
+  "operand_roles": "V1=component_value (e.g., revenue from specific program), V2=total_value (e.g., total revenue)",
+  "procedure": "1. Identify the component value (e.g., revenue from a specific program). 2. Identify the total value (e.g., total revenue). 3. If necessary, convert units so both are consistent (e.g., if total is in thousands and component in billions, divide total by 1000). 4. Divide the component by the total.",
+  "formula": "result = component_value / total_value",
+  "template": "divide(V1, divide(V2, const_1000))",
+  "units_convention": "Answer is a fraction (e.g., 0.1125 for 11.25%). If total is in thousands and component in billions, convert total to billions by dividing by 1000.",
+  "caveats": "Check unit consistency carefully. The total might be in a different scale (e.g., thousands vs millions) – use const_ to convert. Ensure the component is part of the total, not an unrelated figure.",
+  "example_count": "2",
+  "source_struct": [
+   "divide",
+   "divide"
+  ],
+  "example_ids": [
+   "UNP/2011/page_25.pdf-1",
+   "JPM/2007/page_119.pdf-3",
+   "ADI/2009/page_49.pdf-1",
+   "RCL/2014/page_80.pdf-3",
+   "UAA/2018/page_40.pdf-4",
+   "AMT/2004/page_102.pdf-2"
+  ],
+  "strategy_id": "S031",
+  "retrieval_text": "Example questions this strategy answers: fuel surcharge programs represented what share of revenue in 2011? | what was the tax rate associated with the increase in retained earrings related to the incorporation of the firm 2019s creditworthiness in the valuation of liab | what is the the interest expense in 2009? | what was the percentage increase in the intangible assets are reported in other assets from 2013 to 2014\n[Strategy: share_of_total; Type: proportion; Template: divide(V1, divide(V2, const_1000))]",
+  "example_questions": [
+   "fuel surcharge programs represented what share of revenue in 2011?",
+   "what was the tax rate associated with the increase in retained earrings related to the incorporation of the firm 2019s creditworthiness in the valuation of liab",
+   "what is the the interest expense in 2009?",
+   "what was the percentage increase in the intangible assets are reported in other assets from 2013 to 2014"
+  ]
+ },
+ {
+  "name": "tax_rate_from_after_tax",
+  "problem_type": "other",
+  "problem_pattern": "when the question asks for a tax rate given pre-tax and after-tax amounts, the method is to compute the tax amount as the difference between pre-tax and after-tax, then divide that tax amount by the pre-tax amount.",
+  "operand_roles": "V1=pre_tax_amount, V2=after_tax_amount",
+  "procedure": "1. Identify the pre-tax amount and the after-tax amount. 2. Compute the tax amount by subtracting after-tax from pre-tax. 3. Divide the tax amount by the pre-tax amount to get the tax rate.",
+  "formula": "result = (pre_tax - after_tax) / pre_tax",
+  "template": "divide(subtract(V1, V2), V1)",
+  "units_convention": "Answer is a fraction (e.g., 0.38 for 38%). No multiplication by 100 unless required.",
+  "caveats": "Ensure the pre-tax and after-tax amounts are in the same units. The tax rate is the proportion of pre-tax income that is tax, not the after-tax proportion.",
+  "example_count": "1",
+  "source_struct": [
+   "divide",
+   "divide"
+  ],
+  "example_ids": [
+   "UNP/2011/page_25.pdf-1",
+   "JPM/2007/page_119.pdf-3",
+   "ADI/2009/page_49.pdf-1",
+   "RCL/2014/page_80.pdf-3",
+   "UAA/2018/page_40.pdf-4",
+   "AMT/2004/page_102.pdf-2"
+  ],
+  "strategy_id": "S032",
+  "retrieval_text": "Example questions this strategy answers: fuel surcharge programs represented what share of revenue in 2011? | what was the tax rate associated with the increase in retained earrings related to the incorporation of the firm 2019s creditworthiness in the valuation of liab | what is the the interest expense in 2009? | what was the percentage increase in the intangible assets are reported in other assets from 2013 to 2014\n[Strategy: tax_rate_from_after_tax; Type: other; Template: divide(subtract(V1, V2), V1)]",
+  "example_questions": [
+   "fuel surcharge programs represented what share of revenue in 2011?",
+   "what was the tax rate associated with the increase in retained earrings related to the incorporation of the firm 2019s creditworthiness in the valuation of liab",
+   "what is the the interest expense in 2009?",
+   "what was the percentage increase in the intangible assets are reported in other assets from 2013 to 2014"
+  ]
+ },
+ {
+  "name": "Minimum value extraction from a table column",
+  "problem_type": "table_aggregation",
+  "problem_pattern": "when the question asks for the lowest, minimum, or smallest value of a specific financial metric across multiple periods or entries, the method is to identify the column and apply the table_min operator.",
+  "operand_roles": "V1 = the financial metric (column) to find the minimum of; V2 = none (unused)",
+  "procedure": "1. Identify the financial metric (column) mentioned in the question. 2. Apply the table_min operator to that column. 3. The result is the minimum value from that column.",
+  "formula": "result = min(column_values)",
+  "template": "table_min(V1, none)",
+  "units_convention": "The answer is in the same units as the table values (e.g., millions, dollars, per share). No percentage conversion needed.",
+  "caveats": "Ensure the correct column is selected; sometimes the question may ask for 'lowest' but the table_min operator is used regardless of whether the values are negative or positive. Also, verify that the table includes all relevant periods.",
+  "example_count": "6",
+  "source_struct": [
+   "table_min"
+  ],
+  "example_ids": [
+   "CDW/2017/page_73.pdf-3",
+   "AAPL/2004/page_44.pdf-2",
+   "EOG/2017/page_78.pdf-2",
+   "GS/2014/page_44.pdf-3",
+   "AWK/2018/page_152.pdf-3",
+   "AON/2011/page_63.pdf-2"
+  ],
+  "strategy_id": "S033",
+  "retrieval_text": "Example questions this strategy answers: what was the greatest foreign currency translation loss , in millions? | what was the lowest amount of accounts receivable net , in millions? | considering the eog's roll forward of valuation allowances for deferred income tax assets during 2015-2017 , what was the lowest value registered in the beginni | in millions for 2014 , 2013 , and 2012 , what was the minimum amount of commissions and fees?\n[Strategy: Minimum value extraction from a table column; Type: table_aggregation; Template: table_min(V1, none)]",
+  "example_questions": [
+   "what was the greatest foreign currency translation loss , in millions?",
+   "what was the lowest amount of accounts receivable net , in millions?",
+   "considering the eog's roll forward of valuation allowances for deferred income tax assets during 2015-2017 , what was the lowest value registered in the beginni",
+   "in millions for 2014 , 2013 , and 2012 , what was the minimum amount of commissions and fees?"
+  ]
+ },
+ {
+  "name": "Sum of row values across periods",
+  "problem_type": "total_sum",
+  "problem_pattern": "when the question asks for the total of a specific line item over multiple periods (e.g., years), the method is to sum the values of that line item across all listed periods.",
+  "operand_roles": "V1 = the row label (e.g., 'domestic', 'commissions and fees', 'net capital expenditures', 'beginning balance', 'transmission and distribution', 'total')",
+  "procedure": "1. Identify the line item (row) that the question refers to. 2. Collect all values for that line item across the relevant periods (years). 3. Sum those values.",
+  "formula": "result = sum(values of the line item across periods)",
+  "template": "table_sum(V1, none)",
+  "units_convention": "The result is in the same units as the input values (e.g., millions, number of sites). No percentage conversion. If values are negative (e.g., net capital expenditures), the sum will be negative.",
+  "caveats": "Ensure that the row label is correctly identified and that all relevant periods are included. Watch for negative values (e.g., capital expenditures) and ensure the sum reflects the sign.",
+  "example_count": 6,
+  "source_struct": [
+   "table_sum"
+  ],
+  "example_ids": [
+   "AMT/2014/page_64.pdf-2",
+   "GS/2015/page_74.pdf-1",
+   "AWK/2018/page_97.pdf-1",
+   "ECL/2016/page_64.pdf-2",
+   "AWK/2018/page_98.pdf-4",
+   "UPS/2005/page_43.pdf-1"
+  ],
+  "strategy_id": "S034",
+  "retrieval_text": "Example questions this strategy answers: how many new sites were in the us during 2012 to 2014?\\\\n | in millions for 2015 , 2014 and 2013 , what was total commissions and fees? | what were total net capital expenditures in millions for the three year period\\\\n? | in millions for 2016 , 2015 , and 2014 , what was the total beginning balance in allowance for doubtful accounts?\n[Strategy: Sum of row values across periods; Type: total_sum; Template: table_sum(V1, none)]",
+  "example_questions": [
+   "how many new sites were in the us during 2012 to 2014?\\\\n",
+   "in millions for 2015 , 2014 and 2013 , what was total commissions and fees?",
+   "what were total net capital expenditures in millions for the three year period\\\\n?",
+   "in millions for 2016 , 2015 , and 2014 , what was the total beginning balance in allowance for doubtful accounts?"
+  ]
+ },
+ {
+  "name": "sum_of_absolute_values_with_opposite_sign_adjustment",
+  "problem_type": "total_sum",
+  "problem_pattern": "when the question asks for the total net effect of items where some are reductions (negative) and some are increases (positive), the method is to sum the absolute values of all items and then subtract the sum of the items that are opposite in sign (or adjust for sign).",
+  "operand_roles": "V1=sum of positive absolute values, V2=sum of negative absolute values (or vice versa), V3=additional positive/negative value if needed",
+  "procedure": "1. Identify all items contributing to the total. 2. Separate items by sign (positive vs negative). 3. Sum the absolute values of all items. 4. Subtract the sum of the items that are opposite in sign (or adjust for sign). 5. The result is the net total.",
+  "formula": "result = (sum of absolute values of all items) - (sum of absolute values of items with opposite sign)",
+  "template": "subtract(add(V1, V2), V3)",
+  "units_convention": "answer is in the same units as the input values; if values are given as negative in parentheses, use absolute values; no percentage conversion.",
+  "caveats": "Ensure that the sign of each item is correctly interpreted (e.g., reductions are negative, increases are positive). The subtraction step may need to be adjusted if there are more than two groups.",
+  "example_count": "4",
+  "source_struct": [
+   "add",
+   "subtract"
+  ],
+  "example_ids": [
+   "JPM/2012/page_110.pdf-3",
+   "RCL/2013/page_18.pdf-1",
+   "AAP/2006/page_85.pdf-3",
+   "HIG/2004/page_81.pdf-1",
+   "BLK/2012/page_66.pdf-1",
+   "IPG/2016/page_46.pdf-4"
+  ],
+  "strategy_id": "S035",
+  "retrieval_text": "Example questions this strategy answers: how much more operational risk , in billions , did the firm take on in 2010 and 2011 combined than in 2012? | how many of the total global cruise guests are not from north america or europe? | what was the total decrease of cost of sales due to the adoption of the lifo method | what is the total net realized gain for the last three years?\n[Strategy: sum_of_absolute_values_with_opposite_sign_adjustment; Type: total_sum; Template: subtract(add(V1, V2), V3)]",
+  "example_questions": [
+   "how much more operational risk , in billions , did the firm take on in 2010 and 2011 combined than in 2012?",
+   "how many of the total global cruise guests are not from north america or europe?",
+   "what was the total decrease of cost of sales due to the adoption of the lifo method",
+   "what is the total net realized gain for the last three years?"
+  ]
+ },
+ {
+  "name": "difference_between_combined_and_single_period",
+  "problem_type": "difference",
+  "problem_pattern": "when the question asks how much more (or less) a combined value is compared to a single period value, the method is to compute the combined sum and then subtract the single period value.",
+  "operand_roles": "V1=value for period 1, V2=value for period 2, V3=value for the comparison period",
+  "procedure": "1. Identify the values for the periods to be combined. 2. Sum those values. 3. Identify the value for the comparison period. 4. Subtract the comparison period value from the combined sum.",
+  "formula": "result = (V1 + V2) - V3",
+  "template": "subtract(add(V1, V2), V3)",
+  "units_convention": "answer is in the same units as the input values; no percentage conversion.",
+  "caveats": "Ensure the comparison period is correctly identified; the question may ask for 'more than' or 'less than' which affects the order of subtraction.",
+  "example_count": "1",
+  "source_struct": [
+   "add",
+   "subtract"
+  ],
+  "example_ids": [
+   "JPM/2012/page_110.pdf-3",
+   "RCL/2013/page_18.pdf-1",
+   "AAP/2006/page_85.pdf-3",
+   "HIG/2004/page_81.pdf-1",
+   "BLK/2012/page_66.pdf-1",
+   "IPG/2016/page_46.pdf-4"
+  ],
+  "strategy_id": "S036",
+  "retrieval_text": "Example questions this strategy answers: how much more operational risk , in billions , did the firm take on in 2010 and 2011 combined than in 2012? | how many of the total global cruise guests are not from north america or europe? | what was the total decrease of cost of sales due to the adoption of the lifo method | what is the total net realized gain for the last three years?\n[Strategy: difference_between_combined_and_single_period; Type: difference; Template: subtract(add(V1, V2), V3)]",
+  "example_questions": [
+   "how much more operational risk , in billions , did the firm take on in 2010 and 2011 combined than in 2012?",
+   "how many of the total global cruise guests are not from north america or europe?",
+   "what was the total decrease of cost of sales due to the adoption of the lifo method",
+   "what is the total net realized gain for the last three years?"
+  ]
+ },
+ {
+  "name": "interval_calculation_from_midpoint_and_range",
+  "problem_type": "other",
+  "problem_pattern": "when the question asks for the statistical interval (e.g., lower bound) given a midpoint and a range (e.g., basis-point change), the method is to subtract the range from the midpoint.",
+  "operand_roles": "V1=midpoint value, V2=range value",
+  "procedure": "1. Identify the midpoint value (e.g., prior year's interest income). 2. Identify the range (e.g., the effect of a 100 basis-point change). 3. Subtract the range from the midpoint to get the lower bound of the interval.",
+  "formula": "result = midpoint - range",
+  "template": "subtract(V1, V2)",
+  "units_convention": "answer is in the same units as the midpoint; no percentage conversion.",
+  "caveats": "The question may ask for the upper bound, in which case addition is used; ensure the correct bound is requested.",
+  "example_count": "1",
+  "source_struct": [
+   "add",
+   "subtract"
+  ],
+  "example_ids": [
+   "JPM/2012/page_110.pdf-3",
+   "RCL/2013/page_18.pdf-1",
+   "AAP/2006/page_85.pdf-3",
+   "HIG/2004/page_81.pdf-1",
+   "BLK/2012/page_66.pdf-1",
+   "IPG/2016/page_46.pdf-4"
+  ],
+  "strategy_id": "S037",
+  "retrieval_text": "Example questions this strategy answers: how much more operational risk , in billions , did the firm take on in 2010 and 2011 combined than in 2012? | how many of the total global cruise guests are not from north america or europe? | what was the total decrease of cost of sales due to the adoption of the lifo method | what is the total net realized gain for the last three years?\n[Strategy: interval_calculation_from_midpoint_and_range; Type: other; Template: subtract(V1, V2)]",
+  "example_questions": [
+   "how much more operational risk , in billions , did the firm take on in 2010 and 2011 combined than in 2012?",
+   "how many of the total global cruise guests are not from north america or europe?",
+   "what was the total decrease of cost of sales due to the adoption of the lifo method",
+   "what is the total net realized gain for the last three years?"
+  ]
+ },
+ {
+  "name": "Adjusted Value with Unit Conversion",
+  "problem_type": "other",
+  "problem_pattern": "when the question asks for a value adjusted by a known impact (e.g., foreign currency translation, excluding a segment) or a net change over a period, and the raw numbers are in thousands or millions, the method is to subtract the impact from the reported value (or subtract the earlier value from the later value) and then multiply by the unit conversion factor.",
+  "operand_roles": "V1=reported value or later period value, V2=impact amount or earlier period value, V3=unit conversion factor (e.g., 1000, 1000000)",
+  "procedure": "1. Identify the reported value (V1) and the adjustment amount (V2) to be subtracted (or the earlier value for net change). 2. Subtract V2 from V1 to get the adjusted difference. 3. Multiply the result by the unit conversion factor (V3) to express in actual units.",
+  "formula": "result = (V1 - V2) * V3",
+  "template": "multiply(subtract(V1, V2), V3)",
+  "units_convention": "The raw numbers are in thousands or millions; multiply by 1000 or 1000000 to get actual units. Percentages are used as fractions (e.g., 23% = 0.23) when subtracting from 100%.",
+  "caveats": "Ensure the correct sign for the impact (e.g., negative impact may be given as a positive number in parentheses). For net change, use the earliest and latest period values, not intermediate ones.",
+  "example_count": "5",
+  "source_struct": [
+   "subtract",
+   "multiply"
+  ],
+  "example_ids": [
+   "ABMD/2015/page_93.pdf-2",
+   "AES/2001/page_51.pdf-2",
+   "JPM/2008/page_213.pdf-2",
+   "HII/2012/page_47.pdf-1",
+   "ABMD/2006/page_62.pdf-1",
+   "JPM/2003/page_44.pdf-1"
+  ],
+  "strategy_id": "S038",
+  "retrieval_text": "Example questions this strategy answers: assuming the same impact of foreign currency translation as in the fiscal year 2015 , what would be the ending balance of in process \\\\nr&d assets in fiscal 201 | what was the gross margin change in basis points for south america? | without foreign operations in 2008 , what would the pre-tax income from continuing operations be? | what was the net increase in total assets during the 5 year period ?\n[Strategy: Adjusted Value with Unit Conversion; Type: other; Template: multiply(subtract(V1, V2), V3)]",
+  "example_questions": [
+   "assuming the same impact of foreign currency translation as in the fiscal year 2015 , what would be the ending balance of in process \\\\nr&d assets in fiscal 201",
+   "what was the gross margin change in basis points for south america?",
+   "without foreign operations in 2008 , what would the pre-tax income from continuing operations be?",
+   "what was the net increase in total assets during the 5 year period ?"
+  ]
+ },
+ {
+  "name": "Basis Point Change from Percentage Difference",
+  "problem_type": "percentage_change",
+  "problem_pattern": "when the question asks for a change in basis points between two percentages, the method is to subtract the earlier percentage from the later percentage and then multiply by 10000 (since 1 percentage point = 100 basis points).",
+  "operand_roles": "V1=later percentage, V2=earlier percentage, V3=10000 (basis points per percentage point)",
+  "procedure": "1. Identify the two percentages: the later (V1) and the earlier (V2). 2. Subtract V2 from V1 to get the percentage point difference. 3. Multiply the difference by 10000 to convert to basis points.",
+  "formula": "result = (V1 - V2) * 10000",
+  "template": "multiply(subtract(V1, V2), const_10000)",
+  "units_convention": "Percentages are given as numbers (e.g., 36% is 36). The result is in basis points (e.g., 80 basis points).",
+  "caveats": "Ensure the percentages are in the same scale (e.g., both are percentages, not decimals). The multiplication factor is 10000, not 100.",
+  "example_count": "1",
+  "source_struct": [
+   "subtract",
+   "multiply"
+  ],
+  "example_ids": [
+   "ABMD/2015/page_93.pdf-2",
+   "AES/2001/page_51.pdf-2",
+   "JPM/2008/page_213.pdf-2",
+   "HII/2012/page_47.pdf-1",
+   "ABMD/2006/page_62.pdf-1",
+   "JPM/2003/page_44.pdf-1"
+  ],
+  "strategy_id": "S039",
+  "retrieval_text": "Example questions this strategy answers: assuming the same impact of foreign currency translation as in the fiscal year 2015 , what would be the ending balance of in process \\\\nr&d assets in fiscal 201 | what was the gross margin change in basis points for south america? | without foreign operations in 2008 , what would the pre-tax income from continuing operations be? | what was the net increase in total assets during the 5 year period ?\n[Strategy: Basis Point Change from Percentage Difference; Type: percentage_change; Template: multiply(subtract(V1, V2), const_10000)]",
+  "example_questions": [
+   "assuming the same impact of foreign currency translation as in the fiscal year 2015 , what would be the ending balance of in process \\\\nr&d assets in fiscal 201",
+   "what was the gross margin change in basis points for south america?",
+   "without foreign operations in 2008 , what would the pre-tax income from continuing operations be?",
+   "what was the net increase in total assets during the 5 year period ?"
+  ]
+ },
+ {
+  "name": "Reverse Percentage Increase",
+  "problem_type": "proportion",
+  "problem_pattern": "when the question asks for a base value given a later value and a percentage increase, the method is to divide the later value by (1 + percentage increase) or multiply by (100% - percentage increase) if the percentage is given as a decrease from 100%.",
+  "operand_roles": "V1=later value, V2=percentage increase (as a fraction or percentage), V3=100% (as a constant)",
+  "procedure": "1. Identify the later value (V1) and the percentage increase (V2). 2. Subtract V2 from 100% (or 1) to get the proportion of the base value. 3. Multiply V1 by that proportion to get the base value.",
+  "formula": "result = V1 * (100% - V2)",
+  "template": "multiply(V1, subtract(const_100, V2))",
+  "units_convention": "Percentages are used as fractions (e.g., 23% = 0.23) when subtracting from 100% (which is 1). The result is in the same units as V1 (e.g., millions).",
+  "caveats": "Ensure the percentage is correctly interpreted as an increase (e.g., 23% higher means the later value is 123% of the base). The formula works when the percentage is given as the increase relative to the base.",
+  "example_count": "1",
+  "source_struct": [
+   "subtract",
+   "multiply"
+  ],
+  "example_ids": [
+   "ABMD/2015/page_93.pdf-2",
+   "AES/2001/page_51.pdf-2",
+   "JPM/2008/page_213.pdf-2",
+   "HII/2012/page_47.pdf-1",
+   "ABMD/2006/page_62.pdf-1",
+   "JPM/2003/page_44.pdf-1"
+  ],
+  "strategy_id": "S040",
+  "retrieval_text": "Example questions this strategy answers: assuming the same impact of foreign currency translation as in the fiscal year 2015 , what would be the ending balance of in process \\\\nr&d assets in fiscal 201 | what was the gross margin change in basis points for south america? | without foreign operations in 2008 , what would the pre-tax income from continuing operations be? | what was the net increase in total assets during the 5 year period ?\n[Strategy: Reverse Percentage Increase; Type: proportion; Template: multiply(V1, subtract(const_100, V2))]",
+  "example_questions": [
+   "assuming the same impact of foreign currency translation as in the fiscal year 2015 , what would be the ending balance of in process \\\\nr&d assets in fiscal 201",
+   "what was the gross margin change in basis points for south america?",
+   "without foreign operations in 2008 , what would the pre-tax income from continuing operations be?",
+   "what was the net increase in total assets during the 5 year period ?"
+  ]
+ },
+ {
+  "name": "Sum of future annual commitments",
+  "problem_type": "total_sum",
+  "problem_pattern": "when the question asks for the total amount of future annual commitments or payments over a range of years, the method is to sum all the individual yearly amounts.",
+  "operand_roles": "V1, V2, V3, ... = yearly amounts (e.g., V1=amount for year1, V2=amount for year2, etc.)",
+  "procedure": "1. Identify all yearly amounts mentioned in the question or facts. 2. Add them together sequentially. 3. The result is the total sum.",
+  "formula": "result = V1 + V2 + V3 + ...",
+  "template": "add(V1, add(V2, add(V3, V4)))",
+  "units_convention": "Answer is in the same units as the input amounts (e.g., dollars, millions). No percentage conversion.",
+  "caveats": "Ensure all relevant yearly amounts are included; sometimes the question may ask for a subset of years, so only sum those specified. (arity varies: use as many add-nests as there are yearly amounts)",
+  "example_count": "6",
+  "source_struct": [
+   "add",
+   "add",
+   "add",
+   "add",
+   "add"
+  ],
+  "example_ids": [
+   "AWK/2018/page_172.pdf-4",
+   "WRK/2018/page_56.pdf-4",
+   "AWK/2018/page_178.pdf-4",
+   "ADI/2010/page_82.pdf-4",
+   "AWK/2018/page_172.pdf-3",
+   "AWK/2017/page_172.pdf-3"
+  ],
+  "strategy_id": "S041",
+  "retrieval_text": "Example questions this strategy answers: what percentage of future annual commitments related to minimum quantities of purchased water having non-cancelable are due after 2023? | what would be the total amount of long-term debt if they were to include fair value of debt step-up? | what percentage of the minimum annual future rental commitment under operating leases that have initial or remaining non-cancelable lease terms is due in 2019? | what was the total expense related to contribution plans from 2008 to 2010\n[Strategy: Sum of future annual commitments; Type: total_sum; Template: add(V1, add(V2, add(V3, V4)))]",
+  "example_questions": [
+   "what percentage of future annual commitments related to minimum quantities of purchased water having non-cancelable are due after 2023?",
+   "what would be the total amount of long-term debt if they were to include fair value of debt step-up?",
+   "what percentage of the minimum annual future rental commitment under operating leases that have initial or remaining non-cancelable lease terms is due in 2019?",
+   "what was the total expense related to contribution plans from 2008 to 2010"
+  ]
+ },
+ {
+  "name": "relative_performance_difference",
+  "problem_type": "percentage_change",
+  "problem_pattern": "when the question asks how much percentage return or gain one investment/index earned compared to another (e.g., beat, more return, in comparison to), the method is to compute the total return of each from a common starting value (usually 100) and then subtract the two returns.",
+  "operand_roles": "V1 = ending value of the first entity (e.g., company or index), V2 = starting value (usually 100), V3 = ending value of the second entity (e.g., market or index), V4 = starting value (usually 100)",
+  "procedure": "1. Identify the starting value (often 100) for both entities. 2. Identify the ending values for both entities at the specified end date. 3. Compute the total return for the first entity as (ending_value - starting_value). 4. Compute the total return for the second entity as (ending_value - starting_value). 5. Subtract the second return from the first return to get the difference in percentage points.",
+  "formula": "result = (V1 - V2) - (V3 - V4)",
+  "template": "subtract(subtract(V1, V2), subtract(V3, V4))",
+  "units_convention": "The result is in percentage points (not multiplied by 100, since the starting value is already 100 and the ending values are scaled to that base). No additional unit conversion needed.",
+  "caveats": "Ensure both entities use the same starting value (usually 100). The order of subtraction matters: the question may ask 'beat' or 'more return' which indicates which entity's return is subtracted from the other. The result can be negative if the second entity outperforms the first.",
+  "example_count": 5,
+  "source_struct": [
+   "subtract",
+   "subtract",
+   "subtract"
+  ],
+  "example_ids": [
+   "GPN/2007/page_39.pdf-4",
+   "GPN/2017/page_30.pdf-3",
+   "AAP/2013/page_32.pdf-3",
+   "AMAT/2014/page_37.pdf-4",
+   "AMAT/2014/page_37.pdf-3",
+   "IP/2009/page_36.pdf-3"
+  ],
+  "strategy_id": "S042",
+  "retrieval_text": "Example questions this strategy answers: in comparison to overall information technology sector , how much percentage would global payments have earned the investor . | what was the percentage gained by investing $ 100 into global payments in comparison to the technology index? | from 2009 to 2012 , what percentage return did advance auto parts beat the overall market? | how much more return was given for investing in the overall market rather than applied materials from 2009 to 2014 ? ( in a percentage )\n[Strategy: relative_performance_difference; Type: percentage_change; Template: subtract(subtract(V1, V2), subtract(V3, V4))]",
+  "example_questions": [
+   "in comparison to overall information technology sector , how much percentage would global payments have earned the investor .",
+   "what was the percentage gained by investing $ 100 into global payments in comparison to the technology index?",
+   "from 2009 to 2012 , what percentage return did advance auto parts beat the overall market?",
+   "how much more return was given for investing in the overall market rather than applied materials from 2009 to 2014 ? ( in a percentage )"
+  ]
+ },
+ {
+  "name": "operating_expense_variation",
+  "problem_type": "difference",
+  "problem_pattern": "when the question asks for the variation (change) in a derived value (like operating expenses) between two periods, and the derived value is not directly given but can be computed from related line items (e.g., sales and operating profit), the method is to compute the derived value for each period and then subtract them.",
+  "operand_roles": "V1 = sales in the later period, V2 = operating profit in the later period, V3 = sales in the earlier period, V4 = operating profit in the earlier period",
+  "procedure": "1. Identify the relevant line items that sum to the derived value (e.g., operating expenses = sales - operating profit). 2. For each period, compute the derived value by subtracting the second line item from the first. 3. Subtract the earlier period's derived value from the later period's derived value to get the variation.",
+  "formula": "result = (V1 - V2) - (V3 - V4)",
+  "template": "subtract(subtract(V1, V2), subtract(V3, V4))",
+  "units_convention": "The result is in the same units as the input values (e.g., millions of dollars). No percentage conversion.",
+  "caveats": "Ensure the correct order of periods (later minus earlier) as per the question. Verify that the derived value is indeed the difference of the given line items; sometimes it could be a sum or other operation.",
+  "example_count": 1,
+  "source_struct": [
+   "subtract",
+   "subtract",
+   "subtract"
+  ],
+  "example_ids": [
+   "GPN/2007/page_39.pdf-4",
+   "GPN/2017/page_30.pdf-3",
+   "AAP/2013/page_32.pdf-3",
+   "AMAT/2014/page_37.pdf-4",
+   "AMAT/2014/page_37.pdf-3",
+   "IP/2009/page_36.pdf-3"
+  ],
+  "strategy_id": "S043",
+  "retrieval_text": "Example questions this strategy answers: in comparison to overall information technology sector , how much percentage would global payments have earned the investor . | what was the percentage gained by investing $ 100 into global payments in comparison to the technology index? | from 2009 to 2012 , what percentage return did advance auto parts beat the overall market? | how much more return was given for investing in the overall market rather than applied materials from 2009 to 2014 ? ( in a percentage )\n[Strategy: operating_expense_variation; Type: difference; Template: subtract(subtract(V1, V2), subtract(V3, V4))]",
+  "example_questions": [
+   "in comparison to overall information technology sector , how much percentage would global payments have earned the investor .",
+   "what was the percentage gained by investing $ 100 into global payments in comparison to the technology index?",
+   "from 2009 to 2012 , what percentage return did advance auto parts beat the overall market?",
+   "how much more return was given for investing in the overall market rather than applied materials from 2009 to 2014 ? ( in a percentage )"
+  ]
+ },
+ {
+  "strategy_id": "S044",
+  "name": "compound_interest_maturity_value",
+  "problem_type": "compound_interest",
+  "problem_pattern": "when the question asks for the future/matured value of a debt instrument or investment (e.g., eurobond, note) given the principal, annual interest rate, and number of periods until maturity, use the compound interest formula.",
+  "operand_roles": "V1=principal (face value), V2=annual interest rate (as decimal or %), V3=number of compounding periods (years until maturity)",
+  "procedure": "1) build the compounding factor (1 + rate); 2) raise it to the number of periods; 3) multiply by the principal.",
+  "formula": "result = principal * (1 + rate)^periods",
+  "template": "multiply(V1, exp(add(const_1, V2), V3))",
+  "units_convention": "rate as % (e.g., 2.0% -> 0.02 via str_to_num); const_1 = 1; result in same units as principal; question may say \"in millions\" but principal already in millions.",
+  "caveats": "confirm rate is annual and periods = years to maturity (maturity year - issue year). Rounding in the official answer may differ by a few basis points from exact computation (steps field may show rounded intermediates).",
+  "example_count": "1+ (manual: APD/2013 eurobond)",
+  "source_struct": [
+   "multiply",
+   "exp",
+   "add"
+  ],
+  "qc_note": "added manually from X_exp case (compound interest)",
+  "retrieval_text": "Example questions this strategy answers: \n[Strategy: compound_interest_maturity_value; Type: compound_interest; Template: multiply(V1, exp(add(const_1, V2), V3))]",
+  "example_questions": []
+ }
+]

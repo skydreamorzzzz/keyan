@@ -1,0 +1,839 @@
+====================================================================================================
+[case_only] ETR/2016/page_418.pdf-3  bucket=A_comparison_yesno n_steps=1 unit_scaling=False
+Q: was the change in net revenue from changes in transmission revenue more significant than the change due to the retail electric price change?
+GOLD: greater(7.0, 5.4)  ans=yes
+  no       correct=True  raw='greater(7.0, 5.4)'
+  case     correct=True  raw='greater(7.0, 5.4)'
+  strategy correct=False raw='divide(7.0, 5.4)'
+  both     correct=True  raw='greater(7.0, 5.4)'
+  retrieved cases:
+    ETR/2013/page_14.pdf-1 [F_2step] Q:what percentage of the change in net revenue between 2012 and 2013 is due to ret
+       prog=divide(236, subtract(5524, 4969))
+    ETR/2017/page_25.pdf-2 [F_2step] Q:what portion of the net change in net revenue during 2016 is related to the chan
+       prog=divide(289, subtract(6179, 5829))
+    ETR/2011/page_358.pdf-2 [F_2step] Q:from the change in net revenue in 2011 , what percentage is attributed to change
+       prog=divide(-16.9, subtract(247.0, 272.9))
+  retrieved strategies:
+    S003 proportion_of_change | divide(V1, subtract(V2, V3))
+    S002 percentage_change | divide(subtract(V1, V2), V2)
+    S019 percentage_change_from_absolute_values | subtract(divide(V1, V2), const_1)
+
+====================================================================================================
+[case_only] AON/2009/page_48.pdf-2  bucket=B_table_aggregation n_steps=1 unit_scaling=False
+Q: what is the lowest segment operating income margin?
+GOLD: table_min(segment operating income margin, none)  ans=0.134
+  no       correct=False raw='table_min(row3, none)'
+  case     correct=True  raw='table_min(segment operating income margin, none)'
+  strategy correct=False raw='table_min(row3, none)'
+  both     correct=True  raw='table_min(segment operating income margin, none)'
+  retrieved cases:
+    INTC/2013/page_40.pdf-3 [G_1step] Q:in 2013 what was the operating margin
+       prog=divide(11827, 33039)
+    LMT/2018/page_86.pdf-2 [G_1step] Q:what is the operating profit margin?
+       prog=divide(454, 3410)
+    AON/2014/page_45.pdf-2 [B_table_aggregation] Q:what is the fluctuation between the lowest and average operating margin?
+       prog=subtract(table_average(operating margin, none), table_min(operating margin, none
+  retrieved strategies:
+    S001 Part-to-Whole Ratio | divide(V1, V2)
+    S028 percentage_of_part | multiply(divide(V1, V2), const_100)
+    S026 Maximum value extraction from a table column | table_max(V1, none)
+
+====================================================================================================
+[case_only] AAPL/2008/page_78.pdf-2  bucket=B_table_aggregation n_steps=1 unit_scaling=False
+Q: what was the average change in unrealized gains on derivative instruments?
+GOLD: table_average(change in unrealized gains on derivative instruments, none)  ans=5.0
+  no       correct=True  raw='table_average(change in unrealized gains on derivative instruments, none)'
+  case     correct=True  raw='table_average(change in unrealized gains on derivative instruments, none)'
+  strategy correct=False raw='table_average(row3, none)'
+  both     correct=True  raw='table_average(change in unrealized gains on derivative instruments, none)'
+  retrieved cases:
+    AAPL/2007/page_79.pdf-2 [G_1step] Q:what was the change in unrealized gains on derivative instruments between 2006 a
+       prog=subtract(const_m1, -3)
+    AAPL/2006/page_103.pdf-2 [B_table_aggregation] Q:what was the greatest annual change in unrealized gain/loss on derivative instru
+       prog=table_max(change in unrealized gain/loss on derivative instruments, none)
+    STT/2001/page_74.pdf-3 [F_2step] Q:between 2000 and 2001 , what was the percent increase of unrealized gains?
+       prog=divide(subtract(96, 19), 19)
+  retrieved strategies:
+    S023 investment_return | multiply(divide(V1, V2), subtract(V3, V2))
+    S004 Absolute Difference Between Two Values | subtract(V1, V2)
+    S003 proportion_of_change | divide(V1, subtract(V2, V3))
+
+====================================================================================================
+[case_only] C/2017/page_328.pdf-2  bucket=C_unitscaling_multi n_steps=3 unit_scaling=True
+Q: as of 2017 what was the ratio of the overall five-year cumulative total return for s&p 500 compared to citi
+GOLD: divide(subtract(208.1, const_100), subtract(193.5, const_100))  ans=1.15615
+  no       correct=False raw='divide(208.1, 193.5)'
+  case     correct=True  raw='divide(subtract(208.1, const_100), subtract(193.5, const_100))'
+  strategy correct=False raw='multiply(divide(subtract(208.1, 100.0), 100.0), const_100)'
+  both     correct=True  raw='divide(subtract(208.1, const_100), subtract(193.5, const_100))'
+  retrieved cases:
+    C/2016/page_333.pdf-3 [C_unitscaling_multi] Q:in 2016 what was the ratio of the five-year cumulative total return for citi com
+       prog=divide(subtract(229.3, const_100), subtract(198.2, const_100))
+    C/2010/page_306.pdf-3 [D_multistep4plus] Q:what was the difference in percentage cumulative total return between cititgroup
+       prog=subtract(divide(subtract(11.22, 100), 100), subtract(56.96, 100))
+    C/2009/page_279.pdf-2 [G_1step] Q:what was the ratio of cumulative total return for citigroup compared to the s&p 
+       prog=divide(70.36, 127.85)
+  retrieved strategies:
+    S027 cumulative_return_difference | subtract(divide(subtract(V1, V2), V2), divide(subtract(V3, V4), V4))
+    S028 percentage_of_part | multiply(divide(V1, V2), const_100)
+    S029 projected_value_with_same_rate | multiply(divide(V1, V2), V1)
+
+====================================================================================================
+[case_only] PNC/2011/page_87.pdf-2  bucket=C_unitscaling_multi n_steps=5 unit_scaling=True
+Q: what is the average , in millions , home equity line of credit with balloon payments with draw periods from 2012 to 2016?
+GOLD: divide(add(add(add(add(306, 44), 60), 100), 246), const_5)  ans=151.2
+  no       correct=False raw='table_average(2012, none)'
+  case     correct=True  raw='divide(add(306, add(44, add(60, add(100, 246)))), 5)'
+  strategy correct=False raw='table_average(2012, none)'
+  both     correct=False raw='table_average(2012, none)'
+  retrieved cases:
+    PNC/2013/page_97.pdf-1 [G_1step] Q:for the 2014 draw period balances of interest only products , what percent were 
+       prog=divide(185, 1768)
+    PNC/2014/page_94.pdf-2 [G_1step] Q:for total interest only home equity lines of credit , what percentage of the tot
+       prog=divide(48, 10349)
+    PNC/2014/page_94.pdf-3 [G_1step] Q:for total interest only home equity lines of credit , what percentage of the tot
+       prog=divide(154, 10349)
+  retrieved strategies:
+    S034 Sum of row values across periods | table_sum(V1, none)
+    S005 Sum of two or more values | add(V1, V2)
+    S015 Direct comparison of two values | greater(V1, V2)
+
+====================================================================================================
+[case_only] TSCO/2018/page_34.pdf-1  bucket=D_multistep4plus n_steps=5 unit_scaling=False
+Q: how much of a greater return , in percentage , was gained in the s&p retail index compared to the tractor supply company?
+GOLD: subtract(divide(subtract(217.01, 100.00), 100.00), divide(subtract(117.18, 100), 100))  ans=0.9983
+  no       correct=False raw='divide(subtract(217.01, 117.18), 117.18)'
+  case     correct=True  raw='subtract(divide(subtract(217.01, 100.00), 100.00), divide(subtract(117.18, 100.00), 100.00))'
+  strategy correct=False raw='subtract(subtract(217.01, 100), subtract(117.18, 100))'
+  both     correct=True  raw='subtract(divide(subtract(217.01, 100.00), 100.00), divide(subtract(117.18, 100.00), 100.00))'
+  retrieved cases:
+    AAP/2016/page_26.pdf-3 [D_multistep4plus] Q:from january 3 2015 to december 31 , how much greater was the return for s&p ret
+       prog=subtract(divide(subtract(256.69, 196.06), 196.06), divide(subtract(244.64, 228.8
+    ORLY/2015/page_28.pdf-3 [G_1step] Q:how much greater was the five year return for the s&p 500 retail index compared 
+       prog=subtract(252, 163)
+    ORLY/2017/page_30.pdf-4 [G_1step] Q:what was the difference in the five year total return for o 2019reilly automotiv
+       prog=subtract(269, 265)
+  retrieved strategies:
+    S027 cumulative_return_difference | subtract(divide(subtract(V1, V2), V2), divide(subtract(V3, V4), V4))
+    S042 relative_performance_difference | subtract(subtract(V1, V2), subtract(V3, V4))
+    S043 operating_expense_variation | subtract(subtract(V1, V2), subtract(V3, V4))
+
+====================================================================================================
+[case_only] PPG/2011/page_70.pdf-2  bucket=E_3step n_steps=3 unit_scaling=False
+Q: what was the increase for the maximum company match on january 1 , 2011?
+GOLD: subtract(multiply(75%, 6%), multiply(50%, 6%))  ans=0.015
+  no       correct=False raw='divide(subtract(75, 50), 50)'
+  case     correct=True  raw='subtract(multiply(75%, 6%), multiply(50%, 6%))'
+  strategy correct=False raw='subtract(75%, 50%)'
+  both     correct=True  raw='subtract(multiply(75%, 6%), multiply(50%, 6%))'
+  retrieved cases:
+    AMT/2014/page_120.pdf-1 [E_3step] Q:assuming maximum participant contributions , what was the change in company matc
+       prog=subtract(multiply(75%, 6%), multiply(50%, 6%))
+    MSI/2009/page_116.pdf-3 [F_2step] Q:what is the percent change in number of shares purchased by employees between 20
+       prog=divide(subtract(29.4, 18.9), 18.9)
+    ADBE/2013/page_89.pdf-3 [B_table_aggregation] Q:for the performance share program , for the years 2013 , 2012 , and 2011 , what 
+       prog=table_max(beginning outstanding balance, none)
+  retrieved strategies:
+    S026 Maximum value extraction from a table column | table_max(V1, none)
+    S015 Direct comparison of two values | greater(V1, V2)
+    S019 percentage_change_from_absolute_values | subtract(divide(V1, V2), const_1)
+
+====================================================================================================
+[case_only] AMT/2012/page_125.pdf-1  bucket=F_2step n_steps=2 unit_scaling=True
+Q: for the mtn group acquisition , what was the cost per tower ? .
+GOLD: divide(multiply(173.2, const_1000000), 962)  ans=180041.58004
+  no       correct=False raw='divide(173200, 962)'
+  case     correct=True  raw='divide(multiply(173.2, const_1000000), 962)'
+  strategy correct=False raw='divide(173200, 962)'
+  both     correct=True  raw='divide(multiply(173.2, const_1000000), 962)'
+  retrieved cases:
+    AMT/2007/page_111.pdf-1 [F_2step] Q:based solely on cash for towers acquisitions , what was the average cost per tow
+       prog=divide(multiply(6.0, const_1000000), 30)
+    AMT/2010/page_98.pdf-3 [G_1step] Q:based on the agreement what was the average price completed the purchase of excl
+       prog=divide(86.8, 508)
+    AMT/2012/page_123.pdf-4 [F_2step] Q:what was the cost per tower in the colombia movil acquisition?
+       prog=divide(multiply(182.0, const_1000000), 2126)
+  retrieved strategies:
+    S006 part_to_whole_ratio | divide(V1, add(V1, V2))
+    S008 ratio_of_two_aggregates | divide(V1, add(V2, V3))
+    S007 average_of_two_values | divide(add(V1, V2), const_2)
+
+====================================================================================================
+[case_only] MRO/2006/page_33.pdf-1  bucket=F_2step n_steps=2 unit_scaling=False
+Q: based on a 365 day year and the average sales price per barrel listed above , what was the total refined product sales revenue for 2006?
+GOLD: multiply(multiply(1425, 77.76), 365)  ans=40444920.0
+  no       correct=False raw='divide(multiply(1425, 77.76), const_1000)'
+  case     correct=True  raw='multiply(multiply(1425, 365), 77.76)'
+  strategy correct=False raw='divide(multiply(1425, 77.76), 1)'
+  both     correct=True  raw='multiply(multiply(1425, 365), 77.76)'
+  retrieved cases:
+    MRO/2007/page_41.pdf-1 [G_1step] Q:based on the average sales price listed above , what was the refined product sal
+       prog=multiply(1410, 86.53)
+    MRO/2007/page_41.pdf-4 [E_3step] Q:based on the average sales price listed above , how much did refined product sal
+       prog=subtract(multiply(1410, 86.53), multiply(1455, 66.42))
+    MRO/2008/page_44.pdf-3 [G_1step] Q:based on average sales price , how much refined product sales revenue did mro ac
+       prog=multiply(1352, 109.49)
+  retrieved strategies:
+    S014 Average annual expense from total and period | divide(multiply(V1, const_1000000), V2)
+    S013 Per-unit value from total amount and quantity | divide(multiply(V1, const_1000000), V2)
+    S012 Part-to-whole percentage with unit conversion | divide(multiply(V1, const_1000), V2)
+
+====================================================================================================
+[case_only] UNP/2014/page_75.pdf-2  bucket=F_2step n_steps=2 unit_scaling=False
+Q: what was the percentage change in total expense for repairs and maintenance from 2013 to 2014?
+GOLD: divide(subtract(2.4, 2.3), 2.3)  ans=0.04348
+  no       correct=True  raw='divide(subtract(2.4, 2.3), 2.3)'
+  case     correct=True  raw='divide(subtract(2.4, 2.3), 2.3)'
+  strategy correct=False raw='multiply(divide(subtract(2.4, 2.3), 2.3), const_100)'
+  both     correct=True  raw='divide(subtract(2.4, 2.3), 2.3)'
+  retrieved cases:
+    UNP/2013/page_73.pdf-4 [F_2step] Q:what was the percentage change in total expense for repairs and maintenance from
+       prog=divide(subtract(2.3, 2.1), 2.1)
+    UNP/2013/page_73.pdf-3 [F_2step] Q:what was the percentage change in total expense for repairs and maintenance from
+       prog=divide(subtract(2.1, 2.2), 2.2)
+    UNP/2013/page_73.pdf-1 [C_unitscaling_multi] Q:what was the average repairs and maintenance incurred from 2011 to 2013 in billi
+       prog=divide(add(add(2.3, 2.1), 2.2), const_3)
+  retrieved strategies:
+    S023 investment_return | multiply(divide(V1, V2), subtract(V3, V2))
+    S022 percentage_change | multiply(divide(subtract(V1, V2), V2), const_100)
+    S002 percentage_change | divide(subtract(V1, V2), V2)
+
+====================================================================================================
+[case_only] BLL/2007/page_47.pdf-4  bucket=F_2step n_steps=2 unit_scaling=True
+Q: what is the number of shares outstanding based on the cash dividends paid during 2006 , in millions?
+GOLD: divide(41, divide(40, const_100))  ans=102.5
+  no       correct=True  raw='divide(41, 0.40)'
+  case     correct=True  raw='divide(41, 0.40)'
+  strategy correct=False raw='multiply(41, const_1000)'
+  both     correct=False raw='divide(multiply(41, const_1000), 0.40)'
+  retrieved cases:
+    LMT/2016/page_105.pdf-2 [F_2step] Q:what is the total outstanding number of shares that received dividends in 2016 ,
+       prog=divide(multiply(2.0, const_1000), 6.77)
+    SNA/2013/page_59.pdf-3 [F_2step] Q:how many share were outstanding in 2013 based on the amount paid for dividends?
+       prog=divide(multiply(92.0, const_1000000), 1.58)
+    AMAT/2015/page_33.pdf-2 [C_unitscaling_multi] Q:how many outstanding shares received dividends in 2013 , ( in millions ) ?
+       prog=divide(487, add(multiply(0.10, const_3), 0.09))
+  retrieved strategies:
+    S010 multiply_value_by_percentage | multiply(V1, V2)
+    S009 multiply_price_by_quantity | multiply(V1, V2)
+    S017 Proportion of a part to total | divide(V1, add(V2, add(V3, V1)))
+
+====================================================================================================
+[case_only] PNC/2018/page_171.pdf-2  bucket=F_2step n_steps=2 unit_scaling=False
+Q: what was the percentage increase total commitments to extend credit and other commitments
+GOLD: divide(subtract(181612, 172521), 172521)  ans=0.0527
+  no       correct=True  raw='divide(subtract(181612, 172521), 172521)'
+  case     correct=True  raw='divide(subtract(181612, 172521), 172521)'
+  strategy correct=False raw='multiply(divide(subtract(181612, 172521), 172521), const_100)'
+  both     correct=False raw='multiply(divide(subtract(181612, 172521), 172521), const_100)'
+  retrieved cases:
+    PNC/2017/page_168.pdf-1 [F_2step] Q:what was the change in the total commitments to extend credit from 2016 top 2017
+       prog=divide(subtract(159641, 151981), 151981)
+    NKE/2014/page_36.pdf-4 [G_1step] Q:what percent of the total for all years was made up from contributions in 2017?
+       prog=divide(1196, 13638)
+    NKE/2015/page_37.pdf-2 [G_1step] Q:what percent of the total for all years was due to contributions form the year 2
+       prog=divide(873, 15473)
+  retrieved strategies:
+    S041 Sum of future annual commitments | add(V1, add(V2, add(V3, V4)))
+    S022 percentage_change | multiply(divide(subtract(V1, V2), V2), const_100)
+    S023 investment_return | multiply(divide(V1, V2), subtract(V3, V2))
+
+====================================================================================================
+[case_only] ETR/2013/page_118.pdf-1  bucket=F_2step n_steps=2 unit_scaling=False
+Q: what is the percent change in annual long-term debt maturities from 2016 to 2017?
+GOLD: divide(subtract(766801, 270852), 270852)  ans=1.83107
+  no       correct=True  raw='divide(subtract(766801, 270852), 270852)'
+  case     correct=True  raw='divide(subtract(766801, 270852), 270852)'
+  strategy correct=False raw='multiply(divide(subtract(766801, 270852), 270852), const_100)'
+  both     correct=True  raw='divide(subtract(766801, 270852), 270852)'
+  retrieved cases:
+    ETR/2017/page_35.pdf-2 [F_2step] Q:what is the percent change in debt to capital from 2016 to 2017
+       prog=divide(subtract(67.1, 64.8), 64.8)
+    ETR/2017/page_35.pdf-1 [F_2step] Q:what is the percentage change in the debt-to-capital ratio from 2016 to 2017?
+       prog=divide(subtract(67.1, 64.8), 64.8)
+    EMR/2017/page_53.pdf-2 [F_2step] Q:what percentage of total debt was long-term debt in 2016?
+       prog=divide(4051, multiply(6.6, const_1000))
+  retrieved strategies:
+    S028 percentage_of_part | multiply(divide(V1, V2), const_100)
+    S030 annualized_expense | multiply(divide(V1, V2), const_1000000)
+    S029 projected_value_with_same_rate | multiply(divide(V1, V2), V1)
+
+====================================================================================================
+[case_only] INTC/2013/page_33.pdf-3  bucket=F_2step n_steps=2 unit_scaling=False
+Q: what was the percentage change in diluted earnings per common share december 29 2012 and december 28 2013?
+GOLD: divide(subtract(1.89, 2.13), 2.13)  ans=-0.11268
+  no       correct=True  raw='divide(subtract(1.89, 2.13), 2.13)'
+  case     correct=True  raw='divide(subtract(1.89, 2.13), 2.13)'
+  strategy correct=False raw='multiply(divide(subtract(1.89, 2.13), 2.13), const_100)'
+  both     correct=False raw='multiply(divide(subtract(1.89, 2.13), 2.13), const_100)'
+  retrieved cases:
+    CNC/2003/page_41.pdf-4 [F_2step] Q:what was the percentage change in pro forma diluted earnings per common share fr
+       prog=divide(subtract(1.48, 1.00), 1.00)
+    IP/2009/page_72.pdf-2 [G_1step] Q:what was the net change in diluted earnings ( loss ) per common share from conti
+       prog=subtract(-3.02, 2.81)
+    IP/2009/page_72.pdf-1 [G_1step] Q:what was the net change in diluted earnings ( loss ) per common share from conti
+       prog=subtract(1.55, -3.02)
+  retrieved strategies:
+    S023 investment_return | multiply(divide(V1, V2), subtract(V3, V2))
+    S028 percentage_of_part | multiply(divide(V1, V2), const_100)
+    S022 percentage_change | multiply(divide(subtract(V1, V2), V2), const_100)
+
+====================================================================================================
+[case_only] ABMD/2009/page_88.pdf-3  bucket=F_2step n_steps=2 unit_scaling=False
+Q: what is the total contingent payments to impella 2019s former shareholders if all targets are achieved?
+GOLD: add(add(5583333, 5583333), 5583334)  ans=16750000.0
+  no       correct=True  raw='add(5583333, add(5583333, 5583334))'
+  case     correct=True  raw='add(5583333, add(5583333, 5583334))'
+  strategy correct=False raw='multiply(add(5583333, 5583333), 1)'
+  both     correct=True  raw='add(5583333, add(5583333, 5583334))'
+  retrieved cases:
+    ABMD/2008/page_52.pdf-1 [G_1step] Q:what would be the total purchase price of impella cardiosystems assuming all con
+       prog=add(11.2, 45.1)
+    ABMD/2009/page_85.pdf-2 [F_2step] Q:what percentage of impella's pre-acquisition net operating losses are expected t
+       prog=divide(subtract(18.2, 1.2), 18.2)
+    IQV/2018/page_59.pdf-3 [G_1step] Q:if the remaining commitment for private equity fund was to be paid in 2019 , wha
+       prog=add(1023, 42)
+  retrieved strategies:
+    S009 multiply_price_by_quantity | multiply(V1, V2)
+    S010 multiply_value_by_percentage | multiply(V1, V2)
+    S029 projected_value_with_same_rate | multiply(divide(V1, V2), V1)
+
+====================================================================================================
+[case_only] UNP/2011/page_21.pdf-3  bucket=G_1step n_steps=1 unit_scaling=False
+Q: what percentage of total number of shares purchased were purchased in october ?
+GOLD: divide(379488, 3915795)  ans=0.09691
+  no       correct=False raw='divide(table_max(oct . 1 through oct . 31, none), 3915795)'
+  case     correct=True  raw='divide(379488, 3915795)'
+  strategy correct=False raw='multiply(divide(379488, 3915795), const_100)'
+  both     correct=False raw='multiply(divide(379488, 3915795), const_100)'
+  retrieved cases:
+    IPG/2012/page_21.pdf-1 [F_2step] Q:what percentage of total shares were purchased in october?
+       prog=multiply(divide(13566, 14156696), const_100)
+    IPG/2014/page_23.pdf-1 [G_1step] Q:what was the percent of the total number of shares purchased in october
+       prog=divide(5854930, 6685940)
+    DVN/2011/page_26.pdf-3 [G_1step] Q:what percentage of total shares repurchased were purchased in october?
+       prog=divide(3228557, 5518236)
+  retrieved strategies:
+    S010 multiply_value_by_percentage | multiply(V1, V2)
+    S009 multiply_price_by_quantity | multiply(V1, V2)
+    S028 percentage_of_part | multiply(divide(V1, V2), const_100)
+
+====================================================================================================
+[case_only] ABMD/2009/page_56.pdf-2  bucket=G_1step n_steps=1 unit_scaling=False
+Q: what portion of contractual obligations is expected to be paid within 12 months?
+GOLD: divide(4619, 9457)  ans=0.48842
+  no       correct=True  raw='divide(4619, 9457)'
+  case     correct=True  raw='divide(4619, 9457)'
+  strategy correct=False raw='multiply(divide(4619, 9457), const_100)'
+  both     correct=True  raw='divide(4619, 9457)'
+  retrieved cases:
+    BKR/2018/page_61.pdf-3 [G_1step] Q:what portion of total contractual obligations is expected to be paid as interest
+       prog=divide(3716, 13058)
+    ZBH/2002/page_32.pdf-1 [G_1step] Q:what percent of contractual obligations are due in less than 1 year?
+       prog=divide(190.0, 218.6)
+    ABMD/2008/page_52.pdf-3 [G_1step] Q:what portion of total obligations is related to contractual obligations as of ma
+       prog=divide(9309, 17063)
+  retrieved strategies:
+    S041 Sum of future annual commitments | add(V1, add(V2, add(V3, V4)))
+    S030 annualized_expense | multiply(divide(V1, V2), const_1000000)
+    S028 percentage_of_part | multiply(divide(V1, V2), const_100)
+
+====================================================================================================
+[case_only] IPG/2008/page_93.pdf-1  bucket=G_1step n_steps=1 unit_scaling=False
+Q: what portion of the total estimated future contingent acquisition obligation is due in the 12 months?
+GOLD: divide(76.7, 397.2)  ans=0.1931
+  no       correct=False raw='divide(row1_total, row3_total)'
+  case     correct=True  raw='divide(76.7, 397.2)'
+  strategy correct=False raw='divide(79.3, 402.8)'
+  both     correct=True  raw='divide(76.7, 397.2)'
+  retrieved cases:
+    IPG/2012/page_89.pdf-4 [F_2step] Q:what percentage of total estimated future contingent acquisition obligations pay
+       prog=multiply(divide(41.8, 228.8), const_100)
+    IPG/2018/page_104.pdf-2 [G_1step] Q:what was the change in the future contingent acquisition obligations deferred ac
+       prog=subtract(65.7, 20.0)
+    ABMD/2015/page_86.pdf-2 [G_1step] Q:what portion of total consideration transferred for acquisition of ecp and ais i
+       prog=divide(6000, 21750)
+  retrieved strategies:
+    S041 Sum of future annual commitments | add(V1, add(V2, add(V3, V4)))
+    S006 part_to_whole_ratio | divide(V1, add(V1, V2))
+    S029 projected_value_with_same_rate | multiply(divide(V1, V2), V1)
+
+====================================================================================================
+[case_only] ETFC/2007/page_126.pdf-3  bucket=G_1step n_steps=1 unit_scaling=False
+Q: what percentage of total future principal payments of corporate debt are due after 2012?
+GOLD: divide(2996337, 3450152)  ans=0.86847
+  no       correct=True  raw='divide(table_sum(thereafter, none), 3450152)'
+  case     correct=True  raw='divide(2996337, 3450152)'
+  strategy correct=False raw='multiply(divide(2996337, 3450152), const_100)'
+  both     correct=False raw='divide(multiply(2996337, const_100), 3450152)'
+  retrieved cases:
+    V/2008/page_149.pdf-1 [G_1step] Q:in 2008 what was the percent of the total future principal payments on the compa
+       prog=divide(52, 108)
+    WRK/2018/page_56.pdf-5 [G_1step] Q:what percent of payments is longterm debt?
+       prog=divide(6039.0, 9017.8)
+    GIS/2018/page_43.pdf-1 [G_1step] Q:what is the percent of the future estimated cash payments under existing contrac
+       prog=divide(1599.8, 14354.0)
+  retrieved strategies:
+    S028 percentage_of_part | multiply(divide(V1, V2), const_100)
+    S029 projected_value_with_same_rate | multiply(divide(V1, V2), V1)
+    S030 annualized_expense | multiply(divide(V1, V2), const_1000000)
+
+====================================================================================================
+[case_only] LMT/2005/page_40.pdf-2  bucket=G_1step n_steps=1 unit_scaling=False
+Q: what percent of total commitments expire in 1-3 years?
+GOLD: divide(524, 3066)  ans=0.17091
+  no       correct=False raw='divide(multiply(524, const_100), 3066)'
+  case     correct=True  raw='divide(524, 3066)'
+  strategy correct=False raw="divide(table_sum('commitment expiration by period 1-3 years ( a )', none), 3066)"
+  both     correct=True  raw='divide(524, 3066)'
+  retrieved cases:
+    UNP/2014/page_41.pdf-2 [G_1step] Q:what percent of total commitments are greater than 5 years?
+       prog=divide(15, 2472)
+    UNP/2011/page_41.pdf-2 [G_1step] Q:using the 2012 expirations as a guide , in how many years will the current commi
+       prog=divide(2749, 642)
+    NKE/2015/page_37.pdf-2 [G_1step] Q:what percent of the total for all years was due to contributions form the year 2
+       prog=divide(873, 15473)
+  retrieved strategies:
+    S041 Sum of future annual commitments | add(V1, add(V2, add(V3, V4)))
+    S011 Sum of multi-year values | add(add(V1, V2), V3)
+    S034 Sum of row values across periods | table_sum(V1, none)
+
+====================================================================================================
+[case_only] JPM/2007/page_147.pdf-2  bucket=G_1step n_steps=1 unit_scaling=False
+Q: how much of the securitizations that hold asf framework loans were issued by third parties?
+GOLD: divide(19636, 20048)  ans=0.97945
+  no       correct=False raw='table_max(third-party, none)'
+  case     correct=True  raw='row1: third-party | $ 19636\ndivide(19636, 20048)'
+  strategy correct=False raw='multiply(divide(19636, 20048), const_100)'
+  both     correct=True  raw='divide(19636, 20048)'
+  retrieved cases:
+    FITB/2008/page_69.pdf-1 [F_2step] Q:what was the average securitization rate of standby letters of credit as of dece
+       prog=divide(add(66%, 70%), const_2)
+    ETFC/2007/page_116.pdf-2 [G_1step] Q:what was the ratio of the derivative contracts at december 31 , 2007 to mortgage
+       prog=divide(197.5, 87.4)
+    GS/2012/page_95.pdf-3 [C_unitscaling_multi] Q:as of december 2011 , what percentage of available- for-sale securities was comp
+       prog=divide(1.42, add(add(1.81, 1.42), divide(662, const_1000)))
+  retrieved strategies:
+    S015 Direct comparison of two values | greater(V1, V2)
+    S028 percentage_of_part | multiply(divide(V1, V2), const_100)
+    S040 Reverse Percentage Increase | multiply(V1, subtract(const_100, V2))
+
+====================================================================================================
+[strategy_only] AES/2002/page_46.pdf-1  bucket=A_comparison_yesno n_steps=3 unit_scaling=False
+Q: was the 2002 first quarter variance in high & low stock prices greater than the 2001 first quarter variance?
+GOLD: greater(subtract(17.84, 4.11), subtract(60.15, 41.30))  ans=no
+  no       correct=True  raw='greater(subtract(17.84, 4.11), subtract(60.15, 41.30))'
+  case     correct=False raw='subtract(subtract(17.84, 4.11), subtract(60.15, 41.30))'
+  strategy correct=True  raw='greater(subtract(17.84, 4.11), subtract(60.15, 41.30))'
+  both     correct=False raw='subtract(subtract(17.84, 4.11), subtract(60.15, 41.30))'
+  retrieved cases:
+    AES/2003/page_48.pdf-1 [F_2step] Q:in q1 2003 , what was the average of the high and low stock price?
+       prog=divide(add(4.04, 2.72), const_2)
+    HWM/2015/page_72.pdf-1 [G_1step] Q:what is the decrease observed in the high trading stock prices in the first and 
+       prog=subtract(17.10, 14.29)
+    MKTX/2011/page_43.pdf-2 [G_1step] Q:for the period from april 1 2011 to june 30 2011 , what was the difference betwe
+       prog=subtract(25.22, 21.00)
+  retrieved strategies:
+    S027 cumulative_return_difference | subtract(divide(subtract(V1, V2), V2), divide(subtract(V3, V4), V4))
+    S015 Direct comparison of two values | greater(V1, V2)
+    S026 Maximum value extraction from a table column | table_max(V1, none)
+
+====================================================================================================
+[strategy_only] PNC/2009/page_46.pdf-3  bucket=A_comparison_yesno n_steps=1 unit_scaling=False
+Q: did the share of securities rated aaa/aaa increase between 2008 and 2009?
+GOLD: greater(14, 19)  ans=no
+  no       correct=True  raw='greater(14%, 19%)'
+  case     correct=False raw='subtract(19, 14)'
+  strategy correct=True  raw='greater(14, 19)'
+  both     correct=True  raw='greater(14, 19)'
+  retrieved cases:
+    STT/2009/page_122.pdf-1 [F_2step] Q:what is the percent change in the amount kept as collateral between 2008 and 200
+       prog=divide(subtract(375.92, 333.07), 333.07)
+    JPM/2016/page_141.pdf-1 [G_1step] Q:in 2016 what was the ratio of the aaa/aaa to aa-/aa3 to the a+/a1 to a-/a3
+       prog=divide(11449, 8505)
+    JPM/2014/page_128.pdf-4 [G_1step] Q:what was the ratio of the ratings profile of derivative receivables rating equiv
+       prog=divide(19202, 13940)
+  retrieved strategies:
+    S031 share_of_total | divide(V1, divide(V2, const_1000))
+    S027 cumulative_return_difference | subtract(divide(subtract(V1, V2), V2), divide(subtract(V3, V4), V4))
+    S015 Direct comparison of two values | greater(V1, V2)
+
+====================================================================================================
+[strategy_only] UNP/2011/page_76.pdf-2  bucket=A_comparison_yesno n_steps=1 unit_scaling=False
+Q: in 2011 , did the company distribute more to shareholders than debtholders?
+GOLD: greater(284, 197)  ans=yes
+  no       correct=True  raw='greater(284, 197)'
+  case     correct=False raw='divide(greater(284, 197), 1)'
+  strategy correct=True  raw='greater(table_sum(dividends payable, none), table_sum(interest payable, none))'
+  both     correct=False raw='divide(add(284, 819), 3108)'
+  retrieved cases:
+    ABMD/2012/page_75.pdf-1 [A_comparison_yesno] Q:during the 2012 year , did the equity awards in which the prescribed performance
+       prog=greater(multiply(multiply(607, 18.13), const_1000), multiply(3.3, const_1000000)
+    VLO/2014/page_23.pdf-2 [G_1step] Q:how many more shares were purchased as part of publicly announced plans in decem
+       prog=subtract(5117774, 2878673)
+    UNP/2012/page_20.pdf-1 [F_2step] Q:what portion of the 2011 plan repurchases were repurchased in 2012?
+       prog=divide(13804709, multiply(40, const_1000000))
+  retrieved strategies:
+    S031 share_of_total | divide(V1, divide(V2, const_1000))
+    S009 multiply_price_by_quantity | multiply(V1, V2)
+    S010 multiply_value_by_percentage | multiply(V1, V2)
+
+====================================================================================================
+[strategy_only] AES/2015/page_117.pdf-3  bucket=C_unitscaling_multi n_steps=3 unit_scaling=True
+Q: what were average proportional recoverable environmental capital expenditures for the years december 31 , 2015 , 2014 and 2013 , in millions?
+GOLD: divide(add(110, add(205, 163)), const_3)  ans=159.33333
+  no       correct=False raw='average(add(205, add(163, 110)), none)'
+  case     correct=False raw='table_average(proportional recoverable environmental capital expenditures, none)'
+  strategy correct=True  raw='divide(add(add(205, 163), 110), const_3)'
+  both     correct=True  raw='divide(add(add(205, 163), 110), const_3)'
+  retrieved cases:
+    MRO/2014/page_55.pdf-2 [F_2step] Q:by how much did total capital expenditures increase from 2013 to 2014?
+       prog=divide(subtract(5495, 4449), 4449)
+    CDW/2017/page_56.pdf-2 [F_2step] Q:what was the average capital expenditures , in millions , for 2016 and 2015?
+       prog=divide(add(90, 64), const_2)
+    SNA/2013/page_59.pdf-4 [C_unitscaling_multi] Q:what was the average capital expenditures from 2011 to 2013 in millions
+       prog=divide(add(add(61.2, add(70.6, 79.4)), const_3), const_2)
+  retrieved strategies:
+    S034 Sum of row values across periods | table_sum(V1, none)
+    S007 average_of_two_values | divide(add(V1, V2), const_2)
+    S011 Sum of multi-year values | add(add(V1, V2), V3)
+
+====================================================================================================
+[strategy_only] CDNS/2018/page_31.pdf-2  bucket=C_unitscaling_multi n_steps=5 unit_scaling=True
+Q: what was the difference in percentage cumulative 5-year total stockholder return for cadence design systems inc . compared to the nasdaq composite for the period ending 12/29/2018?
+GOLD: subtract(divide(subtract(311.13, const_100), const_100), divide(subtract(165.84, const_100), const_100))  ans=1.4529
+  no       correct=False raw='divide(subtract(311.13, 165.84), 165.84)'
+  case     correct=False raw='divide(subtract(311.13, 100.00), 100.00) - divide(subtract(165.84, 100.00), 100.00)'
+  strategy correct=True  raw='subtract(divide(subtract(311.13, 100.00), 100.00), divide(subtract(165.84, 100.00), 100.00))'
+  both     correct=True  raw='subtract(divide(subtract(311.13, const_100), const_100), divide(subtract(165.84, const_100), const_100))'
+  retrieved cases:
+    CDNS/2016/page_32.pdf-3 [F_2step] Q:what was the percentage cumulative 5-year total stockholder return on cadence de
+       prog=divide(subtract(242.50, const_100), const_100)
+    CDNS/2007/page_30.pdf-3 [C_unitscaling_multi] Q:what was the difference in percentage cadence design systems , inc . 2019s cumul
+       prog=subtract(divide(subtract(139.82, const_100), const_100), divide(subtract(182.87,
+    CDNS/2016/page_32.pdf-2 [C_unitscaling_multi] Q:what was the difference in percentage cumulative 5-year total stockholder return
+       prog=subtract(divide(subtract(242.50, const_100), const_100), divide(subtract(219.65,
+  retrieved strategies:
+    S027 cumulative_return_difference | subtract(divide(subtract(V1, V2), V2), divide(subtract(V3, V4), V4))
+    S010 multiply_value_by_percentage | multiply(V1, V2)
+    S009 multiply_price_by_quantity | multiply(V1, V2)
+
+====================================================================================================
+[strategy_only] JPM/2018/page_110.pdf-1  bucket=C_unitscaling_multi n_steps=3 unit_scaling=True
+Q: what is the average of the afs investment securities during the years 2016-2018?
+GOLD: divide(add(add(228681, 200247), 236670), const_3)  ans=221866.0
+  no       correct=False raw='table_average(afs investment securities ( period-end ), none)'
+  case     correct=False raw='table_average(afs investment securities ( period-end ), none)'
+  strategy correct=True  raw='divide(add(add(228681, 200247), 236670), const_3)'
+  both     correct=False raw='divide(add(add(226892, 219345), 203449), const_3)'
+  retrieved cases:
+    JPM/2017/page_104.pdf-1 [G_1step] Q:in 2017 what was the ratio of the afs investment securities at period-end to the
+       prog=divide(200247, 219345)
+    JPM/2017/page_104.pdf-2 [A_comparison_yesno] Q:for 2017 , were available for sale securities on average greater than held to ma
+       prog=greater(219345, 47927)
+    HIG/2011/page_184.pdf-3 [G_1step] Q:what is the change in value of fixed maturities afs from 2010 to 2011 , ( in bil
+       prog=subtract(1086, 823)
+  retrieved strategies:
+    S016 Simple average of multiple values | divide(add(add(V1, V2), V3), const_n)
+    S017 Proportion of a part to total | divide(V1, add(V2, add(V3, V1)))
+    S007 average_of_two_values | divide(add(V1, V2), const_2)
+
+====================================================================================================
+[strategy_only] LKQ/2016/page_26.pdf-2  bucket=D_multistep4plus n_steps=5 unit_scaling=False
+Q: what was the difference in percentage cumulative return for lkq corporation and the s&p 500 index for the five years ended 12/31/2016?
+GOLD: subtract(divide(subtract(204, 100), 100), divide(subtract(178, 100), 100))  ans=0.26
+  no       correct=False raw='divide(subtract(204, 178), 178)'
+  case     correct=False raw='divide(subtract(204, 100), 100)'
+  strategy correct=True  raw='subtract(divide(subtract(204, 100), 100), divide(subtract(178, 100), 100))'
+  both     correct=True  raw='subtract(divide(subtract(204, 100), 100), divide(subtract(178, 100), 100))'
+  retrieved cases:
+    LKQ/2012/page_25.pdf-1 [F_2step] Q:what was the percentage of cumulative return for lkq corporation for the five ye
+       prog=divide(subtract(201, 100), 100)
+    LKQ/2012/page_25.pdf-3 [G_1step] Q:based on the review of the comparison of the cumulative return among lkq corpora
+       prog=divide(98, 143)
+    LKQ/2012/page_25.pdf-2 [D_multistep4plus] Q:what was the difference in percentage of cumulative return for lkq corporation a
+       prog=divide(subtract(210, 100), 100)
+  retrieved strategies:
+    S027 cumulative_return_difference | subtract(divide(subtract(V1, V2), V2), divide(subtract(V3, V4), V4))
+    S004 Absolute Difference Between Two Values | subtract(V1, V2)
+    S010 multiply_value_by_percentage | multiply(V1, V2)
+
+====================================================================================================
+[strategy_only] ETR/2015/page_131.pdf-2  bucket=D_multistep4plus n_steps=4 unit_scaling=False
+Q: what was the sum of the annual long-term debt maturities due in five years
+GOLD: add(add(add(add(204079, 766451), 822690), 768588), 1631181)  ans=4192989.0
+  no       correct=False raw='table_sum(2020, none)'
+  case     correct=False raw='sum(2020, none)'
+  strategy correct=True  raw='add(204079, add(766451, add(822690, add(768588, 1631181))))'
+  both     correct=True  raw='add(204079, add(766451, add(822690, add(768588, 1631181))))'
+  retrieved cases:
+    ETR/2008/page_130.pdf-2 [D_multistep4plus] Q:as of december 2008 what was the sum of the annual long-term debt maturities due
+       prog=add(579461, add(3625459, add(add(516019, 763036), 897367)))
+    AES/2011/page_230.pdf-3 [G_1step] Q:what percentage of lt debt is due in greater than 5 years?\\n
+       prog=divide(7698, 16088)
+    IP/2015/page_51.pdf-4 [G_1step] Q:in 2018 what was the percent of the long-term debt maturities as part of the tot
+       prog=divide(427, 853)
+  retrieved strategies:
+    S041 Sum of future annual commitments | add(V1, add(V2, add(V3, V4)))
+    S030 annualized_expense | multiply(divide(V1, V2), const_1000000)
+    S028 percentage_of_part | multiply(divide(V1, V2), const_100)
+
+====================================================================================================
+[strategy_only] HIG/2011/page_188.pdf-2  bucket=F_2step n_steps=2 unit_scaling=False
+Q: in 2010 what was the percentage change in the deferred policy acquisition costs and present value of future profits
+GOLD: divide(subtract(9857, 10686), 10686)  ans=-0.07758
+  no       correct=True  raw='divide(subtract(9857, 10686), 10686)'
+  case     correct=False raw='divide(subtract(10686, 9857), 9857)'
+  strategy correct=True  raw='divide(subtract(9857, 10686), 10686)'
+  both     correct=False raw='divide(subtract(2648, 2853), 2853)'
+  retrieved cases:
+    IPG/2009/page_89.pdf-3 [C_unitscaling_multi] Q:what percentage decrease occurred from 2011-2012 for deferred acquisition paymen
+       prog=multiply(divide(subtract(34.8, 1.2), 34.8), const_100)
+    IPG/2018/page_104.pdf-2 [G_1step] Q:what was the change in the future contingent acquisition obligations deferred ac
+       prog=subtract(65.7, 20.0)
+    IPG/2009/page_89.pdf-1 [G_1step] Q:in 2010 what was percentage of the deferred acquisition payments of the total pa
+       prog=divide(20.5, 63.9)
+  retrieved strategies:
+    S002 percentage_change | divide(subtract(V1, V2), V2)
+    S019 percentage_change_from_absolute_values | subtract(divide(V1, V2), const_1)
+    S003 proportion_of_change | divide(V1, subtract(V2, V3))
+
+====================================================================================================
+[interference_both_worse] AES/2002/page_46.pdf-1  bucket=A_comparison_yesno n_steps=3 unit_scaling=False
+Q: was the 2002 first quarter variance in high & low stock prices greater than the 2001 first quarter variance?
+GOLD: greater(subtract(17.84, 4.11), subtract(60.15, 41.30))  ans=no
+  no       correct=True  raw='greater(subtract(17.84, 4.11), subtract(60.15, 41.30))'
+  case     correct=False raw='subtract(subtract(17.84, 4.11), subtract(60.15, 41.30))'
+  strategy correct=True  raw='greater(subtract(17.84, 4.11), subtract(60.15, 41.30))'
+  both     correct=False raw='subtract(subtract(17.84, 4.11), subtract(60.15, 41.30))'
+  retrieved cases:
+    AES/2003/page_48.pdf-1 [F_2step] Q:in q1 2003 , what was the average of the high and low stock price?
+       prog=divide(add(4.04, 2.72), const_2)
+    HWM/2015/page_72.pdf-1 [G_1step] Q:what is the decrease observed in the high trading stock prices in the first and 
+       prog=subtract(17.10, 14.29)
+    MKTX/2011/page_43.pdf-2 [G_1step] Q:for the period from april 1 2011 to june 30 2011 , what was the difference betwe
+       prog=subtract(25.22, 21.00)
+  retrieved strategies:
+    S027 cumulative_return_difference | subtract(divide(subtract(V1, V2), V2), divide(subtract(V3, V4), V4))
+    S015 Direct comparison of two values | greater(V1, V2)
+    S026 Maximum value extraction from a table column | table_max(V1, none)
+
+====================================================================================================
+[interference_both_worse] UNP/2011/page_76.pdf-2  bucket=A_comparison_yesno n_steps=1 unit_scaling=False
+Q: in 2011 , did the company distribute more to shareholders than debtholders?
+GOLD: greater(284, 197)  ans=yes
+  no       correct=True  raw='greater(284, 197)'
+  case     correct=False raw='divide(greater(284, 197), 1)'
+  strategy correct=True  raw='greater(table_sum(dividends payable, none), table_sum(interest payable, none))'
+  both     correct=False raw='divide(add(284, 819), 3108)'
+  retrieved cases:
+    ABMD/2012/page_75.pdf-1 [A_comparison_yesno] Q:during the 2012 year , did the equity awards in which the prescribed performance
+       prog=greater(multiply(multiply(607, 18.13), const_1000), multiply(3.3, const_1000000)
+    VLO/2014/page_23.pdf-2 [G_1step] Q:how many more shares were purchased as part of publicly announced plans in decem
+       prog=subtract(5117774, 2878673)
+    UNP/2012/page_20.pdf-1 [F_2step] Q:what portion of the 2011 plan repurchases were repurchased in 2012?
+       prog=divide(13804709, multiply(40, const_1000000))
+  retrieved strategies:
+    S031 share_of_total | divide(V1, divide(V2, const_1000))
+    S009 multiply_price_by_quantity | multiply(V1, V2)
+    S010 multiply_value_by_percentage | multiply(V1, V2)
+
+====================================================================================================
+[interference_both_worse] PNC/2011/page_87.pdf-2  bucket=C_unitscaling_multi n_steps=5 unit_scaling=True
+Q: what is the average , in millions , home equity line of credit with balloon payments with draw periods from 2012 to 2016?
+GOLD: divide(add(add(add(add(306, 44), 60), 100), 246), const_5)  ans=151.2
+  no       correct=False raw='table_average(2012, none)'
+  case     correct=True  raw='divide(add(306, add(44, add(60, add(100, 246)))), 5)'
+  strategy correct=False raw='table_average(2012, none)'
+  both     correct=False raw='table_average(2012, none)'
+  retrieved cases:
+    PNC/2013/page_97.pdf-1 [G_1step] Q:for the 2014 draw period balances of interest only products , what percent were 
+       prog=divide(185, 1768)
+    PNC/2014/page_94.pdf-2 [G_1step] Q:for total interest only home equity lines of credit , what percentage of the tot
+       prog=divide(48, 10349)
+    PNC/2014/page_94.pdf-3 [G_1step] Q:for total interest only home equity lines of credit , what percentage of the tot
+       prog=divide(154, 10349)
+  retrieved strategies:
+    S034 Sum of row values across periods | table_sum(V1, none)
+    S005 Sum of two or more values | add(V1, V2)
+    S015 Direct comparison of two values | greater(V1, V2)
+
+====================================================================================================
+[interference_both_worse] JPM/2018/page_110.pdf-1  bucket=C_unitscaling_multi n_steps=3 unit_scaling=True
+Q: what is the average of the afs investment securities during the years 2016-2018?
+GOLD: divide(add(add(228681, 200247), 236670), const_3)  ans=221866.0
+  no       correct=False raw='table_average(afs investment securities ( period-end ), none)'
+  case     correct=False raw='table_average(afs investment securities ( period-end ), none)'
+  strategy correct=True  raw='divide(add(add(228681, 200247), 236670), const_3)'
+  both     correct=False raw='divide(add(add(226892, 219345), 203449), const_3)'
+  retrieved cases:
+    JPM/2017/page_104.pdf-1 [G_1step] Q:in 2017 what was the ratio of the afs investment securities at period-end to the
+       prog=divide(200247, 219345)
+    JPM/2017/page_104.pdf-2 [A_comparison_yesno] Q:for 2017 , were available for sale securities on average greater than held to ma
+       prog=greater(219345, 47927)
+    HIG/2011/page_184.pdf-3 [G_1step] Q:what is the change in value of fixed maturities afs from 2010 to 2011 , ( in bil
+       prog=subtract(1086, 823)
+  retrieved strategies:
+    S016 Simple average of multiple values | divide(add(add(V1, V2), V3), const_n)
+    S017 Proportion of a part to total | divide(V1, add(V2, add(V3, V1)))
+    S007 average_of_two_values | divide(add(V1, V2), const_2)
+
+====================================================================================================
+[interference_both_worse] BLL/2007/page_47.pdf-4  bucket=F_2step n_steps=2 unit_scaling=True
+Q: what is the number of shares outstanding based on the cash dividends paid during 2006 , in millions?
+GOLD: divide(41, divide(40, const_100))  ans=102.5
+  no       correct=True  raw='divide(41, 0.40)'
+  case     correct=True  raw='divide(41, 0.40)'
+  strategy correct=False raw='multiply(41, const_1000)'
+  both     correct=False raw='divide(multiply(41, const_1000), 0.40)'
+  retrieved cases:
+    LMT/2016/page_105.pdf-2 [F_2step] Q:what is the total outstanding number of shares that received dividends in 2016 ,
+       prog=divide(multiply(2.0, const_1000), 6.77)
+    SNA/2013/page_59.pdf-3 [F_2step] Q:how many share were outstanding in 2013 based on the amount paid for dividends?
+       prog=divide(multiply(92.0, const_1000000), 1.58)
+    AMAT/2015/page_33.pdf-2 [C_unitscaling_multi] Q:how many outstanding shares received dividends in 2013 , ( in millions ) ?
+       prog=divide(487, add(multiply(0.10, const_3), 0.09))
+  retrieved strategies:
+    S010 multiply_value_by_percentage | multiply(V1, V2)
+    S009 multiply_price_by_quantity | multiply(V1, V2)
+    S017 Proportion of a part to total | divide(V1, add(V2, add(V3, V1)))
+
+====================================================================================================
+[interference_both_worse] PNC/2018/page_171.pdf-2  bucket=F_2step n_steps=2 unit_scaling=False
+Q: what was the percentage increase total commitments to extend credit and other commitments
+GOLD: divide(subtract(181612, 172521), 172521)  ans=0.0527
+  no       correct=True  raw='divide(subtract(181612, 172521), 172521)'
+  case     correct=True  raw='divide(subtract(181612, 172521), 172521)'
+  strategy correct=False raw='multiply(divide(subtract(181612, 172521), 172521), const_100)'
+  both     correct=False raw='multiply(divide(subtract(181612, 172521), 172521), const_100)'
+  retrieved cases:
+    PNC/2017/page_168.pdf-1 [F_2step] Q:what was the change in the total commitments to extend credit from 2016 top 2017
+       prog=divide(subtract(159641, 151981), 151981)
+    NKE/2014/page_36.pdf-4 [G_1step] Q:what percent of the total for all years was made up from contributions in 2017?
+       prog=divide(1196, 13638)
+    NKE/2015/page_37.pdf-2 [G_1step] Q:what percent of the total for all years was due to contributions form the year 2
+       prog=divide(873, 15473)
+  retrieved strategies:
+    S041 Sum of future annual commitments | add(V1, add(V2, add(V3, V4)))
+    S022 percentage_change | multiply(divide(subtract(V1, V2), V2), const_100)
+    S023 investment_return | multiply(divide(V1, V2), subtract(V3, V2))
+
+====================================================================================================
+[interference_both_worse] LMT/2010/page_42.pdf-3  bucket=F_2step n_steps=2 unit_scaling=False
+Q: what is the net change in cash in 2010?
+GOLD: add(add(3547, -319), -3363)  ans=-135.0
+  no       correct=True  raw='add(3547, add(-319, -3363))'
+  case     correct=True  raw='subtract(subtract(3547, 319), 3363)'
+  strategy correct=True  raw='subtract(subtract(subtract(3547, 319), 3363), 0)'
+  both     correct=False raw='divide(subtract(add(3547, -319), add(3173, -1518)), add(3173, -1518))'
+  retrieved cases:
+    SWKS/2010/page_105.pdf-3 [F_2step] Q:what was the percentage change in the net cash outflows in 2010 compared to 2009
+       prog=divide(subtract(95.3, 49.5), 49.5)
+    HII/2011/page_69.pdf-1 [F_2step] Q:what is the percentage change in net cash from operating activities from 2010 to
+       prog=divide(subtract(528, 359), 359)
+    UPS/2012/page_51.pdf-4 [F_2step] Q:what was the percentage change in net cash from operating activities from 2010 t
+       prog=divide(subtract(7073, 3835), 3835)
+  retrieved strategies:
+    S002 percentage_change | divide(subtract(V1, V2), V2)
+    S003 proportion_of_change | divide(V1, subtract(V2, V3))
+    S004 Absolute Difference Between Two Values | subtract(V1, V2)
+
+====================================================================================================
+[interference_both_worse] HIG/2011/page_188.pdf-2  bucket=F_2step n_steps=2 unit_scaling=False
+Q: in 2010 what was the percentage change in the deferred policy acquisition costs and present value of future profits
+GOLD: divide(subtract(9857, 10686), 10686)  ans=-0.07758
+  no       correct=True  raw='divide(subtract(9857, 10686), 10686)'
+  case     correct=False raw='divide(subtract(10686, 9857), 9857)'
+  strategy correct=True  raw='divide(subtract(9857, 10686), 10686)'
+  both     correct=False raw='divide(subtract(2648, 2853), 2853)'
+  retrieved cases:
+    IPG/2009/page_89.pdf-3 [C_unitscaling_multi] Q:what percentage decrease occurred from 2011-2012 for deferred acquisition paymen
+       prog=multiply(divide(subtract(34.8, 1.2), 34.8), const_100)
+    IPG/2018/page_104.pdf-2 [G_1step] Q:what was the change in the future contingent acquisition obligations deferred ac
+       prog=subtract(65.7, 20.0)
+    IPG/2009/page_89.pdf-1 [G_1step] Q:in 2010 what was percentage of the deferred acquisition payments of the total pa
+       prog=divide(20.5, 63.9)
+  retrieved strategies:
+    S002 percentage_change | divide(subtract(V1, V2), V2)
+    S019 percentage_change_from_absolute_values | subtract(divide(V1, V2), const_1)
+    S003 proportion_of_change | divide(V1, subtract(V2, V3))
+
+====================================================================================================
+[interference_both_worse] INTC/2013/page_33.pdf-3  bucket=F_2step n_steps=2 unit_scaling=False
+Q: what was the percentage change in diluted earnings per common share december 29 2012 and december 28 2013?
+GOLD: divide(subtract(1.89, 2.13), 2.13)  ans=-0.11268
+  no       correct=True  raw='divide(subtract(1.89, 2.13), 2.13)'
+  case     correct=True  raw='divide(subtract(1.89, 2.13), 2.13)'
+  strategy correct=False raw='multiply(divide(subtract(1.89, 2.13), 2.13), const_100)'
+  both     correct=False raw='multiply(divide(subtract(1.89, 2.13), 2.13), const_100)'
+  retrieved cases:
+    CNC/2003/page_41.pdf-4 [F_2step] Q:what was the percentage change in pro forma diluted earnings per common share fr
+       prog=divide(subtract(1.48, 1.00), 1.00)
+    IP/2009/page_72.pdf-2 [G_1step] Q:what was the net change in diluted earnings ( loss ) per common share from conti
+       prog=subtract(-3.02, 2.81)
+    IP/2009/page_72.pdf-1 [G_1step] Q:what was the net change in diluted earnings ( loss ) per common share from conti
+       prog=subtract(1.55, -3.02)
+  retrieved strategies:
+    S023 investment_return | multiply(divide(V1, V2), subtract(V3, V2))
+    S028 percentage_of_part | multiply(divide(V1, V2), const_100)
+    S022 percentage_change | multiply(divide(subtract(V1, V2), V2), const_100)
+
+====================================================================================================
+[interference_both_worse] UNP/2011/page_21.pdf-3  bucket=G_1step n_steps=1 unit_scaling=False
+Q: what percentage of total number of shares purchased were purchased in october ?
+GOLD: divide(379488, 3915795)  ans=0.09691
+  no       correct=False raw='divide(table_max(oct . 1 through oct . 31, none), 3915795)'
+  case     correct=True  raw='divide(379488, 3915795)'
+  strategy correct=False raw='multiply(divide(379488, 3915795), const_100)'
+  both     correct=False raw='multiply(divide(379488, 3915795), const_100)'
+  retrieved cases:
+    IPG/2012/page_21.pdf-1 [F_2step] Q:what percentage of total shares were purchased in october?
+       prog=multiply(divide(13566, 14156696), const_100)
+    IPG/2014/page_23.pdf-1 [G_1step] Q:what was the percent of the total number of shares purchased in october
+       prog=divide(5854930, 6685940)
+    DVN/2011/page_26.pdf-3 [G_1step] Q:what percentage of total shares repurchased were purchased in october?
+       prog=divide(3228557, 5518236)
+  retrieved strategies:
+    S010 multiply_value_by_percentage | multiply(V1, V2)
+    S009 multiply_price_by_quantity | multiply(V1, V2)
+    S028 percentage_of_part | multiply(divide(V1, V2), const_100)
+
+====================================================================================================
+[interference_both_worse] ETFC/2007/page_126.pdf-3  bucket=G_1step n_steps=1 unit_scaling=False
+Q: what percentage of total future principal payments of corporate debt are due after 2012?
+GOLD: divide(2996337, 3450152)  ans=0.86847
+  no       correct=True  raw='divide(table_sum(thereafter, none), 3450152)'
+  case     correct=True  raw='divide(2996337, 3450152)'
+  strategy correct=False raw='multiply(divide(2996337, 3450152), const_100)'
+  both     correct=False raw='divide(multiply(2996337, const_100), 3450152)'
+  retrieved cases:
+    V/2008/page_149.pdf-1 [G_1step] Q:in 2008 what was the percent of the total future principal payments on the compa
+       prog=divide(52, 108)
+    WRK/2018/page_56.pdf-5 [G_1step] Q:what percent of payments is longterm debt?
+       prog=divide(6039.0, 9017.8)
+    GIS/2018/page_43.pdf-1 [G_1step] Q:what is the percent of the future estimated cash payments under existing contrac
+       prog=divide(1599.8, 14354.0)
+  retrieved strategies:
+    S028 percentage_of_part | multiply(divide(V1, V2), const_100)
+    S029 projected_value_with_same_rate | multiply(divide(V1, V2), V1)
+    S030 annualized_expense | multiply(divide(V1, V2), const_1000000)
+
+====================================================================================================
+[interference_both_worse] PNC/2011/page_87.pdf-4  bucket=G_1step n_steps=1 unit_scaling=False
+Q: for 2013 , what was the total in millions of the combined interest only product and principal and interest product?
+GOLD: add(1211, 331)  ans=1542.0
+  no       correct=True  raw='add(1211, 331)'
+  case     correct=True  raw='add(1211, 331)'
+  strategy correct=True  raw='table_sum(2013, none)'
+  both     correct=False raw='add(add(1211, 331))'
+  retrieved cases:
+    PNC/2012/page_110.pdf-2 [C_unitscaling_multi] Q:what is the average , in millions , of interest only product in 2013 , 2014 and 
+       prog=divide(add(add(1338, 2048), 2024), const_3)
+    PNC/2016/page_73.pdf-1 [G_1step] Q:in millions , what was total outstanding for interest only products plus princip
+       prog=add(6401, 8425)
+    PNC/2016/page_73.pdf-2 [A_comparison_yesno] Q:was the interest only product balance for the 2017 draw period greater than the 
+       prog=greater(1657, 796)
+  retrieved strategies:
+    S034 Sum of row values across periods | table_sum(V1, none)
+    S033 Minimum value extraction from a table column | table_min(V1, none)
+    S017 Proportion of a part to total | divide(V1, add(V2, add(V3, V1)))

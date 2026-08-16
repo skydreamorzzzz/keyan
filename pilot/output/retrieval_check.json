@@ -1,0 +1,917 @@
+[
+ {
+  "query_id": "ETR/2013/page_118.pdf-1",
+  "query": "what is the percent change in annual long-term debt maturities from 2016 to 2017?",
+  "gold_program": "divide(subtract(766801, 270852), 270852)",
+  "bucket": "F_2step",
+  "retrieved_cases": [
+   {
+    "id": "EMR/2017/page_53.pdf-2",
+    "score": 0.8372,
+    "question": "what percentage of total debt was long-term debt in 2016?",
+    "program_re": "divide(4051, multiply(6.6, const_1000))",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "EMR/2017/page_53.pdf-1",
+    "score": 0.8363,
+    "question": "what percentage of total debt was long-term debt in 2017?",
+    "program_re": "divide(3794, multiply(4.7, const_1000))",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "IP/2015/page_51.pdf-4",
+    "score": 0.8281,
+    "question": "in 2018 what was the percent of the long-term debt maturities as part of the total contractual obligations for future payments",
+    "program_re": "divide(427, 853)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "HIG/2016/page_250.pdf-1",
+    "score": 0.8226,
+    "question": "as of december 2016 what was the average long-term debt maturities that was due between 2017 and 2020 in millions",
+    "program_re": "divide(add(add(500, add(413, add(416, 320))), const_4), const_2)",
+    "problem_kind": "C_unitscaling_multi"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S029",
+    "score": 0.7045,
+    "name": "projected_value_with_same_rate",
+    "type": "growth_rate",
+    "template": "multiply(divide(V1, V2), V1)"
+   },
+   {
+    "id": "S022",
+    "score": 0.6766,
+    "name": "percentage_change",
+    "type": "percentage_change",
+    "template": "multiply(divide(subtract(V1, V2), V2), const_100)"
+   },
+   {
+    "id": "S030",
+    "score": 0.6747,
+    "name": "annualized_expense",
+    "type": "per_unit",
+    "template": "multiply(divide(V1, V2), const_1000000)"
+   }
+  ],
+  "judgment_case": "case:good-analog(同公司%债务题). strategy:percent族命中但变体偏",
+  "judgment_strategy": "strategy:right family (percent change), variant off"
+ },
+ {
+  "query_id": "FRT/2005/page_117.pdf-1",
+  "query": "what is the growth of the additions in comparison with the growth of the deductions during 2003 and 2004?",
+  "gold_program": "subtract(subtract(divide(82551000, 68125000), const_1), subtract(divide(1390000, 4645000), const_1))",
+  "bucket": "C_unitscaling_multi",
+  "retrieved_cases": [
+   {
+    "id": "SNPS/2006/page_43.pdf-1",
+    "score": 0.7596,
+    "question": "what is the percentual increase in the resulting change in provision for income taxes caused by errors during 2002 and 2003?",
+    "program_re": "subtract(divide(5303, 1833), const_1)",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "PKG/2005/page_29.pdf-1",
+    "score": 0.7576,
+    "question": "what were operating expenses in 2003?",
+    "program_re": "subtract(1735.5, 96.9)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "ETR/2004/page_22.pdf-2",
+    "score": 0.7542,
+    "question": "what is the growth rate in earnings for non-utility nuclear in 2004 compare to 2003?",
+    "program_re": "divide(subtract(245.0, 300.8), 300.8)",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "PKG/2005/page_29.pdf-3",
+    "score": 0.7518,
+    "question": "what were operating expenses in 2004?",
+    "program_re": "subtract(1890.1, 140.5)",
+    "problem_kind": "G_1step"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S029",
+    "score": 0.6372,
+    "name": "projected_value_with_same_rate",
+    "type": "growth_rate",
+    "template": "multiply(divide(V1, V2), V1)"
+   },
+   {
+    "id": "S032",
+    "score": 0.6361,
+    "name": "tax_rate_from_after_tax",
+    "type": "other",
+    "template": "divide(subtract(V1, V2), V1)"
+   },
+   {
+    "id": "S030",
+    "score": 0.6285,
+    "name": "annualized_expense",
+    "type": "per_unit",
+    "template": "multiply(divide(V1, V2), const_1000000)"
+   }
+  ],
+  "judgment_case": "case:partial(增长率类比). strategy:miss(应命中relative growth)",
+  "judgment_strategy": "strategy:partial-miss"
+ },
+ {
+  "query_id": "INTC/2013/page_33.pdf-3",
+  "query": "what was the percentage change in diluted earnings per common share december 29 2012 and december 28 2013?",
+  "gold_program": "divide(subtract(1.89, 2.13), 2.13)",
+  "bucket": "F_2step",
+  "retrieved_cases": [
+   {
+    "id": "CNC/2003/page_41.pdf-4",
+    "score": 0.8082,
+    "question": "what was the percentage change in pro forma diluted earnings per common share from 2001 to 2002?",
+    "program_re": "divide(subtract(1.48, 1.00), 1.00)",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "IP/2009/page_72.pdf-2",
+    "score": 0.802,
+    "question": "what was the net change in diluted earnings ( loss ) per common share from continuing operations between 2007 and 2008?",
+    "program_re": "subtract(-3.02, 2.81)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "IP/2009/page_72.pdf-1",
+    "score": 0.802,
+    "question": "what was the net change in diluted earnings ( loss ) per common share from continuing operations between 2008 and 2009?",
+    "program_re": "subtract(1.55, -3.02)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "AWK/2014/page_45.pdf-2",
+    "score": 0.8008,
+    "question": "by how much did diluted earnings per share increase from 2012 to 2014?",
+    "program_re": "divide(subtract(2.35, 2.01), 2.01)",
+    "problem_kind": "F_2step"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S042",
+    "score": 0.6605,
+    "name": "relative_performance_difference",
+    "type": "percentage_change",
+    "template": "subtract(subtract(V1, V2), subtract(V3, V4))"
+   },
+   {
+    "id": "S027",
+    "score": 0.6586,
+    "name": "cumulative_return_difference",
+    "type": "difference",
+    "template": "subtract(divide(subtract(V1, V2), V2), divide(subtract(V3, V4), V4))"
+   },
+   {
+    "id": "S029",
+    "score": 0.657,
+    "name": "projected_value_with_same_rate",
+    "type": "growth_rate",
+    "template": "multiply(divide(V1, V2), V1)"
+   }
+  ],
+  "judgment_case": "case:excellent(同指标EPS%change). strategy:relative family, 变体偏差",
+  "judgment_strategy": "strategy:partial(relative_performance而非plain %change)"
+ },
+ {
+  "query_id": "APD/2016/page_39.pdf-1",
+  "query": "considering the years 2014-2016 , what is the highest interest expense observed?",
+  "gold_program": "table_max(interest expense, none)",
+  "bucket": "B_table_aggregation",
+  "retrieved_cases": [
+   {
+    "id": "RE/2016/page_141.pdf-1",
+    "score": 0.7871,
+    "question": "what was the total interest expense incurred associated with the long term subordinated notes from 2014 to 2016 in thousands of dollars",
+    "program_re": "multiply(15749, const_3)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "AON/2015/page_43.pdf-3",
+    "score": 0.771,
+    "question": "what was the percent of the change in the interest expense from 2014 to 2015",
+    "program_re": "divide(subtract(273, 255), 255)",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "UAA/2016/page_82.pdf-1",
+    "score": 0.7659,
+    "question": "what is the percentage change in interest expense from 2015 to 2016?",
+    "program_re": "divide(subtract(26.4, 14.6), 14.6)",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "UAA/2017/page_86.pdf-2",
+    "score": 0.7622,
+    "question": "what is the percentage increase in interest expense from 2016 to 2017?",
+    "program_re": "divide(subtract(34.5, 26.4), 26.4)",
+    "problem_kind": "F_2step"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S030",
+    "score": 0.6628,
+    "name": "annualized_expense",
+    "type": "per_unit",
+    "template": "multiply(divide(V1, V2), const_1000000)"
+   },
+   {
+    "id": "S015",
+    "score": 0.6207,
+    "name": "Direct comparison of two values",
+    "type": "comparison",
+    "template": "greater(V1, V2)"
+   },
+   {
+    "id": "S014",
+    "score": 0.6174,
+    "name": "Average annual expense from total and period",
+    "type": "average",
+    "template": "divide(multiply(V1, const_1000000), V2)"
+   }
+  ],
+  "judgment_case": "case:related(interest expense但op不同). strategy:table_max命中",
+  "judgment_strategy": "strategy:HIT table_max"
+ },
+ {
+  "query_id": "LMT/2015/page_56.pdf-4",
+  "query": "what was average net sales for space systems in millions from 2013 to 2015?",
+  "gold_program": "table_average(net sales, none)",
+  "bucket": "B_table_aggregation",
+  "retrieved_cases": [
+   {
+    "id": "IP/2015/page_46.pdf-4",
+    "score": 0.7261,
+    "question": "what was the change in net sales in 2015 in millions",
+    "program_re": "subtract(682, const_1000)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "HWM/2015/page_94.pdf-1",
+    "score": 0.7082,
+    "question": "what is the total of dollars brought in by the aerospace end market segment in 2015?",
+    "program_re": "multiply(70%, 5342)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "HWM/2016/page_52.pdf-1",
+    "score": 0.7067,
+    "question": "what is the total amount of dollars received from aerospace end market sales in 2015?",
+    "program_re": "multiply(5342, 75%)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "IP/2005/page_28.pdf-4",
+    "score": 0.6945,
+    "question": "what was the average net sales from 2003 to 2005 in millions",
+    "program_re": "divide(add(add(add(468, 723), 690), const_3), const_2)",
+    "problem_kind": "C_unitscaling_multi"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S013",
+    "score": 0.5354,
+    "name": "Per-unit value from total amount and quantity",
+    "type": "per_unit",
+    "template": "divide(multiply(V1, const_1000000), V2)"
+   },
+   {
+    "id": "S021",
+    "score": 0.5347,
+    "name": "unit_conversion_and_subtraction",
+    "type": "unit_conversion",
+    "template": "subtract(divide(V1, const_1000), V2)"
+   },
+   {
+    "id": "S014",
+    "score": 0.5335,
+    "name": "Average annual expense from total and period",
+    "type": "average",
+    "template": "divide(multiply(V1, const_1000000), V2)"
+   }
+  ],
+  "judgment_case": "case:weak. strategy:average族命中但非table_average",
+  "judgment_strategy": "strategy:family-hit(average), exact miss"
+ },
+ {
+  "query_id": "IPG/2008/page_62.pdf-2",
+  "query": "what is the change in the balance of liability for all restructuring from 2006 to 2008 , ( in millions ) ?",
+  "gold_program": "subtract(12.8, 31.8)",
+  "bucket": "G_1step",
+  "retrieved_cases": [
+   {
+    "id": "UNP/2006/page_72.pdf-2",
+    "score": 0.7794,
+    "question": "what was the percentage change in personal injury liability from 2005 to 2006?",
+    "program_re": "divide(subtract(631, 619), 619)",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "V/2008/page_138.pdf-1",
+    "score": 0.7771,
+    "question": "what is the net change in liability for the fiscal year 2008?",
+    "program_re": "subtract(4, 132)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "UNP/2006/page_72.pdf-3",
+    "score": 0.768,
+    "question": "what was the percentage change in personal injury liability from 2004 to 2005?",
+    "program_re": "divide(subtract(619, 639), 639)",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "VRTX/2006/page_71.pdf-2",
+    "score": 0.7679,
+    "question": "what is the total change in liability , in dollars , between 2003 and 2004?",
+    "program_re": "subtract(55843, 69526)",
+    "problem_kind": "G_1step"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S020",
+    "score": 0.5959,
+    "name": "reverse_engineering_from_percentage_change",
+    "type": "other",
+    "template": "subtract(divide(V1, V2), V3)"
+   },
+   {
+    "id": "S030",
+    "score": 0.5873,
+    "name": "annualized_expense",
+    "type": "per_unit",
+    "template": "multiply(divide(V1, V2), const_1000000)"
+   },
+   {
+    "id": "S003",
+    "score": 0.5818,
+    "name": "proportion_of_change",
+    "type": "proportion",
+    "template": "divide(V1, subtract(V2, V3))"
+   }
+  ],
+  "judgment_case": "case:related(liability change). strategy:miss(应命差) ",
+  "judgment_strategy": "strategy:miss"
+ },
+ {
+  "query_id": "AES/2015/page_117.pdf-3",
+  "query": "what were average proportional recoverable environmental capital expenditures for the years december 31 , 2015 , 2014 and 2013 , in millions?",
+  "gold_program": "divide(add(110, add(205, 163)), const_3)",
+  "bucket": "C_unitscaling_multi",
+  "retrieved_cases": [
+   {
+    "id": "MRO/2014/page_55.pdf-2",
+    "score": 0.7268,
+    "question": "by how much did total capital expenditures increase from 2013 to 2014?",
+    "program_re": "divide(subtract(5495, 4449), 4449)",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "CDW/2017/page_56.pdf-2",
+    "score": 0.711,
+    "question": "what was the average capital expenditures , in millions , for 2016 and 2015?",
+    "program_re": "divide(add(90, 64), const_2)",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "SNA/2013/page_59.pdf-4",
+    "score": 0.7063,
+    "question": "what was the average capital expenditures from 2011 to 2013 in millions",
+    "program_re": "divide(add(add(61.2, add(70.6, 79.4)), const_3), const_2)",
+    "problem_kind": "C_unitscaling_multi"
+   },
+   {
+    "id": "MRO/2015/page_56.pdf-2",
+    "score": 0.7042,
+    "question": "what were average yearly capital expenditures for corporate , in millions?",
+    "program_re": "table_average(corporate, none)",
+    "problem_kind": "B_table_aggregation"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S014",
+    "score": 0.5601,
+    "name": "Average annual expense from total and period",
+    "type": "average",
+    "template": "divide(multiply(V1, const_1000000), V2)"
+   },
+   {
+    "id": "S030",
+    "score": 0.5558,
+    "name": "annualized_expense",
+    "type": "per_unit",
+    "template": "multiply(divide(V1, V2), const_1000000)"
+   },
+   {
+    "id": "S007",
+    "score": 0.5317,
+    "name": "average_of_two_values",
+    "type": "average",
+    "template": "divide(add(V1, V2), const_2)"
+   }
+  ],
+  "judgment_case": "case:partial. strategy:average族, 变体非const_3",
+  "judgment_strategy": "strategy:family-hit(average), variant off"
+ },
+ {
+  "query_id": "C/2017/page_328.pdf-4",
+  "query": "what was the percentage growth of the five-year cumulative total return of s&p financials from 2015 to 2016",
+  "gold_program": "divide(subtract(188.9, 153.9), 153.9)",
+  "bucket": "F_2step",
+  "retrieved_cases": [
+   {
+    "id": "RCL/2016/page_37.pdf-2",
+    "score": 0.7872,
+    "question": "what is the percentage increase of the s&p 500 from 2011 to 2016?",
+    "program_re": "multiply(divide(subtract(198.18, const_100), const_100), const_100)",
+    "problem_kind": "C_unitscaling_multi"
+   },
+   {
+    "id": "JKHY/2016/page_25.pdf-1",
+    "score": 0.7596,
+    "question": "what was the percentage performance growth in the 5 year cumulative total return of peer group from 2014 to 2016",
+    "program_re": "divide(subtract(219.46, 174.28), 174.28)",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "EW/2016/page_36.pdf-2",
+    "score": 0.7555,
+    "question": "what was the difference in cumulative percentage returns between edwards lifesciences and the s&p 500 for the five years ended 2016?",
+    "program_re": "subtract(divide(subtract(265.06, const_100), const_100), divide(subtract(198.18, const_100), const_100))",
+    "problem_kind": "C_unitscaling_multi"
+   },
+   {
+    "id": "BDX/2017/page_32.pdf-4",
+    "score": 0.7546,
+    "question": "what is the percentage increase for total specified items from 2014-2015?",
+    "program_re": "divide(subtract(1186, 153), 153)",
+    "problem_kind": "F_2step"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S027",
+    "score": 0.7354,
+    "name": "cumulative_return_difference",
+    "type": "difference",
+    "template": "subtract(divide(subtract(V1, V2), V2), divide(subtract(V3, V4), V4))"
+   },
+   {
+    "id": "S023",
+    "score": 0.6884,
+    "name": "investment_return",
+    "type": "other",
+    "template": "multiply(divide(V1, V2), subtract(V3, V2))"
+   },
+   {
+    "id": "S029",
+    "score": 0.6807,
+    "name": "projected_value_with_same_rate",
+    "type": "growth_rate",
+    "template": "multiply(divide(V1, V2), V1)"
+   }
+  ],
+  "judgment_case": "case:excellent(同累计收益题). strategy:cumulative_return族命中",
+  "judgment_strategy": "strategy:HIT cumulative return family"
+ },
+ {
+  "query_id": "AAPL/2003/page_24.pdf-2",
+  "query": "what was the greatest gross margin percentage in the three year period?",
+  "gold_program": "table_max(gross margin percentage, none)",
+  "bucket": "B_table_aggregation",
+  "retrieved_cases": [
+   {
+    "id": "ZBH/2004/page_44.pdf-2",
+    "score": 0.8069,
+    "question": "what was the total change in gross margins between december 31 , 2003 and december 312004?",
+    "program_re": "divide(73.8, 68.1)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "MSI/2016/page_88.pdf-1",
+    "score": 0.75,
+    "question": "what was the profit margin in 2016",
+    "program_re": "divide(586, 6109)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "PKG/2004/page_23.pdf-3",
+    "score": 0.7454,
+    "question": "what was the operating margin for 2003?",
+    "program_re": "divide(96.9, 1735.5)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "PKG/2004/page_23.pdf-4",
+    "score": 0.7444,
+    "question": "what was the operating margin for 2002?",
+    "program_re": "divide(145.3, 1735.9)",
+    "problem_kind": "G_1step"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S011",
+    "score": 0.6528,
+    "name": "Sum of multi-year values",
+    "type": "total_sum",
+    "template": "add(add(V1, V2), V3)"
+   },
+   {
+    "id": "S028",
+    "score": 0.6345,
+    "name": "percentage_of_part",
+    "type": "ratio",
+    "template": "multiply(divide(V1, V2), const_100)"
+   },
+   {
+    "id": "S014",
+    "score": 0.6247,
+    "name": "Average annual expense from total and period",
+    "type": "average",
+    "template": "divide(multiply(V1, const_1000000), V2)"
+   }
+  ],
+  "judgment_case": "case:weak(op不同). strategy:table_max命中",
+  "judgment_strategy": "strategy:HIT table_max"
+ },
+ {
+  "query_id": "UNP/2013/page_54.pdf-3",
+  "query": "what percentage of total freight revenues was automotive in 2013?",
+  "gold_program": "divide(2077, 21963)",
+  "bucket": "G_1step",
+  "retrieved_cases": [
+   {
+    "id": "AAL/2014/page_18.pdf-4",
+    "score": 0.7318,
+    "question": "what were total mainline operating expenses in 2013?",
+    "program_re": "divide(11109, 35.4)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "IP/2013/page_61.pdf-1",
+    "score": 0.7155,
+    "question": "what percentage of industrial packaging sales where represented by north american industrial packaging net sales in 2013?",
+    "program_re": "divide(multiply(12.5, const_1000), 14810)",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "IP/2013/page_64.pdf-1",
+    "score": 0.7046,
+    "question": "in 2013 what percentage of consumer packaging sales is attributable to north american consumer packaging net sales?",
+    "program_re": "divide(multiply(const_2, const_1000), 3435)",
+    "problem_kind": "F_2step"
+   },
+   {
+    "id": "IP/2013/page_61.pdf-2",
+    "score": 0.7042,
+    "question": "what percentage of industrial packaging sales where represented by north american industrial packaging net sales in 2012?",
+    "program_re": "divide(multiply(11.6, const_1000), 13280)",
+    "problem_kind": "F_2step"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S031",
+    "score": 0.5823,
+    "name": "share_of_total",
+    "type": "proportion",
+    "template": "divide(V1, divide(V2, const_1000))"
+   },
+   {
+    "id": "S003",
+    "score": 0.5762,
+    "name": "proportion_of_change",
+    "type": "proportion",
+    "template": "divide(V1, subtract(V2, V3))"
+   },
+   {
+    "id": "S020",
+    "score": 0.5593,
+    "name": "reverse_engineering_from_percentage_change",
+    "type": "other",
+    "template": "subtract(divide(V1, V2), V3)"
+   }
+  ],
+  "judgment_case": "case:weak. strategy:share_of_total命中(占比族)",
+  "judgment_strategy": "strategy:HIT share_of_total"
+ },
+ {
+  "query_id": "AES/2003/page_52.pdf-1",
+  "query": "for the three months ended march 2003 what were the total sales proceeds for subsidiaries assets in millions?",
+  "gold_program": "add(add(add(495, 59), 30), 29)",
+  "bucket": "E_3step",
+  "retrieved_cases": [
+   {
+    "id": "PKG/2005/page_29.pdf-2",
+    "score": 0.7232,
+    "question": "( in millions ) for 2004 and 2003 what were total net sales?",
+    "program_re": "add(1890.1, 1735.5)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "IP/2005/page_28.pdf-4",
+    "score": 0.7178,
+    "question": "what was the average net sales from 2003 to 2005 in millions",
+    "program_re": "divide(add(add(add(468, 723), 690), const_3), const_2)",
+    "problem_kind": "C_unitscaling_multi"
+   },
+   {
+    "id": "PKG/2004/page_23.pdf-3",
+    "score": 0.7177,
+    "question": "what was the operating margin for 2003?",
+    "program_re": "divide(96.9, 1735.5)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "PKG/2005/page_29.pdf-1",
+    "score": 0.7086,
+    "question": "what were operating expenses in 2003?",
+    "program_re": "subtract(1735.5, 96.9)",
+    "problem_kind": "G_1step"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S009",
+    "score": 0.5857,
+    "name": "multiply_price_by_quantity",
+    "type": "per_unit",
+    "template": "multiply(V1, V2)"
+   },
+   {
+    "id": "S013",
+    "score": 0.5854,
+    "name": "Per-unit value from total amount and quantity",
+    "type": "per_unit",
+    "template": "divide(multiply(V1, const_1000000), V2)"
+   },
+   {
+    "id": "S021",
+    "score": 0.582,
+    "name": "unit_conversion_and_subtraction",
+    "type": "unit_conversion",
+    "template": "subtract(divide(V1, const_1000), V2)"
+   }
+  ],
+  "judgment_case": "case:related(sum). strategy:miss(应命total_sum)",
+  "judgment_strategy": "strategy:miss"
+ },
+ {
+  "query_id": "UNP/2011/page_76.pdf-2",
+  "query": "in 2011 , did the company distribute more to shareholders than debtholders?",
+  "gold_program": "greater(284, 197)",
+  "bucket": "A_comparison_yesno",
+  "retrieved_cases": [
+   {
+    "id": "ABMD/2012/page_75.pdf-1",
+    "score": 0.7139,
+    "question": "during the 2012 year , did the equity awards in which the prescribed performance milestones were achieved exceed the equity award compensation expense for equity granted during the year?",
+    "program_re": "greater(multiply(multiply(607, 18.13), const_1000), multiply(3.3, const_1000000))",
+    "problem_kind": "A_comparison_yesno"
+   },
+   {
+    "id": "VLO/2014/page_23.pdf-2",
+    "score": 0.7128,
+    "question": "how many more shares were purchased as part of publicly announced plans in december 2014 than october 2014?",
+    "program_re": "subtract(5117774, 2878673)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "CB/2010/page_113.pdf-2",
+    "score": 0.71,
+    "question": "in 2010 what was the ratio of the total debt to the shareholders equity",
+    "program_re": "divide(4658, 22974)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "GS/2012/page_95.pdf-3",
+    "score": 0.7075,
+    "question": "as of december 2011 , what percentage of available- for-sale securities was comprised of mortgage and other asset-backed loans and securities?",
+    "program_re": "divide(1.42, add(add(1.81, 1.42), divide(662, const_1000)))",
+    "problem_kind": "C_unitscaling_multi"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S013",
+    "score": 0.5826,
+    "name": "Per-unit value from total amount and quantity",
+    "type": "per_unit",
+    "template": "divide(multiply(V1, const_1000000), V2)"
+   },
+   {
+    "id": "S009",
+    "score": 0.565,
+    "name": "multiply_price_by_quantity",
+    "type": "per_unit",
+    "template": "multiply(V1, V2)"
+   },
+   {
+    "id": "S010",
+    "score": 0.5612,
+    "name": "multiply_value_by_percentage",
+    "type": "proportion",
+    "template": "multiply(V1, V2)"
+   }
+  ],
+  "judgment_case": "case:good(同公司comparison). strategy:miss(应命comparison)",
+  "judgment_strategy": "strategy:miss"
+ },
+ {
+  "query_id": "LMT/2016/page_48.pdf-4",
+  "query": "what were average operating profit for aeronautics in millions between 2014 and 2016?",
+  "gold_program": "table_average(operating profit, none)",
+  "bucket": "B_table_aggregation",
+  "retrieved_cases": [
+   {
+    "id": "AAL/2017/page_10.pdf-1",
+    "score": 0.7362,
+    "question": "based on the information provided what was the total operating expenses in 2016 in millions",
+    "program_re": "multiply(6180, 17.7%)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "AAL/2014/page_18.pdf-3",
+    "score": 0.7324,
+    "question": "what were total mainline operating expenses in 2014?",
+    "program_re": "divide(10592, 33.2%)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "AAL/2015/page_18.pdf-2",
+    "score": 0.7292,
+    "question": "what was total mainline operating expenses for 2014?",
+    "program_re": "divide(10592, 33.2%)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "IP/2012/page_56.pdf-3",
+    "score": 0.7292,
+    "question": "what was the change in operating profits in 2012 in millions",
+    "program_re": "subtract(163, 169)",
+    "problem_kind": "G_1step"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S043",
+    "score": 0.5904,
+    "name": "operating_expense_variation",
+    "type": "difference",
+    "template": "subtract(subtract(V1, V2), subtract(V3, V4))"
+   },
+   {
+    "id": "S021",
+    "score": 0.5798,
+    "name": "unit_conversion_and_subtraction",
+    "type": "unit_conversion",
+    "template": "subtract(divide(V1, const_1000), V2)"
+   },
+   {
+    "id": "S014",
+    "score": 0.5685,
+    "name": "Average annual expense from total and period",
+    "type": "average",
+    "template": "divide(multiply(V1, const_1000000), V2)"
+   }
+  ],
+  "judgment_case": "case:weak. strategy:family-hit(average)非table_average",
+  "judgment_strategy": "strategy:family-hit, exact miss"
+ },
+ {
+  "query_id": "STZ/2006/page_68.pdf-3",
+  "query": "what portion of the robert mondavi's total assets acquired is related to goodwill?",
+  "gold_program": "divide(634203, 1848575)",
+  "bucket": "G_1step",
+  "retrieved_cases": [
+   {
+    "id": "GPN/2009/page_68.pdf-2",
+    "score": 0.7239,
+    "question": "what percentage of total assets acquired was related to goodwill?",
+    "program_re": "divide(35431, 97921)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "GPN/2008/page_99.pdf-4",
+    "score": 0.71,
+    "question": "what portion of the net assets acquired is dedicated for goodwill?",
+    "program_re": "divide(294741, 441100)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "NWS/2019/page_120.pdf-1",
+    "score": 0.7028,
+    "question": "what percent of total net assets acquired was goodwill?",
+    "program_re": "divide(115, 285)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "GPN/2009/page_69.pdf-2",
+    "score": 0.7021,
+    "question": "what percent of the assets , purchased in the acquisition , are tangible?",
+    "program_re": "add(300, 11010)",
+    "problem_kind": "G_1step"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S031",
+    "score": 0.5272,
+    "name": "share_of_total",
+    "type": "proportion",
+    "template": "divide(V1, divide(V2, const_1000))"
+   },
+   {
+    "id": "S024",
+    "score": 0.5116,
+    "name": "Sum of quarterly or component values",
+    "type": "total_sum",
+    "template": "add(add(add(V1, V2), V3), V4)"
+   },
+   {
+    "id": "S041",
+    "score": 0.51,
+    "name": "Sum of future annual commitments",
+    "type": "total_sum",
+    "template": "add(V1, add(V2, add(V3, V4)))"
+   }
+  ],
+  "judgment_case": "case:excellent(同goodwill占比). strategy:share_of_total命中",
+  "judgment_strategy": "strategy:HIT share_of_total"
+ },
+ {
+  "query_id": "SPGI/2018/page_74.pdf-1",
+  "query": "what was the ratio of the pension trust assets for 2017 to 2018",
+  "gold_program": "divide(480, 415)",
+  "bucket": "G_1step",
+  "retrieved_cases": [
+   {
+    "id": "LMT/2017/page_101.pdf-4",
+    "score": 0.8174,
+    "question": "in december 2017 what was the ratio of the estimated future benefit payments due after 2023 to the amount due in 2018",
+    "program_re": "divide(14200, 2450)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "LMT/2015/page_106.pdf-1",
+    "score": 0.815,
+    "question": "as of december 2015 what was the ratio of the estimated future benefit payments due in 2016 compared to after 2021",
+    "program_re": "divide(2160, 13670)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "LMT/2013/page_87.pdf-2",
+    "score": 0.8038,
+    "question": "as of 2013 what was the ratio of the estimated future benefit payments after 2019 to the amounts in 2014",
+    "program_re": "divide(13240, 1960)",
+    "problem_kind": "G_1step"
+   },
+   {
+    "id": "LMT/2018/page_104.pdf-3",
+    "score": 0.7988,
+    "question": "in 2018 what was the ratio of the qualified defined benefit pension plans for the period starting after 2024 compared to 2019",
+    "program_re": "divide(13670, 2350)",
+    "problem_kind": "G_1step"
+   }
+  ],
+  "retrieved_strategies": [
+   {
+    "id": "S041",
+    "score": 0.6472,
+    "name": "Sum of future annual commitments",
+    "type": "total_sum",
+    "template": "add(V1, add(V2, add(V3, V4)))"
+   },
+   {
+    "id": "S029",
+    "score": 0.6457,
+    "name": "projected_value_with_same_rate",
+    "type": "growth_rate",
+    "template": "multiply(divide(V1, V2), V1)"
+   },
+   {
+    "id": "S008",
+    "score": 0.6422,
+    "name": "ratio_of_two_aggregates",
+    "type": "ratio",
+    "template": "divide(V1, add(V2, V3))"
+   }
+  ],
+  "judgment_case": "case:excellent(同ratio题). strategy:ratio族未命中(应命ratio_of_two_aggregates)",
+  "judgment_strategy": "strategy:miss"
+ }
+]

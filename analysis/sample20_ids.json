@@ -1,0 +1,70 @@
+[
+ {
+  "name": "G_div1",
+  "id": "RL/2012/page_13.pdf-1"
+ },
+ {
+  "name": "G_sub1",
+  "id": "BLK/2012/page_66.pdf-4"
+ },
+ {
+  "name": "G_add1",
+  "id": "PNC/2011/page_209.pdf-1"
+ },
+ {
+  "name": "G_mul1",
+  "id": "RE/2015/page_148.pdf-2"
+ },
+ {
+  "name": "G_tavg",
+  "id": "ALLE/2016/page_29.pdf-1"
+ },
+ {
+  "name": "G_tsum",
+  "id": "CDW/2017/page_73.pdf-1"
+ },
+ {
+  "name": "G_tmax",
+  "id": "AON/2009/page_102.pdf-4"
+ },
+ {
+  "name": "F_subdiv",
+  "id": "BLL/2010/page_33.pdf-2"
+ },
+ {
+  "name": "F_adddiv",
+  "id": "MMM/2007/page_66.pdf-2"
+ },
+ {
+  "name": "F_divsub",
+  "id": "BLK/2017/page_35.pdf-1"
+ },
+ {
+  "name": "F_t2",
+  "id": "JPM/2012/page_109.pdf-2"
+ },
+ {
+  "name": "F_c2",
+  "id": "GPN/2008/page_95.pdf-3"
+ },
+ {
+  "name": "E_3",
+  "id": "HWM/2016/page_52.pdf-2"
+ },
+ {
+  "name": "C_mulc",
+  "id": "PNC/2012/page_96.pdf-4"
+ },
+ {
+  "name": "D_4p",
+  "id": "LMT/2010/page_39.pdf-1"
+ },
+ {
+  "name": "A_gr",
+  "id": "PKG/2011/page_14.pdf-2"
+ },
+ {
+  "name": "A_grN",
+  "id": "CDW/2015/page_34.pdf-2"
+ }
+]
