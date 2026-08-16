@@ -320,3 +320,31 @@
 - **SIGNAL DISAPPEARS UNDER SAMPLE-SE**。
 - Stage 4B.1 的小正信号对 SE estimator 敏感；当前 Stage 4B feature/model/protocol stack 不应被视为可靠 router。
 - 下一步不要继续在同一 250 条上调参；若继续，应转向预注册 efficiency objective 或更强 retrieved-content compatibility observability。
+
+## 17. TAT-QA Case Memory + Retrieval Audit（2026-08-16）
+
+### scope
+- 只做 TAT-QA train-only Case Memory 与 retrieval-only dev audit；未调用 DeepSeek/任何 LLM，未构造 Strategy Memory，未跑四臂实验。
+- 复用 FinQA pilot 的 dense retrieval 机制：`BAAI/bge-small-en-v1.5`，top-4，CPU，normalized embedding dot-product。
+
+### implementation
+- 新增 `pilot/multibench/tatqa_case_memory.py`。
+- train Case Memory 保存到 `data/tatqa/processed/tatqa_case_memory_train.json`，共 13,215 条。
+- 每条 case 保存 question、table、relevant paragraphs、answer type/source、scale、derivation、coarse operator、operator sequence、reasoning annotation、source_id。
+- retrieval text 明确排除 answer、answer_type、answer_from、scale、derivation、operator、reasoning_annotation；target query retrieval text 只使用 inference-time 可见的 question、paragraphs、table。
+- 检索增加 `source_id` exclusion，避免同源 table/report case 泄漏。
+
+### retrieval-only audit
+- 固定 dev 小样本：50 条，seed `20260816`。
+- source leak count：0。
+- 平均 top-1 cosine：0.9254。
+- post-hoc diagnostic match rate（gold 字段只用于 audit，不参与 retrieval）：
+  - answer_type：top1 0.740，any top4 0.980。
+  - answer_from：top1 0.500，any top4 0.760。
+  - operator：top1 0.640，any top4 0.900。
+  - scale：top1 0.540，any top4 0.920。
+- 产物：`pilot/multibench/output/tatqa/TATQA_CASE_RETRIEVAL_AUDIT.md` 与 `tatqa_case_retrieval_audit.json`。
+
+### decision
+- **READY FOR TAT-QA STRATEGY MEMORY DESIGN**。
+- 风险：memory-side retrieval text 使用 train solved-case relevant paragraphs，而 target side 使用全可见 context，存在轻微表示不对称；`operator` 是 parser-derived coarse audit label，不是 TAT-QA 官方字段。
