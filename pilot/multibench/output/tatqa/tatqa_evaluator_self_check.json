@@ -1,0 +1,125 @@
+{
+  "splits": {
+    "train": {
+      "count": 13215,
+      "missing_predictions": 0,
+      "exact_match": 1.0,
+      "f1": 1.0,
+      "scale_score": 1.0,
+      "op_score": 0.0,
+      "by_answer_type": {
+        "arithmetic": {
+          "count": 5543,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "count": {
+          "count": 305,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "multi-span": {
+          "count": 1645,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "span": {
+          "count": 5722,
+          "em": 1.0,
+          "f1": 1.0
+        }
+      },
+      "by_scale": {
+        "": {
+          "count": 6457,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "billion": {
+          "count": 20,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "million": {
+          "count": 2153,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "percent": {
+          "count": 2104,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "thousand": {
+          "count": 2481,
+          "em": 1.0,
+          "f1": 1.0
+        }
+      },
+      "missing_prediction_uids": [],
+      "gold_prediction_failures": 0,
+      "gold_prediction_failure_examples": []
+    },
+    "dev": {
+      "count": 1668,
+      "missing_predictions": 0,
+      "exact_match": 1.0,
+      "f1": 1.0,
+      "scale_score": 1.0,
+      "op_score": 0.0,
+      "by_answer_type": {
+        "arithmetic": {
+          "count": 718,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "count": {
+          "count": 32,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "multi-span": {
+          "count": 217,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "span": {
+          "count": 701,
+          "em": 1.0,
+          "f1": 1.0
+        }
+      },
+      "by_scale": {
+        "": {
+          "count": 794,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "billion": {
+          "count": 7,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "million": {
+          "count": 254,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "percent": {
+          "count": 268,
+          "em": 1.0,
+          "f1": 1.0
+        },
+        "thousand": {
+          "count": 345,
+          "em": 1.0,
+          "f1": 1.0
+        }
+      },
+      "missing_prediction_uids": [],
+      "gold_prediction_failures": 0,
+      "gold_prediction_failure_examples": []
+    }
+  },
+  "source": "official TAT-QA TaTQAEmAndF1"
+}
