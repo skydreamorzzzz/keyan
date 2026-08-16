@@ -1,0 +1,1497 @@
+{
+  "summary": {
+    "n_train": 13215,
+    "answer_type": {
+      "multi-span": 1645,
+      "span": 5722,
+      "arithmetic": 5543,
+      "count": 305
+    },
+    "answer_from": {
+      "table": 5920,
+      "text": 3125,
+      "table-text": 4170
+    },
+    "scale": {
+      "none": 6457,
+      "percent": 2104,
+      "thousand": 2481,
+      "million": 2153,
+      "billion": 20
+    },
+    "derivation_present": 6603,
+    "derivation_coverage": 0.4996594778660613,
+    "derivation_by_answer_type": {
+      "multi-span": {
+        "count": 1645,
+        "derivation_present": 76,
+        "derivation_coverage": 0.046200607902735565
+      },
+      "span": {
+        "count": 5722,
+        "derivation_present": 679,
+        "derivation_coverage": 0.11866480251660258
+      },
+      "arithmetic": {
+        "count": 5543,
+        "derivation_present": 5543,
+        "derivation_coverage": 1.0
+      },
+      "count": {
+        "count": 305,
+        "derivation_present": 305,
+        "derivation_coverage": 1.0
+      }
+    },
+    "operator_sequence_top": [
+      {
+        "key": "none",
+        "count": 7672,
+        "rate": 0.5805524025728339
+      },
+      {
+        "key": "subtract",
+        "count": 2151,
+        "rate": 0.16276958002270148
+      },
+      {
+        "key": "subtract>divide",
+        "count": 1278,
+        "rate": 0.09670828603859251
+      },
+      {
+        "key": "add>divide",
+        "count": 768,
+        "rate": 0.05811577752553916
+      },
+      {
+        "key": "divide",
+        "count": 519,
+        "rate": 0.03927355278093076
+      },
+      {
+        "key": "add",
+        "count": 221,
+        "rate": 0.01672342035565645
+      },
+      {
+        "key": "add>add>divide",
+        "count": 220,
+        "rate": 0.01664774877033674
+      },
+      {
+        "key": "divide>subtract",
+        "count": 83,
+        "rate": 0.006280741581536133
+      },
+      {
+        "key": "add>add",
+        "count": 76,
+        "rate": 0.005751040484298146
+      },
+      {
+        "key": "multiply",
+        "count": 29,
+        "rate": 0.002194475974271661
+      },
+      {
+        "key": "add>add>add>add>divide",
+        "count": 21,
+        "rate": 0.0015891032917139615
+      },
+      {
+        "key": "add>divide>subtract>add>divide",
+        "count": 17,
+        "rate": 0.0012864169504351116
+      },
+      {
+        "key": "add>add>add>divide",
+        "count": 17,
+        "rate": 0.0012864169504351116
+      },
+      {
+        "key": "add>add>add",
+        "count": 11,
+        "rate": 0.000832387438516837
+      },
+      {
+        "key": "add>add>divide>subtract>add",
+        "count": 10,
+        "rate": 0.0007567158531971245
+      },
+      {
+        "key": "multiply>add>multiply",
+        "count": 10,
+        "rate": 0.0007567158531971245
+      },
+      {
+        "key": "divide>subtract>divide",
+        "count": 8,
+        "rate": 0.0006053726825576996
+      },
+      {
+        "key": "divide>add",
+        "count": 8,
+        "rate": 0.0006053726825576996
+      },
+      {
+        "key": "add>subtract",
+        "count": 6,
+        "rate": 0.0004540295119182747
+      },
+      {
+        "key": "divide>multiply",
+        "count": 6,
+        "rate": 0.0004540295119182747
+      }
+    ],
+    "joint_answer_derivation_opseq_from_scale_top": [
+      {
+        "answer_type": "span",
+        "derivation": "no_derivation",
+        "operator_sequence": "none",
+        "answer_from": "text",
+        "scale": "none",
+        "count": 2704,
+        "rate": 0.20461596670450247
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "subtract>divide",
+        "answer_from": "table",
+        "scale": "percent",
+        "count": 912,
+        "rate": 0.06901248581157775
+      },
+      {
+        "answer_type": "span",
+        "derivation": "no_derivation",
+        "operator_sequence": "none",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "count": 574,
+        "rate": 0.04343548997351494
+      },
+      {
+        "answer_type": "multi-span",
+        "derivation": "no_derivation",
+        "operator_sequence": "none",
+        "answer_from": "table-text",
+        "scale": "none",
+        "count": 558,
+        "rate": 0.04222474460839955
+      },
+      {
+        "answer_type": "span",
+        "derivation": "derivation",
+        "operator_sequence": "none",
+        "answer_from": "table",
+        "scale": "none",
+        "count": 541,
+        "rate": 0.040938327657964436
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "subtract",
+        "answer_from": "table",
+        "scale": "million",
+        "count": 516,
+        "rate": 0.03904653802497162
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "subtract",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "count": 486,
+        "rate": 0.03677639046538025
+      },
+      {
+        "answer_type": "span",
+        "derivation": "no_derivation",
+        "operator_sequence": "none",
+        "answer_from": "table-text",
+        "scale": "none",
+        "count": 403,
+        "rate": 0.030495648883844116
+      },
+      {
+        "answer_type": "span",
+        "derivation": "no_derivation",
+        "operator_sequence": "none",
+        "answer_from": "table",
+        "scale": "none",
+        "count": 383,
+        "rate": 0.02898221717744987
+      },
+      {
+        "answer_type": "multi-span",
+        "derivation": "no_derivation",
+        "operator_sequence": "none",
+        "answer_from": "table",
+        "scale": "none",
+        "count": 369,
+        "rate": 0.027922814982973894
+      },
+      {
+        "answer_type": "span",
+        "derivation": "no_derivation",
+        "operator_sequence": "none",
+        "answer_from": "table-text",
+        "scale": "million",
+        "count": 358,
+        "rate": 0.027090427544457056
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "subtract",
+        "answer_from": "table",
+        "scale": "thousand",
+        "count": 344,
+        "rate": 0.02603102534998108
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "subtract>divide",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "count": 332,
+        "rate": 0.02512296632614453
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "subtract",
+        "answer_from": "table-text",
+        "scale": "million",
+        "count": 315,
+        "rate": 0.02383654937570942
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "divide",
+        "answer_from": "table",
+        "scale": "percent",
+        "count": 313,
+        "rate": 0.023685206205069996
+      },
+      {
+        "answer_type": "span",
+        "derivation": "no_derivation",
+        "operator_sequence": "none",
+        "answer_from": "table",
+        "scale": "million",
+        "count": 290,
+        "rate": 0.02194475974271661
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "subtract",
+        "answer_from": "table",
+        "scale": "none",
+        "count": 273,
+        "rate": 0.020658342792281497
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "add>divide",
+        "answer_from": "table",
+        "scale": "million",
+        "count": 235,
+        "rate": 0.017782822550132426
+      },
+      {
+        "answer_type": "span",
+        "derivation": "no_derivation",
+        "operator_sequence": "none",
+        "answer_from": "table",
+        "scale": "thousand",
+        "count": 219,
+        "rate": 0.016572077185017027
+      },
+      {
+        "answer_type": "multi-span",
+        "derivation": "no_derivation",
+        "operator_sequence": "none",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "count": 218,
+        "rate": 0.016496405599697315
+      },
+      {
+        "answer_type": "count",
+        "derivation": "derivation",
+        "operator_sequence": "none",
+        "answer_from": "table-text",
+        "scale": "none",
+        "count": 213,
+        "rate": 0.01611804767309875
+      },
+      {
+        "answer_type": "multi-span",
+        "derivation": "no_derivation",
+        "operator_sequence": "none",
+        "answer_from": "text",
+        "scale": "none",
+        "count": 208,
+        "rate": 0.01573968974650019
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "add>divide",
+        "answer_from": "table",
+        "scale": "thousand",
+        "count": 168,
+        "rate": 0.012712826333711692
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "add>divide",
+        "answer_from": "table",
+        "scale": "none",
+        "count": 162,
+        "rate": 0.012258796821793417
+      },
+      {
+        "answer_type": "multi-span",
+        "derivation": "no_derivation",
+        "operator_sequence": "none",
+        "answer_from": "table",
+        "scale": "thousand",
+        "count": 134,
+        "rate": 0.010139992432841468
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "subtract",
+        "answer_from": "table",
+        "scale": "percent",
+        "count": 125,
+        "rate": 0.009458948164964056
+      },
+      {
+        "answer_type": "span",
+        "derivation": "derivation",
+        "operator_sequence": "none",
+        "answer_from": "table-text",
+        "scale": "none",
+        "count": 122,
+        "rate": 0.009231933409004918
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "add>divide",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "count": 98,
+        "rate": 0.00741581536133182
+      },
+      {
+        "answer_type": "arithmetic",
+        "derivation": "derivation",
+        "operator_sequence": "divide",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "count": 89,
+        "rate": 0.006734771093454408
+      },
+      {
+        "answer_type": "count",
+        "derivation": "derivation",
+        "operator_sequence": "none",
+        "answer_from": "table",
+        "scale": "none",
+        "count": 83,
+        "rate": 0.006280741581536133
+      }
+    ],
+    "joint_answer_family_from_scale_top": [
+      {
+        "answer_type": "span",
+        "family": "span_lookup:text:scale=none",
+        "answer_from": "text",
+        "scale": "none",
+        "count": 2704,
+        "rate": 0.20461596670450247
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:percent_change",
+        "answer_from": "table",
+        "scale": "percent",
+        "count": 903,
+        "rate": 0.06833144154370034
+      },
+      {
+        "answer_type": "span",
+        "family": "span_lookup:table-text:scale=thousand",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "count": 574,
+        "rate": 0.04343548997351494
+      },
+      {
+        "answer_type": "multi-span",
+        "family": "multi_span_lookup:table-text:scale=none",
+        "answer_from": "table-text",
+        "scale": "none",
+        "count": 558,
+        "rate": 0.04222474460839955
+      },
+      {
+        "answer_type": "span",
+        "family": "comparison:table:scale=none",
+        "answer_from": "table",
+        "scale": "none",
+        "count": 542,
+        "rate": 0.041013999243284145
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:difference",
+        "answer_from": "table",
+        "scale": "million",
+        "count": 516,
+        "rate": 0.03904653802497162
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:difference",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "count": 486,
+        "rate": 0.03677639046538025
+      },
+      {
+        "answer_type": "span",
+        "family": "span_lookup:table-text:scale=none",
+        "answer_from": "table-text",
+        "scale": "none",
+        "count": 401,
+        "rate": 0.03034430571320469
+      },
+      {
+        "answer_type": "span",
+        "family": "span_lookup:table:scale=none",
+        "answer_from": "table",
+        "scale": "none",
+        "count": 382,
+        "rate": 0.028906545592130156
+      },
+      {
+        "answer_type": "multi-span",
+        "family": "multi_span_lookup:table:scale=none",
+        "answer_from": "table",
+        "scale": "none",
+        "count": 368,
+        "rate": 0.02784714339765418
+      },
+      {
+        "answer_type": "span",
+        "family": "span_lookup:table-text:scale=million",
+        "answer_from": "table-text",
+        "scale": "million",
+        "count": 358,
+        "rate": 0.027090427544457056
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:difference",
+        "answer_from": "table",
+        "scale": "thousand",
+        "count": 344,
+        "rate": 0.02603102534998108
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:percent_change",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "count": 331,
+        "rate": 0.02504729474082482
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:division_composition",
+        "answer_from": "table",
+        "scale": "million",
+        "count": 315,
+        "rate": 0.02383654937570942
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:difference",
+        "answer_from": "table-text",
+        "scale": "million",
+        "count": 315,
+        "rate": 0.02383654937570942
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:ratio",
+        "answer_from": "table",
+        "scale": "percent",
+        "count": 313,
+        "rate": 0.023685206205069996
+      },
+      {
+        "answer_type": "span",
+        "family": "span_lookup:table:scale=million",
+        "answer_from": "table",
+        "scale": "million",
+        "count": 290,
+        "rate": 0.02194475974271661
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:difference",
+        "answer_from": "table",
+        "scale": "none",
+        "count": 273,
+        "rate": 0.020658342792281497
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:division_composition",
+        "answer_from": "table",
+        "scale": "none",
+        "count": 222,
+        "rate": 0.016799091940976164
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:division_composition",
+        "answer_from": "table",
+        "scale": "thousand",
+        "count": 221,
+        "rate": 0.01672342035565645
+      },
+      {
+        "answer_type": "span",
+        "family": "span_lookup:table:scale=thousand",
+        "answer_from": "table",
+        "scale": "thousand",
+        "count": 219,
+        "rate": 0.016572077185017027
+      },
+      {
+        "answer_type": "multi-span",
+        "family": "multi_span_lookup:table-text:scale=thousand",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "count": 218,
+        "rate": 0.016496405599697315
+      },
+      {
+        "answer_type": "count",
+        "family": "count:table-text:scale=none",
+        "answer_from": "table-text",
+        "scale": "none",
+        "count": 213,
+        "rate": 0.01611804767309875
+      },
+      {
+        "answer_type": "multi-span",
+        "family": "multi_span_lookup:text:scale=none",
+        "answer_from": "text",
+        "scale": "none",
+        "count": 208,
+        "rate": 0.01573968974650019
+      },
+      {
+        "answer_type": "multi-span",
+        "family": "multi_span_lookup:table:scale=thousand",
+        "answer_from": "table",
+        "scale": "thousand",
+        "count": 134,
+        "rate": 0.010139992432841468
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:division_composition",
+        "answer_from": "table-text",
+        "scale": "thousand",
+        "count": 128,
+        "rate": 0.009685962920923193
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:difference",
+        "answer_from": "table",
+        "scale": "percent",
+        "count": 125,
+        "rate": 0.009458948164964056
+      },
+      {
+        "answer_type": "span",
+        "family": "comparison:table-text:scale=none",
+        "answer_from": "table-text",
+        "scale": "none",
+        "count": 124,
+        "rate": 0.009383276579644344
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:change_or_composed_ratio",
+        "answer_from": "table",
+        "scale": "percent",
+        "count": 109,
+        "rate": 0.008248202799848657
+      },
+      {
+        "answer_type": "arithmetic",
+        "family": "arithmetic:ratio",
+        "answer_from": "table-text",
+        "scale": "percent",
+        "count": 89,
+        "rate": 0.006734771093454408
+      }
+    ],
+    "abstraction_reliability": {
+      "medium": 7672,
+      "high": 5543
+    },
+    "reliably_abstractable_count": 13215,
+    "reliably_abstractable_rate": 1.0,
+    "arithmetic_count": 5543,
+    "non_arithmetic_count": 7672,
+    "strategy_family_count": 46,
+    "schema_family_count": 127,
+    "family_top": [
+      {
+        "key": "span_lookup:text:scale=none",
+        "count": 2704,
+        "rate": 0.20461596670450247
+      },
+      {
+        "key": "arithmetic:difference",
+        "count": 2151,
+        "rate": 0.16276958002270148
+      },
+      {
+        "key": "arithmetic:percent_change",
+        "count": 1268,
+        "rate": 0.09595157018539538
+      },
+      {
+        "key": "arithmetic:division_composition",
+        "count": 1071,
+        "rate": 0.08104426787741204
+      },
+      {
+        "key": "comparison:table:scale=none",
+        "count": 591,
+        "rate": 0.044721906923950054
+      },
+      {
+        "key": "span_lookup:table-text:scale=thousand",
+        "count": 574,
+        "rate": 0.04343548997351494
+      },
+      {
+        "key": "multi_span_lookup:table-text:scale=none",
+        "count": 558,
+        "rate": 0.04222474460839955
+      },
+      {
+        "key": "arithmetic:ratio",
+        "count": 519,
+        "rate": 0.03927355278093076
+      },
+      {
+        "key": "span_lookup:table-text:scale=none",
+        "count": 401,
+        "rate": 0.03034430571320469
+      },
+      {
+        "key": "span_lookup:table:scale=none",
+        "count": 382,
+        "rate": 0.028906545592130156
+      },
+      {
+        "key": "multi_span_lookup:table:scale=none",
+        "count": 368,
+        "rate": 0.02784714339765418
+      },
+      {
+        "key": "span_lookup:table-text:scale=million",
+        "count": 358,
+        "rate": 0.027090427544457056
+      },
+      {
+        "key": "span_lookup:table:scale=million",
+        "count": 290,
+        "rate": 0.02194475974271661
+      },
+      {
+        "key": "arithmetic:sum",
+        "count": 221,
+        "rate": 0.01672342035565645
+      },
+      {
+        "key": "span_lookup:table:scale=thousand",
+        "count": 219,
+        "rate": 0.016572077185017027
+      },
+      {
+        "key": "multi_span_lookup:table-text:scale=thousand",
+        "count": 218,
+        "rate": 0.016496405599697315
+      },
+      {
+        "key": "count:table-text:scale=none",
+        "count": 213,
+        "rate": 0.01611804767309875
+      },
+      {
+        "key": "multi_span_lookup:text:scale=none",
+        "count": 208,
+        "rate": 0.01573968974650019
+      },
+      {
+        "key": "arithmetic:change_or_composed_ratio",
+        "count": 160,
+        "rate": 0.012107453651153992
+      },
+      {
+        "key": "comparison:table-text:scale=none",
+        "count": 149,
+        "rate": 0.011275066212637155
+      },
+      {
+        "key": "multi_span_lookup:table:scale=thousand",
+        "count": 134,
+        "rate": 0.010139992432841468
+      },
+      {
+        "key": "arithmetic:aggregation",
+        "count": 108,
+        "rate": 0.008172531214528945
+      },
+      {
+        "key": "count:table:scale=none",
+        "count": 83,
+        "rate": 0.006280741581536133
+      },
+      {
+        "key": "span_lookup:text:scale=million",
+        "count": 56,
+        "rate": 0.004237608777903897
+      },
+      {
+        "key": "multi_span_lookup:table:scale=million",
+        "count": 40,
+        "rate": 0.003026863412788498
+      },
+      {
+        "key": "arithmetic:product",
+        "count": 29,
+        "rate": 0.002194475974271661
+      },
+      {
+        "key": "multi_span_lookup:table-text:scale=million",
+        "count": 24,
+        "rate": 0.0018161180476730988
+      },
+      {
+        "key": "span_lookup:table:scale=percent",
+        "count": 23,
+        "rate": 0.0017404464623533864
+      },
+      {
+        "key": "arithmetic:difference_composition",
+        "count": 16,
+        "rate": 0.0012107453651153991
+      },
+      {
+        "key": "comparison:text:scale=none",
+        "count": 13,
+        "rate": 0.0009837306091562618
+      }
+    ],
+    "schema_top": [
+      {
+        "key": "span_lookup|span_lookup:text:scale=none|from=text|scale=none",
+        "count": 2704,
+        "rate": 0.20461596670450247
+      },
+      {
+        "key": "arithmetic|arithmetic:percent_change|from=table|scale=percent",
+        "count": 903,
+        "rate": 0.06833144154370034
+      },
+      {
+        "key": "comparison|comparison:table:scale=none|from=table|scale=none",
+        "count": 591,
+        "rate": 0.044721906923950054
+      },
+      {
+        "key": "span_lookup|span_lookup:table-text:scale=thousand|from=table-text|scale=thousand",
+        "count": 574,
+        "rate": 0.04343548997351494
+      },
+      {
+        "key": "multi_span_lookup|multi_span_lookup:table-text:scale=none|from=table-text|scale=none",
+        "count": 558,
+        "rate": 0.04222474460839955
+      },
+      {
+        "key": "arithmetic|arithmetic:difference|from=table|scale=million",
+        "count": 516,
+        "rate": 0.03904653802497162
+      },
+      {
+        "key": "arithmetic|arithmetic:difference|from=table-text|scale=thousand",
+        "count": 486,
+        "rate": 0.03677639046538025
+      },
+      {
+        "key": "span_lookup|span_lookup:table-text:scale=none|from=table-text|scale=none",
+        "count": 401,
+        "rate": 0.03034430571320469
+      },
+      {
+        "key": "span_lookup|span_lookup:table:scale=none|from=table|scale=none",
+        "count": 382,
+        "rate": 0.028906545592130156
+      },
+      {
+        "key": "multi_span_lookup|multi_span_lookup:table:scale=none|from=table|scale=none",
+        "count": 368,
+        "rate": 0.02784714339765418
+      },
+      {
+        "key": "span_lookup|span_lookup:table-text:scale=million|from=table-text|scale=million",
+        "count": 358,
+        "rate": 0.027090427544457056
+      },
+      {
+        "key": "arithmetic|arithmetic:difference|from=table|scale=thousand",
+        "count": 344,
+        "rate": 0.02603102534998108
+      },
+      {
+        "key": "arithmetic|arithmetic:percent_change|from=table-text|scale=percent",
+        "count": 331,
+        "rate": 0.02504729474082482
+      },
+      {
+        "key": "arithmetic|arithmetic:division_composition|from=table|scale=million",
+        "count": 315,
+        "rate": 0.02383654937570942
+      },
+      {
+        "key": "arithmetic|arithmetic:difference|from=table-text|scale=million",
+        "count": 315,
+        "rate": 0.02383654937570942
+      },
+      {
+        "key": "arithmetic|arithmetic:ratio|from=table|scale=percent",
+        "count": 313,
+        "rate": 0.023685206205069996
+      },
+      {
+        "key": "span_lookup|span_lookup:table:scale=million|from=table|scale=million",
+        "count": 290,
+        "rate": 0.02194475974271661
+      },
+      {
+        "key": "arithmetic|arithmetic:difference|from=table|scale=none",
+        "count": 273,
+        "rate": 0.020658342792281497
+      },
+      {
+        "key": "arithmetic|arithmetic:division_composition|from=table|scale=none",
+        "count": 222,
+        "rate": 0.016799091940976164
+      },
+      {
+        "key": "arithmetic|arithmetic:division_composition|from=table|scale=thousand",
+        "count": 221,
+        "rate": 0.01672342035565645
+      },
+      {
+        "key": "span_lookup|span_lookup:table:scale=thousand|from=table|scale=thousand",
+        "count": 219,
+        "rate": 0.016572077185017027
+      },
+      {
+        "key": "multi_span_lookup|multi_span_lookup:table-text:scale=thousand|from=table-text|scale=thousand",
+        "count": 218,
+        "rate": 0.016496405599697315
+      },
+      {
+        "key": "count|count:table-text:scale=none|from=table-text|scale=none",
+        "count": 213,
+        "rate": 0.01611804767309875
+      },
+      {
+        "key": "multi_span_lookup|multi_span_lookup:text:scale=none|from=text|scale=none",
+        "count": 208,
+        "rate": 0.01573968974650019
+      },
+      {
+        "key": "comparison|comparison:table-text:scale=none|from=table-text|scale=none",
+        "count": 149,
+        "rate": 0.011275066212637155
+      },
+      {
+        "key": "multi_span_lookup|multi_span_lookup:table:scale=thousand|from=table|scale=thousand",
+        "count": 134,
+        "rate": 0.010139992432841468
+      },
+      {
+        "key": "arithmetic|arithmetic:division_composition|from=table-text|scale=thousand",
+        "count": 128,
+        "rate": 0.009685962920923193
+      },
+      {
+        "key": "arithmetic|arithmetic:difference|from=table|scale=percent",
+        "count": 125,
+        "rate": 0.009458948164964056
+      },
+      {
+        "key": "arithmetic|arithmetic:change_or_composed_ratio|from=table|scale=percent",
+        "count": 109,
+        "rate": 0.008248202799848657
+      },
+      {
+        "key": "arithmetic|arithmetic:ratio|from=table-text|scale=percent",
+        "count": 89,
+        "rate": 0.006734771093454408
+      }
+    ],
+    "schema_cumulative_coverage": {
+      "top_5": 0.4033295497540674,
+      "top_10": 0.5662504729474083,
+      "top_20": 0.7919031403707908,
+      "top_50": 0.9710177828225501,
+      "top_100": 0.9975785092697692
+    },
+    "family_cumulative_coverage": {
+      "top_5": 0.5891032917139614,
+      "top_10": 0.7732879303821415,
+      "top_20": 0.9552024214907302,
+      "top_50": 1.0,
+      "top_100": 1.0
+    },
+    "families_by_strategy_type": {
+      "arithmetic": {
+        "family_count": 9,
+        "top_families": [
+          {
+            "key": "arithmetic:difference",
+            "count": 2151,
+            "rate": 0.38805700883997835
+          },
+          {
+            "key": "arithmetic:percent_change",
+            "count": 1268,
+            "rate": 0.2287569907992062
+          },
+          {
+            "key": "arithmetic:division_composition",
+            "count": 1071,
+            "rate": 0.19321666967346202
+          },
+          {
+            "key": "arithmetic:ratio",
+            "count": 519,
+            "rate": 0.09363160743279812
+          },
+          {
+            "key": "arithmetic:sum",
+            "count": 221,
+            "rate": 0.03987010644055566
+          },
+          {
+            "key": "arithmetic:change_or_composed_ratio",
+            "count": 160,
+            "rate": 0.028865235432076492
+          },
+          {
+            "key": "arithmetic:aggregation",
+            "count": 108,
+            "rate": 0.019484033916651634
+          },
+          {
+            "key": "arithmetic:product",
+            "count": 29,
+            "rate": 0.0052318239220638645
+          },
+          {
+            "key": "arithmetic:difference_composition",
+            "count": 16,
+            "rate": 0.002886523543207649
+          }
+        ]
+      },
+      "comparison": {
+        "family_count": 6,
+        "top_families": [
+          {
+            "key": "comparison:table:scale=none",
+            "count": 591,
+            "rate": 0.7786561264822134
+          },
+          {
+            "key": "comparison:table-text:scale=none",
+            "count": 149,
+            "rate": 0.1963109354413702
+          },
+          {
+            "key": "comparison:text:scale=none",
+            "count": 13,
+            "rate": 0.017127799736495388
+          },
+          {
+            "key": "comparison:table:scale=million",
+            "count": 4,
+            "rate": 0.005270092226613966
+          },
+          {
+            "key": "comparison:table-text:scale=thousand",
+            "count": 1,
+            "rate": 0.0013175230566534915
+          },
+          {
+            "key": "comparison:table:scale=percent",
+            "count": 1,
+            "rate": 0.0013175230566534915
+          }
+        ]
+      },
+      "count": {
+        "family_count": 5,
+        "top_families": [
+          {
+            "key": "count:table-text:scale=none",
+            "count": 213,
+            "rate": 0.6983606557377049
+          },
+          {
+            "key": "count:table:scale=none",
+            "count": 83,
+            "rate": 0.2721311475409836
+          },
+          {
+            "key": "count:text:scale=none",
+            "count": 5,
+            "rate": 0.01639344262295082
+          },
+          {
+            "key": "count:table-text:scale=million",
+            "count": 3,
+            "rate": 0.009836065573770493
+          },
+          {
+            "key": "count:table-text:scale=thousand",
+            "count": 1,
+            "rate": 0.003278688524590164
+          }
+        ]
+      },
+      "multi_span_lookup": {
+        "family_count": 11,
+        "top_families": [
+          {
+            "key": "multi_span_lookup:table-text:scale=none",
+            "count": 558,
+            "rate": 0.35586734693877553
+          },
+          {
+            "key": "multi_span_lookup:table:scale=none",
+            "count": 368,
+            "rate": 0.23469387755102042
+          },
+          {
+            "key": "multi_span_lookup:table-text:scale=thousand",
+            "count": 218,
+            "rate": 0.13903061224489796
+          },
+          {
+            "key": "multi_span_lookup:text:scale=none",
+            "count": 208,
+            "rate": 0.1326530612244898
+          },
+          {
+            "key": "multi_span_lookup:table:scale=thousand",
+            "count": 134,
+            "rate": 0.08545918367346939
+          },
+          {
+            "key": "multi_span_lookup:table:scale=million",
+            "count": 40,
+            "rate": 0.025510204081632654
+          },
+          {
+            "key": "multi_span_lookup:table-text:scale=million",
+            "count": 24,
+            "rate": 0.015306122448979591
+          },
+          {
+            "key": "multi_span_lookup:table:scale=percent",
+            "count": 9,
+            "rate": 0.005739795918367347
+          },
+          {
+            "key": "multi_span_lookup:table-text:scale=percent",
+            "count": 4,
+            "rate": 0.002551020408163265
+          },
+          {
+            "key": "multi_span_lookup:text:scale=thousand",
+            "count": 3,
+            "rate": 0.001913265306122449
+          }
+        ]
+      },
+      "span_lookup": {
+        "family_count": 15,
+        "top_families": [
+          {
+            "key": "span_lookup:text:scale=none",
+            "count": 2704,
+            "rate": 0.5365079365079365
+          },
+          {
+            "key": "span_lookup:table-text:scale=thousand",
+            "count": 574,
+            "rate": 0.11388888888888889
+          },
+          {
+            "key": "span_lookup:table-text:scale=none",
+            "count": 401,
+            "rate": 0.07956349206349206
+          },
+          {
+            "key": "span_lookup:table:scale=none",
+            "count": 382,
+            "rate": 0.07579365079365079
+          },
+          {
+            "key": "span_lookup:table-text:scale=million",
+            "count": 358,
+            "rate": 0.07103174603174603
+          },
+          {
+            "key": "span_lookup:table:scale=million",
+            "count": 290,
+            "rate": 0.057539682539682536
+          },
+          {
+            "key": "span_lookup:table:scale=thousand",
+            "count": 219,
+            "rate": 0.04345238095238095
+          },
+          {
+            "key": "span_lookup:text:scale=million",
+            "count": 56,
+            "rate": 0.011111111111111112
+          },
+          {
+            "key": "span_lookup:table:scale=percent",
+            "count": 23,
+            "rate": 0.004563492063492064
+          },
+          {
+            "key": "span_lookup:table-text:scale=percent",
+            "count": 11,
+            "rate": 0.0021825396825396826
+          }
+        ]
+      }
+    },
+    "arithmetic_examples": [
+      {
+        "sample_id": "tatqa:train:dbee8930-0110-41c7-95fe-0178ddf4f841",
+        "derivation": "(2.9+2.9)/2",
+        "normalized_derivation": "( O1 + O2 ) / O3",
+        "operator_sequence": [
+          "add",
+          "divide"
+        ],
+        "family": "arithmetic:division_composition",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:1665b441-93e5-481d-b0b4-2d28ce70e1a8",
+        "derivation": "(2.7+2.7)/2",
+        "normalized_derivation": "( O1 + O2 ) / O3",
+        "operator_sequence": [
+          "add",
+          "divide"
+        ],
+        "family": "arithmetic:division_composition",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:2cec8a99-3a83-409b-886b-dbb65a05fb25",
+        "derivation": "[(2.9+2.9)/2] - [(2.7+2.7)/2]",
+        "normalized_derivation": "( ( O1 + O2 ) / O3 ) - ( ( O4 + O5 ) / O6 )",
+        "operator_sequence": [
+          "add",
+          "divide",
+          "subtract",
+          "add",
+          "divide"
+        ],
+        "family": "arithmetic:change_or_composed_ratio",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:aa051557-3b4c-497f-b14e-2c8b8b2c99ef",
+        "derivation": "(16,284 - 6,509) / 6,509 ",
+        "normalized_derivation": "( O1 - O2 ) / O3",
+        "operator_sequence": [
+          "subtract",
+          "divide"
+        ],
+        "family": "arithmetic:percent_change",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:6a462285-d663-4da7-b614-77a0dfb56a8c",
+        "derivation": "12,907 - 8,538 ",
+        "normalized_derivation": "O1 - O2",
+        "operator_sequence": [
+          "subtract"
+        ],
+        "family": "arithmetic:difference",
+        "scale": "thousand"
+      },
+      {
+        "sample_id": "tatqa:train:847400ae-6d72-4afa-9b2c-c9677578034a",
+        "derivation": " 11,459 - 11,486 ",
+        "normalized_derivation": "O1 - O2",
+        "operator_sequence": [
+          "subtract"
+        ],
+        "family": "arithmetic:difference",
+        "scale": "thousand"
+      },
+      {
+        "sample_id": "tatqa:train:1c78b8ad-5dd7-471e-bafd-71e1515afaa3",
+        "derivation": "(1,617-1,434)/1,434",
+        "normalized_derivation": "( O1 - O2 ) / O3",
+        "operator_sequence": [
+          "subtract",
+          "divide"
+        ],
+        "family": "arithmetic:percent_change",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:5d471d72-8847-44c3-a732-a1fd3cdd57a0",
+        "derivation": "(18.1+15.1+14.4) / 3",
+        "normalized_derivation": "( O1 + O2 + O3 ) / O4",
+        "operator_sequence": [
+          "add",
+          "add",
+          "divide"
+        ],
+        "family": "arithmetic:division_composition",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:70cc2860-933e-415f-acc0-d49985ed86d3",
+        "derivation": "(14.8+14.7+14.6) / 3",
+        "normalized_derivation": "( O1 + O2 + O3 ) / O4",
+        "operator_sequence": [
+          "add",
+          "add",
+          "divide"
+        ],
+        "family": "arithmetic:division_composition",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:292786c8-d057-44e9-b6f8-e22e2390c4a7",
+        "derivation": "(4.4+3.8+3.3) / 3",
+        "normalized_derivation": "( O1 + O2 + O3 ) / O4",
+        "operator_sequence": [
+          "add",
+          "add",
+          "divide"
+        ],
+        "family": "arithmetic:division_composition",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:60b4a92c-0acc-42b0-bbce-f66df867e4ca",
+        "derivation": "(924+967) / 2",
+        "normalized_derivation": "( O1 + O2 ) / O3",
+        "operator_sequence": [
+          "add",
+          "divide"
+        ],
+        "family": "arithmetic:division_composition",
+        "scale": "million"
+      },
+      {
+        "sample_id": "tatqa:train:2c6cdd11-6b7e-44d0-be4b-e582a1c6f389",
+        "derivation": "(1,085+988) / 2",
+        "normalized_derivation": "( O1 + O2 ) / O3",
+        "operator_sequence": [
+          "add",
+          "divide"
+        ],
+        "family": "arithmetic:division_composition",
+        "scale": "million"
+      },
+      {
+        "sample_id": "tatqa:train:897c5ed0-edb7-43a1-95a1-a693b827535a",
+        "derivation": "(742+689) / 2 ",
+        "normalized_derivation": "( O1 + O2 ) / O3",
+        "operator_sequence": [
+          "add",
+          "divide"
+        ],
+        "family": "arithmetic:division_composition",
+        "scale": "million"
+      },
+      {
+        "sample_id": "tatqa:train:0dc550d6-ba0a-4f46-b606-b102f5441631",
+        "derivation": "74.5-26.0",
+        "normalized_derivation": "O1 - O2",
+        "operator_sequence": [
+          "subtract"
+        ],
+        "family": "arithmetic:difference",
+        "scale": "million"
+      },
+      {
+        "sample_id": "tatqa:train:77191f82-0a18-4050-8911-bff9f1a401d9",
+        "derivation": "(711.7-476.2)/476.2",
+        "normalized_derivation": "( O1 - O2 ) / O3",
+        "operator_sequence": [
+          "subtract",
+          "divide"
+        ],
+        "family": "arithmetic:percent_change",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:37a02df3-f6f6-4981-8d60-71a587c6db9f",
+        "derivation": "3.20 + 3.80 ",
+        "normalized_derivation": "O1 + O2",
+        "operator_sequence": [
+          "add"
+        ],
+        "family": "arithmetic:sum",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:dc7bfc5a-cd41-4f16-be0d-7ca2d2b89eac",
+        "derivation": "3.20 - 3.80 ",
+        "normalized_derivation": "O1 - O2",
+        "operator_sequence": [
+          "subtract"
+        ],
+        "family": "arithmetic:difference",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:e925d7ab-a48c-497f-9f00-29005b315ca2",
+        "derivation": "2.50 - 2.50 ",
+        "normalized_derivation": "O1 - O2",
+        "operator_sequence": [
+          "subtract"
+        ],
+        "family": "arithmetic:difference",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:3e1a88fd-b2f4-40dd-a7f1-baef93720d4a",
+        "derivation": "103/175",
+        "normalized_derivation": "O1 / O2",
+        "operator_sequence": [
+          "divide"
+        ],
+        "family": "arithmetic:ratio",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:2540bb8a-19ac-481a-9a70-08a5a406889b",
+        "derivation": "1,231,479+16,729",
+        "normalized_derivation": "O1 + O2",
+        "operator_sequence": [
+          "add"
+        ],
+        "family": "arithmetic:sum",
+        "scale": "none"
+      },
+      {
+        "sample_id": "tatqa:train:904679f4-77f5-4575-975a-2b7b18eedbcf",
+        "derivation": "(898,200,415-900,996,640)/900,996,640",
+        "normalized_derivation": "( O1 - O2 ) / O3",
+        "operator_sequence": [
+          "subtract",
+          "divide"
+        ],
+        "family": "arithmetic:percent_change",
+        "scale": "percent"
+      },
+      {
+        "sample_id": "tatqa:train:24e5d679-e4f1-47b4-a0ca-77550ef8c4be",
+        "derivation": "-56,552 - (-55,849)",
+        "normalized_derivation": "O1 - ( O2 )",
+        "operator_sequence": [
+          "subtract"
+        ],
+        "family": "arithmetic:difference",
+        "scale": "none"
+      },
+      {
+        "sample_id": "tatqa:train:edfade0f-df94-4bdb-85b2-0b9862dae1ee",
+        "derivation": "(5,966 + 14,173) / 2",
+        "normalized_derivation": "( O1 + O2 ) / O3",
+        "operator_sequence": [
+          "add",
+          "divide"
+        ],
+        "family": "arithmetic:division_composition",
+        "scale": "none"
+      },
+      {
+        "sample_id": "tatqa:train:c502823a-fa1d-49e3-b14e-6973d72afc2f",
+        "derivation": "-(39,185 + 37,035) / 2",
+        "normalized_derivation": "- ( O1 + O2 ) / O3",
+        "operator_sequence": [
+          "add",
+          "divide"
+        ],
+        "family": "arithmetic:division_composition",
+        "scale": "none"
+      },
+      {
+        "sample_id": "tatqa:train:b21b7d73-a581-4e3f-8847-58280b20d59a",
+        "derivation": "24-15",
+        "normalized_derivation": "O1 - O2",
+        "operator_sequence": [
+          "subtract"
+        ],
+        "family": "arithmetic:difference",
+        "scale": "million"
+      }
+    ]
+  },
+  "schema_version": "tatqa_strategy_structure_v1",
+  "notes": [
+    "Offline deterministic audit only.",
+    "Gold labels are used only because this is train-side strategy design, not inference-time routing.",
+    "No LLM/API calls."
+  ]
+}

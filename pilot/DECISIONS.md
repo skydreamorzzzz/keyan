@@ -348,3 +348,32 @@
 ### decision
 - **READY FOR TAT-QA STRATEGY MEMORY DESIGN**。
 - 风险：memory-side retrieval text 使用 train solved-case relevant paragraphs，而 target side 使用全可见 context，存在轻微表示不对称；`operator` 是 parser-derived coarse audit label，不是 TAT-QA 官方字段。
+
+## 18. TAT-QA Strategy Structure Audit（2026-08-16）
+
+### scope
+- 只做 TAT-QA train 的 Strategy 结构设计与离线 audit；未调用 DeepSeek/任何 LLM/API，未构造最终 Strategy Memory，未跑四臂实验或 router。
+- 目标是确定 TAT-QA 自身的抽象方式，而不是照搬 FinQA program DSL。
+
+### deterministic abstraction
+- 新增 `pilot/multibench/tatqa_strategy_structure_audit.py`。
+- arithmetic derivation 作为 TAT-QA 半结构公式处理：去除具体数字、年份、百分号/货币数值，替换为 `O1/O2/...` operand placeholders；保留运算符序列、括号深度、operand count、coarse arithmetic family。
+- span / multi-span / count / comparison 单独作为 lookup/count/comparison strategy types，不强行转换为 arithmetic procedure。
+
+### train audit
+- train samples：13,215。
+- answer_type：span 5,722；arithmetic 5,543；multi-span 1,645；count 305。
+- answer_from：table 5,920；table-text 4,170；text 3,125。
+- scale：none 6,457；thousand 2,481；million 2,153；percent 2,104；billion 20。
+- derivation present：6,603（0.500）；arithmetic/count 均为 1.000，span/multi-span 只有少量 derivation。
+- 结构层可抽象比例：13,215 / 13,215（1.000）。其中 arithmetic 为 high；lookup/count/comparison 为 medium，表示 schema-level 可抽象，不表示已有充分语义策略文本。
+- coarse strategy families：46；加入 answer_from/scale 后 schema families：127。
+- coarse family coverage：top5 0.589，top10 0.773，top20 0.955。
+- schema family coverage：top5 0.403，top10 0.566，top20 0.792，top50 0.971。
+
+### decision
+- 推荐 Strategy 构造方式：先按 deterministic schema 聚合 family，再用代表性 train examples 生成少量 schema-grounded strategy descriptions。
+- 纳入：arithmetic、span_lookup、multi_span_lookup、count、comparison；但 comparison 不与 numeric difference 合并。
+- 排除/低置信：缺 answer_type 或 arithmetic derivation 无可解析 operator 的样本；当前 train 中未形成实际覆盖损失。
+- 下一轮值得做少量 LLM semantic abstraction，重点用于 lookup/comparison 的证据定位表述，而不是重新发明 arithmetic families。
+- 产物：`pilot/multibench/output/tatqa/TATQA_STRATEGY_STRUCTURE_AUDIT.md` 与 `tatqa_strategy_structure_audit.json`。
