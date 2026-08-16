@@ -439,3 +439,27 @@
 - Semantic abstraction provides real signal for lookup-style strategies, but a single semantic-rich dense index is not sufficient: exact schema retrieval remains weak and arithmetic retrieval is worse than schema-only.
 - Main failure modes: dense retrieval overweights surface lookup wording; source/scale-specific schema variants are often missed; full-context query text can pull arithmetic questions toward lookup strategies.
 - Next step should be retrieval audit repair, likely a frozen hybrid retrieval policy or type-aware two-stage retrieval, before any four-arm execution.
+
+## 21. TAT-QA Query Retrieval Methods Audit（2026-08-16）
+
+### scope
+- 只做 frozen `tatqa_strategy_memory_v0.json` 的 Strategy retrieval query-method audit；未跑四臂 execution、router、strategy 重写或 dev 调参。
+- Strategy Memory 固定 30 条；dev audit sample 沿用上一轮 120 条、seed `20260816`；retriever 仍为 `BAAI/bge-small-en-v1.5`，top-3。
+- 比较三种 query method：question-only semantic baseline、DeepSeek query rewriting、DeepSeek HyDE。
+
+### API/cache
+- DeepSeek prompt 只输入原 question，禁止 gold answer、answer_type、scale、operator、derivation、schema labels。
+- 每个 sample 最多一次 generation call，同时返回 rewrite 与 HyDE；cold cache 构建 120 条记录。
+- cache：`pilot/multibench/output/tatqa/tatqa_query_retrieval_methods_cache.jsonl`。
+- dry-run 复现：0 API calls，120 cache hits。
+
+### results
+- Gold schema 在 frozen 30-strategy memory 中可命中：111 / 120 = 0.925。
+- Eligible exact schema top3：question-only 0.297；query rewrite 0.324；HyDE 0.387。
+- Overall exact schema top3：question-only 0.275；query rewrite 0.300；HyDE 0.358。
+- Overall type top3：question-only 0.717；query rewrite 0.667；HyDE 0.750。
+- HyDE 改善 arithmetic schema top3（0.365 vs question-only 0.288）和 multi-span schema top3（0.417 vs 0.250），span lookup 仍只到 0.275。
+
+### decision
+- **FREEZE HYDE STRATEGY RETRIEVAL FOR TAT-QA FOUR-ARM SMALL DRY-RUN**。
+- HyDE 在 frozen audit 下比 question-only 和 rewrite 提供更强 retrieval alignment，但 exact schema top3 仍低于 0.4；下一轮若进入 dry-run，应保持小规模，并把 source/scale schema confusion 作为主要风险记录。
