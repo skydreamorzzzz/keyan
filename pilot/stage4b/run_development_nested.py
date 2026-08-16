@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import os
-from statistics import mean, pstdev
+from statistics import mean
 from typing import Any
 
 import numpy as np
@@ -40,7 +40,7 @@ LAMBDAS = [1.0, 1.5, 2.0, 3.0]
 
 
 def se(vals: list[float]) -> float:
-    return pstdev(vals) / (len(vals) ** 0.5) if len(vals) > 1 else 0.0
+    return float(np.std(vals, ddof=1) / (len(vals) ** 0.5)) if len(vals) > 1 else 0.0
 
 
 def fit_flat_delta(records, synthetic, feature_set, train_idx, test_idx):
@@ -240,6 +240,7 @@ def run() -> dict[str, Any]:
             "preprocessing": "DictVectorizer fit inside each train fold only",
             "selection": "one-standard-error conservative selection; tie prefers lower coverage/higher threshold/higher lambda",
             "selection_metric": "paired inner-CV gain over Always Both",
+            "se_estimator": "sample standard error, numpy std(ddof=1) / sqrt(n)",
             "candidate_feature_sets": FEATURE_SETS,
             "candidate_architectures": ARCHITECTURES,
         },

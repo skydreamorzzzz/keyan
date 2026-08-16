@@ -283,3 +283,40 @@
 - Stage 4B 的 “collapse to Both” 结论部分来自协议 artifact；修复后 fully nested policy 出现小幅、跨 rn1/rn2/rn3 方向一致的正 gain。
 - 但当前证据仍很弱：CI 跨 0，beneficial deviation 只有 2 个，多数 deviation 是 neutral，fixed candidates 没有稳定确认。
 - 下一步不应把 +0.53pp 包装成 confirmed router；应在更好 observability 或明确 accuracy-memory objective 下做预注册确认。
+
+## 16. Stage 4B.2 Router Stability & Accuracy-Memory Pareto Audit（2026-08-16）
+
+### one-SE 修正
+- 将 inner-CV `se()` 从 population std 改为 sample std：`np.std(vals, ddof=1) / sqrt(n)`。
+- 未调用 API，未新增 feature，未扩大模型/参数/threshold/lambda 搜索空间。
+
+### sensitivity
+- Stage 4B.1 population-SE nested OOF：policy 0.7520，Both 0.7467，gain +0.53pp，coverage 5.6%，beneficial/harmful/neutral=2/1/11，CI [-0.54pp, +1.92pp]。
+- Stage 4B.2 sample-SE nested OOF：policy 0.7440，Both 0.7467，gain -0.27pp，coverage 5.2%，beneficial/harmful/neutral=0/1/12，CI [-0.84pp, 0.00pp]。
+- realized：rn1 0.7480 vs 0.7480 (+0.00pp)，rn2 0.7400 vs 0.7440 (-0.40pp)，rn3 0.7440 vs 0.7480 (-0.40pp)。
+
+### router stability
+- 5 个 outer folds 的 selected architecture：flat_delta 2，gain_harm 2，always_both 1。
+- selected feature set：synthetic_interaction 4，none 1。
+- thresholds：0.05/0.2/0.5/None 均出现；inner selected coverage=[0.1661, 0.0000, 0.0200, 0.0598, 0.0150]。
+- 结论：nested OOF 是 model-selection procedure performance，不代表一个稳定单一 deployable router。
+
+### accuracy-memory Pareto
+- Always None：0.6933，avg memory 0.0 tokens，avg prompt 685.0。
+- Always Strategy：0.7053，avg memory 209.3，avg prompt 894.3。
+- Always Case：0.7160，avg memory 413.3，avg prompt 1098.3。
+- Always Both：0.7467，avg memory 622.6，avg prompt 1307.6。
+- sample-SE nested OOF：0.7440，avg memory 601.3，avg prompt 1286.2。
+- 相比 Both：accuracy -0.27pp，memory/prompt 仅各省约 21.4 tokens；不是清晰 Pareto improvement。
+- deviations 中 neutral 12 个，平均节省约 409 memory/prompt tokens；但 coverage 低，且 1 个 harmful deviation 也节省 token，因此 token saving alone 不能作为 correctness-preserving signal。
+
+### deployable candidate freeze
+- 全 250 development data 上用同样 conservative inner-CV procedure 选择 candidate，仅 freeze，不作 confirmatory claim。
+- selected：flat_delta + existing_meta_plus_interaction，threshold 0.5，mean_gain +0.14pp，se_gain 0.58pp，coverage 3.2%。
+- 新产物：`stage4b2_deployable_candidate_config.json`，`STAGE4B2_DEPLOYABLE_CANDIDATE_SPEC.md`。
+- 旧 `stage4b_frozen_router_config.json` 已标记为 superseded historical artifact。
+
+### 判定
+- **SIGNAL DISAPPEARS UNDER SAMPLE-SE**。
+- Stage 4B.1 的小正信号对 SE estimator 敏感；当前 Stage 4B feature/model/protocol stack 不应被视为可靠 router。
+- 下一步不要继续在同一 250 条上调参；若继续，应转向预注册 efficiency objective 或更强 retrieved-content compatibility observability。

@@ -4,7 +4,11 @@
   "frozen_at": "2026-08-16",
   "decision_reason": "Fully nested annual-report GroupKFold with fold-local preprocessing and one-standard-error conservative selection selected zero deviations on development OOF.",
   "default_action": "both",
-  "allowed_deviation_actions": ["none", "case", "strategy"],
+  "allowed_deviation_actions": [
+    "none",
+    "case",
+    "strategy"
+  ],
   "frozen_policy": {
     "type": "always_default",
     "action": "both",
@@ -15,7 +19,11 @@
     "inner_grouping": "annual_report_group within outer train",
     "preprocessing": "fold-local DictVectorizer only",
     "selection_rule": "one-standard-error conservative rule; prefer lower coverage, higher threshold, higher harm penalty",
-    "candidate_architectures": ["flat_delta", "gain_harm", "hierarchical"],
+    "candidate_architectures": [
+      "flat_delta",
+      "gain_harm",
+      "hierarchical"
+    ],
     "candidate_feature_sets": [
       "existing_meta",
       "existing_meta_plus_compatibility",
@@ -35,5 +43,8 @@
     "primary_subset": "annual_report_group disjoint from train.json and dev[:492]",
     "secondary_subset": "full public test optional only",
     "gold_required": true
-  }
+  },
+  "superseded_by": "Stage 4B.1/4B.2 protocol repair",
+  "superseded_reason": "Stage 4B.1 repaired paired-gain selection and realized-gain accounting; Stage 4B.2 uses sample-SE sensitivity. The old Always Both freeze is retained as historical artifact only.",
+  "historical_status": "superseded"
 }

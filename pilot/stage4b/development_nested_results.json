@@ -5,6 +5,7 @@
     "preprocessing": "DictVectorizer fit inside each train fold only",
     "selection": "one-standard-error conservative selection; tie prefers lower coverage/higher threshold/higher lambda",
     "selection_metric": "paired inner-CV gain over Always Both",
+    "se_estimator": "sample standard error, numpy std(ddof=1) / sqrt(n)",
     "candidate_feature_sets": [
       "existing_meta",
       "existing_meta_plus_compatibility",
@@ -26,9 +27,9 @@
         "threshold": 0.05,
         "lambda": null,
         "mean_utility": 0.7584049449721091,
-        "se_utility": 0.04029649857738729,
+        "se_utility": 0.04935292996769355,
         "mean_gain": 0.00995024875621886,
-        "se_gain": 0.004062172044416529,
+        "se_gain": 0.00497512437810943,
         "coverage": 0.16606362128750188,
         "fold_gains": [
           0.01492537313432829,
@@ -42,18 +43,18 @@
     {
       "fold": 2,
       "selected": {
-        "architecture": "hierarchical",
-        "feature_set": "synthetic_interaction",
-        "threshold": 0.8,
+        "architecture": "always_both",
+        "feature_set": "none",
+        "threshold": null,
         "lambda": null,
-        "mean_utility": 0.7352630785466606,
-        "se_utility": 0.02226611173211954,
-        "mean_gain": 0.0016583747927031804,
-        "se_gain": 0.005902199144295917,
-        "coverage": 0.039951756369666816,
+        "mean_utility": 0.7336047037539575,
+        "se_utility": 0.030703168783983558,
+        "mean_gain": 0.0,
+        "se_gain": 0.0,
+        "coverage": 0.0,
         "fold_gains": [
-          0.014925373134328401,
-          -0.00995024875621886,
+          0.0,
+          0.0,
           0.0
         ]
       },
@@ -63,19 +64,19 @@
     {
       "fold": 3,
       "selected": {
-        "architecture": "flat_delta",
-        "feature_set": "existing_meta_plus_compatibility",
-        "threshold": 0.33,
-        "lambda": null,
-        "mean_utility": 0.7381777978792904,
-        "se_utility": 0.01651237610687937,
-        "mean_gain": 0.010126136991808643,
-        "se_gain": 0.010365586082163673,
-        "coverage": 0.1249811548319011,
+        "architecture": "gain_harm",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.5,
+        "lambda": 1.0,
+        "mean_utility": 0.7330267852655913,
+        "se_utility": 0.03226123500254722,
+        "mean_gain": 0.004975124378109467,
+        "se_gain": 0.004975124378109467,
+        "coverage": 0.019975878184833408,
         "fold_gains": [
+          0.014925373134328401,
           0.0,
-          -0.00497512437810943,
-          0.03535353535353536
+          0.0
         ]
       },
       "test_n": 50,
@@ -89,9 +90,9 @@
         "threshold": 0.5,
         "lambda": 1.0,
         "mean_utility": 0.7500879441177949,
-        "se_utility": 0.03361015091659284,
+        "se_utility": 0.0411638599617944,
         "mean_gain": 0.015000753806723943,
-        "se_gain": 6.154806127903832e-05,
+        "se_gain": 7.538067239559743e-05,
         "coverage": 0.05977687320970903,
         "fold_gains": [
           0.014925373134328401,
@@ -110,9 +111,9 @@
         "threshold": 0.2,
         "lambda": null,
         "mean_utility": 0.7985577164681642,
-        "se_utility": 0.052548401249903356,
+        "se_utility": 0.06435838493064651,
         "mean_gain": 0.010025629428614513,
-        "se_gain": 0.004093293135875111,
+        "se_gain": 0.005013239775265438,
         "coverage": 0.015000753806723955,
         "fold_gains": [
           0.0,
@@ -407,7 +408,7 @@
     },
     {
       "sample_index": 117,
-      "choice": "none",
+      "choice": "both",
       "annual_report_group": "APD/2019"
     },
     {
@@ -892,7 +893,7 @@
     },
     {
       "sample_index": 286,
-      "choice": "both",
+      "choice": "case",
       "annual_report_group": "IPG/2008"
     },
     {
@@ -1317,7 +1318,7 @@
     },
     {
       "sample_index": 470,
-      "choice": "none",
+      "choice": "both",
       "annual_report_group": "PM/2015"
     },
     {
@@ -1377,30 +1378,30 @@
     }
   ],
   "expected_evaluation": {
-    "accuracy": 0.752,
+    "accuracy": 0.744,
     "always_both": 0.7466666666666667,
     "oracle": 0.8386666666666667,
-    "gain_vs_both": 0.005333333333333301,
+    "gain_vs_both": -0.002666666666666706,
     "oracle_gap": 0.09199999999999997,
-    "oracle_gap_recovery": 0.05797101449275329,
-    "deviation_coverage": 0.056,
-    "deviation_count": 14,
-    "deviation_precision": 0.14285714285714285,
-    "harmful_deviation_rate": 0.07142857142857142,
-    "beneficial_deviation_count": 2,
+    "oracle_gap_recovery": -0.02898550724637725,
+    "deviation_coverage": 0.052,
+    "deviation_count": 13,
+    "deviation_precision": 0.0,
+    "harmful_deviation_rate": 0.07692307692307693,
+    "beneficial_deviation_count": 0,
     "harmful_deviation_count": 1,
-    "neutral_deviation_count": 11,
+    "neutral_deviation_count": 12,
     "choice_distribution": {
-      "both": 236,
-      "none": 8,
-      "case": 5,
+      "both": 237,
+      "none": 6,
+      "case": 6,
       "strategy": 1
     },
     "cluster_bootstrap": {
-      "point_estimate": 0.005333333333333334,
+      "point_estimate": -0.0026666666666666666,
       "ci95": [
-        -0.005442176870748299,
-        0.019157088122605363
+        -0.008369079849513026,
+        0.0
       ],
       "bootstrap_resamples": 10000,
       "random_seed": 20260816,
@@ -1409,27 +1410,27 @@
   },
   "realized_by_replicate": {
     "rn1": {
-      "policy_accuracy": 0.756,
+      "policy_accuracy": 0.748,
       "both_accuracy": 0.748,
-      "gain_vs_both": 0.008000000000000007,
-      "paired_gain_vs_both": 0.008
+      "gain_vs_both": 0.0,
+      "paired_gain_vs_both": 0.0
     },
     "rn2": {
-      "policy_accuracy": 0.748,
+      "policy_accuracy": 0.74,
       "both_accuracy": 0.744,
-      "gain_vs_both": 0.0040000000000000036,
-      "paired_gain_vs_both": 0.004
+      "gain_vs_both": -0.0040000000000000036,
+      "paired_gain_vs_both": -0.004
     },
     "rn3": {
-      "policy_accuracy": 0.752,
+      "policy_accuracy": 0.744,
       "both_accuracy": 0.748,
-      "gain_vs_both": 0.0040000000000000036,
-      "paired_gain_vs_both": 0.004
+      "gain_vs_both": -0.0040000000000000036,
+      "paired_gain_vs_both": -0.004
     },
     "_summary": {
-      "mean_gain": 0.005333333333333338,
-      "min_gain": 0.0040000000000000036,
-      "max_gain": 0.008000000000000007,
+      "mean_gain": -0.002666666666666669,
+      "min_gain": -0.0040000000000000036,
+      "max_gain": 0.0,
       "range": 0.0040000000000000036
     }
   }

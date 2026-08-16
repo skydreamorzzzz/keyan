@@ -1,0 +1,20 @@
+{
+  "stage": "4B.2",
+  "router_name": "stage4b2_sample_se_deployable_candidate",
+  "frozen_at": "2026-08-16",
+  "status": "candidate_freeze_not_confirmatory",
+  "selection_data": "all 250-query development subset only",
+  "selection_procedure": "same conservative inner GroupKFold procedure with sample-SE paired gain and explicit Always Both candidate",
+  "selected_candidate": {
+    "architecture": "flat_delta",
+    "feature_set": "existing_meta_plus_interaction",
+    "threshold": 0.5,
+    "lambda": null,
+    "mean_utility": 0.7482947663670555,
+    "se_utility": 0.03980903852328979,
+    "mean_gain": 0.0013705616115254893,
+    "se_gain": 0.005809644135436938,
+    "coverage": 0.031889462612354175
+  },
+  "important_note": "Development performance is not confirmatory evidence; this candidate must be evaluated on a fresh holdout before method claims."
+}

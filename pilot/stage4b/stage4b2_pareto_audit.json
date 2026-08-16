@@ -1,0 +1,429 @@
+{
+  "stage": "4B.2",
+  "se_change": "sample std ddof=1",
+  "stage4b1_population_se_nested": {
+    "accuracy": 0.752,
+    "always_both": 0.7466666666666667,
+    "oracle": 0.8386666666666667,
+    "gain_vs_both": 0.005333333333333301,
+    "oracle_gap": 0.09199999999999997,
+    "oracle_gap_recovery": 0.05797101449275329,
+    "deviation_coverage": 0.056,
+    "deviation_count": 14,
+    "deviation_precision": 0.14285714285714285,
+    "harmful_deviation_rate": 0.07142857142857142,
+    "beneficial_deviation_count": 2,
+    "harmful_deviation_count": 1,
+    "neutral_deviation_count": 11,
+    "choice_distribution": {
+      "both": 236,
+      "none": 8,
+      "case": 5,
+      "strategy": 1
+    },
+    "cluster_bootstrap": {
+      "point_estimate": 0.005333333333333334,
+      "ci95": [
+        -0.005442176870748299,
+        0.019157088122605363
+      ],
+      "bootstrap_resamples": 10000,
+      "random_seed": 20260816,
+      "procedure": "cluster percentile bootstrap by annual_report_group"
+    }
+  },
+  "sample_se_nested_expected": {
+    "accuracy": 0.744,
+    "always_both": 0.7466666666666667,
+    "oracle": 0.8386666666666667,
+    "gain_vs_both": -0.002666666666666706,
+    "oracle_gap": 0.09199999999999997,
+    "oracle_gap_recovery": -0.02898550724637725,
+    "deviation_coverage": 0.052,
+    "deviation_count": 13,
+    "deviation_precision": 0.0,
+    "harmful_deviation_rate": 0.07692307692307693,
+    "beneficial_deviation_count": 0,
+    "harmful_deviation_count": 1,
+    "neutral_deviation_count": 12,
+    "choice_distribution": {
+      "both": 237,
+      "none": 6,
+      "case": 6,
+      "strategy": 1
+    },
+    "cluster_bootstrap": {
+      "point_estimate": -0.0026666666666666666,
+      "ci95": [
+        -0.008369079849513026,
+        0.0
+      ],
+      "bootstrap_resamples": 10000,
+      "random_seed": 20260816,
+      "procedure": "cluster percentile bootstrap by annual_report_group"
+    }
+  },
+  "sample_se_realized_by_replicate": {
+    "rn1": {
+      "policy_accuracy": 0.748,
+      "both_accuracy": 0.748,
+      "gain_vs_both": 0.0,
+      "paired_gain_vs_both": 0.0
+    },
+    "rn2": {
+      "policy_accuracy": 0.74,
+      "both_accuracy": 0.744,
+      "gain_vs_both": -0.0040000000000000036,
+      "paired_gain_vs_both": -0.004
+    },
+    "rn3": {
+      "policy_accuracy": 0.744,
+      "both_accuracy": 0.748,
+      "gain_vs_both": -0.0040000000000000036,
+      "paired_gain_vs_both": -0.004
+    },
+    "_summary": {
+      "mean_gain": -0.002666666666666669,
+      "min_gain": -0.0040000000000000036,
+      "max_gain": 0.0,
+      "range": 0.0040000000000000036
+    }
+  },
+  "fold_stability": {
+    "fold_count": 5,
+    "architecture_counts": {
+      "flat_delta": 2,
+      "always_both": 1,
+      "gain_harm": 2
+    },
+    "feature_set_counts": {
+      "synthetic_interaction": 4,
+      "none": 1
+    },
+    "threshold_counts": {
+      "0.05": 1,
+      "None": 1,
+      "0.5": 2,
+      "0.2": 1
+    },
+    "coverage_values": [
+      0.16606362128750188,
+      0.0,
+      0.019975878184833408,
+      0.05977687320970903,
+      0.015000753806723955
+    ],
+    "avg_inner_coverage": 0.052163425297753654,
+    "selected_rows": [
+      {
+        "architecture": "flat_delta",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.05,
+        "lambda": null,
+        "mean_utility": 0.7584049449721091,
+        "se_utility": 0.04935292996769355,
+        "mean_gain": 0.00995024875621886,
+        "se_gain": 0.00497512437810943,
+        "coverage": 0.16606362128750188,
+        "fold_gains": [
+          0.01492537313432829,
+          0.01492537313432829,
+          0.0
+        ]
+      },
+      {
+        "architecture": "always_both",
+        "feature_set": "none",
+        "threshold": null,
+        "lambda": null,
+        "mean_utility": 0.7336047037539575,
+        "se_utility": 0.030703168783983558,
+        "mean_gain": 0.0,
+        "se_gain": 0.0,
+        "coverage": 0.0,
+        "fold_gains": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "architecture": "gain_harm",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.5,
+        "lambda": 1.0,
+        "mean_utility": 0.7330267852655913,
+        "se_utility": 0.03226123500254722,
+        "mean_gain": 0.004975124378109467,
+        "se_gain": 0.004975124378109467,
+        "coverage": 0.019975878184833408,
+        "fold_gains": [
+          0.014925373134328401,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "architecture": "gain_harm",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.5,
+        "lambda": 1.0,
+        "mean_utility": 0.7500879441177949,
+        "se_utility": 0.0411638599617944,
+        "mean_gain": 0.015000753806723943,
+        "se_gain": 7.538067239559743e-05,
+        "coverage": 0.05977687320970903,
+        "fold_gains": [
+          0.014925373134328401,
+          0.01492537313432829,
+          0.015151515151515138
+        ]
+      },
+      {
+        "architecture": "flat_delta",
+        "feature_set": "synthetic_interaction",
+        "threshold": 0.2,
+        "lambda": null,
+        "mean_utility": 0.7985577164681642,
+        "se_utility": 0.06435838493064651,
+        "mean_gain": 0.010025629428614513,
+        "se_gain": 0.005013239775265438,
+        "coverage": 0.015000753806723955,
+        "fold_gains": [
+          0.0,
+          0.014925373134328401,
+          0.015151515151515138
+        ]
+      }
+    ]
+  },
+  "pareto": [
+    {
+      "policy": "always_none",
+      "expected_accuracy": 0.6933333333333334,
+      "avg_prompt_tokens": 684.976,
+      "avg_memory_tokens": 0.0
+    },
+    {
+      "policy": "always_case",
+      "expected_accuracy": 0.716,
+      "avg_prompt_tokens": 1098.26,
+      "avg_memory_tokens": 413.284
+    },
+    {
+      "policy": "always_strategy",
+      "expected_accuracy": 0.7053333333333334,
+      "avg_prompt_tokens": 894.316,
+      "avg_memory_tokens": 209.34
+    },
+    {
+      "policy": "always_both",
+      "expected_accuracy": 0.7466666666666667,
+      "avg_prompt_tokens": 1307.6,
+      "avg_memory_tokens": 622.624
+    },
+    {
+      "policy": "sample_se_nested_oof_policy",
+      "expected_accuracy": 0.744,
+      "avg_prompt_tokens": 1286.244,
+      "avg_memory_tokens": 601.268
+    }
+  ],
+  "deviation_savings": {
+    "summary": {
+      "beneficial": {
+        "count": 0,
+        "avg_prompt_token_saving_vs_both": 0.0,
+        "avg_memory_token_saving_vs_both": 0.0,
+        "actions": {}
+      },
+      "neutral": {
+        "count": 12,
+        "avg_prompt_token_saving_vs_both": 409.3333333333333,
+        "avg_memory_token_saving_vs_both": 409.3333333333333,
+        "actions": {
+          "none": 6,
+          "case": 6
+        }
+      },
+      "harmful": {
+        "count": 1,
+        "avg_prompt_token_saving_vs_both": 427.0,
+        "avg_memory_token_saving_vs_both": 427.0,
+        "actions": {
+          "strategy": 1
+        }
+      }
+    },
+    "rows": [
+      {
+        "sample_index": 41,
+        "action": "none",
+        "delta": 0.0,
+        "bucket": "neutral",
+        "prompt_token_saving_vs_both": 481.0,
+        "memory_token_saving_vs_both": 481.0
+      },
+      {
+        "sample_index": 130,
+        "action": "case",
+        "delta": 0.0,
+        "bucket": "neutral",
+        "prompt_token_saving_vs_both": 203.0,
+        "memory_token_saving_vs_both": 203.0
+      },
+      {
+        "sample_index": 150,
+        "action": "none",
+        "delta": 0.0,
+        "bucket": "neutral",
+        "prompt_token_saving_vs_both": 703.0,
+        "memory_token_saving_vs_both": 703.0
+      },
+      {
+        "sample_index": 158,
+        "action": "case",
+        "delta": 0.0,
+        "bucket": "neutral",
+        "prompt_token_saving_vs_both": 220.0,
+        "memory_token_saving_vs_both": 220.0
+      },
+      {
+        "sample_index": 168,
+        "action": "case",
+        "delta": 0.0,
+        "bucket": "neutral",
+        "prompt_token_saving_vs_both": 214.0,
+        "memory_token_saving_vs_both": 214.0
+      },
+      {
+        "sample_index": 183,
+        "action": "none",
+        "delta": 0.0,
+        "bucket": "neutral",
+        "prompt_token_saving_vs_both": 481.0,
+        "memory_token_saving_vs_both": 481.0
+      },
+      {
+        "sample_index": 228,
+        "action": "case",
+        "delta": 0.0,
+        "bucket": "neutral",
+        "prompt_token_saving_vs_both": 241.0,
+        "memory_token_saving_vs_both": 241.0
+      },
+      {
+        "sample_index": 231,
+        "action": "none",
+        "delta": 0.0,
+        "bucket": "neutral",
+        "prompt_token_saving_vs_both": 656.0,
+        "memory_token_saving_vs_both": 656.0
+      },
+      {
+        "sample_index": 286,
+        "action": "case",
+        "delta": 0.0,
+        "bucket": "neutral",
+        "prompt_token_saving_vs_both": 204.0,
+        "memory_token_saving_vs_both": 204.0
+      },
+      {
+        "sample_index": 287,
+        "action": "strategy",
+        "delta": -0.6666666666666666,
+        "bucket": "harmful",
+        "prompt_token_saving_vs_both": 427.0,
+        "memory_token_saving_vs_both": 427.0
+      },
+      {
+        "sample_index": 376,
+        "action": "none",
+        "delta": 0.0,
+        "bucket": "neutral",
+        "prompt_token_saving_vs_both": 612.0,
+        "memory_token_saving_vs_both": 612.0
+      },
+      {
+        "sample_index": 473,
+        "action": "none",
+        "delta": 0.0,
+        "bucket": "neutral",
+        "prompt_token_saving_vs_both": 656.0,
+        "memory_token_saving_vs_both": 656.0
+      },
+      {
+        "sample_index": 481,
+        "action": "case",
+        "delta": 0.0,
+        "bucket": "neutral",
+        "prompt_token_saving_vs_both": 241.0,
+        "memory_token_saving_vs_both": 241.0
+      }
+    ]
+  },
+  "deployable_candidate": {
+    "architecture": "flat_delta",
+    "feature_set": "existing_meta_plus_interaction",
+    "threshold": 0.5,
+    "lambda": null,
+    "mean_utility": 0.7482947663670555,
+    "se_utility": 0.03980903852328979,
+    "mean_gain": 0.0013705616115254893,
+    "se_gain": 0.005809644135436938,
+    "coverage": 0.031889462612354175
+  },
+  "final_judgment": "SIGNAL DISAPPEARS UNDER SAMPLE-SE",
+  "nested_expected": {
+    "accuracy": 0.744,
+    "always_both": 0.7466666666666667,
+    "oracle": 0.8386666666666667,
+    "gain_vs_both": -0.002666666666666706,
+    "oracle_gap": 0.09199999999999997,
+    "oracle_gap_recovery": -0.02898550724637725,
+    "deviation_coverage": 0.052,
+    "deviation_count": 13,
+    "deviation_precision": 0.0,
+    "harmful_deviation_rate": 0.07692307692307693,
+    "beneficial_deviation_count": 0,
+    "harmful_deviation_count": 1,
+    "neutral_deviation_count": 12,
+    "choice_distribution": {
+      "both": 237,
+      "none": 6,
+      "case": 6,
+      "strategy": 1
+    },
+    "cluster_bootstrap": {
+      "point_estimate": -0.0026666666666666666,
+      "ci95": [
+        -0.008369079849513026,
+        0.0
+      ],
+      "bootstrap_resamples": 10000,
+      "random_seed": 20260816,
+      "procedure": "cluster percentile bootstrap by annual_report_group"
+    }
+  },
+  "deployable_candidate_config_path": "pilot/stage4b/stage4b2_deployable_candidate_config.json",
+  "deployable_candidate_config": {
+    "stage": "4B.2",
+    "router_name": "stage4b2_sample_se_deployable_candidate",
+    "frozen_at": "2026-08-16",
+    "status": "candidate_freeze_not_confirmatory",
+    "selection_data": "all 250-query development subset only",
+    "selection_procedure": "same conservative inner GroupKFold procedure with sample-SE paired gain and explicit Always Both candidate",
+    "selected_candidate": {
+      "architecture": "flat_delta",
+      "feature_set": "existing_meta_plus_interaction",
+      "threshold": 0.5,
+      "lambda": null,
+      "mean_utility": 0.7482947663670555,
+      "se_utility": 0.03980903852328979,
+      "mean_gain": 0.0013705616115254893,
+      "se_gain": 0.005809644135436938,
+      "coverage": 0.031889462612354175
+    },
+    "important_note": "Development performance is not confirmatory evidence; this candidate must be evaluated on a fresh holdout before method claims."
+  }
+}

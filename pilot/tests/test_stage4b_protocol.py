@@ -9,11 +9,15 @@ sys.path.insert(0, os.path.join(ROOT, "pilot", "stage4b"))
 sys.path.insert(0, os.path.join(ROOT, "pilot", "stage3"))
 
 from run_development_nested import choices_hierarchical  # noqa: E402
+from run_development_nested import se as inner_se  # noqa: E402
 from stage4b_common import conservative_select, evaluate_realized_by_replicate  # noqa: E402
 from stability_run import JsonlCache  # noqa: E402
 
 
 class Stage4BProtocolTest(unittest.TestCase):
+    def test_inner_se_uses_sample_standard_deviation(self):
+        self.assertAlmostEqual(inner_se([0.0, 1.0]), 0.5)
+
     def test_realized_gain_is_policy_accuracy_minus_both_accuracy(self):
         records = [
             {
