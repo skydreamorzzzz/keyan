@@ -407,3 +407,35 @@
 ### decision
 - **READY FOR TAT-QA STRATEGY RETRIEVAL AUDIT**。
 - 下一轮应固定这份 v0 strategy memory，先做离线 retrieval audit；不要直接进入四臂 execution。
+
+## 20. TAT-QA Strategy Retrieval-Only Audit（2026-08-16）
+
+### scope
+- 只做 frozen `tatqa_strategy_memory_v0.json` 的 strategy retrieval-only audit；未调用 LLM/API，未修改 strategy 内容或 family。
+- 复用 FinQA dense retriever：`BAAI/bge-small-en-v1.5`，top-3。
+- target retrieval query 只使用 inference-time 可见 question / paragraphs / table；answer_type、scale、derivation、operator、schema 只用于 post-hoc audit。
+
+### audit design
+- 固定 dev sample：120 条，seed `20260816`。
+- Gold schema 在当前 30 条 v0 memory 中可命中：111 / 120 = 0.925。
+- Retrieval-text ablation：
+  - A：当前 semantic-rich `retrieval_text`。
+  - B：schema-only deterministic metadata（type/family/schema/source/scale）。
+  - 不调参数，不改 memory。
+
+### results
+- Semantic-rich, all samples：schema top1 0.075；schema top3 0.192；type top3 0.675；family top3 0.208；source top3 0.783；scale top3 0.658。
+- Schema-only, all samples：schema top1 0.058；schema top3 0.183；type top3 0.433；family top3 0.258；source top3 0.633；scale top3 0.608。
+- Eligible-only exact schema top3：semantic 0.207 vs schema-only 0.198（+0.009）。
+- Semantic abstraction strongly improves lookup type retrieval, especially span/multi-span:
+  - span_lookup type top3：semantic 0.980 vs schema-only 0.000。
+  - multi_span_lookup type top3：semantic 0.917 vs schema-only 0.000。
+- But semantic-rich hurts arithmetic retrieval:
+  - arithmetic schema top3：semantic 0.135 vs schema-only 0.423。
+  - arithmetic type top3：semantic 0.385 vs schema-only 1.000。
+
+### decision
+- **NEEDS STRATEGY RETRIEVAL REVISION BEFORE FOUR-ARM DRY-RUN**。
+- Semantic abstraction provides real signal for lookup-style strategies, but a single semantic-rich dense index is not sufficient: exact schema retrieval remains weak and arithmetic retrieval is worse than schema-only.
+- Main failure modes: dense retrieval overweights surface lookup wording; source/scale-specific schema variants are often missed; full-context query text can pull arithmetic questions toward lookup strategies.
+- Next step should be retrieval audit repair, likely a frozen hybrid retrieval policy or type-aware two-stage retrieval, before any four-arm execution.
