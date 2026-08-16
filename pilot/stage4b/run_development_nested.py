@@ -122,52 +122,62 @@ def choices_hierarchical(pred, test_idx, threshold, case_extra=0.15):
         arm_scores = {a: float(pred["arm_prob"][a][pos]) for a in DEVIATIONS}
         best = max(DEVIATIONS, key=lambda a: arm_scores[a])
         if best == "case" and pred["gate_prob"][pos] <= min(0.95, threshold + case_extra):
-            sorted_arms = sorted(DEVIATIONS, key=lambda a: arm_scores[a], reverse=True)
-            best = next((a for a in sorted_arms if a != "case"), "both")
+            choices[int(idx)] = "both"
+            continue
         choices[int(idx)] = best
     return choices
 
 
-def eval_choices(records, choices: dict[int, str]) -> tuple[float, float]:
-    vals = [action_correct_expected(records, i, choices[i]) for i in sorted(choices)]
+def eval_choices(records, choices: dict[int, str]) -> tuple[float, float, float]:
+    idxs = sorted(choices)
+    vals = [action_correct_expected(records, i, choices[i]) for i in idxs]
+    both_vals = [p_correct(records, i, "both") for i in idxs]
     cov = [choices[i] != "both" for i in sorted(choices)]
-    return float(mean(vals)), float(mean(cov))
+    return float(mean(vals)), float(mean(vals) - mean(both_vals)), float(mean(cov))
 
 
 def inner_candidates(records, synthetic, train_idx, groups) -> list[dict[str, Any]]:
     train_idx = np.array(train_idx)
     inner_groups = [groups[i] for i in train_idx]
-    candidates: dict[tuple, dict[str, Any]] = {}
+    candidates: dict[tuple, dict[str, Any]] = {("always_both", "none", None, None): {"fold_utils": [], "fold_gains": [], "fold_covs": []}}
     for val_train_pos, val_pos in folds_for_groups(inner_groups, n_splits=3):
         inner_train = train_idx[val_train_pos]
         val = train_idx[val_pos]
+        both_choices = {int(i): "both" for i in val}
+        util, gain, cov = eval_choices(records, both_choices)
+        candidates[("always_both", "none", None, None)]["fold_utils"].append(util)
+        candidates[("always_both", "none", None, None)]["fold_gains"].append(gain)
+        candidates[("always_both", "none", None, None)]["fold_covs"].append(cov)
         for fs in FEATURE_SETS:
             preds_flat = fit_flat_delta(records, synthetic, fs, inner_train, val)
             for t in THRESHOLDS:
                 choices = choices_flat_delta(preds_flat, val, t)
-                util, cov = eval_choices(records, choices)
+                util, gain, cov = eval_choices(records, choices)
                 key = ("flat_delta", fs, t, None)
-                candidates.setdefault(key, {"fold_utils": [], "fold_covs": []})
+                candidates.setdefault(key, {"fold_utils": [], "fold_gains": [], "fold_covs": []})
                 candidates[key]["fold_utils"].append(util)
+                candidates[key]["fold_gains"].append(gain)
                 candidates[key]["fold_covs"].append(cov)
 
             probs = fit_gain_harm(records, synthetic, fs, inner_train, val)
             for lam in LAMBDAS:
                 for t in THRESHOLDS:
                     choices = choices_gain_harm(probs, val, t, lam)
-                    util, cov = eval_choices(records, choices)
+                    util, gain, cov = eval_choices(records, choices)
                     key = ("gain_harm", fs, t, lam)
-                    candidates.setdefault(key, {"fold_utils": [], "fold_covs": []})
+                    candidates.setdefault(key, {"fold_utils": [], "fold_gains": [], "fold_covs": []})
                     candidates[key]["fold_utils"].append(util)
+                    candidates[key]["fold_gains"].append(gain)
                     candidates[key]["fold_covs"].append(cov)
 
             pred_h = fit_hierarchical(records, synthetic, fs, inner_train, val)
             for t in GATE_THRESHOLDS:
                 choices = choices_hierarchical(pred_h, val, t)
-                util, cov = eval_choices(records, choices)
+                util, gain, cov = eval_choices(records, choices)
                 key = ("hierarchical", fs, t, None)
-                candidates.setdefault(key, {"fold_utils": [], "fold_covs": []})
+                candidates.setdefault(key, {"fold_utils": [], "fold_gains": [], "fold_covs": []})
                 candidates[key]["fold_utils"].append(util)
+                candidates[key]["fold_gains"].append(gain)
                 candidates[key]["fold_covs"].append(cov)
     out = []
     for (arch, fs, t, lam), rec in candidates.items():
@@ -178,8 +188,11 @@ def inner_candidates(records, synthetic, train_idx, groups) -> list[dict[str, An
             "lambda": lam,
             "mean_utility": float(mean(rec["fold_utils"])),
             "se_utility": float(se(rec["fold_utils"])),
+            "mean_gain": float(mean(rec["fold_gains"])),
+            "se_gain": float(se(rec["fold_gains"])),
             "coverage": float(mean(rec["fold_covs"])),
             "fold_utils": rec["fold_utils"],
+            "fold_gains": rec["fold_gains"],
         })
     return out
 
@@ -187,6 +200,8 @@ def inner_candidates(records, synthetic, train_idx, groups) -> list[dict[str, An
 def fit_predict_selected(records, synthetic, selected, train_idx, test_idx):
     arch = selected["architecture"]
     fs = selected["feature_set"]
+    if arch == "always_both":
+        return {int(i): "both" for i in test_idx}
     if arch == "flat_delta":
         preds = fit_flat_delta(records, synthetic, fs, train_idx, test_idx)
         return choices_flat_delta(preds, test_idx, selected["threshold"])
@@ -224,6 +239,7 @@ def run() -> dict[str, Any]:
             "inner": "GroupKFold on outer train only",
             "preprocessing": "DictVectorizer fit inside each train fold only",
             "selection": "one-standard-error conservative selection; tie prefers lower coverage/higher threshold/higher lambda",
+            "selection_metric": "paired inner-CV gain over Always Both",
             "candidate_feature_sets": FEATURE_SETS,
             "candidate_architectures": ARCHITECTURES,
         },

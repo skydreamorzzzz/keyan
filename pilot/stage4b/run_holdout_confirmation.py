@@ -101,9 +101,10 @@ class Cache:
         if os.path.exists(path):
             for line in open(path):
                 rec = json.loads(line)
+                if "runtime" not in rec:
+                    raise RuntimeError(f"holdout cache record lacks runtime provenance: {path}")
+                self.validate(rec["runtime"])
                 self.data[rec["key"]] = rec
-                if rec.get("runtime") and self.expected_runtime is None:
-                    self.expected_runtime = rec["runtime"]
 
     def validate(self, runtime: dict[str, Any]) -> None:
         if self.expected_runtime is None:
@@ -116,7 +117,9 @@ class Cache:
 
     def call(self, key: str, prompt: str, system: str) -> dict[str, Any]:
         if key in self.data:
-            return self.data[key]
+            rec = self.data[key]
+            self.validate(rec["runtime"])
+            return rec
         response = llm.call_once_with_metadata(
             [{"role": "system", "content": system}, {"role": "user", "content": prompt}],
             max_tokens=600,

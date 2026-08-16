@@ -140,18 +140,21 @@ def vectorize_train_test(records, synthetic, feature_set, train_idx, test_idx):
 
 
 def conservative_select(candidates: list[dict[str, Any]], one_se: bool = True) -> dict[str, Any]:
-    """Select by one-standard-error, then conservative coverage/gating."""
-    best_mean = max(c["mean_utility"] for c in candidates)
-    best = max(candidates, key=lambda c: c["mean_utility"])
-    cutoff = best_mean - best.get("se_utility", 0.0) if one_se else best_mean
-    eligible = [c for c in candidates if c["mean_utility"] >= cutoff - 1e-12]
+    """Select by paired gain one-standard-error, then conservative coverage/gating."""
+    metric = "mean_gain" if "mean_gain" in candidates[0] else "mean_utility"
+    se_metric = "se_gain" if metric == "mean_gain" else "se_utility"
+    best_mean = max(c[metric] for c in candidates)
+    best = max(candidates, key=lambda c: c[metric])
+    cutoff = best_mean - best.get(se_metric, 0.0) if one_se else best_mean
+    eligible = [c for c in candidates if c[metric] >= cutoff - 1e-12]
     return max(
         eligible,
         key=lambda c: (
             -c.get("coverage", 0.0),
+            c.get("architecture") == "always_both",
             c.get("threshold", 0.0),
             c.get("lambda", 0.0),
-            c.get("mean_utility", 0.0),
+            c.get(metric, 0.0),
         ),
     )
 
@@ -185,6 +188,7 @@ def evaluate_expected(records: list[dict[str, Any]], choices: list[str], group_k
     deviated = [i for i, c in enumerate(choices) if c != "both"]
     beneficial = [i for i in deviated if records[i]["targets"]["deviations"][choices[i]]["delta"] > 0]
     harmful = [i for i in deviated if records[i]["targets"]["deviations"][choices[i]]["delta"] < 0]
+    neutral = [i for i in deviated if records[i]["targets"]["deviations"][choices[i]]["delta"] == 0]
     diff = {i: action_correct_expected(records, i, choices[i]) - p_correct(records, i, "both") for i in range(n)}
     return {
         "accuracy": acc,
@@ -199,6 +203,7 @@ def evaluate_expected(records: list[dict[str, Any]], choices: list[str], group_k
         "harmful_deviation_rate": len(harmful) / len(deviated) if deviated else 0.0,
         "beneficial_deviation_count": len(beneficial),
         "harmful_deviation_count": len(harmful),
+        "neutral_deviation_count": len(neutral),
         "choice_distribution": dict(Counter(choices)),
         "cluster_bootstrap": cluster_bootstrap(diff, records, group_key),
     }
@@ -207,12 +212,15 @@ def evaluate_expected(records: list[dict[str, Any]], choices: list[str], group_k
 def evaluate_realized_by_replicate(records: list[dict[str, Any]], choices: list[str]) -> dict[str, Any]:
     out = {}
     for rep in ["rn1", "rn2", "rn3"]:
-        policy = [int(records[i]["replicate_correctness"][rep][choices[i]]) for i in range(len(records))]
-        both = [int(records[i]["replicate_correctness"][rep]["both"]) for i in range(len(records))]
+        policy = np.array([float(records[i]["replicate_correctness"][rep][choices[i]]) for i in range(len(records))], dtype=float)
+        both = np.array([float(records[i]["replicate_correctness"][rep]["both"]) for i in range(len(records))], dtype=float)
+        policy_acc = float(np.mean(policy))
+        both_acc = float(np.mean(both))
         out[rep] = {
-            "policy_accuracy": float(mean(policy)),
-            "both_accuracy": float(mean(both)),
-            "gain_vs_both": float(mean(np.array(policy) - np.array(both))),
+            "policy_accuracy": policy_acc,
+            "both_accuracy": both_acc,
+            "gain_vs_both": float(policy_acc - both_acc),
+            "paired_gain_vs_both": float(np.mean(policy - both)),
         }
     gains = [v["gain_vs_both"] for v in out.values()]
     out["_summary"] = {"mean_gain": float(mean(gains)), "min_gain": float(min(gains)), "max_gain": float(max(gains)), "range": float(max(gains) - min(gains))}

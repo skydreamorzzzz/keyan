@@ -29,13 +29,15 @@ FIXED = [
 def select_params_for_fixed(records, synthetic, train_idx, groups, arch, fs):
     cands = [
         c for c in inner_candidates(records, synthetic, train_idx, groups)
-        if c["architecture"] == arch and c["feature_set"] == fs
+        if (c["architecture"] == arch and c["feature_set"] == fs) or c["architecture"] == "always_both"
     ]
     return conservative_select(cands, one_se=True)
 
 
 def predict(records, synthetic, selected, train_idx, test_idx):
     arch, fs = selected["architecture"], selected["feature_set"]
+    if arch == "always_both":
+        return {int(i): "both" for i in test_idx}
     if arch == "flat_delta":
         return choices_flat_delta(fit_flat_delta(records, synthetic, fs, train_idx, test_idx), test_idx, selected["threshold"])
     if arch == "gain_harm":

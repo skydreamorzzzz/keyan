@@ -89,12 +89,16 @@ class JsonlCache:
         self.expected_runtime = expected_runtime
         os.makedirs(os.path.dirname(path), exist_ok=True)
         if os.path.exists(path):
-            for line in open(path):
-                try:
-                    rec = json.loads(line)
-                    self.cache[rec["key"]] = rec
-                except Exception:
-                    pass
+            with open(path) as f:
+                for line in f:
+                    try:
+                        rec = json.loads(line)
+                        if "runtime" not in rec:
+                            raise RuntimeError(f"Cache record lacks runtime provenance: {path}")
+                        self.validate_runtime(rec["runtime"])
+                        self.cache[rec["key"]] = rec
+                    except Exception:
+                        raise
 
     def validate_runtime(self, runtime: dict[str, Any]) -> None:
         if not self.expected_runtime:
@@ -112,6 +116,7 @@ class JsonlCache:
         if key in self.cache:
             rec = self.cache[key]
             if isinstance(rec, dict):
+                self.validate_runtime(rec.get("runtime", {}))
                 return rec["out"], rec.get("runtime", {})
             return rec, {}
         messages = [{"role": "system", "content": system}, {"role": "user", "content": prompt}]

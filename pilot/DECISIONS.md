@@ -250,3 +250,36 @@
 - **DEVELOPMENT SIGNAL DID NOT REPLICATE**。
 - Stage 4B 不否定 fixed-runtime marginal-utility heterogeneity；它否定的是“当前 Stage 4A inference-safe features/model-search 已足以冻结一个 conservative unseen-query router”的更强 claim。
 - 下一步不要继续在同一 250 条上调分；应先提高 observable state：retrieved-content reasoning、operand-role verification、scale/unit consistency、Case/Strategy conflict modeling，然后预注册新 router 并在新 holdout 上确认。
+
+## 15. Stage 4B.1 Protocol Repair & Re-audit（2026-08-16）
+
+### 修复项
+- 修复 `evaluate_realized_by_replicate()`：不再用 `statistics.mean(np.array(...))`；改为显式 float numpy array，并保证 `gain_vs_both = policy_accuracy - both_accuracy`，同时保存 paired diagnostic。
+- 修复 inner-CV selection：不再对 absolute accuracy 做 one-SE；每个 inner fold 计算 paired gain over Always Both，并基于 mean gain / SE 做 conservative one-SE。
+- 显式加入 `Always Both` candidate（gain=0, coverage=0）；不确定时优先 Both。
+- 修复 hierarchical Case gate：Case confidence 不足时直接 abstain 到 Both，不再自动换成第二名 deviation arm。
+- 加固 cache provenance：旧 cache 加载时验证所有 runtime/fingerprint；cache hit 也验证；缺 provenance 或 drift 直接 fail。
+- 新增测试：`pilot/tests/test_stage4b_protocol.py` 覆盖 realized gain、conservative selection、Case abstention、cache runtime drift。
+
+### re-audit 结果
+- 未调用 API，未新增 feature，未扩大模型/threshold/lambda 搜索空间；只用现有 `rn1/rn2/rn3`。
+- corrected fully nested annual-report OOF：
+  - Always Both 0.7467；nested policy 0.7520；expected gain +0.53pp；Oracle Gap Recovery 5.8%。
+  - deviation coverage 5.6%（14/250）：Both 236、None 8、Case 5、Strategy 1。
+  - beneficial/harmful/neutral deviations：2 / 1 / 11。
+  - annual-report cluster CI [-0.54pp, +1.92pp]，仍跨 0。
+- corrected realized gain：
+  - rn1：0.7560 vs Both 0.7480，+0.80pp。
+  - rn2：0.7480 vs Both 0.7440，+0.40pp。
+  - rn3：0.7520 vs Both 0.7480，+0.40pp。
+- fixed candidate audit（均与 explicit Both candidate 竞争）：
+  - flat delta + compatibility：-0.67pp，CI [-2.56pp, +0.83pp]。
+  - hierarchical + compatibility：+0.00pp，CI [-1.17pp, +1.21pp]。
+  - hierarchical + synthetic interaction：-0.27pp，CI [-0.84pp, +0.00pp]。
+  - gain/harm + synthetic interaction：+0.13pp，CI [-0.79pp, +1.17pp]。
+
+### 判定
+- **SIGNAL SURVIVES BUT NOT CONFIRMED**。
+- Stage 4B 的 “collapse to Both” 结论部分来自协议 artifact；修复后 fully nested policy 出现小幅、跨 rn1/rn2/rn3 方向一致的正 gain。
+- 但当前证据仍很弱：CI 跨 0，beneficial deviation 只有 2 个，多数 deviation 是 neutral，fixed candidates 没有稳定确认。
+- 下一步不应把 +0.53pp 包装成 confirmed router；应在更好 observability 或明确 accuracy-memory objective 下做预注册确认。
