@@ -1,0 +1,301 @@
+{
+  "n": 250,
+  "annual_report_groups": 158,
+  "page_groups": 187,
+  "deviation_support": {
+    "none": {
+      "any_run": 18,
+      "stable_2of3": 18,
+      "stable_3of3": 17,
+      "annual_reports_with_any": 18,
+      "top_annual_reports": [
+        [
+          "HWM/2017",
+          1
+        ],
+        [
+          "APD/2019",
+          1
+        ],
+        [
+          "AON/2014",
+          1
+        ],
+        [
+          "PNC/2009",
+          1
+        ],
+        [
+          "AMT/2005",
+          1
+        ],
+        [
+          "PNC/2011",
+          1
+        ],
+        [
+          "IP/2005",
+          1
+        ],
+        [
+          "AAL/2015",
+          1
+        ],
+        [
+          "VTR/2007",
+          1
+        ],
+        [
+          "UNP/2011",
+          1
+        ]
+      ],
+      "max_annual_report_share": 0.05555555555555555,
+      "family_distribution": {
+        "ratio_percent": 4,
+        "other": 5,
+        "change": 6,
+        "average": 2,
+        "aggregation": 1
+      }
+    },
+    "case": {
+      "any_run": 6,
+      "stable_2of3": 5,
+      "stable_3of3": 5,
+      "annual_reports_with_any": 6,
+      "top_annual_reports": [
+        [
+          "ILMN/2007",
+          1
+        ],
+        [
+          "HWM/2017",
+          1
+        ],
+        [
+          "PNC/2009",
+          1
+        ],
+        [
+          "FRT/2005",
+          1
+        ],
+        [
+          "GPN/2009",
+          1
+        ],
+        [
+          "C/2010",
+          1
+        ]
+      ],
+      "max_annual_report_share": 0.16666666666666666,
+      "family_distribution": {
+        "ratio_percent": 3,
+        "change": 2,
+        "average": 1
+      }
+    },
+    "strategy": {
+      "any_run": 12,
+      "stable_2of3": 12,
+      "stable_3of3": 10,
+      "annual_reports_with_any": 12,
+      "top_annual_reports": [
+        [
+          "AON/2014",
+          1
+        ],
+        [
+          "UNP/2011",
+          1
+        ],
+        [
+          "AMT/2005",
+          1
+        ],
+        [
+          "GPN/2009",
+          1
+        ],
+        [
+          "JPM/2018",
+          1
+        ],
+        [
+          "IP/2005",
+          1
+        ],
+        [
+          "AAL/2015",
+          1
+        ],
+        [
+          "C/2010",
+          1
+        ],
+        [
+          "VNO/2012",
+          1
+        ],
+        [
+          "PM/2015",
+          1
+        ]
+      ],
+      "max_annual_report_share": 0.08333333333333333,
+      "family_distribution": {
+        "ratio_percent": 6,
+        "average": 1,
+        "change": 4,
+        "aggregation": 1
+      }
+    }
+  },
+  "overlap": {
+    "none+strategy": {
+      "any_overlap_n": 8,
+      "jaccard": 0.36363636363636365
+    },
+    "case+none": {
+      "any_overlap_n": 3,
+      "jaccard": 0.14285714285714285
+    },
+    "case+strategy": {
+      "any_overlap_n": 1,
+      "jaccard": 0.058823529411764705
+    }
+  },
+  "gain_harm_distribution": {
+    "none": {
+      "mean_gain": 0.07066666666666667,
+      "mean_harm": 0.124,
+      "mean_delta": -0.05333333333333334,
+      "positive_delta_n": 18,
+      "zero_delta_n": 197,
+      "negative_delta_n": 35,
+      "gain_hist": {
+        "0.0": 232,
+        "1.0": 17,
+        "0.6666666666666666": 1
+      },
+      "harm_hist": {
+        "0.0": 215,
+        "0.6666666666666666": 8,
+        "1.0": 25,
+        "0.3333333333333333": 2
+      },
+      "delta_hist": {
+        "0.0": 197,
+        "-0.6666666666666667": 6,
+        "-1.0": 25,
+        "1.0": 17,
+        "-0.33333333333333337": 2,
+        "-0.6666666666666666": 2,
+        "0.6666666666666667": 1
+      }
+    },
+    "case": {
+      "mean_gain": 0.021333333333333333,
+      "mean_harm": 0.052,
+      "mean_delta": -0.03066666666666667,
+      "positive_delta_n": 6,
+      "zero_delta_n": 229,
+      "negative_delta_n": 15,
+      "gain_hist": {
+        "0.0": 244,
+        "0.3333333333333333": 1,
+        "1.0": 5
+      },
+      "harm_hist": {
+        "0.0": 235,
+        "1.0": 10,
+        "0.6666666666666666": 4,
+        "0.3333333333333333": 1
+      },
+      "delta_hist": {
+        "0.0": 229,
+        "-1.0": 10,
+        "0.3333333333333333": 1,
+        "1.0": 5,
+        "-0.6666666666666667": 2,
+        "-0.6666666666666666": 2,
+        "-0.3333333333333333": 1
+      }
+    },
+    "strategy": {
+      "mean_gain": 0.04533333333333333,
+      "mean_harm": 0.08666666666666667,
+      "mean_delta": -0.04133333333333333,
+      "positive_delta_n": 12,
+      "zero_delta_n": 214,
+      "negative_delta_n": 24,
+      "gain_hist": {
+        "0.0": 238,
+        "1.0": 10,
+        "0.6666666666666666": 2
+      },
+      "harm_hist": {
+        "0.0": 226,
+        "1.0": 17,
+        "0.6666666666666666": 7
+      },
+      "delta_hist": {
+        "0.0": 214,
+        "-1.0": 17,
+        "1.0": 10,
+        "-0.6666666666666666": 2,
+        "0.6666666666666666": 1,
+        "-0.6666666666666667": 5,
+        "0.6666666666666667": 1
+      }
+    }
+  },
+  "all_deviation_events": {
+    "any_deviation_query_n": 24,
+    "annual_reports_with_any_deviation": 22,
+    "top_annual_reports": [
+      [
+        "UNP/2011",
+        2
+      ],
+      [
+        "GPN/2009",
+        2
+      ],
+      [
+        "ILMN/2007",
+        1
+      ],
+      [
+        "HWM/2017",
+        1
+      ],
+      [
+        "APD/2019",
+        1
+      ],
+      [
+        "AON/2014",
+        1
+      ],
+      [
+        "PNC/2009",
+        1
+      ],
+      [
+        "FRT/2005",
+        1
+      ],
+      [
+        "AMT/2005",
+        1
+      ],
+      [
+        "JPM/2018",
+        1
+      ]
+    ]
+  }
+}

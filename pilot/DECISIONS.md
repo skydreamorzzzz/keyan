@@ -170,3 +170,45 @@
 - **PROCEED TO MARGINAL-UTILITY SELECTOR**。
 - 下一阶段方向：Both as default action + estimate Case/Strategy/None relative marginal utility + confidence gating。
 - 不再主推 four-arm independent correctness classification。
+
+## 13. Stage 4A Marginal-Utility Learnability Audit（2026-08-16）
+
+### framing 修正
+- 上一轮 +8.9pp held-out transfer 是 **same-query repeated-history ceiling**：用同一 query 前两轮真实 correctness 预测第三轮 preference。不能当 unseen-query selector 性能。
+- Stage 4A 改为 annual-report grouped unseen-query/new-report 泛化：default=Both，只预测 `{None, Case, Strategy}` 相对 Both 的 marginal utility。
+
+### target
+- `delta_a = mean_r[correct(a)-correct(Both)]`，主 repeated target 用 `rn1/rn2/rn3`。
+- 同时保存 `gain_a=P(a correct & Both wrong)`、`harm_a=P(a wrong & Both correct)`、`net_utility=gain-harm`。
+- 不再把 arm 本身 correctness 当核心 target。
+
+### grouping / support
+- 新增 `annual_report_group=COMPANY/YEAR`，主结果用 annual-report GroupKFold；`page_group=COMPANY/YEAR/page_x.pdf` 仅 secondary。
+- n=250，annual groups=158，page groups=187。
+- Deviation support 稀疏但不集中：任意 deviation 24/250，覆盖 22 annual reports。
+  - None>Both：18 any，18 >=2/3，17 3/3。
+  - Case>Both：6 any，5 >=2/3，5 3/3。
+  - Strategy>Both：12 any，12 >=2/3，10 3/3。
+
+### synthetic mechanism features
+- 生成 250 条 fixed-schema LLM features；只给 question/context/retrieved cases/retrieved strategies，不给 correctness/gold answer/gold program/oracle/gold operation。
+- runtime 固定 `deepseek-v4-flash`，fingerprint `a26a7955944dc5c60445bff77fac9c8e`，temperature 0；cache key 含完整输入/schema/runtime。
+- feature groups：scale、compatibility、interaction。该设计是 exploratory，来自 Stage 3/3.1 failure modes（scale pollution、memory conflict），后续需外部 holdout confirm。
+
+### leakage controls
+- outer annual-report GroupKFold。
+- inner grouped CV 只在 train fold 选 threshold/lambda。
+- train fold 外 statistics 不参与 prediction/tie-breaking/threshold。
+- paired bootstrap 主用 annual-report cluster bootstrap；query-level bootstrap 只 secondary。
+
+### 结果
+- Always Both expected accuracy：0.7467；Oracle：0.8387；gap：0.0920。
+- Existing features best：`existing_meta/delta/ridge`，0.7507，+0.4pp，cluster CI [-1.13pp, +2.01pp]。
+- Best overall：`existing_meta + compatibility / delta ridge`，0.7640，+1.73pp，gap recovery 18.8%，coverage 20.8%，beneficial deviations 8，harmful 4，cluster CI [-0.92pp, +4.49pp]，query CI [-0.67pp, +4.40pp]。
+- Best gain/harm：`synthetic interaction / logreg`，0.7560，+0.93pp，harm rate 1.5%，cluster CI [-0.38pp, +2.49pp]。
+- Page-group secondary best：0.7560，+0.93pp；不作为主 claim。
+
+### 判定
+- **WEAK BUT PROMISING — IMPROVE OBSERVABILITY**。
+- stable heterogeneity 已存在，但当前 inference-time observable state 对 unseen annual reports 只有弱预测力；还不能进入正式 method development。
+- 下一步应增强 retrieved-content compatibility observability：operand-role alignment、scale/unit verification、case/strategy operation consistency，以及更严格 confidence gate。

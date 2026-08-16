@@ -1,0 +1,4141 @@
+{
+  "_meta": {
+    "n": 250,
+    "group_key": "annual_report_group",
+    "feature_sets": [
+      "existing_meta",
+      "existing_all",
+      "synthetic",
+      "synthetic_scale",
+      "synthetic_compatibility",
+      "synthetic_interaction",
+      "existing_meta_plus_scale",
+      "existing_meta_plus_compatibility",
+      "existing_meta_plus_interaction",
+      "existing_meta_plus_synthetic",
+      "existing_all_plus_synthetic"
+    ],
+    "formulations": [
+      "delta_regression",
+      "gain_harm"
+    ],
+    "bootstrap": "cluster by annual_report_group"
+  },
+  "always_both": 0.7466666666666667,
+  "oracle": 0.8386666666666667,
+  "results": {
+    "existing_meta/delta_regression/ridge": {
+      "accuracy": 0.7506666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0040000000000000036,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.04347826086956527,
+      "regret_vs_oracle": 0.08799999999999997,
+      "deviation_coverage": 0.156,
+      "deviation_count": 39,
+      "deviation_precision": 0.10256410256410256,
+      "deviation_recall": 0.16666666666666666,
+      "harmful_deviation_rate": 0.07692307692307693,
+      "beneficial_deviation_count": 4,
+      "harmful_deviation_count": 3,
+      "net_benefit_sum": 1.0,
+      "choice_distribution": {
+        "case": 2,
+        "both": 211,
+        "none": 21,
+        "strategy": 16
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.004,
+        "ci95": [
+          -0.011299435028248588,
+          0.020080677319205896
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": 0.004000000000000002,
+        "ci95": [
+          -0.014666666666666666,
+          0.024
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.05
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_meta/delta_regression/tree": {
+      "accuracy": 0.7373333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.009333333333333416,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.10144927536231976,
+      "regret_vs_oracle": 0.10133333333333339,
+      "deviation_coverage": 0.1,
+      "deviation_count": 25,
+      "deviation_precision": 0.12,
+      "deviation_recall": 0.125,
+      "harmful_deviation_rate": 0.24,
+      "beneficial_deviation_count": 3,
+      "harmful_deviation_count": 6,
+      "net_benefit_sum": -2.3333333333333335,
+      "choice_distribution": {
+        "both": 225,
+        "none": 10,
+        "case": 6,
+        "strategy": 9
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.009333333333333332,
+        "ci95": [
+          -0.03125,
+          0.011019283746556476
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.009333333333333332,
+        "ci95": [
+          -0.030666666666666665,
+          0.010666666666666668
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.02
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_meta/delta_regression/rf": {
+      "accuracy": 0.736,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.010666666666666713,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.11594202898550779,
+      "regret_vs_oracle": 0.10266666666666668,
+      "deviation_coverage": 0.12,
+      "deviation_count": 30,
+      "deviation_precision": 0.03333333333333333,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.13333333333333333,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 4,
+      "net_benefit_sum": -2.6666666666666665,
+      "choice_distribution": {
+        "both": 220,
+        "none": 16,
+        "case": 9,
+        "strategy": 5
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.010666666666666666,
+        "ci95": [
+          -0.02813081720029784,
+          0.004445440956651704
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.010666666666666666,
+        "ci95": [
+          -0.028,
+          0.004
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.05
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.1
+        }
+      ]
+    },
+    "existing_meta/gain_harm/logreg": {
+      "accuracy": 0.724,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.022666666666666724,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.2463768115942036,
+      "regret_vs_oracle": 0.1146666666666667,
+      "deviation_coverage": 0.48,
+      "deviation_count": 120,
+      "deviation_precision": 0.06666666666666667,
+      "deviation_recall": 0.3333333333333333,
+      "harmful_deviation_rate": 0.11666666666666667,
+      "beneficial_deviation_count": 8,
+      "harmful_deviation_count": 14,
+      "net_benefit_sum": -5.666666666666667,
+      "choice_distribution": {
+        "both": 130,
+        "strategy": 32,
+        "none": 61,
+        "case": 27
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.02266666666666667,
+        "ci95": [
+          -0.06,
+          0.013442220626006687
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.02266666666666667,
+        "ci95": [
+          -0.057333333333333326,
+          0.010666666666666668
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.5,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        }
+      ]
+    },
+    "existing_meta/gain_harm/tree": {
+      "accuracy": 0.7253333333333334,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.021333333333333315,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.23188405797101436,
+      "regret_vs_oracle": 0.11333333333333329,
+      "deviation_coverage": 0.456,
+      "deviation_count": 114,
+      "deviation_precision": 0.05263157894736842,
+      "deviation_recall": 0.25,
+      "harmful_deviation_rate": 0.10526315789473684,
+      "beneficial_deviation_count": 6,
+      "harmful_deviation_count": 12,
+      "net_benefit_sum": -5.333333333333334,
+      "choice_distribution": {
+        "both": 136,
+        "none": 52,
+        "strategy": 42,
+        "case": 20
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.021333333333333336,
+        "ci95": [
+          -0.05196451204055767,
+          0.007692307692307692
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.021333333333333336,
+        "ci95": [
+          -0.052,
+          0.009333333333333332
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "existing_meta/gain_harm/rf": {
+      "accuracy": 0.7386666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.008000000000000007,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.08695652173913054,
+      "regret_vs_oracle": 0.09999999999999998,
+      "deviation_coverage": 0.14,
+      "deviation_count": 35,
+      "deviation_precision": 0.05714285714285714,
+      "deviation_recall": 0.08333333333333333,
+      "harmful_deviation_rate": 0.11428571428571428,
+      "beneficial_deviation_count": 2,
+      "harmful_deviation_count": 4,
+      "net_benefit_sum": -2.0,
+      "choice_distribution": {
+        "both": 215,
+        "strategy": 14,
+        "case": 19,
+        "none": 2
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.008,
+        "ci95": [
+          -0.026041666666666664,
+          0.008196721311475409
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.008,
+        "ci95": [
+          -0.026666666666666665,
+          0.009333333333333332
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "existing_all/delta_regression/ridge": {
+      "accuracy": 0.728,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.01866666666666672,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.20289855072463833,
+      "regret_vs_oracle": 0.11066666666666669,
+      "deviation_coverage": 0.616,
+      "deviation_count": 154,
+      "deviation_precision": 0.05844155844155844,
+      "deviation_recall": 0.375,
+      "harmful_deviation_rate": 0.09740259740259741,
+      "beneficial_deviation_count": 9,
+      "harmful_deviation_count": 15,
+      "net_benefit_sum": -4.666666666666667,
+      "choice_distribution": {
+        "case": 49,
+        "both": 96,
+        "strategy": 42,
+        "none": 63
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.018666666666666668,
+        "ci95": [
+          -0.056475411032911836,
+          0.01837270341207349
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.018666666666666665,
+        "ci95": [
+          -0.05466666666666666,
+          0.017333333333333336
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.0
+        },
+        {
+          "threshold": 0.0
+        },
+        {
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_all/delta_regression/tree": {
+      "accuracy": 0.712,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.034666666666666734,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.3768115942028994,
+      "regret_vs_oracle": 0.1266666666666667,
+      "deviation_coverage": 0.268,
+      "deviation_count": 67,
+      "deviation_precision": 0.014925373134328358,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.16417910447761194,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 11,
+      "net_benefit_sum": -8.666666666666666,
+      "choice_distribution": {
+        "both": 183,
+        "none": 29,
+        "strategy": 24,
+        "case": 14
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.03466666666666667,
+        "ci95": [
+          -0.06072874493927125,
+          -0.012396694214876033
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.03466666666666667,
+        "ci95": [
+          -0.05866666666666667,
+          -0.013333333333333332
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.02
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_all/delta_regression/rf": {
+      "accuracy": 0.74,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.00666666666666671,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.07246376811594252,
+      "regret_vs_oracle": 0.09866666666666668,
+      "deviation_coverage": 0.036,
+      "deviation_count": 9,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.2222222222222222,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 2,
+      "net_benefit_sum": -1.6666666666666665,
+      "choice_distribution": {
+        "both": 241,
+        "none": 7,
+        "strategy": 2
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.006666666666666666,
+        "ci95": [
+          -0.017545514730221777,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.006666666666666666,
+        "ci95": [
+          -0.017333333333333333,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.05
+        },
+        {
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_all/gain_harm/logreg": {
+      "accuracy": 0.732,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.014666666666666717,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.15942028985507306,
+      "regret_vs_oracle": 0.10666666666666669,
+      "deviation_coverage": 0.404,
+      "deviation_count": 101,
+      "deviation_precision": 0.0297029702970297,
+      "deviation_recall": 0.125,
+      "harmful_deviation_rate": 0.06930693069306931,
+      "beneficial_deviation_count": 3,
+      "harmful_deviation_count": 7,
+      "net_benefit_sum": -3.6666666666666665,
+      "choice_distribution": {
+        "none": 37,
+        "both": 149,
+        "case": 24,
+        "strategy": 40
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.014666666666666666,
+        "ci95": [
+          -0.03790849673202615,
+          0.0068870523415977955
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.014666666666666666,
+        "ci95": [
+          -0.037333333333333336,
+          0.008
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_all/gain_harm/tree": {
+      "accuracy": 0.7386666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.008000000000000007,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.08695652173913054,
+      "regret_vs_oracle": 0.09999999999999998,
+      "deviation_coverage": 0.456,
+      "deviation_count": 114,
+      "deviation_precision": 0.07894736842105263,
+      "deviation_recall": 0.375,
+      "harmful_deviation_rate": 0.10526315789473684,
+      "beneficial_deviation_count": 9,
+      "harmful_deviation_count": 12,
+      "net_benefit_sum": -2.0,
+      "choice_distribution": {
+        "strategy": 56,
+        "both": 136,
+        "none": 48,
+        "case": 10
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.008,
+        "ci95": [
+          -0.043824701195219126,
+          0.027453682260305656
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.008000000000000002,
+        "ci95": [
+          -0.042666666666666665,
+          0.025333333333333336
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "existing_all/gain_harm/rf": {
+      "accuracy": 0.74,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.00666666666666671,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.07246376811594252,
+      "regret_vs_oracle": 0.09866666666666668,
+      "deviation_coverage": 0.136,
+      "deviation_count": 34,
+      "deviation_precision": 0.029411764705882353,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.08823529411764706,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 3,
+      "net_benefit_sum": -1.6666666666666665,
+      "choice_distribution": {
+        "both": 216,
+        "strategy": 20,
+        "case": 11,
+        "none": 3
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.006666666666666666,
+        "ci95": [
+          -0.022666666666666665,
+          0.007782101167315175
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.006666666666666666,
+        "ci95": [
+          -0.022666666666666665,
+          0.008
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.5,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "synthetic/delta_regression/ridge": {
+      "accuracy": 0.7333333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.01333333333333342,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.14492753623188503,
+      "regret_vs_oracle": 0.10533333333333339,
+      "deviation_coverage": 0.128,
+      "deviation_count": 32,
+      "deviation_precision": 0.0625,
+      "deviation_recall": 0.08333333333333333,
+      "harmful_deviation_rate": 0.1875,
+      "beneficial_deviation_count": 2,
+      "harmful_deviation_count": 6,
+      "net_benefit_sum": -3.333333333333333,
+      "choice_distribution": {
+        "both": 218,
+        "none": 21,
+        "case": 5,
+        "strategy": 6
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.013333333333333334,
+        "ci95": [
+          -0.035856573705179286,
+          0.0064108751608751525
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.013333333333333334,
+        "ci95": [
+          -0.033333333333333326,
+          0.004000000000000002
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "synthetic/delta_regression/tree": {
+      "accuracy": 0.732,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.014666666666666717,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.15942028985507306,
+      "regret_vs_oracle": 0.10666666666666669,
+      "deviation_coverage": 0.136,
+      "deviation_count": 34,
+      "deviation_precision": 0.058823529411764705,
+      "deviation_recall": 0.08333333333333333,
+      "harmful_deviation_rate": 0.17647058823529413,
+      "beneficial_deviation_count": 2,
+      "harmful_deviation_count": 6,
+      "net_benefit_sum": -3.6666666666666665,
+      "choice_distribution": {
+        "none": 17,
+        "both": 216,
+        "case": 5,
+        "strategy": 12
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.014666666666666668,
+        "ci95": [
+          -0.03825252877572374,
+          0.005442734470837507
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.014666666666666666,
+        "ci95": [
+          -0.036,
+          0.004
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.02
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "synthetic/delta_regression/rf": {
+      "accuracy": 0.74,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.00666666666666671,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.07246376811594252,
+      "regret_vs_oracle": 0.09866666666666668,
+      "deviation_coverage": 0.08,
+      "deviation_count": 20,
+      "deviation_precision": 0.1,
+      "deviation_recall": 0.08333333333333333,
+      "harmful_deviation_rate": 0.2,
+      "beneficial_deviation_count": 2,
+      "harmful_deviation_count": 4,
+      "net_benefit_sum": -1.6666666666666665,
+      "choice_distribution": {
+        "both": 230,
+        "none": 16,
+        "case": 1,
+        "strategy": 3
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.006666666666666667,
+        "ci95": [
+          -0.024358974358974363,
+          0.009333333333333334
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.006666666666666666,
+        "ci95": [
+          -0.024,
+          0.009333333333333334
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.05
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.2
+        }
+      ]
+    },
+    "synthetic/gain_harm/logreg": {
+      "accuracy": 0.732,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.014666666666666717,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.15942028985507306,
+      "regret_vs_oracle": 0.10666666666666669,
+      "deviation_coverage": 0.336,
+      "deviation_count": 84,
+      "deviation_precision": 0.047619047619047616,
+      "deviation_recall": 0.16666666666666666,
+      "harmful_deviation_rate": 0.09523809523809523,
+      "beneficial_deviation_count": 4,
+      "harmful_deviation_count": 8,
+      "net_benefit_sum": -3.6666666666666665,
+      "choice_distribution": {
+        "both": 166,
+        "case": 45,
+        "none": 33,
+        "strategy": 6
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.014666666666666666,
+        "ci95": [
+          -0.041494045024245065,
+          0.009846331259386385
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.014666666666666666,
+        "ci95": [
+          -0.041333333333333326,
+          0.010666666666666668
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "synthetic/gain_harm/tree": {
+      "accuracy": 0.7026666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.04400000000000004,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.47826086956521796,
+      "regret_vs_oracle": 0.136,
+      "deviation_coverage": 0.524,
+      "deviation_count": 131,
+      "deviation_precision": 0.030534351145038167,
+      "deviation_recall": 0.16666666666666666,
+      "harmful_deviation_rate": 0.12213740458015267,
+      "beneficial_deviation_count": 4,
+      "harmful_deviation_count": 16,
+      "net_benefit_sum": -11.0,
+      "choice_distribution": {
+        "both": 119,
+        "case": 46,
+        "strategy": 47,
+        "none": 38
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.044,
+        "ci95": [
+          -0.07943398799781778,
+          -0.012293827367012396
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.044,
+        "ci95": [
+          -0.076,
+          -0.014633333333333816
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.02
+        }
+      ]
+    },
+    "synthetic/gain_harm/rf": {
+      "accuracy": 0.7266666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.020000000000000018,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.21739130434782636,
+      "regret_vs_oracle": 0.11199999999999999,
+      "deviation_coverage": 0.236,
+      "deviation_count": 59,
+      "deviation_precision": 0.03389830508474576,
+      "deviation_recall": 0.08333333333333333,
+      "harmful_deviation_rate": 0.11864406779661017,
+      "beneficial_deviation_count": 2,
+      "harmful_deviation_count": 7,
+      "net_benefit_sum": -5.0,
+      "choice_distribution": {
+        "both": 191,
+        "case": 38,
+        "none": 15,
+        "strategy": 6
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.02,
+        "ci95": [
+          -0.046611581920903956,
+          0.0025350961212860005
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.02,
+        "ci95": [
+          -0.042666666666666665,
+          3.3333333332850004e-05
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        }
+      ]
+    },
+    "synthetic_scale/delta_regression/ridge": {
+      "accuracy": 0.7466666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.0,
+      "regret_vs_oracle": 0.09199999999999997,
+      "deviation_coverage": 0.056,
+      "deviation_count": 14,
+      "deviation_precision": 0.07142857142857142,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.07142857142857142,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 1,
+      "net_benefit_sum": 0.0,
+      "choice_distribution": {
+        "both": 236,
+        "none": 11,
+        "strategy": 3
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.0,
+        "ci95": [
+          -0.012,
+          0.012048192771084338
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": 0.0,
+        "ci95": [
+          -0.012,
+          0.012
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.02
+        },
+        {
+          "threshold": 0.05
+        }
+      ]
+    },
+    "synthetic_scale/delta_regression/tree": {
+      "accuracy": 0.7346666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.01200000000000001,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.13043478260869582,
+      "regret_vs_oracle": 0.10399999999999998,
+      "deviation_coverage": 0.056,
+      "deviation_count": 14,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.21428571428571427,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 3,
+      "net_benefit_sum": -3.0,
+      "choice_distribution": {
+        "both": 236,
+        "none": 6,
+        "case": 5,
+        "strategy": 3
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.012,
+        "ci95": [
+          -0.02734375,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.012,
+        "ci95": [
+          -0.028,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "synthetic_scale/delta_regression/rf": {
+      "accuracy": 0.7466666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.0,
+      "regret_vs_oracle": 0.09199999999999997,
+      "deviation_coverage": 0.004,
+      "deviation_count": 1,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.0,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 0,
+      "net_benefit_sum": 0.0,
+      "choice_distribution": {
+        "both": 249,
+        "none": 1
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.2
+        }
+      ]
+    },
+    "synthetic_scale/gain_harm/logreg": {
+      "accuracy": 0.7506666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0040000000000000036,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.04347826086956527,
+      "regret_vs_oracle": 0.08799999999999997,
+      "deviation_coverage": 0.076,
+      "deviation_count": 19,
+      "deviation_precision": 0.10526315789473684,
+      "deviation_recall": 0.08333333333333333,
+      "harmful_deviation_rate": 0.05263157894736842,
+      "beneficial_deviation_count": 2,
+      "harmful_deviation_count": 1,
+      "net_benefit_sum": 1.0,
+      "choice_distribution": {
+        "both": 231,
+        "none": 7,
+        "strategy": 4,
+        "case": 8
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.004,
+        "ci95": [
+          -0.00851063829787234,
+          0.018518518518518517
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": 0.004,
+        "ci95": [
+          -0.008,
+          0.02
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "synthetic_scale/gain_harm/tree": {
+      "accuracy": 0.7346666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.01200000000000001,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.13043478260869582,
+      "regret_vs_oracle": 0.10399999999999998,
+      "deviation_coverage": 0.38,
+      "deviation_count": 95,
+      "deviation_precision": 0.031578947368421054,
+      "deviation_recall": 0.125,
+      "harmful_deviation_rate": 0.07368421052631578,
+      "beneficial_deviation_count": 3,
+      "harmful_deviation_count": 7,
+      "net_benefit_sum": -3.0,
+      "choice_distribution": {
+        "both": 155,
+        "case": 74,
+        "none": 15,
+        "strategy": 6
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.012,
+        "ci95": [
+          -0.0350140056022409,
+          0.010218096080165029
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.012000000000000002,
+        "ci95": [
+          -0.03466666666666667,
+          0.010666666666666666
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "synthetic_scale/gain_harm/rf": {
+      "accuracy": 0.7066666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.040000000000000036,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.4347826086956527,
+      "regret_vs_oracle": 0.132,
+      "deviation_coverage": 0.388,
+      "deviation_count": 97,
+      "deviation_precision": 0.010309278350515464,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.13402061855670103,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 13,
+      "net_benefit_sum": -10.0,
+      "choice_distribution": {
+        "both": 153,
+        "strategy": 26,
+        "case": 61,
+        "none": 10
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.04,
+        "ci95": [
+          -0.06896663972701149,
+          -0.014266631192701239
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.04,
+        "ci95": [
+          -0.06666666666666667,
+          -0.016
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 0.5,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "synthetic_compatibility/delta_regression/ridge": {
+      "accuracy": 0.7373333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.009333333333333416,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.10144927536231976,
+      "regret_vs_oracle": 0.10133333333333339,
+      "deviation_coverage": 0.22,
+      "deviation_count": 55,
+      "deviation_precision": 0.09090909090909091,
+      "deviation_recall": 0.20833333333333334,
+      "harmful_deviation_rate": 0.14545454545454545,
+      "beneficial_deviation_count": 5,
+      "harmful_deviation_count": 8,
+      "net_benefit_sum": -2.333333333333333,
+      "choice_distribution": {
+        "both": 195,
+        "none": 45,
+        "case": 6,
+        "strategy": 4
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.009333333333333334,
+        "ci95": [
+          -0.03603603603603603,
+          0.016194331983805668
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.009333333333333332,
+        "ci95": [
+          -0.03466666666666667,
+          0.016
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.02
+        },
+        {
+          "threshold": 0.05
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.15
+        }
+      ]
+    },
+    "synthetic_compatibility/delta_regression/tree": {
+      "accuracy": 0.7226666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.02400000000000002,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.26086956521739163,
+      "regret_vs_oracle": 0.11599999999999999,
+      "deviation_coverage": 0.256,
+      "deviation_count": 64,
+      "deviation_precision": 0.03125,
+      "deviation_recall": 0.08333333333333333,
+      "harmful_deviation_rate": 0.140625,
+      "beneficial_deviation_count": 2,
+      "harmful_deviation_count": 9,
+      "net_benefit_sum": -6.0,
+      "choice_distribution": {
+        "none": 20,
+        "both": 186,
+        "strategy": 27,
+        "case": 17
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.024,
+        "ci95": [
+          -0.04722250337381917,
+          -0.005188067444876783
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.024,
+        "ci95": [
+          -0.047999999999999994,
+          -0.002666666666666667
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.0
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "synthetic_compatibility/delta_regression/rf": {
+      "accuracy": 0.7426666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.0040000000000000036,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.04347826086956527,
+      "regret_vs_oracle": 0.09599999999999997,
+      "deviation_coverage": 0.08,
+      "deviation_count": 20,
+      "deviation_precision": 0.1,
+      "deviation_recall": 0.08333333333333333,
+      "harmful_deviation_rate": 0.15,
+      "beneficial_deviation_count": 2,
+      "harmful_deviation_count": 3,
+      "net_benefit_sum": -0.9999999999999999,
+      "choice_distribution": {
+        "both": 230,
+        "none": 16,
+        "strategy": 4
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.004,
+        "ci95": [
+          -0.020833333333333332,
+          0.010973936899862827
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.004,
+        "ci95": [
+          -0.02,
+          0.010666666666666668
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.05
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.15
+        }
+      ]
+    },
+    "synthetic_compatibility/gain_harm/logreg": {
+      "accuracy": 0.736,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.010666666666666713,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.11594202898550779,
+      "regret_vs_oracle": 0.10266666666666668,
+      "deviation_coverage": 0.292,
+      "deviation_count": 73,
+      "deviation_precision": 0.0410958904109589,
+      "deviation_recall": 0.125,
+      "harmful_deviation_rate": 0.0821917808219178,
+      "beneficial_deviation_count": 3,
+      "harmful_deviation_count": 6,
+      "net_benefit_sum": -2.6666666666666665,
+      "choice_distribution": {
+        "both": 177,
+        "case": 38,
+        "none": 35
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.010666666666666666,
+        "ci95": [
+          -0.03276411657559199,
+          0.009803921568627454
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.010666666666666666,
+        "ci95": [
+          -0.033333333333333326,
+          0.010666666666666668
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.05
+        }
+      ]
+    },
+    "synthetic_compatibility/gain_harm/tree": {
+      "accuracy": 0.7333333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.01333333333333342,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.14492753623188503,
+      "regret_vs_oracle": 0.10533333333333339,
+      "deviation_coverage": 0.372,
+      "deviation_count": 93,
+      "deviation_precision": 0.053763440860215055,
+      "deviation_recall": 0.20833333333333334,
+      "harmful_deviation_rate": 0.0967741935483871,
+      "beneficial_deviation_count": 5,
+      "harmful_deviation_count": 9,
+      "net_benefit_sum": -3.333333333333333,
+      "choice_distribution": {
+        "case": 46,
+        "both": 157,
+        "none": 27,
+        "strategy": 20
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.013333333333333332,
+        "ci95": [
+          -0.04301075268817204,
+          0.014157698732166808
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.013333333333333332,
+        "ci95": [
+          -0.041333333333333326,
+          0.013333333333333334
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        }
+      ]
+    },
+    "synthetic_compatibility/gain_harm/rf": {
+      "accuracy": 0.7333333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.01333333333333342,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.14492753623188503,
+      "regret_vs_oracle": 0.10533333333333339,
+      "deviation_coverage": 0.208,
+      "deviation_count": 52,
+      "deviation_precision": 0.019230769230769232,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.09615384615384616,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 5,
+      "net_benefit_sum": -3.3333333333333335,
+      "choice_distribution": {
+        "case": 31,
+        "both": 198,
+        "strategy": 9,
+        "none": 12
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.013333333333333332,
+        "ci95": [
+          -0.03412073490813648,
+          0.004098360655737705
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.013333333333333332,
+        "ci95": [
+          -0.032,
+          0.0026666666666666674
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "synthetic_interaction/delta_regression/ridge": {
+      "accuracy": 0.7506666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0040000000000000036,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.04347826086956527,
+      "regret_vs_oracle": 0.08799999999999997,
+      "deviation_coverage": 0.052,
+      "deviation_count": 13,
+      "deviation_precision": 0.07692307692307693,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.0,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 0,
+      "net_benefit_sum": 1.0,
+      "choice_distribution": {
+        "both": 237,
+        "none": 10,
+        "case": 3
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.004,
+        "ci95": [
+          0.0,
+          0.01276595744680851
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": 0.004,
+        "ci95": [
+          0.0,
+          0.012
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.05
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.1
+        }
+      ]
+    },
+    "synthetic_interaction/delta_regression/tree": {
+      "accuracy": 0.7413333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.005333333333333412,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.0579710144927545,
+      "regret_vs_oracle": 0.09733333333333338,
+      "deviation_coverage": 0.024,
+      "deviation_count": 6,
+      "deviation_precision": 0.16666666666666666,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.5,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 3,
+      "net_benefit_sum": -1.3333333333333335,
+      "choice_distribution": {
+        "both": 244,
+        "none": 6
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.005333333333333334,
+        "ci95": [
+          -0.023035230352303523,
+          0.00883838383838384
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.005333333333333333,
+        "ci95": [
+          -0.018666666666666668,
+          0.008
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.2
+        }
+      ]
+    },
+    "synthetic_interaction/delta_regression/rf": {
+      "accuracy": 0.744,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.002666666666666706,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.02898550724637725,
+      "regret_vs_oracle": 0.09466666666666668,
+      "deviation_coverage": 0.012,
+      "deviation_count": 3,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.3333333333333333,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 1,
+      "net_benefit_sum": -0.6666666666666666,
+      "choice_distribution": {
+        "both": 247,
+        "none": 3
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.0026666666666666666,
+        "ci95": [
+          -0.008369079849513026,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.0026666666666666666,
+        "ci95": [
+          -0.008,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.2
+        }
+      ]
+    },
+    "synthetic_interaction/gain_harm/logreg": {
+      "accuracy": 0.756,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.009333333333333305,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.10144927536231856,
+      "regret_vs_oracle": 0.08266666666666667,
+      "deviation_coverage": 0.272,
+      "deviation_count": 68,
+      "deviation_precision": 0.04411764705882353,
+      "deviation_recall": 0.125,
+      "harmful_deviation_rate": 0.014705882352941176,
+      "beneficial_deviation_count": 3,
+      "harmful_deviation_count": 1,
+      "net_benefit_sum": 2.3333333333333335,
+      "choice_distribution": {
+        "both": 182,
+        "case": 48,
+        "strategy": 11,
+        "none": 9
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.009333333333333334,
+        "ci95": [
+          -0.0038167938931297704,
+          0.02493438320209974
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": 0.009333333333333334,
+        "ci95": [
+          -0.003999999999999999,
+          0.025333333333333333
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "synthetic_interaction/gain_harm/tree": {
+      "accuracy": 0.7373333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.009333333333333416,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.10144927536231976,
+      "regret_vs_oracle": 0.10133333333333339,
+      "deviation_coverage": 0.244,
+      "deviation_count": 61,
+      "deviation_precision": 0.03278688524590164,
+      "deviation_recall": 0.08333333333333333,
+      "harmful_deviation_rate": 0.06557377049180328,
+      "beneficial_deviation_count": 2,
+      "harmful_deviation_count": 4,
+      "net_benefit_sum": -2.333333333333333,
+      "choice_distribution": {
+        "strategy": 17,
+        "both": 189,
+        "case": 24,
+        "none": 20
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.009333333333333332,
+        "ci95": [
+          -0.028925619834710745,
+          0.008064516129032258
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.009333333333333332,
+        "ci95": [
+          -0.029333333333333333,
+          0.008
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "synthetic_interaction/gain_harm/rf": {
+      "accuracy": 0.736,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.010666666666666713,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.11594202898550779,
+      "regret_vs_oracle": 0.10266666666666668,
+      "deviation_coverage": 0.168,
+      "deviation_count": 42,
+      "deviation_precision": 0.023809523809523808,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.09523809523809523,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 4,
+      "net_benefit_sum": -2.6666666666666665,
+      "choice_distribution": {
+        "both": 208,
+        "case": 29,
+        "none": 7,
+        "strategy": 6
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.010666666666666668,
+        "ci95": [
+          -0.02638888888888889,
+          0.002564350064350062
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.010666666666666666,
+        "ci95": [
+          -0.026666666666666665,
+          0.002666666666666667
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        }
+      ]
+    },
+    "existing_meta_plus_scale/delta_regression/ridge": {
+      "accuracy": 0.74,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.00666666666666671,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.07246376811594252,
+      "regret_vs_oracle": 0.09866666666666668,
+      "deviation_coverage": 0.256,
+      "deviation_count": 64,
+      "deviation_precision": 0.078125,
+      "deviation_recall": 0.20833333333333334,
+      "harmful_deviation_rate": 0.109375,
+      "beneficial_deviation_count": 5,
+      "harmful_deviation_count": 7,
+      "net_benefit_sum": -1.6666666666666665,
+      "choice_distribution": {
+        "case": 8,
+        "both": 186,
+        "strategy": 19,
+        "none": 37
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.006666666666666667,
+        "ci95": [
+          -0.031746031746031744,
+          0.017094861660079043
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.006666666666666666,
+        "ci95": [
+          -0.032,
+          0.018666666666666668
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.05
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_meta_plus_scale/delta_regression/tree": {
+      "accuracy": 0.7386666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.008000000000000007,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.08695652173913054,
+      "regret_vs_oracle": 0.09999999999999998,
+      "deviation_coverage": 0.092,
+      "deviation_count": 23,
+      "deviation_precision": 0.13043478260869565,
+      "deviation_recall": 0.125,
+      "harmful_deviation_rate": 0.2608695652173913,
+      "beneficial_deviation_count": 3,
+      "harmful_deviation_count": 6,
+      "net_benefit_sum": -2.0,
+      "choice_distribution": {
+        "both": 227,
+        "none": 12,
+        "case": 6,
+        "strategy": 5
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.008,
+        "ci95": [
+          -0.030423417638147935,
+          0.013101009753693443
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.008,
+        "ci95": [
+          -0.029333333333333336,
+          0.013333333333333332
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.02
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_meta_plus_scale/delta_regression/rf": {
+      "accuracy": 0.7493333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.002666666666666595,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.02898550724637604,
+      "regret_vs_oracle": 0.08933333333333338,
+      "deviation_coverage": 0.064,
+      "deviation_count": 16,
+      "deviation_precision": 0.25,
+      "deviation_recall": 0.16666666666666666,
+      "harmful_deviation_rate": 0.1875,
+      "beneficial_deviation_count": 4,
+      "harmful_deviation_count": 3,
+      "net_benefit_sum": 0.6666666666666667,
+      "choice_distribution": {
+        "both": 234,
+        "none": 8,
+        "case": 7,
+        "strategy": 1
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.002666666666666667,
+        "ci95": [
+          -0.015536723163841807,
+          0.021930275792361554
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": 0.0026666666666666666,
+        "ci95": [
+          -0.015999999999999997,
+          0.021333333333333336
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.05
+        }
+      ]
+    },
+    "existing_meta_plus_scale/gain_harm/logreg": {
+      "accuracy": 0.736,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.010666666666666713,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.11594202898550779,
+      "regret_vs_oracle": 0.10266666666666668,
+      "deviation_coverage": 0.408,
+      "deviation_count": 102,
+      "deviation_precision": 0.08823529411764706,
+      "deviation_recall": 0.375,
+      "harmful_deviation_rate": 0.11764705882352941,
+      "beneficial_deviation_count": 9,
+      "harmful_deviation_count": 12,
+      "net_benefit_sum": -2.6666666666666665,
+      "choice_distribution": {
+        "both": 148,
+        "strategy": 26,
+        "none": 55,
+        "case": 21
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.010666666666666668,
+        "ci95": [
+          -0.047059197724891484,
+          0.024133737464451414
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.010666666666666668,
+        "ci95": [
+          -0.044,
+          0.022666666666666665
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.05
+        }
+      ]
+    },
+    "existing_meta_plus_scale/gain_harm/tree": {
+      "accuracy": 0.7173333333333334,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.029333333333333322,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.3188405797101449,
+      "regret_vs_oracle": 0.1213333333333333,
+      "deviation_coverage": 0.476,
+      "deviation_count": 119,
+      "deviation_precision": 0.05042016806722689,
+      "deviation_recall": 0.25,
+      "harmful_deviation_rate": 0.11764705882352941,
+      "beneficial_deviation_count": 6,
+      "harmful_deviation_count": 14,
+      "net_benefit_sum": -7.333333333333333,
+      "choice_distribution": {
+        "both": 131,
+        "strategy": 52,
+        "none": 44,
+        "case": 23
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.029333333333333333,
+        "ci95": [
+          -0.06691931379431379,
+          0.005510213412891638
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.029333333333333336,
+        "ci95": [
+          -0.06266666666666668,
+          0.004
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 0.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "existing_meta_plus_scale/gain_harm/rf": {
+      "accuracy": 0.736,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.010666666666666713,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.11594202898550779,
+      "regret_vs_oracle": 0.10266666666666668,
+      "deviation_coverage": 0.08,
+      "deviation_count": 20,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.15,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 3,
+      "net_benefit_sum": -2.6666666666666665,
+      "choice_distribution": {
+        "both": 230,
+        "strategy": 7,
+        "case": 12,
+        "none": 1
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.010666666666666666,
+        "ci95": [
+          -0.024000282485875706,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.010666666666666666,
+        "ci95": [
+          -0.024,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "existing_meta_plus_compatibility/delta_regression/ridge": {
+      "accuracy": 0.764,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.01733333333333331,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.1884057971014491,
+      "regret_vs_oracle": 0.07466666666666666,
+      "deviation_coverage": 0.208,
+      "deviation_count": 52,
+      "deviation_precision": 0.15384615384615385,
+      "deviation_recall": 0.3333333333333333,
+      "harmful_deviation_rate": 0.07692307692307693,
+      "beneficial_deviation_count": 8,
+      "harmful_deviation_count": 4,
+      "net_benefit_sum": 4.333333333333333,
+      "choice_distribution": {
+        "case": 6,
+        "both": 198,
+        "none": 34,
+        "strategy": 12
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.017333333333333336,
+        "ci95": [
+          -0.009216741650121735,
+          0.04489984882842023
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": 0.017333333333333336,
+        "ci95": [
+          -0.006666666666666667,
+          0.044
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.2
+        }
+      ]
+    },
+    "existing_meta_plus_compatibility/delta_regression/tree": {
+      "accuracy": 0.7373333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.009333333333333416,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.10144927536231976,
+      "regret_vs_oracle": 0.10133333333333339,
+      "deviation_coverage": 0.244,
+      "deviation_count": 61,
+      "deviation_precision": 0.06557377049180328,
+      "deviation_recall": 0.16666666666666666,
+      "harmful_deviation_rate": 0.11475409836065574,
+      "beneficial_deviation_count": 4,
+      "harmful_deviation_count": 7,
+      "net_benefit_sum": -2.3333333333333335,
+      "choice_distribution": {
+        "strategy": 41,
+        "both": 189,
+        "none": 12,
+        "case": 8
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.009333333333333334,
+        "ci95": [
+          -0.03194583333333333,
+          0.011446154605100867
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.009333333333333334,
+        "ci95": [
+          -0.032,
+          0.013333333333333334
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.0
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_meta_plus_compatibility/delta_regression/rf": {
+      "accuracy": 0.7413333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.005333333333333412,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.0579710144927545,
+      "regret_vs_oracle": 0.09733333333333338,
+      "deviation_coverage": 0.044,
+      "deviation_count": 11,
+      "deviation_precision": 0.09090909090909091,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.2727272727272727,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 3,
+      "net_benefit_sum": -1.3333333333333335,
+      "choice_distribution": {
+        "both": 239,
+        "none": 7,
+        "strategy": 2,
+        "case": 2
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.005333333333333334,
+        "ci95": [
+          -0.022576923942647494,
+          0.008974358974358975
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.005333333333333332,
+        "ci95": [
+          -0.018666666666666668,
+          0.008
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_meta_plus_compatibility/gain_harm/logreg": {
+      "accuracy": 0.732,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.014666666666666717,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.15942028985507306,
+      "regret_vs_oracle": 0.10666666666666669,
+      "deviation_coverage": 0.444,
+      "deviation_count": 111,
+      "deviation_precision": 0.07207207207207207,
+      "deviation_recall": 0.3333333333333333,
+      "harmful_deviation_rate": 0.0990990990990991,
+      "beneficial_deviation_count": 8,
+      "harmful_deviation_count": 11,
+      "net_benefit_sum": -3.6666666666666665,
+      "choice_distribution": {
+        "both": 139,
+        "strategy": 28,
+        "none": 58,
+        "case": 25
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.014666666666666668,
+        "ci95": [
+          -0.04993421052631578,
+          0.018597997138769674
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.014666666666666661,
+        "ci95": [
+          -0.048,
+          0.017333333333333336
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.1
+        }
+      ]
+    },
+    "existing_meta_plus_compatibility/gain_harm/tree": {
+      "accuracy": 0.6973333333333334,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.04933333333333334,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.5362318840579713,
+      "regret_vs_oracle": 0.1413333333333333,
+      "deviation_coverage": 0.464,
+      "deviation_count": 116,
+      "deviation_precision": 0.02586206896551724,
+      "deviation_recall": 0.125,
+      "harmful_deviation_rate": 0.13793103448275862,
+      "beneficial_deviation_count": 3,
+      "harmful_deviation_count": 16,
+      "net_benefit_sum": -12.333333333333334,
+      "choice_distribution": {
+        "case": 24,
+        "strategy": 45,
+        "both": 134,
+        "none": 47
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.049333333333333326,
+        "ci95": [
+          -0.08636977058029689,
+          -0.01568585553879672
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.04933333333333333,
+        "ci95": [
+          -0.08133333333333333,
+          -0.018666666666666668
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        }
+      ]
+    },
+    "existing_meta_plus_compatibility/gain_harm/rf": {
+      "accuracy": 0.7426666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.0040000000000000036,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.04347826086956527,
+      "regret_vs_oracle": 0.09599999999999997,
+      "deviation_coverage": 0.12,
+      "deviation_count": 30,
+      "deviation_precision": 0.03333333333333333,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.06666666666666667,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 2,
+      "net_benefit_sum": -1.0,
+      "choice_distribution": {
+        "both": 220,
+        "strategy": 10,
+        "case": 18,
+        "none": 2
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.004,
+        "ci95": [
+          -0.015748031496062992,
+          0.005555555555555555
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.004,
+        "ci95": [
+          -0.015999999999999997,
+          0.005333333333333333
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.02
+        }
+      ]
+    },
+    "existing_meta_plus_interaction/delta_regression/ridge": {
+      "accuracy": 0.736,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.010666666666666713,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.11594202898550779,
+      "regret_vs_oracle": 0.10266666666666668,
+      "deviation_coverage": 0.208,
+      "deviation_count": 52,
+      "deviation_precision": 0.07692307692307693,
+      "deviation_recall": 0.16666666666666666,
+      "harmful_deviation_rate": 0.1346153846153846,
+      "beneficial_deviation_count": 4,
+      "harmful_deviation_count": 7,
+      "net_benefit_sum": -2.6666666666666665,
+      "choice_distribution": {
+        "case": 7,
+        "strategy": 21,
+        "both": 198,
+        "none": 24
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.010666666666666668,
+        "ci95": [
+          -0.035519627933140466,
+          0.012145748987854251
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.010666666666666666,
+        "ci95": [
+          -0.03466666666666667,
+          0.013333333333333334
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.02
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_meta_plus_interaction/delta_regression/tree": {
+      "accuracy": 0.724,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.022666666666666724,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.2463768115942036,
+      "regret_vs_oracle": 0.1146666666666667,
+      "deviation_coverage": 0.108,
+      "deviation_count": 27,
+      "deviation_precision": 0.037037037037037035,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.2962962962962963,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 8,
+      "net_benefit_sum": -5.666666666666667,
+      "choice_distribution": {
+        "both": 223,
+        "none": 17,
+        "strategy": 6,
+        "case": 4
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.02266666666666667,
+        "ci95": [
+          -0.044872448979591834,
+          -0.0028129395218002818
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.022666666666666665,
+        "ci95": [
+          -0.044000000000000004,
+          -0.004
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.02
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_meta_plus_interaction/delta_regression/rf": {
+      "accuracy": 0.7533333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.006666666666666599,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.07246376811594131,
+      "regret_vs_oracle": 0.08533333333333337,
+      "deviation_coverage": 0.084,
+      "deviation_count": 21,
+      "deviation_precision": 0.14285714285714285,
+      "deviation_recall": 0.125,
+      "harmful_deviation_rate": 0.047619047619047616,
+      "beneficial_deviation_count": 3,
+      "harmful_deviation_count": 1,
+      "net_benefit_sum": 1.6666666666666667,
+      "choice_distribution": {
+        "both": 229,
+        "case": 7,
+        "none": 7,
+        "strategy": 7
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.006666666666666667,
+        "ci95": [
+          -0.0043885492350404605,
+          0.020833333333333332
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": 0.006666666666666667,
+        "ci95": [
+          -0.004,
+          0.02
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.02
+        }
+      ]
+    },
+    "existing_meta_plus_interaction/gain_harm/logreg": {
+      "accuracy": 0.7226666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.02400000000000002,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.26086956521739163,
+      "regret_vs_oracle": 0.11599999999999999,
+      "deviation_coverage": 0.436,
+      "deviation_count": 109,
+      "deviation_precision": 0.09174311926605505,
+      "deviation_recall": 0.4166666666666667,
+      "harmful_deviation_rate": 0.14678899082568808,
+      "beneficial_deviation_count": 10,
+      "harmful_deviation_count": 16,
+      "net_benefit_sum": -6.0,
+      "choice_distribution": {
+        "both": 141,
+        "strategy": 26,
+        "none": 55,
+        "case": 28
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.024000000000000004,
+        "ci95": [
+          -0.06639004149377593,
+          0.015342774380431273
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.024,
+        "ci95": [
+          -0.06133333333333334,
+          0.013333333333333332
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 0.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_meta_plus_interaction/gain_harm/tree": {
+      "accuracy": 0.6946666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.052000000000000046,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.5652173913043486,
+      "regret_vs_oracle": 0.14400000000000002,
+      "deviation_coverage": 0.452,
+      "deviation_count": 113,
+      "deviation_precision": 0.02654867256637168,
+      "deviation_recall": 0.125,
+      "harmful_deviation_rate": 0.1504424778761062,
+      "beneficial_deviation_count": 3,
+      "harmful_deviation_count": 17,
+      "net_benefit_sum": -13.0,
+      "choice_distribution": {
+        "both": 137,
+        "strategy": 48,
+        "none": 45,
+        "case": 20
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.052,
+        "ci95": [
+          -0.08757244788622637,
+          -0.01960592830882356
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.052,
+        "ci95": [
+          -0.08533333333333333,
+          -0.021333333333333333
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_meta_plus_interaction/gain_harm/rf": {
+      "accuracy": 0.744,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.002666666666666706,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.02898550724637725,
+      "regret_vs_oracle": 0.09466666666666668,
+      "deviation_coverage": 0.092,
+      "deviation_count": 23,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.043478260869565216,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 1,
+      "net_benefit_sum": -0.6666666666666666,
+      "choice_distribution": {
+        "both": 227,
+        "strategy": 7,
+        "case": 16
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.0026666666666666666,
+        "ci95": [
+          -0.008369079849513026,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.0026666666666666666,
+        "ci95": [
+          -0.008,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "existing_meta_plus_synthetic/delta_regression/ridge": {
+      "accuracy": 0.74,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.00666666666666671,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.07246376811594252,
+      "regret_vs_oracle": 0.09866666666666668,
+      "deviation_coverage": 0.32,
+      "deviation_count": 80,
+      "deviation_precision": 0.1,
+      "deviation_recall": 0.3333333333333333,
+      "harmful_deviation_rate": 0.125,
+      "beneficial_deviation_count": 8,
+      "harmful_deviation_count": 10,
+      "net_benefit_sum": -1.6666666666666665,
+      "choice_distribution": {
+        "both": 170,
+        "strategy": 23,
+        "none": 42,
+        "case": 15
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.006666666666666668,
+        "ci95": [
+          -0.04132309078481327,
+          0.026500830707851974
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.006666666666666666,
+        "ci95": [
+          -0.03866666666666666,
+          0.025333333333333336
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.0
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_meta_plus_synthetic/delta_regression/tree": {
+      "accuracy": 0.7333333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.01333333333333342,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.14492753623188503,
+      "regret_vs_oracle": 0.10533333333333339,
+      "deviation_coverage": 0.256,
+      "deviation_count": 64,
+      "deviation_precision": 0.09375,
+      "deviation_recall": 0.25,
+      "harmful_deviation_rate": 0.15625,
+      "beneficial_deviation_count": 6,
+      "harmful_deviation_count": 10,
+      "net_benefit_sum": -3.3333333333333335,
+      "choice_distribution": {
+        "strategy": 44,
+        "both": 186,
+        "none": 15,
+        "case": 5
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.013333333333333332,
+        "ci95": [
+          -0.041504539559014265,
+          0.013495276653171389
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.013333333333333334,
+        "ci95": [
+          -0.04266666666666667,
+          0.016
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.0
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_meta_plus_synthetic/delta_regression/rf": {
+      "accuracy": 0.7413333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.005333333333333412,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.0579710144927545,
+      "regret_vs_oracle": 0.09733333333333338,
+      "deviation_coverage": 0.052,
+      "deviation_count": 13,
+      "deviation_precision": 0.07692307692307693,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.23076923076923078,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 3,
+      "net_benefit_sum": -1.3333333333333335,
+      "choice_distribution": {
+        "both": 237,
+        "none": 8,
+        "strategy": 2,
+        "case": 3
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.005333333333333334,
+        "ci95": [
+          -0.022576923942647494,
+          0.008974358974358975
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.005333333333333332,
+        "ci95": [
+          -0.018666666666666668,
+          0.008
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.1
+        }
+      ]
+    },
+    "existing_meta_plus_synthetic/gain_harm/logreg": {
+      "accuracy": 0.7226666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.02400000000000002,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.26086956521739163,
+      "regret_vs_oracle": 0.11599999999999999,
+      "deviation_coverage": 0.488,
+      "deviation_count": 122,
+      "deviation_precision": 0.06557377049180328,
+      "deviation_recall": 0.3333333333333333,
+      "harmful_deviation_rate": 0.11475409836065574,
+      "beneficial_deviation_count": 8,
+      "harmful_deviation_count": 14,
+      "net_benefit_sum": -6.0,
+      "choice_distribution": {
+        "both": 128,
+        "strategy": 28,
+        "none": 63,
+        "case": 31
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.024,
+        "ci95": [
+          -0.06380277593085106,
+          0.012246152559384391
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.024,
+        "ci95": [
+          -0.05866666666666667,
+          0.010666666666666666
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_meta_plus_synthetic/gain_harm/tree": {
+      "accuracy": 0.7266666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.020000000000000018,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.21739130434782636,
+      "regret_vs_oracle": 0.11199999999999999,
+      "deviation_coverage": 0.444,
+      "deviation_count": 111,
+      "deviation_precision": 0.05405405405405406,
+      "deviation_recall": 0.25,
+      "harmful_deviation_rate": 0.0990990990990991,
+      "beneficial_deviation_count": 6,
+      "harmful_deviation_count": 11,
+      "net_benefit_sum": -5.0,
+      "choice_distribution": {
+        "case": 21,
+        "strategy": 50,
+        "both": 139,
+        "none": 40
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.02,
+        "ci95": [
+          -0.053805774278215215,
+          0.012255906460945019
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.02,
+        "ci95": [
+          -0.050666666666666665,
+          0.010666666666666665
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        }
+      ]
+    },
+    "existing_meta_plus_synthetic/gain_harm/rf": {
+      "accuracy": 0.748,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0013333333333332975,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.01449275362318802,
+      "regret_vs_oracle": 0.09066666666666667,
+      "deviation_coverage": 0.128,
+      "deviation_count": 32,
+      "deviation_precision": 0.0625,
+      "deviation_recall": 0.08333333333333333,
+      "harmful_deviation_rate": 0.03125,
+      "beneficial_deviation_count": 2,
+      "harmful_deviation_count": 1,
+      "net_benefit_sum": 0.33333333333333337,
+      "choice_distribution": {
+        "both": 218,
+        "strategy": 13,
+        "case": 16,
+        "none": 3
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.0013333333333333335,
+        "ci95": [
+          -0.009563825361487777,
+          0.011594202898550725
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": 0.001333333333333334,
+        "ci95": [
+          -0.009333333333333334,
+          0.012
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "existing_all_plus_synthetic/delta_regression/ridge": {
+      "accuracy": 0.748,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0013333333333332975,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.01449275362318802,
+      "regret_vs_oracle": 0.09066666666666667,
+      "deviation_coverage": 0.488,
+      "deviation_count": 122,
+      "deviation_precision": 0.07377049180327869,
+      "deviation_recall": 0.375,
+      "harmful_deviation_rate": 0.08196721311475409,
+      "beneficial_deviation_count": 9,
+      "harmful_deviation_count": 10,
+      "net_benefit_sum": 0.33333333333333337,
+      "choice_distribution": {
+        "case": 30,
+        "both": 128,
+        "strategy": 35,
+        "none": 57
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.0013333333333333322,
+        "ci95": [
+          -0.030555555555555555,
+          0.0326530612244898
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": 0.001333333333333334,
+        "ci95": [
+          -0.029333333333333333,
+          0.03203333333333285
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.0
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_all_plus_synthetic/delta_regression/tree": {
+      "accuracy": 0.7133333333333334,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.033333333333333326,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.3623188405797102,
+      "regret_vs_oracle": 0.1253333333333333,
+      "deviation_coverage": 0.256,
+      "deviation_count": 64,
+      "deviation_precision": 0.015625,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.171875,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 11,
+      "net_benefit_sum": -8.333333333333334,
+      "choice_distribution": {
+        "both": 186,
+        "none": 29,
+        "strategy": 22,
+        "case": 13
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.033333333333333326,
+        "ci95": [
+          -0.05830243979721167,
+          -0.011583011583011582
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.03333333333333333,
+        "ci95": [
+          -0.056,
+          -0.013333333333333332
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.02
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_all_plus_synthetic/delta_regression/rf": {
+      "accuracy": 0.736,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.010666666666666713,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.11594202898550779,
+      "regret_vs_oracle": 0.10266666666666668,
+      "deviation_coverage": 0.064,
+      "deviation_count": 16,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.1875,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 3,
+      "net_benefit_sum": -2.6666666666666665,
+      "choice_distribution": {
+        "both": 234,
+        "none": 10,
+        "strategy": 5,
+        "case": 1
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.010666666666666666,
+        "ci95": [
+          -0.024266291280810332,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.010666666666666666,
+        "ci95": [
+          -0.025333333333333333,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.05
+        },
+        {
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_all_plus_synthetic/gain_harm/logreg": {
+      "accuracy": 0.7546666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.008000000000000007,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.08695652173913054,
+      "regret_vs_oracle": 0.08399999999999996,
+      "deviation_coverage": 0.412,
+      "deviation_count": 103,
+      "deviation_precision": 0.06796116504854369,
+      "deviation_recall": 0.2916666666666667,
+      "harmful_deviation_rate": 0.04854368932038835,
+      "beneficial_deviation_count": 7,
+      "harmful_deviation_count": 5,
+      "net_benefit_sum": 2.0,
+      "choice_distribution": {
+        "none": 45,
+        "both": 147,
+        "strategy": 33,
+        "case": 25
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.008,
+        "ci95": [
+          -0.017980636237897647,
+          0.03373861869864534
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": 0.008,
+        "ci95": [
+          -0.017333333333333333,
+          0.03466666666666667
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_all_plus_synthetic/gain_harm/tree": {
+      "accuracy": 0.7293333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.017333333333333423,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.1884057971014503,
+      "regret_vs_oracle": 0.1093333333333334,
+      "deviation_coverage": 0.432,
+      "deviation_count": 108,
+      "deviation_precision": 0.06481481481481481,
+      "deviation_recall": 0.2916666666666667,
+      "harmful_deviation_rate": 0.1111111111111111,
+      "beneficial_deviation_count": 7,
+      "harmful_deviation_count": 12,
+      "net_benefit_sum": -4.333333333333333,
+      "choice_distribution": {
+        "both": 142,
+        "none": 55,
+        "strategy": 42,
+        "case": 11
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.017333333333333336,
+        "ci95": [
+          -0.051852572416774746,
+          0.016001606425702787
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.017333333333333336,
+        "ci95": [
+          -0.04933333333333333,
+          0.014666666666666666
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 0.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "existing_all_plus_synthetic/gain_harm/rf": {
+      "accuracy": 0.7426666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.0040000000000000036,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.04347826086956527,
+      "regret_vs_oracle": 0.09599999999999997,
+      "deviation_coverage": 0.156,
+      "deviation_count": 39,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.02564102564102564,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 1,
+      "net_benefit_sum": -1.0,
+      "choice_distribution": {
+        "both": 211,
+        "case": 20,
+        "strategy": 14,
+        "none": 5
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.004,
+        "ci95": [
+          -0.012658227848101266,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by annual_report_group"
+      },
+      "query_bootstrap_secondary": {
+        "point_estimate": -0.004,
+        "ci95": [
+          -0.012,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "secondary paired percentile bootstrap over queries"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.05
+        }
+      ]
+    }
+  }
+}

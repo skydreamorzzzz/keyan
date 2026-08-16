@@ -83,17 +83,30 @@ def stable_key(replicate: str, arm: str, sample_index: int, prompt: str, system:
 
 
 class JsonlCache:
-    def __init__(self, path: str):
+    def __init__(self, path: str, expected_runtime: dict[str, Any] | None = None):
         self.path = path
         self.cache = {}
+        self.expected_runtime = expected_runtime
         os.makedirs(os.path.dirname(path), exist_ok=True)
         if os.path.exists(path):
             for line in open(path):
                 try:
                     rec = json.loads(line)
-                    self.cache[rec["key"]] = rec["out"]
+                    self.cache[rec["key"]] = rec
                 except Exception:
                     pass
+
+    def validate_runtime(self, runtime: dict[str, Any]) -> None:
+        if not self.expected_runtime:
+            self.expected_runtime = runtime
+            return
+        keys = ["response_model", "effective_model", "system_fingerprint", "thinking_mode", "temperature", "max_tokens"]
+        drift = {k: (self.expected_runtime.get(k), runtime.get(k)) for k in keys if self.expected_runtime.get(k) != runtime.get(k)}
+        if drift:
+            raise RuntimeError(
+                "Runtime drift detected inside one stability namespace. "
+                f"Start a new replicate/cache namespace. drift={drift}"
+            )
 
     def call(self, key: str, prompt: str, system: str) -> str:
         if key in self.cache:
@@ -105,6 +118,7 @@ class JsonlCache:
         response = pilot_llm.call_once_with_metadata(messages, max_tokens=600)
         out = response["text"]
         runtime = response.get("runtime", {})
+        self.validate_runtime(runtime)
         self.cache[key] = {"out": out, "runtime": runtime}
         with open(self.path, "a") as f:
             f.write(json.dumps({"key": key, "out": out, "runtime": runtime}, ensure_ascii=False) + "\n")
@@ -194,7 +208,9 @@ def run(replicate: str, workers: int) -> None:
         "runtime_by_call": {},
     }
     results.setdefault("runtime_by_call", {})
-    cache = JsonlCache(os.path.join(OUT, f"llm_cache_stability_{replicate}.jsonl"))
+    existing_runtimes = list((results.get("runtime_by_call") or {}).values())
+    expected_runtime = existing_runtimes[0] if existing_runtimes else None
+    cache = JsonlCache(os.path.join(OUT, f"llm_cache_stability_{replicate}.jsonl"), expected_runtime=expected_runtime)
 
     pending = []
     for i in sample_indices:

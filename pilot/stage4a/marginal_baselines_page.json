@@ -1,0 +1,1585 @@
+{
+  "_meta": {
+    "n": 250,
+    "group_key": "page_group",
+    "feature_sets": [
+      "existing_meta",
+      "existing_all",
+      "synthetic",
+      "existing_meta_plus_synthetic",
+      "existing_all_plus_synthetic"
+    ],
+    "formulations": [
+      "delta_regression",
+      "gain_harm"
+    ],
+    "bootstrap": "cluster by page_group"
+  },
+  "always_both": 0.7466666666666667,
+  "oracle": 0.8386666666666667,
+  "results": {
+    "existing_meta/delta_regression/ridge": {
+      "accuracy": 0.74,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.00666666666666671,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.07246376811594252,
+      "regret_vs_oracle": 0.09866666666666668,
+      "deviation_coverage": 0.184,
+      "deviation_count": 46,
+      "deviation_precision": 0.10869565217391304,
+      "deviation_recall": 0.20833333333333334,
+      "harmful_deviation_rate": 0.15217391304347827,
+      "beneficial_deviation_count": 5,
+      "harmful_deviation_count": 7,
+      "net_benefit_sum": -1.6666666666666665,
+      "choice_distribution": {
+        "both": 204,
+        "strategy": 17,
+        "none": 24,
+        "case": 5
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.006666666666666666,
+        "ci95": [
+          -0.03308178391561876,
+          0.017127799736495388
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.02
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_meta/delta_regression/tree": {
+      "accuracy": 0.7453333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.0013333333333334085,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.014492753623189228,
+      "regret_vs_oracle": 0.09333333333333338,
+      "deviation_coverage": 0.168,
+      "deviation_count": 42,
+      "deviation_precision": 0.09523809523809523,
+      "deviation_recall": 0.16666666666666666,
+      "harmful_deviation_rate": 0.14285714285714285,
+      "beneficial_deviation_count": 4,
+      "harmful_deviation_count": 6,
+      "net_benefit_sum": -0.3333333333333335,
+      "choice_distribution": {
+        "both": 208,
+        "none": 35,
+        "strategy": 4,
+        "case": 3
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.001333333333333334,
+        "ci95": [
+          -0.023076923076923078,
+          0.020833333333333332
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.02
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_meta/delta_regression/rf": {
+      "accuracy": 0.7466666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.0,
+      "regret_vs_oracle": 0.09199999999999997,
+      "deviation_coverage": 0.0,
+      "deviation_count": 0,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.0,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 0,
+      "net_benefit_sum": 0.0,
+      "choice_distribution": {
+        "both": 250
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.2
+        }
+      ]
+    },
+    "existing_meta/gain_harm/logreg": {
+      "accuracy": 0.7306666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.016000000000000014,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.1739130434782611,
+      "regret_vs_oracle": 0.10799999999999998,
+      "deviation_coverage": 0.432,
+      "deviation_count": 108,
+      "deviation_precision": 0.07407407407407407,
+      "deviation_recall": 0.3333333333333333,
+      "harmful_deviation_rate": 0.1111111111111111,
+      "beneficial_deviation_count": 8,
+      "harmful_deviation_count": 12,
+      "net_benefit_sum": -4.0,
+      "choice_distribution": {
+        "both": 142,
+        "none": 54,
+        "strategy": 29,
+        "case": 25
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.016,
+        "ci95": [
+          -0.04761904761904762,
+          0.014906669985067176
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.5,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_meta/gain_harm/tree": {
+      "accuracy": 0.716,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.03066666666666673,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.33333333333333415,
+      "regret_vs_oracle": 0.1226666666666667,
+      "deviation_coverage": 0.504,
+      "deviation_count": 126,
+      "deviation_precision": 0.06349206349206349,
+      "deviation_recall": 0.3333333333333333,
+      "harmful_deviation_rate": 0.1349206349206349,
+      "beneficial_deviation_count": 8,
+      "harmful_deviation_count": 17,
+      "net_benefit_sum": -7.666666666666667,
+      "choice_distribution": {
+        "both": 124,
+        "none": 54,
+        "strategy": 46,
+        "case": 26
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.030666666666666672,
+        "ci95": [
+          -0.06915629322268327,
+          0.0065359477124183
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        }
+      ]
+    },
+    "existing_meta/gain_harm/rf": {
+      "accuracy": 0.72,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.026666666666666727,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.28985507246376885,
+      "regret_vs_oracle": 0.1186666666666667,
+      "deviation_coverage": 0.34,
+      "deviation_count": 85,
+      "deviation_precision": 0.047058823529411764,
+      "deviation_recall": 0.16666666666666666,
+      "harmful_deviation_rate": 0.12941176470588237,
+      "beneficial_deviation_count": 4,
+      "harmful_deviation_count": 11,
+      "net_benefit_sum": -6.666666666666667,
+      "choice_distribution": {
+        "both": 165,
+        "case": 41,
+        "none": 16,
+        "strategy": 28
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.026666666666666665,
+        "ci95": [
+          -0.05622489959839357,
+          0.0026049386528326644
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 0.5,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.02
+        }
+      ]
+    },
+    "existing_all/delta_regression/ridge": {
+      "accuracy": 0.7386666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.008000000000000007,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.08695652173913054,
+      "regret_vs_oracle": 0.09999999999999998,
+      "deviation_coverage": 0.588,
+      "deviation_count": 147,
+      "deviation_precision": 0.05442176870748299,
+      "deviation_recall": 0.3333333333333333,
+      "harmful_deviation_rate": 0.06802721088435375,
+      "beneficial_deviation_count": 8,
+      "harmful_deviation_count": 10,
+      "net_benefit_sum": -2.0,
+      "choice_distribution": {
+        "case": 52,
+        "both": 103,
+        "strategy": 44,
+        "none": 51
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.007999999999999998,
+        "ci95": [
+          -0.03861145431145431,
+          0.021680216802168025
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.0
+        },
+        {
+          "threshold": 0.05
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_all/delta_regression/tree": {
+      "accuracy": 0.732,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.014666666666666717,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.15942028985507306,
+      "regret_vs_oracle": 0.10666666666666669,
+      "deviation_coverage": 0.132,
+      "deviation_count": 33,
+      "deviation_precision": 0.06060606060606061,
+      "deviation_recall": 0.08333333333333333,
+      "harmful_deviation_rate": 0.18181818181818182,
+      "beneficial_deviation_count": 2,
+      "harmful_deviation_count": 6,
+      "net_benefit_sum": -3.6666666666666665,
+      "choice_distribution": {
+        "both": 217,
+        "case": 8,
+        "none": 18,
+        "strategy": 7
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.014666666666666666,
+        "ci95": [
+          -0.038315316548075164,
+          0.005579977520023054
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_all/delta_regression/rf": {
+      "accuracy": 0.7466666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.0,
+      "regret_vs_oracle": 0.09199999999999997,
+      "deviation_coverage": 0.004,
+      "deviation_count": 1,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.0,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 0,
+      "net_benefit_sum": 0.0,
+      "choice_distribution": {
+        "both": 249,
+        "strategy": 1
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.2
+        }
+      ]
+    },
+    "existing_all/gain_harm/logreg": {
+      "accuracy": 0.752,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.005333333333333301,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.05797101449275329,
+      "regret_vs_oracle": 0.08666666666666667,
+      "deviation_coverage": 0.256,
+      "deviation_count": 64,
+      "deviation_precision": 0.078125,
+      "deviation_recall": 0.20833333333333334,
+      "harmful_deviation_rate": 0.0625,
+      "beneficial_deviation_count": 5,
+      "harmful_deviation_count": 4,
+      "net_benefit_sum": 1.3333333333333335,
+      "choice_distribution": {
+        "none": 36,
+        "both": 186,
+        "strategy": 19,
+        "case": 9
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.005333333333333334,
+        "ci95": [
+          -0.01734957176910865,
+          0.028572316986496076
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 0.5,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.1
+        }
+      ]
+    },
+    "existing_all/gain_harm/tree": {
+      "accuracy": 0.7506666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0040000000000000036,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.04347826086956527,
+      "regret_vs_oracle": 0.08799999999999997,
+      "deviation_coverage": 0.464,
+      "deviation_count": 116,
+      "deviation_precision": 0.09482758620689655,
+      "deviation_recall": 0.4583333333333333,
+      "harmful_deviation_rate": 0.08620689655172414,
+      "beneficial_deviation_count": 11,
+      "harmful_deviation_count": 10,
+      "net_benefit_sum": 1.0,
+      "choice_distribution": {
+        "both": 134,
+        "none": 59,
+        "case": 23,
+        "strategy": 34
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.004000000000000002,
+        "ci95": [
+          -0.03088867957819571,
+          0.03882362784471216
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 0.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "existing_all/gain_harm/rf": {
+      "accuracy": 0.7466666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.0,
+      "regret_vs_oracle": 0.09199999999999997,
+      "deviation_coverage": 0.028,
+      "deviation_count": 7,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.0,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 0,
+      "net_benefit_sum": 0.0,
+      "choice_distribution": {
+        "both": 243,
+        "none": 2,
+        "case": 4,
+        "strategy": 1
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "synthetic/delta_regression/ridge": {
+      "accuracy": 0.74,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.00666666666666671,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.07246376811594252,
+      "regret_vs_oracle": 0.09866666666666668,
+      "deviation_coverage": 0.164,
+      "deviation_count": 41,
+      "deviation_precision": 0.07317073170731707,
+      "deviation_recall": 0.125,
+      "harmful_deviation_rate": 0.0975609756097561,
+      "beneficial_deviation_count": 3,
+      "harmful_deviation_count": 4,
+      "net_benefit_sum": -1.6666666666666667,
+      "choice_distribution": {
+        "both": 209,
+        "none": 19,
+        "strategy": 14,
+        "case": 8
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.006666666666666668,
+        "ci95": [
+          -0.02734375,
+          0.012048192771084338
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.02
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "synthetic/delta_regression/tree": {
+      "accuracy": 0.7386666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.008000000000000007,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.08695652173913054,
+      "regret_vs_oracle": 0.09999999999999998,
+      "deviation_coverage": 0.048,
+      "deviation_count": 12,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.16666666666666666,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 2,
+      "net_benefit_sum": -2.0,
+      "choice_distribution": {
+        "both": 238,
+        "none": 6,
+        "strategy": 6
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.008,
+        "ci95": [
+          -0.0205761316872428,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "synthetic/delta_regression/rf": {
+      "accuracy": 0.7293333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.017333333333333423,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.1884057971014503,
+      "regret_vs_oracle": 0.1093333333333334,
+      "deviation_coverage": 0.084,
+      "deviation_count": 21,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.23809523809523808,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 5,
+      "net_benefit_sum": -4.333333333333333,
+      "choice_distribution": {
+        "both": 229,
+        "none": 14,
+        "strategy": 5,
+        "case": 2
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.017333333333333336,
+        "ci95": [
+          -0.03398759503801521,
+          -0.004
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.05
+        },
+        {
+          "threshold": 0.2
+        }
+      ]
+    },
+    "synthetic/gain_harm/logreg": {
+      "accuracy": 0.7213333333333334,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.02533333333333332,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.27536231884057966,
+      "regret_vs_oracle": 0.11733333333333329,
+      "deviation_coverage": 0.376,
+      "deviation_count": 94,
+      "deviation_precision": 0.05319148936170213,
+      "deviation_recall": 0.20833333333333334,
+      "harmful_deviation_rate": 0.1276595744680851,
+      "beneficial_deviation_count": 5,
+      "harmful_deviation_count": 12,
+      "net_benefit_sum": -6.333333333333333,
+      "choice_distribution": {
+        "both": 156,
+        "strategy": 24,
+        "case": 37,
+        "none": 33
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.025333333333333333,
+        "ci95": [
+          -0.05986394557823129,
+          0.006694115170358847
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "synthetic/gain_harm/tree": {
+      "accuracy": 0.7173333333333334,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.029333333333333322,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.3188405797101449,
+      "regret_vs_oracle": 0.1213333333333333,
+      "deviation_coverage": 0.508,
+      "deviation_count": 127,
+      "deviation_precision": 0.05511811023622047,
+      "deviation_recall": 0.2916666666666667,
+      "harmful_deviation_rate": 0.11811023622047244,
+      "beneficial_deviation_count": 7,
+      "harmful_deviation_count": 15,
+      "net_benefit_sum": -7.333333333333333,
+      "choice_distribution": {
+        "none": 38,
+        "strategy": 44,
+        "both": 123,
+        "case": 45
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.029333333333333333,
+        "ci95": [
+          -0.06666666666666667,
+          0.0056034278118026705
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 1.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "synthetic/gain_harm/rf": {
+      "accuracy": 0.728,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.01866666666666672,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.20289855072463833,
+      "regret_vs_oracle": 0.11066666666666669,
+      "deviation_coverage": 0.092,
+      "deviation_count": 23,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.21739130434782608,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 5,
+      "net_benefit_sum": -4.666666666666667,
+      "choice_distribution": {
+        "both": 227,
+        "case": 19,
+        "strategy": 4
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.018666666666666668,
+        "ci95": [
+          -0.03643724696356275,
+          -0.004016064257028112
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        }
+      ]
+    },
+    "existing_meta_plus_synthetic/delta_regression/ridge": {
+      "accuracy": 0.7493333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.002666666666666595,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.02898550724637604,
+      "regret_vs_oracle": 0.08933333333333338,
+      "deviation_coverage": 0.328,
+      "deviation_count": 82,
+      "deviation_precision": 0.12195121951219512,
+      "deviation_recall": 0.4166666666666667,
+      "harmful_deviation_rate": 0.10975609756097561,
+      "beneficial_deviation_count": 10,
+      "harmful_deviation_count": 9,
+      "net_benefit_sum": 0.6666666666666667,
+      "choice_distribution": {
+        "both": 168,
+        "strategy": 25,
+        "case": 19,
+        "none": 38
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.002666666666666668,
+        "ci95": [
+          -0.031496062992125984,
+          0.03523194643711141
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_meta_plus_synthetic/delta_regression/tree": {
+      "accuracy": 0.7213333333333334,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.02533333333333332,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.27536231884057966,
+      "regret_vs_oracle": 0.11733333333333329,
+      "deviation_coverage": 0.252,
+      "deviation_count": 63,
+      "deviation_precision": 0.015873015873015872,
+      "deviation_recall": 0.041666666666666664,
+      "harmful_deviation_rate": 0.15873015873015872,
+      "beneficial_deviation_count": 1,
+      "harmful_deviation_count": 10,
+      "net_benefit_sum": -6.333333333333334,
+      "choice_distribution": {
+        "both": 187,
+        "case": 17,
+        "none": 37,
+        "strategy": 9
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.025333333333333336,
+        "ci95": [
+          -0.04723346828609987,
+          -0.005464480874316942
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.0
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_meta_plus_synthetic/delta_regression/rf": {
+      "accuracy": 0.7466666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.0,
+      "regret_vs_oracle": 0.09199999999999997,
+      "deviation_coverage": 0.012,
+      "deviation_count": 3,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.0,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 0,
+      "net_benefit_sum": 0.0,
+      "choice_distribution": {
+        "both": 247,
+        "none": 3
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_meta_plus_synthetic/gain_harm/logreg": {
+      "accuracy": 0.7373333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.009333333333333416,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.10144927536231976,
+      "regret_vs_oracle": 0.10133333333333339,
+      "deviation_coverage": 0.376,
+      "deviation_count": 94,
+      "deviation_precision": 0.0851063829787234,
+      "deviation_recall": 0.3333333333333333,
+      "harmful_deviation_rate": 0.10638297872340426,
+      "beneficial_deviation_count": 8,
+      "harmful_deviation_count": 10,
+      "net_benefit_sum": -2.3333333333333335,
+      "choice_distribution": {
+        "both": 156,
+        "strategy": 35,
+        "case": 18,
+        "none": 41
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.009333333333333334,
+        "ci95": [
+          -0.04263565891472868,
+          0.02185792349726776
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 0.5,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_meta_plus_synthetic/gain_harm/tree": {
+      "accuracy": 0.736,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.010666666666666713,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.11594202898550779,
+      "regret_vs_oracle": 0.10266666666666668,
+      "deviation_coverage": 0.496,
+      "deviation_count": 124,
+      "deviation_precision": 0.07258064516129033,
+      "deviation_recall": 0.375,
+      "harmful_deviation_rate": 0.0967741935483871,
+      "beneficial_deviation_count": 9,
+      "harmful_deviation_count": 12,
+      "net_benefit_sum": -2.6666666666666665,
+      "choice_distribution": {
+        "both": 126,
+        "strategy": 48,
+        "none": 57,
+        "case": 19
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.010666666666666668,
+        "ci95": [
+          -0.05013694007596447,
+          0.026247535966717844
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 1.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "existing_meta_plus_synthetic/gain_harm/rf": {
+      "accuracy": 0.7426666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.0040000000000000036,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.04347826086956527,
+      "regret_vs_oracle": 0.09599999999999997,
+      "deviation_coverage": 0.112,
+      "deviation_count": 28,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.03571428571428571,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 1,
+      "net_benefit_sum": -1.0,
+      "choice_distribution": {
+        "both": 222,
+        "case": 19,
+        "strategy": 8,
+        "none": 1
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.004,
+        "ci95": [
+          -0.012552301255230125,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        }
+      ]
+    },
+    "existing_all_plus_synthetic/delta_regression/ridge": {
+      "accuracy": 0.7453333333333333,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.0013333333333334085,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.014492753623189228,
+      "regret_vs_oracle": 0.09333333333333338,
+      "deviation_coverage": 0.524,
+      "deviation_count": 131,
+      "deviation_precision": 0.04580152671755725,
+      "deviation_recall": 0.25,
+      "harmful_deviation_rate": 0.05343511450381679,
+      "beneficial_deviation_count": 6,
+      "harmful_deviation_count": 7,
+      "net_benefit_sum": -0.33333333333333326,
+      "choice_distribution": {
+        "both": 119,
+        "none": 48,
+        "strategy": 41,
+        "case": 42
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.0013333333333333322,
+        "ci95": [
+          -0.027888446215139442,
+          0.025537634408602152
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.02
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.33
+        }
+      ]
+    },
+    "existing_all_plus_synthetic/delta_regression/tree": {
+      "accuracy": 0.7346666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": -0.01200000000000001,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": -0.13043478260869582,
+      "regret_vs_oracle": 0.10399999999999998,
+      "deviation_coverage": 0.208,
+      "deviation_count": 52,
+      "deviation_precision": 0.07692307692307693,
+      "deviation_recall": 0.16666666666666666,
+      "harmful_deviation_rate": 0.1346153846153846,
+      "beneficial_deviation_count": 4,
+      "harmful_deviation_count": 7,
+      "net_benefit_sum": -3.0,
+      "choice_distribution": {
+        "strategy": 14,
+        "both": 198,
+        "case": 7,
+        "none": 31
+      },
+      "cluster_bootstrap": {
+        "point_estimate": -0.012,
+        "ci95": [
+          -0.042666666666666665,
+          0.015089163237311387
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.1
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.02
+        }
+      ]
+    },
+    "existing_all_plus_synthetic/delta_regression/rf": {
+      "accuracy": 0.7466666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.0,
+      "regret_vs_oracle": 0.09199999999999997,
+      "deviation_coverage": 0.0,
+      "deviation_count": 0,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.0,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 0,
+      "net_benefit_sum": 0.0,
+      "choice_distribution": {
+        "both": 250
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "threshold": 0.33
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.2
+        },
+        {
+          "threshold": 0.15
+        },
+        {
+          "threshold": 0.2
+        }
+      ]
+    },
+    "existing_all_plus_synthetic/gain_harm/logreg": {
+      "accuracy": 0.756,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.009333333333333305,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.10144927536231856,
+      "regret_vs_oracle": 0.08266666666666667,
+      "deviation_coverage": 0.292,
+      "deviation_count": 73,
+      "deviation_precision": 0.0958904109589041,
+      "deviation_recall": 0.2916666666666667,
+      "harmful_deviation_rate": 0.0684931506849315,
+      "beneficial_deviation_count": 7,
+      "harmful_deviation_count": 5,
+      "net_benefit_sum": 2.3333333333333335,
+      "choice_distribution": {
+        "none": 38,
+        "both": 177,
+        "strategy": 26,
+        "case": 9
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.009333333333333334,
+        "ci95": [
+          -0.01702225386720277,
+          0.03643724696356275
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 0.5,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.15
+        }
+      ]
+    },
+    "existing_all_plus_synthetic/gain_harm/tree": {
+      "accuracy": 0.7466666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.0,
+      "regret_vs_oracle": 0.09199999999999997,
+      "deviation_coverage": 0.424,
+      "deviation_count": 106,
+      "deviation_precision": 0.09433962264150944,
+      "deviation_recall": 0.4166666666666667,
+      "harmful_deviation_rate": 0.09433962264150944,
+      "beneficial_deviation_count": 10,
+      "harmful_deviation_count": 10,
+      "net_benefit_sum": 0.0,
+      "choice_distribution": {
+        "both": 144,
+        "none": 58,
+        "case": 24,
+        "strategy": 24
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.0,
+        "ci95": [
+          -0.033741091008771935,
+          0.0342214089982316
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 0.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 0.5,
+          "threshold": 0.0
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.1
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.0
+        }
+      ]
+    },
+    "existing_all_plus_synthetic/gain_harm/rf": {
+      "accuracy": 0.7466666666666667,
+      "always_both": 0.7466666666666667,
+      "oracle": 0.8386666666666667,
+      "gain_vs_both": 0.0,
+      "oracle_gap": 0.09199999999999997,
+      "oracle_gap_recovery": 0.0,
+      "regret_vs_oracle": 0.09199999999999997,
+      "deviation_coverage": 0.036,
+      "deviation_count": 9,
+      "deviation_precision": 0.0,
+      "deviation_recall": 0.0,
+      "harmful_deviation_rate": 0.0,
+      "beneficial_deviation_count": 0,
+      "harmful_deviation_count": 0,
+      "net_benefit_sum": 0.0,
+      "choice_distribution": {
+        "both": 241,
+        "none": 3,
+        "case": 4,
+        "strategy": 2
+      },
+      "cluster_bootstrap": {
+        "point_estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_resamples": 10000,
+        "random_seed": 20260816,
+        "procedure": "cluster percentile bootstrap by page_group"
+      },
+      "fold_params": [
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 1.5,
+          "threshold": 0.05
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.02
+        },
+        {
+          "lambda": 2.0,
+          "threshold": 0.15
+        }
+      ]
+    }
+  }
+}
