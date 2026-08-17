@@ -1,0 +1,1639 @@
+{
+  "version": "tatqa_repeated_run_stability_v1_fixed_heldout120",
+  "sample_n": 120,
+  "replicates": [
+    "rn1",
+    "rn2",
+    "rn3"
+  ],
+  "frozen_protocol": {
+    "sample": "existing TAT-QA held-out 120 sample from tatqa_heldout_four_arm_diagnostic.json",
+    "retrieval": "frozen Case top-4 and frozen HyDE Strategy top-3",
+    "prompt": "same build_prompt/SYSTEM as held-out diagnostic",
+    "evaluator": "canonicalized TAT-QA prediction contract",
+    "rn1_source": "pilot/multibench/output/tatqa/tatqa_heldout_four_arm_diagnostic.json",
+    "rn2_rn3_cache_namespace": "tatqa_repeated_run_stability_v1_fixed_heldout120",
+    "cold_run_note": "rn2/rn3 are independent execution cache namespaces. A cold run creates 480 records per replicate; latest API counters may be zero after cache replay."
+  },
+  "runs": {
+    "rn1": {
+      "source": "pilot/multibench/output/tatqa/tatqa_heldout_four_arm_diagnostic.json",
+      "arm_metrics": {
+        "none": {
+          "count": 120,
+          "missing_predictions": 0,
+          "exact_match": 0.725,
+          "f1": 0.8059999999999998,
+          "scale_score": 0.925,
+          "op_score": 0.0,
+          "by_answer_type": {
+            "arithmetic": {
+              "count": 45,
+              "em": 0.7111111111111111,
+              "f1": 0.7111111111111111
+            },
+            "count": {
+              "count": 3,
+              "em": 1.0,
+              "f1": 1.0
+            },
+            "multi-span": {
+              "count": 12,
+              "em": 0.8333333333333334,
+              "f1": 0.8983333333333334
+            },
+            "span": {
+              "count": 60,
+              "em": 0.7,
+              "f1": 0.8490000000000001
+            }
+          },
+          "by_scale": {
+            "": {
+              "count": 64,
+              "em": 0.671875,
+              "f1": 0.82375
+            },
+            "billion": {
+              "count": 1,
+              "em": 1.0,
+              "f1": 1.0
+            },
+            "million": {
+              "count": 12,
+              "em": 0.8333333333333334,
+              "f1": 0.8333333333333334
+            },
+            "percent": {
+              "count": 22,
+              "em": 0.6818181818181818,
+              "f1": 0.6818181818181818
+            },
+            "thousand": {
+              "count": 21,
+              "em": 0.8571428571428571,
+              "f1": 0.8571428571428571
+            }
+          },
+          "missing_prediction_uids": [],
+          "parse_failures": 0,
+          "invalid_scale_parse_errors": 0,
+          "normalization_failures": 0
+        },
+        "case": {
+          "count": 120,
+          "missing_predictions": 0,
+          "exact_match": 0.6916666666666667,
+          "f1": 0.7725833333333333,
+          "scale_score": 0.925,
+          "op_score": 0.0,
+          "by_answer_type": {
+            "arithmetic": {
+              "count": 45,
+              "em": 0.6888888888888889,
+              "f1": 0.6888888888888889
+            },
+            "count": {
+              "count": 3,
+              "em": 0.0,
+              "f1": 0.0
+            },
+            "multi-span": {
+              "count": 12,
+              "em": 0.9166666666666666,
+              "f1": 0.9824999999999999
+            },
+            "span": {
+              "count": 60,
+              "em": 0.6833333333333333,
+              "f1": 0.8320000000000001
+            }
+          },
+          "by_scale": {
+            "": {
+              "count": 64,
+              "em": 0.609375,
+              "f1": 0.7610937500000001
+            },
+            "billion": {
+              "count": 1,
+              "em": 1.0,
+              "f1": 1.0
+            },
+            "million": {
+              "count": 12,
+              "em": 0.75,
+              "f1": 0.75
+            },
+            "percent": {
+              "count": 22,
+              "em": 0.7272727272727273,
+              "f1": 0.7272727272727273
+            },
+            "thousand": {
+              "count": 21,
+              "em": 0.8571428571428571,
+              "f1": 0.8571428571428571
+            }
+          },
+          "missing_prediction_uids": [],
+          "parse_failures": 0,
+          "invalid_scale_parse_errors": 0,
+          "normalization_failures": 0
+        },
+        "strategy": {
+          "count": 120,
+          "missing_predictions": 0,
+          "exact_match": 0.7083333333333334,
+          "f1": 0.797,
+          "scale_score": 0.9,
+          "op_score": 0.0,
+          "by_answer_type": {
+            "arithmetic": {
+              "count": 45,
+              "em": 0.7111111111111111,
+              "f1": 0.7111111111111111
+            },
+            "count": {
+              "count": 3,
+              "em": 0.6666666666666666,
+              "f1": 0.6666666666666666
+            },
+            "multi-span": {
+              "count": 12,
+              "em": 0.8333333333333334,
+              "f1": 0.8983333333333334
+            },
+            "span": {
+              "count": 60,
+              "em": 0.6833333333333333,
+              "f1": 0.8476666666666668
+            }
+          },
+          "by_scale": {
+            "": {
+              "count": 64,
+              "em": 0.65625,
+              "f1": 0.8225000000000001
+            },
+            "billion": {
+              "count": 1,
+              "em": 1.0,
+              "f1": 1.0
+            },
+            "million": {
+              "count": 12,
+              "em": 0.6666666666666666,
+              "f1": 0.6666666666666666
+            },
+            "percent": {
+              "count": 22,
+              "em": 0.8181818181818182,
+              "f1": 0.8181818181818182
+            },
+            "thousand": {
+              "count": 21,
+              "em": 0.7619047619047619,
+              "f1": 0.7619047619047619
+            }
+          },
+          "missing_prediction_uids": [],
+          "parse_failures": 0,
+          "invalid_scale_parse_errors": 0,
+          "normalization_failures": 0
+        },
+        "both": {
+          "count": 120,
+          "missing_predictions": 0,
+          "exact_match": 0.6916666666666667,
+          "f1": 0.7745000000000001,
+          "scale_score": 0.925,
+          "op_score": 0.0,
+          "by_answer_type": {
+            "arithmetic": {
+              "count": 45,
+              "em": 0.7111111111111111,
+              "f1": 0.7111111111111111
+            },
+            "count": {
+              "count": 3,
+              "em": 0.0,
+              "f1": 0.0
+            },
+            "multi-span": {
+              "count": 12,
+              "em": 0.9166666666666666,
+              "f1": 0.9824999999999999
+            },
+            "span": {
+              "count": 60,
+              "em": 0.6666666666666666,
+              "f1": 0.8191666666666666
+            }
+          },
+          "by_scale": {
+            "": {
+              "count": 64,
+              "em": 0.59375,
+              "f1": 0.7490625000000001
+            },
+            "billion": {
+              "count": 1,
+              "em": 1.0,
+              "f1": 1.0
+            },
+            "million": {
+              "count": 12,
+              "em": 0.6666666666666666,
+              "f1": 0.6666666666666666
+            },
+            "percent": {
+              "count": 22,
+              "em": 0.8181818181818182,
+              "f1": 0.8181818181818182
+            },
+            "thousand": {
+              "count": 21,
+              "em": 0.8571428571428571,
+              "f1": 0.8571428571428571
+            }
+          },
+          "missing_prediction_uids": [],
+          "parse_failures": 0,
+          "invalid_scale_parse_errors": 0,
+          "normalization_failures": 0
+        }
+      },
+      "event_counts": {
+        "case_only": 1,
+        "strategy_only": 0,
+        "both_only": 2,
+        "none_only": 3,
+        "none_gt_both": 13,
+        "case_gt_both": 4,
+        "strategy_gt_both": 8
+      },
+      "observed_runtime": {
+        "response_models": {
+          "deepseek-v4-flash": 480
+        },
+        "system_fingerprints": {
+          "a26a7955944dc5c60445bff77fac9c8e": 480
+        },
+        "backends": {
+          "deepseek_openai_compatible": 480
+        },
+        "endpoints": {
+          "https://api.deepseek.com/chat/completions": 480
+        }
+      },
+      "execution_api_calls": 0,
+      "execution_cache_hits": 480,
+      "execution_cache_records_after": 480
+    },
+    "rn2": {
+      "source": "pilot/multibench/output/tatqa/tatqa_heldout_repeated_run_rn2_cache.jsonl",
+      "arm_metrics": {
+        "none": {
+          "count": 120,
+          "missing_predictions": 0,
+          "exact_match": 0.7,
+          "f1": 0.7800833333333334,
+          "scale_score": 0.9166666666666666,
+          "op_score": 0.0,
+          "by_answer_type": {
+            "arithmetic": {
+              "count": 45,
+              "em": 0.7111111111111111,
+              "f1": 0.7111111111111111
+            },
+            "count": {
+              "count": 3,
+              "em": 0.3333333333333333,
+              "f1": 0.3333333333333333
+            },
+            "multi-span": {
+              "count": 12,
+              "em": 0.75,
+              "f1": 0.8150000000000001
+            },
+            "span": {
+              "count": 60,
+              "em": 0.7,
+              "f1": 0.8471666666666666
+            }
+          },
+          "by_scale": {
+            "": {
+              "count": 64,
+              "em": 0.640625,
+              "f1": 0.79078125
+            },
+            "billion": {
+              "count": 1,
+              "em": 1.0,
+              "f1": 1.0
+            },
+            "million": {
+              "count": 12,
+              "em": 0.8333333333333334,
+              "f1": 0.8333333333333334
+            },
+            "percent": {
+              "count": 22,
+              "em": 0.6818181818181818,
+              "f1": 0.6818181818181818
+            },
+            "thousand": {
+              "count": 21,
+              "em": 0.8095238095238095,
+              "f1": 0.8095238095238095
+            }
+          },
+          "missing_prediction_uids": [],
+          "parse_failures": 0,
+          "invalid_scale_parse_errors": 0,
+          "normalization_failures": 0
+        },
+        "case": {
+          "count": 120,
+          "missing_predictions": 0,
+          "exact_match": 0.7083333333333334,
+          "f1": 0.7890833333333332,
+          "scale_score": 0.925,
+          "op_score": 0.0,
+          "by_answer_type": {
+            "arithmetic": {
+              "count": 45,
+              "em": 0.7333333333333333,
+              "f1": 0.7333333333333333
+            },
+            "count": {
+              "count": 3,
+              "em": 0.0,
+              "f1": 0.0
+            },
+            "multi-span": {
+              "count": 12,
+              "em": 0.9166666666666666,
+              "f1": 0.9824999999999999
+            },
+            "span": {
+              "count": 60,
+              "em": 0.6833333333333333,
+              "f1": 0.8316666666666668
+            }
+          },
+          "by_scale": {
+            "": {
+              "count": 64,
+              "em": 0.609375,
+              "f1": 0.7607812500000001
+            },
+            "billion": {
+              "count": 1,
+              "em": 1.0,
+              "f1": 1.0
+            },
+            "million": {
+              "count": 12,
+              "em": 0.75,
+              "f1": 0.75
+            },
+            "percent": {
+              "count": 22,
+              "em": 0.8181818181818182,
+              "f1": 0.8181818181818182
+            },
+            "thousand": {
+              "count": 21,
+              "em": 0.8571428571428571,
+              "f1": 0.8571428571428571
+            }
+          },
+          "missing_prediction_uids": [],
+          "parse_failures": 0,
+          "invalid_scale_parse_errors": 0,
+          "normalization_failures": 0
+        },
+        "strategy": {
+          "count": 120,
+          "missing_predictions": 0,
+          "exact_match": 0.7166666666666667,
+          "f1": 0.8053333333333333,
+          "scale_score": 0.9083333333333333,
+          "op_score": 0.0,
+          "by_answer_type": {
+            "arithmetic": {
+              "count": 45,
+              "em": 0.7333333333333333,
+              "f1": 0.7333333333333333
+            },
+            "count": {
+              "count": 3,
+              "em": 0.6666666666666666,
+              "f1": 0.6666666666666666
+            },
+            "multi-span": {
+              "count": 12,
+              "em": 0.8333333333333334,
+              "f1": 0.8983333333333334
+            },
+            "span": {
+              "count": 60,
+              "em": 0.6833333333333333,
+              "f1": 0.8476666666666668
+            }
+          },
+          "by_scale": {
+            "": {
+              "count": 64,
+              "em": 0.65625,
+              "f1": 0.8225000000000001
+            },
+            "billion": {
+              "count": 1,
+              "em": 1.0,
+              "f1": 1.0
+            },
+            "million": {
+              "count": 12,
+              "em": 0.75,
+              "f1": 0.75
+            },
+            "percent": {
+              "count": 22,
+              "em": 0.7727272727272727,
+              "f1": 0.7727272727272727
+            },
+            "thousand": {
+              "count": 21,
+              "em": 0.8095238095238095,
+              "f1": 0.8095238095238095
+            }
+          },
+          "missing_prediction_uids": [],
+          "parse_failures": 0,
+          "invalid_scale_parse_errors": 0,
+          "normalization_failures": 0
+        },
+        "both": {
+          "count": 120,
+          "missing_predictions": 0,
+          "exact_match": 0.6833333333333333,
+          "f1": 0.7661666666666668,
+          "scale_score": 0.9333333333333333,
+          "op_score": 0.0,
+          "by_answer_type": {
+            "arithmetic": {
+              "count": 45,
+              "em": 0.6666666666666666,
+              "f1": 0.6666666666666666
+            },
+            "count": {
+              "count": 3,
+              "em": 0.0,
+              "f1": 0.0
+            },
+            "multi-span": {
+              "count": 12,
+              "em": 0.9166666666666666,
+              "f1": 0.9824999999999999
+            },
+            "span": {
+              "count": 60,
+              "em": 0.6833333333333333,
+              "f1": 0.8358333333333333
+            }
+          },
+          "by_scale": {
+            "": {
+              "count": 64,
+              "em": 0.609375,
+              "f1": 0.7646875000000001
+            },
+            "billion": {
+              "count": 1,
+              "em": 1.0,
+              "f1": 1.0
+            },
+            "million": {
+              "count": 12,
+              "em": 0.6666666666666666,
+              "f1": 0.6666666666666666
+            },
+            "percent": {
+              "count": 22,
+              "em": 0.7272727272727273,
+              "f1": 0.7272727272727273
+            },
+            "thousand": {
+              "count": 21,
+              "em": 0.8571428571428571,
+              "f1": 0.8571428571428571
+            }
+          },
+          "missing_prediction_uids": [],
+          "parse_failures": 0,
+          "invalid_scale_parse_errors": 0,
+          "normalization_failures": 0
+        }
+      },
+      "event_counts": {
+        "case_only": 3,
+        "strategy_only": 1,
+        "both_only": 1,
+        "none_only": 1,
+        "none_gt_both": 10,
+        "case_gt_both": 7,
+        "strategy_gt_both": 9
+      },
+      "observed_runtime": {
+        "response_models": {
+          "deepseek-v4-flash": 480
+        },
+        "system_fingerprints": {
+          "a26a7955944dc5c60445bff77fac9c8e": 480
+        },
+        "backends": {
+          "deepseek_openai_compatible": 480
+        },
+        "endpoints": {
+          "https://api.deepseek.com/chat/completions": 480
+        }
+      },
+      "execution_api_calls": 0,
+      "execution_cache_hits": 480,
+      "execution_cache_records_after": 480
+    },
+    "rn3": {
+      "source": "pilot/multibench/output/tatqa/tatqa_heldout_repeated_run_rn3_cache.jsonl",
+      "arm_metrics": {
+        "none": {
+          "count": 120,
+          "missing_predictions": 0,
+          "exact_match": 0.7,
+          "f1": 0.7878333333333333,
+          "scale_score": 0.9166666666666666,
+          "op_score": 0.0,
+          "by_answer_type": {
+            "arithmetic": {
+              "count": 45,
+              "em": 0.7111111111111111,
+              "f1": 0.7111111111111111
+            },
+            "count": {
+              "count": 3,
+              "em": 0.6666666666666666,
+              "f1": 0.6666666666666666
+            },
+            "multi-span": {
+              "count": 12,
+              "em": 0.75,
+              "f1": 0.8150000000000001
+            },
+            "span": {
+              "count": 60,
+              "em": 0.6833333333333333,
+              "f1": 0.8460000000000001
+            }
+          },
+          "by_scale": {
+            "": {
+              "count": 64,
+              "em": 0.640625,
+              "f1": 0.8053125000000001
+            },
+            "billion": {
+              "count": 1,
+              "em": 1.0,
+              "f1": 1.0
+            },
+            "million": {
+              "count": 12,
+              "em": 0.8333333333333334,
+              "f1": 0.8333333333333334
+            },
+            "percent": {
+              "count": 22,
+              "em": 0.6818181818181818,
+              "f1": 0.6818181818181818
+            },
+            "thousand": {
+              "count": 21,
+              "em": 0.8095238095238095,
+              "f1": 0.8095238095238095
+            }
+          },
+          "missing_prediction_uids": [],
+          "parse_failures": 0,
+          "invalid_scale_parse_errors": 0,
+          "normalization_failures": 0
+        },
+        "case": {
+          "count": 120,
+          "missing_predictions": 0,
+          "exact_match": 0.6916666666666667,
+          "f1": 0.7725833333333333,
+          "scale_score": 0.925,
+          "op_score": 0.0,
+          "by_answer_type": {
+            "arithmetic": {
+              "count": 45,
+              "em": 0.6888888888888889,
+              "f1": 0.6888888888888889
+            },
+            "count": {
+              "count": 3,
+              "em": 0.0,
+              "f1": 0.0
+            },
+            "multi-span": {
+              "count": 12,
+              "em": 0.9166666666666666,
+              "f1": 0.9824999999999999
+            },
+            "span": {
+              "count": 60,
+              "em": 0.6833333333333333,
+              "f1": 0.8320000000000001
+            }
+          },
+          "by_scale": {
+            "": {
+              "count": 64,
+              "em": 0.609375,
+              "f1": 0.7610937500000001
+            },
+            "billion": {
+              "count": 1,
+              "em": 1.0,
+              "f1": 1.0
+            },
+            "million": {
+              "count": 12,
+              "em": 0.75,
+              "f1": 0.75
+            },
+            "percent": {
+              "count": 22,
+              "em": 0.7272727272727273,
+              "f1": 0.7272727272727273
+            },
+            "thousand": {
+              "count": 21,
+              "em": 0.8571428571428571,
+              "f1": 0.8571428571428571
+            }
+          },
+          "missing_prediction_uids": [],
+          "parse_failures": 0,
+          "invalid_scale_parse_errors": 0,
+          "normalization_failures": 0
+        },
+        "strategy": {
+          "count": 120,
+          "missing_predictions": 0,
+          "exact_match": 0.7083333333333334,
+          "f1": 0.797,
+          "scale_score": 0.8916666666666667,
+          "op_score": 0.0,
+          "by_answer_type": {
+            "arithmetic": {
+              "count": 45,
+              "em": 0.7333333333333333,
+              "f1": 0.7333333333333333
+            },
+            "count": {
+              "count": 3,
+              "em": 0.6666666666666666,
+              "f1": 0.6666666666666666
+            },
+            "multi-span": {
+              "count": 12,
+              "em": 0.75,
+              "f1": 0.8150000000000001
+            },
+            "span": {
+              "count": 60,
+              "em": 0.6833333333333333,
+              "f1": 0.8476666666666668
+            }
+          },
+          "by_scale": {
+            "": {
+              "count": 64,
+              "em": 0.640625,
+              "f1": 0.8068750000000001
+            },
+            "billion": {
+              "count": 1,
+              "em": 1.0,
+              "f1": 1.0
+            },
+            "million": {
+              "count": 12,
+              "em": 0.6666666666666666,
+              "f1": 0.6666666666666666
+            },
+            "percent": {
+              "count": 22,
+              "em": 0.8181818181818182,
+              "f1": 0.8181818181818182
+            },
+            "thousand": {
+              "count": 21,
+              "em": 0.8095238095238095,
+              "f1": 0.8095238095238095
+            }
+          },
+          "missing_prediction_uids": [],
+          "parse_failures": 0,
+          "invalid_scale_parse_errors": 0,
+          "normalization_failures": 0
+        },
+        "both": {
+          "count": 120,
+          "missing_predictions": 0,
+          "exact_match": 0.6833333333333333,
+          "f1": 0.7658333333333334,
+          "scale_score": 0.925,
+          "op_score": 0.0,
+          "by_answer_type": {
+            "arithmetic": {
+              "count": 45,
+              "em": 0.6888888888888889,
+              "f1": 0.6888888888888889
+            },
+            "count": {
+              "count": 3,
+              "em": 0.0,
+              "f1": 0.0
+            },
+            "multi-span": {
+              "count": 12,
+              "em": 0.9166666666666666,
+              "f1": 0.9824999999999999
+            },
+            "span": {
+              "count": 60,
+              "em": 0.6666666666666666,
+              "f1": 0.8185000000000001
+            }
+          },
+          "by_scale": {
+            "": {
+              "count": 64,
+              "em": 0.59375,
+              "f1": 0.7484375
+            },
+            "billion": {
+              "count": 1,
+              "em": 1.0,
+              "f1": 1.0
+            },
+            "million": {
+              "count": 12,
+              "em": 0.6666666666666666,
+              "f1": 0.6666666666666666
+            },
+            "percent": {
+              "count": 22,
+              "em": 0.7727272727272727,
+              "f1": 0.7727272727272727
+            },
+            "thousand": {
+              "count": 21,
+              "em": 0.8571428571428571,
+              "f1": 0.8571428571428571
+            }
+          },
+          "missing_prediction_uids": [],
+          "parse_failures": 0,
+          "invalid_scale_parse_errors": 0,
+          "normalization_failures": 0
+        }
+      },
+      "event_counts": {
+        "case_only": 2,
+        "strategy_only": 1,
+        "both_only": 1,
+        "none_only": 1,
+        "none_gt_both": 11,
+        "case_gt_both": 5,
+        "strategy_gt_both": 9
+      },
+      "observed_runtime": {
+        "response_models": {
+          "deepseek-v4-flash": 480
+        },
+        "system_fingerprints": {
+          "a26a7955944dc5c60445bff77fac9c8e": 480
+        },
+        "backends": {
+          "deepseek_openai_compatible": 480
+        },
+        "endpoints": {
+          "https://api.deepseek.com/chat/completions": 480
+        }
+      },
+      "execution_api_calls": 0,
+      "execution_cache_hits": 480,
+      "execution_cache_records_after": 480
+    }
+  },
+  "run_best_fixed": {
+    "rn1": "none",
+    "rn2": "strategy",
+    "rn3": "strategy"
+  },
+  "run_best_fixed_em": {
+    "rn1": 0.725,
+    "rn2": 0.7166666666666667,
+    "rn3": 0.7083333333333334
+  },
+  "mean_run_best_fixed_em": 0.7166666666666667,
+  "expected": {
+    "p_correct": {
+      "tatqa:dev:076daf33-1a7f-4255-8e27-764a43d97233": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:8274a8e5-a2a8-4efe-9100-112dbc48df6b": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:bbb9ab37-568a-4bab-9b95-cb3c43c5baa1": {
+        "none": 0.0,
+        "case": 1.0,
+        "strategy": 0.6666666666666666,
+        "both": 1.0
+      },
+      "tatqa:dev:d5658939-2392-4b9e-9506-2ed900562b72": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:1afa1b40-2803-4cf2-bd76-a3d69aea90b2": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:1f980345-bb16-4e30-93d1-f14b2b7298b8": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:ed47e72c-c67c-4c61-abfa-9aefcf4caa89": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:da716abd-9641-4038-8f1d-4233fcf405ee": {
+        "none": 0.0,
+        "case": 0.3333333333333333,
+        "strategy": 0.3333333333333333,
+        "both": 0.6666666666666666
+      },
+      "tatqa:dev:4eb27c6c-d78d-4b9a-b165-90da95d683c9": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:a450d07c-f8bd-44df-a819-8896111157df": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:f4acbb7e-c861-4ff7-ba8c-450fb3a31224": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:568f039b-5753-4e91-b3aa-17cbcbe9b259": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 0.3333333333333333,
+        "both": 0.0
+      },
+      "tatqa:dev:eb86d5f5-d1b0-4761-ae4c-417b8775ce5b": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:e13a538b-9f61-44d9-a7ad-0f22e286079e": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:96301054-1b68-403c-9266-87fdadcb6900": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:2e3d4fe2-96f3-4ad9-b23f-1c590897b6e5": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:75cadcb4-da5e-4e3e-b2ad-36a31be3d013": {
+        "none": 0.6666666666666666,
+        "case": 0.0,
+        "strategy": 1.0,
+        "both": 0.0
+      },
+      "tatqa:dev:b8ed9d15-95cd-4b7c-9406-8c0302bf66d9": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:7fd50619-03e5-4852-8f25-617b72025cbd": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:5d7824c0-58e4-4065-ae53-2c10391ae966": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:58d97328-c6a8-4f7e-9740-80c0384306fb": {
+        "none": 0.0,
+        "case": 1.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:5f289981-f13d-4160-8879-c81dc0b7381e": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:9954ad06-2377-4d2f-aefd-ac46ac68c79b": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:cbe6cbca-b772-4e12-b0ba-c32a7629d43e": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:0cca40eb-3b7e-4ea2-83b0-c6be83190b12": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:e35b10e8-fe97-4cc4-b59e-cbeb0679f6c7": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:d547e798-a829-4b95-af68-e50705558993": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:eb1ecc18-e3d3-4dd6-a689-546998eb2784": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:8e9772d7-f829-47fe-890d-0bbc994acb5c": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:9f84812f-f352-4bdf-835d-e8d19254149a": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:e378f03f-8e13-4020-b4ba-641859e16e25": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:9a9ba673-7d9b-4c45-b43a-b15589b0ef3e": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:bf7abd62-d9cd-48d2-8826-1457684019a3": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:a0bca80b-e742-4b34-8adc-6f408daba014": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:6d1c6600-ea3b-4b55-96b6-46f93eab23f0": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:cd3b4bb4-f9a5-4350-b823-0e50c792b4a2": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:a3637ae4-b286-44a5-a115-83867e4bb14e": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:0c1736a6-bc48-4250-81da-d0ca69d28918": {
+        "none": 1.0,
+        "case": 0.0,
+        "strategy": 1.0,
+        "both": 0.0
+      },
+      "tatqa:dev:fb46f62a-fd52-49d3-9394-844db5a3254e": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:44a4d552-75bf-435f-b476-dda50cdbed7a": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:ea6cb8e6-64e7-4b50-8965-5aeee716adec": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:bd8bb8d3-c7e9-4a7f-be23-97b27a29f74e": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:af294acf-0db4-4248-9dcb-d7f53d1f0687": {
+        "none": 0.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:5dc7a9ae-acd0-4b54-9721-ff522aaef3f5": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:4efdbbd2-affc-4243-9a77-de359c8464b5": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:1046abe8-e597-41fe-abd4-98c3b718998c": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:ef507645-e136-48b1-88ec-0e92da934534": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:d0ed80ce-7ced-4c7f-88f6-2ea50d1b18e6": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:2769fc54-ec8e-4969-9ae8-1041f4ec8ab9": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:8757782d-306d-4a0d-b22e-ab0f2b58171c": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:65026273-5d78-4e7a-b846-828ecbc809ec": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:d9aa3edf-6f53-442a-9e8c-da8f60a14edd": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:6f65d33d-c721-45f9-9519-9ea4f5d7e740": {
+        "none": 0.0,
+        "case": 1.0,
+        "strategy": 0.0,
+        "both": 0.3333333333333333
+      },
+      "tatqa:dev:ab09c56c-5e7a-4554-96c3-e3b2d1859453": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:4875e520-3ead-44f2-aefc-d1a9d087419d": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:0d930702-ca07-422f-ab6a-c794a621f31a": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:95d916dc-67ce-4af0-8a84-574dce094c84": {
+        "none": 1.0,
+        "case": 0.0,
+        "strategy": 1.0,
+        "both": 0.0
+      },
+      "tatqa:dev:b688d135-b29a-4e76-9593-138c3e2812e7": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:d713cc10-43c6-4fe9-9808-24ddc7160f0f": {
+        "none": 1.0,
+        "case": 0.0,
+        "strategy": 1.0,
+        "both": 0.0
+      },
+      "tatqa:dev:e2799466-1de3-48a7-a951-275dbe48e315": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:20a60e87-1542-41e9-827c-e4c99e40e4f9": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:226e93be-194d-4315-8bf3-f5adf1891c59": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:1d868d0c-ddf5-4c62-8c73-28b453e91abc": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 0.0,
+        "both": 1.0
+      },
+      "tatqa:dev:2a033c15-38d5-4d0a-a45b-754fba6d6c33": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:f88c39d3-3a3b-4b79-bf6e-0eb1bc708a3e": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:56327885-98fe-40db-93f8-f762b1bf5d20": {
+        "none": 0.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:735866f2-3a3c-4b2d-822a-4a9314138469": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:785de52d-7246-4ebc-acfc-eb56aabbf0d6": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:5a09d607-3502-4451-9d1a-a222dfc32968": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:1a7a45aa-7fff-46dd-b7b0-4cd0ec52fb65": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:50b3cd57-aadf-4b67-bebb-06d6d8de7247": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:4641b00e-c268-4846-abc9-d663aca00fb6": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:387d3305-5256-4239-b74b-c6a34678818c": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:b39edf5b-35db-4010-a4d0-90abe617dc89": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:a115ddd2-73ae-4f4f-b1eb-aae55d823308": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:49015c16-be28-4fb6-be59-7fd595c94c8d": {
+        "none": 0.3333333333333333,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:ec066127-4046-4b2f-9332-de14851c6868": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:2b77bd1e-17ee-4f74-9fb7-7cc4ad5142dd": {
+        "none": 1.0,
+        "case": 0.3333333333333333,
+        "strategy": 1.0,
+        "both": 0.0
+      },
+      "tatqa:dev:438d631c-1dd3-4620-b851-d9ea5cec4ad5": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:e924267c-2399-46d7-80db-9c6a7284c003": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 1.0
+      },
+      "tatqa:dev:e2419503-003d-4893-947b-72c8161ec572": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:dc1e344f-db11-4415-af80-728cd87e1b6b": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:33bc3fd6-2d74-4b8b-924f-fefe65a638df": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:cf876785-435b-4998-9ddf-e07e1e037cde": {
+        "none": 0.3333333333333333,
+        "case": 1.0,
+        "strategy": 0.0,
+        "both": 1.0
+      },
+      "tatqa:dev:33fd26df-9da7-489c-96e6-bd43a8b79d89": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:6befb6ea-a586-43d2-80bd-14f0721dd6f1": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:a38ec62a-bddd-4179-84cf-0354420cc47d": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:c6d15acd-4fd8-4419-a04e-c69487836f86": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:1b99bb00-5a16-471c-9d0a-c48075e844ae": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:de27b88f-0638-4f31-8879-257b27e41a94": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 0.0
+      },
+      "tatqa:dev:6a9b6186-6fea-4846-a230-053903f31e2d": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 0.3333333333333333,
+        "both": 1.0
+      },
+      "tatqa:dev:00c9720b-4e03-43fd-8f66-21723a0b836a": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:6cc73a99-0323-40d5-9d92-b285579b3482": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:3a1a0292-936a-4ebb-9940-2eee963ea05c": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:806247ca-aa73-4484-b2e6-d7221a64610f": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:c669a023-261f-4170-a39e-c29b72cb4488": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:8d6a9357-86ed-45d4-9e08-2bb06cd8fe91": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:791011b0-c427-443a-84ef-edf711b6084d": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:38640cdf-e1a8-437e-98b4-c3d3dbbed7fa": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:fbeb392a-39b2-4222-b34a-ab1143b16103": {
+        "none": 1.0,
+        "case": 0.0,
+        "strategy": 1.0,
+        "both": 0.3333333333333333
+      },
+      "tatqa:dev:24cd1ddb-a87d-4fde-9129-770a5fb65657": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:edc88710-38a6-47d8-bf2b-f4ebc52f7ea0": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:8698402e-4736-492e-95e5-d702ab62d662": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:258df1b4-3db1-4616-ae6b-c46a98b88dcf": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:b846ef86-89ff-475e-a8dd-cf2687c4f51f": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:78523190-61da-490f-b019-b065c317bfd3": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:bdcad8d3-c407-405f-ba0d-6cd7ef2273a0": {
+        "none": 0.6666666666666666,
+        "case": 0.0,
+        "strategy": 1.0,
+        "both": 0.0
+      },
+      "tatqa:dev:af4ea6d6-4672-4ddb-8348-047ced2b5572": {
+        "none": 1.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:a8306bab-9758-4e8b-be9a-f797a6601422": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:c4182b3b-0762-42ca-a785-b3c61fee3db9": {
+        "none": 1.0,
+        "case": 0.0,
+        "strategy": 0.6666666666666666,
+        "both": 0.0
+      },
+      "tatqa:dev:0158193c-62d4-4635-98d2-22e2915c58cf": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:33c65458-8b70-4e9a-8127-67465d67790b": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:7f28174b-306b-4d55-999e-1efee746cb63": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 0.0,
+        "both": 1.0
+      },
+      "tatqa:dev:6927b567-adcd-418d-bd67-e7de8542c658": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:f91f52fd-ed2d-448f-82ad-c95a10bc64d2": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:4cdc8b2e-e3ea-4c36-bbda-7c409a84cc78": {
+        "none": 0.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:c07a4e8f-96eb-4b0d-b668-f7d6e64ed707": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:c9126aa2-a8ec-4e6f-abe0-580a19217507": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "tatqa:dev:72058073-0525-4b47-af7a-cfbc27bf8873": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "tatqa:dev:5a58d6e1-8526-49cc-a56a-c4ade901790c": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      }
+    },
+    "arm_means": {
+      "none": 0.7083333333333334,
+      "case": 0.6972222222222222,
+      "strategy": 0.711111111111111,
+      "both": 0.6861111111111111
+    },
+    "best_fixed_arm": "strategy",
+    "best_fixed_em": 0.711111111111111,
+    "expected_oracle_em": 0.8,
+    "expected_oracle_gap": 0.08888888888888902,
+    "exclusive_expected_best_counts": {
+      "both_only_expected_best": 2,
+      "strategy_only_expected_best": 2,
+      "case_only_expected_best": 2,
+      "none_only_expected_best": 3
+    }
+  },
+  "preference_event_stability": {
+    "none_gt_both": {
+      "any_run": 13,
+      "stable_2_of_3": 12,
+      "stable_3_of_3": 9
+    },
+    "case_gt_both": {
+      "any_run": 7,
+      "stable_2_of_3": 5,
+      "stable_3_of_3": 4
+    },
+    "strategy_gt_both": {
+      "any_run": 10,
+      "stable_2_of_3": 9,
+      "stable_3_of_3": 7
+    }
+  },
+  "correctness_flip_rates": {
+    "by_arm": {
+      "none": {
+        "query_flip_count": 4,
+        "query_flip_rate": 0.03333333333333333,
+        "pairwise_disagreement_rate": 0.022222222222222223
+      },
+      "case": {
+        "query_flip_count": 2,
+        "query_flip_rate": 0.016666666666666666,
+        "pairwise_disagreement_rate": 0.011111111111111112
+      },
+      "strategy": {
+        "query_flip_count": 5,
+        "query_flip_rate": 0.041666666666666664,
+        "pairwise_disagreement_rate": 0.027777777777777776
+      },
+      "both": {
+        "query_flip_count": 3,
+        "query_flip_rate": 0.025,
+        "pairwise_disagreement_rate": 0.016666666666666666
+      }
+    },
+    "mean_query_arm_flip_rate": 0.029166666666666667
+  },
+  "decision": "TAT-QA HETEROGENEITY STABLE"
+}

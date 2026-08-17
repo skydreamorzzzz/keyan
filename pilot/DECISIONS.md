@@ -561,3 +561,43 @@
 - **PROCEED TO REPEATED RUNS**。
 - Rationale：Best Fixed is still None and fixed memory arms are weaker, but held-out sample Oracle Gap remains non-trivial (+8.3pp) with repeated negative-interference and deviation events. The next question is stability across repeated executions, not prompt/memory tuning.
 - Do not interpret this as a confirmed memory gain; it is diagnostic evidence that TAT-QA has enough heterogeneity to justify repeated-run stability testing.
+
+## 25. TAT-QA Held-Out Repeated-Run Stability Audit（2026-08-17）
+
+### scope
+- 冻结 Stage 24 的 120 条 held-out sample、Case/Strategy retrieval、HyDE query、memory、prompt、runtime request 和 Stage 23 canonicalized evaluator。
+- Stage 24 held-out run 作为 `rn1`。
+- 新增 `rn2` / `rn3` 独立 execution cache namespace；不复用 `rn1` execution cache。
+- HyDE 和 retrieved Case/Strategy 固定，只重复最终 LLM execution。
+
+### runtime/cache
+- `rn1`：existing held-out diagnostic artifact。
+- `rn2` / `rn3`：各 480 条新 execution cache records；cache replay 复现时 0 API calls / 480 hits per replicate。
+- 三轮 observed response model 均为 `deepseek-v4-flash`，fingerprint 均为 `a26a7955944dc5c60445bff77fac9c8e` for 480 / 480 responses per run。
+
+### per-run results
+- EM：
+  - `rn1`：None 0.725；Case 0.692；Strategy 0.708；Both 0.692。
+  - `rn2`：None 0.700；Case 0.708；Strategy 0.717；Both 0.683。
+  - `rn3`：None 0.700；Case 0.692；Strategy 0.708；Both 0.683。
+- Per-run Best Fixed：`rn1` None，`rn2` Strategy，`rn3` Strategy。
+- Mean per-run Best Fixed EM：0.717。
+
+### repeated expected utility
+- 3-run p_correct arm means：None 0.708；Case 0.697；Strategy 0.711；Both 0.686。
+- 3-run p_correct Best Fixed：Strategy EM 0.711。
+- 3-run p_correct Oracle EM：0.800。
+- 3-run p_correct Oracle Gap：+0.089。
+- Exclusive expected-best counts：Both 2；Strategy 2；Case 2；None 3。
+
+### stability
+- Preference-event stability:
+  - None > Both：any 13；≥2/3 12；3/3 9。
+  - Case > Both：any 7；≥2/3 5；3/3 4。
+  - Strategy > Both：any 10；≥2/3 9；3/3 7。
+- Query-level correctness flip rates：None 0.033；Case 0.017；Strategy 0.042；Both 0.025；mean 0.029。
+
+### decision
+- **TAT-QA HETEROGENEITY STABLE**。
+- Single-run fixed-arm ranking is slightly unstable, but query×arm correctness is highly repeatable and deviation-vs-Both events persist across runs.
+- Next step can study transfer/selector feasibility on TAT-QA, but should not tune the already-frozen retrieval/prompt/memory based on this audit.
