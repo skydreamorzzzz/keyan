@@ -882,3 +882,99 @@
 - Code：`pilot/multibench/multihiertt_strategy_retrieval_audit.py`。
 - JSON：`pilot/multibench/output/multihiertt/multihiertt_strategy_retrieval_audit.json`。
 - Report：`pilot/multibench/output/multihiertt/MULTIHIERTT_STRATEGY_RETRIEVAL_AUDIT.md`。
+
+## 32. MultiHiertt Strategy Retrieval Ablation（2026-08-17）
+
+### scientific question
+family_top3(eligible)=0.216（Stage 31 semantic baseline）的失败，主要归因于查询表示过于丰富（全上下文 vs 仅问题文本），还是候选拥挤（同 family 多条 pool entry 占据 top-k）？
+
+### scope
+- 纯 retrieval 诊断，无 LLM/API 调用，无策略修改，无 four-arm 执行。
+- 同一冻结 32 条 strategy memory、同一 120 样本（seed 20260817）。
+- 扩展 top-k=10 以支持 family 去重排名；对 Stage 31 two-stage 提案及 0.65 阈值合理性进行重新评估。
+
+### stage 31 corrections
+
+**two-stage 提案被推翻（实验事实）：**
+- Stage 31 报告的 type_top3=0.833 是多数类偏差：100/120 查询为 program，program type_top3=0.960；span 查询 type_top3≈0（balanced type accuracy≈0.563）。
+- 20 条 span 查询 type_top3 全部为 0（superlative/computed_value/yesno）或接近 0。
+- schema-only type_top1=1.000 for program 是因为策略文本以 "Type: program" 开头而非真正的类型识别能力。
+- 两阶段检索需要在 inference 时可靠地预测类型，但 span 查询 top1 type 始终为 program → 两阶段对 span 无效。
+
+**0.65 阈值无预注册依据（重新评估）：**
+- TAT-QA 最优方法（HyDE）= 0.432，亦未达 0.65，仍被采用为推荐方法。
+- 应以相对改进和机制明确性为标准，而非绝对阈值。
+
+**Stage 31"LLM 抽象引入噪声"解释边界修正：**
+- schema-only > semantic（+0.108）是因为 schema-only 文本显式编码 Family/Type/Operators 标签，产生 type 对齐优势。
+- 不能自动推断为"LLM 叙述质量差"；schema-only 对 program 的 type_top1=1.000 是标签注入的人工效应。
+
+### 2×2 ablation results
+
+**方案（family top3，family-eligible N=111）：**
+
+| | raw_top3 | dedup_top3 | Δ dedup |
+|---|---:|---:|---:|
+| question_only | 0.532 | **0.658** | +0.126 |
+| full_context  | 0.216 | 0.216 | +0.000 |
+
+- **Δ query（question_only − full_context），raw：+0.315**——主效应极显著。
+- **Δ query（question_only − full_context），dedup：+0.441**。
+- **Δ dedup（dedup − raw），full_context：+0.000**——全上下文条件下去重完全无效。
+- **Δ dedup（dedup − raw），question_only：+0.126**——仅在 question_only 下去重有效，说明两个效应有交互：去重只能在查询表示已经够好的情况下发挥作用。
+
+**交互解释：**
+- full_context 下 top3 总有 3 个不同 family（98/100 program 查询 distinct_fam=3），因此去重对 top3 几乎没有作用——full_context 的问题不是 crowding，而是检索方向错误。
+- question_only 下 26/100 program 查询 top3 全为同一 family（15 个正确 crowding（change_rate/projection），9 个错误），去重将9条错误 crowding 中的7条挽救（+7/100）。
+
+### per-type breakdown (question_only raw_top3 / dedup_top3)
+
+| Type | N | fam_elig | qonly_raw fam_top3 | qonly_dedup fam_top3 |
+|---|---:|---:|---:|---:|
+| `program` | 100 | 93 | 0.560 | 0.690 |
+| `span_superlative_lookup` | 7 | 7 | 0.286 | 0.429 |
+| `span_direct_lookup` | 3 | 3 | 0.333 | 0.333 |
+| `span_comparison_lookup` | 6 | 6 | 0.000 | 0.000 |
+| `span_comparison_yesno` | 2 | 0 | 0.000 | 0.000 |
+| `span_computed_value_lookup` | 2 | 2 | 0.000 | 0.000 |
+
+### root cause analysis
+
+**主效应（实验事实）：query representation confound，不是 candidate crowding。**
+
+- full_context（question + paragraphs + HTML tables）使 embedding 对齐于表面语义相似的财务上下文，屏蔽了问题本身的结构信号。
+- span:comparison_lookup（full_context top1 频次=31/80 failing program）和 program:difference（17/80）是两个主要"噪声吸引子"，由段落和表格内容驱动。
+- question_only 使 program 查询的问题关键词（"growth rate"/"percentage"/"sum"/"total"）直接匹配 change_rate/aggregation_sum 策略的语义描述，family_top3 从 0.200 上升至 0.560。
+
+**Crowding（实验事实）：**
+- full_context 下没有 canonical crowding（distinct_fam=1 只有1/100）；
+- question_only 下有26/100 程序查询出现 top3 同family 堆叠，其中 17 条是正确堆叠（信号强），9条错误，去重修复7条。
+
+**残余失败分析（question_only dedup, program，31/100 in-pool）：**
+- program:aggregation_sum 13 条：问题含"sum/total"，但被 projection_or_compound_change / average / division 占据——这是真正的语义相似上限，可能需要 HyDE。
+- program:multiplication / difference_composition（out-of-pool 7条）：策略池无覆盖，任何检索方法均无法修复。
+- Span 查询：question_only 下仍以 program 策略为主，类型混淆未解决。
+
+### cross-benchmark calibration
+
+| Benchmark | Baseline | question_only raw | question_only dedup | HyDE raw |
+|---|---:|---:|---:|---:|
+| TAT-QA     | 0.225 | 0.315 (+0.090) | —     | 0.432 (+0.207) |
+| MultiHiertt | 0.216 | 0.532 (+0.316) | 0.658 (+0.442) | not tested |
+
+MultiHiertt 的 question_only 增益（+0.316）远大于 TAT-QA（+0.090），原因：
+- TAT-QA 策略 family 在 evidence modality/scale 上已高度区分，全上下文中 table 结构有时反而有帮助；
+- MultiHiertt program families 语义几乎相同（均是金融算术），全上下文的 HTML tables 成纯噪声；
+- MultiHiertt 问题文本关键词更有区分性（"percentage change"→change_rate，"sum/total"→aggregation_sum）。
+
+### decision
+- **question_only + family-dedup（top-k=10）= 0.658，超过 0.65 参考线，达到 four-arm dry-run 可进入标准。**
+- Stage 33 建议：**直接做 MultiHiertt Four-arm Dry-Run**，使用 question_only query + family-dedup ranking（top-k=10，keep best-per-family，take top-3）作为 Strategy Memory 检索协议。
+  - 理由：已满足 family_top3_eligible≥0.65 参考线，继续追求更高检索准确率（HyDE）的边际收益不如直接观测在 four-arm 设计下的 accuracy 差异。
+  - 检索协议简单可解释，无需 LLM query augmentation，可在 four-arm 中作为 Strategy arm 的 retrieval baseline。
+- 0.65 阈值作为参考而非硬门槛；Stage 32 结果在阈值边界（0.658），可直接进行 dry-run 并做 retrieval-conditioned 分析。
+
+### artifacts
+- Code：`pilot/multibench/multihiertt_strategy_retrieval_ablation_stage32.py`。
+- JSON：`pilot/multibench/output/multihiertt/multihiertt_strategy_retrieval_ablation_stage32.json`。
+- Report：`pilot/multibench/output/multihiertt/MULTIHIERTT_STRATEGY_RETRIEVAL_ABLATION_STAGE32.md`。
