@@ -795,3 +795,90 @@
 ### decision
 - **READY FOR STRATEGY RETRIEVAL AUDIT**。
 - 下一轮应冻结这 32 条 strategy，做 retrieval-only audit；不要根据 dev retrieval failure 反向修改 family/schema 或 strategy text 后重报同一 audit。
+
+## 31. MultiHiertt Strategy Retrieval Audit（2026-08-17）
+
+### scope
+- Retrieval-only audit，frozen `multihiertt_strategy_memory_v0.json`（32 strategies）。
+- 未调用 LLM/API；未修改任何策略；未执行 four-arm；未做 router。
+- 两个 retrieval text 变体对比：semantic-rich（完整生成文本）vs schema-only（结构化元数据，无叙述）。
+- Gold family/type/schema/evidence/scale/multi_table 仅用于 post-hoc diagnostics，不参与检索。
+
+### setup
+- Retriever：`BAAI/bge-small-en-v1.5`，CPU，normalized dot-product，top-k=3。
+- Validation sample：120 examples，seed `20260817`（与 Case Memory audit 相同种子）。
+- Target query text via `multihiertt_case_memory.make_target_retrieval_text()`：question + paragraphs + HTML table previews + table descriptions。
+
+### pool coverage
+- Gold family present in frozen 12-coarse pool：111 / 120（0.925）。
+- Gold schema_key present in 20-schema pool：53 / 120（0.442）。
+- 两级 eligibility：family-eligible 111，schema-eligible 53。
+
+### results
+
+**所有样本（N=120）：**
+
+| Variant | Family top1 | Family top3 | Type top1 | Type top3 | Exact schema top3 | Evidence top3 | Scale top3 | Multi-table top3 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Semantic-rich | 0.042 | 0.200 | 0.450 | 0.833 | 0.017 | 0.825 | 0.733 | 0.850 |
+| Schema-only | 0.192 | 0.300 | 0.833 | 0.833 | 0.108 | 0.875 | 0.833 | 0.950 |
+
+**Family-eligible only（N=111）：**
+
+| Variant | Family top1 | Family top3 | Type top3 | Exact schema top3 |
+|---|---:|---:|---:|---:|
+| Semantic-rich | 0.045 | 0.216 | 0.847 | 0.018 |
+| Schema-only | 0.207 | 0.324 | 0.838 | 0.117 |
+
+**Schema-eligible only（N=53）：**
+
+| Variant | Family top3 | Type top3 | Exact schema top1 | Exact schema top3 |
+|---|---:|---:|---:|---:|
+| Semantic-rich | 0.208 | 0.830 | 0.000 | 0.038 |
+| Schema-only | 0.415 | 0.774 | 0.094 | 0.245 |
+
+**按 strategy type 分布（semantic）：**
+
+| Type | N | Fam-elig | Sem family top3 | Sch-only family top3 | Sem type top3 | Sch-only type top3 |
+|---|---:|---:|---:|---:|---:|---:|
+| `program` | 100 | 93 | 0.200 | 0.360 | 0.960 | 1.000 |
+| `span_comparison_lookup` | 6 | 6 | 0.500 | 0.000 | 0.500 | 0.000 |
+| `span_superlative_lookup` | 7 | 7 | 0.000 | 0.000 | 0.000 | 0.000 |
+| `span_direct_lookup` | 3 | 3 | 0.333 | 0.000 | 0.333 | 0.000 |
+| `span_computed_value_lookup` | 2 | 2 | 0.000 | 0.000 | 0.000 | 0.000 |
+| `span_comparison_yesno` | 2 | 0 | 0.000 | 0.000 | 0.000 | 0.000 |
+
+**Delta（schema-only − semantic）：**
+- family top3 on family-eligible：+0.108（schema-only 更好）。
+- type top3 all：+0.000（持平）。
+
+### interpretation
+
+**主要发现（实验事实）：**
+1. family top3 极低：semantic 0.216，schema-only 0.324（family-eligible）；两者均远低于 0.65 阈值。
+2. type top3 较高：semantic 0.833，schema-only 0.833（all samples）；类型识别可靠，家族区分不可靠。
+3. schema-only 在 family 检索上系统优于 semantic（+0.108）：LLM 生成叙述引入噪声，结构化元数据更具区分性。
+4. span 类型 family 检索几乎全部失败（superlative/computed/yesno = 0）：span 查询被 program 策略淹没。
+5. exact schema top3 近乎为零（semantic 0.038，schema-only 0.245）：细粒度 schema 区分极难。
+
+**主要失败模式（推断）：**
+- 所有 program 家族在语义上高度相似（金融数值算术），问题文本无法区分 change_rate / ratio / difference / average。
+- 密集检索过度权重表面语义线索，忽略 operator sequence 等结构信号。
+- Span 策略（8 条）在 32 条 pool 中比例低（25%），program 策略主导检索结果，span 查询无法召回 span 策略。
+- Multi-table 查询无法从问题措辞推断多表操作需求。
+
+**Type vs Family 分离（推断）：**
+检索器能可靠区分 program vs span（type top3 0.833），但无法在同类内区分家族。这提示两阶段检索（先 type 分类、再 within-type family 检索）可能是有效修正方向。
+
+### decision
+- **NEEDS RETRIEVAL REVISION BEFORE FOUR-ARM DRY-RUN**。
+- primary metric：semantic family top3（family-eligible）= 0.216，远低于 0.65 阈值。
+- 下一轮推荐 Stage 32：**两阶段检索审计**——先基于问题文本预测 strategy type（program vs span），再在对应 type 子池内检索 family。
+  - 理由：type top3 = 0.833 证明类型可识别；将 32 策略拆为 program（24）+ span（8）子池后，family 区分任务难度大幅降低，且不需要修改任何策略。
+  - 此修正不违反 Stage 30 约束（不修改 family/schema/strategy text）。
+- 不应根据本次 retrieval failure 反向修改策略 text 或 family 定义后重报同一 audit。
+
+### artifacts
+- Code：`pilot/multibench/multihiertt_strategy_retrieval_audit.py`。
+- JSON：`pilot/multibench/output/multihiertt/multihiertt_strategy_retrieval_audit.json`。
+- Report：`pilot/multibench/output/multihiertt/MULTIHIERTT_STRATEGY_RETRIEVAL_AUDIT.md`。
