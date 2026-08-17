@@ -14,6 +14,8 @@ data/*.pdf
 data/*.pdf:Zone.Identifier
 data/multihiertt/raw/*.parquet
 data/multihiertt/processed/multihiertt_*.jsonl
+data/multihiertt/processed/multihiertt_case_memory_train.json
+data/multihiertt/processed/multihiertt_case_emb.npy
 
 # Generated caches and embeddings
 pilot/output/*cache*.jsonl

@@ -668,3 +668,48 @@
 ### decision
 - **EVALUATOR FROZEN**。
 - 下一轮可以进入 MultiHiertt Case/Strategy Memory 接入或 retrieval audit；不要在没有新证据时修改 evaluator semantics。
+
+## 28. MultiHiertt Case Memory + Retrieval-Only Audit（2026-08-17）
+
+### scope
+- 只做 MultiHiertt train-only Case Memory 与 validation retrieval-only audit。
+- 未调用 LLM/API；未构造 Strategy、four-arm execution 或 router。
+- Retriever 固定复用项目 baseline：`BAAI/bge-small-en-v1.5`，top-4，不调参数。
+
+### case memory
+- Source split：train only。
+- Cases：7,830 = program 6,306 + span 1,524。
+- 每条 case 保存 solved-case 信息：question、answer、original program 或 span answer、gold text/table evidence、raw hierarchical HTML tables、table_description、operator sequence/family、evidence modality、source_id。
+- Full case memory 因 raw HTML tables 体积约 266MB，仅保留为本地 ignored artifact：`data/multihiertt/processed/multihiertt_case_memory_train.json`。
+- Embedding index 约 12MB，本地 ignored；case order metadata 约 1MB 可提交用于 provenance。
+
+### retrieval safety
+- Target retrieval text 只使用 inference-time visible fields：question、visible paragraphs、visible hierarchical HTML table previews、visible table_description。
+- Target retrieval text 禁止使用 gold answer、program、text/table evidence、answer type、operator family。
+- Case retrieval text 使用 solved-case question + historical gold evidence context，但不把 case answer/program 放进 retrieval text。
+- Compatibility metrics 只用于 post-hoc audit，不作为检索输入。
+
+### source leakage
+- MultiHiertt parquet release 缺少显式 report/document id。
+- 当前 source_id 使用 `md5(json({paragraphs, tables}, sort_keys=True))` 的 deterministic document hash。
+- Train unique sources：1,814；validation unique sources：280。
+- Train-validation overlapping source：1 个，覆盖 3 个 validation questions 和 1 个 train case。
+- Fixed audit sample 中 overlap targets：0。
+- Same-source retrieval exclusion 后 source leak count：0。
+
+### fixed validation audit
+- Fixed validation sample：120，seed `20260817`。
+- Average top-1 score：0.8678；average top-4 retrieved score：0.8593；top-1 score range：0.8036-0.9299。
+- Compatibility：
+  - answer_type top1/top4：0.817 / 0.875。
+  - operator_family top1/top4：0.150 / 0.433。
+  - evidence_modality top1/top4：0.300 / 0.592。
+- Target sample distribution：program 100；span 20。Evidence modality：text+table 65；table 38；text 17。
+
+### interpretation
+- Dense Case retrieval is strong at matching broad program/span type but weak at exact operator-family and evidence-modality alignment.
+- This supports moving to Strategy design/retrieval audit, where explicit reasoning abstraction may compensate for case retrieval's structure mismatch.
+
+### decision
+- **READY FOR STRATEGY DESIGN**。
+- Do not tune MultiHiertt Case retrieval before Strategy design; carry source-id limitation and weak operator-family alignment forward as known risks.
