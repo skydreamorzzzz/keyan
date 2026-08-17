@@ -530,3 +530,34 @@
 - **FREEZE EVALUATION CONTRACT**。
 - 后续 TAT-QA execution 主评价应使用 canonicalized prediction contract；raw evaluator-only numbers are diagnostic only。
 - 该 audit 说明上一轮部分 memory-effect event 是 answer/scale formatting artifact，但 negative interference signals 没有完全消失。
+
+## 24. TAT-QA Fresh Held-Out Four-Arm Diagnostic（2026-08-17）
+
+### scope
+- 只做 fresh held-out 120-sample TAT-QA dev diagnostic；未调 prompt、retrieval、memory 或样本。
+- Held-out sample：seed `20260817`，从 dev 自然分布抽取 120 条，并排除上一轮 Strategy retrieval audit 的 120 条（seed `20260816`）。
+- Arms 固定为 None / Case / Strategy / Both；Case top-4；Strategy 使用 frozen HyDE + top-3 frozen Strategy Memory。
+- 主评价使用 Stage 23 冻结的 canonicalized TAT-QA prediction contract。
+
+### runtime/cache
+- Execution runtime：DeepSeek official OpenAI-compatible API，requested/effective response model `deepseek-v4-flash`，temperature=0，non-thinking。
+- Observed execution fingerprint：`a26a7955944dc5c60445bff77fac9c8e` for 480 / 480 responses。
+- Cold-run budget：最多 120 HyDE generation calls + 480 execution calls；cache replay 复现为 0 HyDE calls / 0 execution calls。
+- Execution cache records：480；HyDE cache records after run：239（因 question-level cache 命中，新增记录少于 120）。
+
+### results
+- Parse failures：0；invalid-scale parse errors：0；normalization failures：0。
+- Canonicalized EM / F1：
+  - None：0.725 / 0.806。
+  - Case：0.692 / 0.773。
+  - Strategy：0.708 / 0.797。
+  - Both：0.692 / 0.775。
+- Best Fixed：None EM 0.725。
+- Sample Oracle EM：0.808；Oracle Gap：+0.083。
+- Memory effect events：case-only 1；strategy-only 0；both-only 2；none-only 3；None > Both 13；Case > Both 4；Strategy > Both 8。
+- By answer type：multi-span benefits from Case/Both in this sample；count is harmed by Case/Both；span and arithmetic are mixed, with None still strongest or tied.
+
+### decision
+- **PROCEED TO REPEATED RUNS**。
+- Rationale：Best Fixed is still None and fixed memory arms are weaker, but held-out sample Oracle Gap remains non-trivial (+8.3pp) with repeated negative-interference and deviation events. The next question is stability across repeated executions, not prompt/memory tuning.
+- Do not interpret this as a confirmed memory gain; it is diagnostic evidence that TAT-QA has enough heterogeneity to justify repeated-run stability testing.
