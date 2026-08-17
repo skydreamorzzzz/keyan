@@ -633,3 +633,38 @@
 ### decision
 - **READY FOR EVALUATOR**。
 - 下一轮应先接 MultiHiertt official-compatible evaluator，再考虑 Case/Strategy Memory；不要在 evaluator 验证前进入 memory/retrieval/four-arm。
+
+## 27. MultiHiertt Official-Compatible Evaluator（2026-08-17）
+
+### scope
+- 只做 MultiHiertt evaluator layer；未调用 LLM/API，未构造 memory/retrieval/four-arm/router。
+- 对照 official `psunlpgroup/MultiHiertt/evaluate.py`，在 `pilot/multibench/official_multihiertt/` vendored 评价所需子集。
+- Project wrapper：`pilot/multibench/multihiertt_evaluator.py`。
+
+### evaluator semantics
+- Program/numerical：使用 official `program_tokenization` + `eval_program`，program-vs-program 比较 official execution result equality。
+- Span：使用 official DROP-style span EM/F1 normalization。
+- Mixed answer/program compatibility：answer-only prediction for program gold 使用 official gold program execution result 与 official mixed span/program numeric tolerance 比较。
+- Compatibility normalization 仅限 prediction record schema：支持 `predicted_ans` / `predicted_answer` / `answer` / `prediction` 和 `predicted_program` / `program` / `pred_program` 字段；raw program string 会先走 official tokenization。
+- 保留 official `str_to_num` 行为：去 `$`、`,`、`%`、`-`。这意味着 negative sign 不被 official numeric parser 区分；记录为兼容风险，不修正官方语义。
+
+### self-check
+- Gold prediction self-check：
+  - train：7,830 / 7,830，EM 1.000，F1 1.000，gold failures 0。
+  - validation：1,044 / 1,044，EM 1.000，F1 1.000，gold failures 0。
+- Program/span coverage：
+  - train：program 6,306；span 1,524。
+  - validation：program 842；span 202。
+- Invalid programs in gold self-check：0。
+- Unit tests cover program, answer-only numerical program gold, currency/comma/percent, negative-number official compatibility risk, and span/multi-span.
+
+### artifacts
+- `pilot/multibench/multihiertt_evaluator.py`
+- `pilot/multibench/official_multihiertt/`
+- `pilot/tests/test_multihiertt_evaluator.py`
+- `pilot/multibench/output/multihiertt/MULTIHIERTT_EVALUATOR_AUDIT.md`
+- `pilot/multibench/output/multihiertt/multihiertt_evaluator_self_check.json`
+
+### decision
+- **EVALUATOR FROZEN**。
+- 下一轮可以进入 MultiHiertt Case/Strategy Memory 接入或 retrieval audit；不要在没有新证据时修改 evaluator semantics。

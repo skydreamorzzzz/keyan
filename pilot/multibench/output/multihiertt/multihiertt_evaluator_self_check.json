@@ -1,0 +1,69 @@
+{
+  "source": {
+    "official_repository": "https://github.com/psunlpgroup/MultiHiertt",
+    "official_evaluate_py": "https://github.com/psunlpgroup/MultiHiertt/blob/main/evaluate.py",
+    "vendored_subset": "pilot/multibench/official_multihiertt/"
+  },
+  "compatibility_normalization": [
+    "Prediction dicts may use predicted_ans/predicted_answer/answer/prediction for answer text.",
+    "Prediction dicts may use predicted_program/program/pred_program for program text.",
+    "Raw program strings are tokenized with official program_tokenization before official execution.",
+    "Numeric/list prediction values are cast to strings only before official span metric.",
+    "Official str_to_num semantics are preserved, including removing $, comma, percent sign, and hyphen.",
+    "Answer-only predictions for program gold are compared to official gold program execution using official mixed span/program numeric tolerance."
+  ],
+  "splits": {
+    "train": {
+      "count": 7830,
+      "missing_predictions": 0,
+      "exact_match": 1.0,
+      "f1": 1.0,
+      "invalid_programs": 0,
+      "eval_mode_counts": {
+        "program_vs_program": 6306,
+        "span_vs_span": 1524
+      },
+      "by_answer_type": {
+        "program": {
+          "count": 6306,
+          "exact_match": 1.0,
+          "f1": 1.0
+        },
+        "span": {
+          "count": 1524,
+          "exact_match": 1.0,
+          "f1": 1.0
+        }
+      },
+      "missing_prediction_uids": [],
+      "gold_prediction_failures": 0,
+      "gold_prediction_failure_examples": []
+    },
+    "validation": {
+      "count": 1044,
+      "missing_predictions": 0,
+      "exact_match": 1.0,
+      "f1": 1.0,
+      "invalid_programs": 0,
+      "eval_mode_counts": {
+        "span_vs_span": 202,
+        "program_vs_program": 842
+      },
+      "by_answer_type": {
+        "program": {
+          "count": 842,
+          "exact_match": 1.0,
+          "f1": 1.0
+        },
+        "span": {
+          "count": 202,
+          "exact_match": 1.0,
+          "f1": 1.0
+        }
+      },
+      "missing_prediction_uids": [],
+      "gold_prediction_failures": 0,
+      "gold_prediction_failure_examples": []
+    }
+  }
+}
