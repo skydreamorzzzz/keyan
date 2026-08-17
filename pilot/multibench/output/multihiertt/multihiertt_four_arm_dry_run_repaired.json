@@ -1,0 +1,2586 @@
+{
+  "version": "multihiertt_four_arm_dry_run_v3_repaired_runtime_json_20260818",
+  "sample_n": 60,
+  "seed": 20260817,
+  "sample_selection": "first 60 of fixed 120-sample validation set",
+  "arms": [
+    "none",
+    "case",
+    "strategy",
+    "both"
+  ],
+  "case_top_k": 4,
+  "strategy_top_k": 3,
+  "strategy_query_method": "question_only_family_dedup_k10",
+  "execution_cache": "pilot/multibench/output/multihiertt/multihiertt_four_arm_dry_run_repaired_cache.jsonl",
+  "runtime_request": {
+    "provider": "DeepSeek",
+    "backend": "deepseek_openai_compatible",
+    "base_url": "https://api.deepseek.com",
+    "requested_model": "deepseek-v4-flash",
+    "effective_model": null,
+    "model_version": null,
+    "temperature": 0.0,
+    "max_tokens": 2500,
+    "thinking_mode": false
+  },
+  "observed_response_models": {
+    "deepseek-v4-flash": 240
+  },
+  "runtime_guard": {
+    "expected": {
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "response_model": "deepseek-v4-flash",
+      "thinking_mode": false
+    },
+    "namespace_fingerprint": "a26a7955944dc5c60445bff77fac9c8e"
+  },
+  "temperature": 0,
+  "max_tokens": 1400,
+  "response_format": {
+    "type": "json_object"
+  },
+  "api_calls_made": 0,
+  "cache_hits": 240,
+  "cache_records_after": 240,
+  "diagnostic_parse_retry_records": 32,
+  "arm_metrics": {
+    "none": {
+      "exact_match": 0.11666666666666667,
+      "f1": 0.125,
+      "by_answer_type": {
+        "program": {
+          "count": 53,
+          "exact_match": 0.09433962264150944,
+          "f1": 0.09433962264150944
+        },
+        "span": {
+          "count": 7,
+          "exact_match": 0.2857142857142857,
+          "f1": 0.35714285714285715
+        }
+      },
+      "missing_predictions": 0,
+      "parse_failures": 0
+    },
+    "case": {
+      "exact_match": 0.2,
+      "f1": 0.20833333333333334,
+      "by_answer_type": {
+        "program": {
+          "count": 53,
+          "exact_match": 0.16981132075471697,
+          "f1": 0.16981132075471697
+        },
+        "span": {
+          "count": 7,
+          "exact_match": 0.42857142857142855,
+          "f1": 0.5
+        }
+      },
+      "missing_predictions": 0,
+      "parse_failures": 0
+    },
+    "strategy": {
+      "exact_match": 0.18333333333333332,
+      "f1": 0.19166666666666668,
+      "by_answer_type": {
+        "program": {
+          "count": 53,
+          "exact_match": 0.1509433962264151,
+          "f1": 0.1509433962264151
+        },
+        "span": {
+          "count": 7,
+          "exact_match": 0.42857142857142855,
+          "f1": 0.5
+        }
+      },
+      "missing_predictions": 0,
+      "parse_failures": 0
+    },
+    "both": {
+      "exact_match": 0.23333333333333334,
+      "f1": 0.24166666666666667,
+      "by_answer_type": {
+        "program": {
+          "count": 53,
+          "exact_match": 0.20754716981132076,
+          "f1": 0.20754716981132076
+        },
+        "span": {
+          "count": 7,
+          "exact_match": 0.42857142857142855,
+          "f1": 0.5
+        }
+      },
+      "missing_predictions": 0,
+      "parse_failures": 0
+    }
+  },
+  "best_fixed_arm": "both",
+  "best_fixed_em": 0.23333333333333334,
+  "oracle_em": 0.25,
+  "oracle_gap": 0.016666666666666663,
+  "retrieval_conditioned": {
+    "family_hit_n": 42,
+    "family_miss_n": 18,
+    "hit": {
+      "none": 0.11904761904761904,
+      "case": 0.14285714285714285,
+      "strategy": 0.11904761904761904,
+      "both": 0.16666666666666666
+    },
+    "miss": {
+      "none": 0.1111111111111111,
+      "case": 0.3333333333333333,
+      "strategy": 0.3333333333333333,
+      "both": 0.3888888888888889
+    },
+    "overall": {
+      "none": 0.11666666666666667,
+      "case": 0.2,
+      "strategy": 0.18333333333333332,
+      "both": 0.23333333333333334
+    }
+  },
+  "event_counts": {
+    "case_only": 1,
+    "strategy_only": 0,
+    "none_only": 0,
+    "both_only": 1,
+    "none_gt_both": 0,
+    "case_gt_both": 1,
+    "strategy_gt_both": 0
+  },
+  "by_answer_type": {
+    "program": {
+      "none": 0.09433962264150944,
+      "case": 0.16981132075471697,
+      "strategy": 0.1509433962264151,
+      "both": 0.20754716981132076
+    },
+    "span": {
+      "none": 0.2857142857142857,
+      "case": 0.42857142857142855,
+      "strategy": 0.42857142857142855,
+      "both": 0.42857142857142855
+    }
+  },
+  "records": [
+    {
+      "uid": "6e69e996da0a482b87e237352da9369b",
+      "question": "What is the sum of Investment real estate in 2012 and Gain (loss) recognized in OCI on derivatives in 2011? (in million)",
+      "answer_type": "program",
+      "gold_answer": "3190",
+      "gold_family": "program:difference",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:4b64837f1b0cdb76",
+          "family": "program:aggregation_sum",
+          "score": 0.6194561123847961
+        },
+        {
+          "strategy_id": "multihiertt_strategy:137da5fc74532645",
+          "family": "program:average_or_composed_division",
+          "score": 0.6146267652511597
+        },
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.6142899990081787
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": 3193,
+        "case": 3193,
+        "strategy": 3193,
+        "both": 3193
+      }
+    },
+    {
+      "uid": "c649cb8dafee4d23b4184b0c8c89e74f",
+      "question": "In the year with the most Interest cost in Table 1, what is the growth rate of Environmental in Table 0?",
+      "answer_type": "program",
+      "gold_answer": "-0.23188",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.6575562953948975
+        },
+        {
+          "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+          "family": "program:change_rate",
+          "score": 0.6574314832687378
+        },
+        {
+          "strategy_id": "multihiertt_strategy:5df905c0e6235174",
+          "family": "span:comparison_lookup",
+          "score": 0.6264936327934265
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": -0.2318840579710145,
+        "case": -0.2318840579710145,
+        "strategy": -0.2318840579710145,
+        "both": 0.0
+      }
+    },
+    {
+      "uid": "faac106d01bb414e8459e88d762e51b4",
+      "question": "What's the greatest value of Stores Opened in 2011?",
+      "answer_type": "span",
+      "gold_answer": "86",
+      "gold_family": "span:superlative_lookup",
+      "gold_type": "span_superlative_lookup",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:5df905c0e6235174",
+          "family": "span:comparison_lookup",
+          "score": 0.43869197368621826
+        },
+        {
+          "strategy_id": "multihiertt_strategy:b06d0f816511a288",
+          "family": "span:superlative_lookup",
+          "score": 0.43110519647598267
+        },
+        {
+          "strategy_id": "multihiertt_strategy:b72171a6cd389886",
+          "family": "span:computed_value_lookup",
+          "score": 0.4228959083557129
+        }
+      ],
+      "correct_arms": [
+        "none",
+        "case",
+        "strategy",
+        "both"
+      ],
+      "em": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": 86,
+        "case": 86,
+        "strategy": 86,
+        "both": 86
+      }
+    },
+    {
+      "uid": "776342a2d8c1492286eedc213289f373",
+      "question": "In the year with the most Granted for shares(in thousands), what is the growth rate of Outstanding ? (in %)",
+      "answer_type": "program",
+      "gold_answer": "-0.12537",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5826917290687561
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5809983611106873
+        },
+        {
+          "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+          "family": "program:change_rate",
+          "score": 0.5786954760551453
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "N/A",
+        "case": "-17.87",
+        "strategy": 0.0,
+        "both": 0.0
+      }
+    },
+    {
+      "uid": "f5b5bb74596148978c9f5ea7efb1a149",
+      "question": "what portion of the compensation expense in 2017 is relates to the acceleration of equity awards upon termination of employment at baker hughes?",
+      "answer_type": "program",
+      "gold_answer": "0.40541",
+      "gold_family": "program:division_composition",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:b1ec803d80c19ac8",
+          "family": "program:change_rate",
+          "score": 0.5034521818161011
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3a4f1a82270a750d",
+          "family": "program:aggregation_sum",
+          "score": 0.5025067329406738
+        },
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.4953828752040863
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "Not enough information",
+        "case": "0.0",
+        "strategy": "Not enough information",
+        "both": "0.0"
+      }
+    },
+    {
+      "uid": "627ffb2c46b94bdcb58d0850493a36ea",
+      "question": "What's the average of Capital leases of Carrying amount in 2003 and 2002? (in Thousand)",
+      "answer_type": "program",
+      "gold_answer": "143140",
+      "gold_family": "program:average_or_composed_division",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5846966505050659
+        },
+        {
+          "strategy_id": "multihiertt_strategy:019ee514f46efe63",
+          "family": "program:ratio",
+          "score": 0.5776432752609253
+        },
+        {
+          "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+          "family": "program:average_or_composed_division",
+          "score": 0.57611083984375
+        }
+      ],
+      "correct_arms": [
+        "none",
+        "case",
+        "strategy",
+        "both"
+      ],
+      "em": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": 143139.5,
+        "case": 143139.5,
+        "strategy": 143139.5,
+        "both": 143139.5
+      }
+    },
+    {
+      "uid": "a5ec5ca712704c88887435bb658f5c08",
+      "question": "what is the total impairment charge recorded in the lat three years , in millions?",
+      "answer_type": "program",
+      "gold_answer": "10.2",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+          "family": "program:average_or_composed_division",
+          "score": 0.513244092464447
+        },
+        {
+          "strategy_id": "multihiertt_strategy:b06d0f816511a288",
+          "family": "span:superlative_lookup",
+          "score": 0.5104120373725891
+        },
+        {
+          "strategy_id": "multihiertt_strategy:027adbd64ad4fbb5",
+          "family": "program:aggregation_sum",
+          "score": 0.507256031036377
+        }
+      ],
+      "correct_arms": [
+        "none",
+        "case",
+        "strategy",
+        "both"
+      ],
+      "em": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": 10.2,
+        "case": 10.2,
+        "strategy": 10.2,
+        "both": 10.2
+      }
+    },
+    {
+      "uid": "25fa7222665c4740ba34eaddf3769ff5",
+      "question": "What is the amount of Commercial and Commercial realestate in the years with the least Commercial for Gross Charge-offs ? (in million)",
+      "answer_type": "program",
+      "gold_answer": "210",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5172563791275024
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.49638989567756653
+        },
+        {
+          "strategy_id": "multihiertt_strategy:4b64837f1b0cdb76",
+          "family": "program:aggregation_sum",
+          "score": 0.49230533838272095
+        }
+      ],
+      "correct_arms": [
+        "strategy",
+        "both"
+      ],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": "2017",
+        "case": 24,
+        "strategy": 210,
+        "both": 210
+      }
+    },
+    {
+      "uid": "0565d8b781a14a29852db42ceaf3644e",
+      "question": "what is the money pool activity use of operating cash flows as a percentage of receivables from the money pool in 2003?",
+      "answer_type": "program",
+      "gold_answer": "0.62946",
+      "gold_family": "program:division_composition",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:3670a7f9189933e1",
+          "family": "program:change_rate",
+          "score": 0.6107011437416077
+        },
+        {
+          "strategy_id": "multihiertt_strategy:019ee514f46efe63",
+          "family": "program:ratio",
+          "score": 0.6027839183807373
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5960456728935242
+        }
+      ],
+      "correct_arms": [
+        "both"
+      ],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": "63.0%",
+        "case": 63.0,
+        "strategy": 63.0,
+        "both": 0.6296
+      }
+    },
+    {
+      "uid": "27ca5c5366c941c5841fd2b54be97835",
+      "question": "by what percentage did total residential mortgages increase from 2011 to 2012?",
+      "answer_type": "program",
+      "gold_answer": "0.45861",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+          "family": "program:change_rate",
+          "score": 0.5691342353820801
+        },
+        {
+          "strategy_id": "multihiertt_strategy:edbbe5c3ddd5a3c1",
+          "family": "program:aggregation_sum",
+          "score": 0.5468927621841431
+        },
+        {
+          "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+          "family": "program:average_or_composed_division",
+          "score": 0.5421823263168335
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "45.86%",
+        "case": "45.86%",
+        "strategy": 45.9,
+        "both": 45.86
+      }
+    },
+    {
+      "uid": "72ef9a5aca5b49d192dee1f0ca78a77a",
+      "question": "Which year is Catastrophes for Prior Years the lowest?",
+      "answer_type": "span",
+      "gold_answer": "2014",
+      "gold_family": "span:superlative_lookup",
+      "gold_type": "span_superlative_lookup",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5137521624565125
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3670a7f9189933e1",
+          "family": "program:change_rate",
+          "score": 0.5015261173248291
+        },
+        {
+          "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+          "family": "program:average_or_composed_division",
+          "score": 0.49558377265930176
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "2015",
+        "case": "2015",
+        "strategy": "2015",
+        "both": "2015"
+      }
+    },
+    {
+      "uid": "eec7fa663f7a4657b53eea3da96d208e",
+      "question": "What's the current increasing rate of U.S. high-grade?",
+      "answer_type": "program",
+      "gold_answer": "0.11338",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:3670a7f9189933e1",
+          "family": "program:change_rate",
+          "score": 0.5386388301849365
+        },
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5189886093139648
+        },
+        {
+          "strategy_id": "multihiertt_strategy:11befedd47cd7bfe",
+          "family": "program:ratio",
+          "score": 0.5164365172386169
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "12.8%",
+        "case": 0.128,
+        "strategy": "12.8%",
+        "both": 0.128
+      }
+    },
+    {
+      "uid": "2732488535454a20a90f00d9186ca826",
+      "question": "What's the total amount of theU.S. dollars sold for Pounds sterling in the years where U.S. dollars sold for Pounds sterling is greater than 1?",
+      "answer_type": "program",
+      "gold_answer": "735",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:019ee514f46efe63",
+          "family": "program:ratio",
+          "score": 0.5619757175445557
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5602179765701294
+        },
+        {
+          "strategy_id": "multihiertt_strategy:10442b2869aa88cf",
+          "family": "program:change_rate",
+          "score": 0.548005998134613
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "The provided context does not contain information about U.S. dollars sold for Pounds sterling.",
+        "case": "The question asks for the total amount of U.S. dollars sold for Pounds sterling in years where the amount is greater than 1. However, the provided context does not contain any table with foreign currency forward contracts or amounts for U.S. dollars sold for Pounds sterling. The tables shown are about derivative financial instruments, income taxes, and foreign currency exchange rates, but none list specific amounts for U.S. dollars sold for Pounds sterling. Therefore, the answer cannot be determined from the given information.",
+        "strategy": "Cannot be determined from the provided context.",
+        "both": "The question asks for the total amount of U.S. dollars sold for Pounds sterling in years where the amount is greater than 1. However, the provided context does not contain any table or text with such data. The tables provided (Table 0, Table 1, Table 2) do not include information about currency exchange contracts or U.S. dollars sold for Pounds sterling. Therefore, the answer cannot be determined from the given context."
+      }
+    },
+    {
+      "uid": "7c14962a8b71476f9650f9e84f1a6ecb",
+      "question": "In the year Ended December 31 where the amount of Investment services fee income is the highest, what's the increasing rate of the amount of Capital markets income?",
+      "answer_type": "program",
+      "gold_answer": "0.25466",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5173932909965515
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5167011618614197
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3670a7f9189933e1",
+          "family": "program:change_rate",
+          "score": 0.511012077331543
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "4.0%",
+        "case": "N/A",
+        "strategy": "N/A",
+        "both": 0.0
+      }
+    },
+    {
+      "uid": "61684e3f70ae4816b8c121726ac1ec89",
+      "question": "how much in combined repurchase claims , in millions , were recorded in the first quarter of 2005 , 2006 , 2007 , 2008?",
+      "answer_type": "program",
+      "gold_answer": "170",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5206993818283081
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5148279666900635
+        },
+        {
+          "strategy_id": "multihiertt_strategy:edbbe5c3ddd5a3c1",
+          "family": "program:aggregation_sum",
+          "score": 0.5091516375541687
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": [
+          12,
+          41,
+          100,
+          17
+        ],
+        "case": 88,
+        "strategy": 10,
+        "both": 100
+      }
+    },
+    {
+      "uid": "1c1d7c56d70842a48980735e10a853ae",
+      "question": "What is the ratio of Distribution fees to the total in 2012?",
+      "answer_type": "program",
+      "gold_answer": "0.12559",
+      "gold_family": "program:ratio",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:11befedd47cd7bfe",
+          "family": "program:ratio",
+          "score": 0.6178879737854004
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.6171572804450989
+        },
+        {
+          "strategy_id": "multihiertt_strategy:4a86fd0af1b41179",
+          "family": "program:projection_or_compound_change",
+          "score": 0.6024400591850281
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": 0.1512,
+        "case": 0.1512,
+        "strategy": 0.0417,
+        "both": 0.1512
+      }
+    },
+    {
+      "uid": "5a73af42d8684db8b203b8611b2a8064",
+      "question": "what is the growth rate in net reserves in 2005?",
+      "answer_type": "program",
+      "gold_answer": "-0.11091",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+          "family": "program:change_rate",
+          "score": 0.5775266289710999
+        },
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5686936378479004
+        },
+        {
+          "strategy_id": "multihiertt_strategy:137da5fc74532645",
+          "family": "program:average_or_composed_division",
+          "score": 0.5485246777534485
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "0.0%",
+        "case": -0.00077,
+        "strategy": 0.0,
+        "both": 0.0
+      }
+    },
+    {
+      "uid": "862d583c5aeb45d9891497a47be8ac61",
+      "question": "What's the sum of the Municipal bonds for Available-for-sale debt securities for TotalFair Value in the years where Total segment revenu is greater than 1700? (in million)",
+      "answer_type": "program",
+      "gold_answer": "1190",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+          "family": "program:average_or_composed_division",
+          "score": 0.5742161273956299
+        },
+        {
+          "strategy_id": "multihiertt_strategy:4b64837f1b0cdb76",
+          "family": "program:aggregation_sum",
+          "score": 0.5659182667732239
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5555508136749268
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": 0,
+        "case": 0,
+        "strategy": 0,
+        "both": 0
+      }
+    },
+    {
+      "uid": "08f6538bafb0465f9f738854592f8804",
+      "question": "What's the total amount of Converters, Amplifiers/Radio frequency, Other analog and Subtotal analog signal processing in 2014?",
+      "answer_type": "program",
+      "gold_answer": "4.8975e+06",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:39ebe1e9a466b98b",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5636643171310425
+        },
+        {
+          "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+          "family": "program:average_or_composed_division",
+          "score": 0.5537669658660889
+        },
+        {
+          "strategy_id": "multihiertt_strategy:027adbd64ad4fbb5",
+          "family": "program:aggregation_sum",
+          "score": 0.5485931634902954
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "$2,448,749",
+        "case": 2448749,
+        "strategy": 2448749,
+        "both": 2448749
+      }
+    },
+    {
+      "uid": "a0e6c373d5e545c487ad1ae2b3027259",
+      "question": "what is the roi of an investment in s&p500 index from 2011 to 2012?",
+      "answer_type": "program",
+      "gold_answer": "0.16",
+      "gold_family": "program:difference_then_ratio",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5544031262397766
+        },
+        {
+          "strategy_id": "multihiertt_strategy:edbbe5c3ddd5a3c1",
+          "family": "program:aggregation_sum",
+          "score": 0.5498530864715576
+        },
+        {
+          "strategy_id": "multihiertt_strategy:48d4e24e0a94be8c",
+          "family": "program:difference",
+          "score": 0.5451067686080933
+        }
+      ],
+      "correct_arms": [
+        "case",
+        "both"
+      ],
+      "em": {
+        "none": 0.0,
+        "case": 1.0,
+        "strategy": 0.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": 16.0,
+        "case": 0.16,
+        "strategy": 16.0,
+        "both": 0.16
+      }
+    },
+    {
+      "uid": "7389cfa35a894e14bf0773e29d326973",
+      "question": "What's the sum of Debt maturities of Thereafter, and Capital lease obligations of Less than 1 year ?",
+      "answer_type": "program",
+      "gold_answer": "6905",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:019ee514f46efe63",
+          "family": "program:ratio",
+          "score": 0.6083165407180786
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.6040947437286377
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3a4f1a82270a750d",
+          "family": "program:aggregation_sum",
+          "score": 0.600874662399292
+        }
+      ],
+      "correct_arms": [
+        "none",
+        "case",
+        "both"
+      ],
+      "em": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 0.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": 6905,
+        "case": 6905,
+        "strategy": 2527,
+        "both": 6905
+      }
+    },
+    {
+      "uid": "859ddaa4993048b1978ff5b0b6bf0a92",
+      "question": "for december 31 , 2009 , what was the total value of segregated collateral for the benefit of brokerage customers in millions?",
+      "answer_type": "program",
+      "gold_answer": "34.2",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:5df905c0e6235174",
+          "family": "span:comparison_lookup",
+          "score": 0.5269027352333069
+        },
+        {
+          "strategy_id": "multihiertt_strategy:4f35910539daf40a",
+          "family": "program:aggregation_sum",
+          "score": 0.5228257179260254
+        },
+        {
+          "strategy_id": "multihiertt_strategy:019ee514f46efe63",
+          "family": "program:ratio",
+          "score": 0.5138951539993286
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "The provided context does not contain information about segregated collateral for the benefit of brokerage customers.",
+        "case": "Not enough information",
+        "strategy": "Not enough information",
+        "both": "Not enough information"
+      }
+    },
+    {
+      "uid": "3aa17d4eb9ca40dfbfaef0b076ad7782",
+      "question": "What is the sum of Passive for Equities, Active and other, and Company stock/ESOP in 2008? (in billion)",
+      "answer_type": "program",
+      "gold_answer": "706",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:edbbe5c3ddd5a3c1",
+          "family": "program:aggregation_sum",
+          "score": 0.6559420824050903
+        },
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.6465405821800232
+        },
+        {
+          "strategy_id": "multihiertt_strategy:019ee514f46efe63",
+          "family": "program:ratio",
+          "score": 0.645156741142273
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": 667,
+        "case": 667,
+        "strategy": 667,
+        "both": 667
+      }
+    },
+    {
+      "uid": "c30b113fd95f469682ac8ab0e07c7a1e",
+      "question": "What is the average value of Total net revenue for Reported Results, Fully taxable-equivalent adjustment, and Managed basis ? (in million)",
+      "answer_type": "program",
+      "gold_answer": "66094.7",
+      "gold_family": "program:average_or_composed_division",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.6180517077445984
+        },
+        {
+          "strategy_id": "multihiertt_strategy:137da5fc74532645",
+          "family": "program:average_or_composed_division",
+          "score": 0.603086531162262
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3a4f1a82270a750d",
+          "family": "program:aggregation_sum",
+          "score": 0.5886744856834412
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "The question asks for the average value of Total net revenue for Reported Results, Fully taxable-equivalent adjustment, and Managed basis. However, the provided table (table_5) does not include a row for Total net revenue. It only shows Other income. Therefore, the answer cannot be determined from the given context.",
+        "case": 3.0,
+        "strategy": 3.795,
+        "both": 15193.5
+      }
+    },
+    {
+      "uid": "a7a7582206944c1b8ed6be7bbc05336b",
+      "question": "What is the sum of Unrecognized net loss CHANGE IN PLAN ASSETS of CECONY 2015, Operating earnings of 2008, and FUNDED STATUS CHANGE IN PLAN ASSETS of Con Edison 2014 ?",
+      "answer_type": "program",
+      "gold_answer": "8311",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5912991762161255
+        },
+        {
+          "strategy_id": "multihiertt_strategy:edbbe5c3ddd5a3c1",
+          "family": "program:aggregation_sum",
+          "score": 0.5847375988960266
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3670a7f9189933e1",
+          "family": "program:change_rate",
+          "score": 0.580634593963623
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "Not enough information",
+        "case": -3483,
+        "strategy": 1020,
+        "both": -3483
+      }
+    },
+    {
+      "uid": "db68fd65c5c941e4be541c77fe92d0d9",
+      "question": "what was the percentage change in the the fair value of our foreign currency forward contracts from 2008 to 2009",
+      "answer_type": "program",
+      "gold_answer": "-0.75",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:3670a7f9189933e1",
+          "family": "program:change_rate",
+          "score": 0.6548779010772705
+        },
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.6230771541595459
+        },
+        {
+          "strategy_id": "multihiertt_strategy:edbbe5c3ddd5a3c1",
+          "family": "program:aggregation_sum",
+          "score": 0.614311695098877
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "The context does not provide information about the fair value of foreign currency forward contracts.",
+        "case": "The context does not provide the fair value of foreign currency forward contracts for 2008 and 2009, so the percentage change cannot be calculated.",
+        "strategy": "The provided context does not contain information about the fair value of foreign currency forward contracts.",
+        "both": "N/A"
+      }
+    },
+    {
+      "uid": "0ffad88bd61445c3aa640580744ad86d",
+      "question": "When does Premiums earned in As previously reported reach the largest value?",
+      "answer_type": "span",
+      "gold_answer": "2015",
+      "gold_family": "span:superlative_lookup",
+      "gold_type": "span_superlative_lookup",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:48d4e24e0a94be8c",
+          "family": "program:difference",
+          "score": 0.6274168491363525
+        },
+        {
+          "strategy_id": "multihiertt_strategy:edbbe5c3ddd5a3c1",
+          "family": "program:aggregation_sum",
+          "score": 0.6202399134635925
+        },
+        {
+          "strategy_id": "multihiertt_strategy:b06d0f816511a288",
+          "family": "span:superlative_lookup",
+          "score": 0.6132885217666626
+        }
+      ],
+      "correct_arms": [
+        "none",
+        "case",
+        "strategy",
+        "both"
+      ],
+      "em": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": "2015",
+        "case": "2015",
+        "strategy": "2015",
+        "both": "2015"
+      }
+    },
+    {
+      "uid": "70d6c1594b9d48e4ac6651d2dfe3a686",
+      "question": "what was the percentage change in fuel surcharge program freight revenue from 2012 to 2013?",
+      "answer_type": "program",
+      "gold_answer": "0",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+          "family": "program:change_rate",
+          "score": 0.5664396286010742
+        },
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.530617356300354
+        },
+        {
+          "strategy_id": "multihiertt_strategy:11befedd47cd7bfe",
+          "family": "program:ratio",
+          "score": 0.5031771063804626
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "5%",
+        "case": "5%",
+        "strategy": "5%",
+        "both": 5
+      }
+    },
+    {
+      "uid": "9a79387c1bbd45499716ee44e803781b",
+      "question": "In the year with largest amount of Proceeds, what's the increasing rate of Gross investment gains in Fixed Maturity Securities ?",
+      "answer_type": "program",
+      "gold_answer": "0.31591",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5924817323684692
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3a4f1a82270a750d",
+          "family": "program:aggregation_sum",
+          "score": 0.5662124156951904
+        },
+        {
+          "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+          "family": "program:change_rate",
+          "score": 0.5657669305801392
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "0.5487",
+        "case": 0.5484,
+        "strategy": "0.548",
+        "both": 0.5489
+      }
+    },
+    {
+      "uid": "2c5ade1a88b84b07b6e534a544862161",
+      "question": "Does the average value of Loans and leases in 2014 greater than that in 2013",
+      "answer_type": "span",
+      "gold_answer": "yes",
+      "gold_family": "span:comparison_yesno",
+      "gold_type": "span_comparison_yesno",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:48d4e24e0a94be8c",
+          "family": "program:difference",
+          "score": 0.598714292049408
+        },
+        {
+          "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+          "family": "program:change_rate",
+          "score": 0.5909168720245361
+        },
+        {
+          "strategy_id": "multihiertt_strategy:5df905c0e6235174",
+          "family": "span:comparison_lookup",
+          "score": 0.5905566811561584
+        }
+      ],
+      "correct_arms": [
+        "case",
+        "strategy",
+        "both"
+      ],
+      "em": {
+        "none": 0.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": "No",
+        "case": "Yes",
+        "strategy": "Yes",
+        "both": "Yes"
+      }
+    },
+    {
+      "uid": "e9d82cb1ac4545deb5e71dadd8c7ba4f",
+      "question": "what was the percentage change in weighted average shares outstanding for diluted net earnings per share from 2006 to 2007?",
+      "answer_type": "program",
+      "gold_answer": "-0.03219",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+          "family": "program:change_rate",
+          "score": 0.6388266682624817
+        },
+        {
+          "strategy_id": "multihiertt_strategy:39ebe1e9a466b98b",
+          "family": "program:projection_or_compound_change",
+          "score": 0.6232826709747314
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.6127167344093323
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "-3.22%",
+        "case": -0.0322,
+        "strategy": -2.2,
+        "both": -0.0322
+      }
+    },
+    {
+      "uid": "ffb15bd261c04ccf808211b7d51169df",
+      "question": "What is the total amount of Average shares outstanding of Year Ended December 31, 2003 2, Net sales of 2012, and TOTAL MARKET VALUE OF COMMON STOCK PER SHARE DATA of Year Ended December 31, 2002 3,4 is ?",
+      "answer_type": "program",
+      "gold_answer": "119134",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:137da5fc74532645",
+          "family": "program:average_or_composed_division",
+          "score": 0.6061209440231323
+        },
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5970902442932129
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5929849743843079
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "I cannot answer this question because the provided context does not contain the required data (Average shares outstanding, TOTAL MARKET VALUE OF COMMON STOCK PER SHARE DATA).",
+        "case": 21044,
+        "strategy": "The question is unanswerable with the provided context.",
+        "both": 21044
+      }
+    },
+    {
+      "uid": "552b3be874334b8ea1e35c60add96ac7",
+      "question": "what is the growth rate in the consolidated revenues from 2011 to 2012?",
+      "answer_type": "program",
+      "gold_answer": "0.03235",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.572636067867279
+        },
+        {
+          "strategy_id": "multihiertt_strategy:137da5fc74532645",
+          "family": "program:average_or_composed_division",
+          "score": 0.5622556209564209
+        },
+        {
+          "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+          "family": "program:change_rate",
+          "score": 0.5573170185089111
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "3.24%",
+        "case": 0.0324,
+        "strategy": "3.2%",
+        "both": "3.24%"
+      }
+    },
+    {
+      "uid": "5184b91a27db463ca9fdd9e36ce05dbc",
+      "question": "As As the chart 2 shows, what is the Weighted average exercise price for Balance at December 31, 2005 ?",
+      "answer_type": "span",
+      "gold_answer": "52.79",
+      "gold_family": "span:computed_value_lookup",
+      "gold_type": "span_computed_value_lookup",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.6002549529075623
+        },
+        {
+          "strategy_id": "multihiertt_strategy:48d4e24e0a94be8c",
+          "family": "program:difference",
+          "score": 0.5888275504112244
+        },
+        {
+          "strategy_id": "multihiertt_strategy:10442b2869aa88cf",
+          "family": "program:change_rate",
+          "score": 0.5840703248977661
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": 51.98,
+        "case": 57.28,
+        "strategy": 57.28,
+        "both": 57.28
+      }
+    },
+    {
+      "uid": "f5734c1a4bfc450192ed08e8893da4ca",
+      "question": "What is the total amount of Vested of Years Ended December 31, 2017 Shares, and Beginning of period reserves of At December 31, 2015 ?",
+      "answer_type": "program",
+      "gold_answer": "628602",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5775305032730103
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5677769184112549
+        },
+        {
+          "strategy_id": "multihiertt_strategy:137da5fc74532645",
+          "family": "program:average_or_composed_division",
+          "score": 0.5655240416526794
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": [
+          "$476,205",
+          "$476,205"
+        ],
+        "case": 476205,
+        "strategy": 476205,
+        "both": 318.1
+      }
+    },
+    {
+      "uid": "f8b8ec4bebe34fada4ae0dc766768c33",
+      "question": "What's the sum of all elements that are greater than 10 in Home equity?",
+      "answer_type": "program",
+      "gold_answer": "51.7",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:4b64837f1b0cdb76",
+          "family": "program:aggregation_sum",
+          "score": 0.6749148368835449
+        },
+        {
+          "strategy_id": "multihiertt_strategy:137da5fc74532645",
+          "family": "program:average_or_composed_division",
+          "score": 0.6576182842254639
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.6452247500419617
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": 29.3,
+        "case": 14.9,
+        "strategy": 29.3,
+        "both": 14.9
+      }
+    },
+    {
+      "uid": "92c854f5e21144a6930f3a0e28bbd6b3",
+      "question": "what is the basic net income ( loss ) attributable to common shareholders as a percentage of diluted net income ( loss ) attributable to common shareholders in 2008?",
+      "answer_type": "program",
+      "gold_answer": "94.8655",
+      "gold_family": "program:division_composition",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:019ee514f46efe63",
+          "family": "program:ratio",
+          "score": 0.6245365738868713
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.6239880323410034
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3670a7f9189933e1",
+          "family": "program:change_rate",
+          "score": 0.6189674139022827
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "The basic net income attributable to common shareholders in 2008 is $48,777, and the diluted net income attributable to common shareholders is not provided in the table. Therefore, the percentage cannot be calculated.",
+        "case": 103.34,
+        "strategy": "96.7%",
+        "both": 103.37
+      }
+    },
+    {
+      "uid": "8ca8fbf0227a42d1ab2ac8843a48965b",
+      "question": "What is the difference between the greatest Sales Volumes in 2009 and 2008？",
+      "answer_type": "program",
+      "gold_answer": "-2",
+      "gold_family": "program:difference",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:48d4e24e0a94be8c",
+          "family": "program:difference",
+          "score": 0.5615921020507812
+        },
+        {
+          "strategy_id": "multihiertt_strategy:5df905c0e6235174",
+          "family": "span:comparison_lookup",
+          "score": 0.5555747151374817
+        },
+        {
+          "strategy_id": "multihiertt_strategy:b06d0f816511a288",
+          "family": "span:superlative_lookup",
+          "score": 0.5470738410949707
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "The provided context does not contain sales volume data for 2008, so the difference cannot be determined.",
+        "case": "The provided context does not contain the necessary data to answer this question.",
+        "strategy": "The question asks for the difference between the greatest Sales Volumes in 2009 and 2008. However, the provided context only includes tables for 2009, 2010, 2011, 2012, 2013, and 2014, with no data for 2008. Therefore, the answer cannot be determined from the given information.",
+        "both": 0
+      }
+    },
+    {
+      "uid": "8caf20e28a314f43a0bc3fdbadcc2220",
+      "question": "What is the growing rate of BENEFIT OBLIGATION AT END OF YEAR for Con Edison in the year with the least Benefit obligation at beginning of year for Con Edison?",
+      "answer_type": "program",
+      "gold_answer": "0.01147",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5032869577407837
+        },
+        {
+          "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+          "family": "program:change_rate",
+          "score": 0.4929508566856384
+        },
+        {
+          "strategy_id": "multihiertt_strategy:fa4bb8a05b992169",
+          "family": "program:aggregation_sum",
+          "score": 0.4810948371887207
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "The question asks for the growing rate of BENEFIT OBLIGATION AT END OF YEAR for Con Edison in the year with the least Benefit obligation at beginning of year for Con Edison. From table_1, the Benefit obligation at beginning of year for Con Edison are: 2015: $1,411, 2014: $1,395, 2013: $1,454. The least is in 2014 ($1,395). However, the table does not provide the \"Benefit obligation at end of year\" values in the given snippet. The snippet cuts off after \"Interest cost on accumulated postretirement benef...\" So we cannot compute the growing rate. Therefore, the answer is not determinable from the provided context.",
+        "case": 0.0,
+        "strategy": 0.0113,
+        "both": 0.0113
+      }
+    },
+    {
+      "uid": "77ed1926d1214183a7b84186b97e9b33",
+      "question": "what percentage of the aggregate consideration for the greenline acquisition was paid to the sellers in 2009 based on the 2008 earn-out target?",
+      "answer_type": "program",
+      "gold_answer": "0.03302",
+      "gold_family": "program:ratio",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:5df905c0e6235174",
+          "family": "span:comparison_lookup",
+          "score": 0.5497580766677856
+        },
+        {
+          "strategy_id": "multihiertt_strategy:4f35910539daf40a",
+          "family": "program:aggregation_sum",
+          "score": 0.5488094687461853
+        },
+        {
+          "strategy_id": "multihiertt_strategy:b1ec803d80c19ac8",
+          "family": "program:change_rate",
+          "score": 0.546126127243042
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "100%",
+        "case": "100%",
+        "strategy": "Not enough information",
+        "both": "100%"
+      }
+    },
+    {
+      "uid": "9e813eb8c59649d996c1d875af71568e",
+      "question": "What's the sum of the Other, net in the years where Benefits earned during the period is greater than 250? (in million)",
+      "answer_type": "program",
+      "gold_answer": "3.8",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5896362066268921
+        },
+        {
+          "strategy_id": "multihiertt_strategy:137da5fc74532645",
+          "family": "program:average_or_composed_division",
+          "score": 0.5830764174461365
+        },
+        {
+          "strategy_id": "multihiertt_strategy:4b64837f1b0cdb76",
+          "family": "program:aggregation_sum",
+          "score": 0.5826111435890198
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "Not enough information",
+        "case": 0,
+        "strategy": 0,
+        "both": 0
+      }
+    },
+    {
+      "uid": "25032ff4e3ea449f992039fa402b738f",
+      "question": "What will Exercise of stock options of Shares reach in 2006 if it continues to grow at its 2005 rate? (in thousand)",
+      "answer_type": "program",
+      "gold_answer": "481629",
+      "gold_family": "program:projection_or_compound_change",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.6067752838134766
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3a4f1a82270a750d",
+          "family": "program:aggregation_sum",
+          "score": 0.5874054431915283
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5804880261421204
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "Cannot be determined from the provided context.",
+        "case": 0,
+        "strategy": 0,
+        "both": 0
+      }
+    },
+    {
+      "uid": "77cc1749865c4859b45f507b001fe47a",
+      "question": "How many Commitment Type continues to decrease each year from 2015 to 2017?",
+      "answer_type": "span",
+      "gold_answer": "Capital Leases,Operating Leases,Purchase Commitments and Other Liabilities",
+      "gold_family": "span:comparison_lookup",
+      "gold_type": "span_comparison_lookup",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5742488503456116
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3670a7f9189933e1",
+          "family": "program:change_rate",
+          "score": 0.548882782459259
+        },
+        {
+          "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+          "family": "program:average_or_composed_division",
+          "score": 0.5350944995880127
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": 2,
+        "case": 1,
+        "strategy": 2,
+        "both": "Operating Leases"
+      }
+    },
+    {
+      "uid": "76e62af158f04ea4897303414e59dc16",
+      "question": "If Americas develops with the same growth rate in 2004, what will it reach in 2005? (in million)",
+      "answer_type": "program",
+      "gold_answer": "6509.92",
+      "gold_family": "program:projection_or_compound_change",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5553582906723022
+        },
+        {
+          "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+          "family": "program:average_or_composed_division",
+          "score": 0.5103358030319214
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3a4f1a82270a750d",
+          "family": "program:aggregation_sum",
+          "score": 0.5063643455505371
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "Cannot be determined from the provided context.",
+        "case": 0.0,
+        "strategy": 0,
+        "both": 0.0
+      }
+    },
+    {
+      "uid": "0141e3e049a24db2a5c312fa84ad6201",
+      "question": "according to the above listed holders of common stock , what was the market share of mktx common stock on march 8 , 2006?",
+      "answer_type": "program",
+      "gold_answer": "1435.26",
+      "gold_family": "program:multiplication",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5704555511474609
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3a4f1a82270a750d",
+          "family": "program:aggregation_sum",
+          "score": 0.5636783838272095
+        },
+        {
+          "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+          "family": "program:average_or_composed_division",
+          "score": 0.543159544467926
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "The provided context does not contain information about the market share of MKTX common stock on March 8, 2006.",
+        "case": "The provided context does not contain information about holders of common stock or market share of MKTX common stock on March 8, 2006.",
+        "strategy": "The provided context does not contain information about the market share of MKTX common stock on March 8, 2006.",
+        "both": "The question asks for the market share of MKTX common stock on March 8, 2006, based on the holders of common stock. However, the provided context does not contain any information about MKTX common stock, holders, or market share. The tables and paragraphs discuss commissions, fees, and revenues for a trading platform, not stock market data. Therefore, the answer cannot be determined from the given context."
+      }
+    },
+    {
+      "uid": "4b3181227ffd4a69a222087cbdca0cc4",
+      "question": "What is the ratioof Fair Value of Corporate loans and loan commitments to the total in 2010?",
+      "answer_type": "program",
+      "gold_answer": "0.5",
+      "gold_family": "program:average_or_composed_division",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:019ee514f46efe63",
+          "family": "program:ratio",
+          "score": 0.6221773624420166
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.610100507736206
+        },
+        {
+          "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+          "family": "program:average_or_composed_division",
+          "score": 0.6094602346420288
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": 0.0109,
+        "case": 0.0109,
+        "strategy": 0.0112,
+        "both": 0.0112
+      }
+    },
+    {
+      "uid": "925baee59589424285de9bbfd8af8d07",
+      "question": "What is the sum of Capital lease obligations for payments due by period ? (in thousand)",
+      "answer_type": "program",
+      "gold_answer": "85951",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.6506169438362122
+        },
+        {
+          "strategy_id": "multihiertt_strategy:019ee514f46efe63",
+          "family": "program:ratio",
+          "score": 0.649941086769104
+        },
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.6477764844894409
+        }
+      ],
+      "correct_arms": [
+        "none",
+        "case",
+        "strategy",
+        "both"
+      ],
+      "em": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": 85951,
+        "case": 85951,
+        "strategy": 85951,
+        "both": 85951
+      }
+    },
+    {
+      "uid": "acdceac1302e49909bde9c2669d38ffe",
+      "question": "what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?",
+      "answer_type": "program",
+      "gold_answer": "115.56",
+      "gold_family": "program:multiplication",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5553989410400391
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5521421432495117
+        },
+        {
+          "strategy_id": "multihiertt_strategy:4f35910539daf40a",
+          "family": "program:aggregation_sum",
+          "score": 0.5421022176742554
+        }
+      ],
+      "correct_arms": [
+        "none",
+        "case",
+        "strategy",
+        "both"
+      ],
+      "em": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": 115.56,
+        "case": 115.56,
+        "strategy": 115.56,
+        "both": 115.56
+      }
+    },
+    {
+      "uid": "e2e5b860eb464fefbf0122eed07843a3",
+      "question": "What is the growing rate of Equity securities, trading for Carrying amount in the year with the most Fixed maturities, available-for-sale ?",
+      "answer_type": "program",
+      "gold_answer": "0.30104",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+          "family": "program:change_rate",
+          "score": 0.5643483996391296
+        },
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5525533556938171
+        },
+        {
+          "strategy_id": "multihiertt_strategy:019ee514f46efe63",
+          "family": "program:ratio",
+          "score": 0.5499845147132874
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "N/A",
+        "case": "N/A",
+        "strategy": "N/A",
+        "both": "N/A"
+      }
+    },
+    {
+      "uid": "171aaec7b94d48df9953c00d83c46556",
+      "question": "In what year is Income taxes greater than 1000?",
+      "answer_type": "span",
+      "gold_answer": "2007 2008 2009",
+      "gold_family": "span:comparison_lookup",
+      "gold_type": "span_comparison_lookup",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5656360387802124
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3670a7f9189933e1",
+          "family": "program:change_rate",
+          "score": 0.5492025017738342
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5476951599121094
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "2009",
+        "case": 2009,
+        "strategy": "2009",
+        "both": 2009
+      }
+    },
+    {
+      "uid": "ab9c286273864e8fb845dec27027a164",
+      "question": "What will Total assets reach in 2014 if it continues to grow at its current rate?",
+      "answer_type": "program",
+      "gold_answer": "3183.89",
+      "gold_family": "program:projection_or_compound_change",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5616354942321777
+        },
+        {
+          "strategy_id": "multihiertt_strategy:b1ec803d80c19ac8",
+          "family": "program:change_rate",
+          "score": 0.5543414950370789
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3a4f1a82270a750d",
+          "family": "program:aggregation_sum",
+          "score": 0.5470626354217529
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "Cannot be determined from the provided information.",
+        "case": 0,
+        "strategy": "Cannot be determined from the provided information.",
+        "both": 0
+      }
+    },
+    {
+      "uid": "24f730c9d9704a8d9597fe4ae83ada60",
+      "question": "What is the total value of Operating revenues, Purchased power , Fuel and Other operations and maintenance for Electric ? (in million)",
+      "answer_type": "program",
+      "gold_answer": "12923",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:137da5fc74532645",
+          "family": "program:average_or_composed_division",
+          "score": 0.5492299795150757
+        },
+        {
+          "strategy_id": "multihiertt_strategy:4b64837f1b0cdb76",
+          "family": "program:aggregation_sum",
+          "score": 0.5444853901863098
+        },
+        {
+          "strategy_id": "multihiertt_strategy:b72171a6cd389886",
+          "family": "span:computed_value_lookup",
+          "score": 0.5361292362213135
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "Cannot be determined from the provided context.",
+        "case": 10473,
+        "strategy": 10473,
+        "both": 10473
+      }
+    },
+    {
+      "uid": "89fbb8e974134821a850e9e1ad8f9f95",
+      "question": "What's the total amount of the Financial standby letters of credit in the years where Benefit plans-3 is less than -6,250 (in million)",
+      "answer_type": "program",
+      "gold_answer": "325.2",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5621982216835022
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3a4f1a82270a750d",
+          "family": "program:aggregation_sum",
+          "score": 0.5491978526115417
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5421730875968933
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": 97.1,
+        "case": 97.1,
+        "strategy": 97.1,
+        "both": 97.1
+      }
+    },
+    {
+      "uid": "36db2cbbf36640aa9ffebe6bb2013981",
+      "question": "what was the growth in the account balance in 2017",
+      "answer_type": "program",
+      "gold_answer": "0.98571",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.6156213879585266
+        },
+        {
+          "strategy_id": "multihiertt_strategy:f7b61ba638465378",
+          "family": "program:change_rate",
+          "score": 0.5940142869949341
+        },
+        {
+          "strategy_id": "multihiertt_strategy:edbbe5c3ddd5a3c1",
+          "family": "program:aggregation_sum",
+          "score": 0.5869719386100769
+        }
+      ],
+      "correct_arms": [
+        "case"
+      ],
+      "em": {
+        "none": 0.0,
+        "case": 1.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "$138",
+        "case": 0.9857142857142857,
+        "strategy": 138,
+        "both": 138
+      }
+    },
+    {
+      "uid": "d59dd32fccc5468ab10a15cf07cc65d7",
+      "question": "What is the total amount of Insurance of At December 31, 2017 Case Reserves, and Insurance of At December 31, 2016 Case Reserves ?",
+      "answer_type": "program",
+      "gold_answer": "2067.9",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.536406397819519
+        },
+        {
+          "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+          "family": "program:average_or_composed_division",
+          "score": 0.5222740769386292
+        },
+        {
+          "strategy_id": "multihiertt_strategy:019ee514f46efe63",
+          "family": "program:ratio",
+          "score": 0.5173674821853638
+        }
+      ],
+      "correct_arms": [
+        "case",
+        "strategy",
+        "both"
+      ],
+      "em": {
+        "none": 0.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": [
+          "$1,049.4",
+          "$1,018.5"
+        ],
+        "case": 2067.9,
+        "strategy": 2067.9,
+        "both": 2067.9
+      }
+    },
+    {
+      "uid": "dc4356b6f323483d8d2c71fd6b32ddac",
+      "question": "If Office for Nonperforming Loans andForeclosed Properties-1 develops with the same growth rate in 2011 what will it reach in 2012? (in million)",
+      "answer_type": "program",
+      "gold_answer": "613.807",
+      "gold_family": "program:projection_or_compound_change",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5472153425216675
+        },
+        {
+          "strategy_id": "multihiertt_strategy:48d4e24e0a94be8c",
+          "family": "program:difference",
+          "score": 0.5198003053665161
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5193202495574951
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": 807,
+        "case": 553,
+        "strategy": 613.62,
+        "both": 807
+      }
+    },
+    {
+      "uid": "77a0b4dbe903419399b79b1e026f1fae",
+      "question": "what is the mathematical range for average train speed ( mph ) for 2008-2010?",
+      "answer_type": "program",
+      "gold_answer": "3.8",
+      "gold_family": "program:difference",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:10442b2869aa88cf",
+          "family": "program:change_rate",
+          "score": 0.5881475210189819
+        },
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5785036087036133
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.570002019405365
+        }
+      ],
+      "correct_arms": [
+        "case",
+        "strategy",
+        "both"
+      ],
+      "em": {
+        "none": 0.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": "23.5-26.2",
+        "case": 3.8,
+        "strategy": 3.8,
+        "both": 3.8
+      }
+    },
+    {
+      "uid": "99e146052384452097deb6f728b6c7f2",
+      "question": "What's the total amount of the 3-Year term loan in 2017 in the years where North America is greater than 300 ?",
+      "answer_type": "program",
+      "gold_answer": "3.9e+06",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5087792873382568
+        },
+        {
+          "strategy_id": "multihiertt_strategy:edbbe5c3ddd5a3c1",
+          "family": "program:aggregation_sum",
+          "score": 0.4938252568244934
+        },
+        {
+          "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+          "family": "program:average_or_composed_division",
+          "score": 0.4905148148536682
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "$1,950,000",
+        "case": 1950000,
+        "strategy": 1950000,
+        "both": 1950000
+      }
+    },
+    {
+      "uid": "87db6a9c0c874dc4ba00221006d105b1",
+      "question": "what was the total amount lost from the bond authorization to the withdrawn?",
+      "answer_type": "program",
+      "gold_answer": "13",
+      "gold_family": "program:difference_composition",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5543498992919922
+        },
+        {
+          "strategy_id": "multihiertt_strategy:3670a7f9189933e1",
+          "family": "program:change_rate",
+          "score": 0.5393408536911011
+        },
+        {
+          "strategy_id": "multihiertt_strategy:019ee514f46efe63",
+          "family": "program:ratio",
+          "score": 0.5285056233406067
+        }
+      ],
+      "correct_arms": [
+        "strategy",
+        "both"
+      ],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": "$13.0 million",
+        "case": "The total amount lost from the bond authorization to the withdrawn is the sum of the differences between the authorized amounts and the amounts drawn for each bond. For Franklin, Kentucky: $54.0 - $51.8 = $2.2 million. For Macon, Georgia: $58.0 - $49.9 = $8.1 million. For Brentwood, Tennessee: $78.0 - $75.3 = $2.7 million. Summing these: $2.2 + $8.1 + $2.7 = $13.0 million.",
+        "strategy": 13.0,
+        "both": 13.0
+      }
+    },
+    {
+      "uid": "97ffca99d5714f1cae211ceac15264a2",
+      "question": "What is the sum of the Held-for-sale in the sections where Held-for-investment is positive? (in million)",
+      "answer_type": "program",
+      "gold_answer": "91",
+      "gold_family": "program:aggregation_sum",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:4b64837f1b0cdb76",
+          "family": "program:aggregation_sum",
+          "score": 0.6314212083816528
+        },
+        {
+          "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+          "family": "program:average_or_composed_division",
+          "score": 0.628296434879303
+        },
+        {
+          "strategy_id": "multihiertt_strategy:b06d0f816511a288",
+          "family": "span:superlative_lookup",
+          "score": 0.6170675754547119
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "Cannot be determined from the provided context.",
+        "case": 598,
+        "strategy": 598,
+        "both": 598
+      }
+    }
+  ],
+  "decision": "FIX PIPELINE FIRST",
+  "decision_rationale": "Execution/cache/provenance layer is repaired, but absolute EM remains low and the 60-sample oracle gap is only 1/60; run context/prompt/evaluator audit before repeated-run expansion."
+}

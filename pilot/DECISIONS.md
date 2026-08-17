@@ -978,3 +978,172 @@ MultiHiertt 的 question_only 增益（+0.316）远大于 TAT-QA（+0.090），�
 - Code：`pilot/multibench/multihiertt_strategy_retrieval_ablation_stage32.py`。
 - JSON：`pilot/multibench/output/multihiertt/multihiertt_strategy_retrieval_ablation_stage32.json`。
 - Report：`pilot/multibench/output/multihiertt/MULTIHIERTT_STRATEGY_RETRIEVAL_ABLATION_STAGE32.md`。
+
+---
+
+## 32. MultiHiertt Four-arm Dry-Run Execution Failure（Stage 33, 2026-08-18）
+
+### scope
+- 60-sample four-arm dry-run（None / Case / Strategy / Both）。
+- Strategy retrieval protocol：Stage 32 frozen（question_only + family-dedup top-10 → top-3）。
+- Case retrieval protocol：full-context + source exclusion + top-4。
+- Runtime：DeepSeek official API（`deepseek-v4-flash`），temperature=0，max_tokens=1400。
+- Sample：前 60 条来自 Stage 31/32 固定 120-sample validation set（seed 20260817）。
+
+### execution failure facts
+- 启动：2026-08-18 00:31-00:34（两个进程同时启动）。
+- 停止：2026-08-18 00:48（手动 pkill）。
+- Cache records：296 行，180 unique keys，116 duplicate keys。
+- 理论任务数：60 samples × 4 arms = 240。
+- 成功解析：68 / 296（23%）。
+- 空响应：228 / 296（77%）。
+- Backend：全部为 `deepseek_openai_compatible`。
+
+### root causes
+
+#### 1. `pilot/llm.py::_call_deepseek()` 缺少 thinking 禁用
+- **位置**：91-125 行。
+- **问题**：payload 未传递 `"thinking": {"type": "disabled"}`。
+- **对比**：`_call_anthropic_compatible()` 第 76 行有此字段。
+- **后果**：runtime provenance 记录 `thinking_mode: false`，但实际 HTTP 请求未禁用 thinking mode。
+- **推测影响**：DeepSeek API 在 thinking enabled 时可能返回不同响应结构，导致 `choices[0].message.content` 为空字符串。
+
+#### 2. 空响应被当作成功缓存
+- **位置**：`_call_deepseek()` 第 117 行。
+- **代码**：`text = data["choices"][0]["message"].get("content", "").strip()`。
+- **问题**：如果 content 为空字符串，仍然 `return text`，不抛出异常。
+- **后果**：retry 机制无法触发，空响应被写入 cache 为 `raw_response: ""`，`parse_error: "no_json"`。
+
+#### 3. 缺少 JSON mode
+- **位置**：`_call_deepseek()` payload（105-110 行）。
+- **问题**：未传递 OpenAI-compatible `"response_format": {"type": "json_object"}`。
+- **风险**：即使 DeepSeek 正常返回，也可能输出非 JSON 格式。Prompt 仅包含 "Return ONLY valid JSON"，但未强制。
+
+#### 4. ExecCache 无文件锁
+- **位置**：`multihiertt_four_arm_dry_run.py` 256-290 行。
+- **问题**：多进程同时追加写同一 JSONL 文件，无 `fcntl.flock()` 保护。
+- **证据**：296 行中仅 180 unique keys，说明 116 条为重复写入（理论值 240 unique）。
+- **推测**：两个独立进程实例（PID 68083 / 68380）并发写入同一 cache namespace。
+
+#### 5. Cache namespace 无 runtime validation
+- **问题**：同一 cache 文件可能混合不同 backend/model/fingerprint，但无主动校验。
+- **现状**：当前 cache 全部为 `deepseek_openai_compatible`，但若之前有 `anthropic_compatible` 残留，会被静默复用。
+
+### why not continue
+1. **Provenance 不可信**：runtime 记录与实际请求不一致（thinking_mode 字段 vs payload）。
+2. **空响应率 77%**：实验数据质量无法支撑科学结论。
+3. **Cache 污染**：duplicate keys 说明并发写入已损坏 cache integrity。
+4. **无法回答科学问题**：当前数据无法区分"retrieval 仍是瓶颈"vs"strategy utility 弱"vs"hit 有益但 miss 干扰"。
+
+### minimum fix checklist（未立即执行）
+
+1. **恢复 thinking 禁用**：
+   ```python
+   # pilot/llm.py::_call_deepseek(), payload 中加入：
+   "thinking": {"type": "disabled"}
+   ```
+
+2. **拒绝空响应**：
+   ```python
+   # pilot/llm.py::_call_deepseek(), 第 117 行后：
+   text = data["choices"][0]["message"].get("content", "").strip()
+   if not text:
+       raise RuntimeError("DeepSeek returned empty content")
+   ```
+
+3. **启用 JSON mode**（如果 DeepSeek 支持）：
+   ```python
+   # pilot/llm.py::_call_deepseek(), payload 中：
+   "response_format": {"type": "json_object"}
+   ```
+
+4. **ExecCache 文件锁**：
+   ```python
+   # multihiertt_four_arm_dry_run.py::ExecCache.call(), 写入前：
+   import fcntl
+   with open(self.path, "a", encoding="utf-8") as f:
+       fcntl.flock(f.fileno(), fcntl.LOCK_EX)
+       f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+       fcntl.flock(f.fileno(), fcntl.LOCK_UN)
+   ```
+
+5. **新建 cache namespace**：
+   - 重命名或删除当前 `multihiertt_four_arm_dry_run_cache.jsonl`。
+   - 更新 `VERSION` 字符串以生成新 cache key space。
+
+6. **Smoke test 协议**：
+   - 先运行 3-5 条样本，要求 parse_ok rate ≈ 100%。
+   - 再运行完整 60×4。
+
+### decision
+- **EXECUTION LAYER FAILURE，暂停 Stage 33 MultiHiertt Four-arm Dry-Run。**
+- 失败不在 evaluator、retrieval 或 memory 层，而在 LLM execution runtime 不可靠。
+- Corrupted cache 已备份为 `multihiertt_four_arm_dry_run_cache.corrupted_20260818.jsonl`。
+- 不使用当前 run 的任何结果。
+- 等待修复后重新运行。
+
+### artifacts
+- Code：`pilot/multibench/multihiertt_four_arm_dry_run.py`（已创建，含 syntax error 已修复）。
+- Corrupted cache：`pilot/multibench/output/multihiertt/multihiertt_four_arm_dry_run_cache.corrupted_20260818.jsonl`（296 行，77% 空响应）。
+- Failure analysis：`/tmp/stage33_issues_summary.md`。
+
+---
+
+## 33. MultiHiertt Four-arm Dry-Run Repair and Re-run（Stage 33, 2026-08-18）
+
+### repair scope
+- 未修改代理、API key、retrieval、memory、prompt 样本定义或 evaluator。
+- 保留 Fable 改成 DeepSeek official API 优先的 runtime 路径；这与当前固定 `deepseek-v4-flash` 协议一致。
+- 修复 `pilot/llm.py`：
+  - DeepSeek OpenAI-compatible payload 显式加入 `"thinking": {"type": "disabled"}`。
+  - 支持可选 `response_format={"type": "json_object"}`。
+  - 空 `message.content` 直接抛错并触发 retry，不写入 cache。
+  - 删除会泄漏完整 response 的 debug stderr。
+- 修复 `pilot/multibench/multihiertt_four_arm_dry_run.py`：
+  - 使用新的 repaired cache namespace，避免复用污染 cache。
+  - cache hit/load 均验证 backend/base_url/model/thinking/fingerprint。
+  - 同一 namespace 内 fingerprint drift 直接 fail。
+  - parse failure 不写入主 execution cache，只写 `.errors` 诊断文件。
+  - 对模型常见的近似 JSON 输出做保守 `answer` 字段抽取，不计算表达式、不从解释文本猜答案。
+  - 并发降为 2，降低 provider/runtime 抖动和 cache 竞争风险。
+
+### validation
+- Unit tests：`python -m pytest pilot/tests/test_multihiertt_four_arm_dry_run.py -q`
+  - 5 passed。
+- Additional compile check：`python -m py_compile pilot/llm.py pilot/multibench/multihiertt_four_arm_dry_run.py`。
+- Smoke run：4 samples × 4 arms。
+  - 复用 repaired smoke cache 后通过，parse failure=0。
+
+### repaired 60-sample dry-run
+- Command：`python pilot/multibench/multihiertt_four_arm_dry_run.py`。
+- Repaired cache：`pilot/multibench/output/multihiertt/multihiertt_four_arm_dry_run_repaired_cache.jsonl`。
+- Cache integrity：240 rows / 240 unique keys；四臂各 60；主 cache parse failure=0。
+- Diagnostic parse retries：32 records across 14 keys；这些不是 successful cache records。
+- Runtime：全部 `deepseek_openai_compatible` / `https://api.deepseek.com` / `deepseek-v4-flash`。
+- Fingerprint：`a26a7955944dc5c60445bff77fac9c8e`。
+
+### metrics
+| Arm | EM | F1 |
+|---|---:|---:|
+| None | 0.117 | 0.125 |
+| Case | 0.200 | 0.208 |
+| Strategy | 0.183 | 0.192 |
+| Both | 0.233 | 0.242 |
+
+- Best Fixed：Both EM=0.233。
+- Sample Oracle EM=0.250。
+- Oracle Gap=0.017（1/60）。
+- Case-only=1；Strategy-only=0；None-only=0；Both-only=1。
+- None>Both=0；Case>Both=1；Strategy>Both=0。
+- Strategy family hit：42/60。
+
+### decision
+`FIX PIPELINE FIRST`
+
+Execution/cache/provenance layer 已修复，但当前 60-sample MultiHiertt dry-run 的 absolute EM 很低且 sample Oracle Gap 只有 1/60。下一步不应直接扩大 repeated runs；应先审计 MultiHiertt context rendering / answer contract / evaluator interaction，特别是 HTML table preview 截断、program answer scale、以及模型输出表达式而非 final scalar 的情况。
+
+### artifacts
+- Code：`pilot/multibench/multihiertt_four_arm_dry_run.py`。
+- Tests：`pilot/tests/test_multihiertt_four_arm_dry_run.py`。
+- JSON：`pilot/multibench/output/multihiertt/multihiertt_four_arm_dry_run_repaired.json`。
+- Report：`pilot/multibench/output/multihiertt/MULTIHIERTT_FOUR_ARM_DRY_RUN_REPAIRED.md`。

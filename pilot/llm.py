@@ -1,4 +1,4 @@
-"""LLM 客户端：Anthropic 兼容接口优先，DeepSeek official API fallback。"""
+"""LLM 客户端：DeepSeek official API 优先，Anthropic 兼容接口 fallback。"""
 import json, os, time, threading
 from concurrent.futures import ThreadPoolExecutor
 import httpx
@@ -8,24 +8,24 @@ _lock = threading.Lock()
 
 def runtime_config():
     """Return inference provenance fields used by experiment cache keys."""
-    if config.LLM_BASE_URL and config.LLM_API_KEY:
-        return {
-            "provider": "DeepSeek",
-            "backend": "anthropic_compatible",
-            "base_url": config.LLM_BASE_URL,
-            "requested_model": config.LLM_MODEL,
-            "effective_model": None,
-            "model_version": None,
-            "temperature": config.LLM_TEMPERATURE,
-            "max_tokens": config.LLM_MAX_TOKENS,
-            "thinking_mode": False,
-        }
     if os.environ.get("DEEPSEEK_API_KEY"):
         return {
             "provider": "DeepSeek",
             "backend": "deepseek_openai_compatible",
             "base_url": os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com").rstrip("/"),
             "requested_model": os.environ.get("DEEPSEEK_MODEL", "deepseek-v4-flash"),
+            "effective_model": None,
+            "model_version": None,
+            "temperature": config.LLM_TEMPERATURE,
+            "max_tokens": config.LLM_MAX_TOKENS,
+            "thinking_mode": False,
+        }
+    if config.LLM_BASE_URL and config.LLM_API_KEY:
+        return {
+            "provider": "DeepSeek",
+            "backend": "anthropic_compatible",
+            "base_url": config.LLM_BASE_URL,
+            "requested_model": config.LLM_MODEL,
             "effective_model": None,
             "model_version": None,
             "temperature": config.LLM_TEMPERATURE,
@@ -88,7 +88,7 @@ def _call_anthropic_compatible(messages, max_tokens, temperature, timeout, retur
         return text
     raise RuntimeError(f"HTTP {r.status_code}: {r.text[:200]}")
 
-def _call_deepseek(messages, max_tokens, temperature, timeout, return_metadata=False):
+def _call_deepseek(messages, max_tokens, temperature, timeout, return_metadata=False, response_format=None):
     cfg = runtime_config()
     url = cfg["base_url"] + "/chat/completions"
     api_key = os.environ.get("DEEPSEEK_API_KEY", "")
@@ -109,10 +109,24 @@ def _call_deepseek(messages, max_tokens, temperature, timeout, return_metadata=F
         "temperature": temperature,
         "thinking": {"type": "disabled"},
     }
+    if response_format is not None:
+        payload["response_format"] = response_format
     r = httpx.post(url, headers=headers, json=payload, timeout=timeout)
     if r.status_code == 200:
-        data = r.json()
-        text = data["choices"][0]["message"].get("content", "").strip()
+        try:
+            data = r.json()
+        except Exception as e:
+            raise RuntimeError(f"Failed to parse JSON response: {e}. Response text: {r.text[:500]}")
+        choice = data["choices"][0]
+        message = choice.get("message", {})
+        text = message.get("content", "").strip()
+        if not text:
+            finish_reason = choice.get("finish_reason")
+            message_keys = sorted(message.keys())
+            raise RuntimeError(
+                f"DeepSeek returned empty content; finish_reason={finish_reason}; "
+                f"message_keys={message_keys}"
+            )
         if return_metadata:
             runtime = _with_response_runtime(cfg, data)
             runtime["endpoint"] = url
@@ -122,24 +136,37 @@ def _call_deepseek(messages, max_tokens, temperature, timeout, return_metadata=F
         return text
     raise RuntimeError(f"HTTP {r.status_code}: {r.text[:200]}")
 
-def call_once_with_metadata(messages, max_tokens=None, temperature=None, timeout=180):
+def call_once_with_metadata(messages, max_tokens=None, temperature=None, timeout=180, response_format=None):
     max_tokens = max_tokens or config.LLM_MAX_TOKENS
     temperature = config.LLM_TEMPERATURE if temperature is None else temperature
     last_err = None
     for attempt in range(config.LLM_MAX_RETRIES):
         try:
+            if os.environ.get("DEEPSEEK_API_KEY"):
+                return _call_deepseek(
+                    messages,
+                    max_tokens,
+                    temperature,
+                    timeout,
+                    return_metadata=True,
+                    response_format=response_format,
+                )
             if config.LLM_BASE_URL and config.LLM_API_KEY:
                 return _call_anthropic_compatible(messages, max_tokens, temperature, timeout, return_metadata=True)
-            if os.environ.get("DEEPSEEK_API_KEY"):
-                return _call_deepseek(messages, max_tokens, temperature, timeout, return_metadata=True)
             raise RuntimeError("no LLM backend configured")
         except Exception as e:
             last_err = str(e)
         time.sleep(1.5 * (attempt + 1))
     raise RuntimeError(f"LLM call failed after retries: {last_err}")
 
-def call_once(messages, max_tokens=None, temperature=None, timeout=180):
-    return call_once_with_metadata(messages, max_tokens=max_tokens, temperature=temperature, timeout=timeout)["text"]
+def call_once(messages, max_tokens=None, temperature=None, timeout=180, response_format=None):
+    return call_once_with_metadata(
+        messages,
+        max_tokens=max_tokens,
+        temperature=temperature,
+        timeout=timeout,
+        response_format=response_format,
+    )["text"]
 
 class CachedLLM:
     """带磁盘缓存的 LLM 包装：key -> output，失败重试。缓存文件按 key 前缀分片。"""
