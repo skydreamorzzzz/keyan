@@ -12,6 +12,8 @@ __pycache__/
 data/finqa/
 data/*.pdf
 data/*.pdf:Zone.Identifier
+data/multihiertt/raw/*.parquet
+data/multihiertt/processed/multihiertt_*.jsonl
 
 # Generated caches and embeddings
 pilot/output/*cache*.jsonl

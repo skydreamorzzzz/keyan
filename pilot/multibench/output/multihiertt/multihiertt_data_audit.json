@@ -1,0 +1,205 @@
+{
+  "dataset_id": "multihiertt",
+  "version": "multihiertt_ingest_v1",
+  "source": {
+    "official_github": "https://github.com/psunlpgroup/MultiHiertt",
+    "official_paper": "https://aclanthology.org/2022.acl-long.454/",
+    "downloaded_from": "https://huggingface.co/datasets/bevaya/MultiHiertt"
+  },
+  "files": {
+    "train": {
+      "path": "data/multihiertt/raw/train.parquet",
+      "url": "https://huggingface.co/api/datasets/bevaya/MultiHiertt/parquet/default/train/0.parquet",
+      "rows": 7830,
+      "bytes": 152439307,
+      "md5": "197aa33da73685d87316203fd2cd28fc"
+    },
+    "validation": {
+      "path": "data/multihiertt/raw/validation.parquet",
+      "url": "https://huggingface.co/api/datasets/bevaya/MultiHiertt/parquet/default/validation/0.parquet",
+      "rows": 1044,
+      "bytes": 20464413,
+      "md5": "8ba78b5c9a19b37edaf9f009613c1df3"
+    }
+  },
+  "splits": {
+    "train": {
+      "rows": 7830,
+      "expected_rows": 7830,
+      "matches_expected_rows": true,
+      "answer_type_counts": {
+        "program": 6306,
+        "span": 1524
+      },
+      "program_vs_span": {
+        "program": 6306,
+        "span": 1524,
+        "program_rate": 0.8053639846743295
+      },
+      "program_parse_coverage": {
+        "program_records": 6306,
+        "parse_ok": 6306,
+        "parse_ok_rate": 1.0,
+        "operator_counts": {
+          "add": 6515,
+          "divide": 3815,
+          "subtract": 2604,
+          "multiply": 681,
+          "exp": 11
+        },
+        "n_steps_distribution": {
+          "min": 1.0,
+          "mean": 2.160799238820171,
+          "p50": 2.0,
+          "p90": 4.0,
+          "p95": 4.0,
+          "max": 24.0
+        }
+      },
+      "evidence_coverage": {
+        "text_evidence_nonempty": 4922,
+        "table_evidence_nonempty": 7117,
+        "any_evidence_nonempty": 7830,
+        "text_evidence_nonempty_rate": 0.6286079182630907,
+        "table_evidence_nonempty_rate": 0.9089399744572159,
+        "any_evidence_nonempty_rate": 1.0,
+        "text_evidence_all_refs_valid": 4922,
+        "table_evidence_all_refs_valid": 7117
+      },
+      "context_distributions": {
+        "table_count": {
+          "min": 3.0,
+          "mean": 4.03154533844189,
+          "p50": 4.0,
+          "p90": 6.0,
+          "p95": 6.0,
+          "max": 7.0
+        },
+        "paragraph_count": {
+          "min": 21.0,
+          "mean": 74.59272030651341,
+          "p50": 72.0,
+          "p90": 106.0,
+          "p95": 117.0,
+          "max": 173.0
+        },
+        "table_description_cell_count": {
+          "min": 6.0,
+          "mean": 129.83805874840357,
+          "p50": 119.0,
+          "p90": 209.0,
+          "p95": 241.0,
+          "max": 544.0
+        },
+        "context_char_len": {
+          "min": 6440.0,
+          "mean": 16235.34380587484,
+          "p50": 15664.0,
+          "p90": 21876.2,
+          "p95": 24794.1,
+          "max": 39809.0
+        }
+      },
+      "missing_or_malformed": {
+        "uid": 0,
+        "question": 0,
+        "answer": 0,
+        "paragraphs": 0,
+        "tables": 0,
+        "table_description": 0,
+        "malformed_table_description": 0,
+        "malformed_program": 0
+      }
+    },
+    "validation": {
+      "rows": 1044,
+      "expected_rows": 1044,
+      "matches_expected_rows": true,
+      "answer_type_counts": {
+        "span": 202,
+        "program": 842
+      },
+      "program_vs_span": {
+        "program": 842,
+        "span": 202,
+        "program_rate": 0.8065134099616859
+      },
+      "program_parse_coverage": {
+        "program_records": 842,
+        "parse_ok": 842,
+        "parse_ok_rate": 1.0,
+        "operator_counts": {
+          "subtract": 365,
+          "divide": 496,
+          "add": 873,
+          "multiply": 79,
+          "exp": 3
+        },
+        "n_steps_distribution": {
+          "min": 1.0,
+          "mean": 2.156769596199525,
+          "p50": 2.0,
+          "p90": 4.0,
+          "p95": 4.0,
+          "max": 16.0
+        }
+      },
+      "evidence_coverage": {
+        "text_evidence_nonempty": 706,
+        "table_evidence_nonempty": 929,
+        "any_evidence_nonempty": 1044,
+        "text_evidence_nonempty_rate": 0.6762452107279694,
+        "table_evidence_nonempty_rate": 0.8898467432950191,
+        "any_evidence_nonempty_rate": 1.0,
+        "text_evidence_all_refs_valid": 706,
+        "table_evidence_all_refs_valid": 929
+      },
+      "context_distributions": {
+        "table_count": {
+          "min": 2.0,
+          "mean": 3.8793103448275863,
+          "p50": 4.0,
+          "p90": 5.0,
+          "p95": 6.0,
+          "max": 7.0
+        },
+        "paragraph_count": {
+          "min": 29.0,
+          "mean": 73.5316091954023,
+          "p50": 70.0,
+          "p90": 103.0,
+          "p95": 113.85,
+          "max": 165.0
+        },
+        "table_description_cell_count": {
+          "min": 21.0,
+          "mean": 135.84291187739464,
+          "p50": 120.0,
+          "p90": 223.7,
+          "p95": 251.85,
+          "max": 454.0
+        },
+        "context_char_len": {
+          "min": 8147.0,
+          "mean": 16237.578544061304,
+          "p50": 15371.0,
+          "p90": 21707.3,
+          "p95": 24353.0,
+          "max": 33945.0
+        }
+      },
+      "missing_or_malformed": {
+        "uid": 0,
+        "question": 0,
+        "answer": 0,
+        "paragraphs": 0,
+        "tables": 0,
+        "table_description": 0,
+        "malformed_table_description": 0,
+        "malformed_program": 0
+      }
+    }
+  },
+  "decision": "READY FOR EVALUATOR",
+  "blocking_problems": []
+}

@@ -1,0 +1,748 @@
+[
+  {
+    "sample_id": "multihiertt:train:7438ec6b8d414a2e8f1fc16f3f6451ed",
+    "split": "train",
+    "question": "IfTotal net revenues develops with the same increasing rate in 2008, what will it reach in 2009？ (in million)",
+    "answer": "942.974",
+    "answer_type": "program",
+    "program": "subtract(1289,1762), divide(#0,1762), add(const_1,#1), multiply(#2,1289)",
+    "operator_sequence": [
+      "subtract",
+      "divide",
+      "add",
+      "multiply"
+    ],
+    "text_evidence": [
+      3,
+      5
+    ],
+    "table_evidence": [
+      "0-10-1",
+      "0-10-2"
+    ],
+    "paragraph_preview": [
+      "in net revenues per advisor from $315,000 in 2007 to $267,000 in 2008.",
+      "General and administrative expense decreased $37 million, or 3%, from the prior year primarily due to our expense reduction initiatives in 2008, partially offset by acquisition integration costs.",
+      "Asset Management Our Asset Management segment provides investment advice and investment products to retail and institutional clients."
+    ],
+    "table_count": 4,
+    "table_preview": [
+      "<table><tr><td> </td><td colspan=\"4\">Years Ended December 31,</td></tr><tr><td> </td><td>2008</td><td>2007</td><td colspan=\"2\">Change</td></tr><tr><td> </td><td colspan=\"4\">(in millions, except percentages)</td></tr><tr>",
+      "<table><tr><td></td><td colspan=\"5\">Percent Change 2017 vs. 2016</td></tr><tr><td></td><td>Volume 1</td><td>Acquisitions & Divestitures</td><td>Price, Product & Geographic Mix</td><td>Currency Fluctuations</td><td>Total<"
+    ],
+    "table_description_preview": {
+      "0-4-1": "Table 0 shows Management and financial advice fees of Years Ended December 31, 2008 (in millions, except percentages) is $1,077 .",
+      "0-4-2": "Table 0 shows Management and financial advice fees of Years Ended December 31, 2007 (in millions, except percentages) is $1,362 .",
+      "0-4-3": "Table 0 shows Management and financial advice fees of Years Ended December 31, Change (in millions, except percentages) is $-285 .",
+      "0-4-4": "Table 0 shows Management and financial advice fees of Years Ended December 31, Change (in millions, except percentages) [EMPTY].1 is -21% .",
+      "0-5-1": "Table 0 shows Distribution fees of Years Ended December 31, 2008 (in millions, except percentages) is 247 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:0dc335b3738042a09ecf54a30bb4d733",
+    "split": "train",
+    "question": "what is the percentage change in total multi-asset aum during 2016?",
+    "answer": "0.04961",
+    "answer_type": "program",
+    "program": "subtract(395007,376336), divide(#0,376336)",
+    "operator_sequence": [
+      "subtract",
+      "divide"
+    ],
+    "text_evidence": [],
+    "table_evidence": [
+      "1-5-1",
+      "1-5-1",
+      "1-5-5"
+    ],
+    "paragraph_preview": [
+      "$239 million, respectively, at December 31, 2015.",
+      "The fair value of the Company’s interest reflected the PennyMac stock price at December 31, 2016 and 2015, respectively (a Level 1 input).",
+      "The Company performed an other-than\u0002temporary impairment analysis as of December 31, 2016 and determined the decline in fair value below the carrying value to be temporary.12."
+    ],
+    "table_count": 4,
+    "table_preview": [
+      "<table><tr><td>(in millions)</td><td>MaturityAmount</td><td>Unamortized Discount and Debt Issuance Costs</td><td>Carrying Value</td><td>Fair Value</td></tr><tr><td>6.25% Notes due 2017</td><td>$700</td><td>$—</td><td>$70",
+      "<table><tr><td>(in millions)</td><td>December 31,2015</td><td>Net inflows (outflows)</td><td>Marketchange</td><td>FX impact</td><td>December 31,2016</td></tr><tr><td>Asset allocation and balanced</td><td>$185,836</td><td"
+    ],
+    "table_description_preview": {
+      "0-1-1": "Table 0 shows 6.25% Notes due 2017 of MaturityAmount is $700 .",
+      "0-1-2": "Table 0 shows 6.25% Notes due 2017 of Unamortized Discount and Debt Issuance Costs is $— .",
+      "0-1-3": "Table 0 shows 6.25% Notes due 2017 of Carrying Value is $700 .",
+      "0-1-4": "Table 0 shows 6.25% Notes due 2017 of Fair Value is $724 .",
+      "0-2-1": "Table 0 shows 5.00% Notes due 2019 of MaturityAmount is 1000 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:574b107b45624c04a8217484749f7ffa",
+    "split": "train",
+    "question": "What's the growth rate of ABO of Non-U.S.Pension Plans in 2013?",
+    "answer": "-0.28114",
+    "answer_type": "program",
+    "program": "subtract(606,843), divide(#0,843)",
+    "operator_sequence": [
+      "subtract",
+      "divide"
+    ],
+    "text_evidence": [
+      31
+    ],
+    "table_evidence": [
+      "1-4-3",
+      "1-4-4"
+    ],
+    "paragraph_preview": [
+      "Other Risk Management Derivatives Other risk management derivatives are used by the Corporation to reduce certain risk exposures.",
+      "These derivatives are not qualifying accounting hedges because either they did not qualify for or were not designated as accounting hedges.",
+      "The table below presents gains (losses) on these derivatives for 2013, 2012 and 2011."
+    ],
+    "table_count": 3,
+    "table_preview": [
+      "<table><tr><td>(Dollars in millions)</td><td>2013</td><td>2012</td><td>2011</td></tr><tr><td>Price risk on mortgage banking production income<sup>-1, 2</sup></td><td>$968</td><td>$3,022</td><td>$2,852</td></tr><tr><td>Ma",
+      "<table><tr><td></td><td colspan=\"2\">QualifiedPension Plan</td><td colspan=\"2\">Non-U.S.Pension Plans</td><td colspan=\"2\">Nonqualifiedand OtherPension Plans</td></tr><tr><td>(Dollars in millions)</td><td>2013</td><td>2012<"
+    ],
+    "table_description_preview": {
+      "0-1-1": "Table 0 shows Price risk on mortgage banking production income of 2013 is $968 .",
+      "0-1-2": "Table 0 shows Price risk on mortgage banking production income of 2012 is $3,022 .",
+      "0-1-3": "Table 0 shows Price risk on mortgage banking production income of 2011 is $2,852 .",
+      "0-2-1": "Table 0 shows Market-related risk on mortgage banking servicing income of 2013 is -1108 .",
+      "0-2-2": "Table 0 shows Market-related risk on mortgage banking servicing income of 2012 is 2000 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:84ad74e84317435385681fafb8c26208",
+    "split": "train",
+    "question": "what was the average of company 401 ( k ) match total for the three years ended 2014 , in millions?",
+    "answer": "382.667",
+    "answer_type": "program",
+    "program": "add(385,383), add(#0,380), divide(#1,const_3)",
+    "operator_sequence": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "text_evidence": [
+      87
+    ],
+    "table_evidence": [],
+    "paragraph_preview": [
+      "Notes to Five Year Summary (a) Includes the effects of items not considered in the assessment of the operating performance of our business segments (see the section, “Results of Operations – Unallocated Corporate (Expense) Income, Net” in Management’s Discussion and Analysis of Financial Condition and Results of Operations (MD&A)) which, on a combined basis, increased earnings from continuing operations before income taxes by $214 million, $139 million after tax ($0.31 per share).",
+      "Also includes a reduction in income tax expense of $62 million ($0.14 per share) resulting from a tax benefit related to claims we filed for additional extraterritorial income exclusion (ETI) tax benefits.",
+      "These items increased earnings by $201 million after tax ($0.45 per share)."
+    ],
+    "table_count": 4,
+    "table_preview": [
+      "<table><tr><td><i>(In millions)</i></td><td>2006</td><td>2005</td><td>2004</td><td>2003</td><td>2002</td></tr><tr><td>Net earnings</td><td>$2,529</td><td>$1,825</td><td>$1,266</td><td>$1,053</td><td>$500</td></tr><tr><td",
+      "<table><tr><td></td><td>2014</td><td>2013</td><td> 2012</td></tr><tr><td>Cash and cash equivalents at beginning of year</td><td>$2,617</td><td>$1,898</td><td>$3,582</td></tr><tr><td>Operating activities</td><td></td><td>"
+    ],
+    "table_description_preview": {
+      "0-1-1": "Table 0 shows Net earnings of 2006 is $2,529 .",
+      "0-1-2": "Table 0 shows Net earnings of 2005 is $1,825 .",
+      "0-1-3": "Table 0 shows Net earnings of 2004 is $1,266 .",
+      "0-1-4": "Table 0 shows Net earnings of 2003 is $1,053 .",
+      "0-1-5": "Table 0 shows Net earnings of 2002 is $500 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:validation:5ee7b272d07e4076ab42110b85540e45",
+    "split": "validation",
+    "question": "Which year is Benefit obligation at beginning of year for Con Edison the least?",
+    "answer": "2014",
+    "answer_type": "span",
+    "program": "",
+    "operator_sequence": [],
+    "text_evidence": [],
+    "table_evidence": [
+      "1-3-1",
+      "1-3-2",
+      "1-3-3"
+    ],
+    "paragraph_preview": [
+      "## Table 0 ##",
+      "Our computation of expected volatility for 2011 , 2010 and 2009 was based on a combination of historical and market-based implied volatility from traded options on our stock.",
+      "Our computation of expected life was determined based on historical experience of similar awards, giving consideration to the contractual terms of the stock-based awards, vesting schedules and expectations of future employee behavior."
+    ],
+    "table_count": 3,
+    "table_preview": [
+      "<table><tr><td></td><td colspan=\"3\">Year Ended December 31,</td></tr><tr><td></td><td>2011</td><td>2010</td><td>2009</td></tr><tr><td>Risk-free interest rate</td><td>1.2%</td><td>1.4%</td><td>1.7%</td></tr><tr><td>Expect",
+      "<table><tr><td></td><td colspan=\"3\">Con Edison</td><td colspan=\"3\">CECONY</td></tr><tr><td>(Millions of Dollars)</td><td>2015</td><td>2014</td><td>2013</td><td>2015</td><td>2014</td><td>2013</td></tr><tr><td>CHANGE IN BE"
+    ],
+    "table_description_preview": {
+      "0-3-1": "Table 0 shows Expected life (in years) of Year Ended December 31, 2011 1.2% is 3.8 .",
+      "0-3-2": "Table 0 shows Expected life (in years) of Year Ended December 31, 2010 1.4% is 3.4 .",
+      "0-3-3": "Table 0 shows Expected life (in years) of Year Ended December 31, 2009 1.7% is 3.8 .",
+      "0-4-1": "Table 0 shows Dividend yield of Year Ended December 31, 2011 1.2% is —% .",
+      "0-4-2": "Table 0 shows Dividend yield of Year Ended December 31, 2010 1.4% is —% ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:3e633c72d3dd415e870356ba582f6350",
+    "split": "train",
+    "question": "In which year is the Total assets the most?",
+    "answer": "2004",
+    "answer_type": "span",
+    "program": "",
+    "operator_sequence": [],
+    "text_evidence": [],
+    "table_evidence": [
+      "2-16-1",
+      "2-16-2",
+      "2-16-3",
+      "2-16-4",
+      "2-16-5"
+    ],
+    "paragraph_preview": [
+      "anticipated or possible short-term cash needs, prevailing interest rates, our investment policy and alternative investment choices.",
+      "A majority of our cash and cash equivalents balance is invested in money market mutual funds that invest only in U. S.  Treasury securities or U. S.  government agency securities.",
+      "Our exposure to risk is minimal given the nature of the investments."
+    ],
+    "table_count": 4,
+    "table_preview": [
+      "<table><tr><td>(in millions)</td><td>2010</td><td>2009</td></tr><tr><td>Cash performance bonds</td><td>$3,717.0</td><td>$5,834.6</td></tr><tr><td>Cash guaranty fund contributions</td><td>231.8</td><td>102.6</td></tr><tr>",
+      "<table><tr><td></td><td colspan=\"2\">2004</td><td colspan=\"2\">2003</td><td colspan=\"2\">2002</td></tr><tr><td>Quarter</td><td>High</td><td>Low</td><td>High</td><td>Low</td><td>High</td><td>Low</td></tr><tr><td>First</td><t"
+    ],
+    "table_description_preview": {
+      "0-1-1": "Table 0 shows Cash performance bonds of 2010 is $3,717.0 .",
+      "0-1-2": "Table 0 shows Cash performance bonds of 2009 is $5,834.6 .",
+      "0-2-1": "Table 0 shows Cash guaranty fund contributions of 2010 is 231.8 .",
+      "0-2-2": "Table 0 shows Cash guaranty fund contributions of 2009 is 102.6 .",
+      "0-3-1": "Table 0 shows Cross-margin arrangements of 2010 is 79.7 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:40c1902671e64ce1b2acf54b8b6cdd7d",
+    "split": "train",
+    "question": "In the year with the most Pretax, what is the growth rate of Interest expense?",
+    "answer": "1",
+    "answer_type": "program",
+    "program": "add(2128,2128), add(#0,2128), subtract(#1,2128), subtract(#2,4256), subtract(#3,6384), add(35173,23449), add(#5,11724), subtract(#6,11724), subtract(#7,23449), subtract(#8,35173), subtract(#4,#9), add(2128,2128), add(#11,2128), subtract(#12,2128), subtract(#13,4256), subtract(#14,6384), divide(#10,#15)",
+    "operator_sequence": [
+      "add",
+      "add",
+      "subtract",
+      "subtract",
+      "subtract",
+      "add",
+      "add",
+      "subtract",
+      "subtract",
+      "subtract",
+      "subtract",
+      "add",
+      "add",
+      "subtract",
+      "subtract",
+      "subtract",
+      "divide"
+    ],
+    "text_evidence": [],
+    "table_evidence": [
+      "1-5-1",
+      "1-5-2",
+      "1-5-3",
+      "1-5-4",
+      "1-5-5",
+      "1-5-6",
+      "1-9-1",
+      "1-9-2",
+      "1-9-3",
+      "1-9-4",
+      "1-9-5",
+      "1-9-6"
+    ],
+    "paragraph_preview": [
+      "reported in the consolidated financial statements and accompanying notes.",
+      "We continuously evaluate our estimates and those critical accounting policies related primarily to benefit expenses and revenue recognition as well as accounting for impairments related to our investment securities, goodwill, and long-lived assets.",
+      "These estimates are based on knowledge of current events and anticipated future events and, accordingly, actual results ultimately may differ from those estimates."
+    ],
+    "table_count": 3,
+    "table_preview": [
+      "<table><tr><td></td><td> December 31, 2008</td><td>Percentage of Total</td><td> December 31, 2007</td><td> Percentage of Total</td></tr><tr><td></td><td colspan=\"4\"> (dollars in thousands)</td></tr><tr><td>IBNR</td><td>$",
+      "<table><tr><td></td><td colspan=\"3\">Increase (decrease) in pretax earnings givenan interest rate decrease of X basis points</td><td colspan=\"3\">Increase (decrease) in pretax earnings givenan interest rate increase of X b"
+    ],
+    "table_description_preview": {
+      "0-2-1": "Table 0 shows IBNR of December 31, 2008 (dollars in thousands) is $1,851,047 .",
+      "0-2-2": "Table 0 shows IBNR of Percentage of Total (dollars in thousands) is 57.7% .",
+      "0-2-3": "Table 0 shows IBNR of December 31, 2007 (dollars in thousands) is $1,695,088 .",
+      "0-2-4": "Table 0 shows IBNR of Percentage of Total (dollars in thousands).1 is 62.8% .",
+      "0-3-1": "Table 0 shows Reported claims in process of December 31, 2008 (dollars in thousands) is 486514 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:e4078ad754d849a6b9760e599cd37546",
+    "split": "train",
+    "question": "What was the total amount of Employer contributions in the range of 0 and 500 in 2013? (in million)",
+    "answer": "343",
+    "answer_type": "program",
+    "program": "add(305,38)",
+    "operator_sequence": [
+      "add"
+    ],
+    "text_evidence": [
+      0
+    ],
+    "table_evidence": [
+      "0-16-1",
+      "0-16-3"
+    ],
+    "paragraph_preview": [
+      "The funded status of the Company's plans as of December 31, 2013 and 2012, was as follows:",
+      "## Table 0 ##",
+      "(1) Included in other current liabilities and current portion of postretirement plan liabilities, respectively."
+    ],
+    "table_count": 3,
+    "table_preview": [
+      "<table><tr><td></td><td colspan=\"2\">Pension Benefits December 31</td><td colspan=\"2\">Other Benefits December 31</td></tr><tr><td>($ in millions)</td><td>2013</td><td>2012</td><td>2013</td><td>2012</td></tr><tr><td>Change",
+      "<table><tr><td></td><td>Year Ended December 31, 2013</td></tr><tr><td>($ in millions, except per share amounts)</td><td>1st Qtr</td><td>2nd Qtr</td><td>3rd Qtr</td><td>4th Qtr</td></tr><tr><td>Sales and service revenues<"
+    ],
+    "table_description_preview": {
+      "0-3-1": "Table 0 shows Benefit obligation at beginning of year of Pension Benefits December 31 2013 is $5,061 .",
+      "0-3-2": "Table 0 shows Benefit obligation at beginning of year of Pension Benefits December 31 2012 is $4,123 .",
+      "0-3-3": "Table 0 shows Benefit obligation at beginning of year of Other Benefits December 31 2013 is $965 .",
+      "0-3-4": "Table 0 shows Benefit obligation at beginning of year of Other Benefits December 31 2012 is $835 .",
+      "0-4-1": "Table 0 shows Service cost of Pension Benefits December 31 2013 is 147 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:2a1ec43fbd7a492aad7cc28c015a2293",
+    "split": "train",
+    "question": "What will Interest cost on projected benefit obligation in Con Edison be like in 2009 if it develops with the same increasing rate as current? (in millions)",
+    "answer": "540.173",
+    "answer_type": "program",
+    "program": "subtract(515,491), divide(#0,491), add(1,#1), multiply(#2,515)",
+    "operator_sequence": [
+      "subtract",
+      "divide",
+      "add",
+      "multiply"
+    ],
+    "text_evidence": [
+      39
+    ],
+    "table_evidence": [
+      "1-3-1",
+      "1-3-2"
+    ],
+    "paragraph_preview": [
+      "Ameren determines discount rate assumptions by using an interest rate yield curve pursuant to authoritative accounting guidance on the determination of discount rates used for defined benefit plan obligations.",
+      "The yield curve is based on the yields of more than 500 high-quality corporate bonds with maturities between zero and 30 years.",
+      "A theoretical spot-rate curve constructed from this yield curve is then used as a guide to develop a discount rate matching the plans’ payout structure."
+    ],
+    "table_count": 3,
+    "table_preview": [
+      "<table><tr><td></td><td colspan=\"3\"> Pension Benefits</td><td colspan=\"3\"> Postretirement Benefits</td></tr><tr><td></td><td> 2011</td><td> 2010</td><td> 2009</td><td> 2011</td><td> 2010</td><td> 2009</td></tr><tr><td>Am",
+      "<table><tr><td></td><td colspan=\"3\">Con Edison</td><td colspan=\"3\">Con Edison of New York</td></tr><tr><td> (Millions of Dollars)</td><td>2008</td><td>2007</td><td>2006</td><td>2008</td><td>2007</td><td>2006</td></tr><tr"
+    ],
+    "table_description_preview": {
+      "0-2-1": "Table 0 shows Ameren of Pension Benefits 2011 is $103 .",
+      "0-2-2": "Table 0 shows Ameren of Pension Benefits 2010 is $81 .",
+      "0-2-3": "Table 0 shows Ameren of Pension Benefits 2009 is $99 .",
+      "0-2-4": "Table 0 shows Ameren of Postretirement Benefits 2011 is $129 .",
+      "0-2-5": "Table 0 shows Ameren of Postretirement Benefits 2010 is $36 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:7ad585f811b94bb0a290c7b2b88761a6",
+    "split": "train",
+    "question": "In the year with lowest amount of Residential mortgage, what's the increasing rate of Home equity?",
+    "answer": "0.99059",
+    "answer_type": "program",
+    "program": "add(963,8.31), add(#0,0.84), divide(963,#1)",
+    "operator_sequence": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "text_evidence": [
+      2
+    ],
+    "table_evidence": [
+      "0-5-4",
+      "0-5-5",
+      "0-5-6"
+    ],
+    "paragraph_preview": [
+      "For reporting purposes, we allocate the allowance for credit losses across products.",
+      "However, the allowance is available to absorb any credit losses without restriction.",
+      "Table 38 presents our allocation by product type."
+    ],
+    "table_count": 6,
+    "table_preview": [
+      "<table><tr><td></td><td colspan=\"6\"> December 31</td></tr><tr><td></td><td colspan=\"3\">2008</td><td colspan=\"3\">2007</td></tr><tr><td>(Dollars in millions)</td><td> Amount</td><td>Percent of Total</td><td>Percent of Loan",
+      "<table><tr><td></td><td colspan=\"2\">2016</td><td colspan=\"2\">2015</td></tr><tr><td>(DOLLARS IN THOUSANDS)</td><td>CarryingAmount</td><td>FairValue</td><td>CarryingAmount</td><td>FairValue</td></tr><tr><td>Cash and cash e"
+    ],
+    "table_description_preview": {
+      "0-4-1": "Table 0 shows Residential mortgage of December 31 2008 Amount is $1,382 .",
+      "0-4-2": "Table 0 shows Residential mortgage of December 31 2008 Percent of Total is 5.99% .",
+      "0-4-3": "Table 0 shows Residential mortgage of December 31 2008 Percent of Loans and Leases Outstanding -2 is 0.56% .",
+      "0-4-4": "Table 0 shows Residential mortgage of December 31 2007 Amount is $207 .",
+      "0-4-5": "Table 0 shows Residential mortgage of December 31 2007 Percent of Total is 1.79% ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:a0679de6c7874787a4e11ecfb4d46044",
+    "split": "train",
+    "question": "What's the average of the Finance receivables, net of allowance in the years where Cash is positive? (in million)",
+    "answer": "20486.5",
+    "answer_type": "program",
+    "program": "add(870,802), add(#0,20327), add(#1,18974), divide(#2,2)",
+    "operator_sequence": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "text_evidence": [
+      46
+    ],
+    "table_evidence": [
+      "2-6-1",
+      "2-6-2",
+      "2-6-3",
+      "2-6-4"
+    ],
+    "paragraph_preview": [
+      "American International Group, Inc. , and Subsidiaries ?",
+      "aggregate globally all credit exposure data by counterparty, country and industry and report risk concentrations regularly to and review with the CRC and the Finance and Risk Management Committee of the Board of Directors; ?",
+      "administer regular portfolio credit reviews of all investment, derivative and credit-incurring business units and recommend any corrective actions where required; ?"
+    ],
+    "table_count": 4,
+    "table_preview": [
+      "<table><tr><td> At December 31, 2010 Category </td><td>Risk Rating<i><sup>(a)</sup></i> </td><td>Credit Exposure as a Percentage of Total Equity<i><sup>(b)</sup></i> </td><td></td></tr><tr><td><i>Investment Grade:</i></t",
+      "<table><tr><td> December 31, <i>(in millions)</i> </td><td> 2010 </td><td> 2009 </td></tr><tr><td> Assets:</td><td></td><td></td></tr><tr><td>Fixed maturity securities</td><td>$77,905</td><td>$34,495</td></tr><tr><td>Def"
+    ],
+    "table_description_preview": {
+      "0-2-1": "Table 0 shows 10 largest combined of data 0 is A+ .",
+      "0-2-2": "Table 0 shows 10 largest combined of data 1 [EMPTY].1 is 84.4 .",
+      "0-2-3": "Table 0 shows 10 largest combined of data 2 [EMPTY].2 is % .",
+      "0-3-1": "Table 0 shows Single largest financial institution of data 0 is AA- .",
+      "0-3-2": "Table 0 shows Single largest financial institution of data 1 [EMPTY].1 is 4.8 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:validation:b4680912c85843beb6dd8b40988e3a24",
+    "split": "validation",
+    "question": "what was the percentage change in the reinsurance accounts from 2009 to 2010",
+    "answer": "0.22464",
+    "answer_type": "program",
+    "program": "subtract(169,138), divide(#0,138)",
+    "operator_sequence": [
+      "subtract",
+      "divide"
+    ],
+    "text_evidence": [
+      83
+    ],
+    "table_evidence": [],
+    "paragraph_preview": [
+      "Commercial Paper and Revolving Credit Facility The table below details the Company’s short-term debt programs and the applicable balances outstanding",
+      "## Table 0 ##",
+      "[1] Terminated in January 2012, see discussion that follows."
+    ],
+    "table_count": 5,
+    "table_preview": [
+      "<table><tr><td></td><td> Effective</td><td> Expiration</td><td colspan=\"2\"> Maximum Available As of December 31,</td><td colspan=\"4\"> Outstanding As of December 31,</td></tr><tr><td> Description</td><td> Date</td><td> Da",
+      "<table><tr><td></td><td colspan=\"9\">December 31, 2011</td></tr><tr><td></td><td colspan=\"3\">Less Than 12 Months</td><td colspan=\"3\">12 Months or More</td><td colspan=\"3\">Total</td></tr><tr><td></td><td> Amortized</td><td"
+    ],
+    "table_description_preview": {
+      "0-5-1": "Table 0 shows 5-year revolving credit facility [1] of Effective Date 11/10/86 is 8/9/07 .",
+      "0-5-2": "Table 0 shows 5-year revolving credit facility [1] of Expiration Date N/A is 8/9/12 .",
+      "0-5-3": "Table 0 shows 5-year revolving credit facility [1] of Maximum Available As of December 31, 2011 $2,000 is 1900 .",
+      "0-5-4": "Table 0 shows 5-year revolving credit facility [1] of Maximum Available As of December 31, 2010 $2,000 is 1900 .",
+      "0-6-3": "Table 0 shows Total Commercial Paper and RevolvingCredit Facility of Maximum Available As of December 31, 2011 $2,000 is $3,900 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:d51d3a6dca2041a5be4cc98184b4cfcc",
+    "split": "train",
+    "question": "What is the sum of North America Regional Consumer Banking of Goodwill, Ties of data 2 [EMPTY].2, and Total operating expenses of 2009 ?",
+    "answer": "14287",
+    "answer_type": "program",
+    "program": "add(2453.0,6475.0), add(#0,5359.0)",
+    "operator_sequence": [
+      "add",
+      "add"
+    ],
+    "text_evidence": [
+      91
+    ],
+    "table_evidence": [
+      "4-1-2",
+      "2-4-3",
+      "5-4-1"
+    ],
+    "paragraph_preview": [
+      "OTHER OPERATING/PERFORMANCE AND FINANCIAL STATISTICS We report key Railroad performance measures weekly to the Association of American Railroads (AAR), including carloads, average daily inventory of rail cars on our system, average train speed, and average terminal dwell time.",
+      "We provide this data on our website at www.",
+      "up."
+    ],
+    "table_count": 6,
+    "table_preview": [
+      "<table><tr><td></td><td><i>2009</i></td><td><i>2008</i></td><td><i>2007</i></td><td><i>% Change 2009 v 2008</i></td><td><i>% Change 2008 v 2007</i></td></tr><tr><td>Average train speed (miles per hour)</td><td>27.3</td><",
+      "<table><tr><td></td><td colspan=\"2\"><i>Number of Shares Purchased [a]</i></td><td colspan=\"3\"><i>Average Price Paid [a]</i></td></tr><tr><td></td><td> <i>2009</i></td><td><i>2008</i></td><td colspan=\"2\"> <i>2009</i></td>"
+    ],
+    "table_description_preview": {
+      "0-1-1": "Table 0 shows Average train speed (miles per hour) of 2009 is 27.3 .",
+      "0-1-2": "Table 0 shows Average train speed (miles per hour) of 2008 is 23.5 .",
+      "0-1-3": "Table 0 shows Average train speed (miles per hour) of 2007 is 21.8 .",
+      "0-1-4": "Table 0 shows Average train speed (miles per hour) of % Change 2009 v 2008 is 16 % .",
+      "0-1-5": "Table 0 shows Average train speed (miles per hour) of % Change 2008 v 2007 is 8 % ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:cd0296265964441ea69478329e7927f5",
+    "split": "train",
+    "question": "What was the total amount of CONDENSED BALANCE SHEET DATA excluding those CONDENSED BALANCE SHEET DATA greater than 7000 in 2006? (in million)",
+    "answer": "1109",
+    "answer_type": "program",
+    "program": "add(333,463), add(#0,313)",
+    "operator_sequence": [
+      "add",
+      "add"
+    ],
+    "text_evidence": [],
+    "table_evidence": [
+      "0-18-1",
+      "0-22-1",
+      "0-23-1"
+    ],
+    "paragraph_preview": [
+      "ITEM 6.",
+      "SELECTED FINANCIAL DATA Consolidated Financial Data—Five Year Summary",
+      "## Table 0 ##"
+    ],
+    "table_count": 3,
+    "table_preview": [
+      "<table><tr><td><i>(In millions, except per share data and ratios)</i></td><td>2007 (b)</td><td>2006 (c)</td><td>2005 (d)</td><td>2004 (e)</td><td>2003<sup>(f)</sup></td></tr><tr><td> OPERATING RESULTS<sup>(a)</sup></td><",
+      "<table><tr><td></td><td>2014</td><td>2013</td><td>2012</td></tr><tr><td>Weighted average common shares outstanding for basic computations</td><td>316.8</td><td>320.9</td><td>323.7</td></tr><tr><td>Weighted average diluti"
+    ],
+    "table_description_preview": {
+      "0-2-1": "Table 0 shows Net sales of 2007 (b) is $41,862 .",
+      "0-2-2": "Table 0 shows Net sales of 2006 (c) is $39,620 .",
+      "0-2-3": "Table 0 shows Net sales of 2005 (d) is $37,213 .",
+      "0-2-4": "Table 0 shows Net sales of 2004 (e) is $35,526 .",
+      "0-2-5": "Table 0 shows Net sales of 2003 is $31,824 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:b5b17e3a0675420abcd431a936495f03",
+    "split": "train",
+    "question": "In the year with lowest amount of Catastrophes, what's the increasing rate of Total segment? (in %)",
+    "answer": "0.01435",
+    "answer_type": "program",
+    "program": "subtract(791.8,780.6), divide(#0,780.6)",
+    "operator_sequence": [
+      "subtract",
+      "divide"
+    ],
+    "text_evidence": [
+      17
+    ],
+    "table_evidence": [
+      "1-9-1",
+      "1-13-1"
+    ],
+    "paragraph_preview": [
+      "Goodwill and Intangible Asset Impairment Charge During the third quarter of fiscal year 2017, we determined that the goodwill and indefinite-lived intangible assets (primarily acquired trade names) associated with our Latin America reporting unit of our Industrial Gases – Americas segment were impaired.",
+      "We recorded a noncash impairment charge of $162.1 ($154.1 attributable to Air Products, after-tax, or $.70 per share), which was driven by lower economic growth and profitability in the region.",
+      "This impairment charge has been excluded from segment results."
+    ],
+    "table_count": 3,
+    "table_preview": [
+      "<table><tr><td></td><td>2018</td><td>2017</td><td>2016</td></tr><tr><td>Interest incurred</td><td>$150.0</td><td>$139.6</td><td>$147.9</td></tr><tr><td>Less: Capitalized interest</td><td>19.5</td><td>19.0</td><td>32.7</t",
+      "<table><tr><td></td><td colspan=\"9\">Years Ended December 31,</td></tr><tr><td>(Dollars in millions)</td><td>Current Year</td><td colspan=\"2\">Ratio %/ Pt Change</td><td>Prior Years</td><td colspan=\"2\">Ratio %/ Pt Change</"
+    ],
+    "table_description_preview": {
+      "0-1-1": "Table 0 shows Interest incurred of 2018 is $150.0 .",
+      "0-1-2": "Table 0 shows Interest incurred of 2017 is $139.6 .",
+      "0-1-3": "Table 0 shows Interest incurred of 2016 is $147.9 .",
+      "0-2-1": "Table 0 shows Less: Capitalized interest of 2018 is 19.5 .",
+      "0-2-2": "Table 0 shows Less: Capitalized interest of 2017 is 19.0 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:ec82d1944aa845f59ef46fcd1eeb4edf",
+    "split": "train",
+    "question": "what percentage of total debt was long-term debt in 2017?",
+    "answer": "0.80723",
+    "answer_type": "program",
+    "program": "multiply(4.7,const_1000), divide(3794,#0)",
+    "operator_sequence": [
+      "multiply",
+      "divide"
+    ],
+    "text_evidence": [
+      20
+    ],
+    "table_evidence": [
+      "0-2-3"
+    ],
+    "paragraph_preview": [
+      "Operating cash flow from continuing operations for 2017 was $2.7 billion, a $191 million, or 8 percent increase compared with 2016, reflecting higher earnings and favorable changes in working capital.",
+      "Operating cash flow from continuing operations of $2.5 billion in 2016 was a 23 percent increase compared to $2.0 billion in 2015, as comparisons benefited from income taxes of $424 million paid on the gains from divestitures in 2015.",
+      "At September 30, 2017, operating working capital as a percent of sales increased to 6.6 percent due to higher levels of working capital in the acquired valves & controls business, compared with 5.2 percent and 7.2 percent in 2016 and 2015, respectively."
+    ],
+    "table_count": 3,
+    "table_preview": [
+      "<table><tr><td>(dollars in millions)</td><td>2015</td><td>2016</td><td>2017</td></tr><tr><td>Total Assets</td><td>$22,088</td><td>21,732</td><td>19,589</td></tr><tr><td>Long-term Debt</td><td>$4,289</td><td>4,051</td><td",
+      "<table><tr><td> Date</td><td> Principal (In millions)</td><td>Interest Rate</td><td> Maturity</td></tr><tr><td>August 2008</td><td>$1,035</td><td>6.82%</td><td>2018</td></tr><tr><td>June 2005</td><td>$1,000</td><td>5.00%"
+    ],
+    "table_description_preview": {
+      "0-1-1": "Table 0 shows Total Assets of 2015 is $22,088 .",
+      "0-1-2": "Table 0 shows Total Assets of 2016 is 21732 .",
+      "0-1-3": "Table 0 shows Total Assets of 2017 is 19589 .",
+      "0-2-1": "Table 0 shows Long-term Debt of 2015 is $4,289 .",
+      "0-2-2": "Table 0 shows Long-term Debt of 2016 is 4051 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:validation:326f465758bf44c08bd21a20dfcf8e4f",
+    "split": "validation",
+    "question": "In the section with the most Liquid hydrocarbons(mmbbl), what is the growth rate of Natural gas(bcf)?",
+    "answer": "0.21815",
+    "answer_type": "program",
+    "program": "subtract(1499,1172), divide(#0,1499)",
+    "operator_sequence": [
+      "subtract",
+      "divide"
+    ],
+    "text_evidence": [],
+    "table_evidence": [
+      "2-4-9",
+      "2-9-9"
+    ],
+    "paragraph_preview": [
+      "Marathon maintains an equity compensation program for its non-employee directors under the Plan.",
+      "Pursuant to the program, non-employee directors must defer 50% of their annual retainers in the form of common stock units.",
+      "In addition, the program provides each non-employee director with a matching grant of up to 1,000 shares of common stock upon his or her initial election to the board if he or she purchases an equivalent number of shares within 60 days of joining the board."
+    ],
+    "table_count": 5,
+    "table_preview": [
+      "<table><tr><td> <i>(In millions)</i> </td><td> Capital Lease Obligations </td><td>Operating Lease Obligations</td></tr><tr><td>2004</td><td>$29</td><td>$108</td></tr><tr><td>2005</td><td>20</td><td>80</td></tr><tr><td>20",
+      "<table><tr><td> <i>(In millions)</i> </td><td rowspan=\"2\">2003 $182(a)</td><td rowspan=\"2\">2002 $196(a)</td><td rowspan=\"2\">2001 $159</td></tr><tr><td>Minimum rental</td></tr><tr><td>Contingent rental</td><td>15</td><td>"
+    ],
+    "table_description_preview": {
+      "0-6-1": "Table 0 shows Later years of Capital Lease Obligations $29 20 26 34 26 is 127 .",
+      "0-6-2": "Table 0 shows Later years of Operating Lease Obligations $108 80 67 38 31 is 131 .",
+      "0-7-1": "Table 0 shows Sublease rentals of Capital Lease Obligations $29 20 26 34 26 is – .",
+      "0-7-2": "Table 0 shows Sublease rentals of Operating Lease Obligations $108 80 67 38 31 is -77 .",
+      "0-8-1": "Table 0 shows Total minimum lease payments of Capital Lease Obligations $29 20 26 34 26 is 262 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:validation:097b805f848244a39865b4ceba0dd30a",
+    "split": "validation",
+    "question": "If China develops with the same growth rate in 2013, what will it reach in 2014? (in million)",
+    "answer": "1553.24",
+    "answer_type": "program",
+    "program": "add(const_1,0.16), multiply(1339,#0)",
+    "operator_sequence": [
+      "add",
+      "multiply"
+    ],
+    "text_evidence": [
+      63
+    ],
+    "table_evidence": [
+      "4-3-4",
+      "4-3-5"
+    ],
+    "paragraph_preview": [
+      "APPLIED MATERIALS, INC.  NOTES TO CONSOLIDATED FINANCIAL STATEMENTS — (Continued) 102 Employee Stock Purchase Plans Under the ESPP, substantially all employees may purchase Applied common stock through payroll deductions at a price equal to 85 percent of the lower of the fair market value of Applied common stock at the beginning or end of each 6-month purchase period, subject to certain limits.",
+      "Based on the Black-Scholes option pricing model, the weighted average estimated fair value of purchase rights under the ESPP was $3.08 per share for the year ended October 27, 2013, $2.73 per share for the year ended October 28, 2012 and $3.03 per share for the year ended October 30, 2011.",
+      "The number of shares issued under the ESPP during fiscal 2013, 2012 and 2011 was 7 million, 7 million and 6 million, respectively."
+    ],
+    "table_count": 5,
+    "table_preview": [
+      "<table><tr><td></td><td>2013</td><td>2012</td><td>2011</td></tr><tr><td>ESPP:</td><td></td><td></td><td></td></tr><tr><td>Dividend yield</td><td>2.80%</td><td>3.01%</td><td>2.53%</td></tr><tr><td>Expected volatility</td>",
+      "<table><tr><td></td><td colspan=\"2\">2014</td><td colspan=\"2\">2013</td><td colspan=\"2\">2012</td></tr><tr><td></td><td colspan=\"6\">(In millions, except percentages)</td></tr><tr><td>Silicon Systems Group</td><td>$5,978</td"
+    ],
+    "table_description_preview": {
+      "0-5-1": "Table 0 shows Expected life (in years) of 2013 2.80% 24.8% 0.09% is 0.5 .",
+      "0-5-2": "Table 0 shows Expected life (in years) of 2012 3.01% 29.6% 0.13% is 0.5 .",
+      "0-5-3": "Table 0 shows Expected life (in years) of 2011 2.53% 31.1% 0.09% is 0.5 .",
+      "1-2-1": "Table 1 shows Silicon Systems Group of 2014 (In millions, except percentages) is $5,978 .",
+      "1-2-2": "Table 1 shows Silicon Systems Group of 2014 (In millions, except percentages).1 is 66% ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:a9d386ecfedf44ae87b0990976013f1f",
+    "split": "train",
+    "question": "In the year with the most Total assets, what is the growth rate of Total current liabilities?",
+    "answer": "0.07077",
+    "answer_type": "program",
+    "program": "subtract(58617,54743), divide(#0,54743)",
+    "operator_sequence": [
+      "subtract",
+      "divide"
+    ],
+    "text_evidence": [
+      36
+    ],
+    "table_evidence": [
+      "1-10-1",
+      "1-10-2",
+      "1-8-1",
+      "1-8-2",
+      "1-8-3",
+      "1-8-4",
+      "1-8-5"
+    ],
+    "paragraph_preview": [
+      "Dividends The declaration of dividends is subject to the discretion of our board of directors, and may be affected by various factors, including our future earnings, financial condition, capital requirements, share repurchase activity, levels of indebtedness, credit ratings and other considerations our board of directors deem relevant.",
+      "Our board of directors has adopted a quarterly dividend declaration policy providing that the declaration of any dividends will be determined quarterly by the board or audit committee of the board of directors taking into account such factors as our evolving business model, prevailing business conditions and our financial results and capital requirements, without a predetermined annual net income payout ratio.",
+      "During the year ended December 31, 2016, on a post\u0002split basis, we paid dividends of $0.68 per share of our common stock in the aggregate, including quarterly dividend for each quarter in 2016 of $0.17 per share, for an aggregate payout of $409 million in 2016, which includes the payment of dividend equivalents."
+    ],
+    "table_count": 3,
+    "table_preview": [
+      "<table><tr><td></td><td colspan=\"2\">Common Stock MarketPrice</td></tr><tr><td></td><td>High</td><td>Low</td></tr><tr><td>Year Ended December 31, 2015</td><td></td><td></td></tr><tr><td>First Quarter</td><td>$48.01</td><t",
+      "<table><tr><td rowspan=\"3\"></td><td colspan=\"5\">As of December 31,</td></tr><tr><td>2016</td><td>2015</td><td>2014</td><td>2013</td><td>2012</td></tr><tr><td colspan=\"5\">(In millions)</td></tr><tr><td>Consolidated Balanc"
+    ],
+    "table_description_preview": {
+      "0-3-1": "Table 0 shows First Quarter of Common Stock MarketPrice High is $48.01 .",
+      "0-3-2": "Table 0 shows First Quarter of Common Stock MarketPrice Low is $40.45 .",
+      "0-4-1": "Table 0 shows Second Quarter of Common Stock MarketPrice High is $48.59 .",
+      "0-4-2": "Table 0 shows Second Quarter of Common Stock MarketPrice Low is $44.23 .",
+      "0-5-1": "Table 0 shows Third Quarter of Common Stock MarketPrice High is $49.28 ."
+    }
+  },
+  {
+    "sample_id": "multihiertt:train:17443e6883964e5db67e3d2e247d5d06",
+    "split": "train",
+    "question": "What is the average increasing rate of Net premiums written between 2008 and 2009?",
+    "answer": "-0.05038",
+    "answer_type": "program",
+    "program": "subtract(1038,914), divide(#0,914), subtract(914,1197), divide(#2,1197), add(#1,#3), divide(#4,const_2)",
+    "operator_sequence": [
+      "subtract",
+      "divide",
+      "subtract",
+      "divide",
+      "add",
+      "divide"
+    ],
+    "text_evidence": [],
+    "table_evidence": [
+      "1-2-1",
+      "1-2-2",
+      "1-2-3"
+    ],
+    "paragraph_preview": [
+      "The following table shows our adjusted loss and loss expense ratio for the years ended December 31, 2009, 2008, and 2007.",
+      "## Table 0 ##",
+      "Net catastrophe losses for 2009 were $51 million, compared with $83 million and $94 million in 2008 and 2007, respectively."
+    ],
+    "table_count": 6,
+    "table_preview": [
+      "<table><tr><td></td><td> 2009</td><td>2008</td><td>2007</td></tr><tr><td>Loss and loss expense ratio, as reported</td><td> 50.5%</td><td>50.4%</td><td>52.4%</td></tr><tr><td>Catastrophe losses</td><td> -1.0%</td><td>-1.6",
+      "<table><tr><td></td><td></td><td></td><td></td><td colspan=\"2\">% Change</td></tr><tr><td>(in millions of U.S. dollars)</td><td>2009</td><td>2008</td><td>2007</td><td>2009 vs.2008</td><td>2008 vs.2007</td></tr><tr><td>Net"
+    ],
+    "table_description_preview": {
+      "1-2-1": "Table 1 shows Net premiums written of % Change 2009 is $1,038 .",
+      "1-2-2": "Table 1 shows Net premiums written of % Change 2008 is $914 .",
+      "1-2-3": "Table 1 shows Net premiums written of % Change 2007 is $1,197 .",
+      "1-2-4": "Table 1 shows Net premiums written of % Change 2009 vs.2008 is 14% .",
+      "1-2-5": "Table 1 shows Net premiums written of % Change 2008 vs.2007 is -24% ."
+    }
+  }
+]

@@ -601,3 +601,35 @@
 - **TAT-QA HETEROGENEITY STABLE**。
 - Single-run fixed-arm ranking is slightly unstable, but query×arm correctness is highly repeatable and deviation-vs-Both events persist across runs.
 - Next step can study transfer/selector feasibility on TAT-QA, but should not tune the already-frozen retrieval/prompt/memory based on this audit.
+
+## 26. MultiHiertt Ingestion + Data Audit（2026-08-17）
+
+### scope
+- 只做 MultiHiertt train/validation 数据接入与审计。
+- 未调用 LLM/API；未构造 memory、retrieval、four-arm execution 或 router。
+- 不把 MultiHiertt program 强行转成 FinQA DSL，仅保留原始 program 并做 deterministic operator parse for audit。
+
+### provenance
+- Primary source：official GitHub `psunlpgroup/MultiHiertt` 与 ACL 2022 paper。
+- 实际下载文件：Hugging Face parquet repackaging `bevaya/MultiHiertt`，只包含 annotation data，不包含 official bundle 中的大型 checkpoints。
+- Raw parquet 与 full processed JSONL 因体积过大不提交 git；`pilot/multibench/multihiertt_ingest.py` 可从本地 raw parquet 复现 processed JSONL 和 audit artifacts。
+
+### artifacts
+- Ingestion code：`pilot/multibench/multihiertt_ingest.py`。
+- Provenance：`data/multihiertt/SOURCE.md`。
+- Deterministic sanity sample：`data/multihiertt/processed/multihiertt_unified_sample20.json`，seed `20260817`。
+- Audit：`pilot/multibench/output/multihiertt/MULTIHIERTT_DATA_AUDIT.md` 与 `multihiertt_data_audit.json`。
+- Local ignored full IR：`data/multihiertt/processed/multihiertt_train.jsonl`、`multihiertt_validation.jsonl`。
+
+### results
+- Split rows：train 7,830；validation 1,044，与 expected counts 一致。
+- Program/span：train 6,306 / 1,524；validation 842 / 202。
+- Program operator parse OK rate：train 1.000；validation 1.000。
+- Top operators：`add`、`divide`、`subtract`、`multiply`、少量 `exp`。
+- Evidence coverage：any evidence non-empty train 1.000 / validation 1.000；text evidence non-empty train 0.629 / validation 0.676；table evidence non-empty train 0.909 / validation 0.890。
+- Context：每题多张 hierarchical HTML tables，train table_count mean 4.03、validation mean 3.88；context_char_len mean 均约 16.2k chars。
+- Missing/malformed required fields：none detected by current audit.
+
+### decision
+- **READY FOR EVALUATOR**。
+- 下一轮应先接 MultiHiertt official-compatible evaluator，再考虑 Case/Strategy Memory；不要在 evaluator 验证前进入 memory/retrieval/four-arm。
