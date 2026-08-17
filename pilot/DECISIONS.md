@@ -713,3 +713,44 @@
 ### decision
 - **READY FOR STRATEGY DESIGN**。
 - Do not tune MultiHiertt Case retrieval before Strategy design; carry source-id limitation and weak operator-family alignment forward as known risks.
+
+## 29. MultiHiertt Strategy Structure Audit（2026-08-17）
+
+### scope
+- 只做 MultiHiertt train-only deterministic Strategy structure audit。
+- 未调用 LLM/API；未生成 Strategy Memory；未做 retrieval、four-arm execution 或 router。
+- Program 保留原始 MultiHiertt flat DSL，只抽取 operator sequence/family、step count、operand count、evidence modality、multi-table/hierarchy usage。
+- Span 与 program 分开建模，定义 direct lookup、comparison yes/no、comparison lookup、superlative lookup、computed-value lookup、multi-value lookup 等结构。
+
+### results
+- Train samples：7,830 = program 6,306 + span 1,524。
+- Evidence modality：text+table 4,209；table 2,908；text 713。
+- Table evidence usage：single_table 5,586；multi_table 1,531；no_table_evidence 713。
+- HTML hierarchy markers：has_hierarchy 7,263；no_hierarchy 567。
+- Coarse families：17；fine schema families：414。
+- Coarse family coverage：top-5 0.725；top-10 0.908；top-15 0.995。
+- Fine schema coverage：top-20 0.498；top-50 0.713；top-100 0.863，说明 schema 长尾明显。
+- Top coarse families：
+  - `program:aggregation_sum` 2,011。
+  - `program:change_rate` 1,441。
+  - `program:average_or_composed_division` 1,137。
+  - `span:superlative_lookup` 556。
+  - `span:comparison_lookup` 528。
+  - `program:ratio` 415。
+  - `program:projection_or_compound_change` 404。
+
+### strategy schema recommendation
+- Strategy schema 应包含：strategy_type、coarse family、fine schema key、original MultiHiertt DSL marker、operator sequence/family、step/operand buckets、evidence modality、table usage、hierarchy marker count、scale hint、normalized program template、span question template、support counts。
+- Program strategy 的公式结构优先 deterministic 生成，LLM 不应重新发明公式。
+- Span strategy 应作为 evidence-location / comparison / superlative lookup 策略，不并入 arithmetic program schema。
+- Multi-table 与 hierarchy usage 应显式作为 strategy metadata，因为 MultiHiertt 的核心难点是多 hierarchical HTML table linking。
+
+### small LLM pilot freeze
+- 下一轮小 LLM abstraction pilot 建议固定覆盖 top-12 coarse families + top-20 schema keys。
+- Estimated coarse coverage：0.949。
+- Estimated schema coverage：0.498。
+- 每 family 取 4-6 个代表性 train examples，并 redacted company/year/number/answer。
+
+### decision
+- **PROCEED SMALL-LLM STRATEGY PILOT**。
+- 下一轮只应把已冻结 deterministic schema 转成可复用 semantic strategy text；不要重聚类、重定义 family 或调 dev。

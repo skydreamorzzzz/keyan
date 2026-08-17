@@ -1,0 +1,908 @@
+{
+  "dataset_id": "multihiertt",
+  "split": "train",
+  "count": 7830,
+  "answer_type_counts": {
+    "program": 6306,
+    "span": 1524
+  },
+  "program_count": 6306,
+  "span_count": 1524,
+  "operator_sequence_counts": {
+    "none": 1524,
+    "subtract>divide": 1425,
+    "add": 1092,
+    "add>divide": 739,
+    "add>add": 592,
+    "divide": 527,
+    "subtract>divide>add>multiply": 330,
+    "add>add>divide": 248,
+    "subtract": 243,
+    "add>add>add": 202,
+    "multiply": 117,
+    "multiply>divide": 63,
+    "add>add>add>divide": 49,
+    "add>add>add>add": 42,
+    "add>add>add>add>add": 40,
+    "add>add>add>add>divide": 37,
+    "subtract>subtract": 31,
+    "divide>subtract": 29,
+    "subtract>multiply>divide>add": 25,
+    "divide>divide": 19,
+    "add>add>add>add>add>add": 18,
+    "divide>multiply": 17,
+    "subtract>divide>multiply": 16,
+    "add>subtract": 15,
+    "add>add>add>add>add>divide": 14,
+    "subtract>add": 13,
+    "add>add>add>add>add>add>divide": 12,
+    "add>add>add>add>add>add>subtract>add>add>add>divide": 10,
+    "add>add>add>add>subtract>add>add>divide": 10,
+    "add>add>subtract>add>divide": 9,
+    "subtract>divide>multiply>add": 9,
+    "add>multiply": 9,
+    "add>subtract>subtract": 9,
+    "add>add>add>add>add>add>add": 9,
+    "subtract>divide>subtract>divide>add>divide": 9,
+    "add>add>subtract": 8,
+    "divide>divide>subtract": 8,
+    "subtract>divide>add>exp>multiply": 8,
+    "add>subtract>divide": 8,
+    "add>add>add>add>add>add>add>divide": 8
+  },
+  "operator_family_counts": {
+    "add": 2011,
+    "none": 1524,
+    "divide+subtract": 1481,
+    "add+divide": 1123,
+    "divide": 546,
+    "add+divide+multiply+subtract": 373,
+    "subtract": 284,
+    "multiply": 121,
+    "add+divide+subtract": 104,
+    "add+subtract": 100,
+    "divide+multiply": 81,
+    "divide+multiply+subtract": 23,
+    "add+multiply": 18,
+    "multiply+subtract": 15,
+    "add+divide+multiply": 14,
+    "add+divide+exp+multiply+subtract": 8,
+    "add+exp+multiply": 2,
+    "exp+multiply+subtract": 1,
+    "add+multiply+subtract": 1
+  },
+  "step_count_buckets": {
+    "2": 2969,
+    "0": 1524,
+    "5plus": 294,
+    "1": 1979,
+    "4": 492,
+    "3": 572
+  },
+  "operand_count_buckets": {
+    "3": 2968,
+    "0": 1524,
+    "7": 53,
+    "2": 1981,
+    "5": 490,
+    "4": 572,
+    "9plus": 83,
+    "6": 129,
+    "8": 30
+  },
+  "evidence_modality_counts": {
+    "text+table": 4209,
+    "table": 2908,
+    "text": 713
+  },
+  "table_usage_counts": {
+    "single_table": 5586,
+    "multi_table": 1531,
+    "no_table_evidence": 713
+  },
+  "hierarchy_marker_counts": {
+    "has_hierarchy": 7263,
+    "no_hierarchy": 567
+  },
+  "coarse_family_count": 17,
+  "schema_family_count": 414,
+  "coarse_family_coverage": {
+    "top_5": 0.7245210727969349,
+    "top_10": 0.9081736909323116,
+    "top_15": 0.9950191570881226,
+    "top_20": 1.0,
+    "top_30": 1.0,
+    "top_50": 1.0
+  },
+  "schema_family_coverage": {
+    "top_5": 0.19923371647509577,
+    "top_10": 0.33729246487867176,
+    "top_20": 0.49808429118773945,
+    "top_30": 0.5928480204342274,
+    "top_50": 0.7134099616858237,
+    "top_100": 0.8629629629629629
+  },
+  "top_coarse_families": {
+    "program:aggregation_sum": 2011,
+    "program:change_rate": 1441,
+    "program:average_or_composed_division": 1137,
+    "span:superlative_lookup": 556,
+    "span:comparison_lookup": 528,
+    "program:ratio": 415,
+    "program:projection_or_compound_change": 404,
+    "program:difference": 243,
+    "program:division_composition": 212,
+    "span:direct_lookup": 164,
+    "span:computed_value_lookup": 162,
+    "program:difference_composition": 158,
+    "program:difference_then_ratio": 144,
+    "program:multiplication": 117,
+    "span:comparison_yesno": 99,
+    "program:multiplication_composition": 24,
+    "span:multi_value_lookup": 15
+  },
+  "top_schema_families": {
+    "program|program:change_rate|ops=divide+subtract|steps=2|ev=text+table|tables=single|scale=none": 407,
+    "program|program:change_rate|ops=divide+subtract|steps=2|ev=table|tables=single|scale=none": 300,
+    "span|span:superlative_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none": 297,
+    "program|program:change_rate|ops=divide+subtract|steps=2|ev=table|tables=single|scale=percent": 296,
+    "program|program:aggregation_sum|ops=add|steps=1|ev=table|tables=multi|scale=none": 260,
+    "span|span:comparison_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none": 224,
+    "program|program:aggregation_sum|ops=add|steps=2|ev=text+table|tables=multi|scale=none": 223,
+    "program|program:average_or_composed_division|ops=add+divide|steps=2|ev=table|tables=multi|scale=none": 220,
+    "program|program:average_or_composed_division|ops=add+divide|steps=2|ev=text+table|tables=multi|scale=none": 212,
+    "program|program:aggregation_sum|ops=add|steps=1|ev=text+table|tables=multi|scale=none": 202,
+    "program|program:aggregation_sum|ops=add|steps=1|ev=text+table|tables=single|scale=million": 182,
+    "program|program:projection_or_compound_change|ops=add+divide+multiply+subtract|steps=4|ev=text+table|tables=single|scale=million": 166,
+    "span|span:superlative_lookup|ops=none|steps=0|ev=table|tables=single|scale=none": 156,
+    "program|program:change_rate|ops=divide+subtract|steps=2|ev=text|tables=none|scale=percent": 138,
+    "span|span:comparison_lookup|ops=none|steps=0|ev=table|tables=single|scale=none": 125,
+    "program|program:aggregation_sum|ops=add|steps=1|ev=table|tables=single|scale=million": 115,
+    "program|program:change_rate|ops=divide+subtract|steps=2|ev=text+table|tables=single|scale=percent": 104,
+    "program|program:ratio|ops=divide|steps=1|ev=text+table|tables=single|scale=percent": 94,
+    "program|program:projection_or_compound_change|ops=add+divide+multiply+subtract|steps=4|ev=table|tables=single|scale=million": 90,
+    "program|program:aggregation_sum|ops=add|steps=2|ev=text+table|tables=single|scale=million": 89,
+    "program|program:aggregation_sum|ops=add|steps=1|ev=text+table|tables=multi|scale=million": 84,
+    "program|program:ratio|ops=divide|steps=1|ev=text|tables=none|scale=percent": 79,
+    "span|span:direct_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none": 77,
+    "program|program:aggregation_sum|ops=add|steps=3|ev=text+table|tables=single|scale=million": 77,
+    "program|program:ratio|ops=divide|steps=1|ev=text+table|tables=single|scale=none": 76,
+    "program|program:average_or_composed_division|ops=add+divide|steps=2|ev=text+table|tables=single|scale=million": 72,
+    "program|program:average_or_composed_division|ops=add+divide|steps=3|ev=text+table|tables=single|scale=million": 71,
+    "program|program:aggregation_sum|ops=add|steps=2|ev=table|tables=multi|scale=none": 71,
+    "program|program:aggregation_sum|ops=add|steps=1|ev=text+table|tables=single|scale=none": 68,
+    "program|program:difference_then_ratio|ops=divide+subtract|steps=2|ev=table|tables=single|scale=none": 67,
+    "program|program:ratio|ops=divide|steps=1|ev=text|tables=none|scale=none": 62,
+    "program|program:aggregation_sum|ops=add|steps=2|ev=table|tables=single|scale=million": 56,
+    "program|program:difference|ops=subtract|steps=1|ev=text+table|tables=single|scale=million": 56,
+    "span|span:comparison_yesno|ops=none|steps=0|ev=text+table|tables=single|scale=none": 53,
+    "span|span:direct_lookup|ops=none|steps=0|ev=table|tables=single|scale=none": 52,
+    "span|span:comparison_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=million": 52,
+    "program|program:average_or_composed_division|ops=add+divide|steps=3|ev=table|tables=single|scale=million": 50,
+    "span|span:computed_value_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none": 49,
+    "program|program:aggregation_sum|ops=add|steps=3|ev=table|tables=single|scale=million": 49,
+    "program|program:multiplication|ops=multiply|steps=1|ev=text+table|tables=single|scale=percent": 48
+  },
+  "top_joint_patterns": [
+    {
+      "answer_type": "program",
+      "family": "program:change_rate",
+      "operator_family": "divide+subtract",
+      "step_bucket": "2",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "none",
+      "count": 407,
+      "rate": 0.05197956577266922
+    },
+    {
+      "answer_type": "program",
+      "family": "program:change_rate",
+      "operator_family": "divide+subtract",
+      "step_bucket": "2",
+      "evidence_modality": "table",
+      "table_usage": "single_table",
+      "scale_hint": "none",
+      "count": 300,
+      "rate": 0.038314176245210725
+    },
+    {
+      "answer_type": "span",
+      "family": "span:superlative_lookup",
+      "operator_family": "none",
+      "step_bucket": "0",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "none",
+      "count": 297,
+      "rate": 0.03793103448275862
+    },
+    {
+      "answer_type": "program",
+      "family": "program:change_rate",
+      "operator_family": "divide+subtract",
+      "step_bucket": "2",
+      "evidence_modality": "table",
+      "table_usage": "single_table",
+      "scale_hint": "percent",
+      "count": 296,
+      "rate": 0.03780332056194125
+    },
+    {
+      "answer_type": "program",
+      "family": "program:aggregation_sum",
+      "operator_family": "add",
+      "step_bucket": "1",
+      "evidence_modality": "table",
+      "table_usage": "multi_table",
+      "scale_hint": "none",
+      "count": 260,
+      "rate": 0.033205619412515965
+    },
+    {
+      "answer_type": "span",
+      "family": "span:comparison_lookup",
+      "operator_family": "none",
+      "step_bucket": "0",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "none",
+      "count": 224,
+      "rate": 0.028607918263090677
+    },
+    {
+      "answer_type": "program",
+      "family": "program:aggregation_sum",
+      "operator_family": "add",
+      "step_bucket": "2",
+      "evidence_modality": "text+table",
+      "table_usage": "multi_table",
+      "scale_hint": "none",
+      "count": 223,
+      "rate": 0.02848020434227331
+    },
+    {
+      "answer_type": "program",
+      "family": "program:average_or_composed_division",
+      "operator_family": "add+divide",
+      "step_bucket": "2",
+      "evidence_modality": "table",
+      "table_usage": "multi_table",
+      "scale_hint": "none",
+      "count": 220,
+      "rate": 0.0280970625798212
+    },
+    {
+      "answer_type": "program",
+      "family": "program:average_or_composed_division",
+      "operator_family": "add+divide",
+      "step_bucket": "2",
+      "evidence_modality": "text+table",
+      "table_usage": "multi_table",
+      "scale_hint": "none",
+      "count": 212,
+      "rate": 0.027075351213282247
+    },
+    {
+      "answer_type": "program",
+      "family": "program:aggregation_sum",
+      "operator_family": "add",
+      "step_bucket": "1",
+      "evidence_modality": "text+table",
+      "table_usage": "multi_table",
+      "scale_hint": "none",
+      "count": 202,
+      "rate": 0.025798212005108557
+    },
+    {
+      "answer_type": "program",
+      "family": "program:aggregation_sum",
+      "operator_family": "add",
+      "step_bucket": "1",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "million",
+      "count": 182,
+      "rate": 0.023243933588761177
+    },
+    {
+      "answer_type": "program",
+      "family": "program:projection_or_compound_change",
+      "operator_family": "add+divide+multiply+subtract",
+      "step_bucket": "4",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "million",
+      "count": 166,
+      "rate": 0.02120051085568327
+    },
+    {
+      "answer_type": "span",
+      "family": "span:superlative_lookup",
+      "operator_family": "none",
+      "step_bucket": "0",
+      "evidence_modality": "table",
+      "table_usage": "single_table",
+      "scale_hint": "none",
+      "count": 156,
+      "rate": 0.01992337164750958
+    },
+    {
+      "answer_type": "program",
+      "family": "program:change_rate",
+      "operator_family": "divide+subtract",
+      "step_bucket": "2",
+      "evidence_modality": "text",
+      "table_usage": "no_table",
+      "scale_hint": "percent",
+      "count": 138,
+      "rate": 0.017624521072796936
+    },
+    {
+      "answer_type": "span",
+      "family": "span:comparison_lookup",
+      "operator_family": "none",
+      "step_bucket": "0",
+      "evidence_modality": "table",
+      "table_usage": "single_table",
+      "scale_hint": "none",
+      "count": 125,
+      "rate": 0.015964240102171137
+    },
+    {
+      "answer_type": "program",
+      "family": "program:aggregation_sum",
+      "operator_family": "add",
+      "step_bucket": "1",
+      "evidence_modality": "table",
+      "table_usage": "single_table",
+      "scale_hint": "million",
+      "count": 115,
+      "rate": 0.014687100893997445
+    },
+    {
+      "answer_type": "program",
+      "family": "program:change_rate",
+      "operator_family": "divide+subtract",
+      "step_bucket": "2",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "percent",
+      "count": 104,
+      "rate": 0.013282247765006385
+    },
+    {
+      "answer_type": "program",
+      "family": "program:ratio",
+      "operator_family": "divide",
+      "step_bucket": "1",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "percent",
+      "count": 94,
+      "rate": 0.012005108556832695
+    },
+    {
+      "answer_type": "program",
+      "family": "program:projection_or_compound_change",
+      "operator_family": "add+divide+multiply+subtract",
+      "step_bucket": "4",
+      "evidence_modality": "table",
+      "table_usage": "single_table",
+      "scale_hint": "million",
+      "count": 90,
+      "rate": 0.011494252873563218
+    },
+    {
+      "answer_type": "program",
+      "family": "program:aggregation_sum",
+      "operator_family": "add",
+      "step_bucket": "2",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "million",
+      "count": 89,
+      "rate": 0.01136653895274585
+    },
+    {
+      "answer_type": "program",
+      "family": "program:aggregation_sum",
+      "operator_family": "add",
+      "step_bucket": "1",
+      "evidence_modality": "text+table",
+      "table_usage": "multi_table",
+      "scale_hint": "million",
+      "count": 84,
+      "rate": 0.010727969348659003
+    },
+    {
+      "answer_type": "program",
+      "family": "program:ratio",
+      "operator_family": "divide",
+      "step_bucket": "1",
+      "evidence_modality": "text",
+      "table_usage": "no_table",
+      "scale_hint": "percent",
+      "count": 79,
+      "rate": 0.010089399744572158
+    },
+    {
+      "answer_type": "span",
+      "family": "span:direct_lookup",
+      "operator_family": "none",
+      "step_bucket": "0",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "none",
+      "count": 77,
+      "rate": 0.00983397190293742
+    },
+    {
+      "answer_type": "program",
+      "family": "program:aggregation_sum",
+      "operator_family": "add",
+      "step_bucket": "3",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "million",
+      "count": 77,
+      "rate": 0.00983397190293742
+    },
+    {
+      "answer_type": "program",
+      "family": "program:ratio",
+      "operator_family": "divide",
+      "step_bucket": "1",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "none",
+      "count": 76,
+      "rate": 0.009706257982120051
+    },
+    {
+      "answer_type": "program",
+      "family": "program:average_or_composed_division",
+      "operator_family": "add+divide",
+      "step_bucket": "2",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "million",
+      "count": 72,
+      "rate": 0.009195402298850575
+    },
+    {
+      "answer_type": "program",
+      "family": "program:average_or_composed_division",
+      "operator_family": "add+divide",
+      "step_bucket": "3",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "million",
+      "count": 71,
+      "rate": 0.009067688378033206
+    },
+    {
+      "answer_type": "program",
+      "family": "program:aggregation_sum",
+      "operator_family": "add",
+      "step_bucket": "2",
+      "evidence_modality": "table",
+      "table_usage": "multi_table",
+      "scale_hint": "none",
+      "count": 71,
+      "rate": 0.009067688378033206
+    },
+    {
+      "answer_type": "program",
+      "family": "program:aggregation_sum",
+      "operator_family": "add",
+      "step_bucket": "1",
+      "evidence_modality": "text+table",
+      "table_usage": "single_table",
+      "scale_hint": "none",
+      "count": 68,
+      "rate": 0.008684546615581098
+    },
+    {
+      "answer_type": "program",
+      "family": "program:difference_then_ratio",
+      "operator_family": "divide+subtract",
+      "step_bucket": "2",
+      "evidence_modality": "table",
+      "table_usage": "single_table",
+      "scale_hint": "none",
+      "count": 67,
+      "rate": 0.00855683269476373
+    }
+  ],
+  "program_examples": [
+    {
+      "sample_id": "multihiertt:train:17da9c24de4c4a43accd023a2c40b2c7",
+      "family": "program:average_or_composed_division",
+      "schema_key": "program|program:average_or_composed_division|ops=add+divide|steps=2|ev=text+table|tables=single|scale=million",
+      "operator_sequence": [
+        "add",
+        "divide"
+      ],
+      "step_count": 2,
+      "operand_count": 3,
+      "evidence_modality": "text+table",
+      "table_usage": {
+        "evidence_table_count": 1,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "million",
+      "normalized_program_template": "add(<operand>, <operand>), divide(<result>, <const>)",
+      "question_template": ""
+    },
+    {
+      "sample_id": "multihiertt:train:b6dc26a6d6484015a0340ff0ef5f5964",
+      "family": "program:difference",
+      "schema_key": "program|program:difference|ops=subtract|steps=1|ev=table|tables=single|scale=none",
+      "operator_sequence": [
+        "subtract"
+      ],
+      "step_count": 1,
+      "operand_count": 2,
+      "evidence_modality": "table",
+      "table_usage": {
+        "evidence_table_count": 1,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "none",
+      "normalized_program_template": "subtract(<operand>, <operand>)",
+      "question_template": ""
+    },
+    {
+      "sample_id": "multihiertt:train:e5881d1f03ad43e1812b1c182962b841",
+      "family": "program:aggregation_sum",
+      "schema_key": "program|program:aggregation_sum|ops=add|steps=1|ev=text+table|tables=multi|scale=none",
+      "operator_sequence": [
+        "add"
+      ],
+      "step_count": 1,
+      "operand_count": 2,
+      "evidence_modality": "text+table",
+      "table_usage": {
+        "evidence_table_count": 2,
+        "multi_table_evidence": true,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "none",
+      "normalized_program_template": "add(<operand>, <operand>)",
+      "question_template": ""
+    },
+    {
+      "sample_id": "multihiertt:train:69c0918e3a9e4ffcb7e62111e3fc6455",
+      "family": "program:ratio",
+      "schema_key": "program|program:ratio|ops=divide|steps=1|ev=text|tables=none|scale=none",
+      "operator_sequence": [
+        "divide"
+      ],
+      "step_count": 1,
+      "operand_count": 2,
+      "evidence_modality": "text",
+      "table_usage": {
+        "evidence_table_count": 0,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "none",
+      "normalized_program_template": "divide(<operand>, <operand>)",
+      "question_template": ""
+    },
+    {
+      "sample_id": "multihiertt:train:90dfab7d162a4a2f9b48ca37b5d8d44f",
+      "family": "program:projection_or_compound_change",
+      "schema_key": "program|program:projection_or_compound_change|ops=add+divide+multiply+subtract|steps=4|ev=text+table|tables=single|scale=none",
+      "operator_sequence": [
+        "subtract",
+        "divide",
+        "add",
+        "multiply"
+      ],
+      "step_count": 4,
+      "operand_count": 5,
+      "evidence_modality": "text+table",
+      "table_usage": {
+        "evidence_table_count": 1,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "none",
+      "normalized_program_template": "subtract(<operand>, <operand>), divide(<result>, <operand>), add(<const>, <result>), multiply(<operand>, <result>)",
+      "question_template": ""
+    },
+    {
+      "sample_id": "multihiertt:train:26631194c9c648a599b9e75973f336bf",
+      "family": "program:change_rate",
+      "schema_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=table|tables=single|scale=percent",
+      "operator_sequence": [
+        "subtract",
+        "divide"
+      ],
+      "step_count": 2,
+      "operand_count": 3,
+      "evidence_modality": "table",
+      "table_usage": {
+        "evidence_table_count": 1,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "percent",
+      "normalized_program_template": "subtract(<operand>, <operand>), divide(<result>, <operand>)",
+      "question_template": ""
+    },
+    {
+      "sample_id": "multihiertt:train:c1f5bed2e3b24e82bade7837feface84",
+      "family": "program:division_composition",
+      "schema_key": "program|program:division_composition|ops=divide|steps=1|ev=text|tables=none|scale=none",
+      "operator_sequence": [
+        "divide"
+      ],
+      "step_count": 1,
+      "operand_count": 2,
+      "evidence_modality": "text",
+      "table_usage": {
+        "evidence_table_count": 0,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "none",
+      "normalized_program_template": "divide(<operand>, <operand>)",
+      "question_template": ""
+    },
+    {
+      "sample_id": "multihiertt:train:d8d0b1cce0084d69b811d963167e10a4",
+      "family": "program:multiplication",
+      "schema_key": "program|program:multiplication|ops=multiply|steps=1|ev=table|tables=single|scale=percent",
+      "operator_sequence": [
+        "multiply"
+      ],
+      "step_count": 1,
+      "operand_count": 2,
+      "evidence_modality": "table",
+      "table_usage": {
+        "evidence_table_count": 1,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "percent",
+      "normalized_program_template": "multiply(<operand>, <operand>)",
+      "question_template": ""
+    },
+    {
+      "sample_id": "multihiertt:train:93a6698302474f74a44dfa5f2a983a2e",
+      "family": "program:difference_then_ratio",
+      "schema_key": "program|program:difference_then_ratio|ops=divide+subtract|steps=2|ev=table|tables=single|scale=none",
+      "operator_sequence": [
+        "subtract",
+        "divide"
+      ],
+      "step_count": 2,
+      "operand_count": 3,
+      "evidence_modality": "table",
+      "table_usage": {
+        "evidence_table_count": 1,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "none",
+      "normalized_program_template": "subtract(<operand>, <operand>), divide(<result>, <operand>)",
+      "question_template": ""
+    },
+    {
+      "sample_id": "multihiertt:train:84b36534fd804b52a322fcbdfd16a65b",
+      "family": "program:difference_composition",
+      "schema_key": "program|program:difference_composition|ops=add+subtract|steps=2|ev=text+table|tables=single|scale=none",
+      "operator_sequence": [
+        "add",
+        "subtract"
+      ],
+      "step_count": 2,
+      "operand_count": 3,
+      "evidence_modality": "text+table",
+      "table_usage": {
+        "evidence_table_count": 1,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "none",
+      "normalized_program_template": "add(<operand>, <operand>), subtract(<result>, <operand>)",
+      "question_template": ""
+    }
+  ],
+  "span_examples": [
+    {
+      "sample_id": "multihiertt:train:49ca72c5d69c43d9bca9d73117f85fc5",
+      "family": "span:superlative_lookup",
+      "schema_key": "span|span:superlative_lookup|ops=none|steps=0|ev=table|tables=single|scale=million",
+      "operator_sequence": [],
+      "step_count": 0,
+      "operand_count": 0,
+      "evidence_modality": "table",
+      "table_usage": {
+        "evidence_table_count": 1,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "million",
+      "normalized_program_template": "",
+      "question_template": "what's the greatest value of consumer in <year>? (in million)"
+    },
+    {
+      "sample_id": "multihiertt:train:82e423667c66428dad339f864a02a819",
+      "family": "span:computed_value_lookup",
+      "schema_key": "span|span:computed_value_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none",
+      "operator_sequence": [],
+      "step_count": 0,
+      "operand_count": 0,
+      "evidence_modality": "text+table",
+      "table_usage": {
+        "evidence_table_count": 1,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "none",
+      "normalized_program_template": "",
+      "question_template": "without management and financial advice fees and other revenues, how much of revenue is there in total in <year> (in milion)"
+    },
+    {
+      "sample_id": "multihiertt:train:3a4fadb978fa4a968f297478e6780181",
+      "family": "span:comparison_lookup",
+      "schema_key": "span|span:comparison_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=thousand",
+      "operator_sequence": [],
+      "step_count": 0,
+      "operand_count": 0,
+      "evidence_modality": "text+table",
+      "table_usage": {
+        "evidence_table_count": 1,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "thousand",
+      "normalized_program_template": "",
+      "question_template": "what's the sum of all reimbursementagreements that are greater than <num> in partner type? (in thousand)"
+    },
+    {
+      "sample_id": "multihiertt:train:41ee71b403b242a287f283f45e28e005",
+      "family": "span:direct_lookup",
+      "schema_key": "span|span:direct_lookup|ops=none|steps=0|ev=table|tables=single|scale=none",
+      "operator_sequence": [],
+      "step_count": 0,
+      "operand_count": 0,
+      "evidence_modality": "table",
+      "table_usage": {
+        "evidence_table_count": 1,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "none",
+      "normalized_program_template": "",
+      "question_template": "how many elements show negative value in<num> forvies ?"
+    },
+    {
+      "sample_id": "multihiertt:train:699fdd8cb9d249b1ba6a4a3a5064f933",
+      "family": "span:comparison_yesno",
+      "schema_key": "span|span:comparison_yesno|ops=none|steps=0|ev=table|tables=single|scale=none",
+      "operator_sequence": [],
+      "step_count": 0,
+      "operand_count": 0,
+      "evidence_modality": "table",
+      "table_usage": {
+        "evidence_table_count": 1,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": true
+      },
+      "scale_hint": "none",
+      "normalized_program_template": "",
+      "question_template": "does the value of total core deposits in <year> greater than that in <year>?"
+    },
+    {
+      "sample_id": "multihiertt:train:b43e114b4ec94960a018d75199bd1a99",
+      "family": "span:multi_value_lookup",
+      "schema_key": "span|span:multi_value_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none",
+      "operator_sequence": [],
+      "step_count": 0,
+      "operand_count": 0,
+      "evidence_modality": "text+table",
+      "table_usage": {
+        "evidence_table_count": 1,
+        "multi_table_evidence": false,
+        "has_hierarchy_markers": false
+      },
+      "scale_hint": "none",
+      "normalized_program_template": "",
+      "question_template": "in which year is loans and leases outstanding positive?"
+    }
+  ],
+  "recommended_strategy_schema": {
+    "strategy_id": "multihiertt_strategy:<family_hash>",
+    "dataset_id": "multihiertt",
+    "strategy_type": "program | span_lookup | span_comparison | span_superlative | span_multi_value",
+    "family": "coarse deterministic family",
+    "schema_key": "answer_type + family + operator_family + step bucket + evidence modality + table usage + scale hint",
+    "program_dsl": "multihiertt_original_flat_dsl_for_program_families",
+    "operator_sequence": [
+      "add",
+      "divide"
+    ],
+    "operator_family": "add+divide",
+    "step_count_bucket": "0 | 1 | 2 | 3 | 4 | 5plus",
+    "operand_count_bucket": "0..8 | 9plus",
+    "evidence_modality": "text | table | text+table | none",
+    "table_usage": {
+      "table_count": "document table count",
+      "evidence_table_count": "number of unique table ids in gold table evidence",
+      "multi_table_evidence": "bool",
+      "hierarchy_marker_count": "rowspan/colspan/th marker count from HTML"
+    },
+    "scale_hint": "none | percent | thousand | million | billion",
+    "normalized_program_template": "program with numeric literals/references replaced by <operand>",
+    "span_question_template": "label-free normalized question pattern for span families",
+    "source_support_count": 123,
+    "source_sample_ids": [
+      "multihiertt:train:..."
+    ],
+    "retrieval_text": "future semantic abstraction, generated without concrete company/year/number/answer leakage"
+  },
+  "small_llm_pilot_family_set": {
+    "selection_rule": "top 12 coarse families plus top 20 schema keys by train support; fixed before any LLM abstraction",
+    "coarse_families": [
+      "program:aggregation_sum",
+      "program:change_rate",
+      "program:average_or_composed_division",
+      "span:superlative_lookup",
+      "span:comparison_lookup",
+      "program:ratio",
+      "program:projection_or_compound_change",
+      "program:difference",
+      "program:division_composition",
+      "span:direct_lookup",
+      "span:computed_value_lookup",
+      "program:difference_composition"
+    ],
+    "coarse_family_counts": {
+      "program:aggregation_sum": 2011,
+      "program:change_rate": 1441,
+      "program:average_or_composed_division": 1137,
+      "span:superlative_lookup": 556,
+      "span:comparison_lookup": 528,
+      "program:ratio": 415,
+      "program:projection_or_compound_change": 404,
+      "program:difference": 243,
+      "program:division_composition": 212,
+      "span:direct_lookup": 164,
+      "span:computed_value_lookup": 162,
+      "program:difference_composition": 158
+    },
+    "schema_keys": [
+      "program|program:change_rate|ops=divide+subtract|steps=2|ev=text+table|tables=single|scale=none",
+      "program|program:change_rate|ops=divide+subtract|steps=2|ev=table|tables=single|scale=none",
+      "span|span:superlative_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none",
+      "program|program:change_rate|ops=divide+subtract|steps=2|ev=table|tables=single|scale=percent",
+      "program|program:aggregation_sum|ops=add|steps=1|ev=table|tables=multi|scale=none",
+      "span|span:comparison_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none",
+      "program|program:aggregation_sum|ops=add|steps=2|ev=text+table|tables=multi|scale=none",
+      "program|program:average_or_composed_division|ops=add+divide|steps=2|ev=table|tables=multi|scale=none",
+      "program|program:average_or_composed_division|ops=add+divide|steps=2|ev=text+table|tables=multi|scale=none",
+      "program|program:aggregation_sum|ops=add|steps=1|ev=text+table|tables=multi|scale=none",
+      "program|program:aggregation_sum|ops=add|steps=1|ev=text+table|tables=single|scale=million",
+      "program|program:projection_or_compound_change|ops=add+divide+multiply+subtract|steps=4|ev=text+table|tables=single|scale=million",
+      "span|span:superlative_lookup|ops=none|steps=0|ev=table|tables=single|scale=none",
+      "program|program:change_rate|ops=divide+subtract|steps=2|ev=text|tables=none|scale=percent",
+      "span|span:comparison_lookup|ops=none|steps=0|ev=table|tables=single|scale=none",
+      "program|program:aggregation_sum|ops=add|steps=1|ev=table|tables=single|scale=million",
+      "program|program:change_rate|ops=divide+subtract|steps=2|ev=text+table|tables=single|scale=percent",
+      "program|program:ratio|ops=divide|steps=1|ev=text+table|tables=single|scale=percent",
+      "program|program:projection_or_compound_change|ops=add+divide+multiply+subtract|steps=4|ev=table|tables=single|scale=million",
+      "program|program:aggregation_sum|ops=add|steps=2|ev=text+table|tables=single|scale=million"
+    ],
+    "estimated_coarse_coverage": 0.9490421455938697,
+    "estimated_schema_coverage": 0.49808429118773945,
+    "recommended_examples_per_family": "4-6 representative train examples in next round, with company/year/number/answer redaction"
+  },
+  "decision": "PROCEED SMALL-LLM STRATEGY PILOT"
+}
