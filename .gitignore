@@ -16,6 +16,7 @@ data/multihiertt/raw/*.parquet
 data/multihiertt/processed/multihiertt_*.jsonl
 data/multihiertt/processed/multihiertt_case_memory_train.json
 data/multihiertt/processed/multihiertt_case_emb.npy
+pilot/multibench/output/multihiertt/multihiertt_strategy_memory_v0_llm_cache.jsonl
 
 # Generated caches and embeddings
 pilot/output/*cache*.jsonl

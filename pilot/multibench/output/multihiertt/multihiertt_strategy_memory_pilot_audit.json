@@ -1,0 +1,611 @@
+{
+  "version": "multihiertt_strategy_memory_v0_top12coarse_top20schema_frozen_v1",
+  "total_train": 7830,
+  "top_coarse_n": 12,
+  "top_schema_n": 20,
+  "llm_call_budget": 32,
+  "planned_llm_group_count": 32,
+  "planned_groups": [
+    {
+      "level": "coarse",
+      "group_key": "program:aggregation_sum",
+      "family": "program:aggregation_sum",
+      "schema_key": "coarse:program:aggregation_sum",
+      "support": 2011
+    },
+    {
+      "level": "coarse",
+      "group_key": "program:change_rate",
+      "family": "program:change_rate",
+      "schema_key": "coarse:program:change_rate",
+      "support": 1441
+    },
+    {
+      "level": "coarse",
+      "group_key": "program:average_or_composed_division",
+      "family": "program:average_or_composed_division",
+      "schema_key": "coarse:program:average_or_composed_division",
+      "support": 1137
+    },
+    {
+      "level": "coarse",
+      "group_key": "span:superlative_lookup",
+      "family": "span:superlative_lookup",
+      "schema_key": "coarse:span:superlative_lookup",
+      "support": 556
+    },
+    {
+      "level": "coarse",
+      "group_key": "span:comparison_lookup",
+      "family": "span:comparison_lookup",
+      "schema_key": "coarse:span:comparison_lookup",
+      "support": 528
+    },
+    {
+      "level": "coarse",
+      "group_key": "program:ratio",
+      "family": "program:ratio",
+      "schema_key": "coarse:program:ratio",
+      "support": 415
+    },
+    {
+      "level": "coarse",
+      "group_key": "program:projection_or_compound_change",
+      "family": "program:projection_or_compound_change",
+      "schema_key": "coarse:program:projection_or_compound_change",
+      "support": 404
+    },
+    {
+      "level": "coarse",
+      "group_key": "program:difference",
+      "family": "program:difference",
+      "schema_key": "coarse:program:difference",
+      "support": 243
+    },
+    {
+      "level": "coarse",
+      "group_key": "program:division_composition",
+      "family": "program:division_composition",
+      "schema_key": "coarse:program:division_composition",
+      "support": 212
+    },
+    {
+      "level": "coarse",
+      "group_key": "span:direct_lookup",
+      "family": "span:direct_lookup",
+      "schema_key": "coarse:span:direct_lookup",
+      "support": 164
+    },
+    {
+      "level": "coarse",
+      "group_key": "span:computed_value_lookup",
+      "family": "span:computed_value_lookup",
+      "schema_key": "coarse:span:computed_value_lookup",
+      "support": 162
+    },
+    {
+      "level": "coarse",
+      "group_key": "program:difference_composition",
+      "family": "program:difference_composition",
+      "schema_key": "coarse:program:difference_composition",
+      "support": 158
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=text+table|tables=single|scale=none",
+      "family": "program:change_rate",
+      "schema_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=text+table|tables=single|scale=none",
+      "support": 407
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=table|tables=single|scale=none",
+      "family": "program:change_rate",
+      "schema_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=table|tables=single|scale=none",
+      "support": 300
+    },
+    {
+      "level": "schema",
+      "group_key": "span|span:superlative_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none",
+      "family": "span:superlative_lookup",
+      "schema_key": "span|span:superlative_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none",
+      "support": 297
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=table|tables=single|scale=percent",
+      "family": "program:change_rate",
+      "schema_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=table|tables=single|scale=percent",
+      "support": 296
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:aggregation_sum|ops=add|steps=1|ev=table|tables=multi|scale=none",
+      "family": "program:aggregation_sum",
+      "schema_key": "program|program:aggregation_sum|ops=add|steps=1|ev=table|tables=multi|scale=none",
+      "support": 260
+    },
+    {
+      "level": "schema",
+      "group_key": "span|span:comparison_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none",
+      "family": "span:comparison_lookup",
+      "schema_key": "span|span:comparison_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none",
+      "support": 224
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:aggregation_sum|ops=add|steps=2|ev=text+table|tables=multi|scale=none",
+      "family": "program:aggregation_sum",
+      "schema_key": "program|program:aggregation_sum|ops=add|steps=2|ev=text+table|tables=multi|scale=none",
+      "support": 223
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:average_or_composed_division|ops=add+divide|steps=2|ev=table|tables=multi|scale=none",
+      "family": "program:average_or_composed_division",
+      "schema_key": "program|program:average_or_composed_division|ops=add+divide|steps=2|ev=table|tables=multi|scale=none",
+      "support": 220
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:average_or_composed_division|ops=add+divide|steps=2|ev=text+table|tables=multi|scale=none",
+      "family": "program:average_or_composed_division",
+      "schema_key": "program|program:average_or_composed_division|ops=add+divide|steps=2|ev=text+table|tables=multi|scale=none",
+      "support": 212
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:aggregation_sum|ops=add|steps=1|ev=text+table|tables=multi|scale=none",
+      "family": "program:aggregation_sum",
+      "schema_key": "program|program:aggregation_sum|ops=add|steps=1|ev=text+table|tables=multi|scale=none",
+      "support": 202
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:aggregation_sum|ops=add|steps=1|ev=text+table|tables=single|scale=million",
+      "family": "program:aggregation_sum",
+      "schema_key": "program|program:aggregation_sum|ops=add|steps=1|ev=text+table|tables=single|scale=million",
+      "support": 182
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:projection_or_compound_change|ops=add+divide+multiply+subtract|steps=4|ev=text+table|tables=single|scale=million",
+      "family": "program:projection_or_compound_change",
+      "schema_key": "program|program:projection_or_compound_change|ops=add+divide+multiply+subtract|steps=4|ev=text+table|tables=single|scale=million",
+      "support": 166
+    },
+    {
+      "level": "schema",
+      "group_key": "span|span:superlative_lookup|ops=none|steps=0|ev=table|tables=single|scale=none",
+      "family": "span:superlative_lookup",
+      "schema_key": "span|span:superlative_lookup|ops=none|steps=0|ev=table|tables=single|scale=none",
+      "support": 156
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=text|tables=none|scale=percent",
+      "family": "program:change_rate",
+      "schema_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=text|tables=none|scale=percent",
+      "support": 138
+    },
+    {
+      "level": "schema",
+      "group_key": "span|span:comparison_lookup|ops=none|steps=0|ev=table|tables=single|scale=none",
+      "family": "span:comparison_lookup",
+      "schema_key": "span|span:comparison_lookup|ops=none|steps=0|ev=table|tables=single|scale=none",
+      "support": 125
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:aggregation_sum|ops=add|steps=1|ev=table|tables=single|scale=million",
+      "family": "program:aggregation_sum",
+      "schema_key": "program|program:aggregation_sum|ops=add|steps=1|ev=table|tables=single|scale=million",
+      "support": 115
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=text+table|tables=single|scale=percent",
+      "family": "program:change_rate",
+      "schema_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=text+table|tables=single|scale=percent",
+      "support": 104
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:ratio|ops=divide|steps=1|ev=text+table|tables=single|scale=percent",
+      "family": "program:ratio",
+      "schema_key": "program|program:ratio|ops=divide|steps=1|ev=text+table|tables=single|scale=percent",
+      "support": 94
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:projection_or_compound_change|ops=add+divide+multiply+subtract|steps=4|ev=table|tables=single|scale=million",
+      "family": "program:projection_or_compound_change",
+      "schema_key": "program|program:projection_or_compound_change|ops=add+divide+multiply+subtract|steps=4|ev=table|tables=single|scale=million",
+      "support": 90
+    },
+    {
+      "level": "schema",
+      "group_key": "program|program:aggregation_sum|ops=add|steps=2|ev=text+table|tables=single|scale=million",
+      "family": "program:aggregation_sum",
+      "schema_key": "program|program:aggregation_sum|ops=add|steps=2|ev=text+table|tables=single|scale=million",
+      "support": 89
+    }
+  ],
+  "llm_calls_made": 0,
+  "llm_cache_hits": 32,
+  "llm_cache_record_count_after": 32,
+  "runtime_request": {
+    "provider": "DeepSeek",
+    "backend": "deepseek_openai_compatible",
+    "base_url": "https://api.deepseek.com",
+    "requested_model": "deepseek-v4-flash",
+    "effective_model": null,
+    "model_version": null,
+    "temperature": 0.0,
+    "max_tokens": 2500,
+    "thinking_mode": false
+  },
+  "qc": {
+    "strategy_count": 32,
+    "schema_legal_rate": 1.0,
+    "schema_legal_failures": [],
+    "leak_failure_count": 0,
+    "leak_failures": [],
+    "duplicate_strategy_id_count": 0,
+    "duplicate_description_count": 0,
+    "duplicate_retrieval_text_count": 0,
+    "covered_unique_train_samples": 7431,
+    "covered_unique_train_rate": 0.9490421455938697,
+    "strategy_level_counts": {
+      "coarse": 12,
+      "schema": 20
+    },
+    "strategy_type_counts": {
+      "program": 24,
+      "span_superlative_lookup": 3,
+      "span_comparison_lookup": 3,
+      "span_direct_lookup": 1,
+      "span_computed_value_lookup": 1
+    },
+    "family_counts": {
+      "program:aggregation_sum": 7,
+      "program:change_rate": 6,
+      "program:average_or_composed_division": 3,
+      "span:superlative_lookup": 3,
+      "span:comparison_lookup": 3,
+      "program:ratio": 2,
+      "program:projection_or_compound_change": 3,
+      "program:difference": 1,
+      "program:division_composition": 1,
+      "span:direct_lookup": 1,
+      "span:computed_value_lookup": 1,
+      "program:difference_composition": 1
+    },
+    "generation_counts": {
+      "llm_guidance_with_deterministic_structure": 32
+    }
+  },
+  "strategy_index": [
+    {
+      "strategy_id": "multihiertt_strategy:2245d693d25dd1bd",
+      "level": "coarse",
+      "strategy_type": "program",
+      "family": "program:aggregation_sum",
+      "schema_key": "coarse:program:aggregation_sum",
+      "support": 2011,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "919e347e23cfa6cbe433a9d794fbe61bef76232812505d7e0f870517f8d00c6d"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+      "level": "coarse",
+      "strategy_type": "program",
+      "family": "program:change_rate",
+      "schema_key": "coarse:program:change_rate",
+      "support": 1441,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "09089f0fa019857b11401a64d90d184ebdd310fc61207b73754fedc8e035ec04"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:c3f0f4b0cac29d3e",
+      "level": "coarse",
+      "strategy_type": "program",
+      "family": "program:average_or_composed_division",
+      "schema_key": "coarse:program:average_or_composed_division",
+      "support": 1137,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "1077cbeb96e9f2c006b98db80869abbb0778ede5dffa886c44303940125103fa"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:91242648d6faed4e",
+      "level": "coarse",
+      "strategy_type": "span_superlative_lookup",
+      "family": "span:superlative_lookup",
+      "schema_key": "coarse:span:superlative_lookup",
+      "support": 556,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "9f5811a615132e831b823dc05cf905d3c822da104d0f8e91b1b7e17b04eda8d2"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:5df905c0e6235174",
+      "level": "coarse",
+      "strategy_type": "span_comparison_lookup",
+      "family": "span:comparison_lookup",
+      "schema_key": "coarse:span:comparison_lookup",
+      "support": 528,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "93d3bcb0f0fa55cf3c114ed50d174794693d8aa8e2d77025d22ddbc5c0c23a30"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:019ee514f46efe63",
+      "level": "coarse",
+      "strategy_type": "program",
+      "family": "program:ratio",
+      "schema_key": "coarse:program:ratio",
+      "support": 415,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "963d6c9d8b9dfe4f8a024004e7536c2b69f23b1c9f41c3b681bdda9bd5a41b12"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:4a86fd0af1b41179",
+      "level": "coarse",
+      "strategy_type": "program",
+      "family": "program:projection_or_compound_change",
+      "schema_key": "coarse:program:projection_or_compound_change",
+      "support": 404,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "215f185d84dda7f5d35da677cde0751dbd394b1c642f2bb975ed838c567b9254"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:48d4e24e0a94be8c",
+      "level": "coarse",
+      "strategy_type": "program",
+      "family": "program:difference",
+      "schema_key": "coarse:program:difference",
+      "support": 243,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "bc43e49ce3041cd7f152d1c982a25f06c3bf2fd0cbc2a262104d7179495b3049"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+      "level": "coarse",
+      "strategy_type": "program",
+      "family": "program:division_composition",
+      "schema_key": "coarse:program:division_composition",
+      "support": 212,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "879f88ee4e3516b16d4a5dcb5aa0fde8c407c3216709cd8ff3604ce36e973b64"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:6a365124717069aa",
+      "level": "coarse",
+      "strategy_type": "span_direct_lookup",
+      "family": "span:direct_lookup",
+      "schema_key": "coarse:span:direct_lookup",
+      "support": 164,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "694ea2c4b397d754a7d42b13586a4bce46461c81890dba00eeef4e6d58f14a29"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:b72171a6cd389886",
+      "level": "coarse",
+      "strategy_type": "span_computed_value_lookup",
+      "family": "span:computed_value_lookup",
+      "schema_key": "coarse:span:computed_value_lookup",
+      "support": 162,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "e36d707381f8557fc32da515fd5b82c311b28ebb855c381fbfdd4f17a44646ce"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:0a5af34422326419",
+      "level": "coarse",
+      "strategy_type": "program",
+      "family": "program:difference_composition",
+      "schema_key": "coarse:program:difference_composition",
+      "support": 158,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "59bab00179efad9e01dcddfaad4b03c4688a5c059d3eeb70a9f671c923dfa668"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:09f86bacf8a62bf9",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:change_rate",
+      "schema_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=text+table|tables=single|scale=none",
+      "support": 407,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "190b0b4a46292957a8ccbb69041beac716bc9e3c245e0a379167d6256a16490d"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:10442b2869aa88cf",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:change_rate",
+      "schema_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=table|tables=single|scale=none",
+      "support": 300,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "4cc8d23a35253474927f2ac443454375c9252f2c20078cf09c0854e52a914ebd"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:b06d0f816511a288",
+      "level": "schema",
+      "strategy_type": "span_superlative_lookup",
+      "family": "span:superlative_lookup",
+      "schema_key": "span|span:superlative_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none",
+      "support": 297,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "847dee74b1295d3857aae7ce2ef76a48da13e22f66ee53f253e2b4220afc01e5"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:f7b61ba638465378",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:change_rate",
+      "schema_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=table|tables=single|scale=percent",
+      "support": 296,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "8e091b543c61cbd14d12ca4bdabcbfc30bb0e7205fe5add6dacb02df17cf9010"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:fa4bb8a05b992169",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:aggregation_sum",
+      "schema_key": "program|program:aggregation_sum|ops=add|steps=1|ev=table|tables=multi|scale=none",
+      "support": 260,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "7d8235e80d51a94b3c2878205d8863e4737654b2c4ee68b61ca36fd736bf09dc"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:3c90b630623c332b",
+      "level": "schema",
+      "strategy_type": "span_comparison_lookup",
+      "family": "span:comparison_lookup",
+      "schema_key": "span|span:comparison_lookup|ops=none|steps=0|ev=text+table|tables=single|scale=none",
+      "support": 224,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "76cae6571209e00628bc2f0b261426d9b7578863e1a632265850085752d8da11"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:027adbd64ad4fbb5",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:aggregation_sum",
+      "schema_key": "program|program:aggregation_sum|ops=add|steps=2|ev=text+table|tables=multi|scale=none",
+      "support": 223,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "317c38058d080eb6783f3fcc892b78a27af64dd47cb78b062c5fc1ead0580fd6"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:137da5fc74532645",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:average_or_composed_division",
+      "schema_key": "program|program:average_or_composed_division|ops=add+divide|steps=2|ev=table|tables=multi|scale=none",
+      "support": 220,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "bc174e1c61479f3f57bbe0bfd5b1d8d2c5101a98a1dda5978097ff319a3d3dad"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:4ebfc7d2d8838dda",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:average_or_composed_division",
+      "schema_key": "program|program:average_or_composed_division|ops=add+divide|steps=2|ev=text+table|tables=multi|scale=none",
+      "support": 212,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "a275820b4e66b645112343a9818a95c0ca4b40e55e990d2894f8369f8c2d7798"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:edbbe5c3ddd5a3c1",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:aggregation_sum",
+      "schema_key": "program|program:aggregation_sum|ops=add|steps=1|ev=text+table|tables=multi|scale=none",
+      "support": 202,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "a9afed8b756ed2aee24fcb78ed337fc033b6c5ec7c25ac232e81e097512ce3c2"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:4b64837f1b0cdb76",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:aggregation_sum",
+      "schema_key": "program|program:aggregation_sum|ops=add|steps=1|ev=text+table|tables=single|scale=million",
+      "support": 182,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "fdc2f18c9658b6d20a0264597924221e677891370bf452ad43d38c7248573711"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:39ebe1e9a466b98b",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:projection_or_compound_change",
+      "schema_key": "program|program:projection_or_compound_change|ops=add+divide+multiply+subtract|steps=4|ev=text+table|tables=single|scale=million",
+      "support": 166,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "8ab664d1a291ef863c484219e8fa47cf115176c67afedad49f9a938e70461288"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:9ec3c91742432dbc",
+      "level": "schema",
+      "strategy_type": "span_superlative_lookup",
+      "family": "span:superlative_lookup",
+      "schema_key": "span|span:superlative_lookup|ops=none|steps=0|ev=table|tables=single|scale=none",
+      "support": 156,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "296a994907982d994014b8cc33edb59bcc535e24f452eac1238e4ed4e22a40ba"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:b1ec803d80c19ac8",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:change_rate",
+      "schema_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=text|tables=none|scale=percent",
+      "support": 138,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "d89e3f8cb7962ab6520ffe6ca431695866bb2f6fa6882332116a57393d91709c"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:784c125c25bf9612",
+      "level": "schema",
+      "strategy_type": "span_comparison_lookup",
+      "family": "span:comparison_lookup",
+      "schema_key": "span|span:comparison_lookup|ops=none|steps=0|ev=table|tables=single|scale=none",
+      "support": 125,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "0755c1f31df3f0991aff23318708743132bc5a9858f78fe8392c029110da5665"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:4f35910539daf40a",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:aggregation_sum",
+      "schema_key": "program|program:aggregation_sum|ops=add|steps=1|ev=table|tables=single|scale=million",
+      "support": 115,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "7e57afe4f1e3739e3dbfa23b408ca068daf73e212f85bb0db1b010776d8e2af0"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:3670a7f9189933e1",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:change_rate",
+      "schema_key": "program|program:change_rate|ops=divide+subtract|steps=2|ev=text+table|tables=single|scale=percent",
+      "support": 104,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "2be67e1477d619be504d7e356eb87c5c27dffdb0de1e45accadd9a3e8251f474"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:11befedd47cd7bfe",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:ratio",
+      "schema_key": "program|program:ratio|ops=divide|steps=1|ev=text+table|tables=single|scale=percent",
+      "support": 94,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "1e3efff507c907ca9ff08029c3d4080a15f167d3661d02679514274eac2d7deb"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:projection_or_compound_change",
+      "schema_key": "program|program:projection_or_compound_change|ops=add+divide+multiply+subtract|steps=4|ev=table|tables=single|scale=million",
+      "support": 90,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "e2f6b687f8c5eadb88889323d148b4756455efbb39c9fcf03b982748b07828c1"
+    },
+    {
+      "strategy_id": "multihiertt_strategy:3a4f1a82270a750d",
+      "level": "schema",
+      "strategy_type": "program",
+      "family": "program:aggregation_sum",
+      "schema_key": "program|program:aggregation_sum|ops=add|steps=2|ev=text+table|tables=single|scale=million",
+      "support": 89,
+      "generation_method": "llm_guidance_with_deterministic_structure",
+      "llm_cache_key": "547db6eaa07f680416c19eb8ed4c43550e6d08eadf244d15d90d42957eb1c29d"
+    }
+  ],
+  "decision": "READY FOR STRATEGY RETRIEVAL AUDIT"
+}

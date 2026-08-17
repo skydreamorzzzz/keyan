@@ -754,3 +754,44 @@
 ### decision
 - **PROCEED SMALL-LLM STRATEGY PILOT**。
 - 下一轮只应把已冻结 deterministic schema 转成可复用 semantic strategy text；不要重聚类、重定义 family 或调 dev。
+
+## 30. MultiHiertt Strategy Memory v0 Pilot（2026-08-17）
+
+### scope
+- 构建 MultiHiertt Strategy Memory v0 小规模 pilot。
+- Frozen family/schema：直接使用 Stage 29 的 top-12 coarse families + top-20 fine schema keys；未重聚类、未重定义 family。
+- 未做 retrieval、four-arm execution、router 或 dev tuning。
+
+### construction
+- Strategy count：32 = coarse 12 + schema 20。
+- Selected groups cover 7,431 / 7,830 train samples by unique selected-family/schema membership，coverage 0.949。
+- Strategy types：program 24；span_superlative_lookup 3；span_comparison_lookup 3；span_direct_lookup 1；span_computed_value_lookup 1。
+- Program strategies preserve deterministic operator sequence and normalized MultiHiertt DSL templates；LLM only adds generic reasoning/evidence/scale/multi-table guidance。
+- Span strategies use LLM abstraction for lookup/comparison/superlative evidence-location behavior。
+
+### llm/cache
+- Runtime request：DeepSeek official OpenAI-compatible path via `DEEPSEEK_MODEL=deepseek-v4-flash`，temperature 0，non-thinking。
+- Planned LLM calls：32，budget <= 32。
+- First attempt exposed max-token truncation; protocol repaired by increasing per-call max tokens to 1,400 and including call max_tokens/temperature in cache identity.
+- Final reproducibility dry-run：0 API calls，32 cache hits。
+- Raw cache compacted to 32 current-protocol records and ignored by git：`pilot/multibench/output/multihiertt/multihiertt_strategy_memory_v0_llm_cache.jsonl`。
+
+### qc
+- Schema legal rate：1.000。
+- Leak failures：0。
+- Duplicate strategy ids：0。
+- Duplicate descriptions：0。
+- Duplicate retrieval texts：0。
+- Leak scan covers generated semantic text and redacted structural examples for concrete years, currency/large numbers, decimals, and standalone numbers beyond trivial placeholders.
+- Prompts did not expose raw paragraphs/tables, answers, raw question text, company names, years, concrete numbers, or table values; examples are structural only.
+
+### artifacts
+- Memory：`data/multihiertt/processed/multihiertt_strategy_memory_v0.json`。
+- Code：`pilot/multibench/multihiertt_strategy_memory_pilot.py`。
+- Report：`pilot/multibench/output/multihiertt/MULTIHIERTT_STRATEGY_MEMORY_PILOT.md`。
+- Audit JSON：`pilot/multibench/output/multihiertt/multihiertt_strategy_memory_pilot_audit.json`。
+- Tests：`pilot/tests/test_multihiertt_strategy_memory_pilot.py`。
+
+### decision
+- **READY FOR STRATEGY RETRIEVAL AUDIT**。
+- 下一轮应冻结这 32 条 strategy，做 retrieval-only audit；不要根据 dev retrieval failure 反向修改 family/schema 或 strategy text 后重报同一 audit。
