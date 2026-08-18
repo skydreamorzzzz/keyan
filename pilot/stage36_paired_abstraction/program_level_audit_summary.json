@@ -7,9 +7,9 @@
       "parsed": 22,
       "executed": 14,
       "program_correct": 6,
-      "answer_correct": 16,
+      "strict_answer_correct": 7,
       "program_accuracy": 0.2,
-      "answer_accuracy": 0.5333333333333333
+      "strict_answer_accuracy": 0.23333333333333334
     },
     "case": {
       "total": 30,
@@ -17,9 +17,9 @@
       "parsed": 25,
       "executed": 23,
       "program_correct": 14,
-      "answer_correct": 23,
+      "strict_answer_correct": 8,
       "program_accuracy": 0.4666666666666667,
-      "answer_accuracy": 0.7666666666666667
+      "strict_answer_accuracy": 0.26666666666666666
     },
     "strategy": {
       "total": 30,
@@ -27,9 +27,9 @@
       "parsed": 23,
       "executed": 20,
       "program_correct": 10,
-      "answer_correct": 22,
+      "strict_answer_correct": 7,
       "program_accuracy": 0.3333333333333333,
-      "answer_accuracy": 0.7333333333333333
+      "strict_answer_accuracy": 0.23333333333333334
     },
     "paired": {
       "total": 30,
@@ -37,9 +37,9 @@
       "parsed": 27,
       "executed": 25,
       "program_correct": 16,
-      "answer_correct": 23,
+      "strict_answer_correct": 7,
       "program_accuracy": 0.5333333333333333,
-      "answer_accuracy": 0.7666666666666667
+      "strict_answer_accuracy": 0.23333333333333334
     }
   }
 }

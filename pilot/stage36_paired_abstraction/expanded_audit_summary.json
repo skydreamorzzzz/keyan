@@ -1,0 +1,30 @@
+{
+  "none": {
+    "total": 224,
+    "program_correct": 26,
+    "strict_answer_correct": 55,
+    "parsed": 216,
+    "executed": 59
+  },
+  "case": {
+    "total": 224,
+    "program_correct": 81,
+    "strict_answer_correct": 62,
+    "parsed": 158,
+    "executed": 142
+  },
+  "strategy": {
+    "total": 224,
+    "program_correct": 14,
+    "strict_answer_correct": 67,
+    "parsed": 220,
+    "executed": 29
+  },
+  "paired": {
+    "total": 224,
+    "program_correct": 77,
+    "strict_answer_correct": 57,
+    "parsed": 152,
+    "executed": 138
+  }
+}

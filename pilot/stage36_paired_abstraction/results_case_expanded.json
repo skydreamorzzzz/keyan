@@ -1,0 +1,5602 @@
+[
+  {
+    "target_id": "RE/2015/page_33.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.03558,
+    "response": "Program: divide(17430.8, 16831.9), subtract(#0, const_1), multiply(#1, const_100)\nANSWER: 3.56%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E067",
+      "E074",
+      "E068"
+    ]
+  },
+  {
+    "target_id": "GS/2017/page_143.pdf-1",
+    "arm": "case",
+    "gold_answer": -0.39896,
+    "response": "PROGRAM: subtract(1505, 2504), divide(#0, 2504), multiply(#1, const_100)  \nANSWER: -39.9%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E039",
+      "E073",
+      "E011"
+    ]
+  },
+  {
+    "target_id": "PM/2017/page_99.pdf-3",
+    "arm": "case",
+    "gold_answer": 2.0,
+    "response": "Program: subtract(1553, 1551)  \nANSWER: 2",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E076",
+      "E067",
+      "E055"
+    ]
+  },
+  {
+    "target_id": "UA/2009/page_50.pdf-2",
+    "arm": "case",
+    "gold_answer": -0.75,
+    "response": "PROGRAM: subtract(0.3, 1.2), divide(#0, 1.2), multiply(#1, 100)  \nANSWER: -75%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E011",
+      "E019",
+      "E042"
+    ]
+  },
+  {
+    "target_id": "ETR/2008/page_355.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.17972,
+    "response": "PROGRAM: subtract(252.7, 231.0), divide(3.9, #0), multiply(#1, const_100)\nANSWER: 17.97%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E011",
+      "E073",
+      "E045"
+    ]
+  },
+  {
+    "target_id": "PPG/2011/page_70.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.3,
+    "response": "PROGRAM: divide(45, 150), multiply(#0, const_100)  \nANSWER: 30%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E022",
+      "E011",
+      "E045"
+    ]
+  },
+  {
+    "target_id": "IP/2006/page_32.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.05336,
+    "response": "PROGRAM: divide(131, 2455)  \nANSWER: 0.0534",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E085",
+      "E071",
+      "E051"
+    ]
+  },
+  {
+    "target_id": "FIS/2007/page_94.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.14162,
+    "response": "PROGRAM: divide(35269, 249038), multiply(#0, const_100)  \nANSWER: 14.2%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E060",
+      "E038",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "BLL/2007/page_47.pdf-4",
+    "arm": "case",
+    "gold_answer": 102.5,
+    "response": "We need to find the number of shares outstanding based on cash dividends paid during 2006.  \nFrom the text: annual cash dividends paid on common stock were 40 cents per share in 2007, 2006, and 2005. Total dividends paid were $41 million in 2006.  \n\nSo, shares outstanding = total dividends paid / dividend per share.  \nDividend per share = $0.40.  \nTotal dividends paid in 2006 = $41 million.  \n\nProgram: divide(41, 0.40)  \nAnswer: 102.5  \n\nPROGRAM: divide(41, 0.40)  \nANSWER: 102.5",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E044",
+      "E033",
+      "E055"
+    ]
+  },
+  {
+    "target_id": "BLK/2012/page_160.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.61881,
+    "response": "We need to find the portion of unrecognized tax benefits that would affect the effective tax rate as of December 31, 2012.  \nFrom the post-text: \"included in the balance of unrecognized tax benefits at december 31 , 2012 , 2011 and 2010 , respectively , are $ 250 million , $ 226 million and $ 194 million of tax benefits that , if recognized , would affect the effective tax rate .\"  \nSo for 2012, it\u2019s $250 million.\n\nPROGRAM: const_250  \nANSWER: 250",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E024",
+      "E072",
+      "E037"
+    ]
+  },
+  {
+    "target_id": "GPN/2017/page_77.pdf-4",
+    "arm": "case",
+    "gold_answer": 73576.0,
+    "response": "PROGRAM: add(42721, 27954), add(#0, 2901), add(#1, 2337), add(#2, -9788), add(#3, -49797), add(#4, 62154), add(#5, 203828), add(#6, 265982)  \nANSWER: $265,982 thousand",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E037",
+      "E028",
+      "E031"
+    ]
+  },
+  {
+    "target_id": "UNP/2014/page_25.pdf-2",
+    "arm": "case",
+    "gold_answer": 22560.05,
+    "response": "We need to find the agricultural arc growth rate from the text. The text mentions \"arc increased 5% (5%)\" for 2013 vs 2012, but for 2014 vs 2013, it says \"core pricing gains of 2.5% (2.5%)\" and \"7% volume growth\". However, the question asks about \"agricultural arc growth\" \u2014 but the table doesn't have that directly. The text says \"freight revenues from all six commodity groups increased during 2014 compared to 2013 driven by 7% volume growth and core pricing gains of 2.5%.\" That 2.5% is the arc growth for 2014. So we use that.\n\nWe need to project 2015 revenues if overall freight revenues in 2014 grow at the same rate as agricultural arc growth (2.5%). So we take 2014 freight revenues ($22,560 million) and increase by 2.5%.\n\nProgram: multiply(22560, 1.025)  \nAnswer: 23124",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E071",
+      "E070",
+      "E068"
+    ]
+  },
+  {
+    "target_id": "STT/2008/page_83.pdf-2",
+    "arm": "case",
+    "gold_answer": 1.25,
+    "response": "PROGRAM: table_average(foreign exchange products, 2008 annual average), table_average(interest-rate products, 2008 annual average), divide(subtract(#0, #1), #1), multiply(#2, const_100)\nANSWER: 63.64%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E065",
+      "E067",
+      "E005"
+    ]
+  },
+  {
+    "target_id": "MRO/2007/page_134.pdf-2",
+    "arm": "case",
+    "gold_answer": 66.0,
+    "response": "Program: add(30, 36)\nANSWER: 66",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E048",
+      "E059",
+      "E034"
+    ]
+  },
+  {
+    "target_id": "IPG/2015/page_48.pdf-3",
+    "arm": "case",
+    "gold_answer": 68.4,
+    "response": "PROGRAM: subtract(-33.7, 34.7), multiply(#0, const_-1)  \nANSWER: 68.4",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E073",
+      "E011",
+      "E003"
+    ]
+  },
+  {
+    "target_id": "IP/2007/page_31.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.20972,
+    "response": "Program: divide(1.1, 5.245), multiply(#0, const_100)\nANSWER: 20.97%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E085",
+      "E005",
+      "E071"
+    ]
+  },
+  {
+    "target_id": "IP/2009/page_37.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.71895,
+    "response": "Program: divide(2200, 3060), multiply(#0, const_100)\nANSWER: 71.9%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E085",
+      "E005",
+      "E071"
+    ]
+  },
+  {
+    "target_id": "BLL/2007/page_35.pdf-3",
+    "arm": "case",
+    "gold_answer": 20.74359,
+    "response": "Program: multiply(431170, 48.11), divide(#0, 1000000)\nAnswer: 20.74",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E031",
+      "E023",
+      "E082"
+    ]
+  },
+  {
+    "target_id": "SNPS/2006/page_69.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.54126,
+    "response": "PROGRAM: divide(8.5, 15.704), multiply(#0, 100)  \nANSWER: 54.1%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E028",
+      "E005",
+      "E025"
+    ]
+  },
+  {
+    "target_id": "TFX/2015/page_70.pdf-3",
+    "arm": "case",
+    "gold_answer": 386797189.66,
+    "response": "PROGRAM: multiply(4446967, 86.98)\nANSWER: 386,797,000.66",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E067",
+      "E031",
+      "E035"
+    ]
+  },
+  {
+    "target_id": "AON/2009/page_46.pdf-2",
+    "arm": "case",
+    "gold_answer": 846.0,
+    "response": "PROGRAM: table_min(900, 846, 954)  \nANSWER: 846",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E022",
+      "E025",
+      "E045"
+    ]
+  },
+  {
+    "target_id": "APD/2019/page_48.pdf-1",
+    "arm": "case",
+    "gold_answer": 2758.55,
+    "response": "PROGRAM: table_average(cash provided by ( used for ), 2018, 2019)  \nANSWER: 2758.55",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E039",
+      "E068",
+      "E063"
+    ]
+  },
+  {
+    "target_id": "AES/2016/page_191.pdf-3",
+    "arm": "case",
+    "gold_answer": -11.33333,
+    "response": "PROGRAM: table_average(settlements, none)  \nANSWER: -11",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E063",
+      "E066",
+      "E084"
+    ]
+  },
+  {
+    "target_id": "LMT/2015/page_56.pdf-2",
+    "arm": "case",
+    "gold_answer": 9198.33333,
+    "response": "Program: table_average(net sales, none)  \nANSWER: 9198.33",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E087",
+      "E005",
+      "E063"
+    ]
+  },
+  {
+    "target_id": "MRO/2006/page_33.pdf-3",
+    "arm": "case",
+    "gold_answer": 22.33333,
+    "response": "PROGRAM: add(23, 22), add(#0, 22), divide(#1, const_3)  \nANSWER: 22.33",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E027",
+      "E004",
+      "E090"
+    ]
+  },
+  {
+    "target_id": "JPM/2014/page_65.pdf-5",
+    "arm": "case",
+    "gold_answer": "no",
+    "response": "PROGRAM: greater(167.48, 189.69)  \nANSWER: no",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E049",
+      "E054",
+      "E027"
+    ]
+  },
+  {
+    "target_id": "PPG/2013/page_40.pdf-2",
+    "arm": "case",
+    "gold_answer": "no",
+    "response": "PROGRAM: greater(288, 453)  \nANSWER: no",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E051",
+      "E070",
+      "E007"
+    ]
+  },
+  {
+    "target_id": "BLL/2010/page_28.pdf-2",
+    "arm": "case",
+    "gold_answer": "yes",
+    "response": "PROGRAM: greater(178.93, 123.56)\nANSWER: yes",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E071",
+      "E049",
+      "E027"
+    ]
+  },
+  {
+    "target_id": "PNC/2009/page_46.pdf-3",
+    "arm": "case",
+    "gold_answer": "no",
+    "response": "Program: greater(14, 19)\nAnswer: no",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E049",
+      "E011",
+      "E054"
+    ]
+  },
+  {
+    "target_id": "PPG/2013/page_40.pdf-1",
+    "arm": "case",
+    "gold_answer": "no",
+    "response": "PROGRAM: greater(345, 505)\nANSWER: no",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E051",
+      "E070",
+      "E072"
+    ]
+  },
+  {
+    "target_id": "MRO/2015/page_18.pdf-1",
+    "arm": "case",
+    "gold_answer": 257.0,
+    "response": "PROGRAM: add(68, 189)  \nANSWER: 257",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E065",
+      "E054",
+      "E031"
+    ]
+  },
+  {
+    "target_id": "AON/2010/page_28.pdf-1",
+    "arm": "case",
+    "gold_answer": 778000.0,
+    "response": "PROGRAM: add(414000, 364000)  \nANSWER: 778000",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E034",
+      "E061",
+      "E020"
+    ]
+  },
+  {
+    "target_id": "ETR/2011/page_341.pdf-3",
+    "arm": "case",
+    "gold_answer": 19.2,
+    "response": "PROGRAM: subtract(555.3, 536.7)  \nANSWER: 18.6",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E035",
+      "E056",
+      "E015"
+    ]
+  },
+  {
+    "target_id": "VTR/2007/page_47.pdf-1",
+    "arm": "case",
+    "gold_answer": 138326479.0,
+    "response": "We need to find the number of shares outstanding before the repurchases in 2007. The pre-text says as of February 15, 2008, there were 138,311,810 shares outstanding. The table shows repurchases in the quarter ended December 31, 2007: 14,669 shares repurchased in December (the only month with a number given).  \n\nWe assume the total repurchased in the quarter is just the December amount (since other months show no numbers). So we add that back to the outstanding count.\n\nProgram: add(138311810, 14669)  \nAnswer: 138326479",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E016",
+      "E028",
+      "E024"
+    ]
+  },
+  {
+    "target_id": "C/2010/page_223.pdf-4",
+    "arm": "case",
+    "gold_answer": 469.0,
+    "response": "PROGRAM: add(469, 77)\nANSWER: 546",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E051",
+      "E068",
+      "E001"
+    ]
+  },
+  {
+    "target_id": "IPG/2008/page_93.pdf-4",
+    "arm": "case",
+    "gold_answer": 582.8,
+    "response": "PROGRAM: add(327.1, 255.7)\nANSWER: 582.8",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E070",
+      "E016",
+      "E068"
+    ]
+  },
+  {
+    "target_id": "IPG/2015/page_37.pdf-2",
+    "arm": "case",
+    "gold_answer": -1.6,
+    "response": "PROGRAM: subtract(674.0, 202.8), subtract(#0, 472.8)\nANSWER: -1.6",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E032",
+      "E063",
+      "E038"
+    ]
+  },
+  {
+    "target_id": "CME/2010/page_42.pdf-1",
+    "arm": "case",
+    "gold_answer": 2041.0,
+    "response": "PROGRAM: add(2022, 7), add(2029, 10)  \nANSWER: 2039",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E034",
+      "E053",
+      "E031"
+    ]
+  },
+  {
+    "target_id": "PNC/2011/page_78.pdf-2",
+    "arm": "case",
+    "gold_answer": 43.0,
+    "response": "PROGRAM: table_sum(estimatedincrease to 2012pensionexpense ( in millions ), none)  \nANSWER: 43",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E010",
+      "E049",
+      "E062"
+    ]
+  },
+  {
+    "target_id": "AES/2003/page_52.pdf-1",
+    "arm": "case",
+    "gold_answer": 613.0,
+    "response": "PROGRAM: add(30, 29)  \nANSWER: 59",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E021",
+      "E051",
+      "E001"
+    ]
+  },
+  {
+    "target_id": "LKQ/2016/page_26.pdf-3",
+    "arm": "case",
+    "gold_answer": 1.56429,
+    "response": "PROGRAM: divide(219, 140)  \nANSWER: 1.5642857142857142",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E042",
+      "E047",
+      "E058"
+    ]
+  },
+  {
+    "target_id": "KHC/2016/page_23.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.31325,
+    "response": "PROGRAM: divide(26, 83)  \nANSWER: 0.3132530120481928",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E022",
+      "E077",
+      "E034"
+    ]
+  },
+  {
+    "target_id": "PNC/2011/page_87.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.3385,
+    "response": "PROGRAM: divide(306, 904), multiply(#0, 100)  \nANSWER: 33.85%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E008",
+      "E009",
+      "E033"
+    ]
+  },
+  {
+    "target_id": "MO/2012/page_44.pdf-2",
+    "arm": "case",
+    "gold_answer": 1.66387,
+    "response": "**PROGRAM:** divide(198, 119), multiply(#0, const_100)  \n**ANSWER:** 166.38655462184873",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E059",
+      "E058",
+      "E003"
+    ]
+  },
+  {
+    "target_id": "LMT/2006/page_90.pdf-3",
+    "arm": "case",
+    "gold_answer": 6.39597,
+    "response": "PROGRAM: divide(9530, 1490)  \nANSWER: 6.40",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E010",
+      "E062",
+      "E049"
+    ]
+  },
+  {
+    "target_id": "UAA/2016/page_52.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.08899,
+    "response": "PROGRAM: divide(36358, 408547)  \nANSWER: 8.9%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E005",
+      "E009",
+      "E058"
+    ]
+  },
+  {
+    "target_id": "STZ/2006/page_68.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.34308,
+    "response": "PROGRAM: divide(634203, 1042661), multiply(#0, const_100)  \nANSWER: 60.83%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E043",
+      "E021",
+      "E070"
+    ]
+  },
+  {
+    "target_id": "HII/2014/page_69.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.50632,
+    "response": "Program: divide(9133, 18038)\nANSWER: 50.6%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E009",
+      "E070",
+      "E047"
+    ]
+  },
+  {
+    "target_id": "UNP/2013/page_54.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.09457,
+    "response": "**PROGRAM:** divide(2077, 20684), multiply(#0, const_100)  \n**ANSWER:** 10.04%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E005",
+      "E075",
+      "E059"
+    ]
+  },
+  {
+    "target_id": "RSG/2016/page_144.pdf-1",
+    "arm": "case",
+    "gold_answer": 4.0,
+    "response": "PROGRAM: divide(12000000, 3000000)\nANSWER: 4",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E004",
+      "E066",
+      "E060"
+    ]
+  },
+  {
+    "target_id": "RSG/2017/page_138.pdf-1",
+    "arm": "case",
+    "gold_answer": 2.33333,
+    "response": "We need to find the debt to equity ratio based on the 2017 actual asset allocation.  \nFrom the table, 2017 actual asset allocation: debt securities = 70%, equity securities = 30%.  \nDebt to equity = 70 / 30 = 2.3333...  \n\nPROGRAM: divide(70, 30)  \nANSWER: 2.33",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E008",
+      "E068",
+      "E051"
+    ]
+  },
+  {
+    "target_id": "FIS/2007/page_91.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.16667,
+    "response": "Program: divide(1.4, 1.4), multiply(#0, const_100)\nAnswer: 100%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E030",
+      "E056",
+      "E018"
+    ]
+  },
+  {
+    "target_id": "NKE/2016/page_37.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.89163,
+    "response": "We need to find the percentage of long-term debt due after 2021.  \nFrom the table, long-term debt total is 3774, and the amount due \"thereafter\" is 3365.  \nSo, percentage = (3365 / 3774) * 100.\n\nPROGRAM: divide(3365, 3774), multiply(#0, const_100)  \nANSWER: 89.16%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E008",
+      "E051",
+      "E068"
+    ]
+  },
+  {
+    "target_id": "RSG/2016/page_144.pdf-2",
+    "arm": "case",
+    "gold_answer": 14.0,
+    "response": "PROGRAM: divide(37.8, 2.7)  \nANSWER: 14.0",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E031",
+      "E004",
+      "E071"
+    ]
+  },
+  {
+    "target_id": "JPM/2007/page_147.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.97945,
+    "response": "PROGRAM: table_max(third-party), table_sum(third-party, retained interest), subtract(#1, #0)\nANSWER: 19636",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E021",
+      "E068",
+      "E019"
+    ]
+  },
+  {
+    "target_id": "PNC/2013/page_207.pdf-1",
+    "arm": "case",
+    "gold_answer": 30.44323,
+    "response": "We need to find the notional value of derivatives designated as hedging instruments under GAAP at the end of 2014, and then express it as a percentage of the fair value (asset fair value) for that same category.\n\nFrom the table, the columns for 2014 are the last three:  \n- notional/contract amount: $29,270  \n- asset fair value (a): $1,872  \n- liability fair value (b): $152  \n\nThe question asks: \"the notional value ... was what percent of the fair value?\"  \nFair value here likely refers to asset fair value (since it's the primary fair value measure for assets).  \n\nSo we compute:  \nnotional / asset fair value * 100  \n\nProgram:  \ndivide(29270, 1872), multiply(#0, const_100)  \n\nANSWER: 1563.6%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E071",
+      "E018",
+      "E047"
+    ]
+  },
+  {
+    "target_id": "MSI/2009/page_65.pdf-1",
+    "arm": "case",
+    "gold_answer": 22.1875,
+    "response": "PROGRAM: divide(7146, 1000)  \nANSWER: 7.146",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E068",
+      "E075",
+      "E051"
+    ]
+  },
+  {
+    "target_id": "UNP/2013/page_54.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.16662,
+    "response": "PROGRAM: divide(3280, 19686), multiply(#0, const_100)  \nANSWER: 16.66%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E061",
+      "E073",
+      "E063"
+    ]
+  },
+  {
+    "target_id": "ETR/2002/page_24.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.13204,
+    "response": "PROGRAM: divide(3955, 29953)  \nANSWER: 0.1320",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E035",
+      "E004",
+      "E061"
+    ]
+  },
+  {
+    "target_id": "C/2008/page_211.pdf-2",
+    "arm": "case",
+    "gold_answer": 2.50023,
+    "response": "We need to find the ratio of carrying amount to aggregate unpaid principal balance in excess of fair value for trading assets in 2008.  \n\nFrom the table:  \n- 2008 trading assets carrying amount: $16254  \n- 2008 trading assets aggregate unpaid principal balance in excess of fair value: $6501  \n\nSo the ratio is:  \ndivide(16254, 6501)  \n\nPROGRAM: divide(16254, 6501)  \nANSWER: 2.5",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E016",
+      "E072",
+      "E055"
+    ]
+  },
+  {
+    "target_id": "ETFC/2011/page_82.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.90539,
+    "response": "PROGRAM: divide(1751.2, 1934.2), multiply(#0, const_100)\nANSWER: 90.54%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E070",
+      "E021",
+      "E036"
+    ]
+  },
+  {
+    "target_id": "SWKS/2006/page_81.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.44656,
+    "response": "Program: subtract(-599, -786), divide(#0, -786)  \nANSWER: -23.79%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E010",
+      "E009",
+      "E033"
+    ]
+  },
+  {
+    "target_id": "AES/2016/page_185.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.05,
+    "response": "We need to find the dividend rate for IPL cumulative preferred stock.  \nFrom the text: \"ipl had $60 million of cumulative preferred stock outstanding at december 31, 2016 and 2015... total annual dividend requirements were approximately $3 million at december 31, 2016 and 2015.\"  \nDividend rate = annual dividend / outstanding preferred stock = 3 / 60 = 0.05 = 5%.\n\nPROGRAM: divide(3, 60)  \nANSWER: 5%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E037",
+      "E047",
+      "E058"
+    ]
+  },
+  {
+    "target_id": "INTC/2013/page_29.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.84882,
+    "response": "Program: divide(46.6, 54.9), multiply(#0, const_100)  \nANSWER: 84.88",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E034",
+      "E022",
+      "E059"
+    ]
+  },
+  {
+    "target_id": "BKR/2017/page_103.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.40541,
+    "response": "PROGRAM: divide(15, 37)  \nANSWER: 40.54%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E052",
+      "E021",
+      "E010"
+    ]
+  },
+  {
+    "target_id": "ABMD/2004/page_26.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.15465,
+    "response": "PROGRAM: divide(708, 4578)\nANSWER: 15.5%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E006",
+      "E053",
+      "E034"
+    ]
+  },
+  {
+    "target_id": "ETFC/2014/page_26.pdf-3",
+    "arm": "case",
+    "gold_answer": 1.48857,
+    "response": "PROGRAM: divide(205.14, 137.81)  \nANSWER: 1.4885",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E064",
+      "E016",
+      "E058"
+    ]
+  },
+  {
+    "target_id": "ADI/2011/page_81.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.65078,
+    "response": "PROGRAM: divide(9223, 26410)  \nANSWER: 34.9%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E064",
+      "E001",
+      "E056"
+    ]
+  },
+  {
+    "target_id": "ETR/2008/page_249.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.10403,
+    "response": "PROGRAM: divide(1526, 14669), multiply(100)\nANSWER: 10.4",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E051",
+      "E015",
+      "E022"
+    ]
+  },
+  {
+    "target_id": "IP/2005/page_35.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.25579,
+    "response": "We need to find the percentage of total contractual obligations that total debt represents for 2005. The table shows amounts for 2006\u20132010 and thereafter, but the pre-text says \"at december 31, 2005\", so the 2006 column is the first year of future payments. The total debt for 2006 is $1181 million, and the total obligations for 2006 is $4617 million.  \n\nProgram: divide(1181, 4617), multiply(#0, const_100)  \nANSWER: 25.58%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E008",
+      "E051",
+      "E068"
+    ]
+  },
+  {
+    "target_id": "GIS/2019/page_37.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.10664,
+    "response": "PROGRAM: divide(1396.3, 13093.0), multiply(#0, const_100)  \nANSWER: 10.66%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E051",
+      "E068",
+      "E008"
+    ]
+  },
+  {
+    "target_id": "BDX/2018/page_82.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.66176,
+    "response": "PROGRAM: divide(136, 90)\nANSWER: 1.5111",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E003",
+      "E056",
+      "E019"
+    ]
+  },
+  {
+    "target_id": "GS/2012/page_165.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.23618,
+    "response": "PROGRAM: divide(5468, 23152), multiply(100)  \nANSWER: 23.6%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E021",
+      "E001",
+      "E036"
+    ]
+  },
+  {
+    "target_id": "ABMD/2006/page_75.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.21477,
+    "response": "PROGRAM: divide(1035, 4819), multiply(#0, 100)  \nANSWER: 21.48%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E053",
+      "E008",
+      "E074"
+    ]
+  },
+  {
+    "target_id": "IPG/2008/page_93.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.1931,
+    "response": "PROGRAM: divide(79.3, 402.8)  \nANSWER: 19.7%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E006",
+      "E021",
+      "E007"
+    ]
+  },
+  {
+    "target_id": "UA/2015/page_71.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.75,
+    "response": "Program: divide(0.6, 0.8)  \nAnswer: 0.75",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E021",
+      "E043",
+      "E078"
+    ]
+  },
+  {
+    "target_id": "PKG/2009/page_65.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.03334,
+    "response": "PROGRAM: divide(1486, 44572)  \nANSWER: 3.33%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E006",
+      "E005",
+      "E024"
+    ]
+  },
+  {
+    "target_id": "AES/2017/page_157.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.151,
+    "response": "Program: divide(1590, 10530)\nANSWER: 15.10%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E005",
+      "E058",
+      "E051"
+    ]
+  },
+  {
+    "target_id": "AMT/2005/page_54.pdf-2",
+    "arm": "case",
+    "gold_answer": 1.0499,
+    "response": "PROGRAM: divide(531822, 531822), subtract(1, #0)  \nANSWER: 100%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E063",
+      "E051",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "C/2008/page_211.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.20213,
+    "response": "We need to find the total loss due to instrument-specific credit risk for 2008 and 2007, then compute the ratio.\n\nFrom the text:  \n- 2008 loss = $38 million  \n- 2007 loss = $188 million  \n\nRatio = 38 / 188.\n\nProgram: divide(38, 188)  \nAnswer: 0.2021 (or 20.21%)  \n\nPROGRAM: divide(38, 188)  \nANSWER: 0.2021",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E009",
+      "E011",
+      "E018"
+    ]
+  },
+  {
+    "target_id": "HUM/2017/page_133.pdf-3",
+    "arm": "case",
+    "gold_answer": 149.12281,
+    "response": "Program: divide(170, 1.14)\nAnswer: 149.12",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E037",
+      "E024",
+      "E048"
+    ]
+  },
+  {
+    "target_id": "HII/2017/page_104.pdf-3",
+    "arm": "case",
+    "gold_answer": 1.00078,
+    "response": "PROGRAM: table_max(1279, 1278), table_min(1279, 1278), divide(#0, #1)\nANSWER: 1.00078",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E068",
+      "E051",
+      "E019"
+    ]
+  },
+  {
+    "target_id": "HOLX/2008/page_84.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.01748,
+    "response": "We need to find the portion of long-term debt obligations that is due within less than 1 year, as that would be reported under current liabilities.  \n\nFrom the table:  \n- Long-term debt obligations, less than 1 year: $38,480  \n- Long-term debt obligations, total: $2,200,900  \n\nWe calculate the portion:  \ndivide(38480, 2200900)  \n\nPROGRAM: divide(38480, 2200900)  \nANSWER: 0.01748 (or 1.748%)",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E051",
+      "E068",
+      "E008"
+    ]
+  },
+  {
+    "target_id": "V/2008/page_17.pdf-2",
+    "arm": "case",
+    "gold_answer": 91.66667,
+    "response": "PROGRAM: divide(55, 0.6)  \nANSWER: 91.67",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E056",
+      "E024",
+      "E012"
+    ]
+  },
+  {
+    "target_id": "HIG/2008/page_318.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.43892,
+    "response": "PROGRAM: divide(6047, 13777), multiply(#0, 100)  \nANSWER: 43.9%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E028",
+      "E016",
+      "E048"
+    ]
+  },
+  {
+    "target_id": "DISCA/2012/page_39.pdf-3",
+    "arm": "case",
+    "gold_answer": 5250.0,
+    "response": "Program: divide(1637, 0.37)\nAnswer: 4424.32",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E054",
+      "E070",
+      "E024"
+    ]
+  },
+  {
+    "target_id": "MRO/2011/page_73.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.42553,
+    "response": "Program: divide(80, 188)  \nANSWER: 42.55%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E005",
+      "E059",
+      "E018"
+    ]
+  },
+  {
+    "target_id": "V/2013/page_41.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.89911,
+    "response": "PROGRAM: table_max(table, \"august 1-31 2013\", \"( a ) totalnumber ofsharespurchased ( 1 )\"), ANSWER: 6640563",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E047",
+      "E024",
+      "E016"
+    ]
+  },
+  {
+    "target_id": "AMT/2010/page_34.pdf-3",
+    "arm": "case",
+    "gold_answer": 858775.15119,
+    "response": "We need to compute the average number of shares per registered holder.  \nWe have total outstanding shares = 397,612,895 and registered holders = 463.  \nAverage = total shares / holders.\n\nProgram: divide(397612895, 463)  \nAnswer: 858,775.8 (approximately)",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E058",
+      "E048",
+      "E028"
+    ]
+  },
+  {
+    "target_id": "JPM/2005/page_37.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.34769,
+    "response": "PROGRAM: divide(3658, 10521), multiply(#0, 100)  \nANSWER: 34.8%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E009",
+      "E059",
+      "E064"
+    ]
+  },
+  {
+    "target_id": "CAG/2008/page_75.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.61615,
+    "response": "PROGRAM: divide(1001.3, 1625.1)  \nANSWER: 61.61%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E005",
+      "E061",
+      "E070"
+    ]
+  },
+  {
+    "target_id": "ABMD/2004/page_26.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.15465,
+    "response": "Program: divide(708, 4578), multiply(#0, 100)\nAnswer: 15.47%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E053",
+      "E008",
+      "E074"
+    ]
+  },
+  {
+    "target_id": "STT/2009/page_73.pdf-2",
+    "arm": "case",
+    "gold_answer": 1.02949,
+    "response": "PROGRAM: divide(74843, 72699), multiply(#0, const_100)\nANSWER: 102.95%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E056",
+      "E058",
+      "E067"
+    ]
+  },
+  {
+    "target_id": "AAL/2013/page_15.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.13145,
+    "response": "Program: divide(7900, 60100)  \nANSWER: 0.1314",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E077",
+      "E017",
+      "E059"
+    ]
+  },
+  {
+    "target_id": "HIG/2008/page_318.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.43638,
+    "response": "PROGRAM: divide(6012, 13777)  \nANSWER: 0.4364",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E021",
+      "E059",
+      "E028"
+    ]
+  },
+  {
+    "target_id": "HOLX/2007/page_128.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.03128,
+    "response": "PROGRAM: divide(6900, 220600)  \nANSWER: 0.0313",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E063",
+      "E032",
+      "E021"
+    ]
+  },
+  {
+    "target_id": "GPN/2009/page_70.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.69676,
+    "response": "PROGRAM: divide(13536, 19427)  \nANSWER: 0.6968",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E021",
+      "E036",
+      "E078"
+    ]
+  },
+  {
+    "target_id": "ETFC/2011/page_82.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.07362,
+    "response": "PROGRAM: divide(142.4, 1934.2), multiply(#0, const_100)\nANSWER: 7.36",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E036",
+      "E058",
+      "E047"
+    ]
+  },
+  {
+    "target_id": "GS/2016/page_77.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.69555,
+    "response": "PROGRAM: divide(3781, 5436)\nANSWER: 69.55%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E005",
+      "E038",
+      "E008"
+    ]
+  },
+  {
+    "target_id": "CAG/2008/page_75.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.61046,
+    "response": "PROGRAM: divide(1179.1, 1931.5)  \nANSWER: 61.05%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E005",
+      "E070",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "JPM/2014/page_65.pdf-3",
+    "arm": "case",
+    "gold_answer": 1.10015,
+    "response": "PROGRAM: divide(123.36, 112.13)  \nANSWER: 1.1001",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E064",
+      "E050",
+      "E047"
+    ]
+  },
+  {
+    "target_id": "INTC/2013/page_29.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.35837,
+    "response": "PROGRAM: divide(16.7, 46.6), multiply(#0, 100)  \nANSWER: 35.83690987124464",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E022",
+      "E034",
+      "E077"
+    ]
+  },
+  {
+    "target_id": "HOLX/2008/page_142.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.79233,
+    "response": "Program: subtract(31300, 5800), subtract(#0, 600), subtract(#1, 1900), subtract(#2, 800), subtract(#3, 400), add(#4, 3000)\nANSWER: 24800",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E021",
+      "E003",
+      "E056"
+    ]
+  },
+  {
+    "target_id": "BKR/2017/page_103.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.40541,
+    "response": "PROGRAM: divide(15, 37)  \nANSWER: 0.40540540540540543",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E052",
+      "E021",
+      "E062"
+    ]
+  },
+  {
+    "target_id": "AES/2001/page_44.pdf-2",
+    "arm": "case",
+    "gold_answer": 2.49662,
+    "response": "PROGRAM: divide(739, 296)  \nANSWER: 2.5 times",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E045",
+      "E020",
+      "E047"
+    ]
+  },
+  {
+    "target_id": "JPM/2018/page_110.pdf-5",
+    "arm": "case",
+    "gold_answer": 0.88966,
+    "response": "PROGRAM: subtract(203449, 228681), divide(#0, 228681), multiply(#1, const_100)  \nANSWER: -11.04%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E078",
+      "E058",
+      "E005"
+    ]
+  },
+  {
+    "target_id": "ADBE/2018/page_86.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.13419,
+    "response": "We need to calculate the percentage change in the total gross amount of unrecognized tax benefits from 2017 to 2018.  \nFrom the table, the ending balance for 2017 is $172,945 and for 2018 is $196,152.  \nPercentage change = (new - old) / old * 100.  \n\nPROGRAM: subtract(196152, 172945), divide(#0, 172945), multiply(#1, 100)  \nANSWER: 13.42",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E017",
+      "E030",
+      "E062"
+    ]
+  },
+  {
+    "target_id": "JPM/2008/page_85.pdf-4",
+    "arm": "case",
+    "gold_answer": 98344.75,
+    "response": "PROGRAM: multiply(1966895, 0.05), divide(#0, const_1)  \nANSWER: 98344.75",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E056",
+      "E064",
+      "E048"
+    ]
+  },
+  {
+    "target_id": "IPG/2009/page_85.pdf-3",
+    "arm": "case",
+    "gold_answer": 10.82621,
+    "response": "PROGRAM: divide(3.8, 35.1), multiply(#0, 100)  \nANSWER: 10.83%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E008",
+      "E009",
+      "E056"
+    ]
+  },
+  {
+    "target_id": "PNC/2009/page_46.pdf-1",
+    "arm": "case",
+    "gold_answer": 1.0,
+    "response": "PROGRAM: multiply(50, 0.02)\nANSWER: 1",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E022",
+      "E020",
+      "E069"
+    ]
+  },
+  {
+    "target_id": "MRO/2009/page_56.pdf-3",
+    "arm": "case",
+    "gold_answer": -0.41837,
+    "response": "PROGRAM: subtract(3.99, 6.86), divide(#0, 6.86), multiply(#1, 100)\nANSWER: -41.8%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E004",
+      "E009",
+      "E065"
+    ]
+  },
+  {
+    "target_id": "TSCO/2018/page_34.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.0411,
+    "response": "PROGRAM: subtract(104.11, 100.00), divide(#0, 100.00), multiply(#1, const_100)  \nANSWER: 4.11",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E058",
+      "E061",
+      "E047"
+    ]
+  },
+  {
+    "target_id": "AMT/2004/page_81.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.04239,
+    "response": "PROGRAM: subtract(90.5, 92.0), divide(#0, 92.0)\nANSWER: -1.63%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E030",
+      "E009",
+      "E063"
+    ]
+  },
+  {
+    "target_id": "VRTX/2003/page_71.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.01713,
+    "response": "Program: subtract(21829, 249), subtract(#0, 125), divide(#1, 22203), multiply(#2, 100)\nANSWER: 96.6%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E027",
+      "E012",
+      "E028"
+    ]
+  },
+  {
+    "target_id": "MSI/2006/page_61.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.54701,
+    "response": "PROGRAM: subtract(607, 1340), divide(#0, 1340)\nANSWER: -54.70%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E008",
+      "E019",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "L/2015/page_59.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.0604,
+    "response": "PROGRAM: divide(106.04, 100.0), subtract(#0, 1), multiply(#1, 100)  \nANSWER: 6.04",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E064",
+      "E050",
+      "E048"
+    ]
+  },
+  {
+    "target_id": "CDNS/2012/page_30.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.1078,
+    "response": "Program: subtract(110.78, 59.03), divide(#0, 59.03)\nANSWER: 0.8767",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E042",
+      "E016",
+      "E024"
+    ]
+  },
+  {
+    "target_id": "UNP/2014/page_75.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.09524,
+    "response": "PROGRAM: subtract(2.3, 2.1), divide(#0, 2.1)  \nANSWER: 9.52%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E007",
+      "E031",
+      "E053"
+    ]
+  },
+  {
+    "target_id": "PPG/2013/page_40.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.07726,
+    "response": "PROGRAM: subtract(488, 453), divide(#0, 453), multiply(#1, const_100)\nANSWER: 7.73%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E060",
+      "E075",
+      "E065"
+    ]
+  },
+  {
+    "target_id": "ETR/2002/page_86.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.71179,
+    "response": "PROGRAM: subtract(540372, 925005), divide(#0, 925005)  \nANSWER: -41.58%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E008",
+      "E051",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "GS/2012/page_165.pdf-3",
+    "arm": "case",
+    "gold_answer": 3.464,
+    "response": "We need to find the percentage of the \"miscellaneous receivables and other\" assets that were related to the reinsurance business held for sale as of December 2012.\n\nFrom the table, miscellaneous receivables and other = $20,234 million.  \nFrom the post-text, the reinsurance business assets held for sale = $16.77 billion = $16,770 million.\n\nSo the percentage = (16,770 / 20,234) * 100.\n\nProgram: divide(16770, 20234), multiply(#0, 100)  \nAnswer: 82.88%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E021",
+      "E070",
+      "E018"
+    ]
+  },
+  {
+    "target_id": "UNP/2006/page_37.pdf-2",
+    "arm": "case",
+    "gold_answer": -0.99857,
+    "response": "Program: subtract(3200, 2242), divide(#0, 2242)\nANSWER: 42.7%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E059",
+      "E009",
+      "E058"
+    ]
+  },
+  {
+    "target_id": "UNP/2006/page_37.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.01019,
+    "response": "PROGRAM: subtract(1487, 1472), divide(#0, 1472)  \nANSWER: 1.02%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E032",
+      "E063",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "RE/2017/page_159.pdf-4",
+    "arm": "case",
+    "gold_answer": -0.01289,
+    "response": "PROGRAM: subtract(144618, 146507), divide(#0, 146507), multiply(#1, const_100)\nANSWER: -1.29%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E007",
+      "E009",
+      "E058"
+    ]
+  },
+  {
+    "target_id": "MA/2008/page_126.pdf-1",
+    "arm": "case",
+    "gold_answer": -0.15197,
+    "response": "PROGRAM: subtract(404436, 476915), divide(#0, 476915)\nANSWER: -15.20%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E070",
+      "E007",
+      "E008"
+    ]
+  },
+  {
+    "target_id": "ETR/2004/page_213.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.05504,
+    "response": "Program: subtract(973.7, 922.9), divide(#0, 922.9)  \nANSWER: 5.5%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E051",
+      "E045",
+      "E038"
+    ]
+  },
+  {
+    "target_id": "ETR/2008/page_377.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.0967,
+    "response": "PROGRAM: subtract(442.3, 403.3), divide(#0, 403.3)  \nANSWER: 9.67%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E038",
+      "E009",
+      "E032"
+    ]
+  },
+  {
+    "target_id": "ETR/2002/page_86.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.06354,
+    "response": "PROGRAM: divide(30200, 475288)  \nANSWER: 6.35%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E051",
+      "E008",
+      "E038"
+    ]
+  },
+  {
+    "target_id": "HII/2017/page_104.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.375,
+    "response": "**PROGRAM:** subtract(11, 8), divide(#0, 8)  \n**ANSWER:** 37.5%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E008",
+      "E051",
+      "E068"
+    ]
+  },
+  {
+    "target_id": "AES/2016/page_191.pdf-2",
+    "arm": "case",
+    "gold_answer": -0.01072,
+    "response": "Program: subtract(373, 369), divide(#0, 373), multiply(#1, const_100)\nAnswer: -1.07",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E017",
+      "E030",
+      "E062"
+    ]
+  },
+  {
+    "target_id": "ETR/2017/page_26.pdf-4",
+    "arm": "case",
+    "gold_answer": -0.07443,
+    "response": "PROGRAM: subtract(1542, 1666), divide(#0, 1666)  \nANSWER: -0.0744",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E032",
+      "E061",
+      "E060"
+    ]
+  },
+  {
+    "target_id": "DVN/2014/page_85.pdf-2",
+    "arm": "case",
+    "gold_answer": 80.0,
+    "response": "Program: divide(36, 45)  \nAnswer: 80%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E030",
+      "E036",
+      "E005"
+    ]
+  },
+  {
+    "target_id": "PNC/2009/page_46.pdf-4",
+    "arm": "case",
+    "gold_answer": 16.5,
+    "response": "PROGRAM: table_average(19, 14)\nANSWER: 16.5",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E020",
+      "E004",
+      "E074"
+    ]
+  },
+  {
+    "target_id": "RSG/2017/page_142.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.31466,
+    "response": "PROGRAM: subtract(63.84, 48.56), divide(#0, 48.56), multiply(#1, 100)  \nANSWER: 31.46",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E058",
+      "E066",
+      "E024"
+    ]
+  },
+  {
+    "target_id": "ETR/2008/page_355.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.0814,
+    "response": "Program: subtract(93000, 86000), divide(#0, 86000)  \nANSWER: 8.1%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E009",
+      "E004",
+      "E063"
+    ]
+  },
+  {
+    "target_id": "DRE/2007/page_59.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.17792,
+    "response": "Program: divide(148527, 867558)  \nAnswer: 0.1712",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E021",
+      "E043",
+      "E008"
+    ]
+  },
+  {
+    "target_id": "HII/2017/page_104.pdf-1",
+    "arm": "case",
+    "gold_answer": -0.21053,
+    "response": "PROGRAM: subtract(15, 19), divide(#0, 19), multiply(#1, 100)\nANSWER: -21.05%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E008",
+      "E040",
+      "E032"
+    ]
+  },
+  {
+    "target_id": "CDNS/2012/page_30.pdf-4",
+    "arm": "case",
+    "gold_answer": -0.04097,
+    "response": "We need to find the ROI of the Nasdaq Composite from 2008 to 2009.  \nFrom the table, the values are:  \n- 12/29/2007: 100.00  \n- 1/3/2009: 59.03  \n\nROI = (final value - initial value) / initial value.  \nHere, initial = 100.00, final = 59.03.  \n\nProgram: subtract(59.03, 100.00), divide(#0, 100.00)  \nAnswer: -0.4097 (or -40.97%)  \n\nPROGRAM: subtract(59.03, 100.00), divide(#0, 100.00)  \nANSWER: -0.4097",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E042",
+      "E016",
+      "E048"
+    ]
+  },
+  {
+    "target_id": "AAL/2015/page_118.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.9379,
+    "response": "Program: divide(2526, 40678)  \nAnswer: 0.0621",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E031",
+      "E053",
+      "E024"
+    ]
+  },
+  {
+    "target_id": "PM/2018/page_24.pdf-3",
+    "arm": "case",
+    "gold_answer": -0.035,
+    "response": "Program: subtract(96.50, 100.00), divide(#0, 100.00), multiply(#1, const_100)\nAnswer: -3.5",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E064",
+      "E058",
+      "E066"
+    ]
+  },
+  {
+    "target_id": "ETR/2017/page_26.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.08042,
+    "response": "PROGRAM: subtract(1542, 1666), divide(-124, 1666)  \nANSWER: -7.44%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E032",
+      "E005",
+      "E063"
+    ]
+  },
+  {
+    "target_id": "PM/2017/page_38.pdf-2",
+    "arm": "case",
+    "gold_answer": 6.95522,
+    "response": "Program: subtract(6.0, 0.932)  \nAnswer: 5.068",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E056",
+      "E064",
+      "E032"
+    ]
+  },
+  {
+    "target_id": "JPM/2014/page_65.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.8969,
+    "response": "PROGRAM: divide(189.69, 100.00), subtract(#0, const_1)  \nANSWER: 89.69%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E064",
+      "E056",
+      "E072"
+    ]
+  },
+  {
+    "target_id": "HWM/2016/page_40.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.12524,
+    "response": "PROGRAM: divide(subtract(34.50, 30.66), 30.66), multiply(#0, const_100)  \nANSWER: 12.52%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E058",
+      "E047",
+      "E005"
+    ]
+  },
+  {
+    "target_id": "PM/2017/page_38.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.06362,
+    "response": "Program: divide(688, 10815), multiply(#0, const_100)  \nANSWER: 6.36",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E059",
+      "E032",
+      "E031"
+    ]
+  },
+  {
+    "target_id": "ABMD/2006/page_75.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.19495,
+    "response": "Program: subtract(4819, 1703), subtract(4819, 1371), subtract(4819, 1035), subtract(4819, 710)\nAnswer: 3116, 3448, 3784, 4109",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E053",
+      "E006",
+      "E065"
+    ]
+  },
+  {
+    "target_id": "ETR/2015/page_131.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.07039,
+    "response": "PROGRAM: subtract(768588, 822690), divide(#0, 822690)\nANSWER: -6.58%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E008",
+      "E068",
+      "E051"
+    ]
+  },
+  {
+    "target_id": "ETR/2008/page_377.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.0967,
+    "response": "PROGRAM: subtract(442.3, 403.3), divide(#0, 403.3)\nANSWER: 9.7%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E051",
+      "E038",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "HWM/2017/page_41.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.69231,
+    "response": "PROGRAM: subtract(1.3, 0.4), divide(#0, 1.3), multiply(#1, const_100)\nANSWER: 69.23%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E026",
+      "E028",
+      "E066"
+    ]
+  },
+  {
+    "target_id": "AMT/2004/page_81.pdf-2",
+    "arm": "case",
+    "gold_answer": -0.03378,
+    "response": "Program: subtract(985303, 1019749), divide(#0, 1019749)  \nANSWER: -3.34%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E021",
+      "E018",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "UNP/2015/page_35.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.08237,
+    "response": "PROGRAM: subtract(7385, 6823), divide(#0, 6823)  \nANSWER: 8.24%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E063",
+      "E032",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "SNA/2012/page_33.pdf-1",
+    "arm": "case",
+    "gold_answer": -0.1634,
+    "response": "Program: divide(83.66, 100.00), subtract(#0, 1)  \nANSWER: -0.1634",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E058",
+      "E009",
+      "E024"
+    ]
+  },
+  {
+    "target_id": "APTV/2014/page_49.pdf-2",
+    "arm": "case",
+    "gold_answer": 2.5082,
+    "response": "PROGRAM: subtract(350.82, 100.00), divide(#0, 100.00), multiply(#1, 100)  \nANSWER: 250.82%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E024",
+      "E064",
+      "E067"
+    ]
+  },
+  {
+    "target_id": "AON/2011/page_134.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.06134,
+    "response": "PROGRAM: subtract(6817, 6423), divide(#0, 6423)  \nANSWER: 6.1%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E007",
+      "E062",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "MRO/2009/page_139.pdf-3",
+    "arm": "case",
+    "gold_answer": -0.42424,
+    "response": "Program: subtract(19, 33)\nANSWER: -14",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E074",
+      "E007",
+      "E031"
+    ]
+  },
+  {
+    "target_id": "PNC/2018/page_171.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.0527,
+    "response": "Program: subtract(181612, 172521), divide(#0, 172521), multiply(#1, 100)  \nANSWER: 5.27%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E006",
+      "E008",
+      "E062"
+    ]
+  },
+  {
+    "target_id": "UNP/2014/page_75.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.04348,
+    "response": "PROGRAM: subtract(2.4, 2.3), divide(#0, 2.3)  \nANSWER: 4.35%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E031",
+      "E007",
+      "E053"
+    ]
+  },
+  {
+    "target_id": "UAA/2016/page_52.pdf-2",
+    "arm": "case",
+    "gold_answer": -0.68042,
+    "response": "PROGRAM: divide(-13064, 353955)  \nANSWER: -3.69%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E038",
+      "E006",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "ETFC/2014/page_26.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.3781,
+    "response": "PROGRAM: subtract(137.81, 100.00), divide(37.81, 100.00)  \nANSWER: 0.3781",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E016",
+      "E024",
+      "E064"
+    ]
+  },
+  {
+    "target_id": "UNP/2006/page_37.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.10843,
+    "response": "PROGRAM: subtract(1472, 1328), divide(#0, 1328)  \nANSWER: 10.84%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E063",
+      "E032",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "ETR/2013/page_118.pdf-3",
+    "arm": "case",
+    "gold_answer": 1495.939,
+    "response": "Program: add(385373, 1110566), divide(#0, 1000)  \nANSWER: 1495.939",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E051",
+      "E068",
+      "E008"
+    ]
+  },
+  {
+    "target_id": "C/2017/page_328.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.935,
+    "response": "PROGRAM: subtract(193.5, 100.0), divide(#0, 100.0), multiply(#1, 100)  \nANSWER: 93.5%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E064",
+      "E028",
+      "E058"
+    ]
+  },
+  {
+    "target_id": "BLK/2016/page_119.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.0164,
+    "response": "We need to sum the interest rates for the notes due from 2017 to 2025, then divide by the total long-term borrowings (maturity amount) and express as a percentage.\n\nFrom the table:\n- 6.25% notes due 2017 \u2192 6.25\n- 5.00% notes due 2019 \u2192 5.00\n- 4.25% notes due 2021 \u2192 4.25\n- 3.375% notes due 2022 \u2192 3.375\n- 3.50% notes due 2024 \u2192 3.50\n- 1.25% notes due 2025 \u2192 1.25\n\nSum = 6.25 + 5.00 + 4.25 + 3.375 + 3.50 + 1.25 = 23.625\n\nTotal long-term borrowings (maturity amount) = 4938\n\nPercentage = (23.625 / 4938) * 100\n\nProgram: add(6.25, 5.00), add(#0, 4.25), add(#1, 3.375), add(#2, 3.50), add(#3, 1.25), divide(#4, 4938), multiply(#5, 100)  \nAnswer: 0.4784%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E019",
+      "E051",
+      "E068"
+    ]
+  },
+  {
+    "target_id": "MO/2012/page_44.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.01408,
+    "response": "PROGRAM: subtract(734.6, 724.4), divide(#0, 724.4)\nANSWER: 1.4%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E061",
+      "E059",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "GPN/2009/page_70.pdf-3",
+    "arm": "case",
+    "gold_answer": 0.96042,
+    "response": "Program: add(4091, 1031), add(13536, #0), divide(#1, 19427), multiply(#2, 100)  \nANSWER: 96.0%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E021",
+      "E001",
+      "E078"
+    ]
+  },
+  {
+    "target_id": "APD/2019/page_31.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.01665,
+    "response": "We need to find the increase in the first quarter dividend from 2018 to 2019, and express it as a percentage of the total value for 2018 and 2019.\n\nFrom the table:\n- First quarter 2019: $1.10\n- First quarter 2018: $0.95\n- Total 2019: $4.58\n- Total 2018: $4.25\n\nSteps:\n1. Subtract first quarter 2018 from first quarter 2019: subtract(1.10, 0.95) \u2192 0.15\n2. Add total 2018 and total 2019: add(4.25, 4.58) \u2192 8.83\n3. Divide the increase by the combined total: divide(0.15, 8.83) \u2192 0.01699...\n4. Convert to percentage: multiply(0.01699, 100) \u2192 1.699%\n\nPROGRAM: subtract(1.10, 0.95), add(4.25, 4.58), divide(#0, #1), multiply(#2, const_100)  \nANSWER: 1.7%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E058",
+      "E037",
+      "E047"
+    ]
+  },
+  {
+    "target_id": "CB/2010/page_88.pdf-2",
+    "arm": "case",
+    "gold_answer": 356.66667,
+    "response": "PROGRAM: table_average(\"catastrophe losses and related reinstatement premiums\", \"2008\", \"2009\", \"2010\"), multiply(#0, -1)\nANSWER: 3.033333333333333",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E035",
+      "E001",
+      "E070"
+    ]
+  },
+  {
+    "target_id": "DRE/2002/page_40.pdf-1",
+    "arm": "case",
+    "gold_answer": 1.11111,
+    "response": "We need to find the dividend for the quarter ended March 31, 2002, and the dividend for March 31, 2003 (which is given in the pre-text as $0.455 per share).  \n\nFrom the table, for March 31, 2002, the dividend is $0.450.  \nThe 2003 dividend is $0.455.  \n\nPercent change = (new - old) / old * 100.  \n\nProgram:  \nsubtract(0.455, 0.450), divide(#0, 0.450), multiply(#1, 100)  \n\nANSWER: 1.11",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E047",
+      "E063",
+      "E033"
+    ]
+  },
+  {
+    "target_id": "ABMD/2009/page_88.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.67761,
+    "response": "Program: subtract(5583333, 1800000), divide(#0, 5583333)  \nANSWER: 67.7%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E028",
+      "E012",
+      "E016"
+    ]
+  },
+  {
+    "target_id": "LMT/2017/page_80.pdf-1",
+    "arm": "case",
+    "gold_answer": 302.8,
+    "response": "PROGRAM: table_average(weighted average common shares outstanding for diluted computations, none)  \nANSWER: 302.8",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E066",
+      "E028",
+      "E048"
+    ]
+  },
+  {
+    "target_id": "PNC/2009/page_41.pdf-4",
+    "arm": "case",
+    "gold_answer": 0.71064,
+    "response": "PROGRAM: divide(1050, 1301)\nANSWER: 80.71%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E015",
+      "E008",
+      "E071"
+    ]
+  },
+  {
+    "target_id": "LKQ/2016/page_26.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.26,
+    "response": "PROGRAM: subtract(204, 178), divide(#0, 178), multiply(#1, 100)  \nANSWER: 14.61",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E064",
+      "E047",
+      "E042"
+    ]
+  },
+  {
+    "target_id": "AES/2015/page_117.pdf-3",
+    "arm": "case",
+    "gold_answer": 159.33333,
+    "response": "PROGRAM: add(205, 163), add(#0, 110), divide(#1, const_3)\nANSWER: 159.3",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E054",
+      "E059",
+      "E060"
+    ]
+  },
+  {
+    "target_id": "AMAT/2014/page_18.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.21154,
+    "response": "Program: subtract(2917, 2372), divide(#0, 2372), multiply(#1, const_100)  \nANSWER: 22.98%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E005",
+      "E075",
+      "E061"
+    ]
+  },
+  {
+    "target_id": "BDX/2018/page_82.pdf-3",
+    "arm": "case",
+    "gold_answer": 74.33333,
+    "response": "PROGRAM: add(72, 61), add(#0, 90), divide(#1, const_3)  \nANSWER: 74.3",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E056",
+      "E003",
+      "E019"
+    ]
+  },
+  {
+    "target_id": "IPG/2015/page_48.pdf-1",
+    "arm": "case",
+    "gold_answer": 16.78832,
+    "response": "PROGRAM: subtract(27.4, 22.8), divide(#0, 27.4)\nANSWER: 16.8%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E063",
+      "E019",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "C/2017/page_328.pdf-3",
+    "arm": "case",
+    "gold_answer": -0.374,
+    "response": "PROGRAM: subtract(193.5, 230.9), divide(#0, 100.0)  \nANSWER: -0.374",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E064",
+      "E047",
+      "E058"
+    ]
+  },
+  {
+    "target_id": "FRT/2005/page_117.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.91251,
+    "response": "We need to compute the growth of additions and deductions from 2003 to 2004.\n\nFrom the table:\n- Additions 2003: 68,125,000  \n- Additions 2004: 82,551,000  \n- Deductions 2003: -4,645,000 (absolute value 4,645,000)  \n- Deductions 2004: -1,390,000 (absolute value 1,390,000)\n\nGrowth of additions = (82,551,000 - 68,125,000) / 68,125,000  \nGrowth of deductions = (1,390,000 - 4,645,000) / 4,645,000 (negative growth)\n\nWe'll compute both and then compare.\n\nProgram: subtract(82551000, 68125000), divide(#0, 68125000), subtract(1390000, 4645000), divide(#2, 4645000), subtract(#1, #3)  \nAnswer: 0.2118 - (-0.7008) = 0.9126 \u2192 91.26%  \n\nANSWER: 91.26",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E017",
+      "E059",
+      "E004"
+    ]
+  },
+  {
+    "target_id": "MA/2008/page_126.pdf-2",
+    "arm": "case",
+    "gold_answer": 1331862.0,
+    "response": "Program: subtract(1736298, 404436)  \nANSWER: 1331862",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E070",
+      "E007",
+      "E008"
+    ]
+  },
+  {
+    "target_id": "MRO/2008/page_69.pdf-1",
+    "arm": "case",
+    "gold_answer": 30.34,
+    "response": "Program: subtract(145.29, 114.95)\nANSWER: 30.34",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E058",
+      "E043",
+      "E012"
+    ]
+  },
+  {
+    "target_id": "PM/2017/page_38.pdf-1",
+    "arm": "case",
+    "gold_answer": 688.0,
+    "response": "PROGRAM: subtract(11503, 10815)  \nANSWER: 688",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E032",
+      "E031",
+      "E054"
+    ]
+  },
+  {
+    "target_id": "AES/2016/page_185.pdf-2",
+    "arm": "case",
+    "gold_answer": 158.0,
+    "response": "PROGRAM: subtract(618, 460)\nANSWER: 158",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E016",
+      "E058",
+      "E024"
+    ]
+  },
+  {
+    "target_id": "IPG/2008/page_21.pdf-2",
+    "arm": "case",
+    "gold_answer": 47016.82,
+    "response": "PROGRAM: multiply(29704, 5.99), multiply(4468, 3.24), multiply(12850, 3.98), add(#0, #1), add(#2, #3)\nANSWER: 244,000.00",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E024",
+      "E016",
+      "E070"
+    ]
+  },
+  {
+    "target_id": "STT/2011/page_83.pdf-1",
+    "arm": "case",
+    "gold_answer": 114.0,
+    "response": "PROGRAM: subtract(303, 189)\nANSWER: 114",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E030",
+      "E001",
+      "E070"
+    ]
+  },
+  {
+    "target_id": "STZ/2006/page_68.pdf-2",
+    "arm": "case",
+    "gold_answer": 1042490.2,
+    "response": "Program: subtract(1042661, 170800)  \nANSWER: 871861",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E043",
+      "E001",
+      "E021"
+    ]
+  },
+  {
+    "target_id": "IPG/2008/page_62.pdf-3",
+    "arm": "case",
+    "gold_answer": -6.9,
+    "response": "PROGRAM: subtract(5.7, 12.6)  \nANSWER: -6.9",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E007",
+      "E070",
+      "E013"
+    ]
+  },
+  {
+    "target_id": "MRO/2008/page_69.pdf-2",
+    "arm": "case",
+    "gold_answer": 111.42,
+    "response": "Program: subtract(33.87, 145.29), multiply(#0, -1)\nANSWER: 111.42",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E058",
+      "E025",
+      "E063"
+    ]
+  },
+  {
+    "target_id": "C/2008/page_102.pdf-3",
+    "arm": "case",
+    "gold_answer": -11.0,
+    "response": "PROGRAM: subtract(71.0, 82.0)  \nANSWER: -11.0",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E009",
+      "E051",
+      "E035"
+    ]
+  },
+  {
+    "target_id": "ZBH/2003/page_40.pdf-1",
+    "arm": "case",
+    "gold_answer": 3.8,
+    "response": "Program: subtract(51.2, 47.4)\nANSWER: 3.8%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E045",
+      "E005",
+      "E075"
+    ]
+  },
+  {
+    "target_id": "VNO/2012/page_84.pdf-1",
+    "arm": "case",
+    "gold_answer": 32.0,
+    "response": "PROGRAM: subtract(132, 100)  \nANSWER: 32",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E042",
+      "E058",
+      "E016"
+    ]
+  },
+  {
+    "target_id": "DISCA/2012/page_39.pdf-2",
+    "arm": "case",
+    "gold_answer": 72.0,
+    "response": "PROGRAM: subtract(246, 174)\nANSWER: 72",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E044",
+      "E023",
+      "E060"
+    ]
+  },
+  {
+    "target_id": "VNO/2012/page_84.pdf-2",
+    "arm": "case",
+    "gold_answer": 9.0,
+    "response": "PROGRAM: subtract(109, 100)  \nANSWER: 9",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E064",
+      "E042",
+      "E047"
+    ]
+  },
+  {
+    "target_id": "SYY/2019/page_9.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.01,
+    "response": "PROGRAM: subtract(62, 61)  \nANSWER: 1%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E005",
+      "E061",
+      "E020"
+    ]
+  },
+  {
+    "target_id": "GIS/2019/page_37.pdf-3",
+    "arm": "case",
+    "gold_answer": -16.0,
+    "response": "PROGRAM: subtract(484, 500), divide(#0, 500), multiply(#1, const_100)\nANSWER: -3.2%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E032",
+      "E007",
+      "E068"
+    ]
+  },
+  {
+    "target_id": "AAPL/2014/page_38.pdf-2",
+    "arm": "case",
+    "gold_answer": 4027.0,
+    "response": "PROGRAM: subtract(20624, 16597)\nANSWER: 4027",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E035",
+      "E078",
+      "E015"
+    ]
+  },
+  {
+    "target_id": "MRO/2004/page_36.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.1,
+    "response": "Program: subtract(2.3, 2.2)  \nANSWER: 0.1",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E004",
+      "E070",
+      "E076"
+    ]
+  },
+  {
+    "target_id": "MS/2014/page_292.pdf-1",
+    "arm": "case",
+    "gold_answer": 9.0,
+    "response": "The question asks for the number of years currently involved in IRS controversies. From the post-text, it mentions \"tax years 1999 2013 2005\" and \"tax years 2006 2013 2008\". This seems to be a range from 1999 to 2008, but the text is a bit garbled. However, the question likely refers to the range of years under IRS review.  \n\nFrom the text: \"the company is currently under review by the irs appeals office for the remaining issues covering tax years 1999 2013 2005 and has substantially completed the irs field examination for the audit of tax years 2006 2013 2008.\"  \n\nThis suggests the IRS controversies cover tax years from 1999 to 2008. That is 2008 - 1999 + 1 = 10 years.  \n\nProgram: subtract(2008, 1999), add(#0, const_1)  \nAnswer: 10",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E070",
+      "E007",
+      "E030"
+    ]
+  },
+  {
+    "target_id": "JPM/2007/page_147.pdf-3",
+    "arm": "case",
+    "gold_answer": 10.3,
+    "response": "PROGRAM: table_max(2007), table_min(2007)  \nANSWER: $9.7 billion",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E068",
+      "E019",
+      "E003"
+    ]
+  },
+  {
+    "target_id": "AAPL/2014/page_38.pdf-3",
+    "arm": "case",
+    "gold_answer": 28987.0,
+    "response": "PROGRAM: subtract(28987, 0)  \nANSWER: 28987",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E019",
+      "E008",
+      "E051"
+    ]
+  },
+  {
+    "target_id": "PKG/2009/page_65.pdf-3",
+    "arm": "case",
+    "gold_answer": 7.9,
+    "response": "Program: subtract(29.4, 37.3)  \nANSWER: -7.9",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E035",
+      "E009",
+      "E070"
+    ]
+  },
+  {
+    "target_id": "CB/2010/page_200.pdf-1",
+    "arm": "case",
+    "gold_answer": 2634.0,
+    "response": "PROGRAM: subtract(11798, 9164)  \nANSWER: 2634",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E008",
+      "E009",
+      "E051"
+    ]
+  },
+  {
+    "target_id": "MSI/2006/page_61.pdf-2",
+    "arm": "case",
+    "gold_answer": 85.0,
+    "response": "We need to find the lease obligations for 2004 and 2011.  \nFrom the table, the lease obligations for 2011 are $158 million.  \nThe 2004 value is not directly in the table, but the post-text says rental expense was $205 million in 2004.  \nHowever, the question asks about \"lease obligations\" drop, not rental expense.  \nThe table only gives lease obligations for 2007\u20132011 and thereafter.  \nSince 2004 is not in the table, we cannot compute the drop directly from the given data.  \nBut the post-text mentions \"future minimum lease obligations, net of minimum sublease rentals, totaled $2.3 billion\" at end of 2006, and the table shows total lease obligations of $2328 million for 2006.  \nThe question likely refers to the table's \"lease obligations\" row, but 2004 is not listed.  \nGiven the context, the drop from 2004 to 2011 cannot be determined from the provided table.  \n\nHowever, if we interpret \"2004\" as a typo for \"2007\" (the first year in the table), then the drop from 2007 to 2011 is:  \n351 - 158 = 193 million.\n\nProgram: subtract(351, 158)  \nAnswer: 193",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E053",
+      "E031",
+      "E074"
+    ]
+  },
+  {
+    "target_id": "GS/2013/page_152.pdf-2",
+    "arm": "case",
+    "gold_answer": 383.0,
+    "response": "PROGRAM: subtract(-233, 150), table_min(currency hedges, none), table_max(currency hedges, none)  \nANSWER: -383",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E063",
+      "E032",
+      "E031"
+    ]
+  },
+  {
+    "target_id": "JPM/2009/page_133.pdf-1",
+    "arm": "case",
+    "gold_answer": 1930.0,
+    "response": "PROGRAM: subtract(-1594, 336), abs(#0)  \nANSWER: 1930",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E009",
+      "E058",
+      "E008"
+    ]
+  },
+  {
+    "target_id": "C/2008/page_211.pdf-1",
+    "arm": "case",
+    "gold_answer": -9766.0,
+    "response": "PROGRAM: subtract(26020, 16254)\nANSWER: 9766",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E009",
+      "E072",
+      "E001"
+    ]
+  },
+  {
+    "target_id": "IP/2005/page_19.pdf-2",
+    "arm": "case",
+    "gold_answer": 306.0,
+    "response": "Program: subtract(2040, 1734)\nANSWER: 306",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E047",
+      "E004",
+      "E027"
+    ]
+  },
+  {
+    "target_id": "UNP/2009/page_65.pdf-2",
+    "arm": "case",
+    "gold_answer": 20633770.0,
+    "response": "We need to find the number of options outstanding under the 2001 plan as of December 31, 2009.  \nFrom the text: \"as of december 31 , 2009 , 3366230 options were outstanding under the 2001 plan.\"  \nSo the answer is directly given.\n\nPROGRAM: const_3366230  \nANSWER: 3366230",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E027",
+      "E041",
+      "E004"
+    ]
+  },
+  {
+    "target_id": "ETR/2017/page_114.pdf-1",
+    "arm": "case",
+    "gold_answer": 4.0,
+    "response": "PROGRAM: subtract(2, 6)\nANSWER: -4",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E051",
+      "E015",
+      "E045"
+    ]
+  },
+  {
+    "target_id": "LMT/2017/page_80.pdf-2",
+    "arm": "case",
+    "gold_answer": -12.5,
+    "response": "PROGRAM: subtract(290.6, 303.1)  \nANSWER: -12.5",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E066",
+      "E048",
+      "E028"
+    ]
+  },
+  {
+    "target_id": "ABMD/2004/page_26.pdf-1",
+    "arm": "case",
+    "gold_answer": 4926000.0,
+    "response": "PROGRAM: multiply(823, 6)  \nANSWER: 4938",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E053",
+      "E031",
+      "E034"
+    ]
+  },
+  {
+    "target_id": "AES/2002/page_46.pdf-1",
+    "arm": "case",
+    "gold_answer": "no",
+    "response": "PROGRAM: subtract(17.84, 4.11), subtract(60.15, 41.30), greater(#0, #1)\nANSWER: False",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E047",
+      "E033",
+      "E027"
+    ]
+  },
+  {
+    "target_id": "HII/2014/page_69.pdf-3",
+    "arm": "case",
+    "gold_answer": 5.88,
+    "response": "PROGRAM: multiply(21, 0.28)  \nANSWER: 5.88",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E054",
+      "E051",
+      "E078"
+    ]
+  },
+  {
+    "target_id": "DRE/2009/page_72.pdf-1",
+    "arm": "case",
+    "gold_answer": 14759301.12,
+    "response": "PROGRAM: multiply(1583616, 9.32)  \nANSWER: 14759301.12",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E039",
+      "E025",
+      "E028"
+    ]
+  },
+  {
+    "target_id": "IPG/2008/page_21.pdf-4",
+    "arm": "case",
+    "gold_answer": 177926.96,
+    "response": "PROGRAM: multiply(29704, 5.99)  \nANSWER: 177,927.96",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E024",
+      "E016",
+      "E070"
+    ]
+  },
+  {
+    "target_id": "ADI/2011/page_50.pdf-3",
+    "arm": "case",
+    "gold_answer": 2.3345,
+    "response": "PROGRAM: multiply(145, 0.0161), add(0, #0)  \nANSWER: 2.3345",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E051",
+      "E025",
+      "E019"
+    ]
+  },
+  {
+    "target_id": "BKR/2017/page_103.pdf-4",
+    "arm": "case",
+    "gold_answer": 68.306,
+    "response": "PROGRAM: multiply(1.7, 40.18)  \nANSWER: 68.306",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E039",
+      "E057",
+      "E056"
+    ]
+  },
+  {
+    "target_id": "MRO/2006/page_33.pdf-1",
+    "arm": "case",
+    "gold_answer": 40444920.0,
+    "response": "PROGRAM: multiply(1425, 77.76), multiply(#0, 365), divide(#1, const_1000)  \nANSWER: 40464.36",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E005",
+      "E058",
+      "E020"
+    ]
+  },
+  {
+    "target_id": "AON/2009/page_48.pdf-2",
+    "arm": "case",
+    "gold_answer": 0.134,
+    "response": "PROGRAM: table_min(16.0, 15.3, 13.4)  \nANSWER: 13.4%",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E038",
+      "E018",
+      "E008"
+    ]
+  },
+  {
+    "target_id": "LMT/2016/page_48.pdf-1",
+    "arm": "case",
+    "gold_answer": 16086.33333,
+    "response": "Program: table_average(17769, 15570, 14920)\nANSWER: 16086.33",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E075",
+      "E005",
+      "E054"
+    ]
+  },
+  {
+    "target_id": "AAPL/2005/page_83.pdf-2",
+    "arm": "case",
+    "gold_answer": -26.0,
+    "response": "PROGRAM: table_min(-26, -5, -7)  \nANSWER: -26",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E051",
+      "E019",
+      "E015"
+    ]
+  },
+  {
+    "target_id": "AON/2011/page_134.pdf-3",
+    "arm": "case",
+    "gold_answer": 11287.0,
+    "response": "PROGRAM: table_max(11287, 8512, 7546)\nANSWER: 11287",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E005",
+      "E059",
+      "E058"
+    ]
+  },
+  {
+    "target_id": "MRO/2007/page_134.pdf-3",
+    "arm": "case",
+    "gold_answer": 5.2,
+    "response": "Program: table_average(5.0, 5.1, 5.5)\nANSWER: 5.2",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E023",
+      "E041",
+      "E027"
+    ]
+  },
+  {
+    "target_id": "AAPL/2005/page_83.pdf-1",
+    "arm": "case",
+    "gold_answer": 0.26667,
+    "response": "PROGRAM: add(26, 28), add(#0, 26), divide(#1, const_3)\nANSWER: 26.7",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E030",
+      "E017",
+      "E056"
+    ]
+  },
+  {
+    "target_id": "LMT/2015/page_54.pdf-1",
+    "arm": "case",
+    "gold_answer": 6885.66667,
+    "response": "Program: add(6770, 7092), add(#0, 6795), divide(#1, const_3)\nANSWER: 6885.67",
+    "runtime": {
+      "provider": "DeepSeek",
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "effective_model": "deepseek-v4-flash",
+      "model_version": "a26a7955944dc5c60445bff77fac9c8e",
+      "temperature": 0.0,
+      "max_tokens": 2500,
+      "thinking_mode": false,
+      "response_model": "deepseek-v4-flash",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "shared_source_ids": [
+      "E075",
+      "E005",
+      "E038"
+    ]
+  }
+]

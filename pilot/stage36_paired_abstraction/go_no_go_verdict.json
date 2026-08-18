@@ -1,0 +1,15 @@
+{
+  "verdict": "GO",
+  "criteria_passed": 6,
+  "criteria_total": 6,
+  "metrics": {
+    "memory_sensitive": 16,
+    "case_rescues": 10,
+    "strategy_rescues": 7,
+    "paired_rescues": 11,
+    "case_strategy_disagreement": 8,
+    "parse_coverage_case": 25,
+    "execution_coverage_case": 23
+  },
+  "decision": "Proceed to expansion"
+}

@@ -28,6 +28,44 @@ from executor import parse_program_re, parse_linear_steps, exec_steps, official_
 # PROGRAM NORMALIZATION RULES
 # ============================================================================
 
+def extract_answer_from_response(response: str) -> Optional[float]:
+    """
+    Extract answer from model response for strict answer-level evaluation.
+
+    Normalization rules:
+    1. Find line starting with "ANSWER:"
+    2. Extract content after "ANSWER:" prefix
+    3. Parse numeric value using official str_to_num
+    4. Return None if no answer found or parse fails
+
+    NO MODIFICATIONS based on gold answer.
+    """
+    lines = response.split('\n')
+
+    for line in lines:
+        stripped = line.strip()
+
+        # Find ANSWER: line
+        if stripped.startswith('ANSWER:'):
+            content = stripped[7:].strip()
+
+            if not content:
+                return None
+
+            # Try to parse numeric value
+            try:
+                # Use official FinQA str_to_num
+                from executor import str_to_num
+                result = str_to_num(content)
+                if result != "n/a":
+                    return result
+            except:
+                pass
+
+            return None
+
+    return None
+
 def extract_program_from_response(response: str) -> Optional[str]:
     """
     Extract program string from model response.
@@ -72,12 +110,22 @@ def extract_program_from_response(response: str) -> Optional[str]:
     if not program_lines:
         return None
 
-    # Join and final cleanup
-    program = ' '.join(program_lines)
-    # Remove trailing punctuation/explanation
-    program = re.sub(r'\s*→.*$', '', program)
-    # Remove inline comments after # (but not intermediate references like #0)
-    program = re.sub(r'\s+#[^\d].*$', '', program)
+    # Clean each line individually to remove execution annotations
+    # (e.g., "subtract(1505,2504) → -999" becomes "subtract(1505,2504)")
+    cleaned_lines = []
+    for line in program_lines:
+        # Remove arrow annotations (→ result)
+        line = re.sub(r'\s*→.*$', '', line)
+        # Remove inline comments after # (but not intermediate references like #0)
+        line = re.sub(r'\s+#[^\d].*$', '', line)
+        if line.strip():
+            cleaned_lines.append(line.strip())
+
+    if not cleaned_lines:
+        return None
+
+    # Join into single program string
+    program = ', '.join(cleaned_lines)
 
     # Fix incomplete trailing operations (e.g., "add(2901,")
     # Count open/close parens to detect incomplete expressions
@@ -257,6 +305,15 @@ def audit_program_level():
                 elif exec_status == 'success':
                     failure_reason = 'wrong_result'
 
+            # Extract and evaluate answer from response (strict answer-level)
+            parsed_answer = extract_answer_from_response(response_data['response'])
+            strict_answer_correct = False
+            if parsed_answer is not None:
+                try:
+                    strict_answer_correct = match_result(parsed_answer, gold_result)
+                except:
+                    strict_answer_correct = False
+
             # Record
             record = {
                 'target_id': target_id,
@@ -268,7 +325,8 @@ def audit_program_level():
                 'execution_result': exec_result,
                 'program_correct': program_correct,
                 'failure_reason': failure_reason,
-                'answer_correct': response_data.get('exact_match', False)
+                'parsed_answer': parsed_answer,
+                'strict_answer_correct': strict_answer_correct
             }
 
             audit_records.append(record)
@@ -333,7 +391,7 @@ def compute_summary(records: List[Dict]) -> Dict:
         parsed = len([r for r in arm_records if r['execution_status'] not in ['no_program', 'parse_fail']])
         executed = len([r for r in arm_records if r['execution_status'] == 'success'])
         program_correct = len([r for r in arm_records if r['program_correct']])
-        answer_correct = len([r for r in arm_records if r['answer_correct']])
+        strict_answer_correct = len([r for r in arm_records if r['strict_answer_correct']])
 
         summary['per_arm'][arm] = {
             'total': total,
@@ -341,9 +399,9 @@ def compute_summary(records: List[Dict]) -> Dict:
             'parsed': parsed,
             'executed': executed,
             'program_correct': program_correct,
-            'answer_correct': answer_correct,
+            'strict_answer_correct': strict_answer_correct,
             'program_accuracy': program_correct / total if total > 0 else 0,
-            'answer_accuracy': answer_correct / total if total > 0 else 0
+            'strict_answer_accuracy': strict_answer_correct / total if total > 0 else 0
         }
 
     return summary
@@ -413,11 +471,11 @@ def print_summary(summary: Dict, transitions: Dict):
         stats = summary['per_arm'][arm]
         print(f"{arm:10s}: {stats['program_correct']:2d}/30 ({stats['program_accuracy']*100:5.1f}%)")
 
-    print("\nAnswer-Level Accuracy (for comparison):")
+    print("\nStrict Answer-Level Accuracy:")
     print("-" * 40)
     for arm in ['none', 'case', 'strategy', 'paired']:
         stats = summary['per_arm'][arm]
-        print(f"{arm:10s}: {stats['answer_correct']:2d}/30 ({stats['answer_accuracy']*100:5.1f}%)")
+        print(f"{arm:10s}: {stats['strict_answer_correct']:2d}/30 ({stats['strict_answer_accuracy']*100:5.1f}%)")
 
     print("\nCoverage:")
     print("-" * 40)

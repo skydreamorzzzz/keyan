@@ -9,7 +9,8 @@
     "execution_result": 0.03558124751216427,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 0.0356,
+    "strict_answer_correct": false
   },
   {
     "target_id": "GS/2017/page_143.pdf-1",
@@ -21,7 +22,8 @@
     "execution_result": -39.896,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": -0.39899999999999997,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PM/2017/page_99.pdf-3",
@@ -33,7 +35,8 @@
     "execution_result": 2.0,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 2.0,
+    "strict_answer_correct": true
   },
   {
     "target_id": "UA/2009/page_50.pdf-2",
@@ -45,7 +48,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": true
+    "parsed_answer": -0.75,
+    "strict_answer_correct": true
   },
   {
     "target_id": "ETR/2008/page_355.pdf-2",
@@ -57,7 +61,8 @@
     "execution_result": 17.97,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.1797,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PPG/2011/page_70.pdf-3",
@@ -69,7 +74,8 @@
     "execution_result": 30.0,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.3,
+    "strict_answer_correct": true
   },
   {
     "target_id": "IP/2006/page_32.pdf-4",
@@ -81,7 +87,8 @@
     "execution_result": 5.336048879837067,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.053399999999999996,
+    "strict_answer_correct": false
   },
   {
     "target_id": "FIS/2007/page_94.pdf-4",
@@ -93,7 +100,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": true
+    "parsed_answer": 0.1416,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLL/2007/page_47.pdf-4",
@@ -105,7 +113,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLK/2012/page_160.pdf-4",
@@ -117,7 +126,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": 250.0,
+    "strict_answer_correct": false
   },
   {
     "target_id": "GPN/2017/page_77.pdf-4",
@@ -129,7 +139,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": 62154.0,
+    "strict_answer_correct": false
   },
   {
     "target_id": "UNP/2014/page_25.pdf-2",
@@ -141,7 +152,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "STT/2008/page_83.pdf-2",
@@ -153,7 +165,8 @@
     "execution_result": 0.6363636363636362,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "MRO/2007/page_134.pdf-2",
@@ -165,7 +178,8 @@
     "execution_result": 66.0,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 66.0,
+    "strict_answer_correct": true
   },
   {
     "target_id": "IPG/2015/page_48.pdf-3",
@@ -177,7 +191,8 @@
     "execution_result": -68.4,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 68.4,
+    "strict_answer_correct": true
   },
   {
     "target_id": "IP/2007/page_31.pdf-1",
@@ -189,7 +204,8 @@
     "execution_result": 25.64,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": false
+    "parsed_answer": 0.2564,
+    "strict_answer_correct": false
   },
   {
     "target_id": "IP/2009/page_37.pdf-1",
@@ -201,7 +217,8 @@
     "execution_result": 0.7189542483660131,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 0.7190000000000001,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLL/2007/page_35.pdf-3",
@@ -213,7 +230,8 @@
     "execution_result": 20743588.7,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 20.74,
+    "strict_answer_correct": false
   },
   {
     "target_id": "SNPS/2006/page_69.pdf-1",
@@ -225,7 +243,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "TFX/2015/page_70.pdf-3",
@@ -237,7 +256,8 @@
     "execution_result": 386797189.66,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 386703687.66,
+    "strict_answer_correct": false
   },
   {
     "target_id": "AON/2009/page_46.pdf-2",
@@ -249,7 +269,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": true
+    "parsed_answer": 846.0,
+    "strict_answer_correct": true
   },
   {
     "target_id": "APD/2019/page_48.pdf-1",
@@ -261,7 +282,8 @@
     "execution_result": 2758.55,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 2758.55,
+    "strict_answer_correct": true
   },
   {
     "target_id": "AES/2016/page_191.pdf-3",
@@ -273,7 +295,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": false
+    "parsed_answer": -13.0,
+    "strict_answer_correct": false
   },
   {
     "target_id": "LMT/2015/page_56.pdf-2",
@@ -285,7 +308,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "MRO/2006/page_33.pdf-3",
@@ -297,7 +321,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": true
+    "parsed_answer": 22.33,
+    "strict_answer_correct": false
   },
   {
     "target_id": "JPM/2014/page_65.pdf-5",
@@ -309,7 +334,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PPG/2013/page_40.pdf-2",
@@ -321,7 +347,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLL/2010/page_28.pdf-2",
@@ -333,7 +360,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PNC/2009/page_46.pdf-3",
@@ -345,7 +373,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PPG/2013/page_40.pdf-1",
@@ -357,7 +386,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "RE/2015/page_33.pdf-2",
@@ -369,7 +399,8 @@
     "execution_result": 3.558124751216427,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.0356,
+    "strict_answer_correct": false
   },
   {
     "target_id": "GS/2017/page_143.pdf-1",
@@ -381,7 +412,8 @@
     "execution_result": -39.8961661341853,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": -0.39899999999999997,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PM/2017/page_99.pdf-3",
@@ -393,7 +425,8 @@
     "execution_result": 2.0,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 2.0,
+    "strict_answer_correct": true
   },
   {
     "target_id": "UA/2009/page_50.pdf-2",
@@ -405,7 +438,8 @@
     "execution_result": -75.0,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": -0.75,
+    "strict_answer_correct": true
   },
   {
     "target_id": "ETR/2008/page_355.pdf-2",
@@ -417,7 +451,8 @@
     "execution_result": 17.972350230414754,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.1797,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PPG/2011/page_70.pdf-3",
@@ -429,7 +464,8 @@
     "execution_result": 30.0,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.3,
+    "strict_answer_correct": true
   },
   {
     "target_id": "IP/2006/page_32.pdf-4",
@@ -441,7 +477,8 @@
     "execution_result": 0.05336048879837067,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 0.053,
+    "strict_answer_correct": false
   },
   {
     "target_id": "FIS/2007/page_94.pdf-4",
@@ -453,7 +490,8 @@
     "execution_result": 14.162095744424546,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.1416,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLL/2007/page_47.pdf-4",
@@ -465,7 +503,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLK/2012/page_160.pdf-4",
@@ -477,7 +516,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "GPN/2017/page_77.pdf-4",
@@ -489,7 +529,8 @@
     "execution_result": 73576.0,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 73576.0,
+    "strict_answer_correct": true
   },
   {
     "target_id": "UNP/2014/page_25.pdf-2",
@@ -501,7 +542,8 @@
     "execution_result": 24590.4,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": false
+    "parsed_answer": 24590.4,
+    "strict_answer_correct": false
   },
   {
     "target_id": "STT/2008/page_83.pdf-2",
@@ -513,7 +555,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": 0.6364,
+    "strict_answer_correct": false
   },
   {
     "target_id": "MRO/2007/page_134.pdf-2",
@@ -525,7 +568,8 @@
     "execution_result": 66.0,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 66.0,
+    "strict_answer_correct": true
   },
   {
     "target_id": "IPG/2015/page_48.pdf-3",
@@ -537,7 +581,8 @@
     "execution_result": 68.4,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 68.4,
+    "strict_answer_correct": true
   },
   {
     "target_id": "IP/2007/page_31.pdf-1",
@@ -549,7 +594,8 @@
     "execution_result": 25.643469971401334,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": false
+    "parsed_answer": 0.2564,
+    "strict_answer_correct": false
   },
   {
     "target_id": "IP/2009/page_37.pdf-1",
@@ -561,7 +607,8 @@
     "execution_result": 71.89542483660131,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.7190000000000001,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLL/2007/page_35.pdf-3",
@@ -573,7 +620,8 @@
     "execution_result": 20.7435887,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 20.74,
+    "strict_answer_correct": false
   },
   {
     "target_id": "SNPS/2006/page_69.pdf-1",
@@ -585,7 +633,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "TFX/2015/page_70.pdf-3",
@@ -597,7 +646,8 @@
     "execution_result": 386797189.66,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "AON/2009/page_46.pdf-2",
@@ -609,7 +659,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": true
+    "parsed_answer": 846.0,
+    "strict_answer_correct": true
   },
   {
     "target_id": "APD/2019/page_48.pdf-1",
@@ -621,7 +672,8 @@
     "execution_result": 2758.55,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 2758.55,
+    "strict_answer_correct": true
   },
   {
     "target_id": "AES/2016/page_191.pdf-3",
@@ -633,7 +685,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": true
+    "parsed_answer": -11.3,
+    "strict_answer_correct": false
   },
   {
     "target_id": "LMT/2015/page_56.pdf-2",
@@ -645,7 +698,8 @@
     "execution_result": 9198.333333333334,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 9198.33,
+    "strict_answer_correct": false
   },
   {
     "target_id": "MRO/2006/page_33.pdf-3",
@@ -657,7 +711,8 @@
     "execution_result": 22.333333333333332,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 22.33,
+    "strict_answer_correct": false
   },
   {
     "target_id": "JPM/2014/page_65.pdf-5",
@@ -669,7 +724,8 @@
     "execution_result": "no",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PPG/2013/page_40.pdf-2",
@@ -681,7 +737,8 @@
     "execution_result": "no",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLL/2010/page_28.pdf-2",
@@ -693,7 +750,8 @@
     "execution_result": "yes",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PNC/2009/page_46.pdf-3",
@@ -705,7 +763,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PPG/2013/page_40.pdf-1",
@@ -717,7 +776,8 @@
     "execution_result": "no",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "RE/2015/page_33.pdf-2",
@@ -729,7 +789,8 @@
     "execution_result": 3.56,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.0356,
+    "strict_answer_correct": false
   },
   {
     "target_id": "GS/2017/page_143.pdf-1",
@@ -741,7 +802,8 @@
     "execution_result": -999.0,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": -0.39899999999999997,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PM/2017/page_99.pdf-3",
@@ -753,7 +815,8 @@
     "execution_result": 2.0,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 2.0,
+    "strict_answer_correct": true
   },
   {
     "target_id": "UA/2009/page_50.pdf-2",
@@ -765,7 +828,8 @@
     "execution_result": -0.8999999999999999,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": -0.75,
+    "strict_answer_correct": true
   },
   {
     "target_id": "ETR/2008/page_355.pdf-2",
@@ -777,7 +841,8 @@
     "execution_result": 17.97,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.1797,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PPG/2011/page_70.pdf-3",
@@ -789,7 +854,8 @@
     "execution_result": 30.0,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.3,
+    "strict_answer_correct": true
   },
   {
     "target_id": "IP/2006/page_32.pdf-4",
@@ -801,7 +867,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": true
+    "parsed_answer": 0.053399999999999996,
+    "strict_answer_correct": false
   },
   {
     "target_id": "FIS/2007/page_94.pdf-4",
@@ -813,7 +880,8 @@
     "execution_result": 0.14162095744424547,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 0.1416,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLL/2007/page_47.pdf-4",
@@ -825,7 +893,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLK/2012/page_160.pdf-4",
@@ -837,7 +906,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "GPN/2017/page_77.pdf-4",
@@ -849,7 +919,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": 0.0,
+    "strict_answer_correct": false
   },
   {
     "target_id": "UNP/2014/page_25.pdf-2",
@@ -861,7 +932,8 @@
     "execution_result": 24590.4,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": false
+    "parsed_answer": 24590.4,
+    "strict_answer_correct": false
   },
   {
     "target_id": "STT/2008/page_83.pdf-2",
@@ -873,7 +945,8 @@
     "execution_result": 0.6363636363636362,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": false
+    "parsed_answer": 0.6364,
+    "strict_answer_correct": false
   },
   {
     "target_id": "MRO/2007/page_134.pdf-2",
@@ -885,7 +958,8 @@
     "execution_result": 66.0,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 66.0,
+    "strict_answer_correct": true
   },
   {
     "target_id": "IPG/2015/page_48.pdf-3",
@@ -897,7 +971,8 @@
     "execution_result": 68.4,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 68.4,
+    "strict_answer_correct": true
   },
   {
     "target_id": "IP/2007/page_31.pdf-1",
@@ -909,7 +984,8 @@
     "execution_result": 25.64,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": false
+    "parsed_answer": 0.2564,
+    "strict_answer_correct": false
   },
   {
     "target_id": "IP/2009/page_37.pdf-1",
@@ -921,7 +997,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": true
+    "parsed_answer": 0.7190000000000001,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLL/2007/page_35.pdf-3",
@@ -933,7 +1010,8 @@
     "execution_result": 20743588.7,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 20.74,
+    "strict_answer_correct": false
   },
   {
     "target_id": "SNPS/2006/page_69.pdf-1",
@@ -945,7 +1023,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "TFX/2015/page_70.pdf-3",
@@ -957,7 +1036,8 @@
     "execution_result": 386797189.66,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 386797000.66,
+    "strict_answer_correct": false
   },
   {
     "target_id": "AON/2009/page_46.pdf-2",
@@ -969,7 +1049,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": true
+    "parsed_answer": 846.0,
+    "strict_answer_correct": true
   },
   {
     "target_id": "APD/2019/page_48.pdf-1",
@@ -981,7 +1062,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": true
+    "parsed_answer": 2758.55,
+    "strict_answer_correct": true
   },
   {
     "target_id": "AES/2016/page_191.pdf-3",
@@ -993,7 +1075,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": true
+    "parsed_answer": -11.33,
+    "strict_answer_correct": false
   },
   {
     "target_id": "LMT/2015/page_56.pdf-2",
@@ -1005,7 +1088,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": true
+    "parsed_answer": 9198.33,
+    "strict_answer_correct": false
   },
   {
     "target_id": "MRO/2006/page_33.pdf-3",
@@ -1017,7 +1101,8 @@
     "execution_result": 45.0,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 22.3,
+    "strict_answer_correct": false
   },
   {
     "target_id": "JPM/2014/page_65.pdf-5",
@@ -1029,7 +1114,8 @@
     "execution_result": "no",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PPG/2013/page_40.pdf-2",
@@ -1041,7 +1127,8 @@
     "execution_result": "no",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLL/2010/page_28.pdf-2",
@@ -1053,7 +1140,8 @@
     "execution_result": "yes",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PNC/2009/page_46.pdf-3",
@@ -1065,7 +1153,8 @@
     "execution_result": "no",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PPG/2013/page_40.pdf-1",
@@ -1077,7 +1166,8 @@
     "execution_result": "no",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "RE/2015/page_33.pdf-2",
@@ -1089,7 +1179,8 @@
     "execution_result": 0.03558124751216418,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 0.0356,
+    "strict_answer_correct": false
   },
   {
     "target_id": "GS/2017/page_143.pdf-1",
@@ -1101,7 +1192,8 @@
     "execution_result": -39.8961661341853,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": -0.39899999999999997,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PM/2017/page_99.pdf-3",
@@ -1113,7 +1205,8 @@
     "execution_result": 2.0,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 2.0,
+    "strict_answer_correct": true
   },
   {
     "target_id": "UA/2009/page_50.pdf-2",
@@ -1125,7 +1218,8 @@
     "execution_result": -0.75,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": -0.75,
+    "strict_answer_correct": true
   },
   {
     "target_id": "ETR/2008/page_355.pdf-2",
@@ -1137,7 +1231,8 @@
     "execution_result": 17.972350230414754,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.1797,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PPG/2011/page_70.pdf-3",
@@ -1149,7 +1244,8 @@
     "execution_result": 30.0,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.3,
+    "strict_answer_correct": true
   },
   {
     "target_id": "IP/2006/page_32.pdf-4",
@@ -1161,7 +1257,8 @@
     "execution_result": 0.05336048879837067,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 0.053,
+    "strict_answer_correct": false
   },
   {
     "target_id": "FIS/2007/page_94.pdf-4",
@@ -1173,7 +1270,8 @@
     "execution_result": 14.162095744424546,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.1416,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLL/2007/page_47.pdf-4",
@@ -1185,7 +1283,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLK/2012/page_160.pdf-4",
@@ -1197,7 +1296,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": false
+    "parsed_answer": 250.0,
+    "strict_answer_correct": false
   },
   {
     "target_id": "GPN/2017/page_77.pdf-4",
@@ -1209,7 +1309,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "execution_failure",
-    "answer_correct": false
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "UNP/2014/page_25.pdf-2",
@@ -1221,7 +1322,8 @@
     "execution_result": 24590.4,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": false
+    "parsed_answer": 24590.4,
+    "strict_answer_correct": false
   },
   {
     "target_id": "STT/2008/page_83.pdf-2",
@@ -1233,7 +1335,8 @@
     "execution_result": 0.6363636363636362,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": false
+    "parsed_answer": 0.6364,
+    "strict_answer_correct": false
   },
   {
     "target_id": "MRO/2007/page_134.pdf-2",
@@ -1245,7 +1348,8 @@
     "execution_result": 66.0,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 66.0,
+    "strict_answer_correct": true
   },
   {
     "target_id": "IPG/2015/page_48.pdf-3",
@@ -1257,7 +1361,8 @@
     "execution_result": 68.4,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 68.4,
+    "strict_answer_correct": true
   },
   {
     "target_id": "IP/2007/page_31.pdf-1",
@@ -1269,7 +1374,8 @@
     "execution_result": 25.643469971401334,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": false
+    "parsed_answer": 0.2564,
+    "strict_answer_correct": false
   },
   {
     "target_id": "IP/2009/page_37.pdf-1",
@@ -1281,7 +1387,8 @@
     "execution_result": 71.89542483660131,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": true
+    "parsed_answer": 0.7190000000000001,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLL/2007/page_35.pdf-3",
@@ -1293,7 +1400,8 @@
     "execution_result": 20.7435887,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 20.74,
+    "strict_answer_correct": false
   },
   {
     "target_id": "SNPS/2006/page_69.pdf-1",
@@ -1305,7 +1413,8 @@
     "execution_result": 0.0,
     "program_correct": false,
     "failure_reason": "wrong_result",
-    "answer_correct": false
+    "parsed_answer": 0.0,
+    "strict_answer_correct": false
   },
   {
     "target_id": "TFX/2015/page_70.pdf-3",
@@ -1317,7 +1426,8 @@
     "execution_result": 386797189.66,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 386797000.66,
+    "strict_answer_correct": false
   },
   {
     "target_id": "AON/2009/page_46.pdf-2",
@@ -1329,7 +1439,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": true
+    "parsed_answer": 846.0,
+    "strict_answer_correct": true
   },
   {
     "target_id": "APD/2019/page_48.pdf-1",
@@ -1341,7 +1452,8 @@
     "execution_result": 2758.55,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 2758.55,
+    "strict_answer_correct": true
   },
   {
     "target_id": "AES/2016/page_191.pdf-3",
@@ -1353,7 +1465,8 @@
     "execution_result": null,
     "program_correct": false,
     "failure_reason": "parse_failure",
-    "answer_correct": true
+    "parsed_answer": -11.33,
+    "strict_answer_correct": false
   },
   {
     "target_id": "LMT/2015/page_56.pdf-2",
@@ -1365,7 +1478,8 @@
     "execution_result": 9198.333333333334,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 9198.33,
+    "strict_answer_correct": false
   },
   {
     "target_id": "MRO/2006/page_33.pdf-3",
@@ -1377,7 +1491,8 @@
     "execution_result": 22.333333333333332,
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": 22.33,
+    "strict_answer_correct": false
   },
   {
     "target_id": "JPM/2014/page_65.pdf-5",
@@ -1389,7 +1504,8 @@
     "execution_result": "no",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PPG/2013/page_40.pdf-2",
@@ -1401,7 +1517,8 @@
     "execution_result": "no",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "BLL/2010/page_28.pdf-2",
@@ -1413,7 +1530,8 @@
     "execution_result": "yes",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PNC/2009/page_46.pdf-3",
@@ -1425,7 +1543,8 @@
     "execution_result": "no",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   },
   {
     "target_id": "PPG/2013/page_40.pdf-1",
@@ -1437,6 +1556,7 @@
     "execution_result": "no",
     "program_correct": true,
     "failure_reason": null,
-    "answer_correct": true
+    "parsed_answer": null,
+    "strict_answer_correct": false
   }
 ]
