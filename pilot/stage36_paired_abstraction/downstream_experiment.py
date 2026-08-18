@@ -305,7 +305,13 @@ def parse_answer(response: str) -> Any:
     return None
 
 def evaluate_exact_match(predicted, gold, tolerance=0.01) -> bool:
-    """Evaluate exact match with numerical tolerance."""
+    """Evaluate exact match with numerical tolerance.
+
+    Note: Stage 36 uses answer-only evaluation (not program execution).
+    This is less strict than official FinQA program execution evaluation.
+    We use 1% relative tolerance for small numbers (<1) to handle precision loss
+    from model text output (e.g., 0.0356 vs 0.03558).
+    """
     if predicted is None or gold is None:
         return False
 
@@ -313,10 +319,11 @@ def evaluate_exact_match(predicted, gold, tolerance=0.01) -> bool:
         pred_num = float(predicted)
         gold_num = float(gold)
 
-        # Relative tolerance for large numbers
-        if abs(gold_num) > 1:
+        # Use relative tolerance for all non-zero numbers
+        if abs(gold_num) > 0:
             return abs(pred_num - gold_num) / abs(gold_num) < tolerance
         else:
+            # For zero, use absolute tolerance
             return abs(pred_num - gold_num) < tolerance
 
     except:

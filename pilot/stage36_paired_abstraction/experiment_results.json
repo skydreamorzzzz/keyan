@@ -1,0 +1,1299 @@
+{
+  "aggregate": {
+    "None": {
+      "em_rate": 0.5333333333333333,
+      "n_correct": 16,
+      "n_total": 30
+    },
+    "Case": {
+      "em_rate": 0.7666666666666667,
+      "n_correct": 23,
+      "n_total": 30
+    },
+    "Strategy": {
+      "em_rate": 0.7333333333333333,
+      "n_correct": 22,
+      "n_total": 30
+    },
+    "Paired": {
+      "em_rate": 0.7666666666666667,
+      "n_correct": 23,
+      "n_total": 30
+    }
+  },
+  "transitions": {
+    "none_wrong_case_correct": 8,
+    "none_wrong_strategy_correct": 6,
+    "none_wrong_paired_correct": 7,
+    "case_correct_strategy_wrong": 2,
+    "case_wrong_strategy_correct": 1,
+    "paired_beats_both": 0,
+    "paired_worse_than_best": 1,
+    "all_wrong": 6,
+    "all_correct": 15
+  },
+  "query_results": {
+    "PPG/2011/page_70.pdf-3": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "BLL/2010/page_28.pdf-2": {
+      "None": false,
+      "Case": true,
+      "Strategy": false,
+      "Paired": true
+    },
+    "PNC/2009/page_46.pdf-3": {
+      "None": false,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "IPG/2015/page_48.pdf-3": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "PM/2017/page_99.pdf-3": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "BLK/2012/page_160.pdf-4": {
+      "None": false,
+      "Case": false,
+      "Strategy": false,
+      "Paired": false
+    },
+    "GS/2017/page_143.pdf-1": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "BLL/2007/page_47.pdf-4": {
+      "None": false,
+      "Case": false,
+      "Strategy": false,
+      "Paired": false
+    },
+    "AON/2009/page_46.pdf-2": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "FIS/2007/page_94.pdf-4": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "JPM/2014/page_65.pdf-5": {
+      "None": false,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "GPN/2017/page_77.pdf-4": {
+      "None": false,
+      "Case": true,
+      "Strategy": false,
+      "Paired": false
+    },
+    "SNPS/2006/page_69.pdf-1": {
+      "None": false,
+      "Case": false,
+      "Strategy": false,
+      "Paired": false
+    },
+    "ETR/2008/page_355.pdf-2": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "UA/2009/page_50.pdf-2": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "MRO/2006/page_33.pdf-3": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "MRO/2007/page_134.pdf-2": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "UNP/2014/page_25.pdf-2": {
+      "None": false,
+      "Case": false,
+      "Strategy": false,
+      "Paired": false
+    },
+    "AES/2016/page_191.pdf-3": {
+      "None": false,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "PPG/2013/page_40.pdf-2": {
+      "None": false,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "PPG/2013/page_40.pdf-1": {
+      "None": false,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "BLL/2007/page_35.pdf-3": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "IP/2009/page_37.pdf-1": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "STT/2008/page_83.pdf-2": {
+      "None": false,
+      "Case": false,
+      "Strategy": false,
+      "Paired": false
+    },
+    "IP/2007/page_31.pdf-1": {
+      "None": false,
+      "Case": false,
+      "Strategy": false,
+      "Paired": false
+    },
+    "RE/2015/page_33.pdf-2": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "LMT/2015/page_56.pdf-2": {
+      "None": false,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "APD/2019/page_48.pdf-1": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    },
+    "TFX/2015/page_70.pdf-3": {
+      "None": true,
+      "Case": false,
+      "Strategy": true,
+      "Paired": true
+    },
+    "IP/2006/page_32.pdf-4": {
+      "None": true,
+      "Case": true,
+      "Strategy": true,
+      "Paired": true
+    }
+  },
+  "correlations": [
+    {
+      "target_id": "PPG/2011/page_70.pdf-3",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.4699952304363251,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.4714045207910316,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "PPG/2011/page_70.pdf-3",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.4699952304363251,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.4714045207910316,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "PPG/2011/page_70.pdf-3",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.4699952304363251,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.4714045207910316,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "PPG/2011/page_70.pdf-3",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.4699952304363251,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.4714045207910316,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "BLL/2010/page_28.pdf-2",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.4865160584449768,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "BLL/2010/page_28.pdf-2",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.4865160584449768,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "BLL/2010/page_28.pdf-2",
+      "arm": "Strategy",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.4865160584449768,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "BLL/2010/page_28.pdf-2",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.4865160584449768,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "PNC/2009/page_46.pdf-3",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5477038621902466,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "PNC/2009/page_46.pdf-3",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5477038621902466,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "PNC/2009/page_46.pdf-3",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5477038621902466,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "PNC/2009/page_46.pdf-3",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5477038621902466,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "IPG/2015/page_48.pdf-3",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5690118273099264,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "IPG/2015/page_48.pdf-3",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5690118273099264,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "IPG/2015/page_48.pdf-3",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5690118273099264,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "IPG/2015/page_48.pdf-3",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5690118273099264,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "PM/2017/page_99.pdf-3",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6084847847620646,
+      "avg_operation_family_overlap": 0.27777777777777773,
+      "avg_operation_multiset_similarity": 0.42815235012539105,
+      "avg_structure_alignment": 0.2777777777777778
+    },
+    {
+      "target_id": "PM/2017/page_99.pdf-3",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6084847847620646,
+      "avg_operation_family_overlap": 0.27777777777777773,
+      "avg_operation_multiset_similarity": 0.42815235012539105,
+      "avg_structure_alignment": 0.2777777777777778
+    },
+    {
+      "target_id": "PM/2017/page_99.pdf-3",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6084847847620646,
+      "avg_operation_family_overlap": 0.27777777777777773,
+      "avg_operation_multiset_similarity": 0.42815235012539105,
+      "avg_structure_alignment": 0.2777777777777778
+    },
+    {
+      "target_id": "PM/2017/page_99.pdf-3",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6084847847620646,
+      "avg_operation_family_overlap": 0.27777777777777773,
+      "avg_operation_multiset_similarity": 0.42815235012539105,
+      "avg_structure_alignment": 0.2777777777777778
+    },
+    {
+      "target_id": "BLK/2012/page_160.pdf-4",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5464451809724172,
+      "avg_operation_family_overlap": 0.16666666666666666,
+      "avg_operation_multiset_similarity": 0.2357022603955158,
+      "avg_structure_alignment": 0.16666666666666666
+    },
+    {
+      "target_id": "BLK/2012/page_160.pdf-4",
+      "arm": "Case",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5464451809724172,
+      "avg_operation_family_overlap": 0.16666666666666666,
+      "avg_operation_multiset_similarity": 0.2357022603955158,
+      "avg_structure_alignment": 0.16666666666666666
+    },
+    {
+      "target_id": "BLK/2012/page_160.pdf-4",
+      "arm": "Strategy",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5464451809724172,
+      "avg_operation_family_overlap": 0.16666666666666666,
+      "avg_operation_multiset_similarity": 0.2357022603955158,
+      "avg_structure_alignment": 0.16666666666666666
+    },
+    {
+      "target_id": "BLK/2012/page_160.pdf-4",
+      "arm": "Paired",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5464451809724172,
+      "avg_operation_family_overlap": 0.16666666666666666,
+      "avg_operation_multiset_similarity": 0.2357022603955158,
+      "avg_structure_alignment": 0.16666666666666666
+    },
+    {
+      "target_id": "GS/2017/page_143.pdf-1",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5939774513244629,
+      "avg_operation_family_overlap": 0.5555555555555555,
+      "avg_operation_multiset_similarity": 0.6054988603092419,
+      "avg_structure_alignment": 0.5555555555555556
+    },
+    {
+      "target_id": "GS/2017/page_143.pdf-1",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5939774513244629,
+      "avg_operation_family_overlap": 0.5555555555555555,
+      "avg_operation_multiset_similarity": 0.6054988603092419,
+      "avg_structure_alignment": 0.5555555555555556
+    },
+    {
+      "target_id": "GS/2017/page_143.pdf-1",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5939774513244629,
+      "avg_operation_family_overlap": 0.5555555555555555,
+      "avg_operation_multiset_similarity": 0.6054988603092419,
+      "avg_structure_alignment": 0.5555555555555556
+    },
+    {
+      "target_id": "GS/2017/page_143.pdf-1",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5939774513244629,
+      "avg_operation_family_overlap": 0.5555555555555555,
+      "avg_operation_multiset_similarity": 0.6054988603092419,
+      "avg_structure_alignment": 0.5555555555555556
+    },
+    {
+      "target_id": "BLL/2007/page_47.pdf-4",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.6754717628161112,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3847734588955018,
+      "avg_structure_alignment": 0.2777777777777778
+    },
+    {
+      "target_id": "BLL/2007/page_47.pdf-4",
+      "arm": "Case",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.6754717628161112,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3847734588955018,
+      "avg_structure_alignment": 0.2777777777777778
+    },
+    {
+      "target_id": "BLL/2007/page_47.pdf-4",
+      "arm": "Strategy",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.6754717628161112,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3847734588955018,
+      "avg_structure_alignment": 0.2777777777777778
+    },
+    {
+      "target_id": "BLL/2007/page_47.pdf-4",
+      "arm": "Paired",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.6754717628161112,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3847734588955018,
+      "avg_structure_alignment": 0.2777777777777778
+    },
+    {
+      "target_id": "AON/2009/page_46.pdf-2",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.48367753624916077,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "AON/2009/page_46.pdf-2",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.48367753624916077,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "AON/2009/page_46.pdf-2",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.48367753624916077,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "AON/2009/page_46.pdf-2",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.48367753624916077,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "FIS/2007/page_94.pdf-4",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5733765165011088,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3847734588955018,
+      "avg_structure_alignment": 0.2777777777777778
+    },
+    {
+      "target_id": "FIS/2007/page_94.pdf-4",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5733765165011088,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3847734588955018,
+      "avg_structure_alignment": 0.2777777777777778
+    },
+    {
+      "target_id": "FIS/2007/page_94.pdf-4",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5733765165011088,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3847734588955018,
+      "avg_structure_alignment": 0.2777777777777778
+    },
+    {
+      "target_id": "FIS/2007/page_94.pdf-4",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5733765165011088,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3847734588955018,
+      "avg_structure_alignment": 0.2777777777777778
+    },
+    {
+      "target_id": "JPM/2014/page_65.pdf-5",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.4644702176253001,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "JPM/2014/page_65.pdf-5",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.4644702176253001,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "JPM/2014/page_65.pdf-5",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.4644702176253001,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "JPM/2014/page_65.pdf-5",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.4644702176253001,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "GPN/2017/page_77.pdf-4",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5617009003957113,
+      "avg_operation_family_overlap": 0.5,
+      "avg_operation_multiset_similarity": 0.5690355937288492,
+      "avg_structure_alignment": 0.5
+    },
+    {
+      "target_id": "GPN/2017/page_77.pdf-4",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5617009003957113,
+      "avg_operation_family_overlap": 0.5,
+      "avg_operation_multiset_similarity": 0.5690355937288492,
+      "avg_structure_alignment": 0.5
+    },
+    {
+      "target_id": "GPN/2017/page_77.pdf-4",
+      "arm": "Strategy",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5617009003957113,
+      "avg_operation_family_overlap": 0.5,
+      "avg_operation_multiset_similarity": 0.5690355937288492,
+      "avg_structure_alignment": 0.5
+    },
+    {
+      "target_id": "GPN/2017/page_77.pdf-4",
+      "arm": "Paired",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5617009003957113,
+      "avg_operation_family_overlap": 0.5,
+      "avg_operation_multiset_similarity": 0.5690355937288492,
+      "avg_structure_alignment": 0.5
+    },
+    {
+      "target_id": "SNPS/2006/page_69.pdf-1",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5612419843673706,
+      "avg_operation_family_overlap": 0.38888888888888884,
+      "avg_operation_multiset_similarity": 0.569035593728849,
+      "avg_structure_alignment": 0.5
+    },
+    {
+      "target_id": "SNPS/2006/page_69.pdf-1",
+      "arm": "Case",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5612419843673706,
+      "avg_operation_family_overlap": 0.38888888888888884,
+      "avg_operation_multiset_similarity": 0.569035593728849,
+      "avg_structure_alignment": 0.5
+    },
+    {
+      "target_id": "SNPS/2006/page_69.pdf-1",
+      "arm": "Strategy",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5612419843673706,
+      "avg_operation_family_overlap": 0.38888888888888884,
+      "avg_operation_multiset_similarity": 0.569035593728849,
+      "avg_structure_alignment": 0.5
+    },
+    {
+      "target_id": "SNPS/2006/page_69.pdf-1",
+      "arm": "Paired",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5612419843673706,
+      "avg_operation_family_overlap": 0.38888888888888884,
+      "avg_operation_multiset_similarity": 0.569035593728849,
+      "avg_structure_alignment": 0.5
+    },
+    {
+      "target_id": "ETR/2008/page_355.pdf-2",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5817912817001343,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.7721655269759085,
+      "avg_structure_alignment": 0.7222222222222223
+    },
+    {
+      "target_id": "ETR/2008/page_355.pdf-2",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5817912817001343,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.7721655269759085,
+      "avg_structure_alignment": 0.7222222222222223
+    },
+    {
+      "target_id": "ETR/2008/page_355.pdf-2",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5817912817001343,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.7721655269759085,
+      "avg_structure_alignment": 0.7222222222222223
+    },
+    {
+      "target_id": "ETR/2008/page_355.pdf-2",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5817912817001343,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.7721655269759085,
+      "avg_structure_alignment": 0.7222222222222223
+    },
+    {
+      "target_id": "UA/2009/page_50.pdf-2",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.42329495151837665,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.33333333333333326,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "UA/2009/page_50.pdf-2",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.42329495151837665,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.33333333333333326,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "UA/2009/page_50.pdf-2",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.42329495151837665,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.33333333333333326,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "UA/2009/page_50.pdf-2",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.42329495151837665,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.33333333333333326,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "MRO/2006/page_33.pdf-3",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.4594716231028239,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "MRO/2006/page_33.pdf-3",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.4594716231028239,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "MRO/2006/page_33.pdf-3",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.4594716231028239,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "MRO/2006/page_33.pdf-3",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.4594716231028239,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "MRO/2007/page_134.pdf-2",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.528418242931366,
+      "avg_operation_family_overlap": 0.16666666666666666,
+      "avg_operation_multiset_similarity": 0.29814239699997197,
+      "avg_structure_alignment": 0.11111111111111112
+    },
+    {
+      "target_id": "MRO/2007/page_134.pdf-2",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.528418242931366,
+      "avg_operation_family_overlap": 0.16666666666666666,
+      "avg_operation_multiset_similarity": 0.29814239699997197,
+      "avg_structure_alignment": 0.11111111111111112
+    },
+    {
+      "target_id": "MRO/2007/page_134.pdf-2",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.528418242931366,
+      "avg_operation_family_overlap": 0.16666666666666666,
+      "avg_operation_multiset_similarity": 0.29814239699997197,
+      "avg_structure_alignment": 0.11111111111111112
+    },
+    {
+      "target_id": "MRO/2007/page_134.pdf-2",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.528418242931366,
+      "avg_operation_family_overlap": 0.16666666666666666,
+      "avg_operation_multiset_similarity": 0.29814239699997197,
+      "avg_structure_alignment": 0.11111111111111112
+    },
+    {
+      "target_id": "UNP/2014/page_25.pdf-2",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5134133696556091,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "UNP/2014/page_25.pdf-2",
+      "arm": "Case",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5134133696556091,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "UNP/2014/page_25.pdf-2",
+      "arm": "Strategy",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5134133696556091,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "UNP/2014/page_25.pdf-2",
+      "arm": "Paired",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5134133696556091,
+      "avg_operation_family_overlap": 0.0,
+      "avg_operation_multiset_similarity": 0.0,
+      "avg_structure_alignment": 0.0
+    },
+    {
+      "target_id": "AES/2016/page_191.pdf-3",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5535662968953451,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "AES/2016/page_191.pdf-3",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5535662968953451,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "AES/2016/page_191.pdf-3",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5535662968953451,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "AES/2016/page_191.pdf-3",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5535662968953451,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "PPG/2013/page_40.pdf-2",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5317862133185068,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "PPG/2013/page_40.pdf-2",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5317862133185068,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "PPG/2013/page_40.pdf-2",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5317862133185068,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "PPG/2013/page_40.pdf-2",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5317862133185068,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "PPG/2013/page_40.pdf-1",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5394768615563711,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "PPG/2013/page_40.pdf-1",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5394768615563711,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "PPG/2013/page_40.pdf-1",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5394768615563711,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "PPG/2013/page_40.pdf-1",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5394768615563711,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "BLL/2007/page_35.pdf-3",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6738858819007874,
+      "avg_operation_family_overlap": 0.16666666666666666,
+      "avg_operation_multiset_similarity": 0.2357022603955158,
+      "avg_structure_alignment": 0.16666666666666666
+    },
+    {
+      "target_id": "BLL/2007/page_35.pdf-3",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6738858819007874,
+      "avg_operation_family_overlap": 0.16666666666666666,
+      "avg_operation_multiset_similarity": 0.2357022603955158,
+      "avg_structure_alignment": 0.16666666666666666
+    },
+    {
+      "target_id": "BLL/2007/page_35.pdf-3",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6738858819007874,
+      "avg_operation_family_overlap": 0.16666666666666666,
+      "avg_operation_multiset_similarity": 0.2357022603955158,
+      "avg_structure_alignment": 0.16666666666666666
+    },
+    {
+      "target_id": "BLL/2007/page_35.pdf-3",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6738858819007874,
+      "avg_operation_family_overlap": 0.16666666666666666,
+      "avg_operation_multiset_similarity": 0.2357022603955158,
+      "avg_structure_alignment": 0.16666666666666666
+    },
+    {
+      "target_id": "IP/2009/page_37.pdf-1",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6723220944404602,
+      "avg_operation_family_overlap": 0.38888888888888884,
+      "avg_operation_multiset_similarity": 0.47690452631217545,
+      "avg_structure_alignment": 0.25
+    },
+    {
+      "target_id": "IP/2009/page_37.pdf-1",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6723220944404602,
+      "avg_operation_family_overlap": 0.38888888888888884,
+      "avg_operation_multiset_similarity": 0.47690452631217545,
+      "avg_structure_alignment": 0.25
+    },
+    {
+      "target_id": "IP/2009/page_37.pdf-1",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6723220944404602,
+      "avg_operation_family_overlap": 0.38888888888888884,
+      "avg_operation_multiset_similarity": 0.47690452631217545,
+      "avg_structure_alignment": 0.25
+    },
+    {
+      "target_id": "IP/2009/page_37.pdf-1",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6723220944404602,
+      "avg_operation_family_overlap": 0.38888888888888884,
+      "avg_operation_multiset_similarity": 0.47690452631217545,
+      "avg_structure_alignment": 0.25
+    },
+    {
+      "target_id": "STT/2008/page_83.pdf-2",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.41790006558100384,
+      "avg_operation_family_overlap": 0.27777777777777773,
+      "avg_operation_multiset_similarity": 0.40236892706218247,
+      "avg_structure_alignment": 0.16666666666666666
+    },
+    {
+      "target_id": "STT/2008/page_83.pdf-2",
+      "arm": "Case",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.41790006558100384,
+      "avg_operation_family_overlap": 0.27777777777777773,
+      "avg_operation_multiset_similarity": 0.40236892706218247,
+      "avg_structure_alignment": 0.16666666666666666
+    },
+    {
+      "target_id": "STT/2008/page_83.pdf-2",
+      "arm": "Strategy",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.41790006558100384,
+      "avg_operation_family_overlap": 0.27777777777777773,
+      "avg_operation_multiset_similarity": 0.40236892706218247,
+      "avg_structure_alignment": 0.16666666666666666
+    },
+    {
+      "target_id": "STT/2008/page_83.pdf-2",
+      "arm": "Paired",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.41790006558100384,
+      "avg_operation_family_overlap": 0.27777777777777773,
+      "avg_operation_multiset_similarity": 0.40236892706218247,
+      "avg_structure_alignment": 0.16666666666666666
+    },
+    {
+      "target_id": "IP/2007/page_31.pdf-1",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.672128697236379,
+      "avg_operation_family_overlap": 0.38888888888888884,
+      "avg_operation_multiset_similarity": 0.47690452631217545,
+      "avg_structure_alignment": 0.25
+    },
+    {
+      "target_id": "IP/2007/page_31.pdf-1",
+      "arm": "Case",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.672128697236379,
+      "avg_operation_family_overlap": 0.38888888888888884,
+      "avg_operation_multiset_similarity": 0.47690452631217545,
+      "avg_structure_alignment": 0.25
+    },
+    {
+      "target_id": "IP/2007/page_31.pdf-1",
+      "arm": "Strategy",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.672128697236379,
+      "avg_operation_family_overlap": 0.38888888888888884,
+      "avg_operation_multiset_similarity": 0.47690452631217545,
+      "avg_structure_alignment": 0.25
+    },
+    {
+      "target_id": "IP/2007/page_31.pdf-1",
+      "arm": "Paired",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.672128697236379,
+      "avg_operation_family_overlap": 0.38888888888888884,
+      "avg_operation_multiset_similarity": 0.47690452631217545,
+      "avg_structure_alignment": 0.25
+    },
+    {
+      "target_id": "RE/2015/page_33.pdf-2",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5576462348302206,
+      "avg_operation_family_overlap": 0.8888888888888888,
+      "avg_operation_multiset_similarity": 0.9388321936425751,
+      "avg_structure_alignment": 0.22222222222222224
+    },
+    {
+      "target_id": "RE/2015/page_33.pdf-2",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5576462348302206,
+      "avg_operation_family_overlap": 0.8888888888888888,
+      "avg_operation_multiset_similarity": 0.9388321936425751,
+      "avg_structure_alignment": 0.22222222222222224
+    },
+    {
+      "target_id": "RE/2015/page_33.pdf-2",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5576462348302206,
+      "avg_operation_family_overlap": 0.8888888888888888,
+      "avg_operation_multiset_similarity": 0.9388321936425751,
+      "avg_structure_alignment": 0.22222222222222224
+    },
+    {
+      "target_id": "RE/2015/page_33.pdf-2",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5576462348302206,
+      "avg_operation_family_overlap": 0.8888888888888888,
+      "avg_operation_multiset_similarity": 0.9388321936425751,
+      "avg_structure_alignment": 0.22222222222222224
+    },
+    {
+      "target_id": "LMT/2015/page_56.pdf-2",
+      "arm": "None",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5606137116750082,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "LMT/2015/page_56.pdf-2",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5606137116750082,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "LMT/2015/page_56.pdf-2",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5606137116750082,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "LMT/2015/page_56.pdf-2",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5606137116750082,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "APD/2019/page_48.pdf-1",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.596565047899882,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "APD/2019/page_48.pdf-1",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.596565047899882,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "APD/2019/page_48.pdf-1",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.596565047899882,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "APD/2019/page_48.pdf-1",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.596565047899882,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3333333333333333,
+      "avg_structure_alignment": 0.3333333333333333
+    },
+    {
+      "target_id": "TFX/2015/page_70.pdf-3",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5173885226249695,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "TFX/2015/page_70.pdf-3",
+      "arm": "Case",
+      "exact_match": false,
+      "avg_semantic_similarity": 0.5173885226249695,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "TFX/2015/page_70.pdf-3",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5173885226249695,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "TFX/2015/page_70.pdf-3",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.5173885226249695,
+      "avg_operation_family_overlap": 0.6666666666666666,
+      "avg_operation_multiset_similarity": 0.6666666666666666,
+      "avg_structure_alignment": 0.6666666666666666
+    },
+    {
+      "target_id": "IP/2006/page_32.pdf-4",
+      "arm": "None",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6011049548784891,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3411115157344618,
+      "avg_structure_alignment": 0.25
+    },
+    {
+      "target_id": "IP/2006/page_32.pdf-4",
+      "arm": "Case",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6011049548784891,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3411115157344618,
+      "avg_structure_alignment": 0.25
+    },
+    {
+      "target_id": "IP/2006/page_32.pdf-4",
+      "arm": "Strategy",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6011049548784891,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3411115157344618,
+      "avg_structure_alignment": 0.25
+    },
+    {
+      "target_id": "IP/2006/page_32.pdf-4",
+      "arm": "Paired",
+      "exact_match": true,
+      "avg_semantic_similarity": 0.6011049548784891,
+      "avg_operation_family_overlap": 0.3333333333333333,
+      "avg_operation_multiset_similarity": 0.3411115157344618,
+      "avg_structure_alignment": 0.25
+    }
+  ]
+}

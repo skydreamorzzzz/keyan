@@ -1,0 +1,114 @@
+{
+  "rescue_queries": [
+    {
+      "target_id": "GPN/2017/page_77.pdf-4",
+      "none_em": false,
+      "case_em": true,
+      "strategy_em": false,
+      "paired_em": false,
+      "none_pred": 62154.0,
+      "case_pred": 73576.0,
+      "strategy_pred": 0.0,
+      "paired_pred": "42721 thousand",
+      "gold": 73576.0
+    },
+    {
+      "target_id": "AES/2016/page_191.pdf-3",
+      "none_em": false,
+      "case_em": true,
+      "strategy_em": true,
+      "paired_em": true,
+      "none_pred": -13.0,
+      "case_pred": -11.3,
+      "strategy_pred": -11.33,
+      "paired_pred": -11.33,
+      "gold": -11.33333
+    },
+    {
+      "target_id": "LMT/2015/page_56.pdf-2",
+      "none_em": false,
+      "case_em": true,
+      "strategy_em": true,
+      "paired_em": true,
+      "none_pred": "9198.333... (approximately 9198.33)",
+      "case_pred": 9198.33,
+      "strategy_pred": 9198.33,
+      "paired_pred": 9198.33,
+      "gold": 9198.33333
+    },
+    {
+      "target_id": "JPM/2014/page_65.pdf-5",
+      "none_em": false,
+      "case_em": true,
+      "strategy_em": true,
+      "paired_em": true,
+      "none_pred": "No JPMorgan Chase did not outperform the KBW Bank Index.",
+      "case_pred": "no",
+      "strategy_pred": "no",
+      "paired_pred": "no",
+      "gold": "no"
+    },
+    {
+      "target_id": "PPG/2013/page_40.pdf-2",
+      "none_em": false,
+      "case_em": true,
+      "strategy_em": true,
+      "paired_em": true,
+      "none_pred": "No the company spends less on advertising in 2012 (288 million) than on research and development (468 million).",
+      "case_pred": "no",
+      "strategy_pred": "No",
+      "paired_pred": "no",
+      "gold": "no"
+    },
+    {
+      "target_id": "BLL/2010/page_28.pdf-2",
+      "none_em": false,
+      "case_em": true,
+      "strategy_em": false,
+      "paired_em": true,
+      "none_pred": "Yes Ball Corporation\u2019s total return (178.93) was higher than the DJ Containers & Packaging Index (123.56).",
+      "case_pred": "Yes",
+      "strategy_pred": "Yes Ball Corporation outperformed the DJ Containers & Packaging Index.",
+      "paired_pred": "Yes",
+      "gold": "yes"
+    },
+    {
+      "target_id": "PNC/2009/page_46.pdf-3",
+      "none_em": false,
+      "case_em": true,
+      "strategy_em": true,
+      "paired_em": true,
+      "none_pred": "No it decreased from 19 to 14.",
+      "case_pred": "no",
+      "strategy_pred": "No",
+      "paired_pred": "no",
+      "gold": "no"
+    },
+    {
+      "target_id": "PPG/2013/page_40.pdf-1",
+      "none_em": false,
+      "case_em": true,
+      "strategy_em": true,
+      "paired_em": true,
+      "none_pred": "No the company spent less on advertising (345 million) than on research and development (505 million) in 2013.",
+      "case_pred": "no",
+      "strategy_pred": "No",
+      "paired_pred": "no",
+      "gold": "no"
+    }
+  ],
+  "harm_queries": [
+    {
+      "target_id": "TFX/2015/page_70.pdf-3",
+      "none_em": true,
+      "case_em": false,
+      "strategy_em": true,
+      "paired_em": true,
+      "none_pred": 386703687.66,
+      "case_pred": "386716000 (approximately 386716000)",
+      "strategy_pred": 386797000.66,
+      "paired_pred": 386797000.66,
+      "gold": 386797189.66
+    }
+  ]
+}

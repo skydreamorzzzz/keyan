@@ -1,0 +1,392 @@
+[
+  {
+    "target_id": "RE/2015/page_33.pdf-2",
+    "arm": "None",
+    "gold_answer": 0.03558,
+    "predicted_answer": 0.0356,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the percentage change in average investments from 2014 to 2015. From the table, average investments for 2015 are $17,430.8 million and for 2014 are $16,831.9 million. Percentage change is calculated as (2015 value - 2014 value) / 2014 value \u00d7 100.  \n\nPROGRAM: divide(subtract(17430.8, 16831.9), 16831.9) * 100  \n\nANSWER: 3.56%",
+    "shared_source_ids": [
+      "E067",
+      "E074",
+      "E068"
+    ]
+  },
+  {
+    "target_id": "GS/2017/page_143.pdf-1",
+    "arm": "None",
+    "gold_answer": -0.39896,
+    "predicted_answer": -0.39899999999999997,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the percentage change in \u201ccredit net\u201d from 2016 to 2017. From the table, credit net for 2017 is $1,505 million, and for 2016 it is $2,504 million. Percentage change is calculated as (new value - old value) / old value \u00d7 100.  \n\nPROGRAM: subtract(1505, 2504), divide(-999, 2504), multiply(-0.39896, 100)  \n\nANSWER: -39.9%",
+    "shared_source_ids": [
+      "E039",
+      "E073",
+      "E011"
+    ]
+  },
+  {
+    "target_id": "PM/2017/page_99.pdf-3",
+    "arm": "None",
+    "gold_answer": 2.0,
+    "predicted_answer": 2.0,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the change in weighted-average shares for diluted EPS from 2016 to 2017. From the table, the weighted-average shares for diluted EPS are 1553 for 2017 and 1551 for 2016. The change is 1553 - 1551 = 2 million.\n\nPROGRAM: subtract(1553, 1551)\n\nANSWER: 2",
+    "shared_source_ids": [
+      "E076",
+      "E067",
+      "E055"
+    ]
+  },
+  {
+    "target_id": "UA/2009/page_50.pdf-2",
+    "arm": "None",
+    "gold_answer": -0.75,
+    "predicted_answer": -0.75,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the percentage change in fair value of foreign currency forward contracts from 2008 to 2009. From the context, the fair value was $1.2 million in 2008 and $0.3 million in 2009. Percentage change is calculated as ((2009 value - 2008 value) / 2008 value) * 100.  \n\nPROGRAM: percent_change(0.3, 1.2) = ((0.3 - 1.2) / 1.2) * 100 = -75  \n\nANSWER: -75%",
+    "shared_source_ids": [
+      "E011",
+      "E019",
+      "E042"
+    ]
+  },
+  {
+    "target_id": "ETR/2008/page_355.pdf-2",
+    "arm": "None",
+    "gold_answer": 0.17972,
+    "predicted_answer": 0.1797,
+    "exact_match": true,
+    "response": "REASONING: The change in net revenue from 2007 to 2008 is calculated as 2008 net revenue minus 2007 net revenue: 252.7 - 231.0 = 21.7 million. The amount attributed to rider revenue is 3.9 million. To find the percentage of the change due to rider revenue, divide rider revenue by the total change and multiply by 100: (3.9 / 21.7) * 100 \u2248 17.97%.\n\nPROGRAM: subtract(252.7, 231.0), divide(3.9, 21.7), multiply(0.1797, 100)\n\nANSWER: 17.97%",
+    "shared_source_ids": [
+      "E011",
+      "E073",
+      "E045"
+    ]
+  },
+  {
+    "target_id": "PPG/2011/page_70.pdf-3",
+    "arm": "None",
+    "gold_answer": 0.3,
+    "predicted_answer": 0.3,
+    "exact_match": true,
+    "response": "REASONING: The question asks for royalty income in 2009 as a percentage of total other income in 2009. From the table, royalty income in 2009 is 45 (million) and total other income in 2009 is 150 (million). The percentage is calculated as (45 / 150) * 100.  \n\nPROGRAM: multiply(divide(45, 150), 100)  \n\nANSWER: 30%",
+    "shared_source_ids": [
+      "E022",
+      "E011",
+      "E045"
+    ]
+  },
+  {
+    "target_id": "IP/2006/page_32.pdf-4",
+    "arm": "None",
+    "gold_answer": 0.05336,
+    "predicted_answer": 0.053399999999999996,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the consumer packaging profit margin in 2006. Profit margin is calculated as operating profit divided by sales, then multiplied by 100 to get a percentage. From the table, consumer packaging 2006 sales are $2455 million and operating profit is $131 million. So the margin is (131 / 2455) * 100.\n\nPROGRAM: multiply(divide(131, 2455), 100)\n\nANSWER: 5.34%",
+    "shared_source_ids": [
+      "E085",
+      "E071",
+      "E051"
+    ]
+  },
+  {
+    "target_id": "FIS/2007/page_94.pdf-4",
+    "arm": "None",
+    "gold_answer": 0.14162,
+    "predicted_answer": 0.1416,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the percentage of total future minimum operating lease payments that are due in 2010. From the table, the 2010 payment is $35,269 thousand and the total is $249,038 thousand. The percentage is calculated as (2010 amount / total) \u00d7 100.\n\nPROGRAM: divide(35269, 249038), multiply(result, 100)\n\nANSWER: 14.16%",
+    "shared_source_ids": [
+      "E060",
+      "E038",
+      "E009"
+    ]
+  },
+  {
+    "target_id": "BLL/2007/page_47.pdf-4",
+    "arm": "None",
+    "gold_answer": 102.5,
+    "predicted_answer": "Cannot be determined from the given context.",
+    "exact_match": false,
+    "response": "REASONING: The provided context is about contractual obligations and liquidity items, not about share counts or cash dividends paid during 2006. There is no data in the table or surrounding text that gives the number of shares outstanding or dividend information. Therefore, the question cannot be answered from the given context.  \n\nPROGRAM: No calculation possible.  \n\nANSWER: Cannot be determined from the given context.",
+    "shared_source_ids": [
+      "E044",
+      "E033",
+      "E055"
+    ]
+  },
+  {
+    "target_id": "BLK/2012/page_160.pdf-4",
+    "arm": "None",
+    "gold_answer": 0.61881,
+    "predicted_answer": 250.0,
+    "exact_match": false,
+    "response": "REASONING: The question asks for the portion of tax benefits that would affect the effective tax rate if recognized as of December 31, 2012. From the post-text context, the sentence states: \"included in the balance of unrecognized tax benefits at december 31 , 2012 , 2011 and 2010 , respectively , are $ 250 million , $ 226 million and $ 194 million of tax benefits that , if recognized , would affect the effective tax rate .\" Therefore, for 2012, the value is directly given as $250 million.\n\nPROGRAM: no calculation needed\n\nANSWER: 250",
+    "shared_source_ids": [
+      "E024",
+      "E072",
+      "E037"
+    ]
+  },
+  {
+    "target_id": "GPN/2017/page_77.pdf-4",
+    "arm": "None",
+    "gold_answer": 73576.0,
+    "predicted_answer": 62154.0,
+    "exact_match": false,
+    "response": "REASONING: The question asks how much money the company can deduct for income tax purposes in the future after the acquisition. From the context, we are told that \"goodwill associated with this acquisition is not deductible for income tax purposes.\" Therefore, the only deductible amount would be the amortization of identifiable intangible assets (customer-related, acquired technology, trade name) and possibly other assets, but the context specifically states only customer-related intangibles have an estimated amortization period of 15 years. However, the question asks for the total amount deductible in the future, which typically refers to the total tax-deductible purchase price allocation excluding non-deductible goodwill. Since goodwill is not deductible, the deductible amount is the total identifiable net assets, which is given as $62,154 thousand. But note that deferred tax liabilities and other liabilities are not deductible expenses; they are balance sheet items. The actual deductible amount for tax purposes would be the fair value of acquired tangible and intangible assets that can be amortized or depreciated, but the context only gives the total identifiable net assets. Since the question is about how much money can be deducted on income tax in the future, and the only explicit statement is that goodwill is not deductible, we infer that the total identifiable net assets (excluding goodwill) are deductible over time. Therefore, the deductible amount is $62,154 thousand.\n\nPROGRAM: total_identifiable_net_assets = 62154\n\nANSWER: 62154",
+    "shared_source_ids": [
+      "E037",
+      "E028",
+      "E031"
+    ]
+  },
+  {
+    "target_id": "UNP/2014/page_25.pdf-2",
+    "arm": "None",
+    "gold_answer": 22560.05,
+    "predicted_answer": "Cannot be determined from the given information.",
+    "exact_match": false,
+    "response": "REASONING: The question asks for 2015 freight revenues if they grow at the same rate as agricultural arc growth. However, the provided context does not contain any information about agricultural arc growth rates. The table only shows freight revenues for 2014, 2013, and 2012 with overall growth rates. Without the agricultural arc growth percentage, we cannot calculate 2015 revenues. Thus, the problem is unsolvable with given data.\n\nPROGRAM: No calculation possible due to missing data.\n\nANSWER: Cannot be determined from the given information.",
+    "shared_source_ids": [
+      "E071",
+      "E070",
+      "E068"
+    ]
+  },
+  {
+    "target_id": "STT/2008/page_83.pdf-2",
+    "arm": "None",
+    "gold_answer": 1.25,
+    "predicted_answer": "63.636... (approximately 63.64)",
+    "exact_match": false,
+    "response": "REASONING: The question asks for the percentage by which the average VaR for foreign exchange products is higher than that of interest rate products. From the table, the annual average VaR for foreign exchange products is $1.8 million, and for interest-rate products it is $1.1 million. To find the percentage difference, subtract the interest rate value from the foreign exchange value, divide by the interest rate value, and multiply by 100.\n\nPROGRAM: divide(subtract(1.8, 1.1), 1.1) * 100\n\nANSWER: 63.636...% (approximately 63.64%)",
+    "shared_source_ids": [
+      "E065",
+      "E067",
+      "E005"
+    ]
+  },
+  {
+    "target_id": "MRO/2007/page_134.pdf-2",
+    "arm": "None",
+    "gold_answer": 66.0,
+    "predicted_answer": 66.0,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the total tax benefits realized for deductions during 2007 and 2006 that were in excess of the stock-based compensation expense recorded. From the context, this amount is given as $30 million for 2007 and $36 million for 2006. To find the total for both years, add these two amounts together.  \n\nPROGRAM: add(30, 36)  \n\nANSWER: 66",
+    "shared_source_ids": [
+      "E048",
+      "E059",
+      "E034"
+    ]
+  },
+  {
+    "target_id": "IPG/2015/page_48.pdf-3",
+    "arm": "None",
+    "gold_answer": 68.4,
+    "predicted_answer": 68.4,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the total difference in 2015 between the fair market value change from a 10% increase in interest rates and the change from a 10% decrease. From the table, for 2015, the 10% increase impact is -33.7 and the 10% decrease impact is +34.7. The difference is the absolute gap between these two values: 34.7 - (-33.7) = 34.7 + 33.7 = 68.4.\n\nPROGRAM: subtract(-33.7, 34.7) \u2192 but to get the absolute difference: 34.7 - (-33.7) = 68.4\n\nANSWER: 68.4",
+    "shared_source_ids": [
+      "E073",
+      "E011",
+      "E003"
+    ]
+  },
+  {
+    "target_id": "IP/2007/page_31.pdf-1",
+    "arm": "None",
+    "gold_answer": 0.20972,
+    "predicted_answer": 0.2564,
+    "exact_match": false,
+    "response": "REASONING: The question asks for the percentage of total industrial packaging sales represented by European industrial packaging net sales in 2007. From the context, total industrial packaging sales in 2007 were $5,245 million. The North American industrial packaging net sales were $3.9 billion ($3,900 million). Since the context only gives North American and total, European sales are the remainder: 5,245 - 3,900 = 1,345 million. Then calculate the percentage: (1,345 / 5,245) * 100.\n\nPROGRAM: subtract(5245, 3900), divide(1345, 5245), multiply(0.2564, 100)\n\nANSWER: 25.64%",
+    "shared_source_ids": [
+      "E085",
+      "E005",
+      "E071"
+    ]
+  },
+  {
+    "target_id": "IP/2009/page_37.pdf-1",
+    "arm": "None",
+    "gold_answer": 0.71895,
+    "predicted_answer": 0.7190000000000001,
+    "exact_match": true,
+    "response": "REASONING: The question asks for North American consumer packaging net sales as a percentage of total consumer packaging sales in 2009. From the post-text, North American consumer packaging net sales were $2.2 billion in 2009. From the table, total consumer packaging sales in 2009 were $3,060 million (which is $3.06 billion). To find the percentage, divide North American sales by total sales and multiply by 100.\n\nPROGRAM: divide(2.2, 3.06) * 100\n\nANSWER: 71.9%",
+    "shared_source_ids": [
+      "E085",
+      "E005",
+      "E071"
+    ]
+  },
+  {
+    "target_id": "BLL/2007/page_35.pdf-3",
+    "arm": "None",
+    "gold_answer": 20.74359,
+    "predicted_answer": 20.74,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the cash outflow used for shares repurchased during November 2007. From the table, November 2007 corresponds to the period \"october 29 to november 25 2007\". During this period, 431,170 shares were purchased at an average price of $48.11 per share. To find the total cash outflow, multiply the number of shares by the average price per share: 431,170 \u00d7 $48.11 = $20,741,588.7, which is approximately $20.74 million.  \n\nPROGRAM: multiply(431170, 48.11)  \n\nANSWER: 20.74",
+    "shared_source_ids": [
+      "E031",
+      "E023",
+      "E082"
+    ]
+  },
+  {
+    "target_id": "SNPS/2006/page_69.pdf-1",
+    "arm": "None",
+    "gold_answer": 0.54126,
+    "predicted_answer": "Cannot be determined from the given information.",
+    "exact_match": false,
+    "response": "REASONING: The question asks for the percentage of the total purchase price represented by intangible assets. However, the provided context and table do not mention any value for intangible assets. The table gives cash paid, prior investment, acquisition-related costs, and total purchase price. Since no intangible asset value is provided, it is not possible to compute that percentage from the given information.  \n\nPROGRAM: no calculation possible  \n\nANSWER: Cannot be determined from the given information.",
+    "shared_source_ids": [
+      "E028",
+      "E005",
+      "E025"
+    ]
+  },
+  {
+    "target_id": "TFX/2015/page_70.pdf-3",
+    "arm": "None",
+    "gold_answer": 386797189.66,
+    "predicted_answer": 386703687.66,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the total cost to purchase the remaining shares available under equity compensation plans, using the December 31, 2015 price. The table shows 4,446,967 securities remaining available for future issuance under equity compensation plans (column c). The weighted-average exercise price of outstanding options is $86.98, which is the price at December 31, 2015 referenced here. To find the total cost, multiply the number of remaining shares by the price per share: 4,446,967 \u00d7 $86.98.  \n\nPROGRAM: multiply(4446967, 86.98)  \n\nANSWER: 386,703,687.66",
+    "shared_source_ids": [
+      "E067",
+      "E031",
+      "E035"
+    ]
+  },
+  {
+    "target_id": "AON/2009/page_46.pdf-2",
+    "arm": "None",
+    "gold_answer": 846.0,
+    "predicted_answer": 846.0,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the lowest segment operating income among the three years listed in the table. The values are 900 (2009), 846 (2008), and 954 (2007). The lowest is 846.  \n\nPROGRAM: min(900, 846, 954)  \n\nANSWER: 846",
+    "shared_source_ids": [
+      "E022",
+      "E025",
+      "E045"
+    ]
+  },
+  {
+    "target_id": "APD/2019/page_48.pdf-1",
+    "arm": "None",
+    "gold_answer": 2758.55,
+    "predicted_answer": 2758.55,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the average cash provided by operating activities for 2018 and 2019. From the table, operating activities provided $2969.9 in 2019 and $2547.2 in 2018. To find the average, sum the two values and divide by 2.\n\nPROGRAM: divide(add(2969.9, 2547.2), 2)\n\nANSWER: 2758.55",
+    "shared_source_ids": [
+      "E039",
+      "E068",
+      "E063"
+    ]
+  },
+  {
+    "target_id": "AES/2016/page_191.pdf-3",
+    "arm": "None",
+    "gold_answer": -11.33333,
+    "predicted_answer": -13.0,
+    "exact_match": false,
+    "response": "REASONING: The question asks for the average amount of settlements for the period ending in 2016. The table shows settlements for 2016 as -13 (in millions). Since this is a single year value, the average over that one period is simply -13.  \n\nPROGRAM: average(-13)  \n\nANSWER: -13",
+    "shared_source_ids": [
+      "E063",
+      "E066",
+      "E084"
+    ]
+  },
+  {
+    "target_id": "LMT/2015/page_56.pdf-2",
+    "arm": "None",
+    "gold_answer": 9198.33333,
+    "predicted_answer": "9198.333... (approximately 9198.33)",
+    "exact_match": false,
+    "response": "REASONING: The question asks for the average net sales for space systems from 2013 to 2015, in millions. From the table, net sales for space systems are: 2015 = $9,105 million, 2014 = $9,202 million, 2013 = $9,288 million. To find the average, sum these three values and divide by 3.\n\nPROGRAM: divide(add(9105, 9202, 9288), 3)\n\nANSWER: 9198.333... (approximately 9198.33)",
+    "shared_source_ids": [
+      "E087",
+      "E005",
+      "E063"
+    ]
+  },
+  {
+    "target_id": "MRO/2006/page_33.pdf-3",
+    "arm": "None",
+    "gold_answer": 22.33333,
+    "predicted_answer": 22.33,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the average propane sales in thousands of barrels per day (tbd) over the three-year period 2004\u20132006. From the table, propane sales are: 2006 = 23, 2005 = 22, 2004 = 22. Average = (23 + 22 + 22) / 3.  \n\nPROGRAM: divide(add(23, 22, 22), 3)  \n\nANSWER: 22.33",
+    "shared_source_ids": [
+      "E027",
+      "E004",
+      "E090"
+    ]
+  },
+  {
+    "target_id": "JPM/2014/page_65.pdf-5",
+    "arm": "None",
+    "gold_answer": "no",
+    "predicted_answer": "No JPMorgan Chase did not outperform the KBW Bank Index.",
+    "exact_match": false,
+    "response": "REASONING: The question asks whether JPMorgan Chase outperformed the KBW Bank Index over the five-year period from 2009 to 2014. We compare the cumulative returns starting from $100 at the end of 2009.  \nFrom the table:  \n- JPMorgan Chase value at end of 2014 = $167.48  \n- KBW Bank Index value at end of 2014 = $189.69  \nSince $167.48 < $189.69, JPMorgan did not outperform the KBW Bank Index.\n\nPROGRAM: compare(167.48, 189.69)\n\nANSWER: No, JPMorgan Chase did not outperform the KBW Bank Index.",
+    "shared_source_ids": [
+      "E049",
+      "E054",
+      "E027"
+    ]
+  },
+  {
+    "target_id": "PPG/2013/page_40.pdf-2",
+    "arm": "None",
+    "gold_answer": "no",
+    "predicted_answer": "No the company spends less on advertising in 2012 (288 million) than on research and development (468 million).",
+    "exact_match": false,
+    "response": "REASONING: The question asks whether advertising spending in 2012 is greater than research and development (R&D) spending in the same year. From the context, advertising costs in 2012 were $288 million. For R&D, the table shows total research and development costs in 2012 as $468 million. Since $288 million is less than $468 million, the company spends less on advertising than on R&D in 2012.\n\nPROGRAM: compare(288, 468)\n\nANSWER: No, the company spends less on advertising in 2012 ($288 million) than on research and development ($468 million).",
+    "shared_source_ids": [
+      "E051",
+      "E070",
+      "E007"
+    ]
+  },
+  {
+    "target_id": "BLL/2010/page_28.pdf-2",
+    "arm": "None",
+    "gold_answer": "yes",
+    "predicted_answer": "Yes Ball Corporation\u2019s total return (178.93) was higher than the DJ Containers & Packaging Index (123.56).",
+    "exact_match": false,
+    "response": "REASONING: The question asks whether Ball Corporation\u2019s five-year total return (from 12/31/2005 to 12/31/2010) was higher than the DJ Containers & Packaging Index return over the same period.  \nFrom the table, Ball Corporation ended at $178.93, while the DJ Containers & Packaging Index ended at $123.56. Since $178.93 > $123.56, Ball outperformed.  \n\nPROGRAM: compare(178.93, 123.56)  \n\nANSWER: Yes, Ball Corporation\u2019s total return ($178.93) was higher than the DJ Containers & Packaging Index ($123.56).",
+    "shared_source_ids": [
+      "E071",
+      "E049",
+      "E027"
+    ]
+  },
+  {
+    "target_id": "PNC/2009/page_46.pdf-3",
+    "arm": "None",
+    "gold_answer": "no",
+    "predicted_answer": "No it decreased from 19 to 14.",
+    "exact_match": false,
+    "response": "REASONING: The question asks whether the share of securities rated aaa/aaa increased from 2008 to 2009. From the table, the aaa/aaa share in 2008 is 19%, and in 2009 it is 14%. Since 14% is less than 19%, the share decreased, not increased.\n\nPROGRAM: compare(14, 19)\n\nANSWER: No, it decreased from 19% to 14%.",
+    "shared_source_ids": [
+      "E049",
+      "E011",
+      "E054"
+    ]
+  },
+  {
+    "target_id": "PPG/2013/page_40.pdf-1",
+    "arm": "None",
+    "gold_answer": "no",
+    "predicted_answer": "No the company spent less on advertising (345 million) than on research and development (505 million) in 2013.",
+    "exact_match": false,
+    "response": "REASONING: The question asks whether advertising costs in 2013 were greater than research and development costs in 2013. From the text, advertising costs in 2013 were $345 million. From the table, total research and development costs in 2013 were $505 million. Since 345 < 505, the company did not spend more on advertising than on R&D in 2013.  \n\nPROGRAM: compare(345, 505)  \n\nANSWER: No, the company spent less on advertising ($345 million) than on research and development ($505 million) in 2013.",
+    "shared_source_ids": [
+      "E051",
+      "E070",
+      "E072"
+    ]
+  }
+]
