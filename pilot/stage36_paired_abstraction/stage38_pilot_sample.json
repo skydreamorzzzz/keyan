@@ -1,0 +1,50 @@
+{
+  "strategy_operator_only": [
+    "AON/2009/page_48.pdf-2",
+    "PNC/2011/page_78.pdf-2",
+    "IP/2006/page_32.pdf-4",
+    "JPM/2018/page_110.pdf-5",
+    "ABMD/2004/page_26.pdf-3",
+    "DISCA/2012/page_39.pdf-3",
+    "NKE/2016/page_37.pdf-2",
+    "IPG/2008/page_93.pdf-4",
+    "VNO/2012/page_84.pdf-2",
+    "AON/2010/page_28.pdf-1",
+    "C/2008/page_211.pdf-1",
+    "MRO/2009/page_139.pdf-3",
+    "BLL/2007/page_47.pdf-4",
+    "FIS/2007/page_94.pdf-4",
+    "ETR/2011/page_341.pdf-3",
+    "HII/2017/page_104.pdf-3",
+    "V/2013/page_41.pdf-1",
+    "MRO/2008/page_69.pdf-1",
+    "ETR/2017/page_114.pdf-1",
+    "MRO/2004/page_36.pdf-1"
+  ],
+  "case_rescue_strategy_fail": [
+    "KHC/2016/page_23.pdf-3",
+    "STT/2011/page_83.pdf-1",
+    "BDX/2018/page_82.pdf-3",
+    "AES/2016/page_185.pdf-2",
+    "UNP/2015/page_35.pdf-3"
+  ],
+  "strategy_rescues": [
+    "MRO/2006/page_33.pdf-3",
+    "JPM/2014/page_65.pdf-5",
+    "MO/2012/page_44.pdf-2",
+    "BKR/2017/page_103.pdf-1",
+    "CAG/2008/page_75.pdf-1"
+  ],
+  "invariant": [
+    "STT/2009/page_73.pdf-2",
+    "ETR/2002/page_24.pdf-2",
+    "AAL/2013/page_15.pdf-4",
+    "AES/2001/page_44.pdf-2",
+    "AES/2016/page_185.pdf-1",
+    "BLL/2007/page_47.pdf-4",
+    "LMT/2006/page_90.pdf-3",
+    "IPG/2008/page_21.pdf-4",
+    "HOLX/2008/page_84.pdf-1",
+    "C/2008/page_102.pdf-3"
+  ]
+}

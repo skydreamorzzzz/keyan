@@ -1,0 +1,704 @@
+[
+  {
+    "source_experience_id": "E001",
+    "strategy_name": "Return on Assets Calculation",
+    "problem_pattern": "Given a financial metric (e.g., net earnings) and a balance sheet metric (e.g., total assets) for a specific year, calculate the ratio of the former to the latter.",
+    "program_sketch": "divide(<value1>, <value2>)",
+    "operand_bindings": "<numerator>: The financial metric value for the target year, typically found in the income statement or statement of operations.\n<denominator>: The balance sheet metric value for the same target year, typically found in the balance sheet.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ndivide(<value1>, <value2>)\n\nWhere:\n<numerator>: The financial metric value for the target year, typically found in the income statement or statement of operations.\n<denominator>: The balance sheet metric value for the same target year, typically found in the balance sheet.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E002",
+    "strategy_name": "Percentage of Asset Addition from Cash Payment",
+    "problem_pattern": "Given a transaction where an asset is acquired and the cash paid and the total asset value are provided, calculate the cash paid as a percentage of the asset value.",
+    "program_sketch": "divide(<value1>, <value2>)",
+    "operand_bindings": "<numerator>: Cash paid as a result of the transaction. Look for a statement like 'cash paid as a result of the transaction was $X'.\n<denominator>: The value of the asset added (e.g., property, plant and equipment). Look for a statement like 'addition of $Y in [asset category]'.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ndivide(<value1>, <value2>)\n\nWhere:\n<numerator>: Cash paid as a result of the transaction. Look for a statement like 'cash paid as a result of the transaction was $X'.\n<denominator>: The value of the asset added (e.g., property, plant and equipment). Look for a statement like 'addition of $Y in [asset category]'.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E003",
+    "strategy_name": "Proportional Effect Scaling",
+    "problem_pattern": "Given the effect of a percentage change on a total, find the total amount.",
+    "program_sketch": "divide(<value1>, <value2>)",
+    "operand_bindings": "<effect_amount>: The change in the total when a percentage change is applied. This is the numerator in the division.\n<percentage_change>: The percentage change (as a decimal or fraction) that caused the effect. This is the denominator in the division.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ndivide(<value1>, <value2>)\n\nWhere:\n<effect_amount>: The change in the total when a percentage change is applied. This is the numerator in the division.\n<percentage_change>: The percentage change (as a decimal or fraction) that caused the effect. This is the denominator in the division.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E004",
+    "strategy_name": "Current Ratio Calculation",
+    "problem_pattern": "Calculate the current ratio for a given period, which is the ratio of current assets to current liabilities.",
+    "program_sketch": "divide(<value1>, <value2>)",
+    "operand_bindings": "<numerator>: Current assets value for the period. Locate the figure labeled as current assets in the financial statement.\n<denominator>: Current liabilities value for the same period. Locate the figure labeled as current liabilities in the financial statement.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ndivide(<value1>, <value2>)\n\nWhere:\n<numerator>: Current assets value for the period. Locate the figure labeled as current assets in the financial statement.\n<denominator>: Current liabilities value for the same period. Locate the figure labeled as current liabilities in the financial statement.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E005",
+    "strategy_name": "Percentage of a component relative to a total",
+    "problem_pattern": "Given a component value and a total value for the same period, calculate the percentage that the component constitutes of the total.",
+    "program_sketch": "divide(<value1>, <value2>)",
+    "operand_bindings": "<component_value>: The value of the part or segment for which the percentage is sought. It is the numerator in the division.\n<total_value>: The total value of the whole for the same period. It is the denominator in the division.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ndivide(<value1>, <value2>)\n\nWhere:\n<component_value>: The value of the part or segment for which the percentage is sought. It is the numerator in the division.\n<total_value>: The total value of the whole for the same period. It is the denominator in the division.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E006",
+    "strategy_name": "Proportion of a Total Due in Next Period",
+    "problem_pattern": "Given a total amount and a portion of that total, determine what percentage the portion represents of the total.",
+    "program_sketch": "divide(<value1>, <value2>)",
+    "operand_bindings": "<portion>: The amount that is due in the next period (e.g., next 12 months). It is the numerator.\n<total>: The total amount over all periods. It is the denominator.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ndivide(<value1>, <value2>)\n\nWhere:\n<portion>: The amount that is due in the next period (e.g., next 12 months). It is the numerator.\n<total>: The total amount over all periods. It is the denominator.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E007",
+    "strategy_name": "Percentage Change Calculation",
+    "problem_pattern": "Calculate the percentage change of a financial metric between two time points (e.g., years).",
+    "program_sketch": "subtract(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<later_value>: The value of the metric at the later time point (e.g., end of later year).\n<earlier_value>: The value of the metric at the earlier time point (e.g., end of earlier year).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nsubtract(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<later_value>: The value of the metric at the later time point (e.g., end of later year).\n<earlier_value>: The value of the metric at the earlier time point (e.g., end of earlier year).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E009",
+    "strategy_name": "Percentage Change Calculation",
+    "problem_pattern": "Calculate the percentage increase or decrease of a financial metric between two time periods.",
+    "program_sketch": "subtract(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<current_value>: The value of the metric in the later period (e.g., current year).\n<previous_value>: The value of the metric in the earlier period (e.g., previous year).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nsubtract(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<current_value>: The value of the metric in the later period (e.g., current year).\n<previous_value>: The value of the metric in the earlier period (e.g., previous year).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E011",
+    "strategy_name": "Percentage Change from Initial to Final Value",
+    "problem_pattern": "Given an initial value and a final value, calculate the percentage increase (or decrease) from the initial to the final value.",
+    "program_sketch": "subtract(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<initial_value>: The value at the starting point of the period. It is the base for the percentage calculation.\n<final_value>: The value at the ending point of the period. It is the value after the change.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nsubtract(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<initial_value>: The value at the starting point of the period. It is the base for the percentage calculation.\n<final_value>: The value at the ending point of the period. It is the value after the change.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E013",
+    "strategy_name": "Decrease in Expense Over Two Years",
+    "problem_pattern": "Calculate the decrease in an expense item between two specified years by subtracting the later year's value from the earlier year's value.",
+    "program_sketch": "subtract(<value1>, <value2>)",
+    "operand_bindings": "<earlier_value>: The value of the expense item in the earlier year. Locate the value corresponding to the earlier year in the given facts.\n<later_value>: The value of the expense item in the later year. Locate the value corresponding to the later year in the given facts.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nsubtract(<value1>, <value2>)\n\nWhere:\n<earlier_value>: The value of the expense item in the earlier year. Locate the value corresponding to the earlier year in the given facts.\n<later_value>: The value of the expense item in the later year. Locate the value corresponding to the later year in the given facts.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E016",
+    "strategy_name": "Unrealized Loss on Held-to-Maturity Portfolio",
+    "problem_pattern": "Calculate the potential loss if a held-to-maturity investment portfolio is sold at a given date, based on the difference between its amortized cost and market value.",
+    "program_sketch": "subtract(<value1>, <value2>)",
+    "operand_bindings": "<amortized_cost>: The amortized cost of the held-to-maturity investment portfolio at the specified date, including interest receivable. This is typically found in financial statements or notes.\n<market_value>: The market value of the same held-to-maturity investment portfolio at the same date. This is also typically found in financial statements or notes.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nsubtract(<value1>, <value2>)\n\nWhere:\n<amortized_cost>: The amortized cost of the held-to-maturity investment portfolio at the specified date, including interest receivable. This is typically found in financial statements or notes.\n<market_value>: The market value of the same held-to-maturity investment portfolio at the same date. This is also typically found in financial statements or notes.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E019",
+    "strategy_name": "Total Consideration Addition",
+    "problem_pattern": "Given a table with components of a transaction, find the total fair value of stock issued to specific stockholders by adding the cash consideration and the fair value of stock issued.",
+    "program_sketch": "add(<value1>, <value2>)",
+    "operand_bindings": "<cash_consideration>: The cash amount paid to the stockholders, typically labeled as 'cash consideration paid' in the table.\n<stock_fair_value>: The fair value of the common stock issued to the stockholders, typically labeled as 'fair value of common stock issued' in the table.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>)\n\nWhere:\n<cash_consideration>: The cash amount paid to the stockholders, typically labeled as 'cash consideration paid' in the table.\n<stock_fair_value>: The fair value of the common stock issued to the stockholders, typically labeled as 'fair value of common stock issued' in the table.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E020",
+    "strategy_name": "Sum of Liability Reductions",
+    "problem_pattern": "Given two separate reductions in liabilities due to different events, find the total impact by adding them.",
+    "program_sketch": "add(<value1>, <value2>)",
+    "operand_bindings": "<reduction1>: The amount of liability reduction from the first event, typically found in a statement or note describing the impact of a specific action.\n<reduction2>: The amount of liability reduction from the second event, similarly located in the context.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>)\n\nWhere:\n<reduction1>: The amount of liability reduction from the first event, typically found in a statement or note describing the impact of a specific action.\n<reduction2>: The amount of liability reduction from the second event, similarly located in the context.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E021",
+    "strategy_name": "Recover Pre-Impairment Value by Adding Remaining Value and Impairment Charge",
+    "problem_pattern": "Given a remaining value after an impairment charge and the amount of the impairment charge, find the pre-impairment value by summing the two.",
+    "program_sketch": "add(<value1>, <value2>)",
+    "operand_bindings": "<remaining_value>: The value of an asset after an impairment charge has been recognized. It is typically stated in the context as 'goodwill of X remaining' or 'carrying amount after impairment'.\n<impairment_charge>: The amount of the impairment loss recognized. It is typically stated as 'impairment charge of Y' or 'impairment loss of Y'.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>)\n\nWhere:\n<remaining_value>: The value of an asset after an impairment charge has been recognized. It is typically stated in the context as 'goodwill of X remaining' or 'carrying amount after impairment'.\n<impairment_charge>: The amount of the impairment loss recognized. It is typically stated as 'impairment charge of Y' or 'impairment loss of Y'.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E022",
+    "strategy_name": "Sum of Net Operating Income for Two Property Types",
+    "problem_pattern": "Given net operating income (NOI) for two property types, calculate the total NOI attributable to both.",
+    "program_sketch": "add(<value1>, <value2>)",
+    "operand_bindings": "<NOI_type1>: Net operating income for the first property type, typically found in a table or list with a label indicating the property type and the metric 'net operating income'.\n<NOI_type2>: Net operating income for the second property type, similarly located.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>)\n\nWhere:\n<NOI_type1>: Net operating income for the first property type, typically found in a table or list with a label indicating the property type and the metric 'net operating income'.\n<NOI_type2>: Net operating income for the second property type, similarly located.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E023",
+    "strategy_name": "Aggregate Repurchase Authorization Addition",
+    "problem_pattern": "Given a cumulative amount authorized for a financial activity over a period, and an additional amount authorized at a later date, find the total authorized amount by summing the two.",
+    "program_sketch": "add(<value1>, <value2>)",
+    "operand_bindings": "<cumulative_amount>: The total amount authorized up to a certain point, often stated as 'aggregate repurchase of X' or 'total authorized amount'.\n<additional_amount>: The amount of increase or additional authorization, often introduced by phrases like 'including an increase of' or 'additional amount authorized'.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>)\n\nWhere:\n<cumulative_amount>: The total amount authorized up to a certain point, often stated as 'aggregate repurchase of X' or 'total authorized amount'.\n<additional_amount>: The amount of increase or additional authorization, often introduced by phrases like 'including an increase of' or 'additional amount authorized'.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E024",
+    "strategy_name": "Sum of Prior and Current Year Tax Benefits",
+    "problem_pattern": "Calculate the total increase in unrecognized tax benefits by summing the increases attributed to prior years and current year.",
+    "program_sketch": "add(<value1>, <value2>)",
+    "operand_bindings": "<prior_year_increase>: The amount of increase in unrecognized tax benefits that is based on positions related to prior years. This is typically found in a table or statement as a line item labeled 'increases based on positions related to prior years'.\n<current_year_increase>: The amount of increase in unrecognized tax benefits that is based on positions related to the current year. This is typically found in a table or statement as a line item labeled 'increases based on positions related to current year'.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>)\n\nWhere:\n<prior_year_increase>: The amount of increase in unrecognized tax benefits that is based on positions related to prior years. This is typically found in a table or statement as a line item labeled 'increases based on positions related to prior years'.\n<current_year_increase>: The amount of increase in unrecognized tax benefits that is based on positions related to the current year. This is typically found in a table or statement as a line item labeled 'increases based on positions related to current year'.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E025",
+    "strategy_name": "Segment Impairment Impact on Pre-Impairment Earnings",
+    "problem_pattern": "Given a segment's reported income and a one-time charge (e.g., asset impairment) that was absent in the current period, determine the percentage impact of that charge on the segment's pre-charge earnings.",
+    "program_sketch": "add(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<charge_amount>: The one-time charge amount (e.g., impairment) that was absent in the current period. It is typically mentioned in a note or as a separate line item.\n<reported_income>: The segment's reported income for the current period, which excludes the charge because it was absent.\n<pre_charge_earnings>: The earnings before the charge, calculated as reported_income + charge_amount.\n<percentage>: The charge as a percentage of pre-charge earnings, calculated as (charge_amount / pre_charge_earnings) * 100.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<charge_amount>: The one-time charge amount (e.g., impairment) that was absent in the current period. It is typically mentioned in a note or as a separate line item.\n<reported_income>: The segment's reported income for the current period, which excludes the charge because it was absent.\n<pre_charge_earnings>: The earnings before the charge, calculated as reported_income + charge_amount.\n<percentage>: The charge as a percentage of pre-charge earnings, calculated as (charge_amount / pre_charge_earnings) * 100.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E026",
+    "strategy_name": "Average of Two Balance Sheet Items",
+    "problem_pattern": "Calculate the average of a specific financial item at two different reporting dates (e.g., beginning and end of a period).",
+    "program_sketch": "add(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<value_at_date1>: The value of the financial item at the first reporting date (e.g., beginning of period).\n<value_at_date2>: The value of the financial item at the second reporting date (e.g., end of period).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<value_at_date1>: The value of the financial item at the first reporting date (e.g., beginning of period).\n<value_at_date2>: The value of the financial item at the second reporting date (e.g., end of period).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E027",
+    "strategy_name": "Average Annual Store Closure",
+    "problem_pattern": "Given a list of annual store closure counts over a period, compute the average annual closure count.",
+    "program_sketch": "add(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<closure_counts>: The list of annual store closure counts (as positive numbers) for each year in the period.\n<number_of_years>: The number of years in the period, used as the divisor.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<closure_counts>: The list of annual store closure counts (as positive numbers) for each year in the period.\n<number_of_years>: The number of years in the period, used as the divisor.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E028",
+    "strategy_name": "Acquisition Costs as Percentage of Current Assets",
+    "problem_pattern": "Calculate the total acquisition-related costs recorded in selling, general, and administrative expenses over a period as a percentage of current assets.",
+    "program_sketch": "add(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<cost1>: Acquisition-related cost for one period, found in the financial statements under selling, general, and administrative expenses.\n<cost2>: Acquisition-related cost for another period, found similarly.\n<current_assets>: Current assets value, typically from the balance sheet.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<cost1>: Acquisition-related cost for one period, found in the financial statements under selling, general, and administrative expenses.\n<cost2>: Acquisition-related cost for another period, found similarly.\n<current_assets>: Current assets value, typically from the balance sheet.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E029",
+    "strategy_name": "Proportion of a Subgroup in a Total",
+    "problem_pattern": "Given counts of items in two or more subcategories that together form a subset of a total, find the proportion of that subset relative to the total.",
+    "program_sketch": "add(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<subcategory_counts>: The counts of items in each subcategory that together form the subset of interest. These are typically found in the context as numbers associated with specific categories or locations.\n<total_count>: The total number of items in the whole set, often explicitly stated or derived from the context.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<subcategory_counts>: The counts of items in each subcategory that together form the subset of interest. These are typically found in the context as numbers associated with specific categories or locations.\n<total_count>: The total number of items in the whole set, often explicitly stated or derived from the context.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E030",
+    "strategy_name": "Average of Two Weighted Averages",
+    "problem_pattern": "Given two weighted average useful life values for two different asset categories, compute the overall average of these two values.",
+    "program_sketch": "add(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<value1>: The first weighted average useful life (in years) for one asset category.\n<value2>: The second weighted average useful life (in years) for another asset category.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<value1>: The first weighted average useful life (in years) for one asset category.\n<value2>: The second weighted average useful life (in years) for another asset category.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E031",
+    "strategy_name": "Total Share Repurchase Cost",
+    "problem_pattern": "Given the number of shares repurchased and the average price per share, calculate the total amount spent on share repurchases.",
+    "program_sketch": "multiply(<value1>, <value2>)",
+    "operand_bindings": "<shares_repurchased>: The number of shares repurchased, typically found in a statement or disclosure about share repurchases.\n<average_price_per_share>: The average price paid per share, often stated alongside the number of shares repurchased.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nmultiply(<value1>, <value2>)\n\nWhere:\n<shares_repurchased>: The number of shares repurchased, typically found in a statement or disclosure about share repurchases.\n<average_price_per_share>: The average price paid per share, often stated alongside the number of shares repurchased.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E032",
+    "strategy_name": "Total Value from Per-Unit and Quantity",
+    "problem_pattern": "Calculate the total value at a specific time point by multiplying a per-unit value by the corresponding quantity.",
+    "program_sketch": "multiply(<value1>, <value2>)",
+    "operand_bindings": "<per_unit_value>: The value per unit (e.g., per share, per item) at the specified time. Look for a phrase like 'average grant date fair value per share' or 'per unit value'.\n<quantity>: The number of units (e.g., shares, items) at the same time point. Look for a phrase like 'number of shares' or 'quantity'.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nmultiply(<value1>, <value2>)\n\nWhere:\n<per_unit_value>: The value per unit (e.g., per share, per item) at the specified time. Look for a phrase like 'average grant date fair value per share' or 'per unit value'.\n<quantity>: The number of units (e.g., shares, items) at the same time point. Look for a phrase like 'number of shares' or 'quantity'.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E033",
+    "strategy_name": "Stock Split Share Adjustment",
+    "problem_pattern": "Given the number of shares outstanding before a stock split and the split ratio, calculate the number of shares outstanding after the split.",
+    "program_sketch": "multiply(<value1>, <value2>)",
+    "operand_bindings": "<pre_split_shares>: The number of shares outstanding before the split. Locate the number of shares mentioned in the context before the split event.\n<split_ratio>: The split ratio expressed as a number (e.g., for a 2-for-1 split, the ratio is 2). Locate the split ratio in the context, typically described as 'X-for-1' or 'X:1'.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nmultiply(<value1>, <value2>)\n\nWhere:\n<pre_split_shares>: The number of shares outstanding before the split. Locate the number of shares mentioned in the context before the split event.\n<split_ratio>: The split ratio expressed as a number (e.g., for a 2-for-1 split, the ratio is 2). Locate the split ratio in the context, typically described as 'X-for-1' or 'X:1'.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E034",
+    "strategy_name": "Total Value of Stock Options Issued",
+    "problem_pattern": "Given the number of shares of new stock options issued to employees and the exercise price per share, calculate the total dollar amount.",
+    "program_sketch": "multiply(<value1>, <value2>)",
+    "operand_bindings": "<shares>: Number of shares of new stock options issued to employees. Locate in the context as the quantity of shares mentioned in relation to the issuance.\n<exercise_price>: Exercise price per share. Locate as the price per share at which the options are issued, often stated as a dollar amount per share.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nmultiply(<value1>, <value2>)\n\nWhere:\n<shares>: Number of shares of new stock options issued to employees. Locate in the context as the quantity of shares mentioned in relation to the issuance.\n<exercise_price>: Exercise price per share. Locate as the price per share at which the options are issued, often stated as a dollar amount per share.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E035",
+    "strategy_name": "Total Par Value of Authorized Shares",
+    "problem_pattern": "Given the number of authorized shares and the par value per share, calculate the total par value if all authorized shares were outstanding.",
+    "program_sketch": "multiply(<value1>, <value2>)",
+    "operand_bindings": "<number_of_shares>: The total number of authorized shares of a specific class of stock, typically stated in the equity section of the balance sheet or in the notes.\n<par_value_per_share>: The stated par value per share for that class of stock, usually given in the same context.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nmultiply(<value1>, <value2>)\n\nWhere:\n<number_of_shares>: The total number of authorized shares of a specific class of stock, typically stated in the equity section of the balance sheet or in the notes.\n<par_value_per_share>: The stated par value per share for that class of stock, usually given in the same context.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E036",
+    "strategy_name": "Fair Value from Percentage and Goodwill",
+    "problem_pattern": "Given a percentage representing fair value as a proportion of allocated book value and a goodwill amount, calculate the fair value amount.",
+    "program_sketch": "multiply(<value1>, <value2>)",
+    "operand_bindings": "<percentage>: A number representing fair value as a percentage of allocated book value (e.g., 168 means 168%).\n<goodwill>: The amount of goodwill associated with the reporting unit.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nmultiply(<value1>, <value2>)\n\nWhere:\n<percentage>: A number representing fair value as a percentage of allocated book value (e.g., 168 means 168%).\n<goodwill>: The amount of goodwill associated with the reporting unit.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E037",
+    "strategy_name": "Sum of Amortization Expenses Over Multiple Years",
+    "problem_pattern": "Given financial data for multiple years, each year includes an amortization expense component. The task is to find the total amortization expense over a specified range of years.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>)",
+    "operand_bindings": "<amortization_year1>: The amortization expense for the first year in the range. It is explicitly stated in the financial data for that year.\n<amortization_year2>: The amortization expense for the second year in the range. It is explicitly stated in the financial data for that year.\n<amortization_year3>: The amortization expense for the third year in the range. It is explicitly stated in the financial data for that year.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>)\n\nWhere:\n<amortization_year1>: The amortization expense for the first year in the range. It is explicitly stated in the financial data for that year.\n<amortization_year2>: The amortization expense for the second year in the range. It is explicitly stated in the financial data for that year.\n<amortization_year3>: The amortization expense for the third year in the range. It is explicitly stated in the financial data for that year.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E038",
+    "strategy_name": "Sum of Historical Values",
+    "problem_pattern": "Given a series of values for multiple time periods, compute the total by summing them.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>)",
+    "operand_bindings": "<value1>: The value for the first time period, located in the context as a specific amount associated with that period.\n<value2>: The value for the second time period, located similarly.\n<value3>: The value for the third time period, located similarly.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>)\n\nWhere:\n<value1>: The value for the first time period, located in the context as a specific amount associated with that period.\n<value2>: The value for the second time period, located similarly.\n<value3>: The value for the third time period, located similarly.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E039",
+    "strategy_name": "Net Change in Cash from Cash Flow Statement Components",
+    "problem_pattern": "Given values for operating, investing, and financing activities for a specific period, compute the net change in cash by summing these three components.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>)",
+    "operand_bindings": "<operating_activities>: The cash flow from operating activities for the target period. It is a signed number (positive for net inflow, negative for net outflow).\n<investing_activities>: The cash flow from investing activities for the target period. It is a signed number (positive for net inflow, negative for net outflow).\n<financing_activities>: The cash flow from financing activities for the target period. It is a signed number (positive for net inflow, negative for net outflow).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>)\n\nWhere:\n<operating_activities>: The cash flow from operating activities for the target period. It is a signed number (positive for net inflow, negative for net outflow).\n<investing_activities>: The cash flow from investing activities for the target period. It is a signed number (positive for net inflow, negative for net outflow).\n<financing_activities>: The cash flow from financing activities for the target period. It is a signed number (positive for net inflow, negative for net outflow).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E040",
+    "strategy_name": "Prior Period Contribution to Total Increase",
+    "problem_pattern": "Given two categories of increases for two periods, calculate the percentage of the total increase that is attributable to one category (e.g., prior periods) across both periods.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>)",
+    "operand_bindings": "<prior_period_increases>: List of values representing increases related to prior periods for each period (e.g., [value1, value2]).\n<current_period_increases>: List of values representing increases related to current period for each period (e.g., [value1, value2]).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>)\n\nWhere:\n<prior_period_increases>: List of values representing increases related to prior periods for each period (e.g., [value1, value2]).\n<current_period_increases>: List of values representing increases related to current period for each period (e.g., [value1, value2]).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E041",
+    "strategy_name": "Sum of Facility Square Footages",
+    "problem_pattern": "Given multiple locations with associated square footage values, calculate the total square footage leased by the company.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>)",
+    "operand_bindings": "<square_footage>: The area in square feet for each location, typically found as a numerical value associated with a location description.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>)\n\nWhere:\n<square_footage>: The area in square feet for each location, typically found as a numerical value associated with a location description.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E042",
+    "strategy_name": "Net Change Calculation from Multiple Adjustments",
+    "problem_pattern": "Calculate the net change in a quantity by summing a series of signed adjustments (positive for increases, negative for decreases) that are provided in a table or list.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>)",
+    "operand_bindings": "<initial_value>: The starting value of the quantity (e.g., granted units). It is the first operand in the addition sequence.\n<adjustment_1>: The first signed adjustment to apply (e.g., vested units, typically negative). It is the second operand.\n<adjustment_2>: The second signed adjustment to apply (e.g., forfeited units, typically negative). It is the third operand.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>)\n\nWhere:\n<initial_value>: The starting value of the quantity (e.g., granted units). It is the first operand in the addition sequence.\n<adjustment_1>: The first signed adjustment to apply (e.g., vested units, typically negative). It is the second operand.\n<adjustment_2>: The second signed adjustment to apply (e.g., forfeited units, typically negative). It is the third operand.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E043",
+    "strategy_name": "Goodwill Amortization Period",
+    "problem_pattern": "Given a balance and an annual amortization amount, determine the number of years to fully amortize the balance.",
+    "program_sketch": "multiply(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<balance>: The total amount to be amortized, typically given in billions or millions.\n<annual_amortization>: The amount amortized per year, typically given in millions.\n<scale_factor>: The factor to convert the balance to the same unit as annual_amortization (e.g., 1000 if balance is in billions and annual amortization in millions).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nmultiply(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<balance>: The total amount to be amortized, typically given in billions or millions.\n<annual_amortization>: The amount amortized per year, typically given in millions.\n<scale_factor>: The factor to convert the balance to the same unit as annual_amortization (e.g., 1000 if balance is in billions and annual amortization in millions).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E044",
+    "strategy_name": "Per-share dividend count from total dividends",
+    "problem_pattern": "Given total dividends paid over a period and the per-share dividend amount, determine the number of shares that received dividends.",
+    "program_sketch": "multiply(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<per_share_dividend>: The dividend amount paid per share for a single period (e.g., quarterly).\n<number_of_periods>: The number of dividend payment periods in the fiscal year (e.g., 4 for quarterly).\n<total_dividends>: The total dividends paid over the fiscal year.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nmultiply(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<per_share_dividend>: The dividend amount paid per share for a single period (e.g., quarterly).\n<number_of_periods>: The number of dividend payment periods in the fiscal year (e.g., 4 for quarterly).\n<total_dividends>: The total dividends paid over the fiscal year.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E045",
+    "strategy_name": "Net Margin Calculation from Aggregate and Per-Share Data",
+    "problem_pattern": "Given a financial metric reported in aggregate monetary units (e.g., millions) and a revenue figure in the same or different unit, compute the ratio (margin) after converting the metric to the revenue's unit.",
+    "program_sketch": "multiply(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<metric_value>: The financial metric (e.g., net earnings) for the target period, often given in millions or other aggregate units. Locate the value associated with the target year.\n<unit_conversion_factor>: A constant (e.g., 1000) to convert the metric from its reported unit (e.g., millions) to the unit of the revenue (e.g., thousands). This factor is typically 1000 if revenue is in thousands and metric in millions.\n<revenue_value>: The revenue figure for the same target period, in the unit that the final ratio should be based on (e.g., thousands). Locate the revenue for the target year.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nmultiply(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<metric_value>: The financial metric (e.g., net earnings) for the target period, often given in millions or other aggregate units. Locate the value associated with the target year.\n<unit_conversion_factor>: A constant (e.g., 1000) to convert the metric from its reported unit (e.g., millions) to the unit of the revenue (e.g., thousands). This factor is typically 1000 if revenue is in thousands and metric in millions.\n<revenue_value>: The revenue figure for the same target period, in the unit that the final ratio should be based on (e.g., thousands). Locate the revenue for the target year.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E046",
+    "strategy_name": "Unit Conversion and Scaling",
+    "problem_pattern": "Calculate a derived quantity from two given values, where one is a count and the other is a per-unit value, and then convert the result to a specified unit (e.g., millions).",
+    "program_sketch": "multiply(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<count>: The number of units or items (e.g., number of shares, units redeemed).\n<per_unit_value>: The value per unit (e.g., par value per share, price per unit).\n<scale_factor>: The factor to convert the product to the desired unit (e.g., 1,000,000 for millions).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nmultiply(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<count>: The number of units or items (e.g., number of shares, units redeemed).\n<per_unit_value>: The value per unit (e.g., par value per share, price per unit).\n<scale_factor>: The factor to convert the product to the desired unit (e.g., 1,000,000 for millions).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E047",
+    "strategy_name": "Semi-annual Interest Payment Calculation",
+    "problem_pattern": "Calculate the periodic interest payment for a fixed-rate debt instrument with semi-annual payments, given the principal amount and annual interest rate.",
+    "program_sketch": "multiply(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<principal>: The face value or principal amount of the debt instrument, typically stated in the context (e.g., 'issued $X million aggregate principal amount').\n<annual_rate>: The annual interest rate as a percentage, typically stated as 'X%' or 'X% per annum'.\n<payments_per_year>: The number of interest payments per year, typically 2 for semi-annual.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nmultiply(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<principal>: The face value or principal amount of the debt instrument, typically stated in the context (e.g., 'issued $X million aggregate principal amount').\n<annual_rate>: The annual interest rate as a percentage, typically stated as 'X%' or 'X% per annum'.\n<payments_per_year>: The number of interest payments per year, typically 2 for semi-annual.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E048",
+    "strategy_name": "Total Value from Quantity and Unit Price",
+    "problem_pattern": "Calculate the total monetary value of a quantity of items given the quantity and the weighted-average unit price, with the result expressed in millions.",
+    "program_sketch": "multiply(<value1>, <value2>), divide(#0, <value>)",
+    "operand_bindings": "<quantity>: The number of items (e.g., options granted). Locate the value associated with the quantity of the items.\n<unit_price>: The weighted-average price per item. Locate the value associated with the weighted-average price.\n<scale_factor>: The factor to convert the product to the desired unit (e.g., 1,000,000 to convert to millions).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nmultiply(<value1>, <value2>), divide(#0, <value>)\n\nWhere:\n<quantity>: The number of items (e.g., options granted). Locate the value associated with the quantity of the items.\n<unit_price>: The weighted-average price per item. Locate the value associated with the weighted-average price.\n<scale_factor>: The factor to convert the product to the desired unit (e.g., 1,000,000 to convert to millions).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E049",
+    "strategy_name": "Performance Comparison",
+    "problem_pattern": "Determine whether one entity outperformed another over a specified period by comparing their final values.",
+    "program_sketch": "greater(<value>)",
+    "operand_bindings": "<entity1_final_value>: The final value of the first entity (e.g., a company's stock index) at the end of the period.\n<entity2_final_value>: The final value of the second entity (e.g., a market index) at the end of the period.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ngreater(<value>)\n\nWhere:\n<entity1_final_value>: The final value of the first entity (e.g., a company's stock index) at the end of the period.\n<entity2_final_value>: The final value of the second entity (e.g., a market index) at the end of the period.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E050",
+    "strategy_name": "Comparison of Two Acquisition Purchase Prices",
+    "problem_pattern": "Given two acquisitions, determine if the purchase price of one is greater than the other.",
+    "program_sketch": "greater(<value>)",
+    "operand_bindings": "<price1>: The purchase price of the first acquisition mentioned in the question. Locate the total consideration paid for that acquisition.\n<price2>: The purchase price of the second acquisition mentioned in the question. Locate the total consideration paid for that acquisition.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ngreater(<value>)\n\nWhere:\n<price1>: The purchase price of the first acquisition mentioned in the question. Locate the total consideration paid for that acquisition.\n<price2>: The purchase price of the second acquisition mentioned in the question. Locate the total consideration paid for that acquisition.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E051",
+    "strategy_name": "Comparative Magnitude Check",
+    "problem_pattern": "Given two financial metrics from a company's report, determine if one is greater than the other.",
+    "program_sketch": "greater(<value>)",
+    "operand_bindings": "<value1>: The first metric mentioned in the question (e.g., advertising costs). Locate its value in the context, often stated as a total for a specific period.\n<value2>: The second metric mentioned in the question (e.g., R&D expenses). Locate its value in the context, often stated as a total for the same period.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ngreater(<value>)\n\nWhere:\n<value1>: The first metric mentioned in the question (e.g., advertising costs). Locate its value in the context, often stated as a total for a specific period.\n<value2>: The second metric mentioned in the question (e.g., R&D expenses). Locate its value in the context, often stated as a total for the same period.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E052",
+    "strategy_name": "compare_two_segment_growths",
+    "problem_pattern": "Given two segments or categories, determine whether the increase in one is greater than the increase in the other.",
+    "program_sketch": "greater(<value>)",
+    "operand_bindings": "<value1>: The increase amount of the first segment mentioned in the question.\n<value2>: The increase amount of the second segment mentioned in the question.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ngreater(<value>)\n\nWhere:\n<value1>: The increase amount of the first segment mentioned in the question.\n<value2>: The increase amount of the second segment mentioned in the question.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E053",
+    "strategy_name": "Comparison of Two Values",
+    "problem_pattern": "Determine whether one value is greater than another, given two specific values in the context.",
+    "program_sketch": "greater(<value>)",
+    "operand_bindings": "<value1>: The first value to compare, typically the one mentioned first in the question or context.\n<value2>: The second value to compare, typically the one mentioned second in the question or context.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ngreater(<value>)\n\nWhere:\n<value1>: The first value to compare, typically the one mentioned first in the question or context.\n<value2>: The second value to compare, typically the one mentioned second in the question or context.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E054",
+    "strategy_name": "Quarterly high price comparison",
+    "problem_pattern": "Compare the high sales prices of common shares between two specified quarters of a given fiscal year.",
+    "program_sketch": "greater(<value>)",
+    "operand_bindings": "<quarter1_high>: The high sales price for the first specified quarter. Locate the value labeled as 'high' for that quarter.\n<quarter2_high>: The high sales price for the second specified quarter. Locate the value labeled as 'high' for that quarter.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ngreater(<value>)\n\nWhere:\n<quarter1_high>: The high sales price for the first specified quarter. Locate the value labeled as 'high' for that quarter.\n<quarter2_high>: The high sales price for the second specified quarter. Locate the value labeled as 'high' for that quarter.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E055",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Given three values for three different periods, compute their average.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), divide(#1, <value>)",
+    "operand_bindings": "<value1>: The first value (e.g., for the earliest period)\n<value2>: The second value (e.g., for the middle period)\n<value3>: The third value (e.g., for the most recent period)",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), divide(#1, <value>)\n\nWhere:\n<value1>: The first value (e.g., for the earliest period)\n<value2>: The second value (e.g., for the middle period)\n<value3>: The third value (e.g., for the most recent period)\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E056",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Compute the average of three numerical values that are provided in a list or table, where each value corresponds to a different time period or category.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), divide(#1, <value>)",
+    "operand_bindings": "<value1>: The first value to be averaged, typically from the earliest period or first category.\n<value2>: The second value to be averaged, typically from the middle period or second category.\n<value3>: The third value to be averaged, typically from the latest period or third category.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), divide(#1, <value>)\n\nWhere:\n<value1>: The first value to be averaged, typically from the earliest period or first category.\n<value2>: The second value to be averaged, typically from the middle period or second category.\n<value3>: The third value to be averaged, typically from the latest period or third category.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E057",
+    "strategy_name": "Average of High and Low Values",
+    "problem_pattern": "Given two values representing the high and low of a certain metric for a specific period, calculate the average of these two values.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), divide(#1, <value>)",
+    "operand_bindings": "<high_value>: The higher value of the metric for the specified period. Located by identifying the period and the metric, then finding the 'high' value.\n<low_value>: The lower value of the metric for the specified period. Located similarly by finding the 'low' value.\n<constant_2>: The constant 2, representing the number of values being averaged.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), divide(#1, <value>)\n\nWhere:\n<high_value>: The higher value of the metric for the specified period. Located by identifying the period and the metric, then finding the 'high' value.\n<low_value>: The lower value of the metric for the specified period. Located similarly by finding the 'low' value.\n<constant_2>: The constant 2, representing the number of values being averaged.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E058",
+    "strategy_name": "Sum of Future Debt Obligations Converted to Millions",
+    "problem_pattern": "Given a list of debt amounts due in specific future periods (in thousands), calculate the total amount due over a combined period and express the result in millions.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), divide(#1, <value>)",
+    "operand_bindings": "<debt_amounts>: List of numerical values representing debt amounts due in each future period, typically found in financial statements under long-term debt maturity schedules. Each value is in thousands.\n<scale_factor>: The number 1000 used to convert from thousands to millions.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), divide(#1, <value>)\n\nWhere:\n<debt_amounts>: List of numerical values representing debt amounts due in each future period, typically found in financial statements under long-term debt maturity schedules. Each value is in thousands.\n<scale_factor>: The number 1000 used to convert from thousands to millions.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E059",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Given three numerical values associated with a specific category or metric over three consecutive periods, compute the average of these values.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), divide(#1, <value>)",
+    "operand_bindings": "<value1>: The first value in the sequence (e.g., for the earliest period).\n<value2>: The second value in the sequence (e.g., for the middle period).\n<value3>: The third value in the sequence (e.g., for the latest period).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), divide(#1, <value>)\n\nWhere:\n<value1>: The first value in the sequence (e.g., for the earliest period).\n<value2>: The second value in the sequence (e.g., for the middle period).\n<value3>: The third value in the sequence (e.g., for the latest period).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E060",
+    "strategy_name": "Average of Three-Year Values",
+    "problem_pattern": "Calculate the average of three values from a table over a three-year period, where the values are given for each year.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), divide(#1, <value>)",
+    "operand_bindings": "<value_year1>: The value for the first year in the range\n<value_year2>: The value for the second year in the range\n<value_year3>: The value for the third year in the range\n<total_sum>: The sum of the three yearly values\n<count>: The number of years (constant 3)",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), divide(#1, <value>)\n\nWhere:\n<value_year1>: The value for the first year in the range\n<value_year2>: The value for the second year in the range\n<value_year3>: The value for the third year in the range\n<total_sum>: The sum of the three yearly values\n<count>: The number of years (constant 3)\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E063",
+    "strategy_name": "Average of Beginning Balances",
+    "problem_pattern": "Given a table with rows representing different periods or categories and columns including a 'beginning balance' column, find the average of the beginning balances across the specified rows.",
+    "program_sketch": "table_average(<column>)",
+    "operand_bindings": "<beginning_balance>: The column containing the beginning balance values for each row. Locate the column labeled 'beginning balance' in the table.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ntable_average(<column>)\n\nWhere:\n<beginning_balance>: The column containing the beginning balance values for each row. Locate the column labeled 'beginning balance' in the table.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E064",
+    "strategy_name": "Average of a Column",
+    "problem_pattern": "Calculate the average of a specified column of numerical values from a table.",
+    "program_sketch": "table_average(<column>)",
+    "operand_bindings": "<column>: The column of numerical values to average, identified by its header or description in the question.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ntable_average(<column>)\n\nWhere:\n<column>: The column of numerical values to average, identified by its header or description in the question.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E065",
+    "strategy_name": "Average of Financial Metric",
+    "problem_pattern": "Compute the average value of a specified financial metric across multiple reporting periods, where the metric values are provided in a table and may be expressed as negative numbers in parentheses.",
+    "program_sketch": "table_average(<column>)",
+    "operand_bindings": "<metric>: The financial metric to average, e.g., 'interest expense net'. It is identified from the question and corresponds to a row or column label in the data table.\n<periods>: The set of reporting periods (e.g., years) over which to average. Typically all available periods for the metric, unless specified otherwise.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ntable_average(<column>)\n\nWhere:\n<metric>: The financial metric to average, e.g., 'interest expense net'. It is identified from the question and corresponds to a row or column label in the data table.\n<periods>: The set of reporting periods (e.g., years) over which to average. Typically all available periods for the metric, unless specified otherwise.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E066",
+    "strategy_name": "Average of Column Values",
+    "problem_pattern": "Given a table with rows labeled by time periods (e.g., years) and a column of numerical values, find the average of the values in that column.",
+    "program_sketch": "table_average(<column>)",
+    "operand_bindings": "<column>: The column of numerical values to average. Identified by the question's reference to a specific metric (e.g., 'ending balance').\n<rows>: The set of rows over which to average. Typically all rows in the table that have a value for the specified column.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ntable_average(<column>)\n\nWhere:\n<column>: The column of numerical values to average. Identified by the question's reference to a specific metric (e.g., 'ending balance').\n<rows>: The set of rows over which to average. Typically all rows in the table that have a value for the specified column.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E067",
+    "strategy_name": "Percentage Change Calculation",
+    "problem_pattern": "Calculate the percentage increase between two values of the same metric at two different time periods.",
+    "program_sketch": "divide(<value1>, <value2>), subtract(#0, <value>)",
+    "operand_bindings": "<V1>: The value of the metric at the later time period (numerator in division).\n<V2>: The value of the metric at the earlier time period (denominator in division).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ndivide(<value1>, <value2>), subtract(#0, <value>)\n\nWhere:\n<V1>: The value of the metric at the later time period (numerator in division).\n<V2>: The value of the metric at the earlier time period (denominator in division).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E068",
+    "strategy_name": "Percent Change Calculation",
+    "problem_pattern": "Calculate the percentage increase of a financial metric from one period to another, given the values for two consecutive periods.",
+    "program_sketch": "divide(<value1>, <value2>), subtract(#0, <value>)",
+    "operand_bindings": "<later_value>: The value of the metric in the later period (e.g., current year). It is the numerator in the division.\n<earlier_value>: The value of the metric in the earlier period (e.g., previous year). It is the denominator in the division.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ndivide(<value1>, <value2>), subtract(#0, <value>)\n\nWhere:\n<later_value>: The value of the metric in the later period (e.g., current year). It is the numerator in the division.\n<earlier_value>: The value of the metric in the earlier period (e.g., previous year). It is the denominator in the division.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E070",
+    "strategy_name": "Percentage Increase Between Two Values",
+    "problem_pattern": "Given two values for the same metric at different time points, calculate the percentage increase from the earlier value to the later value.",
+    "program_sketch": "divide(<value1>, <value2>), subtract(#0, <value>)",
+    "operand_bindings": "<later_value>: The value of the metric at the later time point (numerator in division).\n<earlier_value>: The value of the metric at the earlier time point (denominator in division).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ndivide(<value1>, <value2>), subtract(#0, <value>)\n\nWhere:\n<later_value>: The value of the metric at the later time point (numerator in division).\n<earlier_value>: The value of the metric at the earlier time point (denominator in division).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E071",
+    "strategy_name": "Growth Rate Calculation",
+    "problem_pattern": "Calculate the percentage growth of a metric from an earlier period to a later period.",
+    "program_sketch": "divide(<value1>, <value2>), subtract(#0, <value>)",
+    "operand_bindings": "<later_value>: The value of the metric in the later period. Locate by identifying the period label (e.g., year) and the metric name.\n<earlier_value>: The value of the metric in the earlier period. Locate similarly.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ndivide(<value1>, <value2>), subtract(#0, <value>)\n\nWhere:\n<later_value>: The value of the metric in the later period. Locate by identifying the period label (e.g., year) and the metric name.\n<earlier_value>: The value of the metric in the earlier period. Locate similarly.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E072",
+    "strategy_name": "Growth Rate Calculation from Two Values",
+    "problem_pattern": "Given two values representing the same metric at two different time points, calculate the percentage increase from the earlier to the later value.",
+    "program_sketch": "divide(<value1>, <value2>), subtract(#0, <value>)",
+    "operand_bindings": "<V1>: The later value (numerator) - the value of the metric at the later time point.\n<V2>: The earlier value (denominator) - the value of the metric at the earlier time point.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\ndivide(<value1>, <value2>), subtract(#0, <value>)\n\nWhere:\n<V1>: The later value (numerator) - the value of the metric at the later time point.\n<V2>: The earlier value (denominator) - the value of the metric at the earlier time point.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E073",
+    "strategy_name": "Percentage Change Calculation",
+    "problem_pattern": "Calculate the percentage decrease or increase of a metric between two time points, given the metric values at those points.",
+    "program_sketch": "subtract(<value1>, <value2>), divide(#0, <value>), multiply(#1, <value>)",
+    "operand_bindings": "<earlier_value>: The value of the metric at the earlier time point (e.g., start of period).\n<later_value>: The value of the metric at the later time point (e.g., end of period).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nsubtract(<value1>, <value2>), divide(#0, <value>), multiply(#1, <value>)\n\nWhere:\n<earlier_value>: The value of the metric at the earlier time point (e.g., start of period).\n<later_value>: The value of the metric at the later time point (e.g., end of period).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E074",
+    "strategy_name": "Total Return on Index Investment",
+    "problem_pattern": "Calculate the total return on an investment in a market index or stock over a period, given the initial and final index values and the initial investment amount, assuming reinvestment of dividends.",
+    "program_sketch": "subtract(<value1>, <value2>), divide(#0, <value>), multiply(#1, <value>)",
+    "operand_bindings": "<final_value>: The value of the index or stock at the end of the investment period.\n<initial_value>: The value of the index or stock at the start of the investment period.\n<investment_amount>: The amount of money initially invested.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nsubtract(<value1>, <value2>), divide(#0, <value>), multiply(#1, <value>)\n\nWhere:\n<final_value>: The value of the index or stock at the end of the investment period.\n<initial_value>: The value of the index or stock at the start of the investment period.\n<investment_amount>: The amount of money initially invested.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E075",
+    "strategy_name": "Percentage Decrease Calculation",
+    "problem_pattern": "Given two values of the same metric at two different time points (e.g., year over year), calculate the percentage decrease from the earlier value to the later value.",
+    "program_sketch": "subtract(<value1>, <value2>), divide(#0, <value>), multiply(#1, <value>)",
+    "operand_bindings": "<earlier_value>: The value of the metric at the earlier time point (e.g., previous year).\n<later_value>: The value of the metric at the later time point (e.g., current year).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nsubtract(<value1>, <value2>), divide(#0, <value>), multiply(#1, <value>)\n\nWhere:\n<earlier_value>: The value of the metric at the earlier time point (e.g., previous year).\n<later_value>: The value of the metric at the later time point (e.g., current year).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E076",
+    "strategy_name": "Percentage Decrease Calculation",
+    "problem_pattern": "Calculate the percentage decrease of a metric from an earlier period to a later period, given values for both periods.",
+    "program_sketch": "subtract(<value1>, <value2>), divide(#0, <value>), multiply(#1, <value>)",
+    "operand_bindings": "<later_value>: The value of the metric in the later period (e.g., current year).\n<earlier_value>: The value of the metric in the earlier period (e.g., previous year).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nsubtract(<value1>, <value2>), divide(#0, <value>), multiply(#1, <value>)\n\nWhere:\n<later_value>: The value of the metric in the later period (e.g., current year).\n<earlier_value>: The value of the metric in the earlier period (e.g., previous year).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E077",
+    "strategy_name": "Total Return Calculation",
+    "problem_pattern": "Given an initial investment amount and the price of an asset at two different times, calculate the total return in currency units.",
+    "program_sketch": "subtract(<value1>, <value2>), divide(#0, <value>), multiply(#1, <value>)",
+    "operand_bindings": "<initial_price>: The price of the asset at the beginning of the investment period.\n<final_price>: The price of the asset at the end of the investment period.\n<investment_amount>: The amount of money invested in the asset.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nsubtract(<value1>, <value2>), divide(#0, <value>), multiply(#1, <value>)\n\nWhere:\n<initial_price>: The price of the asset at the beginning of the investment period.\n<final_price>: The price of the asset at the end of the investment period.\n<investment_amount>: The amount of money invested in the asset.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E079",
+    "strategy_name": "Summation of Component Values",
+    "problem_pattern": "Calculate the total value of a metric for an entity by summing the values of its specified components.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), add(#1, <value>)",
+    "operand_bindings": "<component_values>: The individual values of the components that make up the total. These are typically found in a table or list, each associated with a specific component name.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), add(#1, <value>)\n\nWhere:\n<component_values>: The individual values of the components that make up the total. These are typically found in a table or list, each associated with a specific component name.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E081",
+    "strategy_name": "Summation of Categorical Counts",
+    "problem_pattern": "Given a table with multiple categories, each having a count value, find the total count by summing all category counts.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), add(#1, <value>)",
+    "operand_bindings": "<count>: The numerical value representing the count for each category. Locate by identifying the column header indicating count (e.g., 'number of owned sites') and reading the value for each row.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), add(#1, <value>)\n\nWhere:\n<count>: The numerical value representing the count for each category. Locate by identifying the column header indicating count (e.g., 'number of owned sites') and reading the value for each row.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E082",
+    "strategy_name": "Sum of Quarterly Values Across Multiple Years",
+    "problem_pattern": "Given a table of values for multiple categories (e.g., years) and multiple time periods (e.g., quarters), find the total for a specific time period (e.g., first quarter) across all categories.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), add(#1, <value>)",
+    "operand_bindings": "<value>: The numerical value corresponding to a specific category and time period, located in the table by matching the category label and the time period column.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), add(#1, <value>)\n\nWhere:\n<value>: The numerical value corresponding to a specific category and time period, located in the table by matching the category label and the time period column.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E083",
+    "strategy_name": "Sum of Average Fair Value Impacts Across Instrument Categories",
+    "problem_pattern": "Given a set of instrument categories, each with a value representing the average fair value impact over a fiscal period, calculate the total average fair value impact by summing these values across all categories.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), add(#1, <value>)",
+    "operand_bindings": "<average_fair_value_impact>: For each instrument category, the value labeled as the average fair value impact during the fiscal period. This is typically found in a table or list of categories with their respective average values.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), add(#1, <value>)\n\nWhere:\n<average_fair_value_impact>: For each instrument category, the value labeled as the average fair value impact during the fiscal period. This is typically found in a table or list of categories with their respective average values.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E084",
+    "strategy_name": "Sum of Multiple Year Values",
+    "problem_pattern": "Given a series of values for a specific financial item across multiple consecutive years, find the combined total for the entire period.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), add(#1, <value>)",
+    "operand_bindings": "<value_year_1>: The value of the financial item for the first year of the period.\n<value_year_2>: The value of the financial item for the second year of the period.\n<value_year_3>: The value of the financial item for the third year of the period.\n<value_year_4>: The value of the financial item for the fourth year of the period.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), add(#1, <value>)\n\nWhere:\n<value_year_1>: The value of the financial item for the first year of the period.\n<value_year_2>: The value of the financial item for the second year of the period.\n<value_year_3>: The value of the financial item for the third year of the period.\n<value_year_4>: The value of the financial item for the fourth year of the period.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E085",
+    "strategy_name": "Average of Three Consecutive Yearly Values",
+    "problem_pattern": "Given a metric for three consecutive years, compute the average of the first two years and then the average of that result with the third year, effectively computing the average of the three values.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), add(#1, <value>), divide(#2, <value>)",
+    "operand_bindings": "<value_year1>: The metric value for the first year in the sequence.\n<value_year2>: The metric value for the second year in the sequence.\n<value_year3>: The metric value for the third year in the sequence.\n<constant_3>: The number 3, representing the count of years.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), add(#1, <value>), divide(#2, <value>)\n\nWhere:\n<value_year1>: The metric value for the first year in the sequence.\n<value_year2>: The metric value for the second year in the sequence.\n<value_year3>: The metric value for the third year in the sequence.\n<constant_3>: The number 3, representing the count of years.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E086",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Calculate the average of three numerical values that are explicitly provided in the context, often associated with different time periods or categories.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), add(#1, <value>), divide(#2, <value>)",
+    "operand_bindings": "<value1>: The first numerical value to be averaged, typically associated with the most recent period or first mentioned.\n<value2>: The second numerical value to be averaged, typically associated with the middle period or second mentioned.\n<value3>: The third numerical value to be averaged, typically associated with the oldest period or third mentioned.\n<count>: The number of values to average, which is 3 in this case.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), add(#1, <value>), divide(#2, <value>)\n\nWhere:\n<value1>: The first numerical value to be averaged, typically associated with the most recent period or first mentioned.\n<value2>: The second numerical value to be averaged, typically associated with the middle period or second mentioned.\n<value3>: The third numerical value to be averaged, typically associated with the oldest period or third mentioned.\n<count>: The number of values to average, which is 3 in this case.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E087",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Calculate the average of three numerical values from a given context.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), add(#1, <value>), divide(#2, <value>)",
+    "operand_bindings": "<value1>: The first value to be averaged, located in the context as a specific data point.\n<value2>: The second value to be averaged, located in the context as a specific data point.\n<value3>: The third value to be averaged, located in the context as a specific data point.\n<count>: The number of values to average, which is 3 in this case.\n<divisor>: The divisor used to compute the average, which is the count of values (3).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), add(#1, <value>), divide(#2, <value>)\n\nWhere:\n<value1>: The first value to be averaged, located in the context as a specific data point.\n<value2>: The second value to be averaged, located in the context as a specific data point.\n<value3>: The third value to be averaged, located in the context as a specific data point.\n<count>: The number of values to average, which is 3 in this case.\n<divisor>: The divisor used to compute the average, which is the count of values (3).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E088",
+    "strategy_name": "Average of Three Consecutive Yearly Values",
+    "problem_pattern": "Calculate the average of a financial metric over a three-year period, given the values for each year.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), add(#1, <value>), divide(#2, <value>)",
+    "operand_bindings": "<value_year1>: The value of the metric for the first year of the period.\n<value_year2>: The value of the metric for the second year of the period.\n<value_year3>: The value of the metric for the third year of the period.\n<count>: The number of years in the period, which is 3.",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), add(#1, <value>), divide(#2, <value>)\n\nWhere:\n<value_year1>: The value of the metric for the first year of the period.\n<value_year2>: The value of the metric for the second year of the period.\n<value_year3>: The value of the metric for the third year of the period.\n<count>: The number of years in the period, which is 3.\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E089",
+    "strategy_name": "Proportion of a Subgroup's Total from Sum of Parts",
+    "problem_pattern": "Given a set of entities each with a numeric attribute (e.g., count) and a subset of interest, compute the proportion of the total attribute contributed by the subset, where the total is the sum of attributes across all entities.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), add(#1, <value>), divide(#2, <value>)",
+    "operand_bindings": "<numerator_value>: The numeric attribute of the entity of interest (e.g., count for the specific country).\n<denominator_part1>: First numeric attribute to sum for the denominator (e.g., count for another entity).\n<denominator_part2>: Second numeric attribute to sum for the denominator (e.g., count for another entity).\n<denominator_part3>: Third numeric attribute to sum for the denominator (e.g., count for another entity).",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), add(#1, <value>), divide(#2, <value>)\n\nWhere:\n<numerator_value>: The numeric attribute of the entity of interest (e.g., count for the specific country).\n<denominator_part1>: First numeric attribute to sum for the denominator (e.g., count for another entity).\n<denominator_part2>: Second numeric attribute to sum for the denominator (e.g., count for another entity).\n<denominator_part3>: Third numeric attribute to sum for the denominator (e.g., count for another entity).\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  },
+  {
+    "source_experience_id": "E090",
+    "strategy_name": "Average of Three Annual Values",
+    "problem_pattern": "Compute the average of a financial metric over three consecutive years.",
+    "program_sketch": "add(<value1>, <value2>), add(#0, <value>), add(#1, <value>), divide(#2, <value>)",
+    "operand_bindings": "<value_year1>: The value of the metric for the first year in the range.\n<value_year2>: The value of the metric for the second year in the range.\n<value_year3>: The value of the metric for the third year in the range.\n<count_years>: The number of years in the range (constant 3).\n<divisor>: The divisor for average (constant 2, representing the number of additions? Actually the program divides by 2, but for average of 3 numbers, divisor should be 3. However, the source program divides by 2, so we must preserve that. So we'll note that the divisor is 2 as per the source, but this is unusual. We'll keep it as is.)",
+    "binding_instruction": "Apply this reasoning pattern to the CURRENT document:\n\nadd(<value1>, <value2>), add(#0, <value>), add(#1, <value>), divide(#2, <value>)\n\nWhere:\n<value_year1>: The value of the metric for the first year in the range.\n<value_year2>: The value of the metric for the second year in the range.\n<value_year3>: The value of the metric for the third year in the range.\n<count_years>: The number of years in the range (constant 3).\n<divisor>: The divisor for average (constant 2, representing the number of additions? Actually the program divides by 2, but for average of 3 numbers, divisor should be 3. However, the source program divides by 2, so we must preserve that. So we'll note that the divisor is 2 as per the source, but this is unusual. We'll keep it as is.)\n\nYour task:\n1. Identify the values needed from the document\n2. Replace each placeholder (<value1>, <value2>, etc.) with concrete numbers\n3. Generate a fully executable FinQA program\n\nOUTPUT FORMAT: operation(number, number), operation(#0, number), ...\nWRONG FORMAT: operation, operation, operation\n",
+    "representation": "grounded_sketch"
+  }
+]
