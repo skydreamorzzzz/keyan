@@ -1,0 +1,2315 @@
+{
+  "audit_results": [
+    {
+      "source_id": "E001",
+      "gold_program": "divide(131, 5270)",
+      "gold_ops": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "numerator / denominator",
+      "strategy_reasoning": "Step 1: Identify the target year from the question.\nStep 2: Locate the value of the financial metric (numerator) for that year from the provided facts.\nStep 3: Locate the value of the balance sheet me...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E002",
+      "gold_program": "divide(19.8, 135.2)",
+      "gold_ops": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "percentage = (cash_paid / asset_value) * 100",
+      "strategy_reasoning": "Step 1: Step 1: Identify the cash paid amount from the context (e.g., 'cash paid as a result of the transaction was $X').\nStep 2: Step 2: Identify the asset value added from the context (e.g., 'additi...",
+      "extra_ops": [
+        "multiply",
+        "add"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "* 100",
+          "multiplying by 100"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "Convert the decimal to a percentage",
+          "to a percentage"
+        ],
+        "percentage_mention": [
+          "percentage",
+          "percentage",
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: multiply, add; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+    },
+    {
+      "source_id": "E003",
+      "gold_program": "divide(10, 1%)",
+      "gold_ops": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total = effect_amount / percentage_change",
+      "strategy_reasoning": "Step 1: Identify the effect amount on the total due to a percentage change.\nStep 2: Identify the percentage change (as a decimal or fraction) that caused that effect.\nStep 3: Divide the effect amount ...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [
+          "to a percentage"
+        ],
+        "percentage_mention": [
+          "percentage",
+          "percentage",
+          "percentage",
+          "percentage",
+          "percentage"
+        ]
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Percentage conversion mention"
+    },
+    {
+      "source_id": "E004",
+      "gold_program": "divide(494788, 309051)",
+      "gold_ops": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "current_ratio = current_assets / current_liabilities",
+      "strategy_reasoning": "Step 1: Identify the current assets value for the target period from the financial data.\nStep 2: Identify the current liabilities value for the same period from the financial data.\nStep 3: Divide the ...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E005",
+      "gold_program": "divide(185, 7536)",
+      "gold_ops": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(component_value / total_value) * 100",
+      "strategy_reasoning": "Step 1: Step 1: Identify the component value (the part) for the specified period.\nStep 2: Step 2: Identify the total value (the whole) for the same period.\nStep 3: Step 3: Divide the component value b...",
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "* 100",
+          "Multiply the result by 100",
+          "by 100 to express as a percentage"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "express as a percentage",
+          "as a percentage"
+        ],
+        "percentage_mention": [
+          "percentage",
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: multiply; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+    },
+    {
+      "source_id": "E006",
+      "gold_program": "divide(176138, 1355605)",
+      "gold_ops": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "percentage = (portion / total) * 100",
+      "strategy_reasoning": "Step 1: Step 1: Identify the total amount (denominator) from the context, often labeled as 'total future minimum payments' or similar.\nStep 2: Step 2: Identify the portion amount (numerator) that is d...",
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "* 100",
+          "multiply by 100"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "Convert the decimal to a percentage",
+          "to a percentage"
+        ],
+        "percentage_mention": [
+          "percentage",
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: multiply; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+    },
+    {
+      "source_id": "E007",
+      "gold_program": "subtract(118, 102), divide(#0, 102)",
+      "gold_ops": [
+        "subtract",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "((later_value - earlier_value) / earlier_value) * 100%",
+      "strategy_reasoning": "Step 1: Step 1: Identify the later value (V_later) and the earlier value (V_earlier) of the metric from the given context.\nStep 2: Step 2: Compute the change by subtracting the earlier value from the ...",
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "* 100",
+          "multiply by 100"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "Express the result as a percentage",
+          "as a percentage"
+        ],
+        "percentage_mention": [
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: multiply; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+    },
+    {
+      "source_id": "E009",
+      "gold_program": "subtract(347, 328), divide(#0, 328)",
+      "gold_ops": [
+        "subtract",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "((current_value - previous_value) / previous_value) * 100",
+      "strategy_reasoning": "Step 1: Step 1: Identify the values of the metric for the two time periods: current_value and previous_value.\nStep 2: Step 2: Compute the difference by subtracting previous_value from current_value.\nS...",
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "* 100",
+          "multiply by 100"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "Express the result as a percentage",
+          "as a percentage"
+        ],
+        "percentage_mention": [
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: multiply; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+    },
+    {
+      "source_id": "E011",
+      "gold_program": "subtract(18447, 9889), divide(#0, 9889)",
+      "gold_ops": [
+        "subtract",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "((final_value - initial_value) / initial_value) * 100",
+      "strategy_reasoning": "Step 1: Step 1: Identify the initial value (the value at the beginning of the period) and the final value (the value at the end of the period).\nStep 2: Step 2: Subtract the initial value from the fina...",
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "* 100",
+          "multiplying by 100"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "Convert the decimal to a percentage",
+          "to a percentage"
+        ],
+        "percentage_mention": [
+          "percentage",
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: multiply; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+    },
+    {
+      "source_id": "E013",
+      "gold_program": "subtract(91.8, 27.6)",
+      "gold_ops": [
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "decrease = earlier_value - later_value",
+      "strategy_reasoning": "Step 1: Identify the expense item for which the decrease is to be calculated.\nStep 2: Determine the two years mentioned in the question: the earlier year and the later year.\nStep 3: Find the value of ...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E016",
+      "gold_program": "subtract(29669000, 29570000)",
+      "gold_ops": [
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "loss = amortized_cost - market_value",
+      "strategy_reasoning": "Step 1: Step 1: Identify the amortized cost of the held-to-maturity investment portfolio at the specified date.\nStep 2: Step 2: Identify the market value of the same portfolio at the same date.\nStep 3...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E019",
+      "gold_program": "add(572079, 599497)",
+      "gold_ops": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total = cash_consideration + stock_fair_value",
+      "strategy_reasoning": "Step 1: Step 1: Identify the row or line item that states the cash consideration paid to the stockholders.\nStep 2: Step 2: Identify the row or line item that states the fair value of the common stock ...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E020",
+      "gold_program": "add(26.4, 35.1)",
+      "gold_ops": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total_impact = reduction1 + reduction2",
+      "strategy_reasoning": "Step 1: Identify the two distinct events that caused reductions in liabilities.\nStep 2: For each event, locate the corresponding reduction amount in the provided facts or financial statements.\nStep 3:...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E021",
+      "gold_program": "add(595, 629)",
+      "gold_ops": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "pre_impairment_value = remaining_value + impairment_charge",
+      "strategy_reasoning": "Step 1: Identify the remaining value of the asset after impairment from the context (e.g., 'goodwill of X remaining').\nStep 2: Identify the impairment charge amount from the context (e.g., 'impairment...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E022",
+      "gold_program": "add(1208860, 814114)",
+      "gold_ops": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "Total_NOI = NOI_type1 + NOI_type2",
+      "strategy_reasoning": "Step 1: Step 1: Identify the net operating income values for the two specified property types from the given data.\nStep 2: Step 2: Add the two values together to obtain the total net operating income ...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E023",
+      "gold_program": "add(3.9, 1.5)",
+      "gold_ops": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total = cumulative_amount + additional_amount",
+      "strategy_reasoning": "Step 1: Identify the cumulative amount already authorized (e.g., the aggregate repurchase amount).\nStep 2: Identify the additional amount authorized (e.g., the increase on a specific date).\nStep 3: Ad...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E024",
+      "gold_program": "add(351, 813)",
+      "gold_ops": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total_increase = prior_year_increase + current_year_increase",
+      "strategy_reasoning": "Step 1: Step 1: Identify the amount of increase in unrecognized tax benefits related to prior years from the given financial data.\nStep 2: Step 2: Identify the amount of increase in unrecognized tax b...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E025",
+      "gold_program": "add(27, 158), divide(27, #0)",
+      "gold_ops": [
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "percentage = (charge_amount / (reported_income + charge_amount)) * 100",
+      "strategy_reasoning": "Step 1: Identify the reported income for the segment in the current period (the period without the charge).\nStep 2: Identify the amount of the one-time charge that was absent in the current period.\nSt...",
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "* 100",
+          "* 100",
+          "multiplying by 100"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "as a percentage"
+        ],
+        "percentage_mention": [
+          "percentage",
+          "percentage",
+          "percentage",
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: multiply; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+    },
+    {
+      "source_id": "E026",
+      "gold_program": "add(107.2, 179.1), divide(#0, const_2)",
+      "gold_ops": [
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(value_at_date1 + value_at_date2) / 2",
+      "strategy_reasoning": "Step 1: Step 1: Identify the financial item (e.g., short-term borrowings) and the two reporting dates for which the average is required.\nStep 2: Step 2: Locate the values of that item at both dates fr...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E027",
+      "gold_program": "add(17, 4), divide(#0, const_2)",
+      "gold_ops": [
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "average_annual_closures = sum(closure_counts) / number_of_years",
+      "strategy_reasoning": "Step 1: Step 1: Identify the annual store closure counts for each year in the specified period. Ensure they are expressed as positive numbers (e.g., if given as negative, take absolute value).\nStep 2:...",
+      "extra_ops": [],
+      "missing_ops": [
+        "add"
+      ],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": true,
+      "reason": "Missing ops: add"
+    },
+    {
+      "source_id": "E028",
+      "gold_program": "add(0.6, 4.1), divide(#0, 22.7)",
+      "gold_ops": [
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(cost1 + cost2) / current_assets * 100",
+      "strategy_reasoning": "Step 1: Step 1: Identify the acquisition-related costs recorded in selling, general, and administrative expenses for each period mentioned. Sum these costs to get total acquisition-related costs.\nStep...",
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "* 100"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": [
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: multiply; Spurious \u00d7100 (gold has no const_100)"
+    },
+    {
+      "source_id": "E029",
+      "gold_program": "add(27, 2), divide(#0, 84)",
+      "gold_ops": [
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(sum of subcategory_counts) / total_count",
+      "strategy_reasoning": "Step 1: Step 1: Identify the subcategory counts that together form the subset of interest. Sum these counts to get the total size of the subset.\nStep 2: Step 2: Identify the total count of all items i...",
+      "extra_ops": [],
+      "missing_ops": [
+        "add"
+      ],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [
+          "express as a percentage",
+          "as a percentage"
+        ],
+        "percentage_mention": [
+          "percentage"
+        ]
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Missing ops: add; Percentage conversion mention"
+    },
+    {
+      "source_id": "E030",
+      "gold_program": "add(5, 10), divide(#0, const_2)",
+      "gold_ops": [
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(value1 + value2) / 2",
+      "strategy_reasoning": "Step 1: Step 1: Identify the two weighted average useful life values for the two specified asset categories.\nStep 2: Step 2: Add the two values together.\nStep 3: Step 3: Divide the sum by 2 to get the...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E031",
+      "gold_program": "multiply(33035204, 100.24)",
+      "gold_ops": [
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total_spent = shares_repurchased * average_price_per_share",
+      "strategy_reasoning": "Step 1: Step 1: Identify the number of shares repurchased from the context (e.g., 'we repurchased X shares').\nStep 2: Step 2: Identify the average price per share from the context (e.g., 'at an averag...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E032",
+      "gold_program": "multiply(50.33, 4999)",
+      "gold_ops": [
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total_value = per_unit_value * quantity",
+      "strategy_reasoning": "Step 1: Step 1: Identify the per-unit value at the specified time point (e.g., beginning of year).\nStep 2: Step 2: Identify the quantity of units at the same time point.\nStep 3: Step 3: Multiply the p...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E033",
+      "gold_program": "multiply(100, const_2)",
+      "gold_ops": [
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "strategy_formula": "post_split_shares = pre_split_shares * split_ratio",
+      "strategy_reasoning": "Step 1: Step 1: Identify the number of shares outstanding before the split from the context.\nStep 2: Step 2: Identify the split ratio from the context (e.g., 2-for-1 means multiply by 2).\nStep 3: Step...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E034",
+      "gold_program": "multiply(13394736, 11.38)",
+      "gold_ops": [
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total_dollar_amount = shares * exercise_price",
+      "strategy_reasoning": "Step 1: Step 1: Identify the total number of shares of new stock options issued to employees.\nStep 2: Step 2: Identify the exercise price per share.\nStep 3: Step 3: Multiply the number of shares by th...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E035",
+      "gold_program": "multiply(525000000, 0.25)",
+      "gold_ops": [
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total_par_value = number_of_shares * par_value_per_share",
+      "strategy_reasoning": "Step 1: Identify the class of stock for which the total par value is to be calculated (e.g., common stock).\nStep 2: Locate the number of authorized shares for that class from the equity section or not...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E036",
+      "gold_program": "multiply(168, 338)",
+      "gold_ops": [
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "fair_value = percentage * goodwill",
+      "strategy_reasoning": "Step 1: Step 1: Identify the percentage value that represents fair value as a percentage of allocated book value.\nStep 2: Step 2: Identify the goodwill amount for the reporting unit.\nStep 3: Step 3: M...",
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "Multiply the percentage (as a number, not divided by 100"
+        ],
+        "divide_100": [
+          "divided by 100"
+        ],
+        "percentage_conversion": [
+          "as a percentage",
+          "as a percentage"
+        ],
+        "percentage_mention": [
+          "percentage",
+          "percentage",
+          "percentage",
+          "percentage",
+          "percentage",
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": true,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: divide; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+    },
+    {
+      "source_id": "E037",
+      "gold_program": "add(34.7, 36.7), add(32.3, #0)",
+      "gold_ops": [
+        "add",
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total_amortization = amortization_year1 + amortization_year2 + amortization_year3",
+      "strategy_reasoning": "Step 1: Step 1: Identify the amortization expense for the first year in the specified range.\nStep 2: Step 2: Identify the amortization expense for the second year in the specified range.\nStep 3: Step ...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E038",
+      "gold_program": "add(244, 249), add(#0, 309)",
+      "gold_ops": [
+        "add",
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total = value1 + value2 + value3",
+      "strategy_reasoning": "Step 1: Step 1: Identify the values for each of the three time periods from the context.\nStep 2: Step 2: Add the first two values together.\nStep 3: Step 3: Add the result to the third value to obtain ...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E039",
+      "gold_program": "add(1762, -578), add(#0, -4363)",
+      "gold_ops": [
+        "add",
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "net_change_in_cash = operating_activities + investing_activities + financing_activities",
+      "strategy_reasoning": "Step 1: Step 1: Identify the values for operating, investing, and financing activities for the target period from the given data.\nStep 2: Step 2: Add the operating activities value to the investing ac...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E040",
+      "gold_program": "add(12.1, 27.4), add(15.8, 21.9)",
+      "gold_ops": [
+        "add",
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(sum(prior_period_increases) / (sum(prior_period_increases) + sum(current_period_increases))) * 100",
+      "strategy_reasoning": "Step 1: Step 1: Sum all values in the 'prior_period_increases' list to get the total increase from prior periods.\nStep 2: Step 2: Sum all values in the 'current_period_increases' list to get the total...",
+      "extra_ops": [
+        "divide",
+        "multiply"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "* 100",
+          "multiply by 100",
+          "by 100 to get the percentage"
+        ],
+        "divide_100": [
+          "Divide the total increase from prior periods by the total increase across both categories, then multiply by 100"
+        ],
+        "percentage_conversion": [],
+        "percentage_mention": [
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": true,
+      "has_percentage_conversion": false,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: divide, multiply; Spurious \u00d7100 (gold has no const_100)"
+    },
+    {
+      "source_id": "E041",
+      "gold_program": "add(514000, 81000), add(#0, 69000)",
+      "gold_ops": [
+        "add",
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total_square_footage = sum(square_footage_1, square_footage_2, ..., square_footage_n)",
+      "strategy_reasoning": "Step 1: Step 1: Identify all locations mentioned in the context that have a square footage value.\nStep 2: Step 2: Extract the square footage value for each location.\nStep 3: Step 3: Sum all extracted ...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E042",
+      "gold_program": "add(420, -79), add(#0, -114)",
+      "gold_ops": [
+        "add",
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "net_change = initial_value + adjustment_1 + adjustment_2",
+      "strategy_reasoning": "Step 1: Step 1: Identify the initial value of the quantity (e.g., granted units) from the context.\nStep 2: Step 2: Identify the first adjustment (e.g., vested units) and note its sign (positive if inc...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E043",
+      "gold_program": "multiply(3.2, const_1000), divide(#0, 62)",
+      "gold_ops": [
+        "multiply",
+        "divide"
+      ],
+      "gold_has_100": true,
+      "strategy_formula": "years = (balance * scale_factor) / annual_amortization",
+      "strategy_reasoning": "Step 1: Step 1: Identify the balance to be amortized and the annual amortization amount.\nStep 2: Step 2: Convert the balance to the same unit as the annual amortization by multiplying by the appropria...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E044",
+      "gold_program": "multiply(0.10, const_4), divide(487, #0)",
+      "gold_ops": [
+        "multiply",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "shares = total_dividends / (per_share_dividend * number_of_periods)",
+      "strategy_reasoning": "Step 1: Step 1: Multiply the per-share dividend by the number of periods to get the total dividend per share for the year.\nStep 2: Step 2: Divide the total dividends paid during the year by the annual...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E045",
+      "gold_program": "multiply(259.1, const_1000), divide(#0, 2458777)",
+      "gold_ops": [
+        "multiply",
+        "divide"
+      ],
+      "gold_has_100": true,
+      "strategy_formula": "margin = (metric_value * unit_conversion_factor) / revenue_value",
+      "strategy_reasoning": "Step 1: Step 1: Identify the financial metric (e.g., net earnings) for the target year and its reported unit (e.g., millions).\nStep 2: Step 2: Identify the revenue for the same target year and its uni...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [
+          "Express the result as a percentage",
+          "as a percentage"
+        ],
+        "percentage_mention": [
+          "percentage"
+        ]
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E046",
+      "gold_program": "multiply(2200000, 2.2), divide(#0, const_1000000)",
+      "gold_ops": [
+        "multiply",
+        "divide"
+      ],
+      "gold_has_100": true,
+      "strategy_formula": "result = (count * per_unit_value) / scale_factor",
+      "strategy_reasoning": "Step 1: Step 1: Identify the count of units and the per-unit value from the context.\nStep 2: Step 2: Multiply the count by the per-unit value to get the total value in the original unit.\nStep 3: Step ...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E047",
+      "gold_program": "multiply(375, 3.0%), divide(#0, const_2)",
+      "gold_ops": [
+        "multiply",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "periodic_interest = (principal * annual_rate) / payments_per_year",
+      "strategy_reasoning": "Step 1: Step 1: Identify the principal amount (P) and the annual interest rate (r) from the context.\nStep 2: Step 2: Multiply the principal by the annual rate to get the annual interest amount: P * r....",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [
+          "as a percentage"
+        ],
+        "percentage_mention": [
+          "percentage"
+        ]
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Percentage conversion mention"
+    },
+    {
+      "source_id": "E048",
+      "gold_program": "multiply(2621050, 27.24), divide(#0, const_1000000)",
+      "gold_ops": [
+        "multiply",
+        "divide"
+      ],
+      "gold_has_100": true,
+      "strategy_formula": "total_value_in_millions = (quantity * unit_price) / scale_factor",
+      "strategy_reasoning": "Step 1: Step 1: Identify the quantity of items (e.g., number of options granted).\nStep 2: Step 2: Identify the weighted-average unit price per item.\nStep 3: Step 3: Multiply the quantity by the unit p...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E049",
+      "gold_program": "greater(693.60, 204.38)",
+      "gold_ops": [
+        "greater"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "greater(entity1_final_value, entity2_final_value)",
+      "strategy_reasoning": "Step 1: Identify the final value of the first entity at the end of the period.\nStep 2: Identify the final value of the second entity at the end of the period.\nStep 3: Compare the two final values usin...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E050",
+      "gold_program": "greater(1137.4, 1030.7)",
+      "gold_ops": [
+        "greater"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "greater(price1, price2)",
+      "strategy_reasoning": "Step 1: Step 1: Identify the two acquisitions mentioned in the question.\nStep 2: Step 2: For each acquisition, find the total consideration paid (e.g., cash, stock, or combination) as stated in the co...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E051",
+      "gold_program": "greater(280, 464)",
+      "gold_ops": [
+        "greater"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "greater(value1, value2)",
+      "strategy_reasoning": "Step 1: Step 1: Identify the two metrics mentioned in the question and the period of interest.\nStep 2: Step 2: Extract the numerical values for each metric for that period from the given facts.\nStep 3...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E052",
+      "gold_program": "greater(296, 89)",
+      "gold_ops": [
+        "greater"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "greater(value1, value2)",
+      "strategy_reasoning": "Step 1: Step 1: Identify the two segments or categories mentioned in the question.\nStep 2: Step 2: For each segment, locate the statement that provides the revenue increase (or similar metric) for tha...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E053",
+      "gold_program": "greater(2.28, 1.24)",
+      "gold_ops": [
+        "greater"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "greater(value1, value2)",
+      "strategy_reasoning": "Step 1: Step 1: Identify the two values to compare from the context. They are usually explicitly stated or can be extracted from the given information.\nStep 2: Step 2: Apply the 'greater' operation to...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E054",
+      "gold_program": "greater(93.53, 84.30)",
+      "gold_ops": [
+        "greater"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "greater(quarter1_high, quarter2_high)",
+      "strategy_reasoning": "Step 1: Step 1: Identify the two quarters to compare from the question.\nStep 2: Step 2: For each quarter, find the high sales price (the maximum price) from the provided data.\nStep 3: Step 3: Compare ...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E055",
+      "gold_program": "add(3.4, 0.6), add(#0, 2.3), divide(#1, const_3)",
+      "gold_ops": [
+        "add",
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(value1 + value2 + value3) / 3",
+      "strategy_reasoning": "Step 1: Step 1: Identify the three values for the three periods mentioned in the question.\nStep 2: Step 2: Add the first and third values (or any two values) to get an intermediate sum.\nStep 3: Step 3...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E056",
+      "gold_program": "add(135, 137), add(#0, 138), divide(#1, const_3)",
+      "gold_ops": [
+        "add",
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "average = (value1 + value2 + value3) / 3",
+      "strategy_reasoning": "Step 1: Step 1: Identify the three values to be averaged from the given context (e.g., from a table or list).\nStep 2: Step 2: Add the first and second values together.\nStep 3: Step 3: Add the result t...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E057",
+      "gold_program": "add(59.73, 45.20), add(#0, const_2), divide(#1, const_2)",
+      "gold_ops": [
+        "add",
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(high_value + low_value) / 2",
+      "strategy_reasoning": "Step 1: Step 1: Identify the high value for the specified period and metric.\nStep 2: Step 2: Identify the low value for the same period and metric.\nStep 3: Step 3: Add the high and low values together...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E058",
+      "gold_program": "add(467298, 75896), add(#0, 199539), divide(#1, const_1000)",
+      "gold_ops": [
+        "add",
+        "add",
+        "divide"
+      ],
+      "gold_has_100": true,
+      "strategy_formula": "total_debt_millions = (sum(debt_amounts)) / 1000",
+      "strategy_reasoning": "Step 1: Step 1: Identify the debt amounts due in each of the specified future periods (e.g., next 12 months, next 24 months, etc.) from the financial data. These are typically listed as separate line ...",
+      "extra_ops": [],
+      "missing_ops": [
+        "add"
+      ],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": true,
+      "reason": "Missing ops: add"
+    },
+    {
+      "source_id": "E059",
+      "gold_program": "add(27.3, 12.6), add(#0, 8.5), divide(#1, const_3)",
+      "gold_ops": [
+        "add",
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(value1 + value2 + value3) / 3",
+      "strategy_reasoning": "Step 1: Step 1: Identify the three values corresponding to the three periods mentioned in the question.\nStep 2: Step 2: Add the first and second values to get their sum.\nStep 3: Step 3: Add the result...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E060",
+      "gold_program": "add(44, 44), add(#0, 48), divide(#1, const_3)",
+      "gold_ops": [
+        "add",
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(value_year1 + value_year2 + value_year3) / 3",
+      "strategy_reasoning": "Step 1: Step 1: Identify the three yearly values for the specified years from the given data.\nStep 2: Step 2: Add the first two yearly values together.\nStep 3: Step 3: Add the result to the third year...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E063",
+      "gold_program": "table_average(beginning balance, none)",
+      "gold_ops": [
+        "table_average"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "average(beginning_balance)",
+      "strategy_reasoning": "Step 1: Step 1: Identify the column labeled 'beginning balance' in the table.\nStep 2: Step 2: Extract all values from that column for the rows that are relevant to the question (e.g., all years mentio...",
+      "extra_ops": [],
+      "missing_ops": [
+        "table_average"
+      ],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": true,
+      "reason": "Missing ops: table_average"
+    },
+    {
+      "source_id": "E064",
+      "gold_program": "table_average(ending balance, none)",
+      "gold_ops": [
+        "table_average"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "average(column)",
+      "strategy_reasoning": "Step 1: Step 1: Identify the column of interest from the question (e.g., 'ending balance in allowance for doubtful accounts').\nStep 2: Step 2: Extract all numerical values from that column.\nStep 3: St...",
+      "extra_ops": [],
+      "missing_ops": [
+        "table_average"
+      ],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": true,
+      "reason": "Missing ops: table_average"
+    },
+    {
+      "source_id": "E065",
+      "gold_program": "table_average(interest expense net, none)",
+      "gold_ops": [
+        "table_average"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "average(metric values over all periods)",
+      "strategy_reasoning": "Step 1: Step 1: Identify the financial metric from the question (e.g., 'interest expense net').\nStep 2: Step 2: Locate the values for this metric for each reporting period in the given data table.\nSte...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E066",
+      "gold_program": "table_average(ending balance, none)",
+      "gold_ops": [
+        "table_average"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "average = sum(column) / count(column)",
+      "strategy_reasoning": "Step 1: Step 1: Identify the column of interest based on the question (e.g., 'ending balance').\nStep 2: Step 2: Extract all numerical values from that column, ignoring any missing or non-numeric entri...",
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [
+        "table_average"
+      ],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": true,
+      "reason": "Extra ops: divide; Missing ops: table_average"
+    },
+    {
+      "source_id": "E067",
+      "gold_program": "divide(104.10, 98.18), subtract(#0, const_1)",
+      "gold_ops": [
+        "divide",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(V1 / V2) - 1",
+      "strategy_reasoning": "Step 1: Step 1: Identify the two values of the metric for the two time periods: the later value (V1) and the earlier value (V2).\nStep 2: Step 2: Divide V1 by V2 to obtain the ratio of the later value ...",
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "multiply by 100",
+          "by 100) to express as a percentage"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "Convert the decimal change to a percentage",
+          "express as a percentage",
+          "as a percentage",
+          "to a percentage"
+        ],
+        "percentage_mention": [
+          "percentage",
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: multiply; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+    },
+    {
+      "source_id": "E068",
+      "gold_program": "divide(240, 183), subtract(#0, const_1)",
+      "gold_ops": [
+        "divide",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "((later_value / earlier_value) - 1) * 100",
+      "strategy_reasoning": "Step 1: Step 1: Identify the values of the metric for the two periods of interest. The later period value is the numerator, and the earlier period value is the denominator.\nStep 2: Step 2: Divide the ...",
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "* 100",
+          "multiplying by 100"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "Convert the decimal to a percentage",
+          "to a percentage"
+        ],
+        "percentage_mention": [
+          "percentage",
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: multiply; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+    },
+    {
+      "source_id": "E070",
+      "gold_program": "divide(48.3, 47.3), subtract(#0, const_1)",
+      "gold_ops": [
+        "divide",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(later_value / earlier_value) - 1",
+      "strategy_reasoning": "Step 1: Step 1: Identify the later value (V1) and the earlier value (V2) for the metric in question.\nStep 2: Step 2: Divide V1 by V2 to get the ratio.\nStep 3: Step 3: Subtract 1 from the ratio to get ...",
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "multiplying by 100"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "Convert the decimal to a percentage",
+          "to a percentage"
+        ],
+        "percentage_mention": [
+          "percentage",
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: multiply; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+    },
+    {
+      "source_id": "E071",
+      "gold_program": "divide(1061, 836), subtract(#0, const_1)",
+      "gold_ops": [
+        "divide",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "growth_rate = (later_value / earlier_value) - 1",
+      "strategy_reasoning": "Step 1: Step 1: Identify the later value (V_later) and the earlier value (V_earlier) for the metric of interest.\nStep 2: Step 2: Divide the later value by the earlier value to get the ratio.\nStep 3: S...",
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "multiply by 100"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "Convert the decimal to a percentage",
+          "to a percentage"
+        ],
+        "percentage_mention": [
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: multiply; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+    },
+    {
+      "source_id": "E072",
+      "gold_program": "divide(25513, 21548), subtract(#0, const_1)",
+      "gold_ops": [
+        "divide",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "growth_rate = (V1 / V2) - 1",
+      "strategy_reasoning": "Step 1: Step 1: Identify the two values: the later value (V1) and the earlier value (V2).\nStep 2: Step 2: Divide V1 by V2 to get the ratio of later to earlier.\nStep 3: Step 3: Subtract 1 from the rati...",
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [
+          "multiply by 100"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "Convert the decimal to a percentage",
+          "to a percentage"
+        ],
+        "percentage_mention": [
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Extra ops: multiply; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+    },
+    {
+      "source_id": "E073",
+      "gold_program": "subtract(23, 21), divide(#0, 21), multiply(#1, const_100)",
+      "gold_ops": [
+        "subtract",
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "strategy_formula": "((earlier_value - later_value) / later_value) * 100",
+      "strategy_reasoning": "Step 1: Step 1: Identify the metric values at the two time points: earlier_value and later_value.\nStep 2: Step 2: Compute the difference: subtract later_value from earlier_value (earlier_value - later...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [
+          "* 100",
+          "Multiply the result by 100",
+          "by 100 to express as a percentage"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "express as a percentage",
+          "as a percentage"
+        ],
+        "percentage_mention": [
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E074",
+      "gold_program": "subtract(171.40, 100), divide(1000000, 100), multiply(#1, #0)",
+      "gold_ops": [
+        "subtract",
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "strategy_formula": "Total Return = (final_value - initial_value) * (investment_amount / initial_value)",
+      "strategy_reasoning": "Step 1: Step 1: Identify the final value and initial value of the index or stock from the given data.\nStep 2: Step 2: Subtract the initial value from the final value to get the change in index value.\n...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E075",
+      "gold_program": "subtract(407, 258), divide(#0, 407), multiply(#1, const_100)",
+      "gold_ops": [
+        "subtract",
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "strategy_formula": "((earlier_value - later_value) / earlier_value) * 100",
+      "strategy_reasoning": "Step 1: Step 1: Identify the earlier value (e.g., from the earlier year) and the later value (e.g., from the later year) for the metric in question.\nStep 2: Step 2: Subtract the later value from the e...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [
+          "* 100",
+          "Multiply the fractional decrease by 100",
+          "by 100 to express it as a percentage"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "express it as a percentage",
+          "as a percentage"
+        ],
+        "percentage_mention": [
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E076",
+      "gold_program": "subtract(95.7, 96.0), divide(#0, 96.0), multiply(#1, const_100)",
+      "gold_ops": [
+        "subtract",
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "strategy_formula": "((later_value - earlier_value) / earlier_value) * 100",
+      "strategy_reasoning": "Step 1: Step 1: Identify the later value (V_later) and the earlier value (V_earlier) for the metric in question.\nStep 2: Step 2: Subtract the earlier value from the later value to find the change (V_l...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [
+          "* 100",
+          "Multiply by 100",
+          "by 100 to express as a percentage"
+        ],
+        "divide_100": [],
+        "percentage_conversion": [
+          "express as a percentage",
+          "as a percentage"
+        ],
+        "percentage_mention": [
+          "percentage"
+        ]
+      },
+      "has_multiply_100": true,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E077",
+      "gold_program": "subtract(155.99, const_100), divide(#0, const_100), multiply(#1, 1000000)",
+      "gold_ops": [
+        "subtract",
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "strategy_formula": "total_return = ((final_price - initial_price) / initial_price) * investment_amount",
+      "strategy_reasoning": "Step 1: Step 1: Subtract the initial price from the final price to get the price change.\nStep 2: Step 2: Divide the price change by the initial price to get the return rate.\nStep 3: Step 3: Multiply t...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E079",
+      "gold_program": "add(192.3, 20.6), add(#0, 37.4), add(#1, 109.3)",
+      "gold_ops": [
+        "add",
+        "add",
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total = component_value_1 + component_value_2 + component_value_3 + ...",
+      "strategy_reasoning": "Step 1: Step 1: Identify the metric to be totaled (e.g., long-term debt) and the entity for which the total is required.\nStep 2: Step 2: Identify all the components that contribute to the total for th...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E081",
+      "gold_program": "add(19400, 2500), add(#0, 1100), add(#1, 200)",
+      "gold_ops": [
+        "add",
+        "add",
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total = sum(count_i) for all i in categories",
+      "strategy_reasoning": "Step 1: Step 1: Identify all categories in the table that have a count value.\nStep 2: Step 2: Extract the count value for each category.\nStep 3: Step 3: Sum all extracted count values to obtain the to...",
+      "extra_ops": [],
+      "missing_ops": [
+        "add"
+      ],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": true,
+      "reason": "Missing ops: add"
+    },
+    {
+      "source_id": "E082",
+      "gold_program": "add(12, 41), add(#0, 100), add(#1, 17)",
+      "gold_ops": [
+        "add",
+        "add",
+        "add"
+      ],
+      "gold_has_100": true,
+      "strategy_formula": "sum(value_1, value_2, ..., value_n)",
+      "strategy_reasoning": "Step 1: Step 1: Identify the categories (e.g., years) for which values are needed.\nStep 2: Step 2: For each category, locate the value corresponding to the specified time period (e.g., first quarter) ...",
+      "extra_ops": [],
+      "missing_ops": [
+        "add"
+      ],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": true,
+      "reason": "Missing ops: add"
+    },
+    {
+      "source_id": "E083",
+      "gold_program": "add(26.5, 22.9), add(#0, 2.5), add(#1, 1.4)",
+      "gold_ops": [
+        "add",
+        "add",
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "total_average_fair_value_impact = sum(average_fair_value_impact_i) for all i in categories",
+      "strategy_reasoning": "Step 1: Step 1: Identify all instrument categories that have an average fair value impact value.\nStep 2: Step 2: Extract the average fair value impact value for each category.\nStep 3: Step 3: Sum all ...",
+      "extra_ops": [],
+      "missing_ops": [
+        "add"
+      ],
+      "operation_mismatch": true,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": true,
+      "reason": "Missing ops: add"
+    },
+    {
+      "source_id": "E084",
+      "gold_program": "add(33809, 39926), add(#0, 2373), add(#1, 9223)",
+      "gold_ops": [
+        "add",
+        "add",
+        "add"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "combined_balance = value_year_1 + value_year_2 + value_year_3 + value_year_4",
+      "strategy_reasoning": "Step 1: Step 1: Identify the financial item and the period of years for which the combined balance is required.\nStep 2: Step 2: Locate the value of the financial item for each year in the period from ...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E085",
+      "gold_program": "add(2.0, 2.0), add(#0, 2.0), add(#1, const_3), divide(#2, const_2)",
+      "gold_ops": [
+        "add",
+        "add",
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "((value_year1 + value_year2) + value_year3) / 3",
+      "strategy_reasoning": "Step 1: Step 1: Identify the metric values for the three consecutive years mentioned in the context.\nStep 2: Step 2: Add the values for the first and second years to get their sum.\nStep 3: Step 3: Add...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E086",
+      "gold_program": "add(39586, 42905), add(#0, 35614), add(#1, const_3), divide(#2, const_2)",
+      "gold_ops": [
+        "add",
+        "add",
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "((value1 + value2) + value3 + 3) / 2",
+      "strategy_reasoning": "Step 1: Step 1: Identify the three numerical values mentioned in the context that correspond to the categories or periods for which the average is requested.\nStep 2: Step 2: Add the first and second v...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E087",
+      "gold_program": "add(7958, 8347), add(#0, 8161), add(#1, const_3), divide(#2, const_2)",
+      "gold_ops": [
+        "add",
+        "add",
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(value1 + value2 + value3) / count",
+      "strategy_reasoning": "Step 1: Step 1: Identify the three values to be averaged from the context.\nStep 2: Step 2: Sum the three values together.\nStep 3: Step 3: Divide the sum by the number of values (3) to obtain the avera...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E088",
+      "gold_program": "add(650.1, 649.6), add(#0, 728.3), add(#1, const_3), divide(#2, const_2)",
+      "gold_ops": [
+        "add",
+        "add",
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "(value_year1 + value_year2 + value_year3) / count",
+      "strategy_reasoning": "Step 1: Step 1: Identify the values of the metric for the three consecutive years.\nStep 2: Step 2: Sum the values of the first two years.\nStep 3: Step 3: Add the value of the third year to the sum obt...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E089",
+      "gold_program": "add(19400, 2500), add(#0, 1100), add(#1, 200), divide(19400, #2)",
+      "gold_ops": [
+        "add",
+        "add",
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "numerator_value / (numerator_value + denominator_part1 + denominator_part2 + denominator_part3)",
+      "strategy_reasoning": "Step 1: Step 1: Identify the entity of interest and its numeric attribute (e.g., count) as the numerator.\nStep 2: Step 2: Identify all other entities that contribute to the total and their numeric att...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [
+          "express as a percentage",
+          "as a percentage"
+        ],
+        "percentage_mention": [
+          "percentage"
+        ]
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": true,
+      "scale_mismatch": true,
+      "contaminated": true,
+      "reason": "Percentage conversion mention"
+    },
+    {
+      "source_id": "E090",
+      "gold_program": "add(6.1, 9.8), add(#0, 21.2), add(#1, const_3), divide(#2, const_2)",
+      "gold_ops": [
+        "add",
+        "add",
+        "add",
+        "divide"
+      ],
+      "gold_has_100": false,
+      "strategy_formula": "((value_year1 + value_year2) + value_year3 + 3) / 2",
+      "strategy_reasoning": "Step 1: Step 1: Identify the values of the metric for each of the three years in the specified range.\nStep 2: Step 2: Sum the values for the first two years.\nStep 3: Step 3: Add the third year's value...",
+      "extra_ops": [],
+      "missing_ops": [],
+      "operation_mismatch": false,
+      "scale_mentions": {
+        "multiply_100": [],
+        "divide_100": [],
+        "percentage_conversion": [],
+        "percentage_mention": []
+      },
+      "has_multiply_100": false,
+      "has_divide_100": false,
+      "has_percentage_conversion": false,
+      "scale_mismatch": false,
+      "contaminated": false,
+      "reason": "OK"
+    }
+  ],
+  "statistics": {
+    "total": 78,
+    "operation_mismatches": 24,
+    "scale_mismatches": 19,
+    "contaminated": 27,
+    "contamination_rate": 0.34615384615384615
+  },
+  "e002_check": {
+    "source_id": "E002",
+    "gold_program": "divide(19.8, 135.2)",
+    "gold_ops": [
+      "divide"
+    ],
+    "gold_has_100": false,
+    "strategy_formula": "percentage = (cash_paid / asset_value) * 100",
+    "strategy_reasoning": "Step 1: Step 1: Identify the cash paid amount from the context (e.g., 'cash paid as a result of the transaction was $X').\nStep 2: Step 2: Identify the asset value added from the context (e.g., 'additi...",
+    "extra_ops": [
+      "multiply",
+      "add"
+    ],
+    "missing_ops": [],
+    "operation_mismatch": true,
+    "scale_mentions": {
+      "multiply_100": [
+        "* 100",
+        "multiplying by 100"
+      ],
+      "divide_100": [],
+      "percentage_conversion": [
+        "Convert the decimal to a percentage",
+        "to a percentage"
+      ],
+      "percentage_mention": [
+        "percentage",
+        "percentage",
+        "percentage"
+      ]
+    },
+    "has_multiply_100": true,
+    "has_divide_100": false,
+    "has_percentage_conversion": true,
+    "scale_mismatch": true,
+    "contaminated": true,
+    "reason": "Extra ops: multiply, add; Spurious \u00d7100 (gold has no const_100); Percentage conversion mention"
+  },
+  "note": "Comprehensive QC with operation and scale fidelity checks"
+}

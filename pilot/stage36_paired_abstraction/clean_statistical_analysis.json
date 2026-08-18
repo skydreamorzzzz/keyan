@@ -1,0 +1,14 @@
+{
+  "comparison": "Clean-FN+Sketch vs Clean-FN",
+  "accuracy_fn": 0.5309278350515464,
+  "accuracy_fns": 0.5412371134020618,
+  "difference_pp": 1.0309278350515427,
+  "ci_95_lower_pp": -4.123711340206182,
+  "ci_95_upper_pp": 6.185567010309279,
+  "mcnemar_p": 0.8388197422027588,
+  "significant_at_05": false,
+  "fns_rescue": 13,
+  "fn_rescue": 11,
+  "rescue_ratio": "13:11",
+  "note": "Clean experiment with cleaned strategies (5.1% contamination)"
+}

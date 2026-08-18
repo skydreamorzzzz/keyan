@@ -1,0 +1,79 @@
+source_id,gold_program,gold_ops,gold_has_100,strategy_formula,extra_ops,missing_ops,operation_mismatch,has_multiply_100,has_divide_100,has_percentage_conversion,scale_mismatch,contaminated,reason
+E001,"divide(131, 5270)",divide,False,numerator / denominator,,,False,False,False,False,False,False,OK
+E002,"divide(19.8, 135.2)",divide,False,percentage = (cash_paid / asset_value) * 100,"multiply, add",,True,True,False,True,True,True,"Extra ops: multiply, add; Spurious ×100 (gold has no const_100); Percentage conversion mention"
+E003,"divide(10, 1%)",divide,False,total = effect_amount / percentage_change,,,False,False,False,True,True,True,Percentage conversion mention
+E004,"divide(494788, 309051)",divide,False,current_ratio = current_assets / current_liabilities,,,False,False,False,False,False,False,OK
+E005,"divide(185, 7536)",divide,False,(component_value / total_value) * 100,multiply,,True,True,False,True,True,True,Extra ops: multiply; Spurious ×100 (gold has no const_100); Percentage conversion mention
+E006,"divide(176138, 1355605)",divide,False,percentage = (portion / total) * 100,multiply,,True,True,False,True,True,True,Extra ops: multiply; Spurious ×100 (gold has no const_100); Percentage conversion mention
+E007,"subtract(118, 102), divide(#0, 102)","subtract, divide",False,((later_value - earlier_value) / earlier_value) * 100%,multiply,,True,True,False,True,True,True,Extra ops: multiply; Spurious ×100 (gold has no const_100); Percentage conversion mention
+E009,"subtract(347, 328), divide(#0, 328)","subtract, divide",False,((current_value - previous_value) / previous_value) * 100,multiply,,True,True,False,True,True,True,Extra ops: multiply; Spurious ×100 (gold has no const_100); Percentage conversion mention
+E011,"subtract(18447, 9889), divide(#0, 9889)","subtract, divide",False,((final_value - initial_value) / initial_value) * 100,multiply,,True,True,False,True,True,True,Extra ops: multiply; Spurious ×100 (gold has no const_100); Percentage conversion mention
+E013,"subtract(91.8, 27.6)",subtract,False,decrease = earlier_value - later_value,,,False,False,False,False,False,False,OK
+E016,"subtract(29669000, 29570000)",subtract,False,loss = amortized_cost - market_value,,,False,False,False,False,False,False,OK
+E019,"add(572079, 599497)",add,False,total = cash_consideration + stock_fair_value,,,False,False,False,False,False,False,OK
+E020,"add(26.4, 35.1)",add,False,total_impact = reduction1 + reduction2,,,False,False,False,False,False,False,OK
+E021,"add(595, 629)",add,False,pre_impairment_value = remaining_value + impairment_charge,,,False,False,False,False,False,False,OK
+E022,"add(1208860, 814114)",add,False,Total_NOI = NOI_type1 + NOI_type2,,,False,False,False,False,False,False,OK
+E023,"add(3.9, 1.5)",add,False,total = cumulative_amount + additional_amount,,,False,False,False,False,False,False,OK
+E024,"add(351, 813)",add,False,total_increase = prior_year_increase + current_year_increase,,,False,False,False,False,False,False,OK
+E025,"add(27, 158), divide(27, #0)","add, divide",False,percentage = (charge_amount / (reported_income + charge_amount)) * 100,multiply,,True,True,False,True,True,True,Extra ops: multiply; Spurious ×100 (gold has no const_100); Percentage conversion mention
+E026,"add(107.2, 179.1), divide(#0, const_2)","add, divide",False,(value_at_date1 + value_at_date2) / 2,,,False,False,False,False,False,False,OK
+E027,"add(17, 4), divide(#0, const_2)","add, divide",False,average_annual_closures = sum(closure_counts) / number_of_years,,add,True,False,False,False,False,True,Missing ops: add
+E028,"add(0.6, 4.1), divide(#0, 22.7)","add, divide",False,(cost1 + cost2) / current_assets * 100,multiply,,True,True,False,False,True,True,Extra ops: multiply; Spurious ×100 (gold has no const_100)
+E029,"add(27, 2), divide(#0, 84)","add, divide",False,(sum of subcategory_counts) / total_count,,add,True,False,False,True,True,True,Missing ops: add; Percentage conversion mention
+E030,"add(5, 10), divide(#0, const_2)","add, divide",False,(value1 + value2) / 2,,,False,False,False,False,False,False,OK
+E031,"multiply(33035204, 100.24)",multiply,False,total_spent = shares_repurchased * average_price_per_share,,,False,False,False,False,False,False,OK
+E032,"multiply(50.33, 4999)",multiply,False,total_value = per_unit_value * quantity,,,False,False,False,False,False,False,OK
+E033,"multiply(100, const_2)",multiply,True,post_split_shares = pre_split_shares * split_ratio,,,False,False,False,False,False,False,OK
+E034,"multiply(13394736, 11.38)",multiply,False,total_dollar_amount = shares * exercise_price,,,False,False,False,False,False,False,OK
+E035,"multiply(525000000, 0.25)",multiply,False,total_par_value = number_of_shares * par_value_per_share,,,False,False,False,False,False,False,OK
+E036,"multiply(168, 338)",multiply,False,fair_value = percentage * goodwill,divide,,True,True,True,True,True,True,Extra ops: divide; Spurious ×100 (gold has no const_100); Percentage conversion mention
+E037,"add(34.7, 36.7), add(32.3, #0)","add, add",False,total_amortization = amortization_year1 + amortization_year2 + amortization_year3,,,False,False,False,False,False,False,OK
+E038,"add(244, 249), add(#0, 309)","add, add",False,total = value1 + value2 + value3,,,False,False,False,False,False,False,OK
+E039,"add(1762, -578), add(#0, -4363)","add, add",False,net_change_in_cash = operating_activities + investing_activities + financing_activities,,,False,False,False,False,False,False,OK
+E040,"add(12.1, 27.4), add(15.8, 21.9)","add, add",False,(sum(prior_period_increases) / (sum(prior_period_increases) + sum(current_period_increases))) * 100,"divide, multiply",,True,True,True,False,True,True,"Extra ops: divide, multiply; Spurious ×100 (gold has no const_100)"
+E041,"add(514000, 81000), add(#0, 69000)","add, add",False,"total_square_footage = sum(square_footage_1, square_footage_2, ..., square_footage_n)",,,False,False,False,False,False,False,OK
+E042,"add(420, -79), add(#0, -114)","add, add",False,net_change = initial_value + adjustment_1 + adjustment_2,,,False,False,False,False,False,False,OK
+E043,"multiply(3.2, const_1000), divide(#0, 62)","multiply, divide",True,years = (balance * scale_factor) / annual_amortization,,,False,False,False,False,False,False,OK
+E044,"multiply(0.10, const_4), divide(487, #0)","multiply, divide",False,shares = total_dividends / (per_share_dividend * number_of_periods),,,False,False,False,False,False,False,OK
+E045,"multiply(259.1, const_1000), divide(#0, 2458777)","multiply, divide",True,margin = (metric_value * unit_conversion_factor) / revenue_value,,,False,False,False,True,False,False,OK
+E046,"multiply(2200000, 2.2), divide(#0, const_1000000)","multiply, divide",True,result = (count * per_unit_value) / scale_factor,,,False,False,False,False,False,False,OK
+E047,"multiply(375, 3.0%), divide(#0, const_2)","multiply, divide",False,periodic_interest = (principal * annual_rate) / payments_per_year,,,False,False,False,True,True,True,Percentage conversion mention
+E048,"multiply(2621050, 27.24), divide(#0, const_1000000)","multiply, divide",True,total_value_in_millions = (quantity * unit_price) / scale_factor,,,False,False,False,False,False,False,OK
+E049,"greater(693.60, 204.38)",greater,False,"greater(entity1_final_value, entity2_final_value)",,,False,False,False,False,False,False,OK
+E050,"greater(1137.4, 1030.7)",greater,False,"greater(price1, price2)",,,False,False,False,False,False,False,OK
+E051,"greater(280, 464)",greater,False,"greater(value1, value2)",,,False,False,False,False,False,False,OK
+E052,"greater(296, 89)",greater,False,"greater(value1, value2)",,,False,False,False,False,False,False,OK
+E053,"greater(2.28, 1.24)",greater,False,"greater(value1, value2)",,,False,False,False,False,False,False,OK
+E054,"greater(93.53, 84.30)",greater,False,"greater(quarter1_high, quarter2_high)",,,False,False,False,False,False,False,OK
+E055,"add(3.4, 0.6), add(#0, 2.3), divide(#1, const_3)","add, add, divide",False,(value1 + value2 + value3) / 3,,,False,False,False,False,False,False,OK
+E056,"add(135, 137), add(#0, 138), divide(#1, const_3)","add, add, divide",False,average = (value1 + value2 + value3) / 3,,,False,False,False,False,False,False,OK
+E057,"add(59.73, 45.20), add(#0, const_2), divide(#1, const_2)","add, add, divide",False,(high_value + low_value) / 2,,,False,False,False,False,False,False,OK
+E058,"add(467298, 75896), add(#0, 199539), divide(#1, const_1000)","add, add, divide",True,total_debt_millions = (sum(debt_amounts)) / 1000,,add,True,False,False,False,False,True,Missing ops: add
+E059,"add(27.3, 12.6), add(#0, 8.5), divide(#1, const_3)","add, add, divide",False,(value1 + value2 + value3) / 3,,,False,False,False,False,False,False,OK
+E060,"add(44, 44), add(#0, 48), divide(#1, const_3)","add, add, divide",False,(value_year1 + value_year2 + value_year3) / 3,,,False,False,False,False,False,False,OK
+E063,"table_average(beginning balance, none)",table_average,False,average(beginning_balance),,table_average,True,False,False,False,False,True,Missing ops: table_average
+E064,"table_average(ending balance, none)",table_average,False,average(column),,table_average,True,False,False,False,False,True,Missing ops: table_average
+E065,"table_average(interest expense net, none)",table_average,False,average(metric values over all periods),,,False,False,False,False,False,False,OK
+E066,"table_average(ending balance, none)",table_average,False,average = sum(column) / count(column),divide,table_average,True,False,False,False,False,True,Extra ops: divide; Missing ops: table_average
+E067,"divide(104.10, 98.18), subtract(#0, const_1)","divide, subtract",False,(V1 / V2) - 1,multiply,,True,True,False,True,True,True,Extra ops: multiply; Spurious ×100 (gold has no const_100); Percentage conversion mention
+E068,"divide(240, 183), subtract(#0, const_1)","divide, subtract",False,((later_value / earlier_value) - 1) * 100,multiply,,True,True,False,True,True,True,Extra ops: multiply; Spurious ×100 (gold has no const_100); Percentage conversion mention
+E070,"divide(48.3, 47.3), subtract(#0, const_1)","divide, subtract",False,(later_value / earlier_value) - 1,multiply,,True,True,False,True,True,True,Extra ops: multiply; Spurious ×100 (gold has no const_100); Percentage conversion mention
+E071,"divide(1061, 836), subtract(#0, const_1)","divide, subtract",False,growth_rate = (later_value / earlier_value) - 1,multiply,,True,True,False,True,True,True,Extra ops: multiply; Spurious ×100 (gold has no const_100); Percentage conversion mention
+E072,"divide(25513, 21548), subtract(#0, const_1)","divide, subtract",False,growth_rate = (V1 / V2) - 1,multiply,,True,True,False,True,True,True,Extra ops: multiply; Spurious ×100 (gold has no const_100); Percentage conversion mention
+E073,"subtract(23, 21), divide(#0, 21), multiply(#1, const_100)","subtract, divide, multiply",True,((earlier_value - later_value) / later_value) * 100,,,False,True,False,True,False,False,OK
+E074,"subtract(171.40, 100), divide(1000000, 100), multiply(#1, #0)","subtract, divide, multiply",True,Total Return = (final_value - initial_value) * (investment_amount / initial_value),,,False,False,False,False,False,False,OK
+E075,"subtract(407, 258), divide(#0, 407), multiply(#1, const_100)","subtract, divide, multiply",True,((earlier_value - later_value) / earlier_value) * 100,,,False,True,False,True,False,False,OK
+E076,"subtract(95.7, 96.0), divide(#0, 96.0), multiply(#1, const_100)","subtract, divide, multiply",True,((later_value - earlier_value) / earlier_value) * 100,,,False,True,False,True,False,False,OK
+E077,"subtract(155.99, const_100), divide(#0, const_100), multiply(#1, 1000000)","subtract, divide, multiply",True,total_return = ((final_price - initial_price) / initial_price) * investment_amount,,,False,False,False,False,False,False,OK
+E079,"add(192.3, 20.6), add(#0, 37.4), add(#1, 109.3)","add, add, add",False,total = component_value_1 + component_value_2 + component_value_3 + ...,,,False,False,False,False,False,False,OK
+E081,"add(19400, 2500), add(#0, 1100), add(#1, 200)","add, add, add",False,total = sum(count_i) for all i in categories,,add,True,False,False,False,False,True,Missing ops: add
+E082,"add(12, 41), add(#0, 100), add(#1, 17)","add, add, add",True,"sum(value_1, value_2, ..., value_n)",,add,True,False,False,False,False,True,Missing ops: add
+E083,"add(26.5, 22.9), add(#0, 2.5), add(#1, 1.4)","add, add, add",False,total_average_fair_value_impact = sum(average_fair_value_impact_i) for all i in categories,,add,True,False,False,False,False,True,Missing ops: add
+E084,"add(33809, 39926), add(#0, 2373), add(#1, 9223)","add, add, add",False,combined_balance = value_year_1 + value_year_2 + value_year_3 + value_year_4,,,False,False,False,False,False,False,OK
+E085,"add(2.0, 2.0), add(#0, 2.0), add(#1, const_3), divide(#2, const_2)","add, add, add, divide",False,((value_year1 + value_year2) + value_year3) / 3,,,False,False,False,False,False,False,OK
+E086,"add(39586, 42905), add(#0, 35614), add(#1, const_3), divide(#2, const_2)","add, add, add, divide",False,((value1 + value2) + value3 + 3) / 2,,,False,False,False,False,False,False,OK
+E087,"add(7958, 8347), add(#0, 8161), add(#1, const_3), divide(#2, const_2)","add, add, add, divide",False,(value1 + value2 + value3) / count,,,False,False,False,False,False,False,OK
+E088,"add(650.1, 649.6), add(#0, 728.3), add(#1, const_3), divide(#2, const_2)","add, add, add, divide",False,(value_year1 + value_year2 + value_year3) / count,,,False,False,False,False,False,False,OK
+E089,"add(19400, 2500), add(#0, 1100), add(#1, 200), divide(19400, #2)","add, add, add, divide",False,numerator_value / (numerator_value + denominator_part1 + denominator_part2 + denominator_part3),,,False,False,False,True,True,True,Percentage conversion mention
+E090,"add(6.1, 9.8), add(#0, 21.2), add(#1, const_3), divide(#2, const_2)","add, add, add, divide",False,((value_year1 + value_year2) + value_year3 + 3) / 2,,,False,False,False,False,False,False,OK
