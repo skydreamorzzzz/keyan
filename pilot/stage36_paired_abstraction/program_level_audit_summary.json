@@ -1,0 +1,45 @@
+{
+  "total_records": 120,
+  "per_arm": {
+    "none": {
+      "total": 30,
+      "has_program": 30,
+      "parsed": 22,
+      "executed": 14,
+      "program_correct": 6,
+      "answer_correct": 16,
+      "program_accuracy": 0.2,
+      "answer_accuracy": 0.5333333333333333
+    },
+    "case": {
+      "total": 30,
+      "has_program": 30,
+      "parsed": 25,
+      "executed": 23,
+      "program_correct": 14,
+      "answer_correct": 23,
+      "program_accuracy": 0.4666666666666667,
+      "answer_accuracy": 0.7666666666666667
+    },
+    "strategy": {
+      "total": 30,
+      "has_program": 30,
+      "parsed": 23,
+      "executed": 20,
+      "program_correct": 10,
+      "answer_correct": 22,
+      "program_accuracy": 0.3333333333333333,
+      "answer_accuracy": 0.7333333333333333
+    },
+    "paired": {
+      "total": 30,
+      "has_program": 30,
+      "parsed": 27,
+      "executed": 25,
+      "program_correct": 16,
+      "answer_correct": 23,
+      "program_accuracy": 0.5333333333333333,
+      "answer_accuracy": 0.7666666666666667
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "rescues": {
+    "case": [
+      "IP/2006/page_32.pdf-4",
+      "GPN/2017/page_77.pdf-4",
+      "IPG/2015/page_48.pdf-3",
+      "BLL/2007/page_35.pdf-3",
+      "LMT/2015/page_56.pdf-2",
+      "MRO/2006/page_33.pdf-3",
+      "JPM/2014/page_65.pdf-5",
+      "PPG/2013/page_40.pdf-2",
+      "BLL/2010/page_28.pdf-2",
+      "PPG/2013/page_40.pdf-1"
+    ],
+    "strategy": [
+      "FIS/2007/page_94.pdf-4",
+      "IPG/2015/page_48.pdf-3",
+      "JPM/2014/page_65.pdf-5",
+      "PPG/2013/page_40.pdf-2",
+      "BLL/2010/page_28.pdf-2",
+      "PNC/2009/page_46.pdf-3",
+      "PPG/2013/page_40.pdf-1"
+    ],
+    "paired": [
+      "UA/2009/page_50.pdf-2",
+      "IP/2006/page_32.pdf-4",
+      "IPG/2015/page_48.pdf-3",
+      "BLL/2007/page_35.pdf-3",
+      "LMT/2015/page_56.pdf-2",
+      "MRO/2006/page_33.pdf-3",
+      "JPM/2014/page_65.pdf-5",
+      "PPG/2013/page_40.pdf-2",
+      "BLL/2010/page_28.pdf-2",
+      "PNC/2009/page_46.pdf-3",
+      "PPG/2013/page_40.pdf-1"
+    ]
+  },
+  "harms": {
+    "case": [
+      "RE/2015/page_33.pdf-2",
+      "IP/2009/page_37.pdf-1"
+    ],
+    "strategy": [
+      "RE/2015/page_33.pdf-2",
+      "IP/2009/page_37.pdf-1",
+      "APD/2019/page_48.pdf-1"
+    ],
+    "paired": [
+      "IP/2009/page_37.pdf-1"
+    ]
+  },
+  "invariant_correct": [
+    "PM/2017/page_99.pdf-3",
+    "MRO/2007/page_134.pdf-2",
+    "TFX/2015/page_70.pdf-3"
+  ],
+  "invariant_wrong": [
+    "GS/2017/page_143.pdf-1",
+    "ETR/2008/page_355.pdf-2",
+    "PPG/2011/page_70.pdf-3",
+    "BLL/2007/page_47.pdf-4",
+    "BLK/2012/page_160.pdf-4",
+    "UNP/2014/page_25.pdf-2",
+    "STT/2008/page_83.pdf-2",
+    "IP/2007/page_31.pdf-1",
+    "SNPS/2006/page_69.pdf-1",
+    "AON/2009/page_46.pdf-2",
+    "AES/2016/page_191.pdf-3"
+  ],
+  "rescue_counts": {
+    "case": 10,
+    "strategy": 7,
+    "paired": 11
+  },
+  "harm_counts": {
+    "case": 2,
+    "strategy": 3,
+    "paired": 1
+  },
+  "invariant_correct_count": 3,
+  "invariant_wrong_count": 11
+}
