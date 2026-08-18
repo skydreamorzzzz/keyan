@@ -1,0 +1,479 @@
+{
+  "total_discrepancies": 47,
+  "false_positives": 41,
+  "false_negatives": 6,
+  "numeric_precision_artifacts": 20,
+  "yesno_format_artifacts": 0,
+  "discrepancy_details": [
+    {
+      "target_id": "RE/2015/page_33.pdf-2",
+      "arm": "None",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "3.56%",
+      "answer_normalized": 0.0356,
+      "gold": 0.03558,
+      "response_snippet": "REASONING: The question asks for the percentage change in average investments from 2014 to 2015. From the table, average investments for 2015 are $17,430.8 million and for 2014 are $16,831.9 million. "
+    },
+    {
+      "target_id": "RE/2015/page_33.pdf-2",
+      "arm": "Case",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "3.56%",
+      "answer_normalized": 0.0356,
+      "gold": 0.03558,
+      "response_snippet": "REASONING: The question asks for the percentage change in average investments from 2014 to 2015.  \nFrom the table, the average investments for 2014 is 16831.9 and for 2015 is 17430.8.  \nPercentage cha"
+    },
+    {
+      "target_id": "RE/2015/page_33.pdf-2",
+      "arm": "Strategy",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "3.56%",
+      "answer_normalized": 0.0356,
+      "gold": 0.03558,
+      "response_snippet": "REASONING: The question asks for the percentage change in average investments from 2014 to 2015.  \nFrom the table, average investments for 2015 = $17,430.8 million, and for 2014 = $16,831.9 million.  "
+    },
+    {
+      "target_id": "RE/2015/page_33.pdf-2",
+      "arm": "Paired",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "3.56%",
+      "answer_normalized": 0.0356,
+      "gold": 0.03558,
+      "response_snippet": "REASONING: The question asks for the percentage change in average investments from 2014 to 2015. From the table, the average investments for 2015 is $17,430.8 million and for 2014 is $16,831.9 million"
+    },
+    {
+      "target_id": "GS/2017/page_143.pdf-1",
+      "arm": "None",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "-39.9%",
+      "answer_normalized": -0.399,
+      "gold": -0.39896,
+      "response_snippet": "REASONING: The question asks for the percentage change in \u201ccredit net\u201d from 2016 to 2017. From the table, credit net for 2017 is $1,505 million, and for 2016 it is $2,504 million. Percentage change is"
+    },
+    {
+      "target_id": "GS/2017/page_143.pdf-1",
+      "arm": "Case",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "-39.9%",
+      "answer_normalized": -0.399,
+      "gold": -0.39896,
+      "response_snippet": "REASONING: The question asks for the percentage change in credit net from 2016 to 2017. From the table, credit net in 2016 is $2504 (positive) and in 2017 is $1505 (positive). Percentage change is cal"
+    },
+    {
+      "target_id": "GS/2017/page_143.pdf-1",
+      "arm": "Strategy",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "-39.90%",
+      "answer_normalized": -0.399,
+      "gold": -0.39896,
+      "response_snippet": "REASONING: The question asks for the percentage change in credit net from 2016 to 2017. From the table, credit net for 2017 is $1505 and for 2016 is $2504. Using the percentage change from initial to "
+    },
+    {
+      "target_id": "GS/2017/page_143.pdf-1",
+      "arm": "Paired",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "-39.9%",
+      "answer_normalized": -0.399,
+      "gold": -0.39896,
+      "response_snippet": "REASONING: The question asks for the percentage change in \"credit net\" from 2016 to 2017. From the table, credit net for 2017 is $1505 million, and for 2016 is $2504 million. To find the percentage ch"
+    },
+    {
+      "target_id": "ETR/2008/page_355.pdf-2",
+      "arm": "None",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "17.97%",
+      "answer_normalized": 0.1797,
+      "gold": 0.17972,
+      "response_snippet": "REASONING: The change in net revenue from 2007 to 2008 is calculated as 2008 net revenue minus 2007 net revenue: 252.7 - 231.0 = 21.7 million. The amount attributed to rider revenue is 3.9 million. To"
+    },
+    {
+      "target_id": "ETR/2008/page_355.pdf-2",
+      "arm": "Case",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "17.97%",
+      "answer_normalized": 0.1797,
+      "gold": 0.17972,
+      "response_snippet": "REASONING: The question asks what percent of the change between net revenue in 2007 and 2008 was due to rider revenue.  \nFirst, find the total change in net revenue from 2007 to 2008: 252.7 - 231.0 = "
+    },
+    {
+      "target_id": "ETR/2008/page_355.pdf-2",
+      "arm": "Strategy",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "17.97%",
+      "answer_normalized": 0.1797,
+      "gold": 0.17972,
+      "response_snippet": "REASONING: The question asks what percentage of the change between 2007 and 2008 net revenue was due to rider revenue.  \nFirst, identify the change in net revenue: 2008 net revenue ($252.7M) minus 200"
+    },
+    {
+      "target_id": "ETR/2008/page_355.pdf-2",
+      "arm": "Paired",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "17.97%",
+      "answer_normalized": 0.1797,
+      "gold": 0.17972,
+      "response_snippet": "REASONING: The question asks for the percentage of the total change in net revenue from 2007 to 2008 that was due to rider revenue. First, calculate the total change in net revenue: 2008 net revenue ("
+    },
+    {
+      "target_id": "IP/2006/page_32.pdf-4",
+      "arm": "None",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "5.34%",
+      "answer_normalized": 0.0534,
+      "gold": 0.05336,
+      "response_snippet": "REASONING: The question asks for the consumer packaging profit margin in 2006. Profit margin is calculated as operating profit divided by sales, then multiplied by 100 to get a percentage. From the ta"
+    },
+    {
+      "target_id": "IP/2006/page_32.pdf-4",
+      "arm": "Case",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "5.3%",
+      "answer_normalized": 0.053,
+      "gold": 0.05336,
+      "response_snippet": "REASONING: The question asks for the consumer packaging profit margin in 2006. Profit margin is calculated as operating profit divided by sales. From the table, for 2006: sales = $2455 million, operat"
+    },
+    {
+      "target_id": "IP/2006/page_32.pdf-4",
+      "arm": "Strategy",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "5.34%",
+      "answer_normalized": 0.0534,
+      "gold": 0.05336,
+      "response_snippet": "REASONING: The question asks for the consumer packaging profit margin in 2006.  \nFrom the table, consumer packaging sales in 2006 = $2455 million, operating profit in 2006 = $131 million.  \nProfit mar"
+    },
+    {
+      "target_id": "IP/2006/page_32.pdf-4",
+      "arm": "Paired",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "5.3%",
+      "answer_normalized": 0.053,
+      "gold": 0.05336,
+      "response_snippet": "REASONING: The question asks for the consumer packaging profit margin in 2006. Profit margin is calculated as operating profit divided by sales. From the table, for 2006, sales are $2,455 million and "
+    },
+    {
+      "target_id": "FIS/2007/page_94.pdf-4",
+      "arm": "None",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "14.16%",
+      "answer_normalized": 0.1416,
+      "gold": 0.14162,
+      "response_snippet": "REASONING: The question asks for the percentage of total future minimum operating lease payments that are due in 2010. From the table, the 2010 payment is $35,269 thousand and the total is $249,038 th"
+    },
+    {
+      "target_id": "FIS/2007/page_94.pdf-4",
+      "arm": "Case",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "14.16%",
+      "answer_normalized": 0.1416,
+      "gold": 0.14162,
+      "response_snippet": "REASONING: The question asks for the percentage of total future minimum operating lease payments that are due in 2010. From the table, the 2010 payment is 35,269 (in thousands). The total future minim"
+    },
+    {
+      "target_id": "FIS/2007/page_94.pdf-4",
+      "arm": "Strategy",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "14.16%",
+      "answer_normalized": 0.1416,
+      "gold": 0.14162,
+      "response_snippet": "REASONING: The question asks what percentage of the total future minimum operating lease payments is due in 2010.  \nFrom the table, the amount due in 2010 is 35,269 thousand. The total future minimum "
+    },
+    {
+      "target_id": "FIS/2007/page_94.pdf-4",
+      "arm": "Paired",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "14.16%",
+      "answer_normalized": 0.1416,
+      "gold": 0.14162,
+      "response_snippet": "REASONING: The question asks for the percentage of total future minimum operating lease payments that are due in 2010. From the table, the amount due in 2010 is 35,269 and the total is 249,038. To fin"
+    },
+    {
+      "target_id": "IP/2009/page_37.pdf-1",
+      "arm": "None",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "71.9%",
+      "answer_normalized": 0.719,
+      "gold": 0.71895,
+      "response_snippet": "REASONING: The question asks for North American consumer packaging net sales as a percentage of total consumer packaging sales in 2009. From the post-text, North American consumer packaging net sales "
+    },
+    {
+      "target_id": "IP/2009/page_37.pdf-1",
+      "arm": "Case",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "71.90%",
+      "answer_normalized": 0.719,
+      "gold": 0.71895,
+      "response_snippet": "REASONING: The question asks for North American consumer packaging net sales as a percentage of total consumer packaging sales in 2009. From the table, total consumer packaging sales in 2009 are $3060"
+    },
+    {
+      "target_id": "IP/2009/page_37.pdf-1",
+      "arm": "Strategy",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "71.90%",
+      "answer_normalized": 0.719,
+      "gold": 0.71895,
+      "response_snippet": "REASONING: The question asks for the percentage of North American consumer packaging net sales relative to total consumer packaging sales in 2009. From the context, North American consumer packaging n"
+    },
+    {
+      "target_id": "IP/2009/page_37.pdf-1",
+      "arm": "Paired",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "71.9%",
+      "answer_normalized": 0.719,
+      "gold": 0.71895,
+      "response_snippet": "REASONING: The question asks for North American consumer packaging net sales in 2009 as a percentage of total consumer packaging sales in 2009. From the post-text, North American consumer packaging ne"
+    },
+    {
+      "target_id": "BLL/2007/page_35.pdf-3",
+      "arm": "None",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "20.74",
+      "answer_normalized": 20.74,
+      "gold": 20.74359,
+      "response_snippet": "REASONING: The question asks for the cash outflow used for shares repurchased during November 2007. From the table, November 2007 corresponds to the period \"october 29 to november 25 2007\". During thi"
+    },
+    {
+      "target_id": "BLL/2007/page_35.pdf-3",
+      "arm": "Case",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "20.74",
+      "answer_normalized": 20.74,
+      "gold": 20.74359,
+      "response_snippet": "REASONING: The question asks for the total cash outflow used for shares repurchased during November 2007. In the table, November 2007 corresponds to the row \"october 29 to november 25 2007\". The numbe"
+    },
+    {
+      "target_id": "BLL/2007/page_35.pdf-3",
+      "arm": "Strategy",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "20.74",
+      "answer_normalized": 20.74,
+      "gold": 20.74359,
+      "response_snippet": "REASONING: The question asks for the total cash outflow for shares repurchased during November 2007. The table shows two periods in November: October 29 to November 25 and November 26 to December 31. "
+    },
+    {
+      "target_id": "BLL/2007/page_35.pdf-3",
+      "arm": "Paired",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "20.74",
+      "answer_normalized": 20.74,
+      "gold": 20.74359,
+      "response_snippet": "REASONING: The question asks for the total cash outflow for shares repurchased during November 2007. November 2007 corresponds to the row \"october 29 to november 25 2007\". In that row, total number of"
+    },
+    {
+      "target_id": "TFX/2015/page_70.pdf-3",
+      "arm": "None",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "386,703,687.66",
+      "answer_normalized": 386703687.66,
+      "gold": 386797189.66,
+      "response_snippet": "REASONING: The question asks for the total cost to purchase the remaining shares available under equity compensation plans, using the December 31, 2015 price. The table shows 4,446,967 securities rema"
+    },
+    {
+      "target_id": "TFX/2015/page_70.pdf-3",
+      "arm": "Strategy",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "386,797,000.66",
+      "answer_normalized": 386797000.66,
+      "gold": 386797189.66,
+      "response_snippet": "REASONING: The question asks for the total cost to purchase the remaining shares available for future issuance under equity compensation plans, using the December 31, 2015 price. From the table, the n"
+    },
+    {
+      "target_id": "TFX/2015/page_70.pdf-3",
+      "arm": "Paired",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "386,797,000.66",
+      "answer_normalized": 386797000.66,
+      "gold": 386797189.66,
+      "response_snippet": "REASONING: The question asks for the total cost to purchase the remaining shares available for future issuance under equity compensation plans, at the weighted-average exercise price as of December 31"
+    },
+    {
+      "target_id": "AES/2016/page_191.pdf-3",
+      "arm": "Case",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "-11.3",
+      "answer_normalized": -11.3,
+      "gold": -11.33333,
+      "response_snippet": "REASONING: The question asks for the average amount of settlements for the period ending in 2016. The table shows settlements for 2016, 2015, and 2014 as -13, -19, and -2 respectively. To find the ave"
+    },
+    {
+      "target_id": "AES/2016/page_191.pdf-3",
+      "arm": "Strategy",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "-11.33",
+      "answer_normalized": -11.33,
+      "gold": -11.33333,
+      "response_snippet": "REASONING: The question asks for the average amount of settlements for the period ending in 2016. The table shows the settlement values for each year: 2016, 2015, and 2014. The question specifies \"for"
+    },
+    {
+      "target_id": "AES/2016/page_191.pdf-3",
+      "arm": "Paired",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "-11.33",
+      "answer_normalized": -11.33,
+      "gold": -11.33333,
+      "response_snippet": "REASONING: The question asks for the average amount of settlements for the period ending in 2016. The table shows settlements for 2016, 2015, and 2014. The settlements values are: 2016 = -13, 2015 = -"
+    },
+    {
+      "target_id": "LMT/2015/page_56.pdf-2",
+      "arm": "Case",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "9198.33",
+      "answer_normalized": 9198.33,
+      "gold": 9198.33333,
+      "response_snippet": "REASONING: The question asks for the average net sales for space systems from 2013 to 2015. The table provides net sales for each year: 2013 = $9288 million, 2014 = $9202 million, 2015 = $9105 million"
+    },
+    {
+      "target_id": "LMT/2015/page_56.pdf-2",
+      "arm": "Strategy",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "9198.33",
+      "answer_normalized": 9198.33,
+      "gold": 9198.33333,
+      "response_snippet": "REASONING: The question asks for the average net sales for space systems from 2013 to 2015. From the table, net sales values for these years are: 2013 = $9,288 million, 2014 = $9,202 million, 2015 = $"
+    },
+    {
+      "target_id": "LMT/2015/page_56.pdf-2",
+      "arm": "Paired",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "9198.33",
+      "answer_normalized": 9198.33,
+      "gold": 9198.33333,
+      "response_snippet": "REASONING: The question asks for the average net sales for space systems from 2013 to 2015. From the table, net sales are: 2015 = $9105 million, 2014 = $9202 million, 2013 = $9288 million. To find the"
+    },
+    {
+      "target_id": "MRO/2006/page_33.pdf-3",
+      "arm": "None",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "22.33",
+      "answer_normalized": 22.33,
+      "gold": 22.33333,
+      "response_snippet": "REASONING: The question asks for the average propane sales in thousands of barrels per day (tbd) over the three-year period 2004\u20132006. From the table, propane sales are: 2006 = 23, 2005 = 22, 2004 = 2"
+    },
+    {
+      "target_id": "MRO/2006/page_33.pdf-3",
+      "arm": "Case",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "22.33",
+      "answer_normalized": 22.33,
+      "gold": 22.33333,
+      "response_snippet": "REASONING: The question asks for the average propane sales in thousands of barrels per day (tbd) over the three years 2006, 2005, and 2004. From the table, propane sales are: 2006 = 23, 2005 = 22, 200"
+    },
+    {
+      "target_id": "MRO/2006/page_33.pdf-3",
+      "arm": "Strategy",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "22.3",
+      "answer_normalized": 22.3,
+      "gold": 22.33333,
+      "response_snippet": "REASONING: The question asks for the average propane sales in thousands of barrels per day (tbd) over the three-year period 2004\u20132006. From the table, propane sales are 23 (2006), 22 (2005), and 22 (2"
+    },
+    {
+      "target_id": "MRO/2006/page_33.pdf-3",
+      "arm": "Paired",
+      "original_correct": true,
+      "strict_correct": false,
+      "answer_text": "22.33",
+      "answer_normalized": 22.33,
+      "gold": 22.33333,
+      "response_snippet": "REASONING: The question asks for the average propane sales in thousands of barrels per day (tbd) over the three-year period 2004\u20132006. From the table, propane sales are 23 (2006), 22 (2005), and 22 (2"
+    },
+    {
+      "target_id": "JPM/2014/page_65.pdf-5",
+      "arm": "None",
+      "original_correct": false,
+      "strict_correct": true,
+      "answer_text": "No, JPMorgan Chase did not outperform the KBW Bank Index.",
+      "answer_normalized": "no",
+      "gold": "no",
+      "response_snippet": "REASONING: The question asks whether JPMorgan Chase outperformed the KBW Bank Index over the five-year period from 2009 to 2014. We compare the cumulative returns starting from $100 at the end of 2009"
+    },
+    {
+      "target_id": "PPG/2013/page_40.pdf-2",
+      "arm": "None",
+      "original_correct": false,
+      "strict_correct": true,
+      "answer_text": "No, the company spends less on advertising in 2012 ($288 million) than on research and development ($468 million).",
+      "answer_normalized": "no",
+      "gold": "no",
+      "response_snippet": "REASONING: The question asks whether advertising spending in 2012 is greater than research and development (R&D) spending in the same year. From the context, advertising costs in 2012 were $288 millio"
+    },
+    {
+      "target_id": "BLL/2010/page_28.pdf-2",
+      "arm": "None",
+      "original_correct": false,
+      "strict_correct": true,
+      "answer_text": "Yes, Ball Corporation\u2019s total return ($178.93) was higher than the DJ Containers & Packaging Index ($123.56).",
+      "answer_normalized": "yes",
+      "gold": "yes",
+      "response_snippet": "REASONING: The question asks whether Ball Corporation\u2019s five-year total return (from 12/31/2005 to 12/31/2010) was higher than the DJ Containers & Packaging Index return over the same period.  \nFrom t"
+    },
+    {
+      "target_id": "BLL/2010/page_28.pdf-2",
+      "arm": "Strategy",
+      "original_correct": false,
+      "strict_correct": true,
+      "answer_text": "Yes, Ball Corporation outperformed the DJ Containers & Packaging Index.",
+      "answer_normalized": "yes",
+      "gold": "yes",
+      "response_snippet": "REASONING: The question asks whether Ball Corporation\u2019s five-year total return outperformed the DJ Containers & Packaging Index. Both start at $100 on 12/31/2005. The ending values on 12/31/2010 are: "
+    },
+    {
+      "target_id": "PNC/2009/page_46.pdf-3",
+      "arm": "None",
+      "original_correct": false,
+      "strict_correct": true,
+      "answer_text": "No, it decreased from 19% to 14%.",
+      "answer_normalized": "no",
+      "gold": "no",
+      "response_snippet": "REASONING: The question asks whether the share of securities rated aaa/aaa increased from 2008 to 2009. From the table, the aaa/aaa share in 2008 is 19%, and in 2009 it is 14%. Since 14% is less than "
+    },
+    {
+      "target_id": "PPG/2013/page_40.pdf-1",
+      "arm": "None",
+      "original_correct": false,
+      "strict_correct": true,
+      "answer_text": "No, the company spent less on advertising ($345 million) than on research and development ($505 million) in 2013.",
+      "answer_normalized": "no",
+      "gold": "no",
+      "response_snippet": "REASONING: The question asks whether advertising costs in 2013 were greater than research and development costs in 2013. From the text, advertising costs in 2013 were $345 million. From the table, tot"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "strict_transitions": {
+    "all_correct": 12,
+    "all_wrong": 17,
+    "rescue": 1,
+    "harm": 0,
+    "mixed": 0
+  },
+  "all_wrong_breakdown": {
+    "percentage_artifacts": 5,
+    "true_failures": 12
+  },
+  "case_vs_strategy": {
+    "case_only_correct": 1,
+    "strategy_only_correct": 0,
+    "both_correct": 12,
+    "both_wrong": 17
+  },
+  "rescue_queries": [
+    "GPN/2017/page_77.pdf-4"
+  ],
+  "harm_queries": [],
+  "percentage_artifact_queries": [
+    "RE/2015/page_33.pdf-2",
+    "ETR/2008/page_355.pdf-2",
+    "IP/2006/page_32.pdf-4",
+    "FIS/2007/page_94.pdf-4",
+    "IP/2009/page_37.pdf-1"
+  ]
+}

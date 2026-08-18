@@ -1,0 +1,35 @@
+{
+  "strict_accuracy": {
+    "None": 40.0,
+    "Case": 43.3,
+    "Strategy": 40.0,
+    "Paired": 40.0
+  },
+  "original_accuracy_artifacts": {
+    "None": 53.3,
+    "Case": 76.7,
+    "Strategy": 73.3,
+    "Paired": 76.7,
+    "artifact_magnitude": "+13 to +37pp false gains"
+  },
+  "true_patterns": {
+    "rescue_events": 1,
+    "harm_events": 0,
+    "invariant_correct": 12,
+    "invariant_wrong": 17,
+    "rescue_rate": "3.3% (1/30)"
+  },
+  "abstraction_effect": {
+    "case_strategy_disagreement": "3.3% (1/30)",
+    "case_better": 1,
+    "strategy_better": 0,
+    "interpretation": "No meaningful abstraction effect"
+  },
+  "paired_complementarity": {
+    "beats_both": 0,
+    "worse_than_best": 1,
+    "interpretation": "Interference, not complementarity"
+  },
+  "core_finding": "Memory provides minimal genuine utility (+3.3pp, 1 rescue). Original +20pp gains were evaluation artifacts from percentage precision tolerance. Abstraction level irrelevant. Base model saturation (40%) and capability ceiling (57%) dominate outcomes.",
+  "recommendation": "Do NOT expand to TAT-QA. Fix evaluation methodology first. The research hypothesis (abstraction hierarchy matters) is not supported by evidence."
+}
