@@ -1,0 +1,488 @@
+{
+  "group_a": [
+    {
+      "uid": "c30b113fd95f469682ac8ab0e07c7a1e",
+      "program": "add(95668,3474), add(#0,99142), divide(#1,const_3)",
+      "question": "What is the average value of Total net revenue for Reported Results, Fully taxab",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": "The question asks for the average value of Total net revenue for Reported Results, Fully taxable-equivalent adjustment, and Managed basis. However, the provided table (table_5) does not include a row for Total net revenue. It only shows Other income. Therefore, the answer cannot be determined from the given context.",
+      "gold_answer": "66094.7",
+      "is_na_or_fail": true,
+      "operands": [
+        "95668",
+        "99142",
+        "3474"
+      ]
+    },
+    {
+      "uid": "8ca8fbf0227a42d1ab2ac8843a48965b",
+      "program": "subtract(247,249)",
+      "question": "What is the difference between the greatest Sales Volumes in 2009 and 2008？",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": "The provided context does not contain sales volume data for 2008, so the difference cannot be determined.",
+      "gold_answer": "-2",
+      "is_na_or_fail": true,
+      "operands": [
+        "249",
+        "247"
+      ]
+    },
+    {
+      "uid": "9e813eb8c59649d996c1d875af71568e",
+      "program": "add(2,1.8)",
+      "question": "What's the sum of the Other, net in the years where Benefits earned during the p",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": "Not enough information",
+      "gold_answer": "3.8",
+      "is_na_or_fail": true,
+      "operands": [
+        "1.8"
+      ]
+    },
+    {
+      "uid": "25032ff4e3ea449f992039fa402b738f",
+      "program": "subtract(409920,348888), divide(#0,348888), add(1,#1), multiply(409920,#2)",
+      "question": "What will Exercise of stock options of Shares reach in 2006 if it continues to g",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": "Cannot be determined from the provided context.",
+      "gold_answer": "481629",
+      "is_na_or_fail": true,
+      "operands": [
+        "409920",
+        "348888"
+      ]
+    },
+    {
+      "uid": "76e62af158f04ea4897303414e59dc16",
+      "program": "subtract(6870,7250), divide(#0,7250), add(const_1,#1), multiply(6870,#2)",
+      "question": "If Americas develops with the same growth rate in 2004, what will it reach in 20",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": "Cannot be determined from the provided context.",
+      "gold_answer": "6509.92",
+      "is_na_or_fail": true,
+      "operands": [
+        "6870",
+        "7250"
+      ]
+    },
+    {
+      "uid": "e2e5b860eb464fefbf0122eed07843a3",
+      "program": "subtract(316.9,221.5), divide(#0,316.9)",
+      "question": "What is the growing rate of Equity securities, trading for Carrying amount in th",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": "N/A",
+      "gold_answer": "0.30104",
+      "is_na_or_fail": true,
+      "operands": [
+        "316.9",
+        "221.5"
+      ]
+    },
+    {
+      "uid": "ab9c286273864e8fb845dec27027a164",
+      "program": "subtract(3877,4721), divide(#0,4721), add(const_1,#1), multiply(#2,3877)",
+      "question": "What will Total assets reach in 2014 if it continues to grow at its current rate",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": "Cannot be determined from the provided information.",
+      "gold_answer": "3183.89",
+      "is_na_or_fail": true,
+      "operands": [
+        "4721",
+        "3877"
+      ]
+    },
+    {
+      "uid": "24f730c9d9704a8d9597fe4ae83ada60",
+      "program": "add(8437,2036), add(#0,180), add(#1,2270)",
+      "question": "What is the total value of Operating revenues, Purchased power , Fuel and Other ",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.3333333333333333,
+      "structured_coverage": 1.0,
+      "baseline_answer": "Cannot be determined from the provided context.",
+      "gold_answer": "12923",
+      "is_na_or_fail": true,
+      "operands": [
+        "180",
+        "8437",
+        "2270"
+      ]
+    },
+    {
+      "uid": "776342a2d8c1492286eedc213289f373",
+      "program": "subtract(14316,16368), divide(#0,16368)",
+      "question": "In the year with the most Granted for shares(in thousands), what is the growth r",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.5,
+      "structured_coverage": 1.0,
+      "baseline_answer": "N/A",
+      "gold_answer": "-0.12537",
+      "is_na_or_fail": true,
+      "operands": [
+        "14316",
+        "16368"
+      ]
+    },
+    {
+      "uid": "92c854f5e21144a6930f3a0e28bbd6b3",
+      "program": "divide(48777,51417), multiply(#0,const_100)",
+      "question": "what is the basic net income ( loss ) attributable to common shareholders as a p",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.5,
+      "structured_coverage": 1.0,
+      "baseline_answer": "The basic net income attributable to common shareholders in 2008 is $48,777, and the diluted net income attributable to common shareholders is not provided in the table. Therefore, the percentage cannot be calculated.",
+      "gold_answer": "94.8655",
+      "is_na_or_fail": true,
+      "operands": [
+        "48777",
+        "51417"
+      ]
+    },
+    {
+      "uid": "5a73af42d8684db8b203b8611b2a8064",
+      "program": "subtract(450.5,506.7), divide(#0,506.7)",
+      "question": "what is the growth rate in net reserves in 2005?",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": "0.0%",
+      "gold_answer": "-0.11091",
+      "is_na_or_fail": false,
+      "operands": [
+        "506.7",
+        "450.5"
+      ]
+    },
+    {
+      "uid": "862d583c5aeb45d9891497a47be8ac61",
+      "program": "add(701,489)",
+      "question": "What's the sum of the Municipal bonds for Available-for-sale debt securities for",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": 0,
+      "gold_answer": "1190",
+      "is_na_or_fail": false,
+      "operands": [
+        "701",
+        "489"
+      ]
+    },
+    {
+      "uid": "4b3181227ffd4a69a222087cbdca0cc4",
+      "program": "add(4135,3638), add(#0,497), divide(4135,#1)",
+      "question": "What is the ratioof Fair Value of Corporate loans and loan commitments to the to",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": 0.0109,
+      "gold_answer": "0.5",
+      "is_na_or_fail": false,
+      "operands": [
+        "3638",
+        "4135",
+        "497"
+      ]
+    },
+    {
+      "uid": "2732488535454a20a90f00d9186ca826",
+      "program": "add(390,268), add(#0,77)",
+      "question": "What's the total amount of theU.S. dollars sold for Pounds sterling in the years",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.3333333333333333,
+      "structured_coverage": 1.0,
+      "baseline_answer": "The provided context does not contain information about U.S. dollars sold for Pounds sterling.",
+      "gold_answer": "735",
+      "is_na_or_fail": false,
+      "operands": [
+        "77",
+        "268",
+        "390"
+      ]
+    },
+    {
+      "uid": "7c14962a8b71476f9650f9e84f1a6ecb",
+      "program": "subtract(202,161), divide(#0,161)",
+      "question": "In the year Ended December 31 where the amount of Investment services fee income",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.5,
+      "structured_coverage": 1.0,
+      "baseline_answer": "4.0%",
+      "gold_answer": "0.25466",
+      "is_na_or_fail": false,
+      "operands": [
+        "202",
+        "161"
+      ]
+    },
+    {
+      "uid": "1c1d7c56d70842a48980735e10a853ae",
+      "program": "divide(317,2524)",
+      "question": "What is the ratio of Distribution fees to the total in 2012?",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.5,
+      "structured_coverage": 1.0,
+      "baseline_answer": 0.1512,
+      "gold_answer": "0.12559",
+      "is_na_or_fail": false,
+      "operands": [
+        "2524",
+        "317"
+      ]
+    },
+    {
+      "uid": "db68fd65c5c941e4be541c77fe92d0d9",
+      "program": "subtract(0.3,1.2), divide(#0,1.2)",
+      "question": "what was the percentage change in the the fair value of our foreign currency for",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.5,
+      "structured_coverage": 1.0,
+      "baseline_answer": "The context does not provide information about the fair value of foreign currency forward contracts.",
+      "gold_answer": "-0.75",
+      "is_na_or_fail": false,
+      "operands": [
+        "1.2",
+        "0.3"
+      ]
+    },
+    {
+      "uid": "f8b8ec4bebe34fada4ae0dc766768c33",
+      "program": "add(14.9,14.4), add(#0,22.4)",
+      "question": "What's the sum of all elements that are greater than 10 in Home equity?",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.6666666666666666,
+      "structured_coverage": 1.0,
+      "baseline_answer": 29.3,
+      "gold_answer": "51.7",
+      "is_na_or_fail": false,
+      "operands": [
+        "22.4",
+        "14.9",
+        "14.4"
+      ]
+    },
+    {
+      "uid": "08f6538bafb0465f9f738854592f8804",
+      "program": "add(1285368,806975), add(#0,356406), add(#1,2448749)",
+      "question": "What's the total amount of Converters, Amplifiers/Radio frequency, Other analog ",
+      "baseline_complete": false,
+      "structured_complete": true,
+      "baseline_coverage": 0.75,
+      "structured_coverage": 1.0,
+      "baseline_answer": "$2,448,749",
+      "gold_answer": "4.8975e+06",
+      "is_na_or_fail": false,
+      "operands": [
+        "2448749",
+        "356406",
+        "806975",
+        "1285368"
+      ]
+    }
+  ],
+  "group_b": [
+    {
+      "uid": "6e69e996da0a482b87e237352da9369b",
+      "program": "subtract(3195,5)",
+      "question": "What is the sum of Investment real estate in 2012 and Gain (loss) recognized in ",
+      "baseline_complete": true,
+      "structured_complete": true,
+      "baseline_coverage": 1.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": 3193,
+      "gold_answer": "3190",
+      "is_na_or_fail": false,
+      "operands": [
+        "3195"
+      ]
+    },
+    {
+      "uid": "c649cb8dafee4d23b4184b0c8c89e74f",
+      "program": "subtract(5.3,6.9), divide(#0,6.9)",
+      "question": "In the year with the most Interest cost in Table 1, what is the growth rate of E",
+      "baseline_complete": true,
+      "structured_complete": true,
+      "baseline_coverage": 1.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": -0.2318840579710145,
+      "gold_answer": "-0.23188",
+      "is_na_or_fail": false,
+      "operands": [
+        "6.9",
+        "5.3"
+      ]
+    },
+    {
+      "uid": "f5b5bb74596148978c9f5ea7efb1a149",
+      "program": "divide(15,37)",
+      "question": "what portion of the compensation expense in 2017 is relates to the acceleration ",
+      "baseline_complete": true,
+      "structured_complete": true,
+      "baseline_coverage": 1.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": "Not enough information",
+      "gold_answer": "0.40541",
+      "is_na_or_fail": true,
+      "operands": [
+        "37",
+        "15"
+      ]
+    },
+    {
+      "uid": "627ffb2c46b94bdcb58d0850493a36ea",
+      "program": "add(245958,40321), divide(#0,const_2)",
+      "question": "What's the average of Capital leases of Carrying amount in 2003 and 2002? (in Th",
+      "baseline_complete": true,
+      "structured_complete": true,
+      "baseline_coverage": 1.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": 143139.5,
+      "gold_answer": "143140",
+      "is_na_or_fail": false,
+      "operands": [
+        "40321",
+        "245958"
+      ]
+    },
+    {
+      "uid": "a5ec5ca712704c88887435bb658f5c08",
+      "program": "add(9.4,0.6), add(#0,0.2)",
+      "question": "what is the total impairment charge recorded in the lat three years , in million",
+      "baseline_complete": true,
+      "structured_complete": true,
+      "baseline_coverage": 1.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": 10.2,
+      "gold_answer": "10.2",
+      "is_na_or_fail": false,
+      "operands": [
+        "0.2",
+        "0.6",
+        "9.4"
+      ]
+    },
+    {
+      "uid": "25fa7222665c4740ba34eaddf3769ff5",
+      "program": "add(186,24)",
+      "question": "What is the amount of Commercial and Commercial realestate in the years with the",
+      "baseline_complete": true,
+      "structured_complete": true,
+      "baseline_coverage": 1.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": "2017",
+      "gold_answer": "210",
+      "is_na_or_fail": false,
+      "operands": [
+        "186",
+        "24"
+      ]
+    },
+    {
+      "uid": "27ca5c5366c941c5841fd2b54be97835",
+      "program": "subtract(2220,1522), divide(#0,1522)",
+      "question": "by what percentage did total residential mortgages increase from 2011 to 2012?",
+      "baseline_complete": true,
+      "structured_complete": true,
+      "baseline_coverage": 1.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": "45.86%",
+      "gold_answer": "0.45861",
+      "is_na_or_fail": false,
+      "operands": [
+        "1522",
+        "2220"
+      ]
+    },
+    {
+      "uid": "eec7fa663f7a4657b53eea3da96d208e",
+      "program": "subtract(45465,40310), divide(#0,45465)",
+      "question": "What's the current increasing rate of U.S. high-grade?",
+      "baseline_complete": true,
+      "structured_complete": true,
+      "baseline_coverage": 1.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": "12.8%",
+      "gold_answer": "0.11338",
+      "is_na_or_fail": false,
+      "operands": [
+        "40310",
+        "45465"
+      ]
+    },
+    {
+      "uid": "61684e3f70ae4816b8c121726ac1ec89",
+      "program": "add(12,41), add(#0,100), add(#1,17)",
+      "question": "how much in combined repurchase claims , in millions , were recorded in the firs",
+      "baseline_complete": true,
+      "structured_complete": true,
+      "baseline_coverage": 1.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": [
+        12,
+        41,
+        100,
+        17
+      ],
+      "gold_answer": "170",
+      "is_na_or_fail": false,
+      "operands": [
+        "12",
+        "17",
+        "41"
+      ]
+    },
+    {
+      "uid": "a0e6c373d5e545c487ad1ae2b3027259",
+      "program": "subtract(116.00,const_100), divide(#0,const_100)",
+      "question": "what is the roi of an investment in s&p500 index from 2011 to 2012?",
+      "baseline_complete": true,
+      "structured_complete": true,
+      "baseline_coverage": 1.0,
+      "structured_coverage": 1.0,
+      "baseline_answer": 16.0,
+      "gold_answer": "0.16",
+      "is_na_or_fail": false,
+      "operands": [
+        "116.00"
+      ]
+    }
+  ],
+  "metadata": {
+    "total_samples": 53,
+    "group_a_total": 19,
+    "group_b_total": 25,
+    "selected_a": 19,
+    "selected_b": 10
+  }
+}
