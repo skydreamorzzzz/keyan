@@ -1,0 +1,2043 @@
+{
+  "qc_results": [
+    {
+      "source_id": "E001",
+      "gold_operations": [
+        "divide"
+      ],
+      "mentioned_operations": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E002",
+      "gold_operations": [
+        "divide"
+      ],
+      "mentioned_operations": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E003",
+      "gold_operations": [
+        "divide"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: multiply",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: multiply; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E004",
+      "gold_operations": [
+        "divide"
+      ],
+      "mentioned_operations": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E005",
+      "gold_operations": [
+        "divide"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: multiply",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: multiply; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E006",
+      "gold_operations": [
+        "divide"
+      ],
+      "mentioned_operations": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E007",
+      "gold_operations": [
+        "divide",
+        "subtract"
+      ],
+      "mentioned_operations": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [
+        "subtract"
+      ],
+      "has_template": false,
+      "issues": [
+        "missing_ops: subtract",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "missing_ops: subtract; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E009",
+      "gold_operations": [
+        "divide",
+        "subtract"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "subtract",
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: multiply",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: multiply; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E011",
+      "gold_operations": [
+        "divide",
+        "subtract"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E013",
+      "gold_operations": [
+        "subtract"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E016",
+      "gold_operations": [
+        "subtract"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E019",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E020",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E021",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E022",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E023",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E024",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E025",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add",
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "multiply"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: multiply",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: multiply; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E026",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E027",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [
+        "add"
+      ],
+      "has_template": false,
+      "issues": [
+        "missing_ops: add"
+      ],
+      "passed": false,
+      "reason": "missing_ops: add"
+    },
+    {
+      "source_id": "E028",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [
+        "add"
+      ],
+      "has_template": false,
+      "issues": [
+        "missing_ops: add",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "missing_ops: add; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E029",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E030",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E031",
+      "gold_operations": [
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E032",
+      "gold_operations": [
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E033",
+      "gold_operations": [
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "missing_scale_100: gold has \u00d7100 but abstraction doesn't mention it"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; missing_scale_100: gold has \u00d7100 but abstraction doesn't mention it"
+    },
+    {
+      "source_id": "E034",
+      "gold_operations": [
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E035",
+      "gold_operations": [
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E036",
+      "gold_operations": [
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E037",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E038",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide"
+    },
+    {
+      "source_id": "E039",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E040",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E041",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E042",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "add",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [
+        "subtract"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: subtract",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: subtract; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E043",
+      "gold_operations": [
+        "divide",
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide"
+      ],
+      "gold_has_100": true,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": true,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [
+        "multiply"
+      ],
+      "has_template": false,
+      "issues": [
+        "missing_ops: multiply"
+      ],
+      "passed": false,
+      "reason": "missing_ops: multiply"
+    },
+    {
+      "source_id": "E044",
+      "gold_operations": [
+        "divide",
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E045",
+      "gold_operations": [
+        "divide",
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E046",
+      "gold_operations": [
+        "divide",
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": true,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E047",
+      "gold_operations": [
+        "divide",
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E048",
+      "gold_operations": [
+        "divide",
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E049",
+      "gold_operations": [
+        "greater"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "greater"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide"
+    },
+    {
+      "source_id": "E050",
+      "gold_operations": [
+        "greater"
+      ],
+      "mentioned_operations": [
+        "greater"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E051",
+      "gold_operations": [
+        "greater"
+      ],
+      "mentioned_operations": [
+        "greater"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E052",
+      "gold_operations": [
+        "greater"
+      ],
+      "mentioned_operations": [
+        "greater"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E053",
+      "gold_operations": [
+        "greater"
+      ],
+      "mentioned_operations": [
+        "greater"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E054",
+      "gold_operations": [
+        "greater"
+      ],
+      "mentioned_operations": [
+        "greater"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E055",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E056",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E057",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E058",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": true,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E059",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E060",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E063",
+      "gold_operations": [
+        "table_average"
+      ],
+      "mentioned_operations": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [
+        "table_average"
+      ],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "missing_ops: table_average",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; missing_ops: table_average; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E064",
+      "gold_operations": [
+        "table_average"
+      ],
+      "mentioned_operations": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [
+        "table_average"
+      ],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "missing_ops: table_average",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; missing_ops: table_average; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E065",
+      "gold_operations": [
+        "table_average"
+      ],
+      "mentioned_operations": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [
+        "table_average"
+      ],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "missing_ops: table_average",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; missing_ops: table_average; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E066",
+      "gold_operations": [
+        "table_average"
+      ],
+      "mentioned_operations": [
+        "divide"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [
+        "table_average"
+      ],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "missing_ops: table_average",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; missing_ops: table_average; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E067",
+      "gold_operations": [
+        "divide",
+        "subtract"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E068",
+      "gold_operations": [
+        "divide",
+        "subtract"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E070",
+      "gold_operations": [
+        "divide",
+        "subtract"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E071",
+      "gold_operations": [
+        "divide",
+        "subtract"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E072",
+      "gold_operations": [
+        "divide",
+        "subtract"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "subtract"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E073",
+      "gold_operations": [
+        "divide",
+        "subtract",
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "subtract",
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E074",
+      "gold_operations": [
+        "divide",
+        "subtract",
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "subtract",
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E075",
+      "gold_operations": [
+        "divide",
+        "subtract",
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "subtract",
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E076",
+      "gold_operations": [
+        "divide",
+        "subtract",
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "subtract",
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E077",
+      "gold_operations": [
+        "divide",
+        "subtract",
+        "multiply"
+      ],
+      "mentioned_operations": [
+        "multiply"
+      ],
+      "gold_has_100": true,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [
+        "divide",
+        "subtract"
+      ],
+      "has_template": false,
+      "issues": [
+        "missing_ops: divide, subtract"
+      ],
+      "passed": false,
+      "reason": "missing_ops: divide, subtract"
+    },
+    {
+      "source_id": "E079",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E081",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E082",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "add"
+      ],
+      "gold_has_100": true,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E083",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [
+        "divide"
+      ],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "extra_ops: divide",
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "extra_ops: divide; spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E084",
+      "gold_operations": [
+        "add"
+      ],
+      "mentioned_operations": [
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": false
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [],
+      "passed": true,
+      "reason": "OK"
+    },
+    {
+      "source_id": "E085",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E086",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E087",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E088",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": false,
+        "has_divide_100": false,
+        "has_percentage_conversion": true,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E089",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    },
+    {
+      "source_id": "E090",
+      "gold_operations": [
+        "divide",
+        "add"
+      ],
+      "mentioned_operations": [
+        "divide",
+        "add"
+      ],
+      "gold_has_100": false,
+      "scale_findings": {
+        "has_multiply_100": true,
+        "has_divide_100": false,
+        "has_percentage_conversion": false,
+        "has_decimal_mention": true
+      },
+      "extra_ops": [],
+      "missing_ops": [],
+      "has_template": false,
+      "issues": [
+        "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+      ],
+      "passed": false,
+      "reason": "spurious_scale_100: gold has no \u00d7100 but abstraction mentions percentage conversion"
+    }
+  ],
+  "statistics": {
+    "total": 78,
+    "passed": 18,
+    "failed": 60,
+    "pass_rate": 0.23076923076923078,
+    "operation_issues": 29,
+    "scale_issues": 55,
+    "template_issues": 0
+  },
+  "note": "Structural QC for execution fidelity"
+}

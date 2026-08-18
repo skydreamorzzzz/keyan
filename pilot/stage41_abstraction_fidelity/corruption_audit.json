@@ -1,0 +1,1164 @@
+{
+  "total_corrupted": 116,
+  "audit": [
+    {
+      "source_id": "E001",
+      "corruption_type": "operand_role_drift",
+      "mutations": [
+        {
+          "swapped": "numerator <-> denominator"
+        }
+      ],
+      "corruption_applied": "operand_role_drift_numerator_denominator"
+    },
+    {
+      "source_id": "E001",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E001",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 4: Divide the numerator by the denominator to obtain the ratio."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E003",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E003",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E003",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 3: Divide the known portion value by the decimal percentage rate."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E004",
+      "corruption_type": "operand_role_drift",
+      "mutations": [
+        {
+          "swapped": "numerator <-> denominator"
+        }
+      ],
+      "corruption_applied": "operand_role_drift_numerator_denominator"
+    },
+    {
+      "source_id": "E004",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E004",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 3: Divide the current assets value by the current liabilities value to obtain the current ratio."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E005",
+      "corruption_type": "operation_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E005",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 3: Compute the ratio by dividing the intersegment sales by the total sales."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E006",
+      "corruption_type": "operand_role_drift",
+      "mutations": [
+        {
+          "swapped": "numerator <-> denominator"
+        }
+      ],
+      "corruption_applied": "operand_role_drift_numerator_denominator"
+    },
+    {
+      "source_id": "E006",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E006",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 3: Divide the numerator (amount due in the period) by the denominator (total future amount) to compute the portion."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E007",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E007",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "subtract",
+          "swapped_to": "add",
+          "span": "Subtract"
+        }
+      ],
+      "corruption_applied": "operation_drift_subtract_to_add"
+    },
+    {
+      "source_id": "E007",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 4: Divide the absolute change by the earlier period's value to obtain the relative change as a decimal."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E009",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E009",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E009",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 4: Divide the change by the old value to obtain the ratio of change relative to the original amount."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E011",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E011",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "subtract",
+          "swapped_to": "add",
+          "span": "Subtract"
+        }
+      ],
+      "corruption_applied": "operation_drift_subtract_to_add"
+    },
+    {
+      "source_id": "E011",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 4: Divide the absolute increase by the base value to get the relative increase as a decimal."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E016",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E016",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "subtract",
+          "swapped_to": "add",
+          "span": "Subtract"
+        }
+      ],
+      "corruption_applied": "operation_drift_subtract_to_add"
+    },
+    {
+      "source_id": "E019",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E020",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E021",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E022",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E023",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E024",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E025",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E025",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 4: Divide the charge amount by the pre-impairment earnings to obtain the ratio (as a decimal)."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E026",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E027",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E027",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E027",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 4: Divide the total change by the number of years to get the average annual change."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E028",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E028",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E028",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 4: Divide the total expense amount by the balance sheet item to obtain the ratio."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E030",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E030",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E030",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 3: Step 3: Divide the sum by 2 to get the average."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E031",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "multiply",
+          "swapped_to": "divide",
+          "span": "Multiply"
+        }
+      ],
+      "corruption_applied": "operation_drift_multiply_to_divide"
+    },
+    {
+      "source_id": "E032",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "multiply",
+          "swapped_to": "divide",
+          "span": "Multiply"
+        }
+      ],
+      "corruption_applied": "operation_drift_multiply_to_divide"
+    },
+    {
+      "source_id": "E033",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "multiply",
+          "swapped_to": "divide",
+          "span": "multiply"
+        }
+      ],
+      "corruption_applied": "operation_drift_multiply_to_divide"
+    },
+    {
+      "source_id": "E034",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "multiply",
+          "swapped_to": "divide",
+          "span": "Multiply"
+        }
+      ],
+      "corruption_applied": "operation_drift_multiply_to_divide"
+    },
+    {
+      "source_id": "E035",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "multiply",
+          "swapped_to": "divide",
+          "span": "Multiply"
+        }
+      ],
+      "corruption_applied": "operation_drift_multiply_to_divide"
+    },
+    {
+      "source_id": "E036",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "multiply",
+          "swapped_to": "divide",
+          "span": "Multiply"
+        }
+      ],
+      "corruption_applied": "operation_drift_multiply_to_divide"
+    },
+    {
+      "source_id": "E037",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E038",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E039",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E042",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E043",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E043",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E043",
+      "corruption_type": "scale_drift",
+      "mutations": [],
+      "corruption_applied": "scale_drift_remove_100"
+    },
+    {
+      "source_id": "E044",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "multiply",
+          "swapped_to": "divide",
+          "span": "Multiply"
+        }
+      ],
+      "corruption_applied": "operation_drift_multiply_to_divide"
+    },
+    {
+      "source_id": "E044",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "Step 1: Step 1: Multiply the per-share dividend by the number of periods to get the total dividend per share for the year."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E045",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E045",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E045",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": "Express the result as a percentage",
+          "replaced_with": "express as decimal ratio"
+        }
+      ],
+      "corruption_applied": "scale_drift_remove_100"
+    },
+    {
+      "source_id": "E047",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E047",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "multiply",
+          "swapped_to": "divide",
+          "span": "Multiply"
+        }
+      ],
+      "corruption_applied": "operation_drift_multiply_to_divide"
+    },
+    {
+      "source_id": "E047",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "Step 1: Identify the principal amount (the base value) and the annual interest rate as a decimal ratio (e."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E048",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E048",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "multiply",
+          "swapped_to": "divide",
+          "span": "Multiply"
+        }
+      ],
+      "corruption_applied": "operation_drift_multiply_to_divide"
+    },
+    {
+      "source_id": "E048",
+      "corruption_type": "scale_drift",
+      "mutations": [],
+      "corruption_applied": "scale_drift_remove_100"
+    },
+    {
+      "source_id": "E049",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 3: Compare the two final values using the 'greater' operation to determine if the first entity's value is greater than the second's."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E050",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 2: Step 2: For each acquisition, find the total consideration paid (e."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E051",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 3: Step 3: Compare the two values using the 'greater' operation."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E052",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 4: Step 4: Compare the two numerical values using the 'greater' operation."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E053",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 2: Step 2: Apply the 'greater' operation to the two values to determine if the first is greater than the second."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E054",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 3: Step 3: Compare the two high prices using the 'greater' operation."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E055",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E055",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E056",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E056",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E056",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 4: Step 4: Divide the sum by 3 to get the average."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E058",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E058",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E058",
+      "corruption_type": "scale_drift",
+      "mutations": [],
+      "corruption_applied": "scale_drift_remove_100"
+    },
+    {
+      "source_id": "E059",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E059",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E059",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 4: Step 4: Divide the total sum by 3 to obtain the average."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E060",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E060",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E060",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 4: Step 4: Divide the total sum by 3 to get the average."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E065",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 4: Step 4: Compute the average of these values using the table_average operation."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E067",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E067",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E068",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E068",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E068",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 3: Divide the absolute increase by the earlier-year value to obtain the relative increase as a decimal."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E070",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E070",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E070",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 2: Divide the later year's value by the earlier year's value to obtain the ratio of the later value to the earlier value."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E071",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E071",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 2: Divide the later period value by the earlier period value to obtain the ratio of the later value to the earlier value."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E072",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E072",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": " Then multiply the result by 100 to express as a percentage.",
+          "inserted_after": "\nStep 3: Divide the later value by the earlier value to obtain the ratio of the later value to the earlier value."
+        }
+      ],
+      "corruption_applied": "scale_drift_add_100"
+    },
+    {
+      "source_id": "E073",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E073",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": "Multiply the result by 100",
+          "replaced_with": "keep the result as is"
+        },
+        {
+          "span": "express as a percentage",
+          "replaced_with": "express as decimal ratio"
+        }
+      ],
+      "corruption_applied": "scale_drift_remove_100"
+    },
+    {
+      "source_id": "E074",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E074",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "subtract",
+          "swapped_to": "add",
+          "span": "Subtract"
+        }
+      ],
+      "corruption_applied": "operation_drift_subtract_to_add"
+    },
+    {
+      "source_id": "E074",
+      "corruption_type": "scale_drift",
+      "mutations": [],
+      "corruption_applied": "scale_drift_remove_100"
+    },
+    {
+      "source_id": "E075",
+      "corruption_type": "operand_role_drift",
+      "mutations": [
+        {
+          "swapped": "current <-> previous"
+        }
+      ],
+      "corruption_applied": "operand_role_drift_current_previous"
+    },
+    {
+      "source_id": "E075",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "subtract",
+          "swapped_to": "add",
+          "span": "Subtract"
+        }
+      ],
+      "corruption_applied": "operation_drift_subtract_to_add"
+    },
+    {
+      "source_id": "E075",
+      "corruption_type": "scale_drift",
+      "mutations": [
+        {
+          "span": "express it as a percentage",
+          "replaced_with": "express as decimal ratio"
+        }
+      ],
+      "corruption_applied": "scale_drift_remove_100"
+    },
+    {
+      "source_id": "E077",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E082",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E084",
+      "corruption_type": "operation_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E085",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E085",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "add",
+          "swapped_to": "subtract",
+          "span": "Add"
+        }
+      ],
+      "corruption_applied": "operation_drift_add_to_subtract"
+    },
+    {
+      "source_id": "E087",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    },
+    {
+      "source_id": "E087",
+      "corruption_type": "operation_drift",
+      "mutations": [
+        {
+          "operation": "divide",
+          "swapped_to": "multiply",
+          "span": "Divide"
+        }
+      ],
+      "corruption_applied": "operation_drift_divide_to_multiply"
+    },
+    {
+      "source_id": "E090",
+      "corruption_type": "operand_role_drift",
+      "mutations": [],
+      "corruption_applied": "none"
+    }
+  ]
+}

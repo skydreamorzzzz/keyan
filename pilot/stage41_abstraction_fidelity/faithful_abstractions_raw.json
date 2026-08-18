@@ -1,0 +1,1716 @@
+[
+  {
+    "strategy_name": "Return on assets ratio calculation",
+    "problem_pattern": "When a financial metric is defined as a ratio of two figures from financial statements, such as net income to total assets, and the question asks for the value of that ratio during a specific period.",
+    "reasoning_steps": "Step 1: Identify the numerator as the financial figure representing the earnings or income for the period.\nStep 2: Identify the denominator as the financial figure representing the asset base or total assets.\nStep 3: Divide the numerator by the denominator to obtain the ratio as a decimal.",
+    "operand_roles": "- numerator: The earnings or income figure for the period.\n- denominator: The total assets figure for the period.",
+    "units_convention": "The result is expressed as a decimal ratio, not multiplied by 100. No percentage conversion is applied.",
+    "source_experience_id": "E001",
+    "gold_program": "divide(131, 5270)",
+    "gold_structure": {
+      "operations": [
+        "divide"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Cash paid as ratio to property plant equipment",
+    "problem_pattern": "When a transaction involves cash paid for an asset and the question asks for the proportion of that cash relative to a balance sheet figure like property, plant, and equipment.",
+    "reasoning_steps": "Step 1: Identify the cash paid in the transaction as the numerator.\nStep 2: Identify the relevant balance sheet figure (e.g., property, plant, and equipment) as the denominator.\nStep 3: Divide the numerator by the denominator to obtain the decimal ratio.",
+    "operand_roles": "- numerator: cash paid in the transaction\n- denominator: property, plant, and equipment value",
+    "units_convention": "Both values are in the same monetary units (e.g., millions of dollars). The result is a dimensionless decimal ratio, not multiplied by 100.",
+    "source_experience_id": "E002",
+    "gold_program": "divide(19.8, 135.2)",
+    "gold_structure": {
+      "operations": [
+        "divide"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Single division for ratio calculation",
+    "problem_pattern": "This reasoning applies when a total cost is expressed as a percentage of a base amount, and the question asks for the current total of the cost components. The solution requires converting the percentage to a decimal ratio by dividing the percentage value by the percentage base (e.g., 1% = 0.01).",
+    "reasoning_steps": "Step 1: Identify the base amount (the total to which the percentage applies).\nStep 2: Identify the percentage rate (the given percentage value).\nStep 3: Divide the percentage rate by the percentage base (e.g., 1% = 0.01) to obtain the decimal ratio.\nStep 4: The result is the decimal ratio, not a percentage.",
+    "operand_roles": "- numerator: the percentage rate (the given percentage value)\n- denominator: the percentage base (the value representing 1% or 100% as a decimal)",
+    "units_convention": "The result is a decimal ratio, not a percentage. Do not multiply by 100 or convert to percentage. The units are dimensionless (a ratio).",
+    "source_experience_id": "E003",
+    "gold_program": "divide(10, 1%)",
+    "gold_structure": {
+      "operations": [
+        "divide"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Current ratio from balance sheet items",
+    "problem_pattern": "When computing a financial ratio that compares two balance sheet figures, such as current assets to current liabilities, for a given year.",
+    "reasoning_steps": "Step 1: Identify the numerator as the first financial figure (e.g., current assets).\nStep 2: Identify the denominator as the second financial figure (e.g., current liabilities).\nStep 3: Divide the numerator by the denominator to obtain the ratio.",
+    "operand_roles": "- numerator: The financial amount being compared (e.g., current assets)\n- denominator: The financial amount used as the base of comparison (e.g., current liabilities)",
+    "units_convention": "The result is a dimensionless decimal ratio, not a percentage. No scaling factor is applied.",
+    "source_experience_id": "E004",
+    "gold_program": "divide(494788, 309051)",
+    "gold_structure": {
+      "operations": [
+        "divide"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Intersegment sales ratio to total sales",
+    "problem_pattern": "When a financial statement reports intersegment sales and total sales, and the question asks for the proportion of intersegment sales relative to total sales, the solution is a simple division of the intersegment sales amount by the total sales amount.",
+    "reasoning_steps": "Step 1: Identify the numerator as the intersegment sales amount.\nStep 2: Identify the denominator as the total sales amount.\nStep 3: Divide the numerator by the denominator to obtain the decimal ratio.",
+    "operand_roles": "- numerator: intersegment sales amount\n- denominator: total sales amount",
+    "units_convention": "The result is a decimal ratio (e.g., 0.02455), not a percentage. Do not multiply by 100; keep the raw quotient.",
+    "source_experience_id": "E005",
+    "gold_program": "divide(185, 7536)",
+    "gold_structure": {
+      "operations": [
+        "divide"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Compute near-term share of total future payments",
+    "problem_pattern": "When a financial statement reports total future minimum payments and asks for the portion due within a specific upcoming period (e.g., next 12 months), the solution is the ratio of the near-term amount to the total future amount.",
+    "reasoning_steps": "Step 1: Identify the amount of future payments due within the next 12 months (the numerator).\nStep 2: Identify the total future minimum payments (the denominator).\nStep 3: Divide the numerator by the denominator to obtain the decimal proportion.",
+    "operand_roles": "- numerator: the amount of future payments scheduled within the next 12 months\n- denominator: the total future minimum payments over the entire period",
+    "units_convention": "The result is a dimensionless decimal ratio (e.g., 0.13), not a percentage. No multiplication by 100 is applied.",
+    "source_experience_id": "E006",
+    "gold_program": "divide(176138, 1355605)",
+    "gold_structure": {
+      "operations": [
+        "divide"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Change ratio from prior period",
+    "problem_pattern": "When calculating the proportional change in a balance sheet or liability account between two consecutive periods, where the change is expressed as a decimal ratio relative to the earlier period's value.",
+    "reasoning_steps": "Step 1: Compute the absolute change by subtracting the earlier period's value from the later period's value.\nStep 2: Divide the absolute change by the earlier period's value to obtain the decimal ratio of change.",
+    "operand_roles": "- later period value: the value at the end of the later period (the minuend in subtraction)\n- earlier period value: the value at the end of the earlier period (the subtrahend in subtraction and the divisor in division)",
+    "units_convention": "The result is a dimensionless decimal ratio (e.g., 0.15686), not multiplied by 100. It represents the proportional change relative to the base period value.",
+    "source_experience_id": "E007",
+    "gold_program": "subtract(118, 102), divide(#0, 102)",
+    "gold_structure": {
+      "operations": [
+        "subtract",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Ratio change calculation via subtraction and division",
+    "problem_pattern": "When comparing a metric between two periods to find the proportional change, and the result is expressed as a decimal ratio rather than a percentage. The metric is typically a financial figure like debt or equity.",
+    "reasoning_steps": "Step 1: Identify the metric value for the later period and the earlier period.\nStep 2: Subtract the earlier period value from the later period value to find the absolute change.\nStep 3: Divide the absolute change by the earlier period value to obtain the proportional change as a decimal ratio.",
+    "operand_roles": "- numerator: the absolute change (later period value minus earlier period value)\n- denominator: the earlier period value (the base for comparison)",
+    "units_convention": "The result is a dimensionless ratio (e.g., 0.05793) representing the fractional change relative to the base. Do not multiply by 100; keep as a decimal.",
+    "source_experience_id": "E009",
+    "gold_program": "subtract(347, 328), divide(#0, 328)",
+    "gold_structure": {
+      "operations": [
+        "subtract",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Ratio change from difference over base",
+    "problem_pattern": "When asked for the proportional increase or decrease between two values over time, compute the difference and express it as a ratio of the starting value.",
+    "reasoning_steps": "Step 1: Identify the later value and the earlier value.\nStep 2: Subtract the earlier value from the later value to find the absolute change.\nStep 3: Divide the absolute change by the earlier value to obtain the proportional change as a decimal ratio.",
+    "operand_roles": "- later value: the value at the end of the period (numerator in subtraction)\n- earlier value: the value at the start of the period (subtrahend and denominator)\n- difference: the result of subtraction, used as numerator in division",
+    "units_convention": "The result is a dimensionless ratio, not multiplied by 100. It represents the decimal fraction of change relative to the starting value.",
+    "source_experience_id": "E011",
+    "gold_program": "subtract(18447, 9889), divide(#0, 9889)",
+    "gold_structure": {
+      "operations": [
+        "subtract",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Direct subtraction of two expense values",
+    "problem_pattern": "This reasoning applies when comparing two financial figures from different time periods to find the absolute decrease. The operation is a simple subtraction of the later value from the earlier value.",
+    "reasoning_steps": "Step 1: Identify the earlier period's expense value.\nStep 2: Identify the later period's expense value.\nStep 3: Subtract the later value from the earlier value to obtain the decrease.",
+    "operand_roles": "- minuend: the earlier period's expense value\n- subtrahend: the later period's expense value",
+    "units_convention": "The result is expressed in the same unit as the original values (e.g., currency units). No percentage conversion is applied; the result is a decimal ratio or absolute difference.",
+    "source_experience_id": "E013",
+    "gold_program": "subtract(91.8, 27.6)",
+    "gold_structure": {
+      "operations": [
+        "subtract"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Loss recognition from held-to-maturity portfolio",
+    "problem_pattern": "This reasoning applies when determining the potential loss from selling a held-to-maturity investment portfolio at a given date, where the loss is the difference between the carrying amount and the fair value or proceeds.",
+    "reasoning_steps": "Step 1: Identify the carrying amount (or book value) of the held-to-maturity investment portfolio.\nStep 2: Identify the fair value (or expected proceeds) from selling the portfolio.\nStep 3: Subtract the fair value from the carrying amount to compute the loss (if positive) or gain (if negative).",
+    "operand_roles": "- minuend: the carrying amount (book value) of the portfolio\n- subtrahend: the fair value (or proceeds) from selling the portfolio",
+    "units_convention": "The result is a monetary amount in the same currency units as the inputs, expressed as a decimal ratio (not a percentage). No scaling factor is applied.",
+    "source_experience_id": "E016",
+    "gold_program": "subtract(29669000, 29570000)",
+    "gold_structure": {
+      "operations": [
+        "subtract"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sum two component values to get total fair value",
+    "problem_pattern": "This reasoning applies when a total fair value is composed of two distinct additive components, such as values allocated to different stockholder groups or program parts. The task requires combining these components to find the overall fair value.",
+    "reasoning_steps": "Step 1: Identify the two component values that need to be combined to determine the total fair value.\nStep 2: Add the two component values together to obtain the total fair value.",
+    "operand_roles": "- first addend: one component of the fair value (e.g., value for one stockholder group)\n- second addend: the other component of the fair value (e.g., value for another stockholder group)",
+    "units_convention": "The result is a decimal ratio or absolute value in the same units as the inputs; no percentage conversion is applied.",
+    "source_experience_id": "E019",
+    "gold_program": "add(572079, 599497)",
+    "gold_structure": {
+      "operations": [
+        "add"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Summing two separate liability impacts",
+    "problem_pattern": "When a question asks for the total impact on liabilities from two distinct events or line items, and the provided data gives each impact as a separate value, the solution is to add the two values together.",
+    "reasoning_steps": "Step 1: Identify the two separate liability impacts mentioned in the problem context.\nStep 2: Add the two impacts together to obtain the total combined impact on liabilities.",
+    "operand_roles": "- First addend: The liability impact from the first event (e.g., a planned shutdown).\n- Second addend: The liability impact from the second event (e.g., a decommissioning).",
+    "units_convention": "The result is a decimal ratio (not a percentage). No unit conversion or scaling is applied; the sum is expressed in the same units as the inputs.",
+    "source_experience_id": "E020",
+    "gold_program": "add(26.4, 35.1)",
+    "gold_structure": {
+      "operations": [
+        "add"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Summing two balance sheet components",
+    "problem_pattern": "This reasoning applies when a reported total is the sum of two distinct line items, such as goodwill before impairment being the sum of goodwill from different segments or components. The task requires adding two values from a financial statement to find a combined amount.",
+    "reasoning_steps": "Step 1: Identify the two components that together make up the desired total (e.g., goodwill from two segments).\nStep 2: Add the two component values to obtain the combined total.",
+    "operand_roles": "- component1: The first addend, representing one part of the total.\n- component2: The second addend, representing the other part of the total.",
+    "units_convention": "The result is expressed in the same units as the inputs (e.g., millions of dollars). No scaling or percentage conversion is applied.",
+    "source_experience_id": "E021",
+    "gold_program": "add(595, 629)",
+    "gold_structure": {
+      "operations": [
+        "add"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Summing two segment values for net operating income",
+    "problem_pattern": "When a financial metric is reported for two separate segments or categories and the total for the combined category is needed by adding the two reported values.",
+    "reasoning_steps": "Step 1: Identify the two reported values for the segments that together constitute the desired metric.\nStep 2: Add the two values together to obtain the combined total.",
+    "operand_roles": "- first addend: value for one segment (e.g., triple-net)\n- second addend: value for the other segment (e.g., seniors housing)",
+    "units_convention": "The result is expressed in the same units as the inputs (e.g., millions). No scaling or percentage conversion is applied.",
+    "source_experience_id": "E022",
+    "gold_program": "add(1208860, 814114)",
+    "gold_structure": {
+      "operations": [
+        "add"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Summing two authorized amounts",
+    "problem_pattern": "This reasoning applies when the total value is the sum of two separate authorized amounts, such as an initial authorization and an additional authorization.",
+    "reasoning_steps": "Step 1: Identify the two amounts that need to be combined.\nStep 2: Add the two amounts together to get the total.",
+    "operand_roles": "- first addend: the initial authorized amount\n- second addend: the additional authorized amount",
+    "units_convention": "The result is expressed in the same unit as the operands (e.g., billions), as a decimal ratio, not a percentage.",
+    "source_experience_id": "E023",
+    "gold_program": "add(3.9, 1.5)",
+    "gold_structure": {
+      "operations": [
+        "add"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sum of unrecognized tax benefit components",
+    "problem_pattern": "When a financial statement item is broken into components based on tax years (prior vs current), and the total is the sum of those components.",
+    "reasoning_steps": "Step 1: Identify the two components of the unrecognized tax benefit that are categorized by tax year (prior year and current year).\nStep 2: Add the two component values together to obtain the total unrecognized tax benefit.",
+    "operand_roles": "- prior_year_component: The amount of unrecognized tax benefit attributable to positions from prior tax years.\n- current_year_component: The amount of unrecognized tax benefit attributable to positions from the current tax year.",
+    "units_convention": "The result is expressed in the same monetary units as the components (e.g., dollars, thousands of dollars). No percentage conversion is applied; the result is a decimal ratio or absolute amount.",
+    "source_experience_id": "E024",
+    "gold_program": "add(351, 813)",
+    "gold_structure": {
+      "operations": [
+        "add"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Impairment charge as ratio of pre-impairment earnings",
+    "problem_pattern": "This reasoning applies when a financial charge (e.g., impairment) is expressed as a proportion of a segment's earnings before that charge. The pre-impairment earnings must be reconstructed by adding the charge back to the reported earnings, then the charge is divided by that reconstructed base.",
+    "reasoning_steps": "Step 1: Identify the reported earnings figure for the segment (which already includes the charge as a deduction).\nStep 2: Add the charge amount to the reported earnings to obtain the pre-impairment earnings (the base).\nStep 3: Divide the charge amount by the pre-impairment earnings to get the decimal ratio.",
+    "operand_roles": "- numerator: the charge amount (the impairment)\n- denominator: the pre-impairment earnings (reported earnings plus the charge)",
+    "units_convention": "The result is a decimal ratio (e.g., 0.146), not a percentage. Do not multiply by 100; keep the raw quotient.",
+    "source_experience_id": "E025",
+    "gold_program": "add(27, 158), divide(27, #0)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Average of two short-term borrowing values",
+    "problem_pattern": "This reasoning applies when the average of two financial figures (e.g., short-term borrowings) over two periods is needed. The figures are summed first, then divided by the count of periods.",
+    "reasoning_steps": "Step 1: Identify the two relevant financial values for the two periods.\nStep 2: Add the two values together to get the total.\nStep 3: Divide the total by the number of periods (which is 2) to obtain the average.",
+    "operand_roles": "- First addend: the financial value for the first period\n- Second addend: the financial value for the second period\n- Dividend (result of addition): the total sum of the two values\n- Divisor: the number of periods (2)",
+    "units_convention": "The result is a decimal ratio (average) in the same unit as the original figures, not a percentage. No multiplication by 100 is applied.",
+    "source_experience_id": "E026",
+    "gold_program": "add(107.2, 179.1), divide(#0, const_2)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Average annual closure via sum and division",
+    "problem_pattern": "This reasoning applies when calculating an average annual value over a multi-year period, where the total change is the sum of yearly changes and the average is obtained by dividing the total by the number of years.",
+    "reasoning_steps": "Step 1: Sum the yearly changes (e.g., closures) over the given period to obtain the total change.\nStep 2: Divide the total change by the number of years in the period to obtain the average annual change.",
+    "operand_roles": "- numerator: the total sum of yearly changes\n- denominator: the number of years in the period",
+    "units_convention": "The result is a decimal ratio representing the average annual change per year, not a percentage. No scaling factor is applied.",
+    "source_experience_id": "E027",
+    "gold_program": "add(17, 4), divide(#0, const_2)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Add two components then divide by current assets",
+    "problem_pattern": "When acquisition-related costs are split across multiple line items within SG&A, and the question asks for their combined size relative to current assets as a decimal ratio.",
+    "reasoning_steps": "Step 1: Identify the two acquisition-related cost components within SG&A and sum them to get the total acquisition-related costs.\nStep 2: Divide the total acquisition-related costs by the current assets figure to obtain the ratio.",
+    "operand_roles": "- numerator: total acquisition-related costs (sum of two components)\n- denominator: current assets",
+    "units_convention": "The result is a decimal ratio (not multiplied by 100), representing the proportion of current assets covered by acquisition-related costs.",
+    "source_experience_id": "E028",
+    "gold_program": "add(0.6, 4.1), divide(#0, 22.7)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Combine regional counts then divide by total",
+    "problem_pattern": "When a question asks for the proportion of a subset (e.g., 'rest of the world') relative to a total, and the subset's value must be derived by summing two or more given components.",
+    "reasoning_steps": "Step 1: Identify the components that make up the subset of interest and add them together to obtain the subset's total value.\nStep 2: Divide the subset's total value by the overall total (the denominator) to obtain the decimal ratio representing the portion.",
+    "operand_roles": "- numerator: the sum of the components belonging to the subset of interest\n- denominator: the overall total number of facilities",
+    "units_convention": "The result is a dimensionless decimal ratio (between 0 and 1), not a percentage. No multiplication by 100 is performed.",
+    "source_experience_id": "E029",
+    "gold_program": "add(27, 2), divide(#0, 84)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Average of two component useful lives",
+    "problem_pattern": "When a weighted average useful life is needed for two asset categories, and the weights are equal or the problem asks for a simple average of the two given useful lives.",
+    "reasoning_steps": "Step 1: Identify the useful life values for the two asset categories.\nStep 2: Add the two useful life values together.\nStep 3: Divide the sum by the number of categories (2) to obtain the average useful life.",
+    "operand_roles": "- numerator: the sum of the two useful life values\n- denominator: the count of categories (2)",
+    "units_convention": "The result is expressed in years as a decimal ratio, not as a percentage.",
+    "source_experience_id": "E030",
+    "gold_program": "add(5, 10), divide(#0, const_2)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Single multiplication for total repurchase cost",
+    "problem_pattern": "When the total spent on share repurchases is needed and the data provides the number of shares repurchased and the average repurchase price per share. The total is the product of these two quantities.",
+    "reasoning_steps": "Step 1: Identify the quantity representing the number of shares repurchased during the period.\nStep 2: Identify the average price per share for those repurchases.\nStep 3: Multiply the number of shares by the average price per share to obtain the total repurchase expenditure.",
+    "operand_roles": "- First operand: number of shares repurchased (a count of shares)\n- Second operand: average repurchase price per share (a monetary value per share)",
+    "units_convention": "The result is in the same currency unit as the price per share. No percentage conversion is applied; the price is used as a decimal ratio (e.g., dollars per share).",
+    "source_experience_id": "E031",
+    "gold_program": "multiply(33035204, 100.24)",
+    "gold_structure": {
+      "operations": [
+        "multiply"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Single multiplication for fair value calculation",
+    "problem_pattern": "This reasoning applies when the total fair value at the beginning of the year is computed by multiplying a per-unit fair value by the number of units granted. It is a direct product of two quantities without any additional adjustments.",
+    "reasoning_steps": "Step 1: Identify the per-unit fair value at the beginning of the year.\nStep 2: Identify the number of units granted.\nStep 3: Multiply the per-unit fair value by the number of units to obtain the total fair value in dollars.",
+    "operand_roles": "- role1: per-unit fair value (in dollars per unit)\n- role2: number of units granted (unit count)",
+    "units_convention": "The result is in dollars, obtained as the product of dollars per unit and unit count. No percentage conversion or scaling by 100 is applied; the per-unit value is used as a decimal ratio.",
+    "source_experience_id": "E032",
+    "gold_program": "multiply(50.33, 4999)",
+    "gold_structure": {
+      "operations": [
+        "multiply"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Stock split share count scaling",
+    "problem_pattern": "Applies when determining the number of shares outstanding after a stock split, given the pre-split share count and the split ratio. The reasoning involves multiplying the original share count by the split factor.",
+    "reasoning_steps": "Step 1: Identify the number of shares outstanding before the split.\nStep 2: Multiply the pre-split share count by the split ratio (e.g., 2-for-1 means multiply by 2).\nStep 3: The result is the post-split share count.",
+    "operand_roles": "- pre-split share count: the number of shares before the split\n- split ratio: the factor by which shares are multiplied (e.g., 2 for a 2-for-1 split)",
+    "units_convention": "Share counts are expressed in millions; the result should be in the same unit as the input (millions).",
+    "source_experience_id": "E033",
+    "gold_program": "multiply(100, const_2)",
+    "gold_structure": {
+      "operations": [
+        "multiply"
+      ],
+      "n_operations": 1,
+      "has_scale_100": true,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Single multiplication for total issuance value",
+    "problem_pattern": "This reasoning applies when calculating the total dollar amount of newly issued stock options by multiplying the number of shares issued by the per-share value (e.g., exercise price or fair value). It is used when the problem provides both quantities and asks for the product.",
+    "reasoning_steps": "Step 1: Identify the total number of shares newly issued to employees.\nStep 2: Identify the per-share dollar value associated with those shares.\nStep 3: Multiply the number of shares by the per-share value to obtain the total dollar amount.",
+    "operand_roles": "- First operand: the total number of shares issued (a count).\n- Second operand: the dollar value per share (a price or value).",
+    "units_convention": "The result is in dollars, representing the product of a share count and a dollar-per-share value. No percentage conversion or scaling by 100 is applied; the per-share value is used as a decimal ratio.",
+    "source_experience_id": "E034",
+    "gold_program": "multiply(13394736, 11.38)",
+    "gold_structure": {
+      "operations": [
+        "multiply"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Par value times authorized shares",
+    "problem_pattern": "When the total par value of all authorized shares is needed, and the par value per share and the number of authorized shares are given.",
+    "reasoning_steps": "Step 1: Identify the par value per share.\nStep 2: Identify the total number of authorized shares.\nStep 3: Multiply the par value per share by the total number of authorized shares to get the total par value.",
+    "operand_roles": "- par value per share: the nominal value assigned to each share\n- total authorized shares: the maximum number of shares the company can issue",
+    "units_convention": "The result is in the same currency unit as the par value per share, and is a decimal number (not a percentage).",
+    "source_experience_id": "E035",
+    "gold_program": "multiply(525000000, 0.25)",
+    "gold_structure": {
+      "operations": [
+        "multiply"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Direct multiplication of two factors",
+    "problem_pattern": "This reasoning applies when a fair value amount is computed as the product of two given quantities, such as a unit value and a count or a rate and a base amount. The result is a single numeric value without additional adjustments.",
+    "reasoning_steps": "Step 1: Identify the two quantities that need to be multiplied to obtain the fair value.\nStep 2: Multiply the first quantity by the second quantity directly.\nStep 3: The product is the final fair value amount.",
+    "operand_roles": "- first factor: The quantity that serves as the multiplier (e.g., a unit value or rate).\n- second factor: The quantity that serves as the multiplicand (e.g., a count or base amount).",
+    "units_convention": "The result is expressed in the same unit as the product of the two factors, typically a monetary amount. No percentage conversion or scaling by 100 is applied; the multiplication yields a decimal ratio or direct value.",
+    "source_experience_id": "E036",
+    "gold_program": "multiply(168, 338)",
+    "gold_structure": {
+      "operations": [
+        "multiply"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sequential addition of annual amortization deductions",
+    "problem_pattern": "This reasoning applies when calculating the total amount deductible over a multi-year period by summing the amortization amounts for each year. The amounts are given as decimal ratios (not percentages) and are added directly.",
+    "reasoning_steps": "Step 1: Identify the amortization amount for the first year in the period.\nStep 2: Identify the amortization amount for the second year in the period.\nStep 3: Add the two amounts together to get the total deductible amount over the period.",
+    "operand_roles": "- first addend: amortization amount for the first year\n- second addend: amortization amount for the second year",
+    "units_convention": "The amounts are expressed as decimal ratios (e.g., in millions or as plain numbers) and are summed directly without any scaling or conversion to percentages.",
+    "source_experience_id": "E037",
+    "gold_program": "add(34.7, 36.7), add(32.3, #0)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Summing three yearly values",
+    "problem_pattern": "When the question asks for a total over multiple years, and the relevant values are provided in a table or text, the solution is to add the values for each year together.",
+    "reasoning_steps": "Step 1: Identify the value for the first year (e.g., 2016) from the given data.\nStep 2: Identify the value for the second year (e.g., 2015) and add it to the first year's value.\nStep 3: Identify the value for the third year (e.g., 2014) and add it to the running total from Step 2.",
+    "operand_roles": "- first addend: value for the first year\n- second addend: value for the second year\n- third addend: value for the third year (added to the sum of the first two)",
+    "units_convention": "All values are in the same unit (millions). The final result is a sum in that unit, not a ratio or percentage.",
+    "source_experience_id": "E038",
+    "gold_program": "add(244, 249), add(#0, 309)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sequential net change aggregation",
+    "problem_pattern": "This reasoning applies when determining the net change in a financial metric over a period by sequentially combining multiple adjustment components. The first operation combines two initial components, and the second operation incorporates an additional component to yield the final net change.",
+    "reasoning_steps": "Step 1: Identify the first two components that contribute to the net change (e.g., a positive inflow and a negative outflow) and add them together to get an intermediate result.\nStep 2: Add the intermediate result to the next component (which may be negative) to obtain the final net change for the period.",
+    "operand_roles": "- First operand: The first component of the net change (e.g., a cash inflow).\n- Second operand: The second component of the net change (e.g., a cash outflow).\n- Third operand (used in second operation): The additional component to incorporate (e.g., another outflow).",
+    "units_convention": "The result is expressed in the same monetary units as the inputs, as a decimal number (not a percentage). No scaling or conversion is applied.",
+    "source_experience_id": "E039",
+    "gold_program": "add(1762, -578), add(#0, -4363)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sum of two-period increases",
+    "problem_pattern": "When the question asks for the total balance increase over two periods, and the provided data gives the increase for each period separately, the total is found by adding the two period increases.",
+    "reasoning_steps": "Step 1: Identify the increase for the first period.\nStep 2: Identify the increase for the second period.\nStep 3: Add the two increases together to get the total increase.",
+    "operand_roles": "- first addend: the increase from the first period\n- second addend: the increase from the second period",
+    "units_convention": "The result is a decimal ratio or proportion, not a percentage. No multiplication by 100 is performed.",
+    "source_experience_id": "E040",
+    "gold_program": "add(12.1, 27.4), add(15.8, 21.9)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sequential addition of lease components",
+    "problem_pattern": "This reasoning applies when a total quantity is composed of multiple additive parts, and the problem asks for the combined total. The parts are provided separately and must be summed in a specific order.",
+    "reasoning_steps": "Step 1: Identify the first component of the total and add it to the second component.\nStep 2: Take the result from Step 1 and add the third component to obtain the final total.",
+    "operand_roles": "- First addend: the initial component of the total\n- Second addend: the next component to be combined\n- Third addend: the final component added to the intermediate sum",
+    "units_convention": "All quantities are in the same unit (e.g., square feet) and are summed directly without any scaling or conversion. The result is a plain numeric total in the same unit.",
+    "source_experience_id": "E041",
+    "gold_program": "add(514000, 81000), add(#0, 69000)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sequential net change aggregation",
+    "problem_pattern": "When a net change is computed by applying a series of adjustments (e.g., additions or subtractions) to an initial value, and the final result is expressed in the same unit as the inputs (e.g., thousands).",
+    "reasoning_steps": "Step 1: Start with the initial value (the first operand).\nStep 2: Apply the first adjustment (add or subtract) to the initial value.\nStep 3: Apply the second adjustment to the result of the first step.\nStep 4: The final result is the net change, expressed in the same unit as the inputs.",
+    "operand_roles": "- initial value: the starting quantity before any adjustments\n- first adjustment: the first change (positive or negative) applied to the initial value\n- second adjustment: the second change applied to the result of the first adjustment",
+    "units_convention": "The result is expressed in the same unit as the inputs (e.g., thousands). No scaling or percentage conversion is applied.",
+    "source_experience_id": "E042",
+    "gold_program": "add(420, -79), add(#0, -114)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Percentage conversion then division for amortization years",
+    "problem_pattern": "This reasoning applies when determining the number of years to fully amortize a goodwill balance given an annual amortization amount expressed as a percentage of the balance. The annual amortization percentage must be converted to a dollar amount before dividing the balance by that amount.",
+    "reasoning_steps": "Step 1: Convert the annual amortization percentage to a dollar amount by multiplying the goodwill balance by the percentage (expressed as a decimal, i.e., divide by 100).\nStep 2: Divide the goodwill balance by the annual amortization dollar amount to find the number of years to fully amortize.",
+    "operand_roles": "- goodwill balance: the numerator in the final division, representing the total amount to be amortized.\n- annual amortization percentage: the percentage rate that, when multiplied by the balance, yields the annual amortization dollar amount.\n- 100: the scaling factor used to convert the percentage to a decimal.",
+    "units_convention": "The goodwill balance is in monetary units (e.g., dollars). The annual amortization percentage is dimensionless but converted to a monetary amount by multiplying by the balance and dividing by 100. The final result is in years.",
+    "source_experience_id": "E043",
+    "gold_program": "multiply(3.2, const_1000), divide(#0, 62)",
+    "gold_structure": {
+      "operations": [
+        "multiply",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": true,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Proportional scaling with division",
+    "problem_pattern": "This reasoning applies when a base quantity needs to be adjusted by a proportional factor, and the result is expressed as a decimal ratio rather than a percentage. It is used in financial contexts where a fraction of a total is computed.",
+    "reasoning_steps": "Step 1: Identify the base quantity (the total amount) and the proportional factor (the ratio).\nStep 2: Multiply the base quantity by the proportional factor to obtain the adjusted amount.\nStep 3: Divide the adjusted amount by a scaling constant (e.g., to convert units or to express per unit) to get the final result.",
+    "operand_roles": "- base quantity: the total amount to be scaled\n- proportional factor: the ratio (decimal) to apply\n- scaling constant: the divisor used to adjust units or magnitude",
+    "units_convention": "The result is a decimal ratio, not a percentage. No multiplication by 100 is performed. Units are consistent with the base quantity and the scaling constant.",
+    "source_experience_id": "E044",
+    "gold_program": "multiply(0.10, const_4), divide(487, #0)",
+    "gold_structure": {
+      "operations": [
+        "multiply",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Net margin calculation with percentage conversion",
+    "problem_pattern": "This reasoning applies when computing a financial ratio such as net margin, where a monetary amount is divided by a total revenue or similar base, and the result is expressed as a percentage. The calculation involves scaling the ratio by 100 to convert from a decimal to a percentage.",
+    "reasoning_steps": "Step 1: Multiply the numerator (the monetary amount representing the profit or net income) by 100 to prepare for percentage conversion.\nStep 2: Divide the result from Step 1 by the denominator (the total revenue or base amount) to obtain the net margin as a percentage.",
+    "operand_roles": "- numerator: the monetary amount representing the profit or net income (e.g., net income)\n- denominator: the total revenue or base amount against which the ratio is computed",
+    "units_convention": "The numerator and denominator are in the same monetary units (e.g., dollars, thousands). The final result is expressed as a percentage (%). The multiplication by 100 converts the decimal ratio to a percentage.",
+    "source_experience_id": "E045",
+    "gold_program": "multiply(259.1, const_1000), divide(#0, 2458777)",
+    "gold_structure": {
+      "operations": [
+        "multiply",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": true,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Percentage conversion and unit scaling",
+    "problem_pattern": "When a quantity is given in a certain unit (e.g., shares) and a per-unit value is given as a percentage, the total value is computed by multiplying the quantity by the percentage (converted to a decimal by dividing by 100) and then converting the result to the desired unit (e.g., millions) by dividing by the appropriate scale factor.",
+    "reasoning_steps": "Step 1: Multiply the number of units by the per-unit percentage value to get the total value in the original unit.\nStep 2: Convert the percentage to a decimal by dividing by 100 (this is implicit in the multiplication step).\nStep 3: Divide the total value by the scale factor to express the result in the desired unit (e.g., millions).",
+    "operand_roles": "- first operand: quantity of units (e.g., number of shares)\n- second operand: per-unit percentage value (as a percentage, not decimal)\n- divisor: scale factor for unit conversion (e.g., 1,000,000 for millions)",
+    "units_convention": "The final answer is expressed in millions, so after computing the raw total, divide by 1,000,000. The percentage is handled by multiplying by the percentage number and then dividing by 100, which is part of the multiplication step.",
+    "source_experience_id": "E046",
+    "gold_program": "multiply(2200000, 2.2), divide(#0, const_1000000)",
+    "gold_structure": {
+      "operations": [
+        "multiply",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": true,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Interest payment from rate and principal",
+    "problem_pattern": "When calculating the interest payment on a note or bond given an annual interest rate and a principal amount, where the rate is expressed as a decimal ratio and the payment is the product of principal and rate, then divided by a constant to adjust for the payment period.",
+    "reasoning_steps": "Step 1: Multiply the principal amount by the annual interest rate (expressed as a decimal ratio) to obtain the annual interest amount.\nStep 2: Divide the annual interest amount by a constant (representing the number of payment periods per year) to get the interest payment for the specific period.",
+    "operand_roles": "- principal: the face value or amount on which interest is calculated\n- rate: the annual interest rate as a decimal ratio (not a percentage)\n- constant: the number of payment periods per year (e.g., 2 for semiannual)",
+    "units_convention": "The interest rate is used as a decimal ratio (e.g., 0.03 for 3%). The result is in the same currency units as the principal, not multiplied by 100. No percentage conversion is applied.",
+    "source_experience_id": "E047",
+    "gold_program": "multiply(375, 3.0%), divide(#0, const_2)",
+    "gold_structure": {
+      "operations": [
+        "multiply",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Grant value calculation with unit conversion",
+    "problem_pattern": "This reasoning applies when calculating the total monetary value of granted options or similar financial instruments by multiplying quantity by per-unit price, then converting the result to a different unit scale (e.g., from raw units to millions).",
+    "reasoning_steps": "Step 1: Multiply the total number of granted options (the quantity) by the per-option value (the unit price) to obtain the raw total value in the original currency unit.\nStep 2: Divide the raw total value by the appropriate scaling factor (e.g., 1,000,000 for millions) to express the result in the desired unit scale (e.g., millions of currency units).",
+    "operand_roles": "- quantity: The number of granted options (the first factor in multiplication).\n- unit price: The value per single option (the second factor in multiplication).\n- scaling factor: The divisor used to convert the raw total into the target unit (e.g., 1,000,000 for millions).",
+    "units_convention": "The raw multiplication yields a value in the original currency unit (e.g., dollars). To report in millions, divide by 1,000,000. No percentage conversion is applied in this pattern.",
+    "source_experience_id": "E048",
+    "gold_program": "multiply(2621050, 27.24), divide(#0, const_1000000)",
+    "gold_structure": {
+      "operations": [
+        "multiply",
+        "divide"
+      ],
+      "n_operations": 2,
+      "has_scale_100": true,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Comparing two final values with greater operation",
+    "problem_pattern": "This reasoning applies when determining whether one entity's performance or value exceeds another over a specified period, using a direct comparison of their final numerical outcomes.",
+    "reasoning_steps": "Step 1: Identify the two final values to compare, one for each entity in question.\nStep 2: Use the greater operation to check if the first value is larger than the second.\nStep 3: Conclude 'yes' if the first value is greater, otherwise 'no'.",
+    "operand_roles": "- first operand: the value representing the entity whose performance is being questioned (e.g., the specific stock's final value)\n- second operand: the value representing the benchmark or comparison index (e.g., the market index's final value)",
+    "units_convention": "Values are used as raw decimal numbers without any scaling or conversion to percentages. The comparison is based on the direct ratio of the two values, not on percentage change.",
+    "source_experience_id": "E049",
+    "gold_program": "greater(693.60, 204.38)",
+    "gold_structure": {
+      "operations": [
+        "greater"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Direct comparison of two acquisition values",
+    "problem_pattern": "When comparing two numerical values to determine if one is greater than the other, without any additional operations or transformations.",
+    "reasoning_steps": "Step 1: Identify the two values to be compared, labeling the first as the numerator and the second as the denominator.\nStep 2: Perform a direct comparison of the two values.\nStep 3: Determine if the first value is greater than the second, and report the result as a boolean (yes/no).",
+    "operand_roles": "- first value: the value to be tested as greater\n- second value: the value to be compared against",
+    "units_convention": "Values are used as given, without scaling or conversion. The comparison is based on the raw numerical values.",
+    "source_experience_id": "E050",
+    "gold_program": "greater(1137.4, 1030.7)",
+    "gold_structure": {
+      "operations": [
+        "greater"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Direct comparison of two financial metrics",
+    "problem_pattern": "This reasoning applies when the question asks whether one financial metric (e.g., advertising costs) is greater than another (e.g., R&D expenses) for a given period. The answer is determined by comparing the two values directly.",
+    "reasoning_steps": "Step 1: Identify the two financial metrics to be compared.\nStep 2: Compare the first metric to the second metric using the greater-than operation.\nStep 3: Determine the answer based on the result of the comparison (yes if the first is greater, no otherwise).",
+    "operand_roles": "- first_metric: The metric mentioned first in the question (e.g., advertising costs).\n- second_metric: The metric mentioned second in the question (e.g., R&D expenses).",
+    "units_convention": "Both metrics are in the same monetary units (e.g., dollars). No scaling or conversion is applied; the comparison is performed on the raw values.",
+    "source_experience_id": "E051",
+    "gold_program": "greater(280, 464)",
+    "gold_structure": {
+      "operations": [
+        "greater"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Comparing two segment growth values",
+    "problem_pattern": "When comparing two growth metrics (e.g., revenue increases) from different segments to determine which is larger.",
+    "reasoning_steps": "Step 1: Identify the two growth values to compare.\nStep 2: Compare the first value to the second value using a greater-than check.\nStep 3: Conclude whether the first value is greater than the second.",
+    "operand_roles": "- first value: the growth metric of the first segment (e.g., Caribbean)\n- second value: the growth metric of the second segment (e.g., South American)",
+    "units_convention": "Values are used as given (e.g., in millions or as decimal ratios). No percentage conversion is applied; the comparison is on the raw numeric values.",
+    "source_experience_id": "E052",
+    "gold_program": "greater(296, 89)",
+    "gold_structure": {
+      "operations": [
+        "greater"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Direct comparison of two decimal ratios",
+    "problem_pattern": "This reasoning applies when comparing two numerical values extracted from financial statements or reports to determine if one is greater than the other. The values are typically ratios or rates expressed as decimals, not percentages.",
+    "reasoning_steps": "Step 1: Identify the two values to be compared from the given context.\nStep 2: Compare the first value to the second value using the greater-than relation.\nStep 3: Conclude 'yes' if the first value is larger, otherwise 'no'.",
+    "operand_roles": "- first value: the value from the earlier period or the primary subject of comparison\n- second value: the value from the later period or the baseline for comparison",
+    "units_convention": "Values are treated as decimal ratios or proportions, not multiplied by 100. No percentage conversion is applied.",
+    "source_experience_id": "E053",
+    "gold_program": "greater(2.28, 1.24)",
+    "gold_structure": {
+      "operations": [
+        "greater"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Comparing two quarterly financial metrics",
+    "problem_pattern": "This reasoning applies when comparing two values from different time periods (e.g., quarters) to determine if one is higher than the other. The values are directly given or extracted from financial data without further computation.",
+    "reasoning_steps": "Step 1: Identify the two values to compare: one from the first quarter and one from the fourth quarter of the same fiscal year.\nStep 2: Compare the two values directly using the greater-than operation.\nStep 3: Conclude 'yes' if the first value is greater than the second, otherwise 'no'.",
+    "operand_roles": "- first operand: the value from the earlier quarter (e.g., first quarter)\n- second operand: the value from the later quarter (e.g., fourth quarter)",
+    "units_convention": "Values are used as reported in the financial data, without any scaling or conversion. The comparison is based on the raw decimal or integer values.",
+    "source_experience_id": "E054",
+    "gold_program": "greater(93.53, 84.30)",
+    "gold_structure": {
+      "operations": [
+        "greater"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sum three components then divide by three",
+    "problem_pattern": "This reasoning applies when the average of a set of values is needed, where the values are obtained by summing multiple line items from a financial table over a period. The pattern is to first aggregate the relevant components, then compute the arithmetic mean.",
+    "reasoning_steps": "Step 1: Identify the first component value for the first year and add it to the second component value for the same year.\nStep 2: Add the result from Step 1 to the third component value for the same year, yielding the total for that year.\nStep 3: Divide the total by the number of years (or components) to obtain the average value.",
+    "operand_roles": "- first addend: the first component value (e.g., a subcategory of shares vested)\n- second addend: the second component value (e.g., another subcategory)\n- third addend: the third component value (e.g., a third subcategory)\n- divisor: the count of years or components (here, 3)",
+    "units_convention": "The result is a decimal ratio in the same units as the inputs (e.g., millions). No percentage conversion is applied; the average is expressed as a plain decimal number.",
+    "source_experience_id": "E055",
+    "gold_program": "add(3.4, 0.6), add(#0, 2.3), divide(#1, const_3)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "divide"
+      ],
+      "n_operations": 3,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Average of three yearly values",
+    "problem_pattern": "When the question asks for the average of three values over consecutive years, and the values are given in the same unit (e.g., millions).",
+    "reasoning_steps": "Step 1: Add the first two yearly values to get their combined total.\nStep 2: Add the third yearly value to the combined total to get the sum of all three years.\nStep 3: Divide the total sum by the number of years (3) to obtain the average.",
+    "operand_roles": "- first addend: value for the first year\n- second addend: value for the second year\n- third addend: value for the third year\n- divisor: number of years (3)",
+    "units_convention": "The result is a decimal ratio in the same unit as the inputs (e.g., millions). No percentage conversion is applied.",
+    "source_experience_id": "E056",
+    "gold_program": "add(135, 137), add(#0, 138), divide(#1, const_3)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "divide"
+      ],
+      "n_operations": 3,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Average of two quarterly share prices",
+    "problem_pattern": "This reasoning applies when the average sales price for a class of shares in a given quarter is needed, and the quarter's price is derived from two sub-period values (e.g., monthly or half-quarter figures). The pattern involves summing the two sub-period values and then dividing by the count of values to obtain the average.",
+    "reasoning_steps": "Step 1: Identify the two sub-period sales prices for the class of shares within the quarter.\nStep 2: Add the two sub-period prices together to get the total combined value.\nStep 3: Divide the total combined value by the number of sub-periods (which is 2) to obtain the average sales price for the quarter.",
+    "operand_roles": "- first sub-period price: the sales price for the first part of the quarter\n- second sub-period price: the sales price for the second part of the quarter\n- divisor: the number of sub-periods (2) used to compute the average",
+    "units_convention": "The result is a decimal ratio representing the average price per share, not a percentage. No scaling factor is applied; the average is expressed in the same monetary units as the original prices.",
+    "source_experience_id": "E057",
+    "gold_program": "add(59.73, 45.20), add(#0, const_2), divide(#1, const_2)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "divide"
+      ],
+      "n_operations": 3,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Aggregate debt components then convert to millions",
+    "problem_pattern": "When a company's long-term debt due within a specific future period is reported in separate line items (e.g., current portion and noncurrent portion) and the total needs to be expressed in millions of dollars, but the original figures are in thousands.",
+    "reasoning_steps": "Step 1: Add the first two debt components to get a subtotal.\nStep 2: Add the third debt component to the subtotal to get the total debt amount in the original unit (thousands).\nStep 3: Divide the total by 1000 to convert the amount from thousands to millions.",
+    "operand_roles": "- first addend: first debt component (e.g., current portion)\n- second addend: second debt component (e.g., noncurrent portion)\n- third addend: third debt component (e.g., other long-term debt)\n- divisor: 1000 (conversion factor from thousands to millions)",
+    "units_convention": "The original financial statement figures are in thousands of dollars. The final answer must be expressed in millions of dollars, so divide the total by 1000. No percentage conversion is needed here; the scaling is purely a unit conversion.",
+    "source_experience_id": "E058",
+    "gold_program": "add(467298, 75896), add(#0, 199539), divide(#1, const_1000)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "divide"
+      ],
+      "n_operations": 3,
+      "has_scale_100": true,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sum three yearly expenses then divide by three",
+    "problem_pattern": "This reasoning applies when calculating the average of three yearly values, where each yearly value is itself the sum of two components. The pattern is to first sum the components for each year, then sum the three yearly totals, and finally divide by the number of years to get the average.",
+    "reasoning_steps": "Step 1: For the first year, add the two component values (e.g., bonus and time-based award) to get the first year's total.\nStep 2: Add the first year's total to the second year's total (which is the sum of its two components) to get the cumulative total for the first two years.\nStep 3: Add the third year's total to the cumulative total, then divide the resulting sum by the number of years (3) to obtain the average annual compensation expense.",
+    "operand_roles": "- first year component 1: numerator component for year 1\n- first year component 2: numerator component for year 1\n- second year total: numerator component for year 2\n- third year total: numerator component for year 3\n- divisor: number of years (3)",
+    "units_convention": "The result is a decimal ratio representing the average annual expense in the same units as the original values (e.g., millions of dollars). No percentage conversion is applied.",
+    "source_experience_id": "E059",
+    "gold_program": "add(27.3, 12.6), add(#0, 8.5), divide(#1, const_3)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "divide"
+      ],
+      "n_operations": 3,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Average of summed yearly expenses over three years",
+    "problem_pattern": "This reasoning applies when calculating the average of a financial metric over a three-year period, where the metric values are given for each year and need to be summed then divided by the number of years.",
+    "reasoning_steps": "Step 1: Add the first two yearly expense values to get their combined total.\nStep 2: Add the third yearly expense value to the combined total from Step 1 to get the sum over all three years.\nStep 3: Divide the total sum by the number of years (3) to obtain the average annual expense.",
+    "operand_roles": "- first yearly expense: the first value to be summed\n- second yearly expense: the second value to be summed\n- third yearly expense: the value added to the sum of the first two\n- divisor: the number of years (3) used to compute the average",
+    "units_convention": "The result is a decimal ratio representing the average annual expense in the same units as the input values (e.g., dollars, millions). No percentage conversion is applied.",
+    "source_experience_id": "E060",
+    "gold_program": "add(44, 44), add(#0, 48), divide(#1, const_3)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "divide"
+      ],
+      "n_operations": 3,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Average of beginning balances over years",
+    "problem_pattern": "This reasoning applies when the question asks for the average of a financial metric (e.g., beginning balance) over a set of consecutive years, and the data is provided in a table with rows for each year.",
+    "reasoning_steps": "Step 1: Identify the column corresponding to the metric of interest (e.g., beginning balance) in the table.\nStep 2: Extract the values for the specified years (e.g., 2017, 2016, 2015).\nStep 3: Sum the extracted values.\nStep 4: Divide the sum by the number of years to obtain the average.",
+    "operand_roles": "- numerator: sum of the metric values across the specified years\n- denominator: count of years considered",
+    "units_convention": "The result is a decimal ratio (average) in the same units as the original data (e.g., millions). No percentage conversion or scaling factor is applied.",
+    "source_experience_id": "E063",
+    "gold_program": "table_average(beginning balance, none)",
+    "gold_structure": {
+      "operations": [
+        "table_average"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": true,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Average of a single column",
+    "problem_pattern": "When the question asks for the average value of a specific financial metric (e.g., ending balance) across multiple periods, and the gold program computes the arithmetic mean of that column.",
+    "reasoning_steps": "Step 1: Identify the column corresponding to the metric mentioned in the question (e.g., ending balance).\nStep 2: Compute the arithmetic mean (average) of all values in that column by summing the values and dividing by the count of entries.",
+    "operand_roles": "- column: The financial metric whose average is requested (e.g., ending balance).\n- none: No additional grouping or filtering is applied; the average is over all rows in the column.",
+    "units_convention": "The result is expressed in the same units as the original data (e.g., millions) and is a decimal ratio, not a percentage. No scaling factor is applied.",
+    "source_experience_id": "E064",
+    "gold_program": "table_average(ending balance, none)",
+    "gold_structure": {
+      "operations": [
+        "table_average"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": true,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Average of a single financial metric",
+    "problem_pattern": "This reasoning applies when the question asks for the average value of a specific financial metric (e.g., interest expense net) across a set of records or time periods, and the answer is the simple arithmetic mean of that metric's values.",
+    "reasoning_steps": "Step 1: Identify the target financial metric from the question.\nStep 2: Locate all values for that metric in the provided data table.\nStep 3: Sum all the located values.\nStep 4: Divide the sum by the count of values to obtain the average.\nStep 5: Report the result as the final answer, preserving the sign and decimal precision.",
+    "operand_roles": "- numerator: The sum of all values of the target metric.\n- denominator: The number of values (count) used in the sum.",
+    "units_convention": "The result is expressed in the same units as the original metric (e.g., millions of dollars). It is a decimal ratio, not a percentage, so no scaling factor is applied.",
+    "source_experience_id": "E065",
+    "gold_program": "table_average(interest expense net, none)",
+    "gold_structure": {
+      "operations": [
+        "table_average"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": true,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Average of a table column",
+    "problem_pattern": "When the question asks for the average value of a numeric column in a table, and the gold program specifies a single table_average operation over that column.",
+    "reasoning_steps": "Step 1: Identify the target column from the question (e.g., 'ending balance').\nStep 2: Retrieve all numeric values in that column from the table.\nStep 3: Compute the arithmetic mean by summing the values and dividing by the count of values.",
+    "operand_roles": "- column: The numeric column whose average is to be computed (e.g., 'ending balance').\n- none: No additional operands are used; the operation applies directly to the column.",
+    "units_convention": "The result is a decimal ratio (not a percentage). No multiplication by 100 is applied. The unit is the same as the column's unit (e.g., millions), but the average is expressed as a plain decimal number.",
+    "source_experience_id": "E066",
+    "gold_program": "table_average(ending balance, none)",
+    "gold_structure": {
+      "operations": [
+        "table_average"
+      ],
+      "n_operations": 1,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": true,
+      "is_single_step": true,
+      "is_multi_step": false
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Ratio change from division and subtraction",
+    "problem_pattern": "This reasoning applies when calculating the proportional change between two values over time, where the result is expressed as a decimal ratio rather than a percentage. It is used when the final answer should be a fraction of the original value, not multiplied by 100.",
+    "reasoning_steps": "Step 1: Divide the later value by the earlier value to obtain the ratio of the later to the earlier.\nStep 2: Subtract 1 from this ratio to find the proportional increase (or decrease) as a decimal.",
+    "operand_roles": "- numerator: the later value (e.g., the value at the end of the period)\n- denominator: the earlier value (e.g., the value at the start of the period)\n- constant 1: represents the baseline ratio (the original value divided by itself)",
+    "units_convention": "The result is a dimensionless decimal ratio. It is not converted to a percentage; it remains as a fraction (e.g., 0.06 means a 6% increase if expressed as a percentage, but here it is left as a decimal).",
+    "source_experience_id": "E067",
+    "gold_program": "divide(104.10, 98.18), subtract(#0, const_1)",
+    "gold_structure": {
+      "operations": [
+        "divide",
+        "subtract"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Ratio increase from two-period capital expenditures",
+    "problem_pattern": "This reasoning applies when comparing a financial metric across two periods to find the proportional increase, expressed as a decimal ratio rather than a percentage. The metric is typically reported in absolute values for each period, and the increase is calculated relative to the earlier period.",
+    "reasoning_steps": "Step 1: Identify the value of the metric for the later period and the value for the earlier period.\nStep 2: Divide the later-period value by the earlier-period value to obtain a ratio.\nStep 3: Subtract 1 from this ratio to isolate the proportional increase (or decrease) relative to the earlier period.",
+    "operand_roles": "- numerator: the value of the metric in the later period\n- denominator: the value of the metric in the earlier period\n- constant_1: represents the baseline ratio (the earlier period itself) to convert the ratio into an increase",
+    "units_convention": "The result is a unitless decimal ratio, not a percentage. No multiplication by 100 is performed. The final value represents the fractional increase over the base period.",
+    "source_experience_id": "E068",
+    "gold_program": "divide(240, 183), subtract(#0, const_1)",
+    "gold_structure": {
+      "operations": [
+        "divide",
+        "subtract"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Ratio of two values after subtracting one",
+    "problem_pattern": "This reasoning applies when comparing two related quantities over time or between categories, where the first step is to find the difference between the two quantities, and the second step is to express that difference as a ratio relative to one of the quantities (the denominator). The result is a decimal ratio, not a percentage.",
+    "reasoning_steps": "Step 1: Identify the two values that need to be compared (e.g., expenditures in two different years).\nStep 2: Subtract the smaller value (or the earlier value) from the larger value (or the later value) to find the absolute difference.\nStep 3: Divide the difference by the value that serves as the base (the denominator, typically the earlier or smaller value) to obtain the relative increase as a decimal ratio.",
+    "operand_roles": "- numerator: the difference between the two values (result of subtraction)\n- denominator: the base value (the value from which the difference is measured, often the earlier or smaller value)",
+    "units_convention": "The result is a dimensionless ratio (e.g., 0.02114) representing the proportional increase. It is not multiplied by 100, so it is not expressed as a percentage. Units of the original quantities cancel out in the division.",
+    "source_experience_id": "E070",
+    "gold_program": "divide(48.3, 47.3), subtract(#0, const_1)",
+    "gold_structure": {
+      "operations": [
+        "divide",
+        "subtract"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Growth ratio via division then subtract one",
+    "problem_pattern": "When comparing a later value to an earlier value to find the growth observed over a period, and the result is expressed as a decimal ratio (not a percentage). The reasoning involves dividing the later value by the earlier value, then subtracting one to isolate the growth portion.",
+    "reasoning_steps": "Step 1: Identify the later value (the value at the end of the period) and the earlier value (the value at the start of the period).\nStep 2: Divide the later value by the earlier value to obtain the ratio of the later value to the earlier value.\nStep 3: Subtract one from that ratio to remove the base (the original value) and obtain the growth as a decimal ratio.",
+    "operand_roles": "- numerator: the later value (value at the end of the period)\n- denominator: the earlier value (value at the start of the period)\n- subtrahend: the constant 1 (representing the base value)",
+    "units_convention": "The result is a dimensionless decimal ratio (e.g., 0.27) representing the proportional growth. It is not multiplied by 100 and is not expressed as a percentage.",
+    "source_experience_id": "E071",
+    "gold_program": "divide(1061, 836), subtract(#0, const_1)",
+    "gold_structure": {
+      "operations": [
+        "divide",
+        "subtract"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Ratio change from baseline",
+    "problem_pattern": "This reasoning applies when comparing a later value to an earlier baseline to find the proportional increase, expressed as a decimal ratio rather than a percentage.",
+    "reasoning_steps": "Step 1: Divide the later value by the earlier baseline value to obtain a ratio.\nStep 2: Subtract 1 from that ratio to isolate the increase relative to the baseline.",
+    "operand_roles": "- numerator: the later value (the value after the change)\n- denominator: the earlier baseline value (the value before the change)\n- constant 1: represents the baseline ratio (i.e., the value before any increase)",
+    "units_convention": "The result is a dimensionless decimal ratio. No percentage conversion is applied; the increase is expressed as a fraction of the baseline.",
+    "source_experience_id": "E072",
+    "gold_program": "divide(25513, 21548), subtract(#0, const_1)",
+    "gold_structure": {
+      "operations": [
+        "divide",
+        "subtract"
+      ],
+      "n_operations": 2,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Percentage decrease in cash conversion cycle",
+    "problem_pattern": "This reasoning applies when comparing two values of a financial metric (like cash conversion cycle) at two points in time to find the percentage decrease from the earlier to the later period.",
+    "reasoning_steps": "Step 1: Subtract the later value from the earlier value to find the absolute decrease.\nStep 2: Divide the absolute decrease by the earlier value to get the relative decrease.\nStep 3: Multiply the relative decrease by 100 to convert it to a percentage.",
+    "operand_roles": "- earlier value: the metric's value at the start of the period (denominator in the relative decrease)\n- later value: the metric's value at the end of the period (subtracted from the earlier value)\n- absolute decrease: the result of subtraction (numerator in the relative decrease)\n- relative decrease: the result of division (multiplied by 100 to get percentage)",
+    "units_convention": "The metric is measured in days (or any unit), but the final result is expressed as a percentage, so the units cancel out during division. The multiplication by 100 is for percentage conversion.",
+    "source_experience_id": "E073",
+    "gold_program": "subtract(23, 21), divide(#0, 21), multiply(#1, const_100)",
+    "gold_structure": {
+      "operations": [
+        "subtract",
+        "divide",
+        "multiply"
+      ],
+      "n_operations": 3,
+      "has_scale_100": true,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Index price change percentage return calculation",
+    "problem_pattern": "When calculating total return from an index price change over a period, given initial investment and index values at two dates. The return is expressed as a percentage of the initial investment.",
+    "reasoning_steps": "Step 1: Subtract the initial index value from the final index value to get the absolute price change.\nStep 2: Divide the absolute price change by the initial index value to get the fractional return.\nStep 3: Multiply the fractional return by the initial investment amount to get the total return in currency units.",
+    "operand_roles": "- final index value: the index level at the liquidation date\n- initial index value: the index level at the investment start date\n- initial investment amount: the principal amount invested",
+    "units_convention": "Index values are in points (no currency). The fractional return is unitless. The final total return is in the same currency as the initial investment. The percentage conversion is implicit in the multiplication by 100, but here the multiplication is by the investment amount, not by 100. However, the gold program multiplies by 100 to convert the fractional return to a percentage, then multiplies by the investment amount. In this abstraction, we describe the multiplication by 100 as part of the percentage conversion, but the final multiplication by the investment amount yields the total return in currency.",
+    "source_experience_id": "E074",
+    "gold_program": "subtract(171.40, 100), divide(1000000, 100), multiply(#1, #0)",
+    "gold_structure": {
+      "operations": [
+        "subtract",
+        "divide",
+        "multiply"
+      ],
+      "n_operations": 3,
+      "has_scale_100": true,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Percentage decrease between two yearly reserve values",
+    "problem_pattern": "When comparing a metric (e.g., proved undeveloped reserves) across two consecutive years to find the percentage decrease from the earlier year to the later year.",
+    "reasoning_steps": "Step 1: Subtract the later year's value from the earlier year's value to find the absolute decrease.\nStep 2: Divide the absolute decrease by the earlier year's value to get the fractional decrease.\nStep 3: Multiply the fractional decrease by 100 to convert it into a percentage.",
+    "operand_roles": "- earlier year value: the base (denominator) for the percentage calculation\n- later year value: subtracted from the earlier year value to find the decrease\n- absolute decrease: the numerator in the division step",
+    "units_convention": "The final result is expressed as a percentage (%). The intermediate values are in the original units of the metric (e.g., barrels, cubic feet). The multiplication by 100 is essential to convert the fractional decrease to a percentage.",
+    "source_experience_id": "E075",
+    "gold_program": "subtract(407, 258), divide(#0, 407), multiply(#1, const_100)",
+    "gold_structure": {
+      "operations": [
+        "subtract",
+        "divide",
+        "multiply"
+      ],
+      "n_operations": 3,
+      "has_scale_100": true,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Percentage change in weighted-average diluted shares",
+    "problem_pattern": "This reasoning applies when calculating the percentage change (increase or decrease) of a financial metric between two periods, where the metric is reported in the same units and the result is expressed as a percentage.",
+    "reasoning_steps": "Step 1: Subtract the later period's value from the earlier period's value to find the raw change.\nStep 2: Divide the raw change by the earlier period's value to obtain the relative change.\nStep 3: Multiply the relative change by 100 to convert it into a percentage.",
+    "operand_roles": "- earlier value: the metric value from the first period (used as the base for percentage change)\n- later value: the metric value from the second period (the value being compared)\n- raw change: the difference (later minus earlier) from the subtraction step\n- relative change: the ratio of the raw change to the earlier value\n- percentage conversion factor: 100, used to express the relative change as a percentage",
+    "units_convention": "The metric is expressed in the same units (e.g., millions of shares) for both periods. The final result is a percentage, so no unit is attached to the final answer.",
+    "source_experience_id": "E076",
+    "gold_program": "subtract(95.7, 96.0), divide(#0, 96.0), multiply(#1, const_100)",
+    "gold_structure": {
+      "operations": [
+        "subtract",
+        "divide",
+        "multiply"
+      ],
+      "n_operations": 3,
+      "has_scale_100": true,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Price change percentage applied to investment",
+    "problem_pattern": "When calculating total return on an investment given a price change between two periods, where the price change is expressed as a percentage of the initial price.",
+    "reasoning_steps": "Step 1: Compute the absolute change in price by subtracting the initial price from the final price.\nStep 2: Convert this absolute change into a percentage change by dividing the absolute change by the initial price.\nStep 3: Multiply the percentage change (as a decimal) by the total investment amount to obtain the total return.",
+    "operand_roles": "- final price: the price at the end of the period\n- initial price: the price at the beginning of the period\n- investment amount: the total capital invested",
+    "units_convention": "The percentage change is expressed as a decimal (e.g., 0.5599) after division, then multiplied by the investment amount to yield a monetary return in the same currency as the investment.",
+    "source_experience_id": "E077",
+    "gold_program": "subtract(155.99, const_100), divide(#0, const_100), multiply(#1, 1000000)",
+    "gold_structure": {
+      "operations": [
+        "subtract",
+        "divide",
+        "multiply"
+      ],
+      "n_operations": 3,
+      "has_scale_100": true,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sequential addition of component debt values",
+    "problem_pattern": "This reasoning applies when a total financial figure is composed of multiple additive components, and the problem asks for the sum of these components. The components are provided in a specific order, and the solution involves adding them sequentially.",
+    "reasoning_steps": "Step 1: Identify the first component of the total debt and add it to the second component.\nStep 2: Add the result from Step 1 to the third component.\nStep 3: Add the result from Step 2 to the fourth component to obtain the final total.",
+    "operand_roles": "- First operand: initial debt component\n- Second operand: second debt component\n- Third operand: third debt component\n- Fourth operand: fourth debt component",
+    "units_convention": "The result is expressed in the same unit as the input components (billions of dollars). No scaling or conversion is applied; the final value is a direct sum.",
+    "source_experience_id": "E079",
+    "gold_program": "add(192.3, 20.6), add(#0, 37.4), add(#1, 109.3)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "add"
+      ],
+      "n_operations": 3,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sequential addition of owned site counts",
+    "problem_pattern": "This reasoning applies when a table presents multiple categories of owned sites and the total number of owned sites is required. The solution involves summing the counts from each relevant category in a specified order.",
+    "reasoning_steps": "Step 1: Identify the first category of owned sites and note its count.\nStep 2: Add the count of the second category to the first total.\nStep 3: Add the count of the third category to the running total to obtain the final total.",
+    "operand_roles": "- first addend: count of the first category of owned sites\n- second addend: count of the second category of owned sites\n- third addend: count of the third category of owned sites",
+    "units_convention": "The result is a plain count of sites, expressed as a decimal number without any percentage conversion or scaling factor.",
+    "source_experience_id": "E081",
+    "gold_program": "add(19400, 2500), add(#0, 1100), add(#1, 200)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "add"
+      ],
+      "n_operations": 3,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Summing quarterly values with percentage conversion",
+    "problem_pattern": "This reasoning applies when combining multiple reported values across different periods or categories, where one of the values is expressed as a percentage and needs to be converted to a comparable unit (e.g., millions) by multiplying by 100.",
+    "reasoning_steps": "Step 1: Identify the first reported value (in millions) for the first period.\nStep 2: Add the second reported value (in millions) to the first value.\nStep 3: Add the third reported value, which is given as a percentage, after converting it to the same unit by multiplying by 100 (since percentage points are per 100).",
+    "operand_roles": "- first value: base amount in millions\n- second value: additional amount in millions\n- third value: percentage value that must be scaled by 100 to convert to millions",
+    "units_convention": "All values are in millions. Percentage values are converted to millions by multiplying by 100 (i.e., 1% = 1 unit in millions).",
+    "source_experience_id": "E082",
+    "gold_program": "add(12, 41), add(#0, 100), add(#1, 17)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "add"
+      ],
+      "n_operations": 3,
+      "has_scale_100": true,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sequential addition of fair value impacts",
+    "problem_pattern": "This reasoning applies when multiple financial instruments each have a fair value impact that must be combined into a total. The impacts are provided as decimal ratios and are summed sequentially.",
+    "reasoning_steps": "Step 1: Identify the first instrument's fair value impact and record it as the initial total.\nStep 2: Add the second instrument's fair value impact to the running total.\nStep 3: Add the third instrument's fair value impact to the running total to obtain the final total average fair value impact.",
+    "operand_roles": "- initial impact: the first instrument's fair value impact, serves as the starting total\n- subsequent impacts: each additional instrument's fair value impact, added to the running total",
+    "units_convention": "All impacts are expressed as decimal ratios (not percentages). The final total is also a decimal ratio, representing the combined average fair value impact.",
+    "source_experience_id": "E083",
+    "gold_program": "add(26.5, 22.9), add(#0, 2.5), add(#1, 1.4)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "add"
+      ],
+      "n_operations": 3,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sequential addition of three component balances",
+    "problem_pattern": "This reasoning applies when a total balance is the sum of multiple sub-accounts or components, and the problem asks for the combined value over a period. The components are provided as separate amounts that need to be aggregated.",
+    "reasoning_steps": "Step 1: Identify the first component balance to be included in the total.\nStep 2: Add the second component balance to the first sum.\nStep 3: Add the third component balance to the running total to obtain the final combined balance.",
+    "operand_roles": "- first addend: the initial component balance\n- second addend: the next component balance to be added\n- third addend: the final component balance to be added",
+    "units_convention": "All amounts are in the same unit (thousands). The result is expressed directly in that unit without any scaling or conversion.",
+    "source_experience_id": "E084",
+    "gold_program": "add(33809, 39926), add(#0, 2373), add(#1, 9223)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "add"
+      ],
+      "n_operations": 3,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Aggregate three values then average by dividing",
+    "problem_pattern": "This reasoning applies when the average of a set of values is needed, where one of the values is itself the sum of two components. The pattern involves summing the components to get a total, then adding that total to the other values, and finally dividing by the count of values to obtain the average.",
+    "reasoning_steps": "Step 1: Add the two component values that together form one of the items in the set.\nStep 2: Add the result from Step 1 to the other value(s) in the set to get the total sum.\nStep 3: Add the remaining value(s) to the total sum to get the overall sum of all items.\nStep 4: Divide the overall sum by the number of items in the set to get the average.",
+    "operand_roles": "- first addend: one component of a combined item\n- second addend: the other component of the combined item\n- third addend: the first separate item in the set\n- fourth addend: the second separate item in the set\n- numerator: the overall sum of all items\n- denominator: the count of items in the set",
+    "units_convention": "The result is a decimal ratio or average, not a percentage. No scaling by 100 is applied; the units are the same as the original values (e.g., currency units) divided by the count.",
+    "source_experience_id": "E085",
+    "gold_program": "add(2.0, 2.0), add(#0, 2.0), add(#1, const_3), divide(#2, const_2)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "add",
+        "divide"
+      ],
+      "n_operations": 4,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Average of three yearly values via pairwise sums",
+    "problem_pattern": "When the question asks for the average (mean) of three values, such as rental expenses over consecutive years, and the provided data gives each year's value separately.",
+    "reasoning_steps": "Step 1: Add the first two values together to get their combined sum.\nStep 2: Add the third value to the previous sum to get the total of all three values.\nStep 3: Divide the total by the number of values (which is 3) to get the average.\nStep 4: The result is the average value, expressed as a decimal ratio.",
+    "operand_roles": "- first addend: the value for the first year\n- second addend: the value for the second year\n- third addend: the value for the third year\n- divisor: the count of values (3) used to compute the average",
+    "units_convention": "All values are in the same monetary unit (e.g., dollars). The final average is in that same unit, expressed as a decimal number, not as a percentage.",
+    "source_experience_id": "E086",
+    "gold_program": "add(39586, 42905), add(#0, 35614), add(#1, const_3), divide(#2, const_2)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "add",
+        "divide"
+      ],
+      "n_operations": 4,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Average of three yearly values",
+    "problem_pattern": "When the average of three yearly figures (e.g., net sales) is needed, sum the three values and divide by the count of years.",
+    "reasoning_steps": "Step 1: Identify the three yearly values to be averaged.\nStep 2: Add the first two values together.\nStep 3: Add the third value to the sum from Step 2.\nStep 4: Divide the total sum by the number of years (3) to obtain the average.",
+    "operand_roles": "- first yearly value: first addend\n- second yearly value: second addend\n- third yearly value: third addend\n- divisor: number of years (3)",
+    "units_convention": "The result is a decimal ratio (average) in the same units as the original values, not a percentage. No scaling by 100 is applied.",
+    "source_experience_id": "E087",
+    "gold_program": "add(7958, 8347), add(#0, 8161), add(#1, const_3), divide(#2, const_2)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "add",
+        "divide"
+      ],
+      "n_operations": 4,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sum three values then divide by two",
+    "problem_pattern": "This reasoning applies when calculating an average of three yearly figures, where the first two are provided directly and the third is derived by adding a constant adjustment to the sum of the first two. The final step divides the total by the count of years to obtain the average.",
+    "reasoning_steps": "Step 1: Add the first two yearly values to get their combined sum.\nStep 2: Add a constant adjustment to the combined sum to obtain the third yearly value.\nStep 3: Add the third yearly value to the combined sum to get the total over three years.\nStep 4: Divide the total by the number of years (3) to get the average.",
+    "operand_roles": "- first yearly value: numerator component\n- second yearly value: numerator component\n- constant adjustment: added to the sum of first two to form third value\n- total sum: numerator for division\n- divisor: number of years (3)",
+    "units_convention": "All values are in the same unit (millions). The final average is expressed as a decimal ratio in that unit, not as a percentage.",
+    "source_experience_id": "E088",
+    "gold_program": "add(650.1, 649.6), add(#0, 728.3), add(#1, const_3), divide(#2, const_2)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "add",
+        "divide"
+      ],
+      "n_operations": 4,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sequential aggregation then ratio division",
+    "problem_pattern": "This reasoning applies when a total is built by adding multiple component values, and then a specific component is expressed as a proportion of that total. The operations are sequential additions followed by a single division.",
+    "reasoning_steps": "Step 1: Add the first two component values to get an intermediate sum.\nStep 2: Add a third component value to the intermediate sum to get a larger intermediate total.\nStep 3: Add a fourth component value to the larger intermediate total to obtain the final total (denominator).\nStep 4: Divide the first component value (numerator) by the final total to get the decimal ratio.",
+    "operand_roles": "- numerator: the specific component whose proportion is being calculated (the first value added).\n- denominator: the final total obtained after all additions.\n- intermediate sums: results of sequential additions that build toward the denominator.",
+    "units_convention": "All values are in the same unit (e.g., counts of sites). The result is a dimensionless decimal ratio, not a percentage. No multiplication by 100 is performed.",
+    "source_experience_id": "E089",
+    "gold_program": "add(19400, 2500), add(#0, 1100), add(#1, 200), divide(19400, #2)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "add",
+        "divide"
+      ],
+      "n_operations": 4,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  },
+  {
+    "strategy_name": "Sum three values then divide by two",
+    "problem_pattern": "This reasoning applies when the average of three yearly values is needed, where the first two values are summed first, then the third is added, and the total is divided by the number of years (2) to get the average.",
+    "reasoning_steps": "Step 1: Identify the first two yearly values and add them together.\nStep 2: Add the third yearly value to the result from Step 1.\nStep 3: Divide the total sum by the number of years (2) to obtain the average.\nStep 4: The result is the average value, expressed as a decimal ratio.",
+    "operand_roles": "- first yearly value: numerator component\n- second yearly value: numerator component\n- third yearly value: numerator component\n- divisor: number of years (2)",
+    "units_convention": "The result is a decimal ratio, not a percentage. No multiplication by 100 is applied.",
+    "source_experience_id": "E090",
+    "gold_program": "add(6.1, 9.8), add(#0, 21.2), add(#1, const_3), divide(#2, const_2)",
+    "gold_structure": {
+      "operations": [
+        "add",
+        "add",
+        "add",
+        "divide"
+      ],
+      "n_operations": 4,
+      "has_scale_100": false,
+      "has_negation": false,
+      "has_table_op": false,
+      "is_single_step": false,
+      "is_multi_step": true
+    },
+    "representation": "faithful_abstraction"
+  }
+]

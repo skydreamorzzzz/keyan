@@ -1,0 +1,2609 @@
+{
+  "phase": "pilot",
+  "evaluations": {
+    "0%": [
+      {
+        "target_id": "RE/2015/page_33.pdf-2",
+        "arm": "Corruption_0%",
+        "gold_answer": 0.03558,
+        "raw_program": "subtract(16831.9, 17430.8), divide(#0, 16831.9)",
+        "normalized_program": "subtract(16831.9, 17430.8), divide(#0, 16831.9)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "16831.9",
+            "17430.8"
+          ],
+          [
+            "divide",
+            "#0",
+            "16831.9"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -0.03558,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-0.03558_expected_0.03558"
+      },
+      {
+        "target_id": "GS/2017/page_143.pdf-1",
+        "arm": "Corruption_0%",
+        "gold_answer": -0.39896,
+        "raw_program": "subtract(1505, 2504), divide(#0, 2504), multiply(#1, 100)",
+        "normalized_program": "subtract(1505, 2504), divide(#0, 2504), multiply(#1, 100)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "1505",
+            "2504"
+          ],
+          [
+            "divide",
+            "#0",
+            "2504"
+          ],
+          [
+            "multiply",
+            "#1",
+            "100"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -39.89617,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-39.89617_expected_-0.39896"
+      },
+      {
+        "target_id": "PM/2017/page_99.pdf-3",
+        "arm": "Corruption_0%",
+        "gold_answer": 2.0,
+        "raw_program": "subtract(1551, 1553)",
+        "normalized_program": "subtract(1551, 1553)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "1551",
+            "1553"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -2.0,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-2.0_expected_2.0"
+      },
+      {
+        "target_id": "UA/2009/page_50.pdf-2",
+        "arm": "Corruption_0%",
+        "gold_answer": -0.75,
+        "raw_program": "divide(subtract(0.3, 1.2), 1.2)",
+        "normalized_program": "divide(subtract(0.3, 1.2), 1.2)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "0.3",
+            "1.2"
+          ],
+          [
+            "divide",
+            "#0",
+            "1.2"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -0.75,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "ETR/2008/page_355.pdf-2",
+        "arm": "Corruption_0%",
+        "gold_answer": 0.17972,
+        "raw_program": "subtract(252.7, 231.0), divide(3.9, #0), multiply(#1, 100)",
+        "normalized_program": "subtract(252.7, 231.0), divide(3.9, #0), multiply(#1, 100)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "252.7",
+            "231.0"
+          ],
+          [
+            "divide",
+            "3.9",
+            "#0"
+          ],
+          [
+            "multiply",
+            "#1",
+            "100"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 17.97235,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_17.97235_expected_0.17972"
+      },
+      {
+        "target_id": "PPG/2011/page_70.pdf-3",
+        "arm": "Corruption_0%",
+        "gold_answer": 0.3,
+        "raw_program": "divide(45, 150)",
+        "normalized_program": "divide(45, 150)",
+        "parsed_steps": [
+          [
+            "divide",
+            "45",
+            "150"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.3,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "IP/2006/page_32.pdf-4",
+        "arm": "Corruption_0%",
+        "gold_answer": 0.05336,
+        "raw_program": "divide(131, 2455)",
+        "normalized_program": "divide(131, 2455)",
+        "parsed_steps": [
+          [
+            "divide",
+            "131",
+            "2455"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.05336,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "FIS/2007/page_94.pdf-4",
+        "arm": "Corruption_0%",
+        "gold_answer": 0.14162,
+        "raw_program": "divide(35269, 249038)",
+        "normalized_program": "divide(35269, 249038)",
+        "parsed_steps": [
+          [
+            "divide",
+            "35269",
+            "249038"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.14162,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLL/2007/page_47.pdf-4",
+        "arm": "Corruption_0%",
+        "gold_answer": 102.5,
+        "raw_program": "divide(41, 0.40)",
+        "normalized_program": "divide(41, 0.40)",
+        "parsed_steps": [
+          [
+            "divide",
+            "41",
+            "0.40"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 102.5,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLK/2012/page_160.pdf-4",
+        "arm": "Corruption_0%",
+        "gold_answer": 0.61881,
+        "raw_program": "divide(250, 404)",
+        "normalized_program": "divide(250, 404)",
+        "parsed_steps": [
+          [
+            "divide",
+            "250",
+            "404"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.61881,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "GPN/2017/page_77.pdf-4",
+        "arm": "Corruption_0%",
+        "gold_answer": 73576.0,
+        "raw_program": "multiply(203828, 0)",
+        "normalized_program": "multiply(203828, 0)",
+        "parsed_steps": [
+          [
+            "multiply",
+            "203828",
+            "0"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.0,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_0.0_expected_73576.0"
+      },
+      {
+        "target_id": "UNP/2014/page_25.pdf-2",
+        "arm": "Corruption_0%",
+        "gold_answer": 22560.05,
+        "raw_program": "divide(22560, 20684), subtract(#0, 1), multiply(22560, #1), add(#2, 22560)",
+        "normalized_program": "divide(22560, 20684), subtract(#0, 1), multiply(22560, #1), add(#2, 22560)",
+        "parsed_steps": [
+          [
+            "divide",
+            "22560",
+            "20684"
+          ],
+          [
+            "subtract",
+            "#0",
+            "1"
+          ],
+          [
+            "multiply",
+            "22560",
+            "#1"
+          ],
+          [
+            "add",
+            "#2",
+            "22560"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 24606.14968,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_24606.14968_expected_22560.05"
+      },
+      {
+        "target_id": "STT/2008/page_83.pdf-2",
+        "arm": "Corruption_0%",
+        "gold_answer": 1.25,
+        "raw_program": "divide(subtract(1.8, 1.1), 1.1)",
+        "normalized_program": "divide(subtract(1.8, 1.1), 1.1)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "1.8",
+            "1.1"
+          ],
+          [
+            "divide",
+            "#0",
+            "1.1"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.63636,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_0.63636_expected_1.25"
+      },
+      {
+        "target_id": "MRO/2007/page_134.pdf-2",
+        "arm": "Corruption_0%",
+        "gold_answer": 66.0,
+        "raw_program": "add(30, 36)",
+        "normalized_program": "add(30, 36)",
+        "parsed_steps": [
+          [
+            "add",
+            "30",
+            "36"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 66.0,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "IPG/2015/page_48.pdf-3",
+        "arm": "Corruption_0%",
+        "gold_answer": 68.4,
+        "raw_program": "subtract(-33.7, 34.7)",
+        "normalized_program": "subtract(-33.7, 34.7)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "-33.7",
+            "34.7"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -68.4,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-68.4_expected_68.4"
+      },
+      {
+        "target_id": "IP/2007/page_31.pdf-1",
+        "arm": "Corruption_0%",
+        "gold_answer": 0.20972,
+        "raw_program": "divide(1.1, 5.245)",
+        "normalized_program": "divide(1.1, 5.245)",
+        "parsed_steps": [
+          [
+            "divide",
+            "1.1",
+            "5.245"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.20972,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "IP/2009/page_37.pdf-1",
+        "arm": "Corruption_0%",
+        "gold_answer": 0.71895,
+        "raw_program": "divide(2.2, 3.060)",
+        "normalized_program": "divide(2.2, 3.060)",
+        "parsed_steps": [
+          [
+            "divide",
+            "2.2",
+            "3.060"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.71895,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLL/2007/page_35.pdf-3",
+        "arm": "Corruption_0%",
+        "gold_answer": 20.74359,
+        "raw_program": "multiply(431170, 48.11), divide(#0, 1000000)",
+        "normalized_program": "multiply(431170, 48.11), divide(#0, 1000000)",
+        "parsed_steps": [
+          [
+            "multiply",
+            "431170",
+            "48.11"
+          ],
+          [
+            "divide",
+            "#0",
+            "1000000"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 20.74359,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "SNPS/2006/page_69.pdf-1",
+        "arm": "Corruption_0%",
+        "gold_answer": 0.54126,
+        "raw_program": "divide(8500, 15704)",
+        "normalized_program": "divide(8500, 15704)",
+        "parsed_steps": [
+          [
+            "divide",
+            "8500",
+            "15704"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.54126,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "TFX/2015/page_70.pdf-3",
+        "arm": "Corruption_0%",
+        "gold_answer": 386797189.66,
+        "raw_program": "multiply(4446967, 86.98)",
+        "normalized_program": "multiply(4446967, 86.98)",
+        "parsed_steps": [
+          [
+            "multiply",
+            "4446967",
+            "86.98"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 386797189.66,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "AON/2009/page_46.pdf-2",
+        "arm": "Corruption_0%",
+        "gold_answer": 846.0,
+        "raw_program": "table_min(segment operating income)",
+        "normalized_program": "table_min(segment operating income)",
+        "parsed_steps": null,
+        "execution_status": "parse_fail",
+        "execution_result": null,
+        "program_correct": false,
+        "error_category": "parse",
+        "error_detail": "expected ',' after first argument at position 34"
+      },
+      {
+        "target_id": "APD/2019/page_48.pdf-1",
+        "arm": "Corruption_0%",
+        "gold_answer": 2758.55,
+        "raw_program": "add(2547.2, 2969.9), divide(#0, 2)",
+        "normalized_program": "add(2547.2, 2969.9), divide(#0, 2)",
+        "parsed_steps": [
+          [
+            "add",
+            "2547.2",
+            "2969.9"
+          ],
+          [
+            "divide",
+            "#0",
+            "2"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 2758.55,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "AES/2016/page_191.pdf-3",
+        "arm": "Corruption_0%",
+        "gold_answer": -11.33333,
+        "raw_program": "divide(-13, 1)",
+        "normalized_program": "divide(-13, 1)",
+        "parsed_steps": [
+          [
+            "divide",
+            "-13",
+            "1"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -13.0,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-13.0_expected_-11.33333"
+      },
+      {
+        "target_id": "LMT/2015/page_56.pdf-2",
+        "arm": "Corruption_0%",
+        "gold_answer": 9198.33333,
+        "raw_program": "add(9288, 9202), add(#0, 9105), divide(#1, 3)",
+        "normalized_program": "add(9288, 9202), add(#0, 9105), divide(#1, 3)",
+        "parsed_steps": [
+          [
+            "add",
+            "9288",
+            "9202"
+          ],
+          [
+            "add",
+            "#0",
+            "9105"
+          ],
+          [
+            "divide",
+            "#1",
+            "3"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 9198.33333,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "MRO/2006/page_33.pdf-3",
+        "arm": "Corruption_0%",
+        "gold_answer": 22.33333,
+        "raw_program": "add(23, 22), add(#0, 22), divide(#1, 3)",
+        "normalized_program": "add(23, 22), add(#0, 22), divide(#1, 3)",
+        "parsed_steps": [
+          [
+            "add",
+            "23",
+            "22"
+          ],
+          [
+            "add",
+            "#0",
+            "22"
+          ],
+          [
+            "divide",
+            "#1",
+            "3"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 22.33333,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "JPM/2014/page_65.pdf-5",
+        "arm": "Corruption_0%",
+        "gold_answer": "no",
+        "raw_program": "greater(167.48, 189.69)",
+        "normalized_program": "greater(167.48, 189.69)",
+        "parsed_steps": [
+          [
+            "greater",
+            "167.48",
+            "189.69"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "PPG/2013/page_40.pdf-2",
+        "arm": "Corruption_0%",
+        "gold_answer": "no",
+        "raw_program": "greater(288, 488)",
+        "normalized_program": "greater(288, 488)",
+        "parsed_steps": [
+          [
+            "greater",
+            "288",
+            "488"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLL/2010/page_28.pdf-2",
+        "arm": "Corruption_0%",
+        "gold_answer": "yes",
+        "raw_program": "greater(178.93, 123.56)",
+        "normalized_program": "greater(178.93, 123.56)",
+        "parsed_steps": [
+          [
+            "greater",
+            "178.93",
+            "123.56"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "yes",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "PNC/2009/page_46.pdf-3",
+        "arm": "Corruption_0%",
+        "gold_answer": "no",
+        "raw_program": "greater(14, 19)",
+        "normalized_program": "greater(14, 19)",
+        "parsed_steps": [
+          [
+            "greater",
+            "14",
+            "19"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "PPG/2013/page_40.pdf-1",
+        "arm": "Corruption_0%",
+        "gold_answer": "no",
+        "raw_program": "greater(345, 488)",
+        "normalized_program": "greater(345, 488)",
+        "parsed_steps": [
+          [
+            "greater",
+            "345",
+            "488"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      }
+    ],
+    "10%": [
+      {
+        "target_id": "RE/2015/page_33.pdf-2",
+        "arm": "Corruption_10%",
+        "gold_answer": 0.03558,
+        "raw_program": "subtract(16831.9, 17430.8), divide(#0, 16831.9)",
+        "normalized_program": "subtract(16831.9, 17430.8), divide(#0, 16831.9)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "16831.9",
+            "17430.8"
+          ],
+          [
+            "divide",
+            "#0",
+            "16831.9"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -0.03558,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-0.03558_expected_0.03558"
+      },
+      {
+        "target_id": "GS/2017/page_143.pdf-1",
+        "arm": "Corruption_10%",
+        "gold_answer": -0.39896,
+        "raw_program": "subtract(1505, 2504), divide(#0, 2504), multiply(#1, 100)",
+        "normalized_program": "subtract(1505, 2504), divide(#0, 2504), multiply(#1, 100)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "1505",
+            "2504"
+          ],
+          [
+            "divide",
+            "#0",
+            "2504"
+          ],
+          [
+            "multiply",
+            "#1",
+            "100"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -39.89617,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-39.89617_expected_-0.39896"
+      },
+      {
+        "target_id": "PM/2017/page_99.pdf-3",
+        "arm": "Corruption_10%",
+        "gold_answer": 2.0,
+        "raw_program": "subtract(1551, 1553)",
+        "normalized_program": "subtract(1551, 1553)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "1551",
+            "1553"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -2.0,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-2.0_expected_2.0"
+      },
+      {
+        "target_id": "UA/2009/page_50.pdf-2",
+        "arm": "Corruption_10%",
+        "gold_answer": -0.75,
+        "raw_program": "divide(subtract(0.3, 1.2), 1.2)",
+        "normalized_program": "divide(subtract(0.3, 1.2), 1.2)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "0.3",
+            "1.2"
+          ],
+          [
+            "divide",
+            "#0",
+            "1.2"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -0.75,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "ETR/2008/page_355.pdf-2",
+        "arm": "Corruption_10%",
+        "gold_answer": 0.17972,
+        "raw_program": "subtract(252.7, 231.0), divide(3.9, #0), multiply(#1, 100)",
+        "normalized_program": "subtract(252.7, 231.0), divide(3.9, #0), multiply(#1, 100)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "252.7",
+            "231.0"
+          ],
+          [
+            "divide",
+            "3.9",
+            "#0"
+          ],
+          [
+            "multiply",
+            "#1",
+            "100"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 17.97235,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_17.97235_expected_0.17972"
+      },
+      {
+        "target_id": "PPG/2011/page_70.pdf-3",
+        "arm": "Corruption_10%",
+        "gold_answer": 0.3,
+        "raw_program": "divide(45, 150)",
+        "normalized_program": "divide(45, 150)",
+        "parsed_steps": [
+          [
+            "divide",
+            "45",
+            "150"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.3,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "IP/2006/page_32.pdf-4",
+        "arm": "Corruption_10%",
+        "gold_answer": 0.05336,
+        "raw_program": "divide(131, 2455)",
+        "normalized_program": "divide(131, 2455)",
+        "parsed_steps": [
+          [
+            "divide",
+            "131",
+            "2455"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.05336,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "FIS/2007/page_94.pdf-4",
+        "arm": "Corruption_10%",
+        "gold_answer": 0.14162,
+        "raw_program": "divide(35269, 249038)",
+        "normalized_program": "divide(35269, 249038)",
+        "parsed_steps": [
+          [
+            "divide",
+            "35269",
+            "249038"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.14162,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLL/2007/page_47.pdf-4",
+        "arm": "Corruption_10%",
+        "gold_answer": 102.5,
+        "raw_program": "divide(41, 0.4)",
+        "normalized_program": "divide(41, 0.4)",
+        "parsed_steps": [
+          [
+            "divide",
+            "41",
+            "0.4"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 102.5,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLK/2012/page_160.pdf-4",
+        "arm": "Corruption_10%",
+        "gold_answer": 0.61881,
+        "raw_program": "divide(250, 404)",
+        "normalized_program": "divide(250, 404)",
+        "parsed_steps": [
+          [
+            "divide",
+            "250",
+            "404"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.61881,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "GPN/2017/page_77.pdf-4",
+        "arm": "Corruption_10%",
+        "gold_answer": 73576.0,
+        "raw_program": "multiply(203828, 0)",
+        "normalized_program": "multiply(203828, 0)",
+        "parsed_steps": [
+          [
+            "multiply",
+            "203828",
+            "0"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.0,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_0.0_expected_73576.0"
+      },
+      {
+        "target_id": "UNP/2014/page_25.pdf-2",
+        "arm": "Corruption_10%",
+        "gold_answer": 22560.05,
+        "raw_program": "divide(22560, 20684), subtract(#0, 1), multiply(22560, #1), add(#2, 22560)",
+        "normalized_program": "divide(22560, 20684), subtract(#0, 1), multiply(22560, #1), add(#2, 22560)",
+        "parsed_steps": [
+          [
+            "divide",
+            "22560",
+            "20684"
+          ],
+          [
+            "subtract",
+            "#0",
+            "1"
+          ],
+          [
+            "multiply",
+            "22560",
+            "#1"
+          ],
+          [
+            "add",
+            "#2",
+            "22560"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 24606.14968,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_24606.14968_expected_22560.05"
+      },
+      {
+        "target_id": "STT/2008/page_83.pdf-2",
+        "arm": "Corruption_10%",
+        "gold_answer": 1.25,
+        "raw_program": "divide(subtract(1.8, 1.1), 1.1)",
+        "normalized_program": "divide(subtract(1.8, 1.1), 1.1)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "1.8",
+            "1.1"
+          ],
+          [
+            "divide",
+            "#0",
+            "1.1"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.63636,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_0.63636_expected_1.25"
+      },
+      {
+        "target_id": "MRO/2007/page_134.pdf-2",
+        "arm": "Corruption_10%",
+        "gold_answer": 66.0,
+        "raw_program": "add(30, 36)",
+        "normalized_program": "add(30, 36)",
+        "parsed_steps": [
+          [
+            "add",
+            "30",
+            "36"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 66.0,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "IPG/2015/page_48.pdf-3",
+        "arm": "Corruption_10%",
+        "gold_answer": 68.4,
+        "raw_program": "subtract(-33.7, 34.7)",
+        "normalized_program": "subtract(-33.7, 34.7)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "-33.7",
+            "34.7"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -68.4,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-68.4_expected_68.4"
+      },
+      {
+        "target_id": "IP/2007/page_31.pdf-1",
+        "arm": "Corruption_10%",
+        "gold_answer": 0.20972,
+        "raw_program": "divide(1.1, 5.245)",
+        "normalized_program": "divide(1.1, 5.245)",
+        "parsed_steps": [
+          [
+            "divide",
+            "1.1",
+            "5.245"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.20972,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "IP/2009/page_37.pdf-1",
+        "arm": "Corruption_10%",
+        "gold_answer": 0.71895,
+        "raw_program": "divide(2.2, 3.060)",
+        "normalized_program": "divide(2.2, 3.060)",
+        "parsed_steps": [
+          [
+            "divide",
+            "2.2",
+            "3.060"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.71895,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLL/2007/page_35.pdf-3",
+        "arm": "Corruption_10%",
+        "gold_answer": 20.74359,
+        "raw_program": "multiply(431170, 48.11), divide(#0, 1000000)",
+        "normalized_program": "multiply(431170, 48.11), divide(#0, 1000000)",
+        "parsed_steps": [
+          [
+            "multiply",
+            "431170",
+            "48.11"
+          ],
+          [
+            "divide",
+            "#0",
+            "1000000"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 20.74359,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "SNPS/2006/page_69.pdf-1",
+        "arm": "Corruption_10%",
+        "gold_answer": 0.54126,
+        "raw_program": "divide(8500, 15704)",
+        "normalized_program": "divide(8500, 15704)",
+        "parsed_steps": [
+          [
+            "divide",
+            "8500",
+            "15704"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.54126,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "TFX/2015/page_70.pdf-3",
+        "arm": "Corruption_10%",
+        "gold_answer": 386797189.66,
+        "raw_program": "multiply(4446967, 86.98)",
+        "normalized_program": "multiply(4446967, 86.98)",
+        "parsed_steps": [
+          [
+            "multiply",
+            "4446967",
+            "86.98"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 386797189.66,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "AON/2009/page_46.pdf-2",
+        "arm": "Corruption_10%",
+        "gold_answer": 846.0,
+        "raw_program": "table_min(segment operating income)",
+        "normalized_program": "table_min(segment operating income)",
+        "parsed_steps": null,
+        "execution_status": "parse_fail",
+        "execution_result": null,
+        "program_correct": false,
+        "error_category": "parse",
+        "error_detail": "expected ',' after first argument at position 34"
+      },
+      {
+        "target_id": "APD/2019/page_48.pdf-1",
+        "arm": "Corruption_10%",
+        "gold_answer": 2758.55,
+        "raw_program": "add(2547.2, 2969.9), divide(#0, 2)",
+        "normalized_program": "add(2547.2, 2969.9), divide(#0, 2)",
+        "parsed_steps": [
+          [
+            "add",
+            "2547.2",
+            "2969.9"
+          ],
+          [
+            "divide",
+            "#0",
+            "2"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 2758.55,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "AES/2016/page_191.pdf-3",
+        "arm": "Corruption_10%",
+        "gold_answer": -11.33333,
+        "raw_program": "divide(-13, 1)",
+        "normalized_program": "divide(-13, 1)",
+        "parsed_steps": [
+          [
+            "divide",
+            "-13",
+            "1"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -13.0,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-13.0_expected_-11.33333"
+      },
+      {
+        "target_id": "LMT/2015/page_56.pdf-2",
+        "arm": "Corruption_10%",
+        "gold_answer": 9198.33333,
+        "raw_program": "add(9288, 9202), add(#0, 9105), divide(#1, 3)",
+        "normalized_program": "add(9288, 9202), add(#0, 9105), divide(#1, 3)",
+        "parsed_steps": [
+          [
+            "add",
+            "9288",
+            "9202"
+          ],
+          [
+            "add",
+            "#0",
+            "9105"
+          ],
+          [
+            "divide",
+            "#1",
+            "3"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 9198.33333,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "MRO/2006/page_33.pdf-3",
+        "arm": "Corruption_10%",
+        "gold_answer": 22.33333,
+        "raw_program": "add(23, 22), add(#0, 22), divide(#1, 3)",
+        "normalized_program": "add(23, 22), add(#0, 22), divide(#1, 3)",
+        "parsed_steps": [
+          [
+            "add",
+            "23",
+            "22"
+          ],
+          [
+            "add",
+            "#0",
+            "22"
+          ],
+          [
+            "divide",
+            "#1",
+            "3"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 22.33333,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "JPM/2014/page_65.pdf-5",
+        "arm": "Corruption_10%",
+        "gold_answer": "no",
+        "raw_program": "greater(167.48, 189.69)",
+        "normalized_program": "greater(167.48, 189.69)",
+        "parsed_steps": [
+          [
+            "greater",
+            "167.48",
+            "189.69"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "PPG/2013/page_40.pdf-2",
+        "arm": "Corruption_10%",
+        "gold_answer": "no",
+        "raw_program": "greater(288, 488)",
+        "normalized_program": "greater(288, 488)",
+        "parsed_steps": [
+          [
+            "greater",
+            "288",
+            "488"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLL/2010/page_28.pdf-2",
+        "arm": "Corruption_10%",
+        "gold_answer": "yes",
+        "raw_program": "greater(178.93, 123.56)",
+        "normalized_program": "greater(178.93, 123.56)",
+        "parsed_steps": [
+          [
+            "greater",
+            "178.93",
+            "123.56"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "yes",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "PNC/2009/page_46.pdf-3",
+        "arm": "Corruption_10%",
+        "gold_answer": "no",
+        "raw_program": "greater(19, 14)",
+        "normalized_program": "greater(19, 14)",
+        "parsed_steps": [
+          [
+            "greater",
+            "19",
+            "14"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "yes",
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_yes_expected_no"
+      },
+      {
+        "target_id": "PPG/2013/page_40.pdf-1",
+        "arm": "Corruption_10%",
+        "gold_answer": "no",
+        "raw_program": "greater(345, 488)",
+        "normalized_program": "greater(345, 488)",
+        "parsed_steps": [
+          [
+            "greater",
+            "345",
+            "488"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      }
+    ],
+    "25%": [
+      {
+        "target_id": "RE/2015/page_33.pdf-2",
+        "arm": "Corruption_25%",
+        "gold_answer": 0.03558,
+        "raw_program": "subtract(16831.9, 17430.8), divide(#0, 16831.9)",
+        "normalized_program": "subtract(16831.9, 17430.8), divide(#0, 16831.9)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "16831.9",
+            "17430.8"
+          ],
+          [
+            "divide",
+            "#0",
+            "16831.9"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -0.03558,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-0.03558_expected_0.03558"
+      },
+      {
+        "target_id": "GS/2017/page_143.pdf-1",
+        "arm": "Corruption_25%",
+        "gold_answer": -0.39896,
+        "raw_program": "subtract(1505, 2504), divide(#0, 2504), multiply(#1, 100)",
+        "normalized_program": "subtract(1505, 2504), divide(#0, 2504), multiply(#1, 100)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "1505",
+            "2504"
+          ],
+          [
+            "divide",
+            "#0",
+            "2504"
+          ],
+          [
+            "multiply",
+            "#1",
+            "100"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -39.89617,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-39.89617_expected_-0.39896"
+      },
+      {
+        "target_id": "PM/2017/page_99.pdf-3",
+        "arm": "Corruption_25%",
+        "gold_answer": 2.0,
+        "raw_program": "subtract(1551, 1553)",
+        "normalized_program": "subtract(1551, 1553)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "1551",
+            "1553"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -2.0,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-2.0_expected_2.0"
+      },
+      {
+        "target_id": "UA/2009/page_50.pdf-2",
+        "arm": "Corruption_25%",
+        "gold_answer": -0.75,
+        "raw_program": "divide(subtract(0.3, 1.2), 1.2)",
+        "normalized_program": "divide(subtract(0.3, 1.2), 1.2)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "0.3",
+            "1.2"
+          ],
+          [
+            "divide",
+            "#0",
+            "1.2"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -0.75,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "ETR/2008/page_355.pdf-2",
+        "arm": "Corruption_25%",
+        "gold_answer": 0.17972,
+        "raw_program": "divide(3.9, 21.7), multiply(#0, 100)",
+        "normalized_program": "divide(3.9, 21.7), multiply(#0, 100)",
+        "parsed_steps": [
+          [
+            "divide",
+            "3.9",
+            "21.7"
+          ],
+          [
+            "multiply",
+            "#0",
+            "100"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 17.97235,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_17.97235_expected_0.17972"
+      },
+      {
+        "target_id": "PPG/2011/page_70.pdf-3",
+        "arm": "Corruption_25%",
+        "gold_answer": 0.3,
+        "raw_program": "divide(45, 150)",
+        "normalized_program": "divide(45, 150)",
+        "parsed_steps": [
+          [
+            "divide",
+            "45",
+            "150"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.3,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "IP/2006/page_32.pdf-4",
+        "arm": "Corruption_25%",
+        "gold_answer": 0.05336,
+        "raw_program": "divide(131, 2455)",
+        "normalized_program": "divide(131, 2455)",
+        "parsed_steps": [
+          [
+            "divide",
+            "131",
+            "2455"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.05336,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "FIS/2007/page_94.pdf-4",
+        "arm": "Corruption_25%",
+        "gold_answer": 0.14162,
+        "raw_program": "divide(35269, 249038)",
+        "normalized_program": "divide(35269, 249038)",
+        "parsed_steps": [
+          [
+            "divide",
+            "35269",
+            "249038"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.14162,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLL/2007/page_47.pdf-4",
+        "arm": "Corruption_25%",
+        "gold_answer": 102.5,
+        "raw_program": "divide(41, 0.40)",
+        "normalized_program": "divide(41, 0.40)",
+        "parsed_steps": [
+          [
+            "divide",
+            "41",
+            "0.40"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 102.5,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLK/2012/page_160.pdf-4",
+        "arm": "Corruption_25%",
+        "gold_answer": 0.61881,
+        "raw_program": "divide(250, 404)",
+        "normalized_program": "divide(250, 404)",
+        "parsed_steps": [
+          [
+            "divide",
+            "250",
+            "404"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.61881,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "GPN/2017/page_77.pdf-4",
+        "arm": "Corruption_25%",
+        "gold_answer": 73576.0,
+        "raw_program": "multiply(203828, 0)",
+        "normalized_program": "multiply(203828, 0)",
+        "parsed_steps": [
+          [
+            "multiply",
+            "203828",
+            "0"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.0,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_0.0_expected_73576.0"
+      },
+      {
+        "target_id": "UNP/2014/page_25.pdf-2",
+        "arm": "Corruption_25%",
+        "gold_answer": 22560.05,
+        "raw_program": null,
+        "normalized_program": null,
+        "parsed_steps": null,
+        "execution_status": "no_program",
+        "execution_result": null,
+        "program_correct": false,
+        "error_category": "extraction",
+        "error_detail": "no_program_marker_found"
+      },
+      {
+        "target_id": "STT/2008/page_83.pdf-2",
+        "arm": "Corruption_25%",
+        "gold_answer": 1.25,
+        "raw_program": "divide(subtract(1.8, 1.1), 1.1)",
+        "normalized_program": "divide(subtract(1.8, 1.1), 1.1)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "1.8",
+            "1.1"
+          ],
+          [
+            "divide",
+            "#0",
+            "1.1"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.63636,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_0.63636_expected_1.25"
+      },
+      {
+        "target_id": "MRO/2007/page_134.pdf-2",
+        "arm": "Corruption_25%",
+        "gold_answer": 66.0,
+        "raw_program": "add(30, 36)",
+        "normalized_program": "add(30, 36)",
+        "parsed_steps": [
+          [
+            "add",
+            "30",
+            "36"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 66.0,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "IPG/2015/page_48.pdf-3",
+        "arm": "Corruption_25%",
+        "gold_answer": 68.4,
+        "raw_program": "subtract(-33.7, 34.7)",
+        "normalized_program": "subtract(-33.7, 34.7)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "-33.7",
+            "34.7"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -68.4,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-68.4_expected_68.4"
+      },
+      {
+        "target_id": "IP/2007/page_31.pdf-1",
+        "arm": "Corruption_25%",
+        "gold_answer": 0.20972,
+        "raw_program": "divide(1.1, 5.245)",
+        "normalized_program": "divide(1.1, 5.245)",
+        "parsed_steps": [
+          [
+            "divide",
+            "1.1",
+            "5.245"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.20972,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "IP/2009/page_37.pdf-1",
+        "arm": "Corruption_25%",
+        "gold_answer": 0.71895,
+        "raw_program": "divide(2.2, 3.060)",
+        "normalized_program": "divide(2.2, 3.060)",
+        "parsed_steps": [
+          [
+            "divide",
+            "2.2",
+            "3.060"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.71895,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLL/2007/page_35.pdf-3",
+        "arm": "Corruption_25%",
+        "gold_answer": 20.74359,
+        "raw_program": "multiply(431170, 48.11), divide(#0, 1000000)",
+        "normalized_program": "multiply(431170, 48.11), divide(#0, 1000000)",
+        "parsed_steps": [
+          [
+            "multiply",
+            "431170",
+            "48.11"
+          ],
+          [
+            "divide",
+            "#0",
+            "1000000"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 20.74359,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "SNPS/2006/page_69.pdf-1",
+        "arm": "Corruption_25%",
+        "gold_answer": 0.54126,
+        "raw_program": "divide(8500, 15704)",
+        "normalized_program": "divide(8500, 15704)",
+        "parsed_steps": [
+          [
+            "divide",
+            "8500",
+            "15704"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.54126,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "TFX/2015/page_70.pdf-3",
+        "arm": "Corruption_25%",
+        "gold_answer": 386797189.66,
+        "raw_program": "multiply(4446967, 86.98)",
+        "normalized_program": "multiply(4446967, 86.98)",
+        "parsed_steps": [
+          [
+            "multiply",
+            "4446967",
+            "86.98"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 386797189.66,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "AON/2009/page_46.pdf-2",
+        "arm": "Corruption_25%",
+        "gold_answer": 846.0,
+        "raw_program": "table_min(segment operating income)",
+        "normalized_program": "table_min(segment operating income)",
+        "parsed_steps": null,
+        "execution_status": "parse_fail",
+        "execution_result": null,
+        "program_correct": false,
+        "error_category": "parse",
+        "error_detail": "expected ',' after first argument at position 34"
+      },
+      {
+        "target_id": "APD/2019/page_48.pdf-1",
+        "arm": "Corruption_25%",
+        "gold_answer": 2758.55,
+        "raw_program": "add(2547.2, 2969.9), divide(#0, 2)",
+        "normalized_program": "add(2547.2, 2969.9), divide(#0, 2)",
+        "parsed_steps": [
+          [
+            "add",
+            "2547.2",
+            "2969.9"
+          ],
+          [
+            "divide",
+            "#0",
+            "2"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 2758.55,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "AES/2016/page_191.pdf-3",
+        "arm": "Corruption_25%",
+        "gold_answer": -11.33333,
+        "raw_program": "divide(-13, 1)",
+        "normalized_program": "divide(-13, 1)",
+        "parsed_steps": [
+          [
+            "divide",
+            "-13",
+            "1"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -13.0,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-13.0_expected_-11.33333"
+      },
+      {
+        "target_id": "LMT/2015/page_56.pdf-2",
+        "arm": "Corruption_25%",
+        "gold_answer": 9198.33333,
+        "raw_program": "add(9105, 9202), add(#0, 9288), divide(#1, 3)",
+        "normalized_program": "add(9105, 9202), add(#0, 9288), divide(#1, 3)",
+        "parsed_steps": [
+          [
+            "add",
+            "9105",
+            "9202"
+          ],
+          [
+            "add",
+            "#0",
+            "9288"
+          ],
+          [
+            "divide",
+            "#1",
+            "3"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 9198.33333,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "MRO/2006/page_33.pdf-3",
+        "arm": "Corruption_25%",
+        "gold_answer": 22.33333,
+        "raw_program": "add(23, 22), add(#0, 22), divide(#1, 3)",
+        "normalized_program": "add(23, 22), add(#0, 22), divide(#1, 3)",
+        "parsed_steps": [
+          [
+            "add",
+            "23",
+            "22"
+          ],
+          [
+            "add",
+            "#0",
+            "22"
+          ],
+          [
+            "divide",
+            "#1",
+            "3"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 22.33333,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "JPM/2014/page_65.pdf-5",
+        "arm": "Corruption_25%",
+        "gold_answer": "no",
+        "raw_program": "greater(167.48, 189.69)",
+        "normalized_program": "greater(167.48, 189.69)",
+        "parsed_steps": [
+          [
+            "greater",
+            "167.48",
+            "189.69"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "PPG/2013/page_40.pdf-2",
+        "arm": "Corruption_25%",
+        "gold_answer": "no",
+        "raw_program": "greater(288, 488)",
+        "normalized_program": "greater(288, 488)",
+        "parsed_steps": [
+          [
+            "greater",
+            "288",
+            "488"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLL/2010/page_28.pdf-2",
+        "arm": "Corruption_25%",
+        "gold_answer": "yes",
+        "raw_program": "greater(178.93, 123.56)",
+        "normalized_program": "greater(178.93, 123.56)",
+        "parsed_steps": [
+          [
+            "greater",
+            "178.93",
+            "123.56"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "yes",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "PNC/2009/page_46.pdf-3",
+        "arm": "Corruption_25%",
+        "gold_answer": "no",
+        "raw_program": "greater(14, 19)",
+        "normalized_program": "greater(14, 19)",
+        "parsed_steps": [
+          [
+            "greater",
+            "14",
+            "19"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "PPG/2013/page_40.pdf-1",
+        "arm": "Corruption_25%",
+        "gold_answer": "no",
+        "raw_program": "greater(345, 488)",
+        "normalized_program": "greater(345, 488)",
+        "parsed_steps": [
+          [
+            "greater",
+            "345",
+            "488"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      }
+    ],
+    "50%": [
+      {
+        "target_id": "RE/2015/page_33.pdf-2",
+        "arm": "Corruption_50%",
+        "gold_answer": 0.03558,
+        "raw_program": "subtract(16831.9, 17430.8), divide(#0, 16831.9)",
+        "normalized_program": "subtract(16831.9, 17430.8), divide(#0, 16831.9)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "16831.9",
+            "17430.8"
+          ],
+          [
+            "divide",
+            "#0",
+            "16831.9"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -0.03558,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-0.03558_expected_0.03558"
+      },
+      {
+        "target_id": "GS/2017/page_143.pdf-1",
+        "arm": "Corruption_50%",
+        "gold_answer": -0.39896,
+        "raw_program": "subtract(1505, 2504), divide(#0, 2504)",
+        "normalized_program": "subtract(1505, 2504), divide(#0, 2504)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "1505",
+            "2504"
+          ],
+          [
+            "divide",
+            "#0",
+            "2504"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -0.39896,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "PM/2017/page_99.pdf-3",
+        "arm": "Corruption_50%",
+        "gold_answer": 2.0,
+        "raw_program": "subtract(1551, 1553)",
+        "normalized_program": "subtract(1551, 1553)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "1551",
+            "1553"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -2.0,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-2.0_expected_2.0"
+      },
+      {
+        "target_id": "UA/2009/page_50.pdf-2",
+        "arm": "Corruption_50%",
+        "gold_answer": -0.75,
+        "raw_program": "divide(subtract(0.3, 1.2), 1.2)",
+        "normalized_program": "divide(subtract(0.3, 1.2), 1.2)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "0.3",
+            "1.2"
+          ],
+          [
+            "divide",
+            "#0",
+            "1.2"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -0.75,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "ETR/2008/page_355.pdf-2",
+        "arm": "Corruption_50%",
+        "gold_answer": 0.17972,
+        "raw_program": "divide(3.9, 21.7), multiply(#0, 100)",
+        "normalized_program": "divide(3.9, 21.7), multiply(#0, 100)",
+        "parsed_steps": [
+          [
+            "divide",
+            "3.9",
+            "21.7"
+          ],
+          [
+            "multiply",
+            "#0",
+            "100"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 17.97235,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_17.97235_expected_0.17972"
+      },
+      {
+        "target_id": "PPG/2011/page_70.pdf-3",
+        "arm": "Corruption_50%",
+        "gold_answer": 0.3,
+        "raw_program": "divide(45, 150)",
+        "normalized_program": "divide(45, 150)",
+        "parsed_steps": [
+          [
+            "divide",
+            "45",
+            "150"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.3,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "IP/2006/page_32.pdf-4",
+        "arm": "Corruption_50%",
+        "gold_answer": 0.05336,
+        "raw_program": "divide(131, 2455)",
+        "normalized_program": "divide(131, 2455)",
+        "parsed_steps": [
+          [
+            "divide",
+            "131",
+            "2455"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.05336,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "FIS/2007/page_94.pdf-4",
+        "arm": "Corruption_50%",
+        "gold_answer": 0.14162,
+        "raw_program": "divide(35269, 249038)",
+        "normalized_program": "divide(35269, 249038)",
+        "parsed_steps": [
+          [
+            "divide",
+            "35269",
+            "249038"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.14162,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLL/2007/page_47.pdf-4",
+        "arm": "Corruption_50%",
+        "gold_answer": 102.5,
+        "raw_program": "divide(41, 0.40)",
+        "normalized_program": "divide(41, 0.40)",
+        "parsed_steps": [
+          [
+            "divide",
+            "41",
+            "0.40"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 102.5,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLK/2012/page_160.pdf-4",
+        "arm": "Corruption_50%",
+        "gold_answer": 0.61881,
+        "raw_program": "divide(250, 404)",
+        "normalized_program": "divide(250, 404)",
+        "parsed_steps": [
+          [
+            "divide",
+            "250",
+            "404"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.61881,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "GPN/2017/page_77.pdf-4",
+        "arm": "Corruption_50%",
+        "gold_answer": 73576.0,
+        "raw_program": "multiply(203828, 0)",
+        "normalized_program": "multiply(203828, 0)",
+        "parsed_steps": [
+          [
+            "multiply",
+            "203828",
+            "0"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.0,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_0.0_expected_73576.0"
+      },
+      {
+        "target_id": "UNP/2014/page_25.pdf-2",
+        "arm": "Corruption_50%",
+        "gold_answer": 22560.05,
+        "raw_program": "divide(22560, 20684), subtract(#0, 1), multiply(#1, 22560), add(#2, 22560)",
+        "normalized_program": "divide(22560, 20684), subtract(#0, 1), multiply(#1, 22560), add(#2, 22560)",
+        "parsed_steps": [
+          [
+            "divide",
+            "22560",
+            "20684"
+          ],
+          [
+            "subtract",
+            "#0",
+            "1"
+          ],
+          [
+            "multiply",
+            "#1",
+            "22560"
+          ],
+          [
+            "add",
+            "#2",
+            "22560"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 24606.14968,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_24606.14968_expected_22560.05"
+      },
+      {
+        "target_id": "STT/2008/page_83.pdf-2",
+        "arm": "Corruption_50%",
+        "gold_answer": 1.25,
+        "raw_program": "divide(subtract(1.8, 1.1), 1.1)",
+        "normalized_program": "divide(subtract(1.8, 1.1), 1.1)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "1.8",
+            "1.1"
+          ],
+          [
+            "divide",
+            "#0",
+            "1.1"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.63636,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_0.63636_expected_1.25"
+      },
+      {
+        "target_id": "MRO/2007/page_134.pdf-2",
+        "arm": "Corruption_50%",
+        "gold_answer": 66.0,
+        "raw_program": "add(30, 36)",
+        "normalized_program": "add(30, 36)",
+        "parsed_steps": [
+          [
+            "add",
+            "30",
+            "36"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 66.0,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "IPG/2015/page_48.pdf-3",
+        "arm": "Corruption_50%",
+        "gold_answer": 68.4,
+        "raw_program": "subtract(-33.7, 34.7)",
+        "normalized_program": "subtract(-33.7, 34.7)",
+        "parsed_steps": [
+          [
+            "subtract",
+            "-33.7",
+            "34.7"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -68.4,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-68.4_expected_68.4"
+      },
+      {
+        "target_id": "IP/2007/page_31.pdf-1",
+        "arm": "Corruption_50%",
+        "gold_answer": 0.20972,
+        "raw_program": "divide(1.1, 5.245)",
+        "normalized_program": "divide(1.1, 5.245)",
+        "parsed_steps": [
+          [
+            "divide",
+            "1.1",
+            "5.245"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.20972,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "IP/2009/page_37.pdf-1",
+        "arm": "Corruption_50%",
+        "gold_answer": 0.71895,
+        "raw_program": "divide(2.2, 3.060)",
+        "normalized_program": "divide(2.2, 3.060)",
+        "parsed_steps": [
+          [
+            "divide",
+            "2.2",
+            "3.060"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 0.71895,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLL/2007/page_35.pdf-3",
+        "arm": "Corruption_50%",
+        "gold_answer": 20.74359,
+        "raw_program": "multiply(431170, 48.11), divide(#0, 1000000)",
+        "normalized_program": "multiply(431170, 48.11), divide(#0, 1000000)",
+        "parsed_steps": [
+          [
+            "multiply",
+            "431170",
+            "48.11"
+          ],
+          [
+            "divide",
+            "#0",
+            "1000000"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 20.74359,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "SNPS/2006/page_69.pdf-1",
+        "arm": "Corruption_50%",
+        "gold_answer": 0.54126,
+        "raw_program": "divide(8500, 15704), multiply(#0, 100)",
+        "normalized_program": "divide(8500, 15704), multiply(#0, 100)",
+        "parsed_steps": [
+          [
+            "divide",
+            "8500",
+            "15704"
+          ],
+          [
+            "multiply",
+            "#0",
+            "100"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 54.12634,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_54.12634_expected_0.54126"
+      },
+      {
+        "target_id": "TFX/2015/page_70.pdf-3",
+        "arm": "Corruption_50%",
+        "gold_answer": 386797189.66,
+        "raw_program": "multiply(4446967, 86.98)",
+        "normalized_program": "multiply(4446967, 86.98)",
+        "parsed_steps": [
+          [
+            "multiply",
+            "4446967",
+            "86.98"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 386797189.66,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "AON/2009/page_46.pdf-2",
+        "arm": "Corruption_50%",
+        "gold_answer": 846.0,
+        "raw_program": "table_min(segment operating income)",
+        "normalized_program": "table_min(segment operating income)",
+        "parsed_steps": null,
+        "execution_status": "parse_fail",
+        "execution_result": null,
+        "program_correct": false,
+        "error_category": "parse",
+        "error_detail": "expected ',' after first argument at position 34"
+      },
+      {
+        "target_id": "APD/2019/page_48.pdf-1",
+        "arm": "Corruption_50%",
+        "gold_answer": 2758.55,
+        "raw_program": "add(2547.2, 2969.9), divide(#0, 2)",
+        "normalized_program": "add(2547.2, 2969.9), divide(#0, 2)",
+        "parsed_steps": [
+          [
+            "add",
+            "2547.2",
+            "2969.9"
+          ],
+          [
+            "divide",
+            "#0",
+            "2"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 2758.55,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "AES/2016/page_191.pdf-3",
+        "arm": "Corruption_50%",
+        "gold_answer": -11.33333,
+        "raw_program": "divide(-13, 1)",
+        "normalized_program": "divide(-13, 1)",
+        "parsed_steps": [
+          [
+            "divide",
+            "-13",
+            "1"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": -13.0,
+        "program_correct": false,
+        "error_category": "wrong_result",
+        "error_detail": "got_-13.0_expected_-11.33333"
+      },
+      {
+        "target_id": "LMT/2015/page_56.pdf-2",
+        "arm": "Corruption_50%",
+        "gold_answer": 9198.33333,
+        "raw_program": "add(9288, 9202), add(#0, 9105), divide(#1, 3)",
+        "normalized_program": "add(9288, 9202), add(#0, 9105), divide(#1, 3)",
+        "parsed_steps": [
+          [
+            "add",
+            "9288",
+            "9202"
+          ],
+          [
+            "add",
+            "#0",
+            "9105"
+          ],
+          [
+            "divide",
+            "#1",
+            "3"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 9198.33333,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "MRO/2006/page_33.pdf-3",
+        "arm": "Corruption_50%",
+        "gold_answer": 22.33333,
+        "raw_program": "add(23, 22), add(#0, 22), divide(#1, 3)",
+        "normalized_program": "add(23, 22), add(#0, 22), divide(#1, 3)",
+        "parsed_steps": [
+          [
+            "add",
+            "23",
+            "22"
+          ],
+          [
+            "add",
+            "#0",
+            "22"
+          ],
+          [
+            "divide",
+            "#1",
+            "3"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": 22.33333,
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "JPM/2014/page_65.pdf-5",
+        "arm": "Corruption_50%",
+        "gold_answer": "no",
+        "raw_program": "greater(167.48, 189.69), multiply(#0, 100)",
+        "normalized_program": "greater(167.48, 189.69), multiply(#0, 100)",
+        "parsed_steps": [
+          [
+            "greater",
+            "167.48",
+            "189.69"
+          ],
+          [
+            "multiply",
+            "#0",
+            "100"
+          ]
+        ],
+        "execution_status": "exec_fail",
+        "execution_result": null,
+        "program_correct": false,
+        "error_category": "execution",
+        "error_detail": "execution_failed"
+      },
+      {
+        "target_id": "PPG/2013/page_40.pdf-2",
+        "arm": "Corruption_50%",
+        "gold_answer": "no",
+        "raw_program": "greater(288, 453)",
+        "normalized_program": "greater(288, 453)",
+        "parsed_steps": [
+          [
+            "greater",
+            "288",
+            "453"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "BLL/2010/page_28.pdf-2",
+        "arm": "Corruption_50%",
+        "gold_answer": "yes",
+        "raw_program": "greater(178.93, 123.56), multiply(#0, 100)",
+        "normalized_program": "greater(178.93, 123.56), multiply(#0, 100)",
+        "parsed_steps": [
+          [
+            "greater",
+            "178.93",
+            "123.56"
+          ],
+          [
+            "multiply",
+            "#0",
+            "100"
+          ]
+        ],
+        "execution_status": "exec_fail",
+        "execution_result": null,
+        "program_correct": false,
+        "error_category": "execution",
+        "error_detail": "execution_failed"
+      },
+      {
+        "target_id": "PNC/2009/page_46.pdf-3",
+        "arm": "Corruption_50%",
+        "gold_answer": "no",
+        "raw_program": "greater(14, 19)",
+        "normalized_program": "greater(14, 19)",
+        "parsed_steps": [
+          [
+            "greater",
+            "14",
+            "19"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      },
+      {
+        "target_id": "PPG/2013/page_40.pdf-1",
+        "arm": "Corruption_50%",
+        "gold_answer": "no",
+        "raw_program": "greater(345, 488)",
+        "normalized_program": "greater(345, 488)",
+        "parsed_steps": [
+          [
+            "greater",
+            "345",
+            "488"
+          ]
+        ],
+        "execution_status": "success",
+        "execution_result": "no",
+        "program_correct": true,
+        "error_category": null,
+        "error_detail": null
+      }
+    ]
+  },
+  "metrics": {
+    "0%": {
+      "total": 30,
+      "correct": 20,
+      "accuracy": 0.6666666666666666,
+      "error_categories": {
+        "wrong_result": 9,
+        "parse": 1
+      }
+    },
+    "10%": {
+      "total": 30,
+      "correct": 19,
+      "accuracy": 0.6333333333333333,
+      "error_categories": {
+        "wrong_result": 10,
+        "parse": 1
+      }
+    },
+    "25%": {
+      "total": 30,
+      "correct": 20,
+      "accuracy": 0.6666666666666666,
+      "error_categories": {
+        "wrong_result": 8,
+        "extraction": 1,
+        "parse": 1
+      }
+    },
+    "50%": {
+      "total": 30,
+      "correct": 18,
+      "accuracy": 0.6,
+      "error_categories": {
+        "wrong_result": 9,
+        "parse": 1,
+        "execution": 2
+      }
+    }
+  },
+  "evaluator": "canonical_evaluator_v2"
+}

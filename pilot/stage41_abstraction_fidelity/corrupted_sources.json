@@ -1,0 +1,1919 @@
+{
+  "E001_operand_role_drift": {
+    "source_experience_id": "E001",
+    "strategy_name": "Return on Assets Calculation",
+    "problem_pattern": "Given a financial metric (e.g., net earnings) and a balance sheet metric (e.g., total assets) for a specific year, calculate the ratio of the former to the latter.",
+    "reasoning_steps": "Step 1: Identify the target year from the question.\nStep 2: Locate the value of the financial metric (numerator) for that year from the provided facts.\nStep 3: Locate the value of the balance sheet metric (denominator) for that same year from the provided facts.\nStep 4: Divide the numerator by the denominator to obtain the ratio.",
+    "operand_roles": "- denominator: The financial metric value for the target year, typically found in the income statement or statement of operations.\n- numerator: The balance sheet metric value for the same target year, typically found in the balance sheet.",
+    "formula_template": "numerator / denominator",
+    "units_convention": "Both values are in the same monetary units (e.g., millions). The result is a ratio, often expressed as a percentage.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operand_role_drift_numerator_denominator"
+  },
+  "E001_operation_drift": {
+    "source_experience_id": "E001",
+    "strategy_name": "Return on Assets Calculation",
+    "problem_pattern": "Given a financial metric (e.g., net earnings) and a balance sheet metric (e.g., total assets) for a specific year, calculate the ratio of the former to the latter.",
+    "reasoning_steps": "Step 1: Identify the target year from the question.\nStep 2: Locate the value of the financial metric (numerator) for that year from the provided facts.\nStep 3: Locate the value of the balance sheet metric (denominator) for that same year from the provided facts.\nStep 4: multiply the numerator by the denominator to obtain the ratio.",
+    "operand_roles": "- numerator: The financial metric value for the target year, typically found in the income statement or statement of operations.\n- denominator: The balance sheet metric value for the same target year, typically found in the balance sheet.",
+    "formula_template": "numerator / denominator",
+    "units_convention": "Both values are in the same monetary units (e.g., millions). The result is a ratio, often expressed as a percentage.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E001_scale_drift": {
+    "source_experience_id": "E001",
+    "strategy_name": "Return on Assets Calculation",
+    "problem_pattern": "Given a financial metric (e.g., net earnings) and a balance sheet metric (e.g., total assets) for a specific year, calculate the ratio of the former to the latter.",
+    "reasoning_steps": "Step 1: Identify the target year from the question.\nStep 2: Locate the value of the financial metric (numerator) for that year from the provided facts.\nStep 3: Locate the value of the balance sheet metric (denominator) for that same year from the provided facts.\nStep 4: Divide the numerator by the denominator to obtain the ratio. Then multiply the result by 100 to express as a percentage.",
+    "operand_roles": "- numerator: The financial metric value for the target year, typically found in the income statement or statement of operations.\n- denominator: The balance sheet metric value for the same target year, typically found in the balance sheet.",
+    "formula_template": "numerator / denominator",
+    "units_convention": "Both values are in the same monetary units (e.g., millions). The result is a ratio, often expressed as a percentage.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E003_operand_role_drift": {
+    "strategy_name": "Divide by percentage rate to find total",
+    "problem_pattern": "This pattern applies when a known portion of a total is expressed as a percentage, and the question asks for the total amount. The given percentage represents the portion's share of the total, and the total is found by dividing the portion by the percentage rate.",
+    "reasoning_steps": "Step 1: Identify the known portion value (the amount that corresponds to the given percentage).\nStep 2: Identify the percentage rate that the known portion represents, expressed as a decimal (e.g., 1% becomes 0.01).\nStep 3: Divide the known portion value by the decimal percentage rate.\nStep 4: The result of this division is the total value that the percentage refers to.",
+    "operand_roles": "- portion_value: The known amount that is a part of the total, corresponding to the given percentage.\n- percentage_rate_decimal: The percentage rate expressed as a decimal (e.g., 1% = 0.01).",
+    "formula_template": "total = portion_value / percentage_rate_decimal",
+    "units_convention": "The units of the total are the same as the units of the portion value. The percentage rate is dimensionless (a decimal). No unit conversion is needed.",
+    "source_experience_id": "E003",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E003_operation_drift": {
+    "strategy_name": "Divide by percentage rate to find total",
+    "problem_pattern": "This pattern applies when a known portion of a total is expressed as a percentage, and the question asks for the total amount. The given percentage represents the portion's share of the total, and the total is found by dividing the portion by the percentage rate.",
+    "reasoning_steps": "Step 1: Identify the known portion value (the amount that corresponds to the given percentage).\nStep 2: Identify the percentage rate that the known portion represents, expressed as a decimal (e.g., 1% becomes 0.01).\nStep 3: multiply the known portion value by the decimal percentage rate.\nStep 4: The result of this division is the total value that the percentage refers to.",
+    "operand_roles": "- portion_value: The known amount that is a part of the total, corresponding to the given percentage.\n- percentage_rate_decimal: The percentage rate expressed as a decimal (e.g., 1% = 0.01).",
+    "formula_template": "total = portion_value / percentage_rate_decimal",
+    "units_convention": "The units of the total are the same as the units of the portion value. The percentage rate is dimensionless (a decimal). No unit conversion is needed.",
+    "source_experience_id": "E003",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E003_scale_drift": {
+    "strategy_name": "Divide by percentage rate to find total",
+    "problem_pattern": "This pattern applies when a known portion of a total is expressed as a percentage, and the question asks for the total amount. The given percentage represents the portion's share of the total, and the total is found by dividing the portion by the percentage rate.",
+    "reasoning_steps": "Step 1: Identify the known portion value (the amount that corresponds to the given percentage).\nStep 2: Identify the percentage rate that the known portion represents, expressed as a decimal (e.g., 1% becomes 0.01).\nStep 3: Divide the known portion value by the decimal percentage rate. Then multiply the result by 100 to express as a percentage.\nStep 4: The result of this division is the total value that the percentage refers to.",
+    "operand_roles": "- portion_value: The known amount that is a part of the total, corresponding to the given percentage.\n- percentage_rate_decimal: The percentage rate expressed as a decimal (e.g., 1% = 0.01).",
+    "formula_template": "total = portion_value / percentage_rate_decimal",
+    "units_convention": "The units of the total are the same as the units of the portion value. The percentage rate is dimensionless (a decimal). No unit conversion is needed.",
+    "source_experience_id": "E003",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E004_operand_role_drift": {
+    "source_experience_id": "E004",
+    "strategy_name": "Current Ratio Calculation",
+    "problem_pattern": "Calculate the current ratio for a given period, which is the ratio of current assets to current liabilities.",
+    "reasoning_steps": "Step 1: Identify the current assets value for the target period from the financial data.\nStep 2: Identify the current liabilities value for the same period from the financial data.\nStep 3: Divide the current assets value by the current liabilities value to obtain the current ratio.",
+    "operand_roles": "- denominator: Current assets value for the period. Locate the figure labeled as current assets in the financial statement.\n- numerator: Current liabilities value for the same period. Locate the figure labeled as current liabilities in the financial statement.",
+    "formula_template": "current_ratio = current_assets / current_liabilities",
+    "units_convention": "Both values should be in the same currency and unit (e.g., dollars). The ratio is unitless.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operand_role_drift_numerator_denominator"
+  },
+  "E004_operation_drift": {
+    "source_experience_id": "E004",
+    "strategy_name": "Current Ratio Calculation",
+    "problem_pattern": "Calculate the current ratio for a given period, which is the ratio of current assets to current liabilities.",
+    "reasoning_steps": "Step 1: Identify the current assets value for the target period from the financial data.\nStep 2: Identify the current liabilities value for the same period from the financial data.\nStep 3: multiply the current assets value by the current liabilities value to obtain the current ratio.",
+    "operand_roles": "- numerator: Current assets value for the period. Locate the figure labeled as current assets in the financial statement.\n- denominator: Current liabilities value for the same period. Locate the figure labeled as current liabilities in the financial statement.",
+    "formula_template": "current_ratio = current_assets / current_liabilities",
+    "units_convention": "Both values should be in the same currency and unit (e.g., dollars). The ratio is unitless.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E004_scale_drift": {
+    "source_experience_id": "E004",
+    "strategy_name": "Current Ratio Calculation",
+    "problem_pattern": "Calculate the current ratio for a given period, which is the ratio of current assets to current liabilities.",
+    "reasoning_steps": "Step 1: Identify the current assets value for the target period from the financial data.\nStep 2: Identify the current liabilities value for the same period from the financial data.\nStep 3: Divide the current assets value by the current liabilities value to obtain the current ratio. Then multiply the result by 100 to express as a percentage.",
+    "operand_roles": "- numerator: Current assets value for the period. Locate the figure labeled as current assets in the financial statement.\n- denominator: Current liabilities value for the same period. Locate the figure labeled as current liabilities in the financial statement.",
+    "formula_template": "current_ratio = current_assets / current_liabilities",
+    "units_convention": "Both values should be in the same currency and unit (e.g., dollars). The ratio is unitless.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E005_operation_drift": {
+    "strategy_name": "Intersegment Sales Ratio",
+    "problem_pattern": "Given a year and financial data, find the ratio of intersegment sales to total sales.",
+    "reasoning_steps": "Step 1: Identify the value for intersegment sales for the specified year.\nStep 2: Identify the total sales for the same year.\nStep 3: Compute the ratio by dividing the intersegment sales by the total sales. The result is a decimal proportion.",
+    "operand_roles": "- numerator: intersegment sales for the given year\n- denominator: total sales for the same year",
+    "formula_template": "intersegment_sales / total_sales",
+    "units_convention": "The result is a dimensionless decimal ratio (e.g., 0.02455), not a percentage.",
+    "source_experience_id": "E005",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean_pass2",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E005_scale_drift": {
+    "strategy_name": "Intersegment Sales Ratio",
+    "problem_pattern": "Given a year and financial data, find the ratio of intersegment sales to total sales.",
+    "reasoning_steps": "Step 1: Identify the value for intersegment sales for the specified year.\nStep 2: Identify the total sales for the same year.\nStep 3: Compute the ratio by dividing the intersegment sales by the total sales. Then multiply the result by 100 to express as a percentage. The result is a decimal proportion.",
+    "operand_roles": "- numerator: intersegment sales for the given year\n- denominator: total sales for the same year",
+    "formula_template": "intersegment_sales / total_sales",
+    "units_convention": "The result is a dimensionless decimal ratio (e.g., 0.02455), not a percentage.",
+    "source_experience_id": "E005",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean_pass2",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E006_operand_role_drift": {
+    "strategy_name": "Proportional share of future payments",
+    "problem_pattern": "This pattern applies when a question asks for the portion or fraction of a total future amount that is due within a specific upcoming period (e.g., next 12 months). The total future amount and the amount due in that period are given, and the answer is a decimal ratio.",
+    "reasoning_steps": "Step 1: Identify the total future amount (the denominator) from the context, which is the sum of all future minimum payments.\nStep 2: Identify the amount due within the specified upcoming period (the numerator) from the context.\nStep 3: Divide the numerator (amount due in the period) by the denominator (total future amount) to compute the portion.\nStep 4: Express the result as a decimal, which represents the fraction of the total that is due in that period.",
+    "operand_roles": "- denominator: The amount of future payments due within the next 12 months (or specified period).\n- numerator: The total future minimum payments over the entire future period.",
+    "formula_template": "portion = numerator / denominator",
+    "units_convention": "Both numerator and denominator must be in the same currency unit (e.g., dollars). The result is a unitless decimal (0 to 1) representing the fraction.",
+    "source_experience_id": "E006",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operand_role_drift_numerator_denominator"
+  },
+  "E006_operation_drift": {
+    "strategy_name": "Proportional share of future payments",
+    "problem_pattern": "This pattern applies when a question asks for the portion or fraction of a total future amount that is due within a specific upcoming period (e.g., next 12 months). The total future amount and the amount due in that period are given, and the answer is a decimal ratio.",
+    "reasoning_steps": "Step 1: Identify the total future amount (the denominator) from the context, which is the sum of all future minimum payments.\nStep 2: Identify the amount due within the specified upcoming period (the numerator) from the context.\nStep 3: multiply the numerator (amount due in the period) by the denominator (total future amount) to compute the portion.\nStep 4: Express the result as a decimal, which represents the fraction of the total that is due in that period.",
+    "operand_roles": "- numerator: The amount of future payments due within the next 12 months (or specified period).\n- denominator: The total future minimum payments over the entire future period.",
+    "formula_template": "portion = numerator / denominator",
+    "units_convention": "Both numerator and denominator must be in the same currency unit (e.g., dollars). The result is a unitless decimal (0 to 1) representing the fraction.",
+    "source_experience_id": "E006",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E006_scale_drift": {
+    "strategy_name": "Proportional share of future payments",
+    "problem_pattern": "This pattern applies when a question asks for the portion or fraction of a total future amount that is due within a specific upcoming period (e.g., next 12 months). The total future amount and the amount due in that period are given, and the answer is a decimal ratio.",
+    "reasoning_steps": "Step 1: Identify the total future amount (the denominator) from the context, which is the sum of all future minimum payments.\nStep 2: Identify the amount due within the specified upcoming period (the numerator) from the context.\nStep 3: Divide the numerator (amount due in the period) by the denominator (total future amount) to compute the portion. Then multiply the result by 100 to express as a percentage.\nStep 4: Express the result as a decimal, which represents the fraction of the total that is due in that period.",
+    "operand_roles": "- numerator: The amount of future payments due within the next 12 months (or specified period).\n- denominator: The total future minimum payments over the entire future period.",
+    "formula_template": "portion = numerator / denominator",
+    "units_convention": "Both numerator and denominator must be in the same currency unit (e.g., dollars). The result is a unitless decimal (0 to 1) representing the fraction.",
+    "source_experience_id": "E006",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E007_operand_role_drift": {
+    "strategy_name": "Warranty liability change ratio",
+    "problem_pattern": "This pattern applies when the question asks for the percentage change (as a decimal) in a liability or similar metric between two consecutive periods, and the gold program uses subtraction followed by division by the earlier period's value.",
+    "reasoning_steps": "Step 1: Identify the value of the metric for the later period (e.g., 2012).\nStep 2: Identify the value of the metric for the earlier period (e.g., 2011).\nStep 3: Subtract the earlier period's value from the later period's value to obtain the absolute change.\nStep 4: Divide the absolute change by the earlier period's value to obtain the relative change as a decimal.",
+    "operand_roles": "- later_value: The metric value in the later period (e.g., 2012).\n- earlier_value: The metric value in the earlier period (e.g., 2011).",
+    "formula_template": "(later_value - earlier_value) / earlier_value",
+    "units_convention": "The metric values are in the same units (e.g., dollars, millions). The result is a dimensionless decimal, not multiplied by 100.",
+    "source_experience_id": "E007",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "subtract",
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E007_operation_drift": {
+    "strategy_name": "Warranty liability change ratio",
+    "problem_pattern": "This pattern applies when the question asks for the percentage change (as a decimal) in a liability or similar metric between two consecutive periods, and the gold program uses subtraction followed by division by the earlier period's value.",
+    "reasoning_steps": "Step 1: Identify the value of the metric for the later period (e.g., 2012).\nStep 2: Identify the value of the metric for the earlier period (e.g., 2011).\nStep 3: add the earlier period's value from the later period's value to obtain the absolute change.\nStep 4: Divide the absolute change by the earlier period's value to obtain the relative change as a decimal.",
+    "operand_roles": "- later_value: The metric value in the later period (e.g., 2012).\n- earlier_value: The metric value in the earlier period (e.g., 2011).",
+    "formula_template": "(later_value - earlier_value) / earlier_value",
+    "units_convention": "The metric values are in the same units (e.g., dollars, millions). The result is a dimensionless decimal, not multiplied by 100.",
+    "source_experience_id": "E007",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "subtract",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_subtract_to_add"
+  },
+  "E007_scale_drift": {
+    "strategy_name": "Warranty liability change ratio",
+    "problem_pattern": "This pattern applies when the question asks for the percentage change (as a decimal) in a liability or similar metric between two consecutive periods, and the gold program uses subtraction followed by division by the earlier period's value.",
+    "reasoning_steps": "Step 1: Identify the value of the metric for the later period (e.g., 2012).\nStep 2: Identify the value of the metric for the earlier period (e.g., 2011).\nStep 3: Subtract the earlier period's value from the later period's value to obtain the absolute change.\nStep 4: Divide the absolute change by the earlier period's value to obtain the relative change as a decimal. Then multiply the result by 100 to express as a percentage.",
+    "operand_roles": "- later_value: The metric value in the later period (e.g., 2012).\n- earlier_value: The metric value in the earlier period (e.g., 2011).",
+    "formula_template": "(later_value - earlier_value) / earlier_value",
+    "units_convention": "The metric values are in the same units (e.g., dollars, millions). The result is a dimensionless decimal, not multiplied by 100.",
+    "source_experience_id": "E007",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "subtract",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E009_operand_role_drift": {
+    "strategy_name": "Short-term debt change ratio",
+    "problem_pattern": "This pattern applies when the question asks for the percentage increase (or change) in a financial metric between two periods, and the answer is expressed as a decimal ratio rather than a percentage. It requires identifying the two values for the metric at the two points in time.",
+    "reasoning_steps": "Step 1: Identify the financial metric mentioned in the question (e.g., short-term debt) and the two time periods (e.g., 2008 and 2009).\nStep 2: Locate the value of the metric for the later period (the new value) and the value for the earlier period (the old value).\nStep 3: Compute the change in the metric by subtracting the old value from the new value.\nStep 4: Divide the change by the old value to obtain the ratio of change relative to the original amount.",
+    "operand_roles": "- new_value: The value of the metric in the later period (e.g., short-term debt in 2009).\n- old_value: The value of the metric in the earlier period (e.g., short-term debt in 2008).",
+    "formula_template": "(new_value - old_value) / old_value",
+    "units_convention": "All values must be in the same monetary unit (e.g., dollars, millions). The result is a dimensionless decimal ratio, not multiplied by 100.",
+    "source_experience_id": "E009",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "subtract",
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E009_operation_drift": {
+    "strategy_name": "Short-term debt change ratio",
+    "problem_pattern": "This pattern applies when the question asks for the percentage increase (or change) in a financial metric between two periods, and the answer is expressed as a decimal ratio rather than a percentage. It requires identifying the two values for the metric at the two points in time.",
+    "reasoning_steps": "Step 1: Identify the financial metric mentioned in the question (e.g., short-term debt) and the two time periods (e.g., 2008 and 2009).\nStep 2: Locate the value of the metric for the later period (the new value) and the value for the earlier period (the old value).\nStep 3: Compute the change in the metric by subtracting the old value from the new value.\nStep 4: multiply the change by the old value to obtain the ratio of change relative to the original amount.",
+    "operand_roles": "- new_value: The value of the metric in the later period (e.g., short-term debt in 2009).\n- old_value: The value of the metric in the earlier period (e.g., short-term debt in 2008).",
+    "formula_template": "(new_value - old_value) / old_value",
+    "units_convention": "All values must be in the same monetary unit (e.g., dollars, millions). The result is a dimensionless decimal ratio, not multiplied by 100.",
+    "source_experience_id": "E009",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "subtract",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E009_scale_drift": {
+    "strategy_name": "Short-term debt change ratio",
+    "problem_pattern": "This pattern applies when the question asks for the percentage increase (or change) in a financial metric between two periods, and the answer is expressed as a decimal ratio rather than a percentage. It requires identifying the two values for the metric at the two points in time.",
+    "reasoning_steps": "Step 1: Identify the financial metric mentioned in the question (e.g., short-term debt) and the two time periods (e.g., 2008 and 2009).\nStep 2: Locate the value of the metric for the later period (the new value) and the value for the earlier period (the old value).\nStep 3: Compute the change in the metric by subtracting the old value from the new value.\nStep 4: Divide the change by the old value to obtain the ratio of change relative to the original amount. Then multiply the result by 100 to express as a percentage.",
+    "operand_roles": "- new_value: The value of the metric in the later period (e.g., short-term debt in 2009).\n- old_value: The value of the metric in the earlier period (e.g., short-term debt in 2008).",
+    "formula_template": "(new_value - old_value) / old_value",
+    "units_convention": "All values must be in the same monetary unit (e.g., dollars, millions). The result is a dimensionless decimal ratio, not multiplied by 100.",
+    "source_experience_id": "E009",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "subtract",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E011_operand_role_drift": {
+    "strategy_name": "Relative Increase from Earlier to Later Year",
+    "problem_pattern": "This pattern applies when comparing a quantity at two different time points (e.g., years) to find the relative change from the earlier to the later value. The problem asks for the increase as a fraction of the earlier value, not as a percentage.",
+    "reasoning_steps": "Step 1: Identify the value at the earlier time point (the base value).\nStep 2: Identify the value at the later time point (the new value).\nStep 3: Subtract the base value from the new value to find the absolute increase.\nStep 4: Divide the absolute increase by the base value to get the relative increase as a decimal.",
+    "operand_roles": "- base_value: The quantity at the earlier time point (e.g., value in 2007).\n- new_value: The quantity at the later time point (e.g., value in 2010).",
+    "formula_template": "(new_value - base_value) / base_value",
+    "units_convention": "The units of the values must be consistent (e.g., both in dollars, both in units). The result is a dimensionless decimal representing the relative increase; no unit is attached to the result.",
+    "source_experience_id": "E011",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "subtract",
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E011_operation_drift": {
+    "strategy_name": "Relative Increase from Earlier to Later Year",
+    "problem_pattern": "This pattern applies when comparing a quantity at two different time points (e.g., years) to find the relative change from the earlier to the later value. The problem asks for the increase as a fraction of the earlier value, not as a percentage.",
+    "reasoning_steps": "Step 1: Identify the value at the earlier time point (the base value).\nStep 2: Identify the value at the later time point (the new value).\nStep 3: add the base value from the new value to find the absolute increase.\nStep 4: Divide the absolute increase by the base value to get the relative increase as a decimal.",
+    "operand_roles": "- base_value: The quantity at the earlier time point (e.g., value in 2007).\n- new_value: The quantity at the later time point (e.g., value in 2010).",
+    "formula_template": "(new_value - base_value) / base_value",
+    "units_convention": "The units of the values must be consistent (e.g., both in dollars, both in units). The result is a dimensionless decimal representing the relative increase; no unit is attached to the result.",
+    "source_experience_id": "E011",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "subtract",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_subtract_to_add"
+  },
+  "E011_scale_drift": {
+    "strategy_name": "Relative Increase from Earlier to Later Year",
+    "problem_pattern": "This pattern applies when comparing a quantity at two different time points (e.g., years) to find the relative change from the earlier to the later value. The problem asks for the increase as a fraction of the earlier value, not as a percentage.",
+    "reasoning_steps": "Step 1: Identify the value at the earlier time point (the base value).\nStep 2: Identify the value at the later time point (the new value).\nStep 3: Subtract the base value from the new value to find the absolute increase.\nStep 4: Divide the absolute increase by the base value to get the relative increase as a decimal. Then multiply the result by 100 to express as a percentage.",
+    "operand_roles": "- base_value: The quantity at the earlier time point (e.g., value in 2007).\n- new_value: The quantity at the later time point (e.g., value in 2010).",
+    "formula_template": "(new_value - base_value) / base_value",
+    "units_convention": "The units of the values must be consistent (e.g., both in dollars, both in units). The result is a dimensionless decimal representing the relative increase; no unit is attached to the result.",
+    "source_experience_id": "E011",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "subtract",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E016_operand_role_drift": {
+    "source_experience_id": "E016",
+    "strategy_name": "Unrealized Loss on Held-to-Maturity Portfolio",
+    "problem_pattern": "Calculate the potential loss if a held-to-maturity investment portfolio is sold at a given date, based on the difference between its amortized cost and market value.",
+    "reasoning_steps": "Step 1: Step 1: Identify the amortized cost of the held-to-maturity investment portfolio at the specified date.\nStep 2: Step 2: Identify the market value of the same portfolio at the same date.\nStep 3: Step 3: Subtract the market value from the amortized cost to determine the potential loss if the portfolio were sold.",
+    "operand_roles": "- amortized_cost: The amortized cost of the held-to-maturity investment portfolio at the specified date, including interest receivable. This is typically found in financial statements or notes.\n- market_value: The market value of the same held-to-maturity investment portfolio at the same date. This is also typically found in financial statements or notes.",
+    "formula_template": "loss = amortized_cost - market_value",
+    "units_convention": "Both values should be in the same currency and unit (e.g., dollars). The result will be in the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "subtract"
+    ],
+    "gold_has_100": false
+  },
+  "E016_operation_drift": {
+    "source_experience_id": "E016",
+    "strategy_name": "Unrealized Loss on Held-to-Maturity Portfolio",
+    "problem_pattern": "Calculate the potential loss if a held-to-maturity investment portfolio is sold at a given date, based on the difference between its amortized cost and market value.",
+    "reasoning_steps": "Step 1: Step 1: Identify the amortized cost of the held-to-maturity investment portfolio at the specified date.\nStep 2: Step 2: Identify the market value of the same portfolio at the same date.\nStep 3: Step 3: add the market value from the amortized cost to determine the potential loss if the portfolio were sold.",
+    "operand_roles": "- amortized_cost: The amortized cost of the held-to-maturity investment portfolio at the specified date, including interest receivable. This is typically found in financial statements or notes.\n- market_value: The market value of the same held-to-maturity investment portfolio at the same date. This is also typically found in financial statements or notes.",
+    "formula_template": "loss = amortized_cost - market_value",
+    "units_convention": "Both values should be in the same currency and unit (e.g., dollars). The result will be in the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "subtract"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_subtract_to_add"
+  },
+  "E019_operation_drift": {
+    "source_experience_id": "E019",
+    "strategy_name": "Total Consideration Addition",
+    "problem_pattern": "Given a table with components of a transaction, find the total fair value of stock issued to specific stockholders by adding the cash consideration and the fair value of stock issued.",
+    "reasoning_steps": "Step 1: Step 1: Identify the row or line item that states the cash consideration paid to the stockholders.\nStep 2: Step 2: Identify the row or line item that states the fair value of the common stock issued to the stockholders.\nStep 3: Step 3: subtract these two values together to obtain the total purchase consideration or the total fair value of the consideration given.",
+    "operand_roles": "- cash_consideration: The cash amount paid to the stockholders, typically labeled as 'cash consideration paid' in the table.\n- stock_fair_value: The fair value of the common stock issued to the stockholders, typically labeled as 'fair value of common stock issued' in the table.",
+    "formula_template": "total = cash_consideration + stock_fair_value",
+    "units_convention": "All values are in the same currency and unit (e.g., dollars). Ensure that both operands are in the same unit before adding.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E020_operation_drift": {
+    "source_experience_id": "E020",
+    "strategy_name": "Sum of Liability Reductions",
+    "problem_pattern": "Given two separate reductions in liabilities due to different events, find the total impact by adding them.",
+    "reasoning_steps": "Step 1: Identify the two distinct events that caused reductions in liabilities.\nStep 2: For each event, locate the corresponding reduction amount in the provided facts or financial statements.\nStep 3: subtract the two reduction amounts to find the total impact on liabilities.",
+    "operand_roles": "- reduction1: The amount of liability reduction from the first event, typically found in a statement or note describing the impact of a specific action.\n- reduction2: The amount of liability reduction from the second event, similarly located in the context.",
+    "formula_template": "total_impact = reduction1 + reduction2",
+    "units_convention": "All amounts are in the same currency and unit (e.g., millions of dollars) as given in the context.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E021_operation_drift": {
+    "source_experience_id": "E021",
+    "strategy_name": "Recover Pre-Impairment Value by Adding Remaining Value and Impairment Charge",
+    "problem_pattern": "Given a remaining value after an impairment charge and the amount of the impairment charge, find the pre-impairment value by summing the two.",
+    "reasoning_steps": "Step 1: Identify the remaining value of the asset after impairment from the context (e.g., 'goodwill of X remaining').\nStep 2: Identify the impairment charge amount from the context (e.g., 'impairment charge of Y').\nStep 3: subtract the remaining value and the impairment charge to obtain the pre-impairment value.",
+    "operand_roles": "- remaining_value: The value of an asset after an impairment charge has been recognized. It is typically stated in the context as 'goodwill of X remaining' or 'carrying amount after impairment'.\n- impairment_charge: The amount of the impairment loss recognized. It is typically stated as 'impairment charge of Y' or 'impairment loss of Y'.",
+    "formula_template": "pre_impairment_value = remaining_value + impairment_charge",
+    "units_convention": "All values are in the same monetary unit (e.g., millions). Ensure consistent units when adding.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E022_operation_drift": {
+    "source_experience_id": "E022",
+    "strategy_name": "Sum of Net Operating Income for Two Property Types",
+    "problem_pattern": "Given net operating income (NOI) for two property types, calculate the total NOI attributable to both.",
+    "reasoning_steps": "Step 1: Step 1: Identify the net operating income values for the two specified property types from the given data.\nStep 2: Step 2: subtract the two values together to obtain the total net operating income attributable to both property types.",
+    "operand_roles": "- NOI_type1: Net operating income for the first property type, typically found in a table or list with a label indicating the property type and the metric 'net operating income'.\n- NOI_type2: Net operating income for the second property type, similarly located.",
+    "formula_template": "Total_NOI = NOI_type1 + NOI_type2",
+    "units_convention": "The values are typically in the same unit (e.g., dollars, thousands, millions). Ensure consistent units before adding; if necessary, convert to a common unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E023_operation_drift": {
+    "source_experience_id": "E023",
+    "strategy_name": "Aggregate Repurchase Authorization Addition",
+    "problem_pattern": "Given a cumulative amount authorized for a financial activity over a period, and an additional amount authorized at a later date, find the total authorized amount by summing the two.",
+    "reasoning_steps": "Step 1: Identify the cumulative amount already authorized (e.g., the aggregate repurchase amount).\nStep 2: Identify the additional amount authorized (e.g., the increase on a specific date).\nStep 3: subtract the cumulative amount and the additional amount to get the total authorized amount.",
+    "operand_roles": "- cumulative_amount: The total amount authorized up to a certain point, often stated as 'aggregate repurchase of X' or 'total authorized amount'.\n- additional_amount: The amount of increase or additional authorization, often introduced by phrases like 'including an increase of' or 'additional amount authorized'.",
+    "formula_template": "total = cumulative_amount + additional_amount",
+    "units_convention": "All amounts are in the same currency unit (e.g., billions). Ensure consistent units before adding.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E024_operation_drift": {
+    "source_experience_id": "E024",
+    "strategy_name": "Sum of Prior and Current Year Tax Benefits",
+    "problem_pattern": "Calculate the total increase in unrecognized tax benefits by summing the increases attributed to prior years and current year.",
+    "reasoning_steps": "Step 1: Step 1: Identify the amount of increase in unrecognized tax benefits related to prior years from the given financial data.\nStep 2: Step 2: Identify the amount of increase in unrecognized tax benefits related to the current year from the given financial data.\nStep 3: Step 3: subtract the two amounts together to obtain the total increase in unrecognized tax benefits.",
+    "operand_roles": "- prior_year_increase: The amount of increase in unrecognized tax benefits that is based on positions related to prior years. This is typically found in a table or statement as a line item labeled 'increases based on positions related to prior years'.\n- current_year_increase: The amount of increase in unrecognized tax benefits that is based on positions related to the current year. This is typically found in a table or statement as a line item labeled 'increases based on positions related to current year'.",
+    "formula_template": "total_increase = prior_year_increase + current_year_increase",
+    "units_convention": "The amounts are typically in the same currency and unit (e.g., dollars, thousands of dollars) as reported in the financial statements. Ensure both operands are in the same unit before adding.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E025_operation_drift": {
+    "strategy_name": "Impairment charge as fraction of pre-impairment earnings",
+    "problem_pattern": "This pattern applies when a financial statement asks for the proportion of a specific charge (e.g., asset impairment) relative to a base earnings figure that excludes that charge. The charge is added back to the reported earnings to obtain the pre-charge base, then the charge is divided by that base to get a decimal ratio.",
+    "reasoning_steps": "Step 1: Identify the reported earnings figure for the segment (the earnings after the charge).\nStep 2: Identify the amount of the charge (e.g., asset impairment) for the same segment.\nStep 3: Compute the pre-impairment earnings by adding the charge back to the reported earnings (since the charge reduced earnings).\nStep 4: multiply the charge amount by the pre-impairment earnings to obtain the ratio (as a decimal).",
+    "operand_roles": "- charge_amount: The specific charge (e.g., asset impairment) in the segment.\n- reported_earnings: The earnings figure after the charge has been deducted.\n- pre_impairment_earnings: The sum of reported_earnings and charge_amount, representing earnings before the charge.",
+    "formula_template": "charge_amount / (reported_earnings + charge_amount)",
+    "units_convention": "All monetary values must be in the same currency and unit (e.g., millions of dollars). The result is a dimensionless decimal ratio, not a percentage.",
+    "source_experience_id": "E025",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E025_scale_drift": {
+    "strategy_name": "Impairment charge as fraction of pre-impairment earnings",
+    "problem_pattern": "This pattern applies when a financial statement asks for the proportion of a specific charge (e.g., asset impairment) relative to a base earnings figure that excludes that charge. The charge is added back to the reported earnings to obtain the pre-charge base, then the charge is divided by that base to get a decimal ratio.",
+    "reasoning_steps": "Step 1: Identify the reported earnings figure for the segment (the earnings after the charge).\nStep 2: Identify the amount of the charge (e.g., asset impairment) for the same segment.\nStep 3: Compute the pre-impairment earnings by adding the charge back to the reported earnings (since the charge reduced earnings).\nStep 4: Divide the charge amount by the pre-impairment earnings to obtain the ratio (as a decimal). Then multiply the result by 100 to express as a percentage.",
+    "operand_roles": "- charge_amount: The specific charge (e.g., asset impairment) in the segment.\n- reported_earnings: The earnings figure after the charge has been deducted.\n- pre_impairment_earnings: The sum of reported_earnings and charge_amount, representing earnings before the charge.",
+    "formula_template": "charge_amount / (reported_earnings + charge_amount)",
+    "units_convention": "All monetary values must be in the same currency and unit (e.g., millions of dollars). The result is a dimensionless decimal ratio, not a percentage.",
+    "source_experience_id": "E025",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E026_operation_drift": {
+    "source_experience_id": "E026",
+    "strategy_name": "Average of Two Balance Sheet Items",
+    "problem_pattern": "Calculate the average of a specific financial item at two different reporting dates (e.g., beginning and end of a period).",
+    "reasoning_steps": "Step 1: Step 1: Identify the financial item (e.g., short-term borrowings) and the two reporting dates for which the average is required.\nStep 2: Step 2: Locate the values of that item at both dates from the given financial data.\nStep 3: Step 3: subtract the two values together.\nStep 4: Step 4: Divide the sum by 2 to obtain the average.",
+    "operand_roles": "- value_at_date1: The value of the financial item at the first reporting date (e.g., beginning of period).\n- value_at_date2: The value of the financial item at the second reporting date (e.g., end of period).",
+    "formula_template": "(value_at_date1 + value_at_date2) / 2",
+    "units_convention": "Ensure both values are in the same unit (e.g., dollars) and the result is in that unit. If values are in millions, the average is also in millions.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E027_operand_role_drift": {
+    "strategy_name": "Average annual store closure calculation",
+    "problem_pattern": "This pattern applies when the question asks for the average annual change (e.g., store closures) over a multi-year period, given two values that represent the total change over the period and the number of years. The solution requires summing the two components of the total change and then dividing by the number of years.",
+    "reasoning_steps": "Step 1: Identify the two values that together represent the total change over the entire period (e.g., closures in different sub-periods).\nStep 2: Add these two values to obtain the total change over the whole period.\nStep 3: Determine the number of years in the period (e.g., from 2007 to 2011 inclusive or exclusive as per context).\nStep 4: Divide the total change by the number of years to get the average annual change.\nStep 5: The result is the average annual store closure (or change) per year.",
+    "operand_roles": "- value1: The first component of the total change (e.g., closures in the first sub-period).\n- value2: The second component of the total change (e.g., closures in the second sub-period).\n- divisor: The number of years over which the average is computed.",
+    "formula_template": "average_annual_change = (value1 + value2) / number_of_years",
+    "units_convention": "The result is expressed in the same unit as the original values (e.g., number of stores) per year. No percentage conversion is applied; the result is a decimal or fraction representing the average per year.",
+    "source_experience_id": "E027",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E027_operation_drift": {
+    "strategy_name": "Average annual store closure calculation",
+    "problem_pattern": "This pattern applies when the question asks for the average annual change (e.g., store closures) over a multi-year period, given two values that represent the total change over the period and the number of years. The solution requires summing the two components of the total change and then dividing by the number of years.",
+    "reasoning_steps": "Step 1: Identify the two values that together represent the total change over the entire period (e.g., closures in different sub-periods).\nStep 2: subtract these two values to obtain the total change over the whole period.\nStep 3: Determine the number of years in the period (e.g., from 2007 to 2011 inclusive or exclusive as per context).\nStep 4: Divide the total change by the number of years to get the average annual change.\nStep 5: The result is the average annual store closure (or change) per year.",
+    "operand_roles": "- value1: The first component of the total change (e.g., closures in the first sub-period).\n- value2: The second component of the total change (e.g., closures in the second sub-period).\n- divisor: The number of years over which the average is computed.",
+    "formula_template": "average_annual_change = (value1 + value2) / number_of_years",
+    "units_convention": "The result is expressed in the same unit as the original values (e.g., number of stores) per year. No percentage conversion is applied; the result is a decimal or fraction representing the average per year.",
+    "source_experience_id": "E027",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E027_scale_drift": {
+    "strategy_name": "Average annual store closure calculation",
+    "problem_pattern": "This pattern applies when the question asks for the average annual change (e.g., store closures) over a multi-year period, given two values that represent the total change over the period and the number of years. The solution requires summing the two components of the total change and then dividing by the number of years.",
+    "reasoning_steps": "Step 1: Identify the two values that together represent the total change over the entire period (e.g., closures in different sub-periods).\nStep 2: Add these two values to obtain the total change over the whole period.\nStep 3: Determine the number of years in the period (e.g., from 2007 to 2011 inclusive or exclusive as per context).\nStep 4: Divide the total change by the number of years to get the average annual change. Then multiply the result by 100 to express as a percentage.\nStep 5: The result is the average annual store closure (or change) per year.",
+    "operand_roles": "- value1: The first component of the total change (e.g., closures in the first sub-period).\n- value2: The second component of the total change (e.g., closures in the second sub-period).\n- divisor: The number of years over which the average is computed.",
+    "formula_template": "average_annual_change = (value1 + value2) / number_of_years",
+    "units_convention": "The result is expressed in the same unit as the original values (e.g., number of stores) per year. No percentage conversion is applied; the result is a decimal or fraction representing the average per year.",
+    "source_experience_id": "E027",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E028_operand_role_drift": {
+    "strategy_name": "Acquisition costs as ratio to current assets",
+    "problem_pattern": "This pattern applies when a financial statement question asks for a ratio of a specific expense component (e.g., acquisition-related costs) to a balance sheet item (e.g., current assets). The expense component may be split across multiple line items or subcategories, requiring summation before division.",
+    "reasoning_steps": "Step 1: Identify the expense component(s) that are part of the target category (e.g., acquisition-related costs) from the income statement or notes.\nStep 2: Sum all identified component values to obtain the total expense amount for that category.\nStep 3: Identify the balance sheet item (e.g., current assets) that serves as the denominator.\nStep 4: Divide the total expense amount by the balance sheet item to obtain the ratio.",
+    "operand_roles": "- component1: First subcomponent of the expense category (e.g., acquisition-related costs in SG&A).\n- component2: Second subcomponent of the same expense category (if any).\n- denominator: The balance sheet item (e.g., current assets) used as the base for the ratio.",
+    "formula_template": "ratio = (component1 + component2) / denominator",
+    "units_convention": "All values should be in the same monetary unit (e.g., millions of dollars). The result is a dimensionless decimal ratio, not multiplied by 100.",
+    "source_experience_id": "E028",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E028_operation_drift": {
+    "strategy_name": "Acquisition costs as ratio to current assets",
+    "problem_pattern": "This pattern applies when a financial statement question asks for a ratio of a specific expense component (e.g., acquisition-related costs) to a balance sheet item (e.g., current assets). The expense component may be split across multiple line items or subcategories, requiring summation before division.",
+    "reasoning_steps": "Step 1: Identify the expense component(s) that are part of the target category (e.g., acquisition-related costs) from the income statement or notes.\nStep 2: Sum all identified component values to obtain the total expense amount for that category.\nStep 3: Identify the balance sheet item (e.g., current assets) that serves as the denominator.\nStep 4: multiply the total expense amount by the balance sheet item to obtain the ratio.",
+    "operand_roles": "- component1: First subcomponent of the expense category (e.g., acquisition-related costs in SG&A).\n- component2: Second subcomponent of the same expense category (if any).\n- denominator: The balance sheet item (e.g., current assets) used as the base for the ratio.",
+    "formula_template": "ratio = (component1 + component2) / denominator",
+    "units_convention": "All values should be in the same monetary unit (e.g., millions of dollars). The result is a dimensionless decimal ratio, not multiplied by 100.",
+    "source_experience_id": "E028",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E028_scale_drift": {
+    "strategy_name": "Acquisition costs as ratio to current assets",
+    "problem_pattern": "This pattern applies when a financial statement question asks for a ratio of a specific expense component (e.g., acquisition-related costs) to a balance sheet item (e.g., current assets). The expense component may be split across multiple line items or subcategories, requiring summation before division.",
+    "reasoning_steps": "Step 1: Identify the expense component(s) that are part of the target category (e.g., acquisition-related costs) from the income statement or notes.\nStep 2: Sum all identified component values to obtain the total expense amount for that category.\nStep 3: Identify the balance sheet item (e.g., current assets) that serves as the denominator.\nStep 4: Divide the total expense amount by the balance sheet item to obtain the ratio. Then multiply the result by 100 to express as a percentage.",
+    "operand_roles": "- component1: First subcomponent of the expense category (e.g., acquisition-related costs in SG&A).\n- component2: Second subcomponent of the same expense category (if any).\n- denominator: The balance sheet item (e.g., current assets) used as the base for the ratio.",
+    "formula_template": "ratio = (component1 + component2) / denominator",
+    "units_convention": "All values should be in the same monetary unit (e.g., millions of dollars). The result is a dimensionless decimal ratio, not multiplied by 100.",
+    "source_experience_id": "E028",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E030_operand_role_drift": {
+    "source_experience_id": "E030",
+    "strategy_name": "Average of Two Weighted Averages",
+    "problem_pattern": "Given two weighted average useful life values for two different asset categories, compute the overall average of these two values.",
+    "reasoning_steps": "Step 1: Step 1: Identify the two weighted average useful life values for the two specified asset categories.\nStep 2: Step 2: Add the two values together.\nStep 3: Step 3: Divide the sum by 2 to get the average.",
+    "operand_roles": "- value1: The first weighted average useful life (in years) for one asset category.\n- value2: The second weighted average useful life (in years) for another asset category.",
+    "formula_template": "(value1 + value2) / 2",
+    "units_convention": "Both values are in years. The result is also in years.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E030_operation_drift": {
+    "source_experience_id": "E030",
+    "strategy_name": "Average of Two Weighted Averages",
+    "problem_pattern": "Given two weighted average useful life values for two different asset categories, compute the overall average of these two values.",
+    "reasoning_steps": "Step 1: Step 1: Identify the two weighted average useful life values for the two specified asset categories.\nStep 2: Step 2: subtract the two values together.\nStep 3: Step 3: Divide the sum by 2 to get the average.",
+    "operand_roles": "- value1: The first weighted average useful life (in years) for one asset category.\n- value2: The second weighted average useful life (in years) for another asset category.",
+    "formula_template": "(value1 + value2) / 2",
+    "units_convention": "Both values are in years. The result is also in years.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E030_scale_drift": {
+    "source_experience_id": "E030",
+    "strategy_name": "Average of Two Weighted Averages",
+    "problem_pattern": "Given two weighted average useful life values for two different asset categories, compute the overall average of these two values.",
+    "reasoning_steps": "Step 1: Step 1: Identify the two weighted average useful life values for the two specified asset categories.\nStep 2: Step 2: Add the two values together.\nStep 3: Step 3: Divide the sum by 2 to get the average. Then multiply the result by 100 to express as a percentage.",
+    "operand_roles": "- value1: The first weighted average useful life (in years) for one asset category.\n- value2: The second weighted average useful life (in years) for another asset category.",
+    "formula_template": "(value1 + value2) / 2",
+    "units_convention": "Both values are in years. The result is also in years.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E031_operation_drift": {
+    "source_experience_id": "E031",
+    "strategy_name": "Total Share Repurchase Cost",
+    "problem_pattern": "Given the number of shares repurchased and the average price per share, calculate the total amount spent on share repurchases.",
+    "reasoning_steps": "Step 1: Step 1: Identify the number of shares repurchased from the context (e.g., 'we repurchased X shares').\nStep 2: Step 2: Identify the average price per share from the context (e.g., 'at an average price of $Y').\nStep 3: Step 3: divide the number of shares by the average price per share to get the total expenditure.",
+    "operand_roles": "- shares_repurchased: The number of shares repurchased, typically found in a statement or disclosure about share repurchases.\n- average_price_per_share: The average price paid per share, often stated alongside the number of shares repurchased.",
+    "formula_template": "total_spent = shares_repurchased * average_price_per_share",
+    "units_convention": "The result is in the same currency as the average price per share. Ensure that the number of shares is in units (not thousands or millions) and the price is per share.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_multiply_to_divide"
+  },
+  "E032_operation_drift": {
+    "source_experience_id": "E032",
+    "strategy_name": "Total Value from Per-Unit and Quantity",
+    "problem_pattern": "Calculate the total value at a specific time point by multiplying a per-unit value by the corresponding quantity.",
+    "reasoning_steps": "Step 1: Step 1: Identify the per-unit value at the specified time point (e.g., beginning of year).\nStep 2: Step 2: Identify the quantity of units at the same time point.\nStep 3: Step 3: divide the per-unit value by the quantity to obtain the total value.",
+    "operand_roles": "- per_unit_value: The value per unit (e.g., per share, per item) at the specified time. Look for a phrase like 'average grant date fair value per share' or 'per unit value'.\n- quantity: The number of units (e.g., shares, items) at the same time point. Look for a phrase like 'number of shares' or 'quantity'.",
+    "formula_template": "total_value = per_unit_value * quantity",
+    "units_convention": "The per-unit value is in dollars per unit, and the quantity is in units. The product is in dollars.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_multiply_to_divide"
+  },
+  "E033_operation_drift": {
+    "source_experience_id": "E033",
+    "strategy_name": "Stock Split Share Adjustment",
+    "problem_pattern": "Given the number of shares outstanding before a stock split and the split ratio, calculate the number of shares outstanding after the split.",
+    "reasoning_steps": "Step 1: Step 1: Identify the number of shares outstanding before the split from the context.\nStep 2: Step 2: Identify the split ratio from the context (e.g., 2-for-1 means divide by 2).\nStep 3: Step 3: Multiply the pre-split shares by the split ratio to get the post-split shares.",
+    "operand_roles": "- pre_split_shares: The number of shares outstanding before the split. Locate the number of shares mentioned in the context before the split event.\n- split_ratio: The split ratio expressed as a number (e.g., for a 2-for-1 split, the ratio is 2). Locate the split ratio in the context, typically described as 'X-for-1' or 'X:1'.",
+    "formula_template": "post_split_shares = pre_split_shares * split_ratio",
+    "units_convention": "The answer should be in the same unit as the pre-split shares (e.g., if pre-split shares are in millions, the answer is in millions).",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_multiply_to_divide"
+  },
+  "E034_operation_drift": {
+    "source_experience_id": "E034",
+    "strategy_name": "Total Value of Stock Options Issued",
+    "problem_pattern": "Given the number of shares of new stock options issued to employees and the exercise price per share, calculate the total dollar amount.",
+    "reasoning_steps": "Step 1: Step 1: Identify the total number of shares of new stock options issued to employees.\nStep 2: Step 2: Identify the exercise price per share.\nStep 3: Step 3: divide the number of shares by the exercise price to obtain the total dollar amount.",
+    "operand_roles": "- shares: Number of shares of new stock options issued to employees. Locate in the context as the quantity of shares mentioned in relation to the issuance.\n- exercise_price: Exercise price per share. Locate as the price per share at which the options are issued, often stated as a dollar amount per share.",
+    "formula_template": "total_dollar_amount = shares * exercise_price",
+    "units_convention": "The result is in the same currency as the exercise price (e.g., dollars). Ensure that shares are in the same unit as the per-share price (e.g., shares and dollars per share).",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_multiply_to_divide"
+  },
+  "E035_operation_drift": {
+    "source_experience_id": "E035",
+    "strategy_name": "Total Par Value of Authorized Shares",
+    "problem_pattern": "Given the number of authorized shares and the par value per share, calculate the total par value if all authorized shares were outstanding.",
+    "reasoning_steps": "Step 1: Identify the class of stock for which the total par value is to be calculated (e.g., common stock).\nStep 2: Locate the number of authorized shares for that class from the equity section or notes.\nStep 3: Locate the par value per share for that class from the same source.\nStep 4: divide the number of authorized shares by the par value per share to get the total par value.",
+    "operand_roles": "- number_of_shares: The total number of authorized shares of a specific class of stock, typically stated in the equity section of the balance sheet or in the notes.\n- par_value_per_share: The stated par value per share for that class of stock, usually given in the same context.",
+    "formula_template": "total_par_value = number_of_shares * par_value_per_share",
+    "units_convention": "The result is in the same currency as the par value per share. Ensure that the number of shares is in the same unit (e.g., shares) and the par value is per share.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_multiply_to_divide"
+  },
+  "E036_operation_drift": {
+    "strategy_name": "Direct Multiplication of Two Given Values",
+    "problem_pattern": "The question asks for a specific amount that is the product of two directly provided numerical values, with no additional operations or conversions.",
+    "reasoning_steps": "Step 1: Identify the two numerical values given in the problem that need to be multiplied together.\nStep 2: divide the first value by the second value to obtain the final result.\nStep 3: State the result as the answer, ensuring it is in the same unit context as the inputs.",
+    "operand_roles": "- operand1: The first factor, representing one component of the product (e.g., a base amount or a multiplier).\n- operand2: The second factor, representing the other component of the product (e.g., a rate or a count).",
+    "formula_template": "multiply(operand1, operand2)",
+    "units_convention": "The result is expressed in the same unit as the product of the two input values. No conversion or scaling is applied.",
+    "source_experience_id": "E036",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean_pass2",
+    "gold_operations": [
+      "multiply"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_multiply_to_divide"
+  },
+  "E037_operation_drift": {
+    "source_experience_id": "E037",
+    "strategy_name": "Sum of Amortization Expenses Over Multiple Years",
+    "problem_pattern": "Given financial data for multiple years, each year includes an amortization expense component. The task is to find the total amortization expense over a specified range of years.",
+    "reasoning_steps": "Step 1: Step 1: Identify the amortization expense for the first year in the specified range.\nStep 2: Step 2: Identify the amortization expense for the second year in the specified range.\nStep 3: Step 3: subtract the amortization expenses of the first two years to get a subtotal.\nStep 4: Step 4: Identify the amortization expense for the third year in the specified range.\nStep 5: Step 5: Add the subtotal from step 3 to the amortization expense of the third year to get the total.",
+    "operand_roles": "- amortization_year1: The amortization expense for the first year in the range. It is explicitly stated in the financial data for that year.\n- amortization_year2: The amortization expense for the second year in the range. It is explicitly stated in the financial data for that year.\n- amortization_year3: The amortization expense for the third year in the range. It is explicitly stated in the financial data for that year.",
+    "formula_template": "total_amortization = amortization_year1 + amortization_year2 + amortization_year3",
+    "units_convention": "All amounts are in the same currency and unit (e.g., millions of dollars). The final answer should be expressed in the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E038_operation_drift": {
+    "source_experience_id": "E038",
+    "strategy_name": "Sum of Historical Values",
+    "problem_pattern": "Given a series of values for multiple time periods, compute the total by summing them.",
+    "reasoning_steps": "Step 1: Step 1: Identify the values for each of the three time periods from the context.\nStep 2: Step 2: subtract the first two values together.\nStep 3: Step 3: Add the result to the third value to obtain the total.",
+    "operand_roles": "- value1: The value for the first time period, located in the context as a specific amount associated with that period.\n- value2: The value for the second time period, located similarly.\n- value3: The value for the third time period, located similarly.",
+    "formula_template": "total = value1 + value2 + value3",
+    "units_convention": "All values are in the same unit (e.g., millions) and the total is in that unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E039_operation_drift": {
+    "source_experience_id": "E039",
+    "strategy_name": "Net Change in Cash from Cash Flow Statement Components",
+    "problem_pattern": "Given values for operating, investing, and financing activities for a specific period, compute the net change in cash by summing these three components.",
+    "reasoning_steps": "Step 1: Step 1: Identify the values for operating, investing, and financing activities for the target period from the given data.\nStep 2: Step 2: subtract the operating activities value to the investing activities value.\nStep 3: Step 3: Add the result from Step 2 to the financing activities value to obtain the net change in cash.",
+    "operand_roles": "- operating_activities: The cash flow from operating activities for the target period. It is a signed number (positive for net inflow, negative for net outflow).\n- investing_activities: The cash flow from investing activities for the target period. It is a signed number (positive for net inflow, negative for net outflow).\n- financing_activities: The cash flow from financing activities for the target period. It is a signed number (positive for net inflow, negative for net outflow).",
+    "formula_template": "net_change_in_cash = operating_activities + investing_activities + financing_activities",
+    "units_convention": "All values are in the same monetary unit (e.g., millions). The result is in the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E042_operation_drift": {
+    "source_experience_id": "E042",
+    "strategy_name": "Net Change Calculation from Multiple Adjustments",
+    "problem_pattern": "Calculate the net change in a quantity by summing a series of signed adjustments (positive for increases, negative for decreases) that are provided in a table or list.",
+    "reasoning_steps": "Step 1: Step 1: Identify the initial value of the quantity (e.g., granted units) from the context.\nStep 2: Step 2: Identify the first adjustment (e.g., vested units) and note its sign (positive if increase, negative if decrease).\nStep 3: Step 3: subtract the initial value and the first adjustment to get an intermediate result.\nStep 4: Step 4: Identify the second adjustment (e.g., forfeited units) and note its sign.\nStep 5: Step 5: Add the intermediate result and the second adjustment to get the final net change.",
+    "operand_roles": "- initial_value: The starting value of the quantity (e.g., granted units). It is the first operand in the addition sequence.\n- adjustment_1: The first signed adjustment to apply (e.g., vested units, typically negative). It is the second operand.\n- adjustment_2: The second signed adjustment to apply (e.g., forfeited units, typically negative). It is the third operand.",
+    "formula_template": "net_change = initial_value + adjustment_1 + adjustment_2",
+    "units_convention": "All values are in the same unit (e.g., thousands). Ensure that the final answer is expressed in that unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E043_operand_role_drift": {
+    "source_experience_id": "E043",
+    "strategy_name": "Goodwill Amortization Period",
+    "problem_pattern": "Given a balance and an annual amortization amount, determine the number of years to fully amortize the balance.",
+    "reasoning_steps": "Step 1: Step 1: Identify the balance to be amortized and the annual amortization amount.\nStep 2: Step 2: Convert the balance to the same unit as the annual amortization by multiplying by the appropriate scale factor (e.g., 1000 if balance is in billions and annual amortization is in millions).\nStep 3: Step 3: Divide the converted balance by the annual amortization to get the number of years.",
+    "operand_roles": "- balance: The total amount to be amortized, typically given in billions or millions.\n- annual_amortization: The amount amortized per year, typically given in millions.\n- scale_factor: The factor to convert the balance to the same unit as annual_amortization (e.g., 1000 if balance is in billions and annual amortization in millions).",
+    "formula_template": "years = (balance * scale_factor) / annual_amortization",
+    "units_convention": "Ensure the balance and annual amortization are in the same unit. If balance is in billions and annual amortization in millions, multiply balance by 1000.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": true
+  },
+  "E043_operation_drift": {
+    "source_experience_id": "E043",
+    "strategy_name": "Goodwill Amortization Period",
+    "problem_pattern": "Given a balance and an annual amortization amount, determine the number of years to fully amortize the balance.",
+    "reasoning_steps": "Step 1: Step 1: Identify the balance to be amortized and the annual amortization amount.\nStep 2: Step 2: Convert the balance to the same unit as the annual amortization by multiplying by the appropriate scale factor (e.g., 1000 if balance is in billions and annual amortization is in millions).\nStep 3: Step 3: multiply the converted balance by the annual amortization to get the number of years.",
+    "operand_roles": "- balance: The total amount to be amortized, typically given in billions or millions.\n- annual_amortization: The amount amortized per year, typically given in millions.\n- scale_factor: The factor to convert the balance to the same unit as annual_amortization (e.g., 1000 if balance is in billions and annual amortization in millions).",
+    "formula_template": "years = (balance * scale_factor) / annual_amortization",
+    "units_convention": "Ensure the balance and annual amortization are in the same unit. If balance is in billions and annual amortization in millions, multiply balance by 1000.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E043_scale_drift": {
+    "source_experience_id": "E043",
+    "strategy_name": "Goodwill Amortization Period",
+    "problem_pattern": "Given a balance and an annual amortization amount, determine the number of years to fully amortize the balance.",
+    "reasoning_steps": "Step 1: Step 1: Identify the balance to be amortized and the annual amortization amount.\nStep 2: Step 2: Convert the balance to the same unit as the annual amortization by multiplying by the appropriate scale factor (e.g., 1000 if balance is in billions and annual amortization is in millions).\nStep 3: Step 3: Divide the converted balance by the annual amortization to get the number of years.",
+    "operand_roles": "- balance: The total amount to be amortized, typically given in billions or millions.\n- annual_amortization: The amount amortized per year, typically given in millions.\n- scale_factor: The factor to convert the balance to the same unit as annual_amortization (e.g., 1000 if balance is in billions and annual amortization in millions).",
+    "formula_template": "years = (balance * scale_factor) / annual_amortization",
+    "units_convention": "Ensure the balance and annual amortization are in the same unit. If balance is in billions and annual amortization in millions, multiply balance by 1000.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "scale_drift_remove_100"
+  },
+  "E044_operation_drift": {
+    "source_experience_id": "E044",
+    "strategy_name": "Per-share dividend count from total dividends",
+    "problem_pattern": "Given total dividends paid over a period and the per-share dividend amount, determine the number of shares that received dividends.",
+    "reasoning_steps": "Step 1: Step 1: divide the per-share dividend by the number of periods to get the total dividend per share for the year.\nStep 2: Step 2: Divide the total dividends paid during the year by the annual dividend per share to find the number of shares that received dividends.",
+    "operand_roles": "- per_share_dividend: The dividend amount paid per share for a single period (e.g., quarterly).\n- number_of_periods: The number of dividend payment periods in the fiscal year (e.g., 4 for quarterly).\n- total_dividends: The total dividends paid over the fiscal year.",
+    "formula_template": "shares = total_dividends / (per_share_dividend * number_of_periods)",
+    "units_convention": "All monetary values should be in the same unit (e.g., millions of dollars). The result is in the same unit as the total dividends (e.g., millions of shares).",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_multiply_to_divide"
+  },
+  "E044_scale_drift": {
+    "source_experience_id": "E044",
+    "strategy_name": "Per-share dividend count from total dividends",
+    "problem_pattern": "Given total dividends paid over a period and the per-share dividend amount, determine the number of shares that received dividends.",
+    "reasoning_steps": "Step 1: Step 1: Multiply the per-share dividend by the number of periods to get the total dividend per share for the year. Then multiply the result by 100 to express as a percentage.\nStep 2: Step 2: Divide the total dividends paid during the year by the annual dividend per share to find the number of shares that received dividends.",
+    "operand_roles": "- per_share_dividend: The dividend amount paid per share for a single period (e.g., quarterly).\n- number_of_periods: The number of dividend payment periods in the fiscal year (e.g., 4 for quarterly).\n- total_dividends: The total dividends paid over the fiscal year.",
+    "formula_template": "shares = total_dividends / (per_share_dividend * number_of_periods)",
+    "units_convention": "All monetary values should be in the same unit (e.g., millions of dollars). The result is in the same unit as the total dividends (e.g., millions of shares).",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E045_operand_role_drift": {
+    "source_experience_id": "E045",
+    "strategy_name": "Net Margin Calculation from Aggregate and Per-Share Data",
+    "problem_pattern": "Given a financial metric reported in aggregate monetary units (e.g., millions) and a revenue figure in the same or different unit, compute the ratio (margin) after converting the metric to the revenue's unit.",
+    "reasoning_steps": "Step 1: Step 1: Identify the financial metric (e.g., net earnings) for the target year and its reported unit (e.g., millions).\nStep 2: Step 2: Identify the revenue for the same target year and its unit (e.g., thousands).\nStep 3: Step 3: Convert the metric to the revenue's unit by multiplying by the appropriate conversion factor (e.g., 1000 if metric is in millions and revenue in thousands).\nStep 4: Step 4: Divide the converted metric by the revenue to obtain the ratio (margin).\nStep 5: Step 5: Express the result as a percentage if required.",
+    "operand_roles": "- metric_value: The financial metric (e.g., net earnings) for the target period, often given in millions or other aggregate units. Locate the value associated with the target year.\n- unit_conversion_factor: A constant (e.g., 1000) to convert the metric from its reported unit (e.g., millions) to the unit of the revenue (e.g., thousands). This factor is typically 1000 if revenue is in thousands and metric in millions.\n- revenue_value: The revenue figure for the same target period, in the unit that the final ratio should be based on (e.g., thousands). Locate the revenue for the target year.",
+    "formula_template": "margin = (metric_value * unit_conversion_factor) / revenue_value",
+    "units_convention": "The metric may be reported in millions, while revenue may be in thousands. Multiply the metric by 1000 to convert to thousands before dividing by revenue. The final ratio is unitless; multiply by 100 for percentage.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": true
+  },
+  "E045_operation_drift": {
+    "source_experience_id": "E045",
+    "strategy_name": "Net Margin Calculation from Aggregate and Per-Share Data",
+    "problem_pattern": "Given a financial metric reported in aggregate monetary units (e.g., millions) and a revenue figure in the same or different unit, compute the ratio (margin) after converting the metric to the revenue's unit.",
+    "reasoning_steps": "Step 1: Step 1: Identify the financial metric (e.g., net earnings) for the target year and its reported unit (e.g., millions).\nStep 2: Step 2: Identify the revenue for the same target year and its unit (e.g., thousands).\nStep 3: Step 3: Convert the metric to the revenue's unit by multiplying by the appropriate conversion factor (e.g., 1000 if metric is in millions and revenue in thousands).\nStep 4: Step 4: multiply the converted metric by the revenue to obtain the ratio (margin).\nStep 5: Step 5: Express the result as a percentage if required.",
+    "operand_roles": "- metric_value: The financial metric (e.g., net earnings) for the target period, often given in millions or other aggregate units. Locate the value associated with the target year.\n- unit_conversion_factor: A constant (e.g., 1000) to convert the metric from its reported unit (e.g., millions) to the unit of the revenue (e.g., thousands). This factor is typically 1000 if revenue is in thousands and metric in millions.\n- revenue_value: The revenue figure for the same target period, in the unit that the final ratio should be based on (e.g., thousands). Locate the revenue for the target year.",
+    "formula_template": "margin = (metric_value * unit_conversion_factor) / revenue_value",
+    "units_convention": "The metric may be reported in millions, while revenue may be in thousands. Multiply the metric by 1000 to convert to thousands before dividing by revenue. The final ratio is unitless; multiply by 100 for percentage.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E045_scale_drift": {
+    "source_experience_id": "E045",
+    "strategy_name": "Net Margin Calculation from Aggregate and Per-Share Data",
+    "problem_pattern": "Given a financial metric reported in aggregate monetary units (e.g., millions) and a revenue figure in the same or different unit, compute the ratio (margin) after converting the metric to the revenue's unit.",
+    "reasoning_steps": "Step 1: Step 1: Identify the financial metric (e.g., net earnings) for the target year and its reported unit (e.g., millions).\nStep 2: Step 2: Identify the revenue for the same target year and its unit (e.g., thousands).\nStep 3: Step 3: Convert the metric to the revenue's unit by multiplying by the appropriate conversion factor (e.g., 1000 if metric is in millions and revenue in thousands).\nStep 4: Step 4: Divide the converted metric by the revenue to obtain the ratio (margin).\nStep 5: Step 5: express as decimal ratio if required.",
+    "operand_roles": "- metric_value: The financial metric (e.g., net earnings) for the target period, often given in millions or other aggregate units. Locate the value associated with the target year.\n- unit_conversion_factor: A constant (e.g., 1000) to convert the metric from its reported unit (e.g., millions) to the unit of the revenue (e.g., thousands). This factor is typically 1000 if revenue is in thousands and metric in millions.\n- revenue_value: The revenue figure for the same target period, in the unit that the final ratio should be based on (e.g., thousands). Locate the revenue for the target year.",
+    "formula_template": "margin = (metric_value * unit_conversion_factor) / revenue_value",
+    "units_convention": "The metric may be reported in millions, while revenue may be in thousands. Multiply the metric by 1000 to convert to thousands before dividing by revenue. The final ratio is unitless; multiply by 100 for percentage.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "scale_drift_remove_100"
+  },
+  "E047_operand_role_drift": {
+    "strategy_name": "Interest Payment from Principal and Rate",
+    "problem_pattern": "Calculate the interest payment on a principal amount given an annual interest rate expressed as a decimal ratio.",
+    "reasoning_steps": "Step 1: Identify the principal amount (the base value) and the annual interest rate as a decimal ratio (e.g., 0.03 for 3.0%).\nStep 2: Multiply the principal amount by the interest rate ratio to obtain the interest payment.\nStep 3: Divide the result by 2 to account for a semi-annual payment period.",
+    "operand_roles": "- principal: the base amount on which interest is calculated\n- rate_ratio: the annual interest rate expressed as a decimal (e.g., 0.03)\n- divisor: the number of payment periods per year (e.g., 2 for semi-annual)",
+    "formula_template": "multiply(principal, rate_ratio) then divide by divisor",
+    "units_convention": "The result is in the same currency unit as the principal, representing the interest payment for the specified period.",
+    "source_experience_id": "E047",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean_pass2",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E047_operation_drift": {
+    "strategy_name": "Interest Payment from Principal and Rate",
+    "problem_pattern": "Calculate the interest payment on a principal amount given an annual interest rate expressed as a decimal ratio.",
+    "reasoning_steps": "Step 1: Identify the principal amount (the base value) and the annual interest rate as a decimal ratio (e.g., 0.03 for 3.0%).\nStep 2: divide the principal amount by the interest rate ratio to obtain the interest payment.\nStep 3: Divide the result by 2 to account for a semi-annual payment period.",
+    "operand_roles": "- principal: the base amount on which interest is calculated\n- rate_ratio: the annual interest rate expressed as a decimal (e.g., 0.03)\n- divisor: the number of payment periods per year (e.g., 2 for semi-annual)",
+    "formula_template": "multiply(principal, rate_ratio) then divide by divisor",
+    "units_convention": "The result is in the same currency unit as the principal, representing the interest payment for the specified period.",
+    "source_experience_id": "E047",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean_pass2",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_multiply_to_divide"
+  },
+  "E047_scale_drift": {
+    "strategy_name": "Interest Payment from Principal and Rate",
+    "problem_pattern": "Calculate the interest payment on a principal amount given an annual interest rate expressed as a decimal ratio.",
+    "reasoning_steps": "Step 1: Identify the principal amount (the base value) and the annual interest rate as a decimal ratio (e. Then multiply the result by 100 to express as a percentage.g., 0.03 for 3.0%).\nStep 2: Multiply the principal amount by the interest rate ratio to obtain the interest payment.\nStep 3: Divide the result by 2 to account for a semi-annual payment period.",
+    "operand_roles": "- principal: the base amount on which interest is calculated\n- rate_ratio: the annual interest rate expressed as a decimal (e.g., 0.03)\n- divisor: the number of payment periods per year (e.g., 2 for semi-annual)",
+    "formula_template": "multiply(principal, rate_ratio) then divide by divisor",
+    "units_convention": "The result is in the same currency unit as the principal, representing the interest payment for the specified period.",
+    "source_experience_id": "E047",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean_pass2",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E048_operand_role_drift": {
+    "source_experience_id": "E048",
+    "strategy_name": "Total Value from Quantity and Unit Price",
+    "problem_pattern": "Calculate the total monetary value of a quantity of items given the quantity and the weighted-average unit price, with the result expressed in millions.",
+    "reasoning_steps": "Step 1: Step 1: Identify the quantity of items (e.g., number of options granted).\nStep 2: Step 2: Identify the weighted-average unit price per item.\nStep 3: Step 3: Multiply the quantity by the unit price to get the total value in original units.\nStep 4: Step 4: Divide the total value by the scale factor (e.g., 1,000,000) to express the result in the desired unit (e.g., millions).",
+    "operand_roles": "- quantity: The number of items (e.g., options granted). Locate the value associated with the quantity of the items.\n- unit_price: The weighted-average price per item. Locate the value associated with the weighted-average price.\n- scale_factor: The factor to convert the product to the desired unit (e.g., 1,000,000 to convert to millions).",
+    "formula_template": "total_value_in_millions = (quantity * unit_price) / scale_factor",
+    "units_convention": "The product of quantity and unit price yields the total value in the currency of the unit price. To express in millions, divide by 1,000,000. The scale factor may vary based on the requested unit (e.g., thousands, billions).",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": true
+  },
+  "E048_operation_drift": {
+    "source_experience_id": "E048",
+    "strategy_name": "Total Value from Quantity and Unit Price",
+    "problem_pattern": "Calculate the total monetary value of a quantity of items given the quantity and the weighted-average unit price, with the result expressed in millions.",
+    "reasoning_steps": "Step 1: Step 1: Identify the quantity of items (e.g., number of options granted).\nStep 2: Step 2: Identify the weighted-average unit price per item.\nStep 3: Step 3: divide the quantity by the unit price to get the total value in original units.\nStep 4: Step 4: Divide the total value by the scale factor (e.g., 1,000,000) to express the result in the desired unit (e.g., millions).",
+    "operand_roles": "- quantity: The number of items (e.g., options granted). Locate the value associated with the quantity of the items.\n- unit_price: The weighted-average price per item. Locate the value associated with the weighted-average price.\n- scale_factor: The factor to convert the product to the desired unit (e.g., 1,000,000 to convert to millions).",
+    "formula_template": "total_value_in_millions = (quantity * unit_price) / scale_factor",
+    "units_convention": "The product of quantity and unit price yields the total value in the currency of the unit price. To express in millions, divide by 1,000,000. The scale factor may vary based on the requested unit (e.g., thousands, billions).",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "operation_drift_multiply_to_divide"
+  },
+  "E048_scale_drift": {
+    "source_experience_id": "E048",
+    "strategy_name": "Total Value from Quantity and Unit Price",
+    "problem_pattern": "Calculate the total monetary value of a quantity of items given the quantity and the weighted-average unit price, with the result expressed in millions.",
+    "reasoning_steps": "Step 1: Step 1: Identify the quantity of items (e.g., number of options granted).\nStep 2: Step 2: Identify the weighted-average unit price per item.\nStep 3: Step 3: Multiply the quantity by the unit price to get the total value in original units.\nStep 4: Step 4: Divide the total value by the scale factor (e.g., 1,000,000) to express the result in the desired unit (e.g., millions).",
+    "operand_roles": "- quantity: The number of items (e.g., options granted). Locate the value associated with the quantity of the items.\n- unit_price: The weighted-average price per item. Locate the value associated with the weighted-average price.\n- scale_factor: The factor to convert the product to the desired unit (e.g., 1,000,000 to convert to millions).",
+    "formula_template": "total_value_in_millions = (quantity * unit_price) / scale_factor",
+    "units_convention": "The product of quantity and unit price yields the total value in the currency of the unit price. To express in millions, divide by 1,000,000. The scale factor may vary based on the requested unit (e.g., thousands, billions).",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "multiply",
+      "divide"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "scale_drift_remove_100"
+  },
+  "E049_scale_drift": {
+    "source_experience_id": "E049",
+    "strategy_name": "Performance Comparison",
+    "problem_pattern": "Determine whether one entity outperformed another over a specified period by comparing their final values.",
+    "reasoning_steps": "Step 1: Identify the final value of the first entity at the end of the period.\nStep 2: Identify the final value of the second entity at the end of the period.\nStep 3: Compare the two final values using the 'greater' operation to determine if the first entity's value is greater than the second's. Then multiply the result by 100 to express as a percentage.",
+    "operand_roles": "- entity1_final_value: The final value of the first entity (e.g., a company's stock index) at the end of the period.\n- entity2_final_value: The final value of the second entity (e.g., a market index) at the end of the period.",
+    "formula_template": "greater(entity1_final_value, entity2_final_value)",
+    "units_convention": "Values are typically normalized to a base (e.g., 100) at the start of the period, so they are directly comparable.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "greater"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E050_scale_drift": {
+    "source_experience_id": "E050",
+    "strategy_name": "Comparison of Two Acquisition Purchase Prices",
+    "problem_pattern": "Given two acquisitions, determine if the purchase price of one is greater than the other.",
+    "reasoning_steps": "Step 1: Step 1: Identify the two acquisitions mentioned in the question.\nStep 2: Step 2: For each acquisition, find the total consideration paid (e. Then multiply the result by 100 to express as a percentage.g., cash, stock, or combination) as stated in the context.\nStep 3: Step 3: Compare the two total consideration amounts using the greater-than operation.\nStep 4: Step 4: Output 'yes' if the first price is greater than the second, otherwise 'no'.",
+    "operand_roles": "- price1: The purchase price of the first acquisition mentioned in the question. Locate the total consideration paid for that acquisition.\n- price2: The purchase price of the second acquisition mentioned in the question. Locate the total consideration paid for that acquisition.",
+    "formula_template": "greater(price1, price2)",
+    "units_convention": "All monetary values are in the same currency and unit (e.g., millions). Ensure both values are in the same scale before comparison.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "greater"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E051_scale_drift": {
+    "source_experience_id": "E051",
+    "strategy_name": "Comparative Magnitude Check",
+    "problem_pattern": "Given two financial metrics from a company's report, determine if one is greater than the other.",
+    "reasoning_steps": "Step 1: Step 1: Identify the two metrics mentioned in the question and the period of interest.\nStep 2: Step 2: Extract the numerical values for each metric for that period from the given facts.\nStep 3: Step 3: Compare the two values using the 'greater' operation. Then multiply the result by 100 to express as a percentage.\nStep 4: Step 4: Output 'yes' if the first value is greater than the second, otherwise 'no'.",
+    "operand_roles": "- value1: The first metric mentioned in the question (e.g., advertising costs). Locate its value in the context, often stated as a total for a specific period.\n- value2: The second metric mentioned in the question (e.g., R&D expenses). Locate its value in the context, often stated as a total for the same period.",
+    "formula_template": "greater(value1, value2)",
+    "units_convention": "Values are typically in the same unit (e.g., millions of dollars). Ensure both values are in the same unit before comparison.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "greater"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E052_scale_drift": {
+    "source_experience_id": "E052",
+    "strategy_name": "compare_two_segment_growths",
+    "problem_pattern": "Given two segments or categories, determine whether the increase in one is greater than the increase in the other.",
+    "reasoning_steps": "Step 1: Step 1: Identify the two segments or categories mentioned in the question.\nStep 2: Step 2: For each segment, locate the statement that provides the revenue increase (or similar metric) for that segment.\nStep 3: Step 3: Extract the numerical value of the increase for each segment.\nStep 4: Step 4: Compare the two numerical values using the 'greater' operation. Then multiply the result by 100 to express as a percentage.\nStep 5: Step 5: Answer 'yes' if the first value is greater than the second, otherwise 'no'.",
+    "operand_roles": "- value1: The increase amount of the first segment mentioned in the question.\n- value2: The increase amount of the second segment mentioned in the question.",
+    "formula_template": "greater(value1, value2)",
+    "units_convention": "Both values should be in the same units (e.g., dollars, millions). If units differ, convert to a common unit before comparison.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "greater"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E053_scale_drift": {
+    "source_experience_id": "E053",
+    "strategy_name": "Comparison of Two Values",
+    "problem_pattern": "Determine whether one value is greater than another, given two specific values in the context.",
+    "reasoning_steps": "Step 1: Step 1: Identify the two values to compare from the context. They are usually explicitly stated or can be extracted from the given information.\nStep 2: Step 2: Apply the 'greater' operation to the two values to determine if the first is greater than the second. Then multiply the result by 100 to express as a percentage.\nStep 3: Step 3: Output 'yes' if the first is greater, otherwise 'no'.",
+    "operand_roles": "- value1: The first value to compare, typically the one mentioned first in the question or context.\n- value2: The second value to compare, typically the one mentioned second in the question or context.",
+    "formula_template": "greater(value1, value2)",
+    "units_convention": "Values should be compared directly; if they have units, ensure they are in the same units before comparison.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "greater"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E054_scale_drift": {
+    "source_experience_id": "E054",
+    "strategy_name": "Quarterly high price comparison",
+    "problem_pattern": "Compare the high sales prices of common shares between two specified quarters of a given fiscal year.",
+    "reasoning_steps": "Step 1: Step 1: Identify the two quarters to compare from the question.\nStep 2: Step 2: For each quarter, find the high sales price (the maximum price) from the provided data.\nStep 3: Step 3: Compare the two high prices using the 'greater' operation. Then multiply the result by 100 to express as a percentage.\nStep 4: Step 4: If the first quarter's high is greater than the second quarter's high, answer 'yes'; otherwise, answer 'no'.",
+    "operand_roles": "- quarter1_high: The high sales price for the first specified quarter. Locate the value labeled as 'high' for that quarter.\n- quarter2_high: The high sales price for the second specified quarter. Locate the value labeled as 'high' for that quarter.",
+    "formula_template": "greater(quarter1_high, quarter2_high)",
+    "units_convention": "Prices are in the same currency and unit (e.g., dollars) for both quarters; no conversion needed.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "greater"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E055_operand_role_drift": {
+    "source_experience_id": "E055",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Given three values for three different periods, compute their average.",
+    "reasoning_steps": "Step 1: Step 1: Identify the three values for the three periods mentioned in the question.\nStep 2: Step 2: Add the first and third values (or any two values) to get an intermediate sum.\nStep 3: Step 3: Add the second value to the intermediate sum to get the total sum of all three values.\nStep 4: Step 4: Divide the total sum by 3 to get the average.",
+    "operand_roles": "- value1: The first value (e.g., for the earliest period)\n- value2: The second value (e.g., for the middle period)\n- value3: The third value (e.g., for the most recent period)",
+    "formula_template": "(value1 + value2 + value3) / 3",
+    "units_convention": "All values should be in the same units (e.g., millions). The result will have the same units.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E055_operation_drift": {
+    "source_experience_id": "E055",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Given three values for three different periods, compute their average.",
+    "reasoning_steps": "Step 1: Step 1: Identify the three values for the three periods mentioned in the question.\nStep 2: Step 2: subtract the first and third values (or any two values) to get an intermediate sum.\nStep 3: Step 3: Add the second value to the intermediate sum to get the total sum of all three values.\nStep 4: Step 4: Divide the total sum by 3 to get the average.",
+    "operand_roles": "- value1: The first value (e.g., for the earliest period)\n- value2: The second value (e.g., for the middle period)\n- value3: The third value (e.g., for the most recent period)",
+    "formula_template": "(value1 + value2 + value3) / 3",
+    "units_convention": "All values should be in the same units (e.g., millions). The result will have the same units.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E056_operand_role_drift": {
+    "source_experience_id": "E056",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Compute the average of three numerical values that are provided in a list or table, where each value corresponds to a different time period or category.",
+    "reasoning_steps": "Step 1: Step 1: Identify the three values to be averaged from the given context (e.g., from a table or list).\nStep 2: Step 2: Add the first and second values together.\nStep 3: Step 3: Add the result to the third value to get the sum of all three.\nStep 4: Step 4: Divide the sum by 3 to get the average.",
+    "operand_roles": "- value1: The first value to be averaged, typically from the earliest period or first category.\n- value2: The second value to be averaged, typically from the middle period or second category.\n- value3: The third value to be averaged, typically from the latest period or third category.",
+    "formula_template": "average = (value1 + value2 + value3) / 3",
+    "units_convention": "All values should be in the same unit (e.g., millions of dollars). The result is in the same unit, typically rounded to one decimal place if needed.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E056_operation_drift": {
+    "source_experience_id": "E056",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Compute the average of three numerical values that are provided in a list or table, where each value corresponds to a different time period or category.",
+    "reasoning_steps": "Step 1: Step 1: Identify the three values to be averaged from the given context (e.g., from a table or list).\nStep 2: Step 2: subtract the first and second values together.\nStep 3: Step 3: Add the result to the third value to get the sum of all three.\nStep 4: Step 4: Divide the sum by 3 to get the average.",
+    "operand_roles": "- value1: The first value to be averaged, typically from the earliest period or first category.\n- value2: The second value to be averaged, typically from the middle period or second category.\n- value3: The third value to be averaged, typically from the latest period or third category.",
+    "formula_template": "average = (value1 + value2 + value3) / 3",
+    "units_convention": "All values should be in the same unit (e.g., millions of dollars). The result is in the same unit, typically rounded to one decimal place if needed.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E056_scale_drift": {
+    "source_experience_id": "E056",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Compute the average of three numerical values that are provided in a list or table, where each value corresponds to a different time period or category.",
+    "reasoning_steps": "Step 1: Step 1: Identify the three values to be averaged from the given context (e.g., from a table or list).\nStep 2: Step 2: Add the first and second values together.\nStep 3: Step 3: Add the result to the third value to get the sum of all three.\nStep 4: Step 4: Divide the sum by 3 to get the average. Then multiply the result by 100 to express as a percentage.",
+    "operand_roles": "- value1: The first value to be averaged, typically from the earliest period or first category.\n- value2: The second value to be averaged, typically from the middle period or second category.\n- value3: The third value to be averaged, typically from the latest period or third category.",
+    "formula_template": "average = (value1 + value2 + value3) / 3",
+    "units_convention": "All values should be in the same unit (e.g., millions of dollars). The result is in the same unit, typically rounded to one decimal place if needed.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E058_operand_role_drift": {
+    "strategy_name": "Summing debt components and converting to millions",
+    "problem_pattern": "This pattern applies when a financial statement reports long-term debt in multiple components (e.g., current portion, capital leases, other long-term debt) and asks for the total amount due within a specific future period, expressed in millions. The components are given in thousands and need to be summed and then converted to millions.",
+    "reasoning_steps": "Step 1: Identify the individual amounts of long-term debt components that are due within the specified time horizon (e.g., next 36 months).\nStep 2: Add the first two component amounts together to get a subtotal.\nStep 3: Add the third component amount to the subtotal to get the total debt amount in the original unit (e.g., thousands).\nStep 4: Convert the total from the original unit to millions by dividing by 1000 (since 1 million = 1000 thousands).",
+    "operand_roles": "- first_component: The first debt amount due within the period (in thousands).\n- second_component: The second debt amount due within the period (in thousands).\n- third_component: The third debt amount due within the period (in thousands).",
+    "formula_template": "total_in_millions = (first_component + second_component + third_component) / 1000",
+    "units_convention": "All input amounts are in thousands of dollars. The final answer is expressed in millions of dollars, so divide the sum by 1000. Ensure all components are in the same unit before summing.",
+    "source_experience_id": "E058",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": true
+  },
+  "E058_operation_drift": {
+    "strategy_name": "Summing debt components and converting to millions",
+    "problem_pattern": "This pattern applies when a financial statement reports long-term debt in multiple components (e.g., current portion, capital leases, other long-term debt) and asks for the total amount due within a specific future period, expressed in millions. The components are given in thousands and need to be summed and then converted to millions.",
+    "reasoning_steps": "Step 1: Identify the individual amounts of long-term debt components that are due within the specified time horizon (e.g., next 36 months).\nStep 2: subtract the first two component amounts together to get a subtotal.\nStep 3: Add the third component amount to the subtotal to get the total debt amount in the original unit (e.g., thousands).\nStep 4: Convert the total from the original unit to millions by dividing by 1000 (since 1 million = 1000 thousands).",
+    "operand_roles": "- first_component: The first debt amount due within the period (in thousands).\n- second_component: The second debt amount due within the period (in thousands).\n- third_component: The third debt amount due within the period (in thousands).",
+    "formula_template": "total_in_millions = (first_component + second_component + third_component) / 1000",
+    "units_convention": "All input amounts are in thousands of dollars. The final answer is expressed in millions of dollars, so divide the sum by 1000. Ensure all components are in the same unit before summing.",
+    "source_experience_id": "E058",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E058_scale_drift": {
+    "strategy_name": "Summing debt components and converting to millions",
+    "problem_pattern": "This pattern applies when a financial statement reports long-term debt in multiple components (e.g., current portion, capital leases, other long-term debt) and asks for the total amount due within a specific future period, expressed in millions. The components are given in thousands and need to be summed and then converted to millions.",
+    "reasoning_steps": "Step 1: Identify the individual amounts of long-term debt components that are due within the specified time horizon (e.g., next 36 months).\nStep 2: Add the first two component amounts together to get a subtotal.\nStep 3: Add the third component amount to the subtotal to get the total debt amount in the original unit (e.g., thousands).\nStep 4: Convert the total from the original unit to millions by dividing by 1000 (since 1 million = 1000 thousands).",
+    "operand_roles": "- first_component: The first debt amount due within the period (in thousands).\n- second_component: The second debt amount due within the period (in thousands).\n- third_component: The third debt amount due within the period (in thousands).",
+    "formula_template": "total_in_millions = (first_component + second_component + third_component) / 1000",
+    "units_convention": "All input amounts are in thousands of dollars. The final answer is expressed in millions of dollars, so divide the sum by 1000. Ensure all components are in the same unit before summing.",
+    "source_experience_id": "E058",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "scale_drift_remove_100"
+  },
+  "E059_operand_role_drift": {
+    "source_experience_id": "E059",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Given three numerical values associated with a specific category or metric over three consecutive periods, compute the average of these values.",
+    "reasoning_steps": "Step 1: Step 1: Identify the three values corresponding to the three periods mentioned in the question.\nStep 2: Step 2: Add the first and second values to get their sum.\nStep 3: Step 3: Add the result to the third value to get the total sum of all three values.\nStep 4: Step 4: Divide the total sum by 3 to obtain the average.",
+    "operand_roles": "- value1: The first value in the sequence (e.g., for the earliest period).\n- value2: The second value in the sequence (e.g., for the middle period).\n- value3: The third value in the sequence (e.g., for the latest period).",
+    "formula_template": "(value1 + value2 + value3) / 3",
+    "units_convention": "All values should be in the same unit as given in the context. The result will have the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E059_operation_drift": {
+    "source_experience_id": "E059",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Given three numerical values associated with a specific category or metric over three consecutive periods, compute the average of these values.",
+    "reasoning_steps": "Step 1: Step 1: Identify the three values corresponding to the three periods mentioned in the question.\nStep 2: Step 2: subtract the first and second values to get their sum.\nStep 3: Step 3: Add the result to the third value to get the total sum of all three values.\nStep 4: Step 4: Divide the total sum by 3 to obtain the average.",
+    "operand_roles": "- value1: The first value in the sequence (e.g., for the earliest period).\n- value2: The second value in the sequence (e.g., for the middle period).\n- value3: The third value in the sequence (e.g., for the latest period).",
+    "formula_template": "(value1 + value2 + value3) / 3",
+    "units_convention": "All values should be in the same unit as given in the context. The result will have the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E059_scale_drift": {
+    "source_experience_id": "E059",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Given three numerical values associated with a specific category or metric over three consecutive periods, compute the average of these values.",
+    "reasoning_steps": "Step 1: Step 1: Identify the three values corresponding to the three periods mentioned in the question.\nStep 2: Step 2: Add the first and second values to get their sum.\nStep 3: Step 3: Add the result to the third value to get the total sum of all three values.\nStep 4: Step 4: Divide the total sum by 3 to obtain the average. Then multiply the result by 100 to express as a percentage.",
+    "operand_roles": "- value1: The first value in the sequence (e.g., for the earliest period).\n- value2: The second value in the sequence (e.g., for the middle period).\n- value3: The third value in the sequence (e.g., for the latest period).",
+    "formula_template": "(value1 + value2 + value3) / 3",
+    "units_convention": "All values should be in the same unit as given in the context. The result will have the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E060_operand_role_drift": {
+    "source_experience_id": "E060",
+    "strategy_name": "Average of Three-Year Values",
+    "problem_pattern": "Calculate the average of three values from a table over a three-year period, where the values are given for each year.",
+    "reasoning_steps": "Step 1: Step 1: Identify the three yearly values for the specified years from the given data.\nStep 2: Step 2: Add the first two yearly values together.\nStep 3: Step 3: Add the result to the third yearly value to get the total sum.\nStep 4: Step 4: Divide the total sum by 3 to get the average.",
+    "operand_roles": "- value_year1: The value for the first year in the range\n- value_year2: The value for the second year in the range\n- value_year3: The value for the third year in the range\n- total_sum: The sum of the three yearly values\n- count: The number of years (constant 3)",
+    "formula_template": "(value_year1 + value_year2 + value_year3) / 3",
+    "units_convention": "All values should be in the same unit as given (e.g., millions of dollars). The result will have the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E060_operation_drift": {
+    "source_experience_id": "E060",
+    "strategy_name": "Average of Three-Year Values",
+    "problem_pattern": "Calculate the average of three values from a table over a three-year period, where the values are given for each year.",
+    "reasoning_steps": "Step 1: Step 1: Identify the three yearly values for the specified years from the given data.\nStep 2: Step 2: subtract the first two yearly values together.\nStep 3: Step 3: Add the result to the third yearly value to get the total sum.\nStep 4: Step 4: Divide the total sum by 3 to get the average.",
+    "operand_roles": "- value_year1: The value for the first year in the range\n- value_year2: The value for the second year in the range\n- value_year3: The value for the third year in the range\n- total_sum: The sum of the three yearly values\n- count: The number of years (constant 3)",
+    "formula_template": "(value_year1 + value_year2 + value_year3) / 3",
+    "units_convention": "All values should be in the same unit as given (e.g., millions of dollars). The result will have the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E060_scale_drift": {
+    "source_experience_id": "E060",
+    "strategy_name": "Average of Three-Year Values",
+    "problem_pattern": "Calculate the average of three values from a table over a three-year period, where the values are given for each year.",
+    "reasoning_steps": "Step 1: Step 1: Identify the three yearly values for the specified years from the given data.\nStep 2: Step 2: Add the first two yearly values together.\nStep 3: Step 3: Add the result to the third yearly value to get the total sum.\nStep 4: Step 4: Divide the total sum by 3 to get the average. Then multiply the result by 100 to express as a percentage.",
+    "operand_roles": "- value_year1: The value for the first year in the range\n- value_year2: The value for the second year in the range\n- value_year3: The value for the third year in the range\n- total_sum: The sum of the three yearly values\n- count: The number of years (constant 3)",
+    "formula_template": "(value_year1 + value_year2 + value_year3) / 3",
+    "units_convention": "All values should be in the same unit as given (e.g., millions of dollars). The result will have the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E065_scale_drift": {
+    "source_experience_id": "E065",
+    "strategy_name": "Average of Financial Metric",
+    "problem_pattern": "Compute the average value of a specified financial metric across multiple reporting periods, where the metric values are provided in a table and may be expressed as negative numbers in parentheses.",
+    "reasoning_steps": "Step 1: Step 1: Identify the financial metric from the question (e.g., 'interest expense net').\nStep 2: Step 2: Locate the values for this metric for each reporting period in the given data table.\nStep 3: Step 3: If values are presented in parentheses (e.g., (669)), interpret them as negative numbers.\nStep 4: Step 4: Compute the average of these values using the table_average operation. Then multiply the result by 100 to express as a percentage.\nStep 5: Step 5: Report the result, preserving the sign and appropriate units (e.g., millions).",
+    "operand_roles": "- metric: The financial metric to average, e.g., 'interest expense net'. It is identified from the question and corresponds to a row or column label in the data table.\n- periods: The set of reporting periods (e.g., years) over which to average. Typically all available periods for the metric, unless specified otherwise.",
+    "formula_template": "average(metric values over all periods)",
+    "units_convention": "Values are typically in millions as indicated in the question or table. The average should be reported in the same units.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "table_average"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E067_operand_role_drift": {
+    "strategy_name": "Relative change in average price over two months",
+    "problem_pattern": "This pattern applies when comparing an average price or similar metric at two different time points to find the relative change (as a decimal) over a period. The problem provides the average price for the later period and the earlier period, and asks for the percentual increase (without converting to a percentage).",
+    "reasoning_steps": "Step 1: Identify the average price paid per share for the later period (November and December 2013) as the numerator.\nStep 2: Identify the average price paid per share for the earlier period (the reference period) as the denominator.\nStep 3: Divide the later average price by the earlier average price to obtain the ratio of the later price to the earlier price.\nStep 4: Subtract 1 from the ratio to isolate the relative change (increase) as a decimal.",
+    "operand_roles": "- later_average_price: The average price paid per share in the later period (e.g., November and December 2013).\n- earlier_average_price: The average price paid per share in the earlier period (the base for comparison).",
+    "formula_template": "relative_change = (later_average_price / earlier_average_price) - 1",
+    "units_convention": "Prices are in the same currency unit (e.g., dollars) for both periods. The result is a dimensionless decimal representing the relative change; no unit conversion is applied.",
+    "source_experience_id": "E067",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide",
+      "subtract"
+    ],
+    "gold_has_100": false
+  },
+  "E067_operation_drift": {
+    "strategy_name": "Relative change in average price over two months",
+    "problem_pattern": "This pattern applies when comparing an average price or similar metric at two different time points to find the relative change (as a decimal) over a period. The problem provides the average price for the later period and the earlier period, and asks for the percentual increase (without converting to a percentage).",
+    "reasoning_steps": "Step 1: Identify the average price paid per share for the later period (November and December 2013) as the numerator.\nStep 2: Identify the average price paid per share for the earlier period (the reference period) as the denominator.\nStep 3: multiply the later average price by the earlier average price to obtain the ratio of the later price to the earlier price.\nStep 4: Subtract 1 from the ratio to isolate the relative change (increase) as a decimal.",
+    "operand_roles": "- later_average_price: The average price paid per share in the later period (e.g., November and December 2013).\n- earlier_average_price: The average price paid per share in the earlier period (the base for comparison).",
+    "formula_template": "relative_change = (later_average_price / earlier_average_price) - 1",
+    "units_convention": "Prices are in the same currency unit (e.g., dollars) for both periods. The result is a dimensionless decimal representing the relative change; no unit conversion is applied.",
+    "source_experience_id": "E067",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide",
+      "subtract"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E068_operand_role_drift": {
+    "strategy_name": "Capital Expenditure Increase Ratio",
+    "problem_pattern": "This pattern applies when comparing a financial metric (e.g., capital expenditures) between two consecutive years to find the relative increase as a decimal ratio, without converting to a percentage. The problem provides the values for both years and asks for the percentual increase, but the expected answer is a decimal.",
+    "reasoning_steps": "Step 1: Identify the value of the metric for the later year (e.g., 2018) and the value for the earlier year (e.g., 2017).\nStep 2: Compute the difference between the later-year value and the earlier-year value to find the absolute increase.\nStep 3: Divide the absolute increase by the earlier-year value to obtain the relative increase as a decimal.\nStep 4: The result is the decimal ratio representing the increase, not multiplied by 100.",
+    "operand_roles": "- later_year_value: The value of the metric in the later year (e.g., capital expenditures in 2018).\n- earlier_year_value: The value of the metric in the earlier year (e.g., capital expenditures in 2017).",
+    "formula_template": "(later_year_value - earlier_year_value) / earlier_year_value",
+    "units_convention": "All values must be in the same monetary units (e.g., dollars, thousands of dollars). The result is a dimensionless decimal, not a percentage, so no unit conversion is applied.",
+    "source_experience_id": "E068",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide",
+      "subtract"
+    ],
+    "gold_has_100": false
+  },
+  "E068_operation_drift": {
+    "strategy_name": "Capital Expenditure Increase Ratio",
+    "problem_pattern": "This pattern applies when comparing a financial metric (e.g., capital expenditures) between two consecutive years to find the relative increase as a decimal ratio, without converting to a percentage. The problem provides the values for both years and asks for the percentual increase, but the expected answer is a decimal.",
+    "reasoning_steps": "Step 1: Identify the value of the metric for the later year (e.g., 2018) and the value for the earlier year (e.g., 2017).\nStep 2: Compute the difference between the later-year value and the earlier-year value to find the absolute increase.\nStep 3: multiply the absolute increase by the earlier-year value to obtain the relative increase as a decimal.\nStep 4: The result is the decimal ratio representing the increase, not multiplied by 100.",
+    "operand_roles": "- later_year_value: The value of the metric in the later year (e.g., capital expenditures in 2018).\n- earlier_year_value: The value of the metric in the earlier year (e.g., capital expenditures in 2017).",
+    "formula_template": "(later_year_value - earlier_year_value) / earlier_year_value",
+    "units_convention": "All values must be in the same monetary units (e.g., dollars, thousands of dollars). The result is a dimensionless decimal, not a percentage, so no unit conversion is applied.",
+    "source_experience_id": "E068",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide",
+      "subtract"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E068_scale_drift": {
+    "strategy_name": "Capital Expenditure Increase Ratio",
+    "problem_pattern": "This pattern applies when comparing a financial metric (e.g., capital expenditures) between two consecutive years to find the relative increase as a decimal ratio, without converting to a percentage. The problem provides the values for both years and asks for the percentual increase, but the expected answer is a decimal.",
+    "reasoning_steps": "Step 1: Identify the value of the metric for the later year (e.g., 2018) and the value for the earlier year (e.g., 2017).\nStep 2: Compute the difference between the later-year value and the earlier-year value to find the absolute increase.\nStep 3: Divide the absolute increase by the earlier-year value to obtain the relative increase as a decimal. Then multiply the result by 100 to express as a percentage.\nStep 4: The result is the decimal ratio representing the increase, not multiplied by 100.",
+    "operand_roles": "- later_year_value: The value of the metric in the later year (e.g., capital expenditures in 2018).\n- earlier_year_value: The value of the metric in the earlier year (e.g., capital expenditures in 2017).",
+    "formula_template": "(later_year_value - earlier_year_value) / earlier_year_value",
+    "units_convention": "All values must be in the same monetary units (e.g., dollars, thousands of dollars). The result is a dimensionless decimal, not a percentage, so no unit conversion is applied.",
+    "source_experience_id": "E068",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide",
+      "subtract"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E070_operand_role_drift": {
+    "strategy_name": "Two-Year R&D Expenditure Increase Ratio",
+    "problem_pattern": "This pattern applies when comparing a financial metric (e.g., research and development expenditures) between two consecutive years to find the relative increase. The problem provides the values for both years and asks for the increase observed, which is computed as the ratio of the later year's value to the earlier year's value, minus one.",
+    "reasoning_steps": "Step 1: Identify the value of the metric for the earlier year (e.g., 2016) and the later year (e.g., 2017).\nStep 2: Divide the later year's value by the earlier year's value to obtain the ratio of the later value to the earlier value.\nStep 3: Subtract 1 from this ratio to isolate the increase relative to the earlier year.\nStep 4: The result is the decimal increase (not multiplied by 100).",
+    "operand_roles": "- later_year_value: The value of the metric in the later year (e.g., 2017).\n- earlier_year_value: The value of the metric in the earlier year (e.g., 2016).\n- constant_1: The number 1, representing the baseline (the earlier year's value as a ratio of itself).",
+    "formula_template": "(later_year_value / earlier_year_value) - 1",
+    "units_convention": "The values for both years must be in the same unit (e.g., millions of dollars). The result is a dimensionless decimal, not a percentage. No unit conversion is applied.",
+    "source_experience_id": "E070",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide",
+      "subtract"
+    ],
+    "gold_has_100": false
+  },
+  "E070_operation_drift": {
+    "strategy_name": "Two-Year R&D Expenditure Increase Ratio",
+    "problem_pattern": "This pattern applies when comparing a financial metric (e.g., research and development expenditures) between two consecutive years to find the relative increase. The problem provides the values for both years and asks for the increase observed, which is computed as the ratio of the later year's value to the earlier year's value, minus one.",
+    "reasoning_steps": "Step 1: Identify the value of the metric for the earlier year (e.g., 2016) and the later year (e.g., 2017).\nStep 2: multiply the later year's value by the earlier year's value to obtain the ratio of the later value to the earlier value.\nStep 3: Subtract 1 from this ratio to isolate the increase relative to the earlier year.\nStep 4: The result is the decimal increase (not multiplied by 100).",
+    "operand_roles": "- later_year_value: The value of the metric in the later year (e.g., 2017).\n- earlier_year_value: The value of the metric in the earlier year (e.g., 2016).\n- constant_1: The number 1, representing the baseline (the earlier year's value as a ratio of itself).",
+    "formula_template": "(later_year_value / earlier_year_value) - 1",
+    "units_convention": "The values for both years must be in the same unit (e.g., millions of dollars). The result is a dimensionless decimal, not a percentage. No unit conversion is applied.",
+    "source_experience_id": "E070",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide",
+      "subtract"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E070_scale_drift": {
+    "strategy_name": "Two-Year R&D Expenditure Increase Ratio",
+    "problem_pattern": "This pattern applies when comparing a financial metric (e.g., research and development expenditures) between two consecutive years to find the relative increase. The problem provides the values for both years and asks for the increase observed, which is computed as the ratio of the later year's value to the earlier year's value, minus one.",
+    "reasoning_steps": "Step 1: Identify the value of the metric for the earlier year (e.g., 2016) and the later year (e.g., 2017).\nStep 2: Divide the later year's value by the earlier year's value to obtain the ratio of the later value to the earlier value. Then multiply the result by 100 to express as a percentage.\nStep 3: Subtract 1 from this ratio to isolate the increase relative to the earlier year.\nStep 4: The result is the decimal increase (not multiplied by 100).",
+    "operand_roles": "- later_year_value: The value of the metric in the later year (e.g., 2017).\n- earlier_year_value: The value of the metric in the earlier year (e.g., 2016).\n- constant_1: The number 1, representing the baseline (the earlier year's value as a ratio of itself).",
+    "formula_template": "(later_year_value / earlier_year_value) - 1",
+    "units_convention": "The values for both years must be in the same unit (e.g., millions of dollars). The result is a dimensionless decimal, not a percentage. No unit conversion is applied.",
+    "source_experience_id": "E070",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide",
+      "subtract"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E071_operation_drift": {
+    "strategy_name": "Growth ratio with base adjustment",
+    "problem_pattern": "This pattern applies when calculating the growth of a segment or metric over two periods, where the growth is expressed as a ratio relative to the base period value, and the result is a decimal (not a percentage). The gold program uses division to find the ratio of the later value to the earlier value, then subtracts 1 to isolate the growth portion.",
+    "reasoning_steps": "Step 1: Identify the value of the metric for the later period (e.g., 2018) and the value for the earlier period (e.g., 2017).\nStep 2: multiply the later period value by the earlier period value to obtain the ratio of the later value to the earlier value.\nStep 3: Subtract 1 from the ratio to remove the base (the earlier period value itself) and obtain the growth as a decimal fraction.\nStep 4: The result is the growth observed over the period, expressed as a decimal (e.g., 0.26914).",
+    "operand_roles": "- later_value: The value of the metric in the later period (e.g., 2018).\n- earlier_value: The value of the metric in the earlier period (e.g., 2017).",
+    "formula_template": "growth = (later_value / earlier_value) - 1",
+    "units_convention": "The values used in the division must be in the same units (e.g., currency, volume). The result is a dimensionless decimal representing the growth fraction; no unit conversion is applied.",
+    "source_experience_id": "E071",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide",
+      "subtract"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E071_scale_drift": {
+    "strategy_name": "Growth ratio with base adjustment",
+    "problem_pattern": "This pattern applies when calculating the growth of a segment or metric over two periods, where the growth is expressed as a ratio relative to the base period value, and the result is a decimal (not a percentage). The gold program uses division to find the ratio of the later value to the earlier value, then subtracts 1 to isolate the growth portion.",
+    "reasoning_steps": "Step 1: Identify the value of the metric for the later period (e.g., 2018) and the value for the earlier period (e.g., 2017).\nStep 2: Divide the later period value by the earlier period value to obtain the ratio of the later value to the earlier value. Then multiply the result by 100 to express as a percentage.\nStep 3: Subtract 1 from the ratio to remove the base (the earlier period value itself) and obtain the growth as a decimal fraction.\nStep 4: The result is the growth observed over the period, expressed as a decimal (e.g., 0.26914).",
+    "operand_roles": "- later_value: The value of the metric in the later period (e.g., 2018).\n- earlier_value: The value of the metric in the earlier period (e.g., 2017).",
+    "formula_template": "growth = (later_value / earlier_value) - 1",
+    "units_convention": "The values used in the division must be in the same units (e.g., currency, volume). The result is a dimensionless decimal representing the growth fraction; no unit conversion is applied.",
+    "source_experience_id": "E071",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide",
+      "subtract"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E072_operand_role_drift": {
+    "strategy_name": "Ratio of two-year benefit payments",
+    "problem_pattern": "This pattern applies when comparing a value in a later period to an earlier period to find the relative increase, expressed as a decimal ratio. It is used when the problem asks for the 'increase observed' between two years and the expected answer is a decimal, not a percentage.",
+    "reasoning_steps": "Step 1: Identify the value for the later period (e.g., 2013) as the numerator.\nStep 2: Identify the value for the earlier period (e.g., 2012) as the denominator.\nStep 3: Divide the later value by the earlier value to obtain the ratio of the later value to the earlier value.\nStep 4: Subtract 1 from the ratio to isolate the increase relative to the earlier value.\nStep 5: The result is the decimal increase (e.g., 0.18401), which represents the fractional increase over the earlier period.",
+    "operand_roles": "- later_period_value: The value from the later year (e.g., 2013) that is being compared.\n- earlier_period_value: The value from the earlier year (e.g., 2012) that serves as the baseline.\n- constant_1: The number 1, used to subtract the baseline ratio to get the increase.",
+    "formula_template": "increase = (later_period_value / earlier_period_value) - 1",
+    "units_convention": "All values must be in the same units (e.g., dollars, thousands of dollars). The result is a dimensionless decimal, not a percentage. No unit conversion is applied.",
+    "source_experience_id": "E072",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide",
+      "subtract"
+    ],
+    "gold_has_100": false
+  },
+  "E072_scale_drift": {
+    "strategy_name": "Ratio of two-year benefit payments",
+    "problem_pattern": "This pattern applies when comparing a value in a later period to an earlier period to find the relative increase, expressed as a decimal ratio. It is used when the problem asks for the 'increase observed' between two years and the expected answer is a decimal, not a percentage.",
+    "reasoning_steps": "Step 1: Identify the value for the later period (e.g., 2013) as the numerator.\nStep 2: Identify the value for the earlier period (e.g., 2012) as the denominator.\nStep 3: Divide the later value by the earlier value to obtain the ratio of the later value to the earlier value. Then multiply the result by 100 to express as a percentage.\nStep 4: Subtract 1 from the ratio to isolate the increase relative to the earlier value.\nStep 5: The result is the decimal increase (e.g., 0.18401), which represents the fractional increase over the earlier period.",
+    "operand_roles": "- later_period_value: The value from the later year (e.g., 2013) that is being compared.\n- earlier_period_value: The value from the earlier year (e.g., 2012) that serves as the baseline.\n- constant_1: The number 1, used to subtract the baseline ratio to get the increase.",
+    "formula_template": "increase = (later_period_value / earlier_period_value) - 1",
+    "units_convention": "All values must be in the same units (e.g., dollars, thousands of dollars). The result is a dimensionless decimal, not a percentage. No unit conversion is applied.",
+    "source_experience_id": "E072",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean",
+    "gold_operations": [
+      "divide",
+      "subtract"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "scale_drift_add_100"
+  },
+  "E073_operand_role_drift": {
+    "source_experience_id": "E073",
+    "strategy_name": "Percentage Change Calculation",
+    "problem_pattern": "Calculate the percentage decrease or increase of a metric between two time points, given the metric values at those points.",
+    "reasoning_steps": "Step 1: Step 1: Identify the metric values at the two time points: earlier_value and later_value.\nStep 2: Step 2: Compute the difference: subtract later_value from earlier_value (earlier_value - later_value).\nStep 3: Step 3: Divide the difference by the later_value to get the relative change.\nStep 4: Step 4: Multiply the result by 100 to express as a percentage.",
+    "operand_roles": "- earlier_value: The value of the metric at the earlier time point (e.g., start of period).\n- later_value: The value of the metric at the later time point (e.g., end of period).",
+    "formula_template": "((earlier_value - later_value) / later_value) * 100",
+    "units_convention": "The metric values are in the same units (e.g., days). The result is a percentage, so no unit conversion is needed.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_has_100": true
+  },
+  "E073_scale_drift": {
+    "source_experience_id": "E073",
+    "strategy_name": "Percentage Change Calculation",
+    "problem_pattern": "Calculate the percentage decrease or increase of a metric between two time points, given the metric values at those points.",
+    "reasoning_steps": "Step 1: Step 1: Identify the metric values at the two time points: earlier_value and later_value.\nStep 2: Step 2: Compute the difference: subtract later_value from earlier_value (earlier_value - later_value).\nStep 3: Step 3: Divide the difference by the later_value to get the relative change.\nStep 4: Step 4: keep the result as is to express as decimal ratio.",
+    "operand_roles": "- earlier_value: The value of the metric at the earlier time point (e.g., start of period).\n- later_value: The value of the metric at the later time point (e.g., end of period).",
+    "formula_template": "((earlier_value - later_value) / later_value) * 100",
+    "units_convention": "The metric values are in the same units (e.g., days). The result is a percentage, so no unit conversion is needed.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "scale_drift_remove_100"
+  },
+  "E074_operand_role_drift": {
+    "source_experience_id": "E074",
+    "strategy_name": "Total Return on Index Investment",
+    "problem_pattern": "Calculate the total return on an investment in a market index or stock over a period, given the initial and final index values and the initial investment amount, assuming reinvestment of dividends.",
+    "reasoning_steps": "Step 1: Step 1: Identify the final value and initial value of the index or stock from the given data.\nStep 2: Step 2: Subtract the initial value from the final value to get the change in index value.\nStep 3: Step 3: Divide the investment amount by the initial value to determine the number of units (shares) that could be purchased.\nStep 4: Step 4: Multiply the change in index value by the number of units to get the total return in dollars.",
+    "operand_roles": "- final_value: The value of the index or stock at the end of the investment period.\n- initial_value: The value of the index or stock at the start of the investment period.\n- investment_amount: The amount of money initially invested.",
+    "formula_template": "Total Return = (final_value - initial_value) * (investment_amount / initial_value)",
+    "units_convention": "The index values are typically normalized (e.g., set to 100 at start), and the investment amount is in dollars. The result is in dollars.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_has_100": true
+  },
+  "E074_operation_drift": {
+    "source_experience_id": "E074",
+    "strategy_name": "Total Return on Index Investment",
+    "problem_pattern": "Calculate the total return on an investment in a market index or stock over a period, given the initial and final index values and the initial investment amount, assuming reinvestment of dividends.",
+    "reasoning_steps": "Step 1: Step 1: Identify the final value and initial value of the index or stock from the given data.\nStep 2: Step 2: add the initial value from the final value to get the change in index value.\nStep 3: Step 3: Divide the investment amount by the initial value to determine the number of units (shares) that could be purchased.\nStep 4: Step 4: Multiply the change in index value by the number of units to get the total return in dollars.",
+    "operand_roles": "- final_value: The value of the index or stock at the end of the investment period.\n- initial_value: The value of the index or stock at the start of the investment period.\n- investment_amount: The amount of money initially invested.",
+    "formula_template": "Total Return = (final_value - initial_value) * (investment_amount / initial_value)",
+    "units_convention": "The index values are typically normalized (e.g., set to 100 at start), and the investment amount is in dollars. The result is in dollars.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "operation_drift_subtract_to_add"
+  },
+  "E074_scale_drift": {
+    "source_experience_id": "E074",
+    "strategy_name": "Total Return on Index Investment",
+    "problem_pattern": "Calculate the total return on an investment in a market index or stock over a period, given the initial and final index values and the initial investment amount, assuming reinvestment of dividends.",
+    "reasoning_steps": "Step 1: Step 1: Identify the final value and initial value of the index or stock from the given data.\nStep 2: Step 2: Subtract the initial value from the final value to get the change in index value.\nStep 3: Step 3: Divide the investment amount by the initial value to determine the number of units (shares) that could be purchased.\nStep 4: Step 4: Multiply the change in index value by the number of units to get the total return in dollars.",
+    "operand_roles": "- final_value: The value of the index or stock at the end of the investment period.\n- initial_value: The value of the index or stock at the start of the investment period.\n- investment_amount: The amount of money initially invested.",
+    "formula_template": "Total Return = (final_value - initial_value) * (investment_amount / initial_value)",
+    "units_convention": "The index values are typically normalized (e.g., set to 100 at start), and the investment amount is in dollars. The result is in dollars.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "scale_drift_remove_100"
+  },
+  "E075_operand_role_drift": {
+    "source_experience_id": "E075",
+    "strategy_name": "Percentage Decrease Calculation",
+    "problem_pattern": "Given two values of the same metric at two different time points (e.g., year over year), calculate the percentage decrease from the earlier value to the later value.",
+    "reasoning_steps": "Step 1: Step 1: Identify the earlier value (e.g., from the earlier year) and the later value (e.g., from the later year) for the metric in question.\nStep 2: Step 2: Subtract the later value from the earlier value to find the absolute decrease.\nStep 3: Step 3: Divide the absolute decrease by the earlier value to get the fractional decrease.\nStep 4: Step 4: Multiply the fractional decrease by 100 to express it as a percentage.",
+    "operand_roles": "- earlier_value: The value of the metric at the earlier time point (e.g., current year).\n- later_value: The value of the metric at the later time point (e.g., previous year).",
+    "formula_template": "((earlier_value - later_value) / earlier_value) * 100",
+    "units_convention": "The values should be in the same units. The result is a percentage, so no unit conversion is needed.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "operand_role_drift_current_previous"
+  },
+  "E075_operation_drift": {
+    "source_experience_id": "E075",
+    "strategy_name": "Percentage Decrease Calculation",
+    "problem_pattern": "Given two values of the same metric at two different time points (e.g., year over year), calculate the percentage decrease from the earlier value to the later value.",
+    "reasoning_steps": "Step 1: Step 1: Identify the earlier value (e.g., from the earlier year) and the later value (e.g., from the later year) for the metric in question.\nStep 2: Step 2: add the later value from the earlier value to find the absolute decrease.\nStep 3: Step 3: Divide the absolute decrease by the earlier value to get the fractional decrease.\nStep 4: Step 4: Multiply the fractional decrease by 100 to express it as a percentage.",
+    "operand_roles": "- earlier_value: The value of the metric at the earlier time point (e.g., previous year).\n- later_value: The value of the metric at the later time point (e.g., current year).",
+    "formula_template": "((earlier_value - later_value) / earlier_value) * 100",
+    "units_convention": "The values should be in the same units. The result is a percentage, so no unit conversion is needed.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "operation_drift_subtract_to_add"
+  },
+  "E075_scale_drift": {
+    "source_experience_id": "E075",
+    "strategy_name": "Percentage Decrease Calculation",
+    "problem_pattern": "Given two values of the same metric at two different time points (e.g., year over year), calculate the percentage decrease from the earlier value to the later value.",
+    "reasoning_steps": "Step 1: Step 1: Identify the earlier value (e.g., from the earlier year) and the later value (e.g., from the later year) for the metric in question.\nStep 2: Step 2: Subtract the later value from the earlier value to find the absolute decrease.\nStep 3: Step 3: Divide the absolute decrease by the earlier value to get the fractional decrease.\nStep 4: Step 4: Multiply the fractional decrease by 100 to express as decimal ratio.",
+    "operand_roles": "- earlier_value: The value of the metric at the earlier time point (e.g., previous year).\n- later_value: The value of the metric at the later time point (e.g., current year).",
+    "formula_template": "((earlier_value - later_value) / earlier_value) * 100",
+    "units_convention": "The values should be in the same units. The result is a percentage, so no unit conversion is needed.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "scale_drift_remove_100"
+  },
+  "E077_operand_role_drift": {
+    "source_experience_id": "E077",
+    "strategy_name": "Total Return Calculation",
+    "problem_pattern": "Given an initial investment amount and the price of an asset at two different times, calculate the total return in currency units.",
+    "reasoning_steps": "Step 1: Step 1: Subtract the initial price from the final price to get the price change.\nStep 2: Step 2: Divide the price change by the initial price to get the return rate.\nStep 3: Step 3: Multiply the return rate by the investment amount to get the total return in currency units.",
+    "operand_roles": "- initial_price: The price of the asset at the beginning of the investment period.\n- final_price: The price of the asset at the end of the investment period.\n- investment_amount: The amount of money invested in the asset.",
+    "formula_template": "total_return = ((final_price - initial_price) / initial_price) * investment_amount",
+    "units_convention": "Prices are in the same currency unit as the investment amount. The result is in the same currency unit as the investment amount.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_has_100": true
+  },
+  "E082_operation_drift": {
+    "strategy_name": "Cumulative Quarterly Repurchase Claims Summation",
+    "problem_pattern": "Given a series of yearly first-quarter repurchase claim values, compute the total combined claims by summing the values sequentially.",
+    "reasoning_steps": "Step 1: Identify the repurchase claim value for the first quarter of the first year and record it as the initial total.\nStep 2: subtract the repurchase claim value for the first quarter of the second year to the current total.\nStep 3: Add the repurchase claim value for the first quarter of the third year to the running total, then add the value for the first quarter of the fourth year to obtain the final combined total.",
+    "operand_roles": "- first_operand: The repurchase claim value for the first quarter of the first year.\n- second_operand: The repurchase claim value for the first quarter of the second year.\n- third_operand: The repurchase claim value for the first quarter of the third year.\n- fourth_operand: The repurchase claim value for the first quarter of the fourth year.",
+    "formula_template": "((first_operand + second_operand) + third_operand) + fourth_operand",
+    "units_convention": "All values are in millions of dollars; the final result is expressed in millions.",
+    "source_experience_id": "E082",
+    "representation": "format_neutral_strategy",
+    "regenerated": true,
+    "regeneration_version": "v2_clean_pass2",
+    "gold_operations": [
+      "add",
+      "add",
+      "add"
+    ],
+    "gold_has_100": true,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E084_operation_drift": {
+    "source_experience_id": "E084",
+    "strategy_name": "Sum of Multiple Year Values",
+    "problem_pattern": "Given a series of values for a specific financial item across multiple consecutive years, find the combined total for the entire period.",
+    "reasoning_steps": "Step 1: Step 1: Identify the financial item and the period of years for which the combined balance is required.\nStep 2: Step 2: Locate the value of the financial item for each year in the period from the given data.\nStep 3: Step 3: Sum the values for all years in the period to obtain the combined balance.\nStep 4: Step 4: Ensure the result is expressed in the specified unit (e.g., thousands).",
+    "operand_roles": "- value_year_1: The value of the financial item for the first year of the period.\n- value_year_2: The value of the financial item for the second year of the period.\n- value_year_3: The value of the financial item for the third year of the period.\n- value_year_4: The value of the financial item for the fourth year of the period.",
+    "formula_template": "combined_balance = value_year_1 + value_year_2 + value_year_3 + value_year_4",
+    "units_convention": "All values are in the same unit (e.g., thousands). The final answer should be reported in that unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "add"
+    ],
+    "gold_has_100": false
+  },
+  "E085_operand_role_drift": {
+    "source_experience_id": "E085",
+    "strategy_name": "Average of Three Consecutive Yearly Values",
+    "problem_pattern": "Given a metric for three consecutive years, compute the average of the first two years and then the average of that result with the third year, effectively computing the average of the three values.",
+    "reasoning_steps": "Step 1: Step 1: Identify the metric values for the three consecutive years mentioned in the context.\nStep 2: Step 2: Add the values for the first and second years to get their sum.\nStep 3: Step 3: Add the sum from Step 2 to the value for the third year to get the total sum of all three years.\nStep 4: Step 4: Divide the total sum by 3 to get the average of the three years.",
+    "operand_roles": "- value_year1: The metric value for the first year in the sequence.\n- value_year2: The metric value for the second year in the sequence.\n- value_year3: The metric value for the third year in the sequence.\n- constant_3: The number 3, representing the count of years.",
+    "formula_template": "((value_year1 + value_year2) + value_year3) / 3",
+    "units_convention": "All values should be in the same unit as given in the context (e.g., billions of dollars). The result will have the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E085_operation_drift": {
+    "source_experience_id": "E085",
+    "strategy_name": "Average of Three Consecutive Yearly Values",
+    "problem_pattern": "Given a metric for three consecutive years, compute the average of the first two years and then the average of that result with the third year, effectively computing the average of the three values.",
+    "reasoning_steps": "Step 1: Step 1: Identify the metric values for the three consecutive years mentioned in the context.\nStep 2: Step 2: subtract the values for the first and second years to get their sum.\nStep 3: Step 3: Add the sum from Step 2 to the value for the third year to get the total sum of all three years.\nStep 4: Step 4: Divide the total sum by 3 to get the average of the three years.",
+    "operand_roles": "- value_year1: The metric value for the first year in the sequence.\n- value_year2: The metric value for the second year in the sequence.\n- value_year3: The metric value for the third year in the sequence.\n- constant_3: The number 3, representing the count of years.",
+    "formula_template": "((value_year1 + value_year2) + value_year3) / 3",
+    "units_convention": "All values should be in the same unit as given in the context (e.g., billions of dollars). The result will have the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_add_to_subtract"
+  },
+  "E087_operand_role_drift": {
+    "source_experience_id": "E087",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Calculate the average of three numerical values from a given context.",
+    "reasoning_steps": "Step 1: Step 1: Identify the three values to be averaged from the context.\nStep 2: Step 2: Sum the three values together.\nStep 3: Step 3: Divide the sum by the number of values (3) to obtain the average.",
+    "operand_roles": "- value1: The first value to be averaged, located in the context as a specific data point.\n- value2: The second value to be averaged, located in the context as a specific data point.\n- value3: The third value to be averaged, located in the context as a specific data point.\n- count: The number of values to average, which is 3 in this case.\n- divisor: The divisor used to compute the average, which is the count of values (3).",
+    "formula_template": "(value1 + value2 + value3) / count",
+    "units_convention": "All values should be in the same unit; the average will have the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false
+  },
+  "E087_operation_drift": {
+    "source_experience_id": "E087",
+    "strategy_name": "Average of Three Values",
+    "problem_pattern": "Calculate the average of three numerical values from a given context.",
+    "reasoning_steps": "Step 1: Step 1: Identify the three values to be averaged from the context.\nStep 2: Step 2: Sum the three values together.\nStep 3: Step 3: multiply the sum by the number of values (3) to obtain the average.",
+    "operand_roles": "- value1: The first value to be averaged, located in the context as a specific data point.\n- value2: The second value to be averaged, located in the context as a specific data point.\n- value3: The third value to be averaged, located in the context as a specific data point.\n- count: The number of values to average, which is 3 in this case.\n- divisor: The divisor used to compute the average, which is the count of values (3).",
+    "formula_template": "(value1 + value2 + value3) / count",
+    "units_convention": "All values should be in the same unit; the average will have the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false,
+    "corruption_applied": "operation_drift_divide_to_multiply"
+  },
+  "E090_operand_role_drift": {
+    "source_experience_id": "E090",
+    "strategy_name": "Average of Three Annual Values",
+    "problem_pattern": "Compute the average of a financial metric over three consecutive years.",
+    "reasoning_steps": "Step 1: Step 1: Identify the values of the metric for each of the three years in the specified range.\nStep 2: Step 2: Sum the values for the first two years.\nStep 3: Step 3: Add the third year's value to the sum.\nStep 4: Step 4: Add a constant 3 to the total sum (this step is unusual but present in the source).\nStep 5: Step 5: Divide the result by a constant 2 to obtain the final average.",
+    "operand_roles": "- value_year1: The value of the metric for the first year in the range.\n- value_year2: The value of the metric for the second year in the range.\n- value_year3: The value of the metric for the third year in the range.\n- count_years: The number of years in the range (constant 3).\n- divisor: The divisor for average (constant 2, representing the number of additions? Actually the program divides by 2, but for average of 3 numbers, divisor should be 3. However, the source program divides by 2, so we must preserve that. So we'll note that the divisor is 2 as per the source, but this is unusual. We'll keep it as is.)",
+    "formula_template": "((value_year1 + value_year2) + value_year3 + 3) / 2",
+    "units_convention": "All values are in the same unit (e.g., millions of dollars). The result is in the same unit.",
+    "representation": "format_neutral_strategy",
+    "gold_operations": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_has_100": false
+  }
+}
