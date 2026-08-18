@@ -1,6 +1,14 @@
-# Oracle Pilot 决策日志（Stage 2）
+# Oracle Pilot 决策日志
 
-所有关键实验设计决定与理由。时间戳 2026-08-16。
+所有关键实验设计决定与理由。
+
+---
+
+## Stage 2 - FinQA Four-arm Experiment (2026-08-16)
+
+**Status**: Completed. See `analysis/stage2_report.md` for full results.
+
+---
 
 ## 1. 采样
 - **dev 分层 150 条，配额式**（实际 143：A/D 桶 dev 池不足）。
@@ -1147,3 +1155,146 @@ Execution/cache/provenance layer 已修复，但当前 60-sample MultiHiertt dry
 - Tests：`pilot/tests/test_multihiertt_four_arm_dry_run.py`。
 - JSON：`pilot/multibench/output/multihiertt/multihiertt_four_arm_dry_run_repaired.json`。
 - Report：`pilot/multibench/output/multihiertt/MULTIHIERTT_FOUR_ARM_DRY_RUN_REPAIRED.md`。
+
+---
+
+## 34. MultiHiertt Pipeline Validity Audit (Stage 33 continuation, 2026-08-18)
+
+### research question
+Stage 33 repaired run 成功完成，但结果显示 baseline EM=0.117，sample Oracle Gap=0.017（仅 1/60 样本四臂有差异）。
+
+**核心问题**：MultiHiertt 管道是否对记忆效用研究有效？为何绝对性能低？
+
+### audit scope
+分析 240 条 cached API responses（60 samples × 4 arms），检查：
+1. Evaluator 是否过严（type mismatch false negatives）
+2. Context truncation 是否导致 evidence loss
+3. 真实失败模式分类（extraction / reasoning / scale / format）
+4. Retrieval-conditioned 解释的可信度
+
+### failure attribution (None arm, N=60)
+
+#### Type 1: Evaluator type strictness (6/60, +0.100 potential EM gain)
+模型返回数值正确但类型错误：
+- Gold="86" (str) vs Pred=86 (int) → 标记为错
+- Gold="-0.23188" (str) vs Pred=-0.2318840579710145 (float) → 标记为错
+- Gold="10.2" (str) vs Pred=10.2 (float) → 标记为错
+
+**结论**：当前 evaluator 使用严格字符串比较 `str(pred).strip().lower() == str(gold).strip().lower()`，拒绝数值等价的不同类型。
+
+**潜在 EM 提升**：+0.100（从 0.117 → 0.217）。
+
+#### Type 2: Real errors (53/60)
+| Error Mode | Count | %失败样本 |
+|---|---:|---:|
+| wrong_extraction_or_logic | 44 | 83% |
+| calculation_error_small | 4 | 8% |
+| returned_list_instead_of_sum | 3 | 6% |
+| scale_percent_error | 1 | 2% |
+| wrong_operands_zero_result | 1 | 2% |
+
+**主导失败模式**：模型未从表格/段落中提取正确值，或判断 evidence 不充分而返回 "N/A" / 描述性文本。
+
+**示例**（wrong_extraction_or_logic）：
+- Q: "What is the growing rate of BENEFIT OBLIGATION AT END OF YEAR..."
+- Gold: 0.01147
+- Pred: "The question asks for... However, the table does not provide... cannot compute... not determinable..."
+
+**解释**：模型声称表格被截断，但审计显示该样本的 HTML 保留率为 52.8%（中位数水平），不属于严重截断。
+
+#### Type 3: Context truncation
+平均 HTML 保留率：0.528（52.8% of HTML chars after `render_table_html_preview(html, limit=600)`）。
+
+严重截断（<30% 保留）：1/20 审计样本。
+
+**结论**：Truncation 不是主要瓶颈。多数样本有充分上下文，但模型未能提取。
+
+### retrieval-conditioned interpretation revisited
+
+Stage 33 报告显示：
+```
+              hit(42)   miss(18)   Δ
+none          0.119     0.111     +0.008
+strategy      0.119     0.333     +0.214
+```
+
+**用户假设**："Strategy 在 family-hit 时无效，在 family-miss 时有效"→ 表面匹配陷阱。
+
+**审计反驳**：
+- Oracle Gap=0.017 意味着 59/60 样本四臂全错或全对。
+- 当 baseline=0.117 时，仅 7/60 样本正确，53/60 失败。
+- 条件分组（hit vs miss）可能被样本难度、answer_type、table 复杂度混淆。
+- 需验证：miss 组是否恰好包含更多简单样本（span-type / single-table）？
+
+**结论**：当前无法区分"retrieval on miss 更有效"和"miss 组样本恰好更简单"。
+
+### pipeline validity assessment
+
+**MultiHiertt 管道是否对记忆效用研究有效？**
+
+**NO** — 理由：
+1. **Evaluator bug**：10% 样本因类型严格性被错误标记。
+2. **Baseline 过低**：88% 失败率（53/60）由 extraction 失败驱动，非 memory selection。
+3. **Oracle Gap 过小**：0.017 → 几乎无跨臂方差可供研究记忆效应。
+4. **混淆的检索信号**：`family_hit` 不可靠地预测策略效用。
+
+**有效的部分**：
+- Execution layer（LLM API、cache、provenance）在 Codex 修复后正常工作。
+- Retrieval infrastructure（question_only + family-dedup）按设计运行。
+- Four-arm 实验协议本身合理。
+
+**失效的部分**：
+- Context rendering（HTML 保留率可接受，但模型未能从保留内容中提取）。
+- Prompt 未充分引导模型定位 evidence 和执行 programs。
+- Evaluator 因类型不匹配拒绝正确答案。
+
+### recommendations
+
+#### Immediate (必须在任何 memory 优化前完成)
+1. **Fix evaluator**：接受跨 int/float/str 的数值等价。
+   - 潜在增益：+0.100 EM。
+   - 成本：低，确定性高。
+
+2. **Improve context rendering**：
+   - 将 HTML tables 解析为结构化文本（行/列带 headers）。
+   - 当前 600-char preview 丢失表格结构。
+   - 假设：结构化表示是否改善提取？
+
+3. **Enhance prompt**：
+   - 显式指令："从表格中提取值时定位行列 headers"。
+   - 输出格式示例："对于 ROI，返回小数（0.16），非百分比（16.0）"。
+   - 执行指导："若问题要求 sum，返回计算后的和（如 210），非操作数列表（[100, 110]）"。
+
+4. **Diagnostic experiment (N=10)**：
+   - 人工验证：gold answers 是否确实出现在 rendered context？
+   - 对于模型返回 "not determinable" 的样本，检查 evidence 是被截断还是模型未定位。
+   - 区分：Evidence missing vs Evidence present but not extracted。
+
+#### Do NOT do
+- ❌ 优化检索（HyDE、query expansion、reranking）。
+- ❌ 训练 selector model。
+- ❌ 扩展至完整 120 samples。
+- ❌ Repeated trials。
+- ❌ 结论"retrieval on miss 比 retrieval on hit 更有效"而不验证混淆因素。
+
+**理由**：当 baseline=0.117 且 oracle=0.25 时，瓶颈不在 memory selection 而在管道基础。
+
+### decision
+**PAUSE MultiHiertt memory research。优先修复管道。**
+
+**Minimum viable fix**：
+1. 放宽 evaluator（10 分钟）。
+2. 将 HTML tables 解析为结构化文本（2-3 小时）。
+3. 用示例增强 prompt（1 小时）。
+4. 重跑 N=20 诊断（30 分钟）。
+
+**Decision point**：若 baseline 提升至 >0.4 EM 且 oracle gap 增加至 >0.05，恢复记忆效用研究。否则，考虑 MultiHiertt 是否适合 agent memory 评估。
+
+**Alternative**：回到 FinQA（Stage 1 完成，已知可工作）或 TabMWP 作为主要记忆测试平台。
+
+### artifacts
+- Audit scripts：
+  - `pilot/multibench/audit_multihiertt_pipeline.py`
+  - `pilot/multibench/audit_evaluator_mismatch.py`
+  - `pilot/multibench/audit_real_errors.py`
+- Report：`pilot/multibench/output/multihiertt/STAGE_33_AUDIT_REPORT.md`
