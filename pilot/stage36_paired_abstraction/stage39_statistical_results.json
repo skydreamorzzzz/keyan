@@ -1,0 +1,70 @@
+{
+  "Grounded Sketch_vs_Case": {
+    "accuracy_diff": 0.09375,
+    "ci_95": [
+      0.04464285714285715,
+      0.14285714285714285
+    ],
+    "mcnemar_p": 0.0003240634687244892,
+    "rescue_counts": {
+      "a_rescue_b_fail": 27,
+      "b_rescue_a_fail": 6,
+      "both_correct": 64,
+      "both_wrong": 127
+    }
+  },
+  "Grounded Sketch_vs_Format-Neutral+Binding": {
+    "accuracy_diff": 0.0,
+    "ci_95": [
+      -0.026785714285714246,
+      0.026785714285714246
+    ],
+    "mcnemar_p": 1.0,
+    "rescue_counts": {
+      "a_rescue_b_fail": 4,
+      "b_rescue_a_fail": 4,
+      "both_correct": 87,
+      "both_wrong": 129
+    }
+  },
+  "Format-Neutral+Binding_vs_Format-Neutral": {
+    "accuracy_diff": 0.008928571428571452,
+    "ci_95": [
+      -0.022321428571428548,
+      0.0401785714285714
+    ],
+    "mcnemar_p": 0.7744140625,
+    "rescue_counts": {
+      "a_rescue_b_fail": 7,
+      "b_rescue_a_fail": 5,
+      "both_correct": 84,
+      "both_wrong": 128
+    }
+  },
+  "Format-Neutral_vs_Case": {
+    "accuracy_diff": 0.08482142857142855,
+    "ci_95": [
+      0.0357142857142857,
+      0.1383928571428571
+    ],
+    "mcnemar_p": 0.0018782254774123432,
+    "rescue_counts": {
+      "a_rescue_b_fail": 27,
+      "b_rescue_a_fail": 8,
+      "both_correct": 62,
+      "both_wrong": 127
+    }
+  },
+  "Case_unique_rescues": [
+    "DRE/2009/page_72.pdf-1",
+    "LMT/2017/page_80.pdf-2",
+    "HWM/2016/page_40.pdf-2"
+  ],
+  "Format-Neutral_unique_rescues": [
+    "C/2017/page_328.pdf-1"
+  ],
+  "Format-Neutral+Binding_unique_rescues": [
+    "UA/2015/page_71.pdf-2"
+  ],
+  "Grounded Sketch_unique_rescues": []
+}
