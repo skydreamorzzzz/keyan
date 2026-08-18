@@ -1,0 +1,89 @@
+{
+  "transitions": {
+    "none_wrong_case_correct": [
+      "LMT/2015/page_56.pdf-2",
+      "BLL/2007/page_35.pdf-3",
+      "GPN/2017/page_77.pdf-4",
+      "MRO/2006/page_33.pdf-3",
+      "IPG/2015/page_48.pdf-3",
+      "IP/2006/page_32.pdf-4"
+    ],
+    "none_wrong_strategy_correct": [
+      "FIS/2007/page_94.pdf-4",
+      "IPG/2015/page_48.pdf-3"
+    ],
+    "none_wrong_paired_correct": [
+      "LMT/2015/page_56.pdf-2",
+      "BLL/2007/page_35.pdf-3",
+      "MRO/2006/page_33.pdf-3",
+      "IPG/2015/page_48.pdf-3",
+      "IP/2006/page_32.pdf-4",
+      "UA/2009/page_50.pdf-2"
+    ],
+    "none_correct_case_wrong": [
+      "PNC/2009/page_46.pdf-3",
+      "RE/2015/page_33.pdf-2",
+      "IP/2009/page_37.pdf-1"
+    ],
+    "none_correct_strategy_wrong": [
+      "APD/2019/page_48.pdf-1",
+      "RE/2015/page_33.pdf-2",
+      "IP/2009/page_37.pdf-1"
+    ],
+    "none_correct_paired_wrong": [
+      "IP/2009/page_37.pdf-1"
+    ],
+    "case_correct_strategy_wrong": [
+      "LMT/2015/page_56.pdf-2",
+      "BLL/2007/page_35.pdf-3",
+      "GPN/2017/page_77.pdf-4",
+      "MRO/2006/page_33.pdf-3",
+      "APD/2019/page_48.pdf-1",
+      "IP/2006/page_32.pdf-4"
+    ],
+    "case_wrong_strategy_correct": [
+      "PNC/2009/page_46.pdf-3",
+      "FIS/2007/page_94.pdf-4"
+    ],
+    "paired_beats_both": [
+      "RE/2015/page_33.pdf-2",
+      "UA/2009/page_50.pdf-2"
+    ],
+    "paired_worse_than_best": [
+      "FIS/2007/page_94.pdf-4",
+      "GPN/2017/page_77.pdf-4"
+    ],
+    "all_correct": [
+      "BLL/2010/page_28.pdf-2",
+      "MRO/2007/page_134.pdf-2",
+      "PPG/2013/page_40.pdf-2",
+      "PPG/2013/page_40.pdf-1",
+      "TFX/2015/page_70.pdf-3",
+      "PM/2017/page_99.pdf-3",
+      "JPM/2014/page_65.pdf-5"
+    ],
+    "all_wrong": [
+      "AON/2009/page_46.pdf-2",
+      "ETR/2008/page_355.pdf-2",
+      "IP/2007/page_31.pdf-1",
+      "PPG/2011/page_70.pdf-3",
+      "BLK/2012/page_160.pdf-4",
+      "GS/2017/page_143.pdf-1",
+      "AES/2016/page_191.pdf-3",
+      "UNP/2014/page_25.pdf-2",
+      "SNPS/2006/page_69.pdf-1",
+      "BLL/2007/page_47.pdf-4",
+      "STT/2008/page_83.pdf-2"
+    ]
+  },
+  "summary": {
+    "total_queries": 30,
+    "none_wrong_queries": 19,
+    "case_rescues": 6,
+    "strategy_rescues": 2,
+    "paired_rescues": 6,
+    "case_harm": 3,
+    "strategy_harm": 3,
+    "paired_harm": 1
+  }
+}
