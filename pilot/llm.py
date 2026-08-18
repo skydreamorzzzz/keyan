@@ -2,7 +2,7 @@
 import json, os, time, threading
 from concurrent.futures import ThreadPoolExecutor
 import httpx
-import config
+from pilot import config
 
 _lock = threading.Lock()
 

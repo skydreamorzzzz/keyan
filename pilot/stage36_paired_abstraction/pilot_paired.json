@@ -1,0 +1,67 @@
+[
+  {
+    "target_id": "RE/2015/page_33.pdf-2",
+    "arm": "Paired",
+    "gold_answer": 0.03558,
+    "predicted_answer": 3.56,
+    "exact_match": false,
+    "response": "REASONING: The question asks for the percentage change in average investments from 2014 to 2015. From the table, average investments in 2015 is $17,430.8 million and in 2014 is $16,831.9 million. Percentage change is calculated as (later value \u00f7 earlier value) - 1, then expressed as a percentage.  \nPROGRAM: divide(17430.8, 16831.9), subtract(#0, const_1)  \nANSWER: 3.56%",
+    "shared_source_ids": [
+      "E067",
+      "E074",
+      "E068"
+    ]
+  },
+  {
+    "target_id": "GS/2017/page_143.pdf-1",
+    "arm": "Paired",
+    "gold_answer": -0.39896,
+    "predicted_answer": -39.9,
+    "exact_match": false,
+    "response": "REASONING: The question asks for the percentage change in \u201ccredit net\u201d from 2016 to 2017.  \nFrom the table, credit net in 2017 is $1,505 million, and in 2016 it is $2,504 million.  \nPercentage change is calculated as (new value - old value) / old value, then multiplied by 100.  \nHere, new value = 1505, old value = 2504.  \nDifference = 1505 - 2504 = -999.  \nDivide by old value: -999 / 2504 = -0.39896.  \nMultiply by 100 to get -39.896%, which rounds to -39.9%.\n\nPROGRAM: subtract(1505, 2504), divide(#0, 2504), multiply(#1, const_100)\n\nANSWER: -39.9%",
+    "shared_source_ids": [
+      "E039",
+      "E073",
+      "E011"
+    ]
+  },
+  {
+    "target_id": "PM/2017/page_99.pdf-3",
+    "arm": "Paired",
+    "gold_answer": 2.0,
+    "predicted_answer": 2.0,
+    "exact_match": true,
+    "response": "REASONING: The question asks for the change in weighted-average shares for diluted EPS from 2016 to 2017. From the table, the 2017 value is 1553 million and the 2016 value is 1551 million. Change is calculated as later value minus earlier value: 1553 - 1551 = 2 million. Since this is an increase, the change is +2 million.  \n\nPROGRAM: subtract(1553, 1551)  \n\nANSWER: 2",
+    "shared_source_ids": [
+      "E076",
+      "E067",
+      "E055"
+    ]
+  },
+  {
+    "target_id": "UA/2009/page_50.pdf-2",
+    "arm": "Paired",
+    "gold_answer": -0.75,
+    "predicted_answer": -75.0,
+    "exact_match": false,
+    "response": "REASONING: The question asks for the percentage change in the fair value of foreign currency forward contracts from 2008 to 2009. From the context, the fair value was $1.2 million in 2008 and $0.3 million in 2009. To find the percentage change, subtract the 2008 value from the 2009 value, then divide by the 2008 value, and multiply by 100.\n\nPROGRAM: subtract(0.3, 1.2), divide(#0, 1.2)\n\nANSWER: -75%",
+    "shared_source_ids": [
+      "E011",
+      "E019",
+      "E042"
+    ]
+  },
+  {
+    "target_id": "ETR/2008/page_355.pdf-2",
+    "arm": "Paired",
+    "gold_answer": 0.17972,
+    "predicted_answer": 18.0,
+    "exact_match": false,
+    "response": "REASONING: The question asks for the percentage of the change in net revenue from 2007 to 2008 that was due to rider revenue. First, calculate the total change in net revenue: 2008 net revenue ($252.7) minus 2007 net revenue ($231.0) equals $21.7 million. The rider revenue change is given as $3.9 million. To find what percent of the total change is due to rider revenue, divide the rider revenue change by the total change and multiply by 100.  \n\nPROGRAM: subtract(252.7, 231.0), divide(3.9, #0), multiply(#1, const_100)  \n\nANSWER: 18.0%",
+    "shared_source_ids": [
+      "E011",
+      "E073",
+      "E045"
+    ]
+  }
+]

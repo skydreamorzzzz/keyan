@@ -1,0 +1,3371 @@
+[
+  {
+    "source_experience_id": "E001",
+    "representation": "case",
+    "case_id": "HII/2012/page_47.pdf-2",
+    "report": "HII/2012/page_47.pdf",
+    "company": "HII",
+    "question": "during 2010 , what was the return on assets?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "divide"
+    ],
+    "gold_facts": [
+      "( $ in millions except per share amounts ) the net earnings ( loss ) of year ended december 31 2012 is 146 ; the net earnings ( loss ) of year ended december 31 2011 is -100 ( 100 ) ; the net earnings ( loss ) of year ended december 31 2010 is 131 ; the net earnings ( loss ) of year ended december 31 2009 is 119 ; the net earnings ( loss ) of year ended december 31 2008 is -2397 ( 2397 ) ;",
+      "( $ in millions except per share amounts ) the total assets of year ended december 31 2012 is 6392 ; the total assets of year ended december 31 2011 is 6069 ; the total assets of year ended december 31 2010 is 5270 ; the total assets of year ended december 31 2009 is 5097 ; the total assets of year ended december 31 2008 is 4821 ;"
+    ],
+    "program": "divide(131, 5270)",
+    "program_re": "divide(131, 5270)",
+    "steps": [
+      {
+        "op": "divide2-1",
+        "arg1": "131",
+        "arg2": "5270",
+        "res": "2.5%"
+      }
+    ],
+    "exe_ans": 0.02486,
+    "answer": "2.5%",
+    "explanation": "net income divided by total assets",
+    "retrieval_text": "Question: during 2010 , what was the return on assets?\nType: G_1step\nFacts: ( $ in millions except per share amounts ) the net earnings ( loss ) of year ended december 31 2012 is 146 ; the net earnings ( loss ) of year ended december 31 2011 is -100 ( 100 ) ; the net earnings ( loss ) of year ended december 31 2010 is 131 ; the net earnings ( loss ) of year ended december 31 2009 is 119 ; the net earnings ( loss ) of year ended december 31 2008 is -2397 ( 2397 ) ; ; ( $ in millions except per share amounts ) the total assets of year ended december 31 2012 is 6392 ; the total assets of year ended december 31 2011 is 6069 ; the total assets of year ended december 31 2010 is 5270 ; the total assets of year ended december 31 2009 is 5097 ; the total assets of year ended december 31 2008 is 4821 ;"
+  },
+  {
+    "source_experience_id": "E002",
+    "representation": "case",
+    "case_id": "ECL/2017/page_85.pdf-3",
+    "report": "ECL/2017/page_85.pdf",
+    "company": "ECL",
+    "question": "when the company acquired the beneficial interest in the trust owning the leased naperville facility , the cash paid was what percentage of property , plant and equipment?\\\\n\\\\n[7] : certain administrative , divisional , and research and development personnel are based at the naperville facility.\\\\n\\\\n[8] : cash paid as a result of the transaction was $ 19.8 millio",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "divide"
+    ],
+    "gold_facts": [
+      "the company entered into a registration rights agreement in connection with the issuance of the 144a notes .",
+      "until such time as the exchange offer registration statement is declared effective , the 144a notes may only be sold in accordance with rule 144a or regulation s of the securities act of 1933 , as amended .",
+      "cash paid as a result of the transaction was $ 19.8 million .",
+      "other debt during 2015 , the company acquired the beneficial interest in the trust owning the leased naperville facility resulting in debt assumption of $ 100.2 million and the addition of $ 135.2 million in property , plant and equipment ."
+    ],
+    "program": "divide(19.8, 135.2)",
+    "program_re": "divide(19.8, 135.2)",
+    "steps": [
+      {
+        "op": "divide1-1",
+        "arg1": "19.8",
+        "arg2": "135.2",
+        "res": "14.6%"
+      }
+    ],
+    "exe_ans": 0.14645,
+    "answer": "14.6%",
+    "explanation": "",
+    "retrieval_text": "Question: when the company acquired the beneficial interest in the trust owning the leased naperville facility , the cash paid was what percentage of property , plant and equipment?\\\\n\\\\n[7] : certain administrative , divisional , and research and development personnel are based at the naperville facility.\\\\n\\\\n[8] : cash paid as a result of the transaction was $ 19.8 millio\nType: G_1step\nFacts: the company entered into a registration rights agreement in connection with the issuance of the 144a notes . ; until such time as the exchange offer registration statement is declared effective , the 144a notes may only be sold in accordance with rule 144a or regulation s of the securities act of 1933 , as amended . ; cash paid as a result of the transaction was $ 19.8 million . ; other debt during 2015 , the company acquired the beneficial interest in the trust owning the leased naperville facility resulting in debt assumption of $ 100.2 million and the addition of $ 135.2 million in property , plant and equipment ."
+  },
+  {
+    "source_experience_id": "E003",
+    "representation": "case",
+    "case_id": "UPS/2009/page_84.pdf-1",
+    "report": "UPS/2009/page_84.pdf",
+    "company": "UPS",
+    "question": "what is the current total of service cost and interest cost?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "divide"
+    ],
+    "gold_facts": [
+      "the effect on total of service cost and interest cost of 1% ( 1 % ) increase is $ 10 ; the effect on total of service cost and interest cost of 1% ( 1 % ) decrease is $ -10 ( 10 ) ;"
+    ],
+    "program": "divide(10, 1%)",
+    "program_re": "divide(10, 1%)",
+    "steps": [
+      {
+        "op": "divide1-1",
+        "arg1": "10",
+        "arg2": "1%",
+        "res": "1000"
+      }
+    ],
+    "exe_ans": 1000.0,
+    "answer": "1000",
+    "explanation": "",
+    "retrieval_text": "Question: what is the current total of service cost and interest cost?\nType: G_1step\nFacts: the effect on total of service cost and interest cost of 1% ( 1 % ) increase is $ 10 ; the effect on total of service cost and interest cost of 1% ( 1 % ) decrease is $ -10 ( 10 ) ;"
+  },
+  {
+    "source_experience_id": "E004",
+    "representation": "case",
+    "case_id": "STZ/2005/page_57.pdf-4",
+    "report": "STZ/2005/page_57.pdf",
+    "company": "STZ",
+    "question": "what is the current ratio for 2004?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "divide"
+    ],
+    "gold_facts": [
+      "current assets the property plant and equipment of $ 494788 is 452902 ;",
+      "current assets the current liabilities of $ 494788 is 309051 ;"
+    ],
+    "program": "divide(494788, 309051)",
+    "program_re": "divide(494788, 309051)",
+    "steps": [
+      {
+        "op": "divide1-1",
+        "arg1": "494788",
+        "arg2": "309051",
+        "res": "1.6"
+      }
+    ],
+    "exe_ans": 1.60099,
+    "answer": "1.6",
+    "explanation": "",
+    "retrieval_text": "Question: what is the current ratio for 2004?\nType: G_1step\nFacts: current assets the property plant and equipment of $ 494788 is 452902 ; ; current assets the current liabilities of $ 494788 is 309051 ;"
+  },
+  {
+    "source_experience_id": "E005",
+    "representation": "case",
+    "case_id": "HWM/2015/page_92.pdf-1",
+    "report": "HWM/2015/page_92.pdf",
+    "company": "HWM",
+    "question": "considering the year 2014 , what is the percentage of intersegment sales concerning total sales?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "divide"
+    ],
+    "gold_facts": [
+      "the intersegment sales of 2015 is 125 ; the intersegment sales of 2014 is 185 ; the intersegment sales of 2013 is 178 ;",
+      "the total sales of 2015 is $ 6363 ; the total sales of 2014 is $ 7536 ; the total sales of 2013 is $ 7284 ;"
+    ],
+    "program": "divide(185, 7536)",
+    "program_re": "divide(185, 7536)",
+    "steps": [
+      {
+        "op": "divide1-1",
+        "arg1": "185",
+        "arg2": "7536",
+        "res": "2.45%"
+      }
+    ],
+    "exe_ans": 0.02455,
+    "answer": "2.45%",
+    "explanation": "it is the total of dollars brought by the intersegment sales divided by the total of dollars associated with total sales .",
+    "retrieval_text": "Question: considering the year 2014 , what is the percentage of intersegment sales concerning total sales?\nType: G_1step\nFacts: the intersegment sales of 2015 is 125 ; the intersegment sales of 2014 is 185 ; the intersegment sales of 2013 is 178 ; ; the total sales of 2015 is $ 6363 ; the total sales of 2014 is $ 7536 ; the total sales of 2013 is $ 7284 ;"
+  },
+  {
+    "source_experience_id": "E006",
+    "representation": "case",
+    "case_id": "UAA/2016/page_83.pdf-1",
+    "report": "UAA/2016/page_83.pdf",
+    "company": "UAA",
+    "question": "what portion of the total future minimum sponsorship and other payments will be due in the next 12 months?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "divide"
+    ],
+    "gold_facts": [
+      "2017 the total future minimum sponsorship and other payments of $ 176138 is $ 1355605 ;"
+    ],
+    "program": "divide(176138, 1355605)",
+    "program_re": "divide(176138, 1355605)",
+    "steps": [
+      {
+        "op": "divide1-1",
+        "arg1": "176138",
+        "arg2": "1355605",
+        "res": "13.0%"
+      }
+    ],
+    "exe_ans": 0.12993,
+    "answer": "13.0%",
+    "explanation": "",
+    "retrieval_text": "Question: what portion of the total future minimum sponsorship and other payments will be due in the next 12 months?\nType: G_1step\nFacts: 2017 the total future minimum sponsorship and other payments of $ 176138 is $ 1355605 ;"
+  },
+  {
+    "source_experience_id": "E007",
+    "representation": "case",
+    "case_id": "MAS/2012/page_92.pdf-2",
+    "report": "MAS/2012/page_92.pdf",
+    "company": "MAS",
+    "question": "what was the percentage change in the company's warranty liability from 2011 to 2012?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "subtract",
+      "divide"
+    ],
+    "gold_facts": [
+      "the balance at december 31 of 2012 is $ 118 ; the balance at december 31 of 2011 is $ 102 ;"
+    ],
+    "program": "subtract(118, 102), divide(#0, 102)",
+    "program_re": "divide(subtract(118, 102), 102)",
+    "steps": [
+      {
+        "op": "minus1-1",
+        "arg1": "118",
+        "arg2": "102",
+        "res": "16"
+      },
+      {
+        "op": "divide1-2",
+        "arg1": "#0",
+        "arg2": "102",
+        "res": "16%"
+      }
+    ],
+    "exe_ans": 0.15686,
+    "answer": "16%",
+    "explanation": "",
+    "retrieval_text": "Question: what was the percentage change in the company's warranty liability from 2011 to 2012?\nType: F_2step\nFacts: the balance at december 31 of 2012 is $ 118 ; the balance at december 31 of 2011 is $ 102 ;"
+  },
+  {
+    "source_experience_id": "E008",
+    "representation": "case",
+    "case_id": "FRT/2009/page_124.pdf-2",
+    "report": "FRT/2009/page_124.pdf",
+    "company": "FRT",
+    "question": "what is the percentual decline of the deductions during 2007 and 2008?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "subtract",
+      "divide"
+    ],
+    "gold_facts": [
+      "balance december 31 2006 the deductions during period 2014disposition and retirements of property of $ 740507 is -80258 ( 80258 ) ;",
+      "balance december 31 2006 the deductions during period 2014disposition and retirements of property of $ 740507 is -11766 ( 11766 ) ;"
+    ],
+    "program": "subtract(11766, 80258), divide(#0, 80258)",
+    "program_re": "divide(subtract(11766, 80258), 80258)",
+    "steps": [
+      {
+        "op": "minus2-1",
+        "arg1": "11766",
+        "arg2": "80258",
+        "res": "-68492"
+      },
+      {
+        "op": "divide2-2",
+        "arg1": "#0",
+        "arg2": "80258",
+        "res": "-85.33%"
+      }
+    ],
+    "exe_ans": -0.8534,
+    "answer": "85.33%",
+    "explanation": "it is the percentual variation of the value of the deduction , which is calculated by subtracting the initial value of the final value , then dividing by the initial value and turning it into a percentage .",
+    "retrieval_text": "Question: what is the percentual decline of the deductions during 2007 and 2008?\nType: F_2step\nFacts: balance december 31 2006 the deductions during period 2014disposition and retirements of property of $ 740507 is -80258 ( 80258 ) ; ; balance december 31 2006 the deductions during period 2014disposition and retirements of property of $ 740507 is -11766 ( 11766 ) ;"
+  },
+  {
+    "source_experience_id": "E009",
+    "representation": "case",
+    "case_id": "UNP/2009/page_83.pdf-1",
+    "report": "UNP/2009/page_83.pdf",
+    "company": "UNP",
+    "question": "what was the percentage increase in short term debt for amounts distributed to shareholders and debt holders during 2009?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "subtract",
+      "divide"
+    ],
+    "gold_facts": [
+      "millions of dollars the dividends and interest of dec . 31 2009 is 347 ; the dividends and interest of dec . 31 2008 is 328 ;"
+    ],
+    "program": "subtract(347, 328), divide(#0, 328)",
+    "program_re": "divide(subtract(347, 328), 328)",
+    "steps": [
+      {
+        "op": "minus1-1",
+        "arg1": "347",
+        "arg2": "328",
+        "res": "19"
+      },
+      {
+        "op": "divide1-2",
+        "arg1": "#0",
+        "arg2": "328",
+        "res": "5.8%"
+      }
+    ],
+    "exe_ans": 0.05793,
+    "answer": "5.8%",
+    "explanation": "",
+    "retrieval_text": "Question: what was the percentage increase in short term debt for amounts distributed to shareholders and debt holders during 2009?\nType: F_2step\nFacts: millions of dollars the dividends and interest of dec . 31 2009 is 347 ; the dividends and interest of dec . 31 2008 is 328 ;"
+  },
+  {
+    "source_experience_id": "E010",
+    "representation": "case",
+    "case_id": "MA/2010/page_107.pdf-1",
+    "report": "MA/2010/page_107.pdf",
+    "company": "MA",
+    "question": "what was the percent of the change in the significant unobservable inputs from 2008 to 2009",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "subtract",
+      "divide"
+    ],
+    "gold_facts": [
+      "the fair value december 31 2008 of significant unobservable inputs ( level 3 ) ( in millions ) is $ 192 ;",
+      "the fair value december 31 2009 of significant unobservable inputs ( level 3 ) ( in millions ) is 180 ;"
+    ],
+    "program": "subtract(180, 192), divide(#0, 192)",
+    "program_re": "divide(subtract(180, 192), 192)",
+    "steps": [
+      {
+        "op": "minus1-1",
+        "arg1": "180",
+        "arg2": "192",
+        "res": "-12"
+      },
+      {
+        "op": "divide1-2",
+        "arg1": "#0",
+        "arg2": "192",
+        "res": "-6.25%"
+      }
+    ],
+    "exe_ans": -0.0625,
+    "answer": "-6.25%",
+    "explanation": "the significant unobservable inputs from 2008 to 2009 changed by -6.25%",
+    "retrieval_text": "Question: what was the percent of the change in the significant unobservable inputs from 2008 to 2009\nType: F_2step\nFacts: the fair value december 31 2008 of significant unobservable inputs ( level 3 ) ( in millions ) is $ 192 ; ; the fair value december 31 2009 of significant unobservable inputs ( level 3 ) ( in millions ) is 180 ;"
+  },
+  {
+    "source_experience_id": "E011",
+    "representation": "case",
+    "case_id": "ADI/2010/page_90.pdf-3",
+    "report": "ADI/2010/page_90.pdf",
+    "company": "ADI",
+    "question": "what percentage did the balance increase from 2007 to 2010?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "subtract",
+      "divide"
+    ],
+    "gold_facts": [
+      "balance november 3 2007 the additions for tax positions of 2008 of $ 9889 is 3861 ;",
+      "balance november 3 2007 the balance november 1 2008 of $ 9889 is 13750 ;",
+      "balance november 3 2007 the additions for tax positions of 2009 of $ 9889 is 4411 ;",
+      "balance november 3 2007 the balance october 31 2009 of $ 9889 is 18161 ;",
+      "balance november 3 2007 the additions for tax positions of 2010 of $ 9889 is 286 ;",
+      "balance november 3 2007 the balance october 30 2010 of $ 9889 is $ 18447 ;",
+      "the following table summarizes the changes in the total amounts of uncertain tax positions for fiscal 2008 through fiscal 2010. ."
+    ],
+    "program": "subtract(18447, 9889), divide(#0, 9889)",
+    "program_re": "divide(subtract(18447, 9889), 9889)",
+    "steps": [
+      {
+        "op": "minus1-1",
+        "arg1": "18447",
+        "arg2": "9889",
+        "res": "8558"
+      },
+      {
+        "op": "divide1-2",
+        "arg1": "#0",
+        "arg2": "9889",
+        "res": "86.5%"
+      }
+    ],
+    "exe_ans": 0.86541,
+    "answer": "86.5%",
+    "explanation": "to find the percentage increase from 2007 to 2010 one must take the balance for 2010 and subtract that by the balance for 2007 . then take the answer and divide it by the balance for 2007 .",
+    "retrieval_text": "Question: what percentage did the balance increase from 2007 to 2010?\nType: F_2step\nFacts: balance november 3 2007 the additions for tax positions of 2008 of $ 9889 is 3861 ; ; balance november 3 2007 the balance november 1 2008 of $ 9889 is 13750 ; ; balance november 3 2007 the additions for tax positions of 2009 of $ 9889 is 4411 ; ; balance november 3 2007 the balance october 31 2009 of $ 9889 is 18161 ; ; balance november 3 2007 the additions for tax positions of 2010 of $ 9889 is 286 ; ; balance november 3 2007 the balance october 30 2010 of $ 9889 is $ 18447 ; ; the following table summarizes the changes in the total amounts of uncertain tax positions for fiscal 2008 through fiscal 2010. ."
+  },
+  {
+    "source_experience_id": "E012",
+    "representation": "case",
+    "case_id": "LLY/2008/page_43.pdf-1",
+    "report": "LLY/2008/page_43.pdf",
+    "company": "LLY",
+    "question": "what i the yearly amortization expense related to developed product technology?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "subtract",
+      "divide"
+    ],
+    "gold_facts": [
+      "cash and short-term investments the developed product technology ( erbitux ) 1 of $ 982.9 is 1057.9 ;",
+      "1this intangible asset will be amortized on a straight-line basis through 2023 in the u.s .",
+      "the discount rate we used in valuing the acquired ipr&d projects was 13.5 percent , and the charge for acquired ipr&d of $ 4.69 billion recorded in the fourth quarter of 2008 , was not deductible for tax purposes ."
+    ],
+    "program": "subtract(2023, 2008), divide(1057.9, #0)",
+    "program_re": "divide(1057.9, subtract(2023, 2008))",
+    "steps": [
+      {
+        "op": "minus1-1",
+        "arg1": "2023",
+        "arg2": "2008",
+        "res": "15"
+      },
+      {
+        "op": "divide1-2",
+        "arg1": "1057.9",
+        "arg2": "#0",
+        "res": "70.53"
+      }
+    ],
+    "exe_ans": 70.52667,
+    "answer": "70.53",
+    "explanation": "",
+    "retrieval_text": "Question: what i the yearly amortization expense related to developed product technology?\nType: F_2step\nFacts: cash and short-term investments the developed product technology ( erbitux ) 1 of $ 982.9 is 1057.9 ; ; 1this intangible asset will be amortized on a straight-line basis through 2023 in the u.s . ; the discount rate we used in valuing the acquired ipr&d projects was 13.5 percent , and the charge for acquired ipr&d of $ 4.69 billion recorded in the fourth quarter of 2008 , was not deductible for tax purposes ."
+  },
+  {
+    "source_experience_id": "E013",
+    "representation": "case",
+    "case_id": "APD/2019/page_53.pdf-2",
+    "report": "APD/2019/page_53.pdf",
+    "company": "APD",
+    "question": "considering the years 2018-2019 , what is the decrease observed in the pension expenses?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "subtract"
+    ],
+    "gold_facts": [
+      "the pension expense including special items noted below of 2019 is $ 27.6 ; the pension expense including special items noted below of 2018 is $ 91.8 ;"
+    ],
+    "program": "subtract(91.8, 27.6)",
+    "program_re": "subtract(91.8, 27.6)",
+    "steps": [
+      {
+        "op": "minus2-1",
+        "arg1": "91.8",
+        "arg2": "27.6",
+        "res": "64.2"
+      }
+    ],
+    "exe_ans": 64.2,
+    "answer": "64.2",
+    "explanation": "it is the difference between those pension expenses values .",
+    "retrieval_text": "Question: considering the years 2018-2019 , what is the decrease observed in the pension expenses?\nType: G_1step\nFacts: the pension expense including special items noted below of 2019 is $ 27.6 ; the pension expense including special items noted below of 2018 is $ 91.8 ;"
+  },
+  {
+    "source_experience_id": "E014",
+    "representation": "case",
+    "case_id": "MRK/2013/page_116.pdf-3",
+    "report": "MRK/2013/page_116.pdf",
+    "company": "MRK",
+    "question": "considering the years 2013 and 2012 , what is the variation observed in the expected return on plan assets , in millions?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "subtract"
+    ],
+    "gold_facts": [
+      "years ended december 31 the expected return on plan assets of pension benefits 2013 is -1097 ( 1097 ) ; the expected return on plan assets of pension benefits 2012 is -970 ( 970 ) ; the expected return on plan assets of pension benefits 2011 is -972 ( 972 ) ; the expected return on plan assets of pension benefits 2013 is -126 ( 126 ) ; the expected return on plan assets of pension benefits 2012 is -136 ( 136 ) ; the expected return on plan assets of 2011 is -142 ( 142 ) ;"
+    ],
+    "program": "subtract(1097, 970)",
+    "program_re": "subtract(1097, 970)",
+    "steps": [
+      {
+        "op": "minus2-1",
+        "arg1": "1097",
+        "arg2": "970",
+        "res": "127"
+      }
+    ],
+    "exe_ans": 127.0,
+    "answer": "127",
+    "explanation": "it is the difference between each year's expected return on plan assets .",
+    "retrieval_text": "Question: considering the years 2013 and 2012 , what is the variation observed in the expected return on plan assets , in millions?\nType: G_1step\nFacts: years ended december 31 the expected return on plan assets of pension benefits 2013 is -1097 ( 1097 ) ; the expected return on plan assets of pension benefits 2012 is -970 ( 970 ) ; the expected return on plan assets of pension benefits 2011 is -972 ( 972 ) ; the expected return on plan assets of pension benefits 2013 is -126 ( 126 ) ; the expected return on plan assets of pension benefits 2012 is -136 ( 136 ) ; the expected return on plan assets of 2011 is -142 ( 142 ) ;"
+  },
+  {
+    "source_experience_id": "E015",
+    "representation": "case",
+    "case_id": "ECL/2016/page_64.pdf-4",
+    "report": "ECL/2016/page_64.pdf",
+    "company": "ECL",
+    "question": "what is the net change in the balance of allowance for doubtful accounts during 2015?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "subtract"
+    ],
+    "gold_facts": [
+      "( millions ) the beginning balance of 2016 is $ 75 ; the beginning balance of 2015 is $ 77 ; the beginning balance of 2014 is $ 81 ;",
+      "( millions ) the ending balance of 2016 is $ 68 ; the ending balance of 2015 is $ 75 ; the ending balance of 2014 is $ 77 ;"
+    ],
+    "program": "subtract(75, 77)",
+    "program_re": "subtract(75, 77)",
+    "steps": [
+      {
+        "op": "minus2-1",
+        "arg1": "75",
+        "arg2": "77",
+        "res": "-2"
+      }
+    ],
+    "exe_ans": -2.0,
+    "answer": "-2",
+    "explanation": "",
+    "retrieval_text": "Question: what is the net change in the balance of allowance for doubtful accounts during 2015?\nType: G_1step\nFacts: ( millions ) the beginning balance of 2016 is $ 75 ; the beginning balance of 2015 is $ 77 ; the beginning balance of 2014 is $ 81 ; ; ( millions ) the ending balance of 2016 is $ 68 ; the ending balance of 2015 is $ 75 ; the ending balance of 2014 is $ 77 ;"
+  },
+  {
+    "source_experience_id": "E016",
+    "representation": "case",
+    "case_id": "ABMD/2006/page_65.pdf-1",
+    "report": "ABMD/2006/page_65.pdf",
+    "company": "ABMD",
+    "question": "at march 31 , 2006 , how much loss could be recognized if they sold the held-to-maturity investment portfolio?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "subtract"
+    ],
+    "gold_facts": [
+      "the amortized cost , including interest receivable , and market value of held 2013to-maturity short-term marketable securities were approximately $ 29669000 and $ 29570000 at march 31 , 2005 , and $ 16901000 and $ 16866000 at march 31 , 2006 , respectively ."
+    ],
+    "program": "subtract(29669000, 29570000)",
+    "program_re": "subtract(29669000, 29570000)",
+    "steps": [
+      {
+        "op": "minus1-1",
+        "arg1": "29669000",
+        "arg2": "29570000",
+        "res": "99000"
+      }
+    ],
+    "exe_ans": 99000.0,
+    "answer": "99000",
+    "explanation": "",
+    "retrieval_text": "Question: at march 31 , 2006 , how much loss could be recognized if they sold the held-to-maturity investment portfolio?\nType: G_1step\nFacts: the amortized cost , including interest receivable , and market value of held 2013to-maturity short-term marketable securities were approximately $ 29669000 and $ 29570000 at march 31 , 2005 , and $ 16901000 and $ 16866000 at march 31 , 2006 , respectively ."
+  },
+  {
+    "source_experience_id": "E017",
+    "representation": "case",
+    "case_id": "GRMN/2004/page_91.pdf-1",
+    "report": "GRMN/2004/page_91.pdf",
+    "company": "GRMN",
+    "question": "what is the increase in expense related to office , warehouse space , and real estate during 2003 and 2004?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "subtract"
+    ],
+    "gold_facts": [
+      "commitments and contingencies rental expense related to office , warehouse space and real estate amounted to $ 608 , $ 324 , and $ 281 for the years ended december 25 , 2004 , december 27 , 2003 , and december 28 , 2002 , respectively ."
+    ],
+    "program": "subtract(608, 324)",
+    "program_re": "subtract(608, 324)",
+    "steps": [
+      {
+        "op": "minus1-1",
+        "arg1": "608",
+        "arg2": "324",
+        "res": "284"
+      }
+    ],
+    "exe_ans": 284.0,
+    "answer": "284",
+    "explanation": "it is the difference between those two values .",
+    "retrieval_text": "Question: what is the increase in expense related to office , warehouse space , and real estate during 2003 and 2004?\nType: G_1step\nFacts: commitments and contingencies rental expense related to office , warehouse space and real estate amounted to $ 608 , $ 324 , and $ 281 for the years ended december 25 , 2004 , december 27 , 2003 , and december 28 , 2002 , respectively ."
+  },
+  {
+    "source_experience_id": "E018",
+    "representation": "case",
+    "case_id": "MSI/2008/page_110.pdf-1",
+    "report": "MSI/2008/page_110.pdf",
+    "company": "MSI",
+    "question": "what was the change in the reclassification to earnings from 2007 to 2008",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "subtract"
+    ],
+    "gold_facts": [
+      "the reclassifications to earnings of 2008 is 2 ; the reclassifications to earnings of 2007 is -10 ( 10 ) ; the reclassifications to earnings of 2006 is -61 ( 61 ) ;"
+    ],
+    "program": "subtract(2, -10)",
+    "program_re": "subtract(2, -10)",
+    "steps": [
+      {
+        "op": "minus1-1",
+        "arg1": "2",
+        "arg2": "-10",
+        "res": "12"
+      }
+    ],
+    "exe_ans": 12.0,
+    "answer": "12",
+    "explanation": "",
+    "retrieval_text": "Question: what was the change in the reclassification to earnings from 2007 to 2008\nType: G_1step\nFacts: the reclassifications to earnings of 2008 is 2 ; the reclassifications to earnings of 2007 is -10 ( 10 ) ; the reclassifications to earnings of 2006 is -61 ( 61 ) ;"
+  },
+  {
+    "source_experience_id": "E019",
+    "representation": "case",
+    "case_id": "GPN/2017/page_72.pdf-1",
+    "report": "GPN/2017/page_72.pdf",
+    "company": "GPN",
+    "question": "based on the table , what was the fair value price of global payments common stock given to active network stockholders?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "add"
+    ],
+    "gold_facts": [
+      "cash consideration paid to active network stockholders the fair value of global payments common stock issued to active network stockholders of $ 599497 is 572079 ;",
+      "cash consideration paid to active network stockholders the total purchase consideration of $ 599497 is $ 1171576 ;",
+      "we funded the cash portion of the total purchase consideration primarily by drawing on our revolving credit facility ( described in 201cnote 7 2014 long-term debt and lines of credit 201d ) ."
+    ],
+    "program": "add(572079, 599497)",
+    "program_re": "add(572079, 599497)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "572079",
+        "arg2": "599497",
+        "res": "572079"
+      }
+    ],
+    "exe_ans": 1171576.0,
+    "answer": "$ 1",
+    "explanation": "the valuation of the common stock would be $ 1 because the total amount of money issued subtracted by the cash consolidation . that remainder equals the same amount of shares which concludes that the share price would be $ 1 .",
+    "retrieval_text": "Question: based on the table , what was the fair value price of global payments common stock given to active network stockholders?\nType: G_1step\nFacts: cash consideration paid to active network stockholders the fair value of global payments common stock issued to active network stockholders of $ 599497 is 572079 ; ; cash consideration paid to active network stockholders the total purchase consideration of $ 599497 is $ 1171576 ; ; we funded the cash portion of the total purchase consideration primarily by drawing on our revolving credit facility ( described in 201cnote 7 2014 long-term debt and lines of credit 201d ) ."
+  },
+  {
+    "source_experience_id": "E020",
+    "representation": "case",
+    "case_id": "ETR/2016/page_144.pdf-1",
+    "report": "ETR/2016/page_144.pdf",
+    "company": "ETR",
+    "question": "how much were liabilities impacted by the impact of the october 2015 planned shutdown of fitzpatrick and the 2016 decommissioning of the indian point 3 and fitzpatrick?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "add"
+    ],
+    "gold_facts": [
+      "as a result of the announcement , entergy reduced this liability by $ 26.4 million pursuant to the terms of the purchase agreement .",
+      "in the third quarter 2016 , entergy removed the note payable of $ 35.1 million from the consolidated balance sheet ."
+    ],
+    "program": "add(26.4, 35.1)",
+    "program_re": "add(26.4, 35.1)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "26.4",
+        "arg2": "35.1",
+        "res": "61.5"
+      }
+    ],
+    "exe_ans": 61.5,
+    "answer": "61.5",
+    "explanation": "",
+    "retrieval_text": "Question: how much were liabilities impacted by the impact of the october 2015 planned shutdown of fitzpatrick and the 2016 decommissioning of the indian point 3 and fitzpatrick?\nType: G_1step\nFacts: as a result of the announcement , entergy reduced this liability by $ 26.4 million pursuant to the terms of the purchase agreement . ; in the third quarter 2016 , entergy removed the note payable of $ 35.1 million from the consolidated balance sheet ."
+  },
+  {
+    "source_experience_id": "E021",
+    "representation": "case",
+    "case_id": "CAT/2017/page_113.pdf-2",
+    "report": "CAT/2017/page_113.pdf",
+    "company": "CAT",
+    "question": "what was pre impairment goodwill in millions for surface mining & technology as of october 1 , 2016?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "add"
+    ],
+    "gold_facts": [
+      "accordingly , we recognized a goodwill impairment charge of $ 595 million , which resulted in goodwill of $ 629 million remaining for surface mining & technology as of october 1 , 2016 ."
+    ],
+    "program": "add(595, 629)",
+    "program_re": "add(595, 629)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "595",
+        "arg2": "629",
+        "res": "1224"
+      }
+    ],
+    "exe_ans": 1224.0,
+    "answer": "1224",
+    "explanation": "",
+    "retrieval_text": "Question: what was pre impairment goodwill in millions for surface mining & technology as of october 1 , 2016?\nType: G_1step\nFacts: accordingly , we recognized a goodwill impairment charge of $ 595 million , which resulted in goodwill of $ 629 million remaining for surface mining & technology as of october 1 , 2016 ."
+  },
+  {
+    "source_experience_id": "E022",
+    "representation": "case",
+    "case_id": "WELL/2016/page_61.pdf-3",
+    "report": "WELL/2016/page_61.pdf",
+    "company": "WELL",
+    "question": "what was net operating income in millions attributable to triple-net and seniors housing?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "add"
+    ],
+    "gold_facts": [
+      "type of property the triple-net of net operating income ( noi ) ( 1 ) is $ 1208860 ; the triple-net of percentage of noi is 50.3% ( 50.3 % ) ; the triple-net of number of properties is 631 ;",
+      "type of property the seniors housing operating of net operating income ( noi ) ( 1 ) is 814114 ; the seniors housing operating of percentage of noi is 33.9% ( 33.9 % ) ; the seniors housing operating of number of properties is 420 ;"
+    ],
+    "program": "add(1208860, 814114)",
+    "program_re": "add(1208860, 814114)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "1208860",
+        "arg2": "814114",
+        "res": "2022974"
+      }
+    ],
+    "exe_ans": 2022974.0,
+    "answer": "2022974",
+    "explanation": "",
+    "retrieval_text": "Question: what was net operating income in millions attributable to triple-net and seniors housing?\nType: G_1step\nFacts: type of property the triple-net of net operating income ( noi ) ( 1 ) is $ 1208860 ; the triple-net of percentage of noi is 50.3% ( 50.3 % ) ; the triple-net of number of properties is 631 ; ; type of property the seniors housing operating of net operating income ( noi ) ( 1 ) is 814114 ; the seniors housing operating of percentage of noi is 33.9% ( 33.9 % ) ; the seniors housing operating of number of properties is 420 ;"
+  },
+  {
+    "source_experience_id": "E023",
+    "representation": "case",
+    "case_id": "CE/2017/page_37.pdf-2",
+    "report": "CE/2017/page_37.pdf",
+    "company": "CE",
+    "question": "what is the total authorized the aggregate repurchase of common stock since february 2008 including the additional amount authorized in 2017 in billions",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "add"
+    ],
+    "gold_facts": [
+      "( 2 ) our board of directors has authorized the aggregate repurchase of $ 3.9 billion of our common stock since february 2008 , including an increase of $ 1.5 billion on july 17 , 2017 ."
+    ],
+    "program": "add(3.9, 1.5)",
+    "program_re": "add(3.9, 1.5)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "3.9",
+        "arg2": "1.5",
+        "res": "5.3"
+      }
+    ],
+    "exe_ans": 5.4,
+    "answer": "5.3",
+    "explanation": "the total amount is the sum of the amounts",
+    "retrieval_text": "Question: what is the total authorized the aggregate repurchase of common stock since february 2008 including the additional amount authorized in 2017 in billions\nType: G_1step\nFacts: ( 2 ) our board of directors has authorized the aggregate repurchase of $ 3.9 billion of our common stock since february 2008 , including an increase of $ 1.5 billion on july 17 , 2017 ."
+  },
+  {
+    "source_experience_id": "E024",
+    "representation": "case",
+    "case_id": "SWKS/2008/page_105.pdf-3",
+    "report": "SWKS/2008/page_105.pdf",
+    "company": "SWKS",
+    "question": "what is the total increase ross unrecognized tax benefits based on positions related to prior and current year?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "add"
+    ],
+    "gold_facts": [
+      "balance at september 29 2007 the increases based on positions related to prior years of $ 7315 is 351 ;",
+      "balance at september 29 2007 the increases based on positions related to current year of $ 7315 is 813 ;"
+    ],
+    "program": "add(351, 813)",
+    "program_re": "add(351, 813)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "351",
+        "arg2": "813",
+        "res": "463"
+      }
+    ],
+    "exe_ans": 1164.0,
+    "answer": "462",
+    "explanation": "",
+    "retrieval_text": "Question: what is the total increase ross unrecognized tax benefits based on positions related to prior and current year?\nType: G_1step\nFacts: balance at september 29 2007 the increases based on positions related to prior years of $ 7315 is 351 ; ; balance at september 29 2007 the increases based on positions related to current year of $ 7315 is 813 ;"
+  },
+  {
+    "source_experience_id": "E025",
+    "representation": "case",
+    "case_id": "PPG/2006/page_22.pdf-2",
+    "report": "PPG/2006/page_22.pdf",
+    "company": "PPG",
+    "question": "the 2005 charge for asset impairments in the optical and specialty materials segment represented what percent of pre-impairment earnings for the segment?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "( millions ) the optical and specialty materials of net sales 2006 is 1001 ; the optical and specialty materials of net sales 2005 is 867 ; the optical and specialty materials of net sales 2006 is 223 ; the optical and specialty materials of 2005 is 158 ;",
+      "the absence of the 2005 charge for an asset impairment in our fine chemicals business increased segment income by $ 27 million ."
+    ],
+    "program": "add(27, 158), divide(27, #0)",
+    "program_re": "divide(27, add(27, 158))",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "27",
+        "arg2": "158",
+        "res": "185"
+      },
+      {
+        "op": "divide2-2",
+        "arg1": "27",
+        "arg2": "#0",
+        "res": "14.6%"
+      }
+    ],
+    "exe_ans": 0.14595,
+    "answer": "14.6%",
+    "explanation": "",
+    "retrieval_text": "Question: the 2005 charge for asset impairments in the optical and specialty materials segment represented what percent of pre-impairment earnings for the segment?\nType: F_2step\nFacts: ( millions ) the optical and specialty materials of net sales 2006 is 1001 ; the optical and specialty materials of net sales 2005 is 867 ; the optical and specialty materials of net sales 2006 is 223 ; the optical and specialty materials of 2005 is 158 ; ; the absence of the 2005 charge for an asset impairment in our fine chemicals business increased segment income by $ 27 million ."
+  },
+  {
+    "source_experience_id": "E026",
+    "representation": "case",
+    "case_id": "IPG/2014/page_37.pdf-3",
+    "report": "IPG/2014/page_37.pdf",
+    "company": "IPG",
+    "question": "what was the average of short-term borrowings in 2013-2014?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "balance sheet data the short-term borrowings of december 31 , 2014 is $ 107.2 ; the short-term borrowings of december 31 , 2013 is $ 179.1 ;",
+      "dollar being stronger than several foreign currencies , including the australian dollar , brazilian real , canadian dollar , japanese yen , and south african rand as of december 31 , 2013 compared to december 31 , 2012. ."
+    ],
+    "program": "add(107.2, 179.1), divide(#0, const_2)",
+    "program_re": "divide(add(107.2, 179.1), const_2)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "107.2",
+        "arg2": "179.1",
+        "res": "286.3"
+      },
+      {
+        "op": "divide2-2",
+        "arg1": "#0",
+        "arg2": "const_2",
+        "res": "143.15"
+      }
+    ],
+    "exe_ans": 143.15,
+    "answer": "143.15",
+    "explanation": "",
+    "retrieval_text": "Question: what was the average of short-term borrowings in 2013-2014?\nType: F_2step\nFacts: balance sheet data the short-term borrowings of december 31 , 2014 is $ 107.2 ; the short-term borrowings of december 31 , 2013 is $ 179.1 ; ; dollar being stronger than several foreign currencies , including the australian dollar , brazilian real , canadian dollar , japanese yen , and south african rand as of december 31 , 2013 compared to december 31 , 2012. ."
+  },
+  {
+    "source_experience_id": "E027",
+    "representation": "case",
+    "case_id": "AAP/2011/page_16.pdf-4",
+    "report": "AAP/2011/page_16.pdf",
+    "company": "AAP",
+    "question": "what was the average annual store closure from 2007 to 2011?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "the stores closed of 2011 is -4 ( 4 ) ; the stores closed of 2010 is -5 ( 5 ) ; the stores closed of 2009 is -54 ( 54 ) ; the stores closed of 2008 is -19 ( 19 ) ; the stores closed of 2007 is -17 ( 17 ) ;",
+      "we believe this process , which develops a customer-focused business plan for each merchandise category , and our global sourcing operation are critical to improving comparable store sales , gross margin and inventory productivity. .",
+      "the following table sets forth information concerning increases in the total number of our aap stores during the past five years : beginning stores new stores ( 1 ) stores closed ending stores ( 1 ) does not include stores that opened as relocations of previously existing stores within the same general market area or substantial renovations of stores ."
+    ],
+    "program": "add(17, 4), divide(#0, const_2)",
+    "program_re": "divide(add(17, 4), const_2)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "17",
+        "arg2": "4",
+        "res": "39.6"
+      },
+      {
+        "op": "divide0-0",
+        "arg1": "#0",
+        "arg2": "const_2",
+        "res": "19.8"
+      }
+    ],
+    "exe_ans": 10.5,
+    "answer": "19.8 stores per year",
+    "explanation": "to find the average amount of closure of stores , one must add all of the closed stores for the years and divide by the amount of years .",
+    "retrieval_text": "Question: what was the average annual store closure from 2007 to 2011?\nType: F_2step\nFacts: the stores closed of 2011 is -4 ( 4 ) ; the stores closed of 2010 is -5 ( 5 ) ; the stores closed of 2009 is -54 ( 54 ) ; the stores closed of 2008 is -19 ( 19 ) ; the stores closed of 2007 is -17 ( 17 ) ; ; we believe this process , which develops a customer-focused business plan for each merchandise category , and our global sourcing operation are critical to improving comparable store sales , gross margin and inventory productivity. . ; the following table sets forth information concerning increases in the total number of our aap stores during the past five years : beginning stores new stores ( 1 ) stores closed ending stores ( 1 ) does not include stores that opened as relocations of previously existing stores within the same general market area or substantial renovations of stores ."
+  },
+  {
+    "source_experience_id": "E028",
+    "representation": "case",
+    "case_id": "EW/2017/page_83.pdf-2",
+    "report": "EW/2017/page_83.pdf",
+    "company": "EW",
+    "question": "what are the acquisition-related costs recorded in 201cselling , general , and administrative expenses 201d as a percentage of current assets?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "acquisition-related costs of $ 0.6 million and $ 4.1 million were recorded in 201cselling , general , and administrative expenses 201d during the years ended december 31 , 2017 and 2016 , respectively .",
+      "the following table summarizes the fair values of the assets acquired and liabilities assumed ( in millions ) : .",
+      "current assets the current assets of $ 22.7 is $ 22.7 ;"
+    ],
+    "program": "add(0.6, 4.1), divide(#0, 22.7)",
+    "program_re": "divide(add(0.6, 4.1), 22.7)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "0.6",
+        "arg2": "4.1",
+        "res": "4.7"
+      },
+      {
+        "op": "divide2-2",
+        "arg1": "#0",
+        "arg2": "22.7",
+        "res": "20.7%"
+      }
+    ],
+    "exe_ans": 0.20705,
+    "answer": "20.7%",
+    "explanation": "",
+    "retrieval_text": "Question: what are the acquisition-related costs recorded in 201cselling , general , and administrative expenses 201d as a percentage of current assets?\nType: F_2step\nFacts: acquisition-related costs of $ 0.6 million and $ 4.1 million were recorded in 201cselling , general , and administrative expenses 201d during the years ended december 31 , 2017 and 2016 , respectively . ; the following table summarizes the fair values of the assets acquired and liabilities assumed ( in millions ) : . ; current assets the current assets of $ 22.7 is $ 22.7 ;"
+  },
+  {
+    "source_experience_id": "E029",
+    "representation": "case",
+    "case_id": "KHC/2018/page_27.pdf-1",
+    "report": "KHC/2018/page_27.pdf",
+    "company": "KHC",
+    "question": "what is the portion of total number of facilities located in the rest of the world?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "the rest of world of owned is 27 ; the rest of world of leased is 2 ;",
+      "as of december 29 , 2018 , we operated 84 manufacturing and processing facilities ."
+    ],
+    "program": "add(27, 2), divide(#0, 84)",
+    "program_re": "divide(add(27, 2), 84)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "27",
+        "arg2": "2",
+        "res": "29"
+      },
+      {
+        "op": "divide1-2",
+        "arg1": "#0",
+        "arg2": "84",
+        "res": "34.5%"
+      }
+    ],
+    "exe_ans": 0.34524,
+    "answer": "34.5%",
+    "explanation": "",
+    "retrieval_text": "Question: what is the portion of total number of facilities located in the rest of the world?\nType: F_2step\nFacts: the rest of world of owned is 27 ; the rest of world of leased is 2 ; ; as of december 29 , 2018 , we operated 84 manufacturing and processing facilities ."
+  },
+  {
+    "source_experience_id": "E030",
+    "representation": "case",
+    "case_id": "ADBE/2012/page_87.pdf-3",
+    "report": "ADBE/2012/page_87.pdf",
+    "company": "ADBE",
+    "question": "what is the average weighted average useful life ( years ) for purchased technology and customer contracts and relationships?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "the purchased technology of weighted averageuseful life ( years ) is 5 ;",
+      "the customer contracts and relationships of weighted averageuseful life ( years ) is 10 ;"
+    ],
+    "program": "add(5, 10), divide(#0, const_2)",
+    "program_re": "divide(add(5, 10), const_2)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "5",
+        "arg2": "10",
+        "res": "15.0"
+      },
+      {
+        "op": "divide0-0",
+        "arg1": "#0",
+        "arg2": "const_2",
+        "res": "7.5"
+      }
+    ],
+    "exe_ans": 7.5,
+    "answer": "7.5",
+    "explanation": "",
+    "retrieval_text": "Question: what is the average weighted average useful life ( years ) for purchased technology and customer contracts and relationships?\nType: F_2step\nFacts: the purchased technology of weighted averageuseful life ( years ) is 5 ; ; the customer contracts and relationships of weighted averageuseful life ( years ) is 10 ;"
+  },
+  {
+    "source_experience_id": "E031",
+    "representation": "case",
+    "case_id": "UNP/2014/page_21.pdf-1",
+    "report": "UNP/2014/page_21.pdf",
+    "company": "UNP",
+    "question": "what wa the total spent on share repurchases during 2014?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "multiply"
+    ],
+    "gold_facts": [
+      "purchases of equity securities 2013 during 2014 , we repurchased 33035204 shares of our common stock at an average price of $ 100.24 ."
+    ],
+    "program": "multiply(33035204, 100.24)",
+    "program_re": "multiply(33035204, 100.24)",
+    "steps": [
+      {
+        "op": "multiply1-1",
+        "arg1": "33035204",
+        "arg2": "100.24",
+        "res": "3311448849"
+      }
+    ],
+    "exe_ans": 3311448848.96,
+    "answer": "3311448849",
+    "explanation": "",
+    "retrieval_text": "Question: what wa the total spent on share repurchases during 2014?\nType: G_1step\nFacts: purchases of equity securities 2013 during 2014 , we repurchased 33035204 shares of our common stock at an average price of $ 100.24 ."
+  },
+  {
+    "source_experience_id": "E032",
+    "representation": "case",
+    "case_id": "EMR/2018/page_55.pdf-2",
+    "report": "EMR/2018/page_55.pdf",
+    "company": "EMR",
+    "question": "what was the total grant datefair value , in dollars , at the beginning of the year?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "multiply"
+    ],
+    "gold_facts": [
+      "the beginning of year of shares is 4999 ; the beginning of year of average grant datefair value per share is $ 50.33 ;"
+    ],
+    "program": "multiply(50.33, 4999)",
+    "program_re": "multiply(50.33, 4999)",
+    "steps": [
+      {
+        "op": "multiply2-1",
+        "arg1": "50.33",
+        "arg2": "4999",
+        "res": "251599.67"
+      }
+    ],
+    "exe_ans": 251599.67,
+    "answer": "251599.7",
+    "explanation": "average grant datefair value per share*number of shares = total grant datefair value",
+    "retrieval_text": "Question: what was the total grant datefair value , in dollars , at the beginning of the year?\nType: G_1step\nFacts: the beginning of year of shares is 4999 ; the beginning of year of average grant datefair value per share is $ 50.33 ;"
+  },
+  {
+    "source_experience_id": "E033",
+    "representation": "case",
+    "case_id": "STT/2001/page_74.pdf-2",
+    "report": "STT/2001/page_74.pdf",
+    "company": "STT",
+    "question": "assuming that the outstanding number of shares is 100 million before the 2001 stock split , how many shares will be outstanding after the split , in millions?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "multiply"
+    ],
+    "gold_facts": [
+      "in 1998 , the rights agreement was amended and restated , and in 2001 , the rights plan was impacted by the 2-for-1 stock split ."
+    ],
+    "program": "multiply(100, const_2)",
+    "program_re": "multiply(100, const_2)",
+    "steps": [
+      {
+        "op": "multiply1-1",
+        "arg1": "100",
+        "arg2": "const_2",
+        "res": "200"
+      }
+    ],
+    "exe_ans": 200.0,
+    "answer": "200",
+    "explanation": "",
+    "retrieval_text": "Question: assuming that the outstanding number of shares is 100 million before the 2001 stock split , how many shares will be outstanding after the split , in millions?\nType: G_1step\nFacts: in 1998 , the rights agreement was amended and restated , and in 2001 , the rights plan was impacted by the 2-for-1 stock split ."
+  },
+  {
+    "source_experience_id": "E034",
+    "representation": "case",
+    "case_id": "AAPL/2006/page_103.pdf-1",
+    "report": "AAPL/2006/page_103.pdf",
+    "company": "AAPL",
+    "question": "what was the total dollar amount of new stock options issues to employees on october 22 , 2003?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "multiply"
+    ],
+    "gold_facts": [
+      "on october 22 , 2003 , new stock options totaling 13394736 shares were issued to employees at an exercise price of $ 11.38 per share , which is equivalent to the closing price of the company 2019s stock on that date ."
+    ],
+    "program": "multiply(13394736, 11.38)",
+    "program_re": "multiply(13394736, 11.38)",
+    "steps": [
+      {
+        "op": "multiply1-1",
+        "arg1": "13394736",
+        "arg2": "11.38",
+        "res": "152432095.68"
+      }
+    ],
+    "exe_ans": 152432095.68,
+    "answer": "152432095.68",
+    "explanation": "",
+    "retrieval_text": "Question: what was the total dollar amount of new stock options issues to employees on october 22 , 2003?\nType: G_1step\nFacts: on october 22 , 2003 , new stock options totaling 13394736 shares were issued to employees at an exercise price of $ 11.38 per share , which is equivalent to the closing price of the company 2019s stock on that date ."
+  },
+  {
+    "source_experience_id": "E035",
+    "representation": "case",
+    "case_id": "SWKS/2008/page_105.pdf-2",
+    "report": "SWKS/2008/page_105.pdf",
+    "company": "SWKS",
+    "question": "what would be the total common stock par value if all authorized shares were outstanding?",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "multiply"
+    ],
+    "gold_facts": [
+      "stockholders 2019 equity common stock the company is authorized to issue ( 1 ) 525000000 shares of common stock , par value $ 0.25 per share , and ( 2 ) 25000000 shares of preferred stock , without par value ."
+    ],
+    "program": "multiply(525000000, 0.25)",
+    "program_re": "multiply(525000000, 0.25)",
+    "steps": [
+      {
+        "op": "multiply2-1",
+        "arg1": "525000000",
+        "arg2": "0.25",
+        "res": "131250000"
+      }
+    ],
+    "exe_ans": 131250000.0,
+    "answer": "131250000",
+    "explanation": "",
+    "retrieval_text": "Question: what would be the total common stock par value if all authorized shares were outstanding?\nType: G_1step\nFacts: stockholders 2019 equity common stock the company is authorized to issue ( 1 ) 525000000 shares of common stock , par value $ 0.25 per share , and ( 2 ) 25000000 shares of preferred stock , without par value ."
+  },
+  {
+    "source_experience_id": "E036",
+    "representation": "case",
+    "case_id": "C/2010/page_226.pdf-2",
+    "report": "C/2010/page_226.pdf",
+    "company": "C",
+    "question": "what was the fair value amount of emea regional consumer banking",
+    "problem_kind": "G_1step",
+    "n_steps": 1,
+    "struct": [
+      "multiply"
+    ],
+    "gold_facts": [
+      "reporting unit ( 1 ) the emea regional consumer banking of fair value as a % ( % ) of allocated book value is 168 ; the emea regional consumer banking of goodwill is 338 ;"
+    ],
+    "program": "multiply(168, 338)",
+    "program_re": "multiply(168, 338)",
+    "steps": [
+      {
+        "op": "multiply2-1",
+        "arg1": "168",
+        "arg2": "338",
+        "res": "56784"
+      }
+    ],
+    "exe_ans": 56784.0,
+    "answer": "56784",
+    "explanation": "",
+    "retrieval_text": "Question: what was the fair value amount of emea regional consumer banking\nType: G_1step\nFacts: reporting unit ( 1 ) the emea regional consumer banking of fair value as a % ( % ) of allocated book value is 168 ; the emea regional consumer banking of goodwill is 338 ;"
+  },
+  {
+    "source_experience_id": "E037",
+    "representation": "case",
+    "case_id": "NCLH/2016/page_84.pdf-3",
+    "report": "NCLH/2016/page_84.pdf",
+    "company": "NCLH",
+    "question": "from 2014 to 2016 , what was the total amount of money they can deduct from their future income tax due to amortization?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "add",
+      "add"
+    ],
+    "gold_facts": [
+      "interest expense , net for the year ended december 31 , 2016 was $ 276.9 million which included $ 34.7 million of amortization of deferred financing fees and a $ 27.7 million loss on extinguishment of debt .",
+      "interest expense , net for the year ended december 31 , 2015 was $ 221.9 million which included $ 36.7 million of amortization of deferred financing fees and a $ 12.7 million loss on extinguishment of debt .",
+      "interest expense , net for the year ended december 31 , 2014 was $ 151.8 million which included $ 32.3 million of amortization of deferred financing fees and $ 15.4 million of expenses related to financing transactions in connection with the acquisition of prestige ."
+    ],
+    "program": "add(34.7, 36.7), add(32.3, #0)",
+    "program_re": "add(32.3, add(34.7, 36.7))",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "34.7",
+        "arg2": "36.7",
+        "res": "71.4"
+      },
+      {
+        "op": "add2-2",
+        "arg1": "32.3",
+        "arg2": "#0",
+        "res": "103.7"
+      }
+    ],
+    "exe_ans": 103.7,
+    "answer": "$ 103.7 million",
+    "explanation": "to find the total amount of money they can deduct from future income tax due to amortization , one must added up the amount of amortization from the years of 201420152016",
+    "retrieval_text": "Question: from 2014 to 2016 , what was the total amount of money they can deduct from their future income tax due to amortization?\nType: F_2step\nFacts: interest expense , net for the year ended december 31 , 2016 was $ 276.9 million which included $ 34.7 million of amortization of deferred financing fees and a $ 27.7 million loss on extinguishment of debt . ; interest expense , net for the year ended december 31 , 2015 was $ 221.9 million which included $ 36.7 million of amortization of deferred financing fees and a $ 12.7 million loss on extinguishment of debt . ; interest expense , net for the year ended december 31 , 2014 was $ 151.8 million which included $ 32.3 million of amortization of deferred financing fees and $ 15.4 million of expenses related to financing transactions in connection with the acquisition of prestige ."
+  },
+  {
+    "source_experience_id": "E038",
+    "representation": "case",
+    "case_id": "GS/2016/page_183.pdf-2",
+    "report": "GS/2016/page_183.pdf",
+    "company": "GS",
+    "question": "what was total rent charged to operating expense in millions for 2016 , 2015 and 2014?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "add",
+      "add"
+    ],
+    "gold_facts": [
+      "the credit loss protection on loan commitments provided by smfg is generally limited to 95% ( 95 % ) of the first loss the firm realizes on such commitments , up to a maximum of approximately $ 950 million .",
+      "rent charged to operating expense was $ 244 million for 2016 , $ 249 million for 2015 and $ 309 million for 2014 ."
+    ],
+    "program": "add(244, 249), add(#0, 309)",
+    "program_re": "add(add(244, 249), 309)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "244",
+        "arg2": "249",
+        "res": "493"
+      },
+      {
+        "op": "add2-2",
+        "arg1": "#0",
+        "arg2": "309",
+        "res": "802"
+      }
+    ],
+    "exe_ans": 802.0,
+    "answer": "802",
+    "explanation": "",
+    "retrieval_text": "Question: what was total rent charged to operating expense in millions for 2016 , 2015 and 2014?\nType: F_2step\nFacts: the credit loss protection on loan commitments provided by smfg is generally limited to 95% ( 95 % ) of the first loss the firm realizes on such commitments , up to a maximum of approximately $ 950 million . ; rent charged to operating expense was $ 244 million for 2016 , $ 249 million for 2015 and $ 309 million for 2014 ."
+  },
+  {
+    "source_experience_id": "E039",
+    "representation": "case",
+    "case_id": "BKR/2018/page_59.pdf-4",
+    "report": "BKR/2018/page_59.pdf",
+    "company": "BKR",
+    "question": "what is the net change in cash during 2018?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "add",
+      "add"
+    ],
+    "gold_facts": [
+      "( in millions ) the operating activities of 2018 is $ 1762 ; the operating activities of 2017 is $ -799 ( 799 ) ; the operating activities of 2016 is $ 262 ;",
+      "( in millions ) the investing activities of 2018 is -578 ( 578 ) ; the investing activities of 2017 is -4123 ( 4123 ) ; the investing activities of 2016 is -472 ( 472 ) ;",
+      "( in millions ) the financing activities of 2018 is -4363 ( 4363 ) ; the financing activities of 2017 is 10919 ; the financing activities of 2016 is -102 ( 102 ) ;"
+    ],
+    "program": "add(1762, -578), add(#0, -4363)",
+    "program_re": "add(add(1762, -578), -4363)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "1762",
+        "arg2": "-578",
+        "res": "1184"
+      },
+      {
+        "op": "add1-2",
+        "arg1": "#0",
+        "arg2": "-4363",
+        "res": "-3179"
+      }
+    ],
+    "exe_ans": -3179.0,
+    "answer": "-3179",
+    "explanation": "",
+    "retrieval_text": "Question: what is the net change in cash during 2018?\nType: F_2step\nFacts: ( in millions ) the operating activities of 2018 is $ 1762 ; the operating activities of 2017 is $ -799 ( 799 ) ; the operating activities of 2016 is $ 262 ; ; ( in millions ) the investing activities of 2018 is -578 ( 578 ) ; the investing activities of 2017 is -4123 ( 4123 ) ; the investing activities of 2016 is -472 ( 472 ) ; ; ( in millions ) the financing activities of 2018 is -4363 ( 4363 ) ; the financing activities of 2017 is 10919 ; the financing activities of 2016 is -102 ( 102 ) ;"
+  },
+  {
+    "source_experience_id": "E040",
+    "representation": "case",
+    "case_id": "ZBH/2008/page_83.pdf-2",
+    "report": "ZBH/2008/page_83.pdf",
+    "company": "ZBH",
+    "question": "what percent of the balance increase in the two periods were from prior periods?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "add",
+      "add"
+    ],
+    "gold_facts": [
+      "the increases related to prior periods of 2008 is 12.1 ; the increases related to prior periods of 2007 is 27.4 ;",
+      "the increases related to current period of 2008 is 15.8 ; the increases related to current period of 2007 is 21.9 ;"
+    ],
+    "program": "add(12.1, 27.4), add(15.8, 21.9)",
+    "program_re": "add(15.8, 21.9)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "12.1",
+        "arg2": "27.4",
+        "res": "39.5"
+      },
+      {
+        "op": "add2-2",
+        "arg1": "15.8",
+        "arg2": "21.9",
+        "res": "37.7"
+      }
+    ],
+    "exe_ans": 37.7,
+    "answer": "51.17%",
+    "explanation": "this shows the late inflow from previous operations while its inverse shows the immediate capitalization of operations",
+    "retrieval_text": "Question: what percent of the balance increase in the two periods were from prior periods?\nType: F_2step\nFacts: the increases related to prior periods of 2008 is 12.1 ; the increases related to prior periods of 2007 is 27.4 ; ; the increases related to current period of 2008 is 15.8 ; the increases related to current period of 2007 is 21.9 ;"
+  },
+  {
+    "source_experience_id": "E041",
+    "representation": "case",
+    "case_id": "ALXN/2016/page_89.pdf-2",
+    "report": "ALXN/2016/page_89.pdf",
+    "company": "ALXN",
+    "question": "how many square feet are leased by the company?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "add",
+      "add"
+    ],
+    "gold_facts": [
+      "location the new haven connecticut of operations conducted is corporate headquarters and executive sales research and development offices ; the new haven connecticut of approximatesquare feet is 514000 ; the new haven connecticut of leaseexpirationdates is 2030 ;",
+      "location the lexington massachusetts of operations conducted is research and development offices ; the lexington massachusetts of approximatesquare feet is 81000 ; the lexington massachusetts of leaseexpirationdates is 2019 ;",
+      "location the zurich switzerland of operations conducted is regional executive and sales offices ; the zurich switzerland of approximatesquare feet is 69000 ; the zurich switzerland of leaseexpirationdates is 2025 ;"
+    ],
+    "program": "add(514000, 81000), add(#0, 69000)",
+    "program_re": "add(add(514000, 81000), 69000)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "514000",
+        "arg2": "81000",
+        "res": "595000"
+      },
+      {
+        "op": "add2-2",
+        "arg1": "#0",
+        "arg2": "69000",
+        "res": "664000"
+      }
+    ],
+    "exe_ans": 664000.0,
+    "answer": "664000",
+    "explanation": "",
+    "retrieval_text": "Question: how many square feet are leased by the company?\nType: F_2step\nFacts: location the new haven connecticut of operations conducted is corporate headquarters and executive sales research and development offices ; the new haven connecticut of approximatesquare feet is 514000 ; the new haven connecticut of leaseexpirationdates is 2030 ; ; location the lexington massachusetts of operations conducted is research and development offices ; the lexington massachusetts of approximatesquare feet is 81000 ; the lexington massachusetts of leaseexpirationdates is 2019 ; ; location the zurich switzerland of operations conducted is regional executive and sales offices ; the zurich switzerland of approximatesquare feet is 69000 ; the zurich switzerland of leaseexpirationdates is 2025 ;"
+  },
+  {
+    "source_experience_id": "E042",
+    "representation": "case",
+    "case_id": "CE/2009/page_121.pdf-4",
+    "report": "CE/2009/page_121.pdf",
+    "company": "CE",
+    "question": "what was the net change number of units in 2009 in thousands",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "add",
+      "add"
+    ],
+    "gold_facts": [
+      "the granted of number of units ( in thousands ) is 420 ; the granted of weighted average fair value ( in $ ) is 38.16 ;",
+      "the vested of number of units ( in thousands ) is -79 ( 79 ) ; the vested of weighted average fair value ( in $ ) is 21.30 ;",
+      "the forfeited of number of units ( in thousands ) is -114 ( 114 ) ; the forfeited of weighted average fair value ( in $ ) is 17.28 ;"
+    ],
+    "program": "add(420, -79), add(#0, -114)",
+    "program_re": "add(add(420, -79), -114)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "420",
+        "arg2": "-79",
+        "res": "341"
+      },
+      {
+        "op": "add1-2",
+        "arg1": "#0",
+        "arg2": "-114",
+        "res": "227"
+      }
+    ],
+    "exe_ans": 227.0,
+    "answer": "227",
+    "explanation": "the change is the summation of all activity both the increase and decrease",
+    "retrieval_text": "Question: what was the net change number of units in 2009 in thousands\nType: F_2step\nFacts: the granted of number of units ( in thousands ) is 420 ; the granted of weighted average fair value ( in $ ) is 38.16 ; ; the vested of number of units ( in thousands ) is -79 ( 79 ) ; the vested of weighted average fair value ( in $ ) is 21.30 ; ; the forfeited of number of units ( in thousands ) is -114 ( 114 ) ; the forfeited of weighted average fair value ( in $ ) is 17.28 ;"
+  },
+  {
+    "source_experience_id": "E043",
+    "representation": "case",
+    "case_id": "AES/2001/page_42.pdf-2",
+    "report": "AES/2001/page_42.pdf",
+    "company": "AES",
+    "question": "based on the current amount of annual amortization , how many years will it take to fully amortize the goodwill balance at december 31 , 2001?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "multiply",
+      "divide"
+    ],
+    "gold_facts": [
+      "the company had $ 3.2 billion of goodwill at december 31 , 2001 .",
+      "goodwill amortization was $ 62 million for the year ended december 31 , 2001 ."
+    ],
+    "program": "multiply(3.2, const_1000), divide(#0, 62)",
+    "program_re": "divide(multiply(3.2, const_1000), 62)",
+    "steps": [
+      {
+        "op": "multiply1-1",
+        "arg1": "3.2",
+        "arg2": "const_1000",
+        "res": "3200"
+      },
+      {
+        "op": "divide1-2",
+        "arg1": "#0",
+        "arg2": "62",
+        "res": "52.4"
+      }
+    ],
+    "exe_ans": 51.6129,
+    "answer": "52.4",
+    "explanation": "",
+    "retrieval_text": "Question: based on the current amount of annual amortization , how many years will it take to fully amortize the goodwill balance at december 31 , 2001?\nType: F_2step\nFacts: the company had $ 3.2 billion of goodwill at december 31 , 2001 . ; goodwill amortization was $ 62 million for the year ended december 31 , 2001 ."
+  },
+  {
+    "source_experience_id": "E044",
+    "representation": "case",
+    "case_id": "AMAT/2014/page_37.pdf-2",
+    "report": "AMAT/2014/page_37.pdf",
+    "company": "AMAT",
+    "question": "how many shares received dividends during 2014 , ( in millions ) ?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "multiply",
+      "divide"
+    ],
+    "gold_facts": [
+      "dividends during fiscal 2014 , applied 2019s board of directors declared four quarterly cash dividends of $ 0.10 per share each .",
+      "dividends declared during fiscal 2014 , 2013 and 2012 totaled $ 487 million , $ 469 million and $ 438 million , respectively ."
+    ],
+    "program": "multiply(0.10, const_4), divide(487, #0)",
+    "program_re": "divide(487, multiply(0.10, const_4))",
+    "steps": [
+      {
+        "op": "multiply2-1",
+        "arg1": "0.10",
+        "arg2": "const_4",
+        "res": "0.4"
+      },
+      {
+        "op": "divide2-2",
+        "arg1": "487",
+        "arg2": "#0",
+        "res": "1217.5"
+      }
+    ],
+    "exe_ans": 1217.5,
+    "answer": "1217.5",
+    "explanation": "",
+    "retrieval_text": "Question: how many shares received dividends during 2014 , ( in millions ) ?\nType: F_2step\nFacts: dividends during fiscal 2014 , applied 2019s board of directors declared four quarterly cash dividends of $ 0.10 per share each . ; dividends declared during fiscal 2014 , 2013 and 2012 totaled $ 487 million , $ 469 million and $ 438 million , respectively ."
+  },
+  {
+    "source_experience_id": "E045",
+    "representation": "case",
+    "case_id": "FIS/2006/page_48.pdf-1",
+    "report": "FIS/2006/page_48.pdf",
+    "company": "FIS",
+    "question": "what is the net margin for 2006?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "multiply",
+      "divide"
+    ],
+    "gold_facts": [
+      "the processing and services revenues of 2006 is $ 2458777 ; the processing and services revenues of 2005 is $ 1208430 ; the processing and services revenues of 2004 is $ 892033 ;",
+      "net earnings net earnings totaled $ 259.1 million , $ 196.6 and $ 189.4 million for 2006 , 2005 and 2004 , respectively , or $ 1.37 , $ 1.53 and $ 1.48 per diluted share , respectively ."
+    ],
+    "program": "multiply(259.1, const_1000), divide(#0, 2458777)",
+    "program_re": "divide(multiply(259.1, const_1000), 2458777)",
+    "steps": [
+      {
+        "op": "multiply1-1",
+        "arg1": "259.1",
+        "arg2": "const_1000",
+        "res": "259100"
+      },
+      {
+        "op": "divide1-2",
+        "arg1": "#0",
+        "arg2": "2458777",
+        "res": "10.5%"
+      }
+    ],
+    "exe_ans": 0.10538,
+    "answer": "10.5%",
+    "explanation": "",
+    "retrieval_text": "Question: what is the net margin for 2006?\nType: F_2step\nFacts: the processing and services revenues of 2006 is $ 2458777 ; the processing and services revenues of 2005 is $ 1208430 ; the processing and services revenues of 2004 is $ 892033 ; ; net earnings net earnings totaled $ 259.1 million , $ 196.6 and $ 189.4 million for 2006 , 2005 and 2004 , respectively , or $ 1.37 , $ 1.53 and $ 1.48 per diluted share , respectively ."
+  },
+  {
+    "source_experience_id": "E046",
+    "representation": "case",
+    "case_id": "KIM/2010/page_94.pdf-2",
+    "report": "KIM/2010/page_94.pdf",
+    "company": "KIM",
+    "question": "what is the par value of the redeemed preferred a units , in millions?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "multiply",
+      "divide"
+    ],
+    "gold_facts": [
+      "type the preferred a units of units redeemed is 2200000 ; the preferred a units of par value redeemed ( in millions ) is $ 2.2 ; the preferred a units of redemption type is cash ;"
+    ],
+    "program": "multiply(2200000, 2.2), divide(#0, const_1000000)",
+    "program_re": "divide(multiply(2200000, 2.2), const_1000000)",
+    "steps": [
+      {
+        "op": "multiply2-1",
+        "arg1": "2200000",
+        "arg2": "2.2",
+        "res": "4840000"
+      },
+      {
+        "op": "divide2-2",
+        "arg1": "#0",
+        "arg2": "const_1000000",
+        "res": "4.8"
+      }
+    ],
+    "exe_ans": 4.84,
+    "answer": "4.8",
+    "explanation": "",
+    "retrieval_text": "Question: what is the par value of the redeemed preferred a units , in millions?\nType: F_2step\nFacts: type the preferred a units of units redeemed is 2200000 ; the preferred a units of par value redeemed ( in millions ) is $ 2.2 ; the preferred a units of redemption type is cash ;"
+  },
+  {
+    "source_experience_id": "E047",
+    "representation": "case",
+    "case_id": "ADI/2011/page_64.pdf-2",
+    "report": "ADI/2011/page_64.pdf",
+    "company": "ADI",
+    "question": "what is the interest payment of the 3.0% ( 3.0 % ) notes?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "multiply",
+      "divide"
+    ],
+    "gold_facts": [
+      "financial instruments not recorded at fair value on a recurring basis on april 4 , 2011 , the company issued $ 375 million aggregate principal amount of 3.0% ( 3.0 % ) senior unsecured notes due april 15 , 2016 ( the 3.0% ( 3.0 % ) notes ) with semi-annual fixed interest payments due on april 15 and october 15 of each year , commencing october 15 , 2011 ."
+    ],
+    "program": "multiply(375, 3.0%), divide(#0, const_2)",
+    "program_re": "divide(multiply(375, 3.0%), const_2)",
+    "steps": [
+      {
+        "op": "multiply2-1",
+        "arg1": "375",
+        "arg2": "3.0%",
+        "res": "11.25"
+      },
+      {
+        "op": "divide2-2",
+        "arg1": "#0",
+        "arg2": "const_2",
+        "res": "5.6"
+      }
+    ],
+    "exe_ans": 5.625,
+    "answer": "5.6",
+    "explanation": "",
+    "retrieval_text": "Question: what is the interest payment of the 3.0% ( 3.0 % ) notes?\nType: F_2step\nFacts: financial instruments not recorded at fair value on a recurring basis on april 4 , 2011 , the company issued $ 375 million aggregate principal amount of 3.0% ( 3.0 % ) senior unsecured notes due april 15 , 2016 ( the 3.0% ( 3.0 % ) notes ) with semi-annual fixed interest payments due on april 15 and october 15 of each year , commencing october 15 , 2011 ."
+  },
+  {
+    "source_experience_id": "E048",
+    "representation": "case",
+    "case_id": "ILMN/2007/page_84.pdf-2",
+    "report": "ILMN/2007/page_84.pdf",
+    "company": "ILMN",
+    "question": "what is the total value of granted options in 2006 , in millions?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "multiply",
+      "divide"
+    ],
+    "gold_facts": [
+      "the granted of options is 2621050 ; the granted of weighted- average exercise price is $ 27.24 ;"
+    ],
+    "program": "multiply(2621050, 27.24), divide(#0, const_1000000)",
+    "program_re": "divide(multiply(2621050, 27.24), const_1000000)",
+    "steps": [
+      {
+        "op": "multiply2-1",
+        "arg1": "2621050",
+        "arg2": "27.24",
+        "res": "71397402"
+      },
+      {
+        "op": "divide2-2",
+        "arg1": "#0",
+        "arg2": "const_1000000",
+        "res": "71.4"
+      }
+    ],
+    "exe_ans": 71.3974,
+    "answer": "71.4",
+    "explanation": "",
+    "retrieval_text": "Question: what is the total value of granted options in 2006 , in millions?\nType: F_2step\nFacts: the granted of options is 2621050 ; the granted of weighted- average exercise price is $ 27.24 ;"
+  },
+  {
+    "source_experience_id": "E049",
+    "representation": "case",
+    "case_id": "ABMD/2015/page_53.pdf-1",
+    "report": "ABMD/2015/page_53.pdf",
+    "company": "ABMD",
+    "question": "did abiomed outperform the nasdaq composite index over the five year period?",
+    "problem_kind": "A_comparison_yesno",
+    "n_steps": 1,
+    "struct": [
+      "greater"
+    ],
+    "gold_facts": [
+      "the abiomed inc of 3/31/2010 is 100 ; the abiomed inc of 3/31/2011 is 140.79 ; the abiomed inc of 3/31/2012 is 215.02 ; the abiomed inc of 3/31/2013 is 180.91 ; the abiomed inc of 3/31/2014 is 252.33 ; the abiomed inc of 3/31/2015 is 693.60 ;",
+      "the nasdaq composite index of 3/31/2010 is 100 ; the nasdaq composite index of 3/31/2011 is 115.98 ; the nasdaq composite index of 3/31/2012 is 128.93 ; the nasdaq composite index of 3/31/2013 is 136.26 ; the nasdaq composite index of 3/31/2014 is 175.11 ; the nasdaq composite index of 3/31/2015 is 204.38 ;"
+    ],
+    "program": "greater(693.60, 204.38)",
+    "program_re": "greater(693.60, 204.38)",
+    "steps": [
+      {
+        "op": "compare_larger1-1",
+        "arg1": "693.60",
+        "arg2": "204.38",
+        "res": "yes"
+      }
+    ],
+    "exe_ans": "yes",
+    "answer": "",
+    "explanation": "",
+    "retrieval_text": "Question: did abiomed outperform the nasdaq composite index over the five year period?\nType: A_comparison_yesno\nFacts: the abiomed inc of 3/31/2010 is 100 ; the abiomed inc of 3/31/2011 is 140.79 ; the abiomed inc of 3/31/2012 is 215.02 ; the abiomed inc of 3/31/2013 is 180.91 ; the abiomed inc of 3/31/2014 is 252.33 ; the abiomed inc of 3/31/2015 is 693.60 ; ; the nasdaq composite index of 3/31/2010 is 100 ; the nasdaq composite index of 3/31/2011 is 115.98 ; the nasdaq composite index of 3/31/2012 is 128.93 ; the nasdaq composite index of 3/31/2013 is 136.26 ; the nasdaq composite index of 3/31/2014 is 175.11 ; the nasdaq composite index of 3/31/2015 is 204.38 ;"
+  },
+  {
+    "source_experience_id": "E050",
+    "representation": "case",
+    "case_id": "STZ/2005/page_57.pdf-1",
+    "report": "STZ/2005/page_57.pdf",
+    "company": "STZ",
+    "question": "of the two acquisitions , was the purchase price of the hardy acquisition greater than the mondavi acquisition?",
+    "problem_kind": "A_comparison_yesno",
+    "n_steps": 1,
+    "struct": [
+      "greater"
+    ],
+    "gold_facts": [
+      "total consid- eration paid in cash to the robert mondavi shareholders was $ 1030.7 million .",
+      "total consideration paid in cash and class a common stock to the hardy shareholders was $ 1137.4 million ."
+    ],
+    "program": "greater(1137.4, 1030.7)",
+    "program_re": "greater(1137.4, 1030.7)",
+    "steps": [
+      {
+        "op": "compare_larger1-1",
+        "arg1": "1137.4",
+        "arg2": "1030.7",
+        "res": "yes"
+      }
+    ],
+    "exe_ans": "yes",
+    "answer": "yes",
+    "explanation": "",
+    "retrieval_text": "Question: of the two acquisitions , was the purchase price of the hardy acquisition greater than the mondavi acquisition?\nType: A_comparison_yesno\nFacts: total consid- eration paid in cash to the robert mondavi shareholders was $ 1030.7 million . ; total consideration paid in cash and class a common stock to the hardy shareholders was $ 1137.4 million ."
+  },
+  {
+    "source_experience_id": "E051",
+    "representation": "case",
+    "case_id": "PPG/2018/page_54.pdf-1",
+    "report": "PPG/2018/page_54.pdf",
+    "company": "PPG",
+    "question": "were 2018 advertising costs greater than r&d expenses?",
+    "problem_kind": "A_comparison_yesno",
+    "n_steps": 1,
+    "struct": [
+      "greater"
+    ],
+    "gold_facts": [
+      "( $ in millions ) the research and development 2013 total of 2018 is $ 464 ; the research and development 2013 total of 2017 is $ 472 ; the research and development 2013 total of 2016 is $ 473 ;",
+      "advertising costs advertising costs are expensed as incurred and totaled $ 280 million , $ 313 million and $ 322 million in 2018 , 2017 and 2016 , respectively ."
+    ],
+    "program": "greater(280, 464)",
+    "program_re": "greater(280, 464)",
+    "steps": [
+      {
+        "op": "compare_larger1-1",
+        "arg1": "280",
+        "arg2": "464",
+        "res": "no"
+      }
+    ],
+    "exe_ans": "no",
+    "answer": "no",
+    "explanation": "",
+    "retrieval_text": "Question: were 2018 advertising costs greater than r&d expenses?\nType: A_comparison_yesno\nFacts: ( $ in millions ) the research and development 2013 total of 2018 is $ 464 ; the research and development 2013 total of 2017 is $ 472 ; the research and development 2013 total of 2016 is $ 473 ; ; advertising costs advertising costs are expensed as incurred and totaled $ 280 million , $ 313 million and $ 322 million in 2018 , 2017 and 2016 , respectively ."
+  },
+  {
+    "source_experience_id": "E052",
+    "representation": "case",
+    "case_id": "AES/2001/page_43.pdf-1",
+    "report": "AES/2001/page_43.pdf",
+    "company": "AES",
+    "question": "was the caribbean segment revenue increase greater than the south american growth ?",
+    "problem_kind": "A_comparison_yesno",
+    "n_steps": 1,
+    "struct": [
+      "greater"
+    ],
+    "gold_facts": [
+      "in the caribbean , growth distribution segment revenues increased $ 296 million due primarily to a full year of operations at caess , which was acquired in 2000 and improved operations at ede este .",
+      "in south america , growth distribution segment revenues increased $ 89 million due to the significant revenues at sul from our settlement with the brazilian government offset by declines in revenues at our argentine distribution businesses ."
+    ],
+    "program": "greater(296, 89)",
+    "program_re": "greater(296, 89)",
+    "steps": [
+      {
+        "op": "compare_larger1-1",
+        "arg1": "296",
+        "arg2": "89",
+        "res": "yes"
+      }
+    ],
+    "exe_ans": "yes",
+    "answer": "yes",
+    "explanation": "",
+    "retrieval_text": "Question: was the caribbean segment revenue increase greater than the south american growth ?\nType: A_comparison_yesno\nFacts: in the caribbean , growth distribution segment revenues increased $ 296 million due primarily to a full year of operations at caess , which was acquired in 2000 and improved operations at ede este . ; in south america , growth distribution segment revenues increased $ 89 million due to the significant revenues at sul from our settlement with the brazilian government offset by declines in revenues at our argentine distribution businesses ."
+  },
+  {
+    "source_experience_id": "E053",
+    "representation": "case",
+    "case_id": "AWK/2018/page_103.pdf-2",
+    "report": "AWK/2018/page_103.pdf",
+    "company": "AWK",
+    "question": "was the weighted average interest rate on awcc short-term borrowings greater for the year ended december 31 , 2018 then 2017?",
+    "problem_kind": "A_comparison_yesno",
+    "n_steps": 1,
+    "struct": [
+      "greater"
+    ],
+    "gold_facts": [
+      "1762 1673 150 66 1600 695 the weighted average interest rate on awcc short-term borrowings for the years ended december 31 , 2018 and 2017 was approximately 2.28% ( 2.28 % ) and 1.24% ( 1.24 % ) , respectively ."
+    ],
+    "program": "greater(2.28, 1.24)",
+    "program_re": "greater(2.28, 1.24)",
+    "steps": [
+      {
+        "op": "compare_larger2-1",
+        "arg1": "2.28",
+        "arg2": "1.24",
+        "res": "yes"
+      }
+    ],
+    "exe_ans": "yes",
+    "answer": "yes",
+    "explanation": "",
+    "retrieval_text": "Question: was the weighted average interest rate on awcc short-term borrowings greater for the year ended december 31 , 2018 then 2017?\nType: A_comparison_yesno\nFacts: 1762 1673 150 66 1600 695 the weighted average interest rate on awcc short-term borrowings for the years ended december 31 , 2018 and 2017 was approximately 2.28% ( 2.28 % ) and 1.24% ( 1.24 % ) , respectively ."
+  },
+  {
+    "source_experience_id": "E054",
+    "representation": "case",
+    "case_id": "VNO/2011/page_85.pdf-2",
+    "report": "VNO/2011/page_85.pdf",
+    "company": "VNO",
+    "question": "was the quarterly high sales prices of the common shares and dividends paid per share for the first quarter of the year ended december 31 , 2011 higher than the fourth quarter of that period?",
+    "problem_kind": "A_comparison_yesno",
+    "n_steps": 1,
+    "struct": [
+      "greater"
+    ],
+    "gold_facts": [
+      "quarter the 1st of year ended december 31 2011 high is $ 93.53 ; the 1st of year ended december 31 2011 low is $ 82.12 ; the 1st of year ended december 31 2011 dividends is $ 0.69 ; the 1st of year ended december 31 2011 high is $ 78.40 ; the 1st of year ended december 31 2011 low is $ 61.25 ; the 1st of dividends is $ 0.65 ;",
+      "quarter the 4th of year ended december 31 2011 high is 84.30 ; the 4th of year ended december 31 2011 low is 68.39 ; the 4th of year ended december 31 2011 dividends is 0.69 ; the 4th of year ended december 31 2011 high is 91.67 ; the 4th of year ended december 31 2011 low is 78.06 ; the 4th of dividends is 0.65 ;"
+    ],
+    "program": "greater(93.53, 84.30)",
+    "program_re": "greater(93.53, 84.30)",
+    "steps": [
+      {
+        "op": "compare_larger2-1",
+        "arg1": "93.53",
+        "arg2": "84.30",
+        "res": "yes"
+      }
+    ],
+    "exe_ans": "yes",
+    "answer": "yes",
+    "explanation": "",
+    "retrieval_text": "Question: was the quarterly high sales prices of the common shares and dividends paid per share for the first quarter of the year ended december 31 , 2011 higher than the fourth quarter of that period?\nType: A_comparison_yesno\nFacts: quarter the 1st of year ended december 31 2011 high is $ 93.53 ; the 1st of year ended december 31 2011 low is $ 82.12 ; the 1st of year ended december 31 2011 dividends is $ 0.69 ; the 1st of year ended december 31 2011 high is $ 78.40 ; the 1st of year ended december 31 2011 low is $ 61.25 ; the 1st of dividends is $ 0.65 ; ; quarter the 4th of year ended december 31 2011 high is 84.30 ; the 4th of year ended december 31 2011 low is 68.39 ; the 4th of year ended december 31 2011 dividends is 0.69 ; the 4th of year ended december 31 2011 high is 91.67 ; the 4th of year ended december 31 2011 low is 78.06 ; the 4th of dividends is 0.65 ;"
+  },
+  {
+    "source_experience_id": "E055",
+    "representation": "case",
+    "case_id": "HUM/2007/page_96.pdf-2",
+    "report": "HUM/2007/page_96.pdf",
+    "company": "HUM",
+    "question": "considering the years 2005-2007 , what is the average fair value of shares vested , in millions?",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 3,
+    "struct": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "the fair value of shares vested during the years ended december 31 , 2007 , 2006 , and 2005 was $ 3.4 million , $ 2.3 million , and $ 0.6 million , respectively ."
+    ],
+    "program": "add(3.4, 0.6), add(#0, 2.3), divide(#1, const_3)",
+    "program_re": "divide(add(add(3.4, 0.6), 2.3), const_3)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "3.4",
+        "arg2": "0.6",
+        "res": "4"
+      },
+      {
+        "op": "add2-2",
+        "arg1": "#0",
+        "arg2": "2.3",
+        "res": "6.3"
+      },
+      {
+        "op": "divide2-3",
+        "arg1": "#1",
+        "arg2": "const_3",
+        "res": "2.1"
+      }
+    ],
+    "exe_ans": 2.1,
+    "answer": "2.1",
+    "explanation": "it is the sum of all values divided by three .",
+    "retrieval_text": "Question: considering the years 2005-2007 , what is the average fair value of shares vested , in millions?\nType: C_unitscaling_multi\nFacts: the fair value of shares vested during the years ended december 31 , 2007 , 2006 , and 2005 was $ 3.4 million , $ 2.3 million , and $ 0.6 million , respectively ."
+  },
+  {
+    "source_experience_id": "E056",
+    "representation": "case",
+    "case_id": "BDX/2019/page_86.pdf-2",
+    "report": "BDX/2019/page_86.pdf",
+    "company": "BDX",
+    "question": "what was the average net pension cost from 2017 to 2019 in millions",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 3,
+    "struct": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "( millions of dollars ) the net pension cost of pension plans 2019 is $ 135 ; the net pension cost of pension plans 2018 is $ 137 ; the net pension cost of pension plans 2017 is $ 138 ;"
+    ],
+    "program": "add(135, 137), add(#0, 138), divide(#1, const_3)",
+    "program_re": "divide(add(add(135, 137), 138), const_3)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "135",
+        "arg2": "137",
+        "res": "272"
+      },
+      {
+        "op": "add2-2",
+        "arg1": "#0",
+        "arg2": "138",
+        "res": "410"
+      },
+      {
+        "op": "divide2-3",
+        "arg1": "#1",
+        "arg2": "const_3",
+        "res": "136.7"
+      }
+    ],
+    "exe_ans": 136.66667,
+    "answer": "136.7",
+    "explanation": "",
+    "retrieval_text": "Question: what was the average net pension cost from 2017 to 2019 in millions\nType: C_unitscaling_multi\nFacts: ( millions of dollars ) the net pension cost of pension plans 2019 is $ 135 ; the net pension cost of pension plans 2018 is $ 137 ; the net pension cost of pension plans 2017 is $ 138 ;"
+  },
+  {
+    "source_experience_id": "E057",
+    "representation": "case",
+    "case_id": "CME/2012/page_42.pdf-1",
+    "report": "CME/2012/page_42.pdf",
+    "company": "CME",
+    "question": "what was the average sales price for the class b common shares in 2012 in the first quarter",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 3,
+    "struct": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "2012 first quarter the fourth quarter of high $ 59.73 is 57.89 ; the fourth quarter of low $ 45.20 is 50.12 ; the fourth quarter of 2011 first quarter is fourth quarter ; the fourth quarter of high $ 63.40 is 59.73 ; the fourth quarter of low $ 56.06 is 45.20 ;"
+    ],
+    "program": "add(59.73, 45.20), add(#0, const_2), divide(#1, const_2)",
+    "program_re": "divide(add(add(59.73, 45.20), const_2), const_2)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "59.73",
+        "arg2": "45.20",
+        "res": "104.93"
+      },
+      {
+        "op": "add1-2",
+        "arg1": "#0",
+        "arg2": "const_2",
+        "res": "104.93"
+      },
+      {
+        "op": "divide0-0",
+        "arg1": "#1",
+        "arg2": "const_2",
+        "res": "52.465"
+      }
+    ],
+    "exe_ans": 53.465,
+    "answer": "52.465",
+    "explanation": "",
+    "retrieval_text": "Question: what was the average sales price for the class b common shares in 2012 in the first quarter\nType: C_unitscaling_multi\nFacts: 2012 first quarter the fourth quarter of high $ 59.73 is 57.89 ; the fourth quarter of low $ 45.20 is 50.12 ; the fourth quarter of 2011 first quarter is fourth quarter ; the fourth quarter of high $ 63.40 is 59.73 ; the fourth quarter of low $ 56.06 is 45.20 ;"
+  },
+  {
+    "source_experience_id": "E058",
+    "representation": "case",
+    "case_id": "ETR/2004/page_86.pdf-2",
+    "report": "ETR/2004/page_86.pdf",
+    "company": "ETR",
+    "question": "what amount of long-term debt is due in the next 36 months for entergy corporation as of december 31 , 2004 , in millions?",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 3,
+    "struct": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "the 2005 of ( in thousands ) is $ 467298 ;",
+      "the 2006 of ( in thousands ) is $ 75896 ;",
+      "the 2007 of ( in thousands ) is $ 199539 ;"
+    ],
+    "program": "add(467298, 75896), add(#0, 199539), divide(#1, const_1000)",
+    "program_re": "divide(add(add(467298, 75896), 199539), const_1000)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "467298",
+        "arg2": "75896",
+        "res": "543194"
+      },
+      {
+        "op": "add2-2",
+        "arg1": "#0",
+        "arg2": "199539",
+        "res": "742733"
+      },
+      {
+        "op": "divide2-3",
+        "arg1": "#1",
+        "arg2": "const_1000",
+        "res": "742.7"
+      }
+    ],
+    "exe_ans": 742.733,
+    "answer": "742.7",
+    "explanation": "",
+    "retrieval_text": "Question: what amount of long-term debt is due in the next 36 months for entergy corporation as of december 31 , 2004 , in millions?\nType: C_unitscaling_multi\nFacts: the 2005 of ( in thousands ) is $ 467298 ; ; the 2006 of ( in thousands ) is $ 75896 ; ; the 2007 of ( in thousands ) is $ 199539 ;"
+  },
+  {
+    "source_experience_id": "E059",
+    "representation": "case",
+    "case_id": "SLG/2013/page_133.pdf-2",
+    "report": "SLG/2013/page_133.pdf",
+    "company": "SLG",
+    "question": "what was the average recorded compensation expense related to bonus , time-based and performance based awards from 2011 to 2013",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 3,
+    "struct": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "during the years ended december 31 , 2013 , 2012 and 2011 , we recorded compensation expense related to bonus , time-based and performance based awards of approximately $ 27.3 million , $ 12.6 million and $ 8.5 million , respectively ."
+    ],
+    "program": "add(27.3, 12.6), add(#0, 8.5), divide(#1, const_3)",
+    "program_re": "divide(add(add(27.3, 12.6), 8.5), const_3)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "27.3",
+        "arg2": "12.6",
+        "res": "39.9"
+      },
+      {
+        "op": "add2-2",
+        "arg1": "#0",
+        "arg2": "8.5",
+        "res": "48.4"
+      },
+      {
+        "op": "divide2-3",
+        "arg1": "#1",
+        "arg2": "const_3",
+        "res": "16.1"
+      }
+    ],
+    "exe_ans": 16.13333,
+    "answer": "16.1",
+    "explanation": "",
+    "retrieval_text": "Question: what was the average recorded compensation expense related to bonus , time-based and performance based awards from 2011 to 2013\nType: C_unitscaling_multi\nFacts: during the years ended december 31 , 2013 , 2012 and 2011 , we recorded compensation expense related to bonus , time-based and performance based awards of approximately $ 27.3 million , $ 12.6 million and $ 8.5 million , respectively ."
+  },
+  {
+    "source_experience_id": "E060",
+    "representation": "case",
+    "case_id": "HII/2011/page_103.pdf-1",
+    "report": "HII/2011/page_103.pdf",
+    "company": "HII",
+    "question": "what was the average operating leases 2014rental expense for operating leases from 2009 to 2011",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 3,
+    "struct": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "operating leases 2014rental expense for operating leases was $ 44 million in 2011 , $ 44 million in 2010 , and $ 48 million in 2009 .",
+      "2012 the thereafter of $ 21 is 48 ;"
+    ],
+    "program": "add(44, 44), add(#0, 48), divide(#1, const_3)",
+    "program_re": "divide(add(add(44, 44), 48), const_3)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "44",
+        "arg2": "44",
+        "res": "88"
+      },
+      {
+        "op": "add1-2",
+        "arg1": "#0",
+        "arg2": "48",
+        "res": "136"
+      },
+      {
+        "op": "divide1-3",
+        "arg1": "#1",
+        "arg2": "const_3",
+        "res": "45.3"
+      }
+    ],
+    "exe_ans": 45.33333,
+    "answer": "45.3",
+    "explanation": "",
+    "retrieval_text": "Question: what was the average operating leases 2014rental expense for operating leases from 2009 to 2011\nType: C_unitscaling_multi\nFacts: operating leases 2014rental expense for operating leases was $ 44 million in 2011 , $ 44 million in 2010 , and $ 48 million in 2009 . ; 2012 the thereafter of $ 21 is 48 ;"
+  },
+  {
+    "source_experience_id": "E061",
+    "representation": "case",
+    "case_id": "ADBE/2011/page_101.pdf-2",
+    "report": "ADBE/2011/page_101.pdf",
+    "company": "ADBE",
+    "question": "what was the average ending balance of allowance for unrecognized tax positions?",
+    "problem_kind": "B_table_aggregation",
+    "n_steps": 1,
+    "struct": [
+      "table_average"
+    ],
+    "gold_facts": [
+      "we regularly assess the likelihood of outcomes resulting from these examinations to determine the adequacy of our provision for income taxes and have reserved for potential adjustments that may result from the current examination .",
+      "the ending balance of 2011 is $ 163607 ; the ending balance of 2010 is $ 156925 ;"
+    ],
+    "program": "table_average(ending balance, none)",
+    "program_re": "table_average(ending balance, none)",
+    "steps": [
+      {
+        "op": "average2-1",
+        "arg1": "ending balance",
+        "arg2": "none",
+        "res": "160266"
+      }
+    ],
+    "exe_ans": 160266.0,
+    "answer": "160266",
+    "explanation": "",
+    "retrieval_text": "Question: what was the average ending balance of allowance for unrecognized tax positions?\nType: B_table_aggregation\nFacts: we regularly assess the likelihood of outcomes resulting from these examinations to determine the adequacy of our provision for income taxes and have reserved for potential adjustments that may result from the current examination . ; the ending balance of 2011 is $ 163607 ; the ending balance of 2010 is $ 156925 ;"
+  },
+  {
+    "source_experience_id": "E062",
+    "representation": "case",
+    "case_id": "PNC/2013/page_111.pdf-2",
+    "report": "PNC/2013/page_111.pdf",
+    "company": "PNC",
+    "question": "for 2012 and 2013 , what was average foreign exchange income in millions?",
+    "problem_kind": "B_table_aggregation",
+    "n_steps": 1,
+    "struct": [
+      "table_average"
+    ],
+    "gold_facts": [
+      "year ended december 31in millions the foreign exchange of 2013 is 94 ; the foreign exchange of 2012 is 92 ;"
+    ],
+    "program": "table_average(foreign exchange, none)",
+    "program_re": "table_average(foreign exchange, none)",
+    "steps": [
+      {
+        "op": "average2-1",
+        "arg1": "foreign exchange",
+        "arg2": "none",
+        "res": "93"
+      }
+    ],
+    "exe_ans": 93.0,
+    "answer": "93",
+    "explanation": "",
+    "retrieval_text": "Question: for 2012 and 2013 , what was average foreign exchange income in millions?\nType: B_table_aggregation\nFacts: year ended december 31in millions the foreign exchange of 2013 is 94 ; the foreign exchange of 2012 is 92 ;"
+  },
+  {
+    "source_experience_id": "E063",
+    "representation": "case",
+    "case_id": "WELL/2017/page_116.pdf-3",
+    "report": "WELL/2017/page_116.pdf",
+    "company": "WELL",
+    "question": "for the years ended december 31 2017 , 2016 , and 2015 , what was the average beginning balance in millions?",
+    "problem_kind": "B_table_aggregation",
+    "n_steps": 1,
+    "struct": [
+      "table_average"
+    ],
+    "gold_facts": [
+      "2016 the beginning balance of year ended december 31 2017 2016 is $ 96838 ; the beginning balance of year ended december 31 2017 2016 is $ 98966 ; the beginning balance of year ended december 31 2017 is $ 85207 ;"
+    ],
+    "program": "table_average(beginning balance, none)",
+    "program_re": "table_average(beginning balance, none)",
+    "steps": [
+      {
+        "op": "average2-1",
+        "arg1": "beginning balance",
+        "arg2": "none",
+        "res": "93670"
+      }
+    ],
+    "exe_ans": 93670.33333,
+    "answer": "93670",
+    "explanation": "",
+    "retrieval_text": "Question: for the years ended december 31 2017 , 2016 , and 2015 , what was the average beginning balance in millions?\nType: B_table_aggregation\nFacts: 2016 the beginning balance of year ended december 31 2017 2016 is $ 96838 ; the beginning balance of year ended december 31 2017 2016 is $ 98966 ; the beginning balance of year ended december 31 2017 is $ 85207 ;"
+  },
+  {
+    "source_experience_id": "E064",
+    "representation": "case",
+    "case_id": "ECL/2016/page_64.pdf-3",
+    "report": "ECL/2016/page_64.pdf",
+    "company": "ECL",
+    "question": "in millions , what was the average ending balance in allowance for doubtful accounts?",
+    "problem_kind": "B_table_aggregation",
+    "n_steps": 1,
+    "struct": [
+      "table_average"
+    ],
+    "gold_facts": [
+      "( millions ) the ending balance of 2016 is $ 68 ; the ending balance of 2015 is $ 75 ; the ending balance of 2014 is $ 77 ;"
+    ],
+    "program": "table_average(ending balance, none)",
+    "program_re": "table_average(ending balance, none)",
+    "steps": [
+      {
+        "op": "average1-1",
+        "arg1": "ending balance",
+        "arg2": "none",
+        "res": "73.3"
+      }
+    ],
+    "exe_ans": 73.33333,
+    "answer": "73.3",
+    "explanation": "",
+    "retrieval_text": "Question: in millions , what was the average ending balance in allowance for doubtful accounts?\nType: B_table_aggregation\nFacts: ( millions ) the ending balance of 2016 is $ 68 ; the ending balance of 2015 is $ 75 ; the ending balance of 2014 is $ 77 ;"
+  },
+  {
+    "source_experience_id": "E065",
+    "representation": "case",
+    "case_id": "IP/2009/page_25.pdf-1",
+    "report": "IP/2009/page_25.pdf",
+    "company": "IP",
+    "question": "what is the average value of interest expense net , in millions?",
+    "problem_kind": "B_table_aggregation",
+    "n_steps": 1,
+    "struct": [
+      "table_average"
+    ],
+    "gold_facts": [
+      "in millions the interest expense net of 2009 is -669 ( 669 ) ; the interest expense net of 2008 is -492 ( 492 ) ; the interest expense net of 2007 is -297 ( 297 ) ;"
+    ],
+    "program": "table_average(interest expense net, none)",
+    "program_re": "table_average(interest expense net, none)",
+    "steps": [
+      {
+        "op": "average1-1",
+        "arg1": "interest expense net",
+        "arg2": "none",
+        "res": "-486"
+      }
+    ],
+    "exe_ans": -486.0,
+    "answer": "-486",
+    "explanation": "it is the sum of all values divided by three .",
+    "retrieval_text": "Question: what is the average value of interest expense net , in millions?\nType: B_table_aggregation\nFacts: in millions the interest expense net of 2009 is -669 ( 669 ) ; the interest expense net of 2008 is -492 ( 492 ) ; the interest expense net of 2007 is -297 ( 297 ) ;"
+  },
+  {
+    "source_experience_id": "E066",
+    "representation": "case",
+    "case_id": "AAPL/2010/page_73.pdf-1",
+    "report": "AAPL/2010/page_73.pdf",
+    "company": "AAPL",
+    "question": "what was the average ending balance of oci in millions?",
+    "problem_kind": "B_table_aggregation",
+    "n_steps": 1,
+    "struct": [
+      "table_average"
+    ],
+    "gold_facts": [
+      "the ending balance of 2010 is $ 943 ; the ending balance of 2009 is $ 971 ; the ending balance of 2008 is $ 506 ;",
+      "note 7 2013 shareholders 2019 equity and stock-based compensation preferred stock the company has five million shares of authorized preferred stock , none of which is issued or outstanding ."
+    ],
+    "program": "table_average(ending balance, none)",
+    "program_re": "table_average(ending balance, none)",
+    "steps": [
+      {
+        "op": "average1-1",
+        "arg1": "ending balance",
+        "arg2": "none",
+        "res": "806.7"
+      }
+    ],
+    "exe_ans": 806.66667,
+    "answer": "806.7",
+    "explanation": "",
+    "retrieval_text": "Question: what was the average ending balance of oci in millions?\nType: B_table_aggregation\nFacts: the ending balance of 2010 is $ 943 ; the ending balance of 2009 is $ 971 ; the ending balance of 2008 is $ 506 ; ; note 7 2013 shareholders 2019 equity and stock-based compensation preferred stock the company has five million shares of authorized preferred stock , none of which is issued or outstanding ."
+  },
+  {
+    "source_experience_id": "E067",
+    "representation": "case",
+    "case_id": "HUM/2013/page_52.pdf-4",
+    "report": "HUM/2013/page_52.pdf",
+    "company": "HUM",
+    "question": "what is the percentual increase observed in the average price paid per share during november and december of 2013?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "divide",
+      "subtract"
+    ],
+    "gold_facts": [
+      "period the november 2013 of total number of shares purchased ( 1 ) is 1191867 ; the november 2013 of average price paid per share is 98.18 ; the november 2013 of total number of shares purchased as part of publicly announcedplans or programs ( 1 ) ( 2 ) is 1191867 ; the november 2013 of dollar value of shares that may yet be purchased under the plans orprograms ( 1 ) is 664123417 ;",
+      "period the december 2013 of total number of shares purchased ( 1 ) is 802930 ; the december 2013 of average price paid per share is 104.10 ; the december 2013 of total number of shares purchased as part of publicly announcedplans or programs ( 1 ) ( 2 ) is 802930 ; the december 2013 of dollar value of shares that may yet be purchased under the plans orprograms ( 1 ) is 580555202 ;"
+    ],
+    "program": "divide(104.10, 98.18), subtract(#0, const_1)",
+    "program_re": "subtract(divide(104.10, 98.18), const_1)",
+    "steps": [
+      {
+        "op": "divide2-1",
+        "arg1": "104.10",
+        "arg2": "98.18",
+        "res": "1.0603"
+      },
+      {
+        "op": "minus2-2",
+        "arg1": "#0",
+        "arg2": "const_1",
+        "res": "6.03%"
+      }
+    ],
+    "exe_ans": 0.0603,
+    "answer": "6.03%",
+    "explanation": "it is the average price paid per share during december divided by november's one , then transformed into a percentage .",
+    "retrieval_text": "Question: what is the percentual increase observed in the average price paid per share during november and december of 2013?\nType: F_2step\nFacts: period the november 2013 of total number of shares purchased ( 1 ) is 1191867 ; the november 2013 of average price paid per share is 98.18 ; the november 2013 of total number of shares purchased as part of publicly announcedplans or programs ( 1 ) ( 2 ) is 1191867 ; the november 2013 of dollar value of shares that may yet be purchased under the plans orprograms ( 1 ) is 664123417 ; ; period the december 2013 of total number of shares purchased ( 1 ) is 802930 ; the december 2013 of average price paid per share is 104.10 ; the december 2013 of total number of shares purchased as part of publicly announcedplans or programs ( 1 ) ( 2 ) is 802930 ; the december 2013 of dollar value of shares that may yet be purchased under the plans orprograms ( 1 ) is 580555202 ;"
+  },
+  {
+    "source_experience_id": "E068",
+    "representation": "case",
+    "case_id": "AON/2018/page_41.pdf-3",
+    "report": "AON/2018/page_41.pdf",
+    "company": "AON",
+    "question": "considering the years 2017 and 2018 , what is the percentual increase observed in capital expenditures used for continuing operations?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "divide",
+      "subtract"
+    ],
+    "gold_facts": [
+      "years ended december 31 the capital expenditures used for continuing operations of 2018 is -240 ( 240 ) ; the capital expenditures used for continuing operations of 2017 is -183 ( 183 ) ; the capital expenditures used for continuing operations of 2016 is -156 ( 156 ) ;"
+    ],
+    "program": "divide(240, 183), subtract(#0, const_1)",
+    "program_re": "subtract(divide(240, 183), const_1)",
+    "steps": [
+      {
+        "op": "divide2-1",
+        "arg1": "240",
+        "arg2": "183",
+        "res": "1.3114"
+      },
+      {
+        "op": "minus2-2",
+        "arg1": "#0",
+        "arg2": "const_1",
+        "res": "31.14%"
+      }
+    ],
+    "exe_ans": 0.31148,
+    "answer": "31.14%",
+    "explanation": "it is the 2018's capital expenditures value divided by the 2017's one , then transformed into a percentage .",
+    "retrieval_text": "Question: considering the years 2017 and 2018 , what is the percentual increase observed in capital expenditures used for continuing operations?\nType: F_2step\nFacts: years ended december 31 the capital expenditures used for continuing operations of 2018 is -240 ( 240 ) ; the capital expenditures used for continuing operations of 2017 is -183 ( 183 ) ; the capital expenditures used for continuing operations of 2016 is -156 ( 156 ) ;"
+  },
+  {
+    "source_experience_id": "E069",
+    "representation": "case",
+    "case_id": "APD/2018/page_41.pdf-1",
+    "report": "APD/2018/page_41.pdf",
+    "company": "APD",
+    "question": "what was the increase in the interest expenses during 2017 and 2018?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "divide",
+      "subtract"
+    ],
+    "gold_facts": [
+      "the interest expense of 2018 is $ 130.5 ; the interest expense of 2017 is $ 120.6 ; the interest expense of 2016 is $ 115.2 ;"
+    ],
+    "program": "divide(130.5, 120.6), subtract(#0, const_1)",
+    "program_re": "subtract(divide(130.5, 120.6), const_1)",
+    "steps": [
+      {
+        "op": "divide1-1",
+        "arg1": "130.5",
+        "arg2": "120.6",
+        "res": "1.0821"
+      },
+      {
+        "op": "minus1-2",
+        "arg1": "#0",
+        "arg2": "const_1",
+        "res": "8.21%"
+      }
+    ],
+    "exe_ans": 0.08209,
+    "answer": "8.21%",
+    "explanation": "it is the interest expense of 2018 divided by the 2017's then turned into a percentage.\\\\n",
+    "retrieval_text": "Question: what was the increase in the interest expenses during 2017 and 2018?\nType: F_2step\nFacts: the interest expense of 2018 is $ 130.5 ; the interest expense of 2017 is $ 120.6 ; the interest expense of 2016 is $ 115.2 ;"
+  },
+  {
+    "source_experience_id": "E070",
+    "representation": "case",
+    "case_id": "ALLE/2017/page_29.pdf-1",
+    "report": "ALLE/2017/page_29.pdf",
+    "company": "ALLE",
+    "question": "considering the years 2016-2017 , what is the increase observed in the research and development expenditures?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "divide",
+      "subtract"
+    ],
+    "gold_facts": [
+      "our research and development ( \"r&d\" ) expenditures were approximately $ 48.3 million , $ 47.3 million and $ 45.2 million for the years ended december 31 , 2017 , 2016 and 2015 , respectively ."
+    ],
+    "program": "divide(48.3, 47.3), subtract(#0, const_1)",
+    "program_re": "subtract(divide(48.3, 47.3), const_1)",
+    "steps": [
+      {
+        "op": "divide1-1",
+        "arg1": "48.3",
+        "arg2": "47.3",
+        "res": "1.0211"
+      },
+      {
+        "op": "minus1-2",
+        "arg1": "#0",
+        "arg2": "const_1",
+        "res": "2.11%"
+      }
+    ],
+    "exe_ans": 0.02114,
+    "answer": "2.11%",
+    "explanation": "it is the value of the expenditures in 2017 divided by the 2016's , then turned into a percentage to represent the increase .",
+    "retrieval_text": "Question: considering the years 2016-2017 , what is the increase observed in the research and development expenditures?\nType: F_2step\nFacts: our research and development ( \"r&d\" ) expenditures were approximately $ 48.3 million , $ 47.3 million and $ 45.2 million for the years ended december 31 , 2017 , 2016 and 2015 , respectively ."
+  },
+  {
+    "source_experience_id": "E071",
+    "representation": "case",
+    "case_id": "IP/2018/page_50.pdf-3",
+    "report": "IP/2018/page_50.pdf",
+    "company": "IP",
+    "question": "what is the growth observed in the industrial packaging segment , during 2017 and 2018?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "divide",
+      "subtract"
+    ],
+    "gold_facts": [
+      "in millions the industrial packaging of 2018 is $ 1061 ; the industrial packaging of 2017 is $ 836 ; the industrial packaging of 2016 is $ 832 ;"
+    ],
+    "program": "divide(1061, 836), subtract(#0, const_1)",
+    "program_re": "subtract(divide(1061, 836), const_1)",
+    "steps": [
+      {
+        "op": "divide1-1",
+        "arg1": "1061",
+        "arg2": "836",
+        "res": "1.27"
+      },
+      {
+        "op": "minus1-2",
+        "arg1": "#0",
+        "arg2": "const_1",
+        "res": "27%"
+      }
+    ],
+    "exe_ans": 0.26914,
+    "answer": "27%",
+    "explanation": "it is the value of 2018 divided by the 2017's , then turned into a percentage to represent the increase .",
+    "retrieval_text": "Question: what is the growth observed in the industrial packaging segment , during 2017 and 2018?\nType: F_2step\nFacts: in millions the industrial packaging of 2018 is $ 1061 ; the industrial packaging of 2017 is $ 836 ; the industrial packaging of 2016 is $ 832 ;"
+  },
+  {
+    "source_experience_id": "E072",
+    "representation": "case",
+    "case_id": "MA/2009/page_112.pdf-1",
+    "report": "MA/2009/page_112.pdf",
+    "company": "MA",
+    "question": "what is the increase observed in the expected benefit payments during 2012 and 2013?",
+    "problem_kind": "F_2step",
+    "n_steps": 2,
+    "struct": [
+      "divide",
+      "subtract"
+    ],
+    "gold_facts": [
+      "2010 the 2012 of $ 18181 is 21548 ;",
+      "2010 the 2013 of $ 18181 is 25513 ;"
+    ],
+    "program": "divide(25513, 21548), subtract(#0, const_1)",
+    "program_re": "subtract(divide(25513, 21548), const_1)",
+    "steps": [
+      {
+        "op": "divide1-1",
+        "arg1": "25513",
+        "arg2": "21548",
+        "res": "1.1840"
+      },
+      {
+        "op": "minus1-2",
+        "arg1": "#0",
+        "arg2": "const_1",
+        "res": "18.40%"
+      }
+    ],
+    "exe_ans": 0.18401,
+    "answer": "18.40%",
+    "explanation": "it is the expected benefit payment's value in 2013 divided by the 2012's , then transformed into a percentage .",
+    "retrieval_text": "Question: what is the increase observed in the expected benefit payments during 2012 and 2013?\nType: F_2step\nFacts: 2010 the 2012 of $ 18181 is 21548 ; ; 2010 the 2013 of $ 18181 is 25513 ;"
+  },
+  {
+    "source_experience_id": "E073",
+    "representation": "case",
+    "case_id": "CDW/2015/page_53.pdf-2",
+    "report": "CDW/2015/page_53.pdf",
+    "company": "CDW",
+    "question": "from dec 31 , 2013 to dec 31 , 2014 , what was the percentage decrease in the length of the cash conversion cycle?",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 3,
+    "struct": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_facts": [
+      "( in days ) the cash conversion cycle of december 31 , 2015 is 21 ; the cash conversion cycle of december 31 , 2014 is 21 ; the cash conversion cycle of december 31 , 2013 is 23 ;",
+      "components of our cash conversion cycle are as follows: .",
+      "the cash conversion cycle remained at 21 days at december 31 , 2015 and december 31 , 2014 ."
+    ],
+    "program": "subtract(23, 21), divide(#0, 21), multiply(#1, const_100)",
+    "program_re": "multiply(divide(subtract(23, 21), 21), const_100)",
+    "steps": [
+      {
+        "op": "minus1-1",
+        "arg1": "23",
+        "arg2": "21",
+        "res": "2"
+      },
+      {
+        "op": "divide1-2",
+        "arg1": "#0",
+        "arg2": "21",
+        "res": "0.095"
+      },
+      {
+        "op": "multiply1-3",
+        "arg1": "#1",
+        "arg2": "const_100",
+        "res": "9.5"
+      }
+    ],
+    "exe_ans": 9.52381,
+    "answer": "9.5%",
+    "explanation": "",
+    "retrieval_text": "Question: from dec 31 , 2013 to dec 31 , 2014 , what was the percentage decrease in the length of the cash conversion cycle?\nType: C_unitscaling_multi\nFacts: ( in days ) the cash conversion cycle of december 31 , 2015 is 21 ; the cash conversion cycle of december 31 , 2014 is 21 ; the cash conversion cycle of december 31 , 2013 is 23 ; ; components of our cash conversion cycle are as follows: . ; the cash conversion cycle remained at 21 days at december 31 , 2015 and december 31 , 2014 ."
+  },
+  {
+    "source_experience_id": "E074",
+    "representation": "case",
+    "case_id": "GPN/2017/page_30.pdf-2",
+    "report": "GPN/2017/page_30.pdf",
+    "company": "GPN",
+    "question": "what is the total return if 1000000 is invested in s&p500 in may 31 , 2012 and liquidated in may 31 , 2015?",
+    "problem_kind": "E_3step",
+    "n_steps": 3,
+    "struct": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_facts": [
+      "the may 31 2012 of globalpayments is $ 100.00 ; the may 31 2012 of s&p500 index is $ 100.00 ; the may 31 2012 of s&pinformationtechnology index is $ 100.00 ;",
+      "the may 31 2015 of globalpayments is 246.72 ; the may 31 2015 of s&p500 index is 171.40 ; the may 31 2015 of s&pinformationtechnology index is 169.46 ;",
+      "the line graph assumes the investment of $ 100 in our common stock , the standard & poor 2019s 500 index and the standard & poor 2019s information technology index on may 31 , 2012 and assumes reinvestment of all dividends ."
+    ],
+    "program": "subtract(171.40, 100), divide(1000000, 100), multiply(#1, #0)",
+    "program_re": "multiply(divide(1000000, 100), subtract(171.40, 100))",
+    "steps": [
+      {
+        "op": "minus2-1",
+        "arg1": "171.40",
+        "arg2": "100",
+        "res": "71.4"
+      },
+      {
+        "op": "divide2-2",
+        "arg1": "1000000",
+        "arg2": "100",
+        "res": "10000"
+      },
+      {
+        "op": "multiply2-3",
+        "arg1": "#1",
+        "arg2": "#0",
+        "res": "714000"
+      }
+    ],
+    "exe_ans": 714000.0,
+    "answer": "714000",
+    "explanation": "",
+    "retrieval_text": "Question: what is the total return if 1000000 is invested in s&p500 in may 31 , 2012 and liquidated in may 31 , 2015?\nType: E_3step\nFacts: the may 31 2012 of globalpayments is $ 100.00 ; the may 31 2012 of s&p500 index is $ 100.00 ; the may 31 2012 of s&pinformationtechnology index is $ 100.00 ; ; the may 31 2015 of globalpayments is 246.72 ; the may 31 2015 of s&p500 index is 171.40 ; the may 31 2015 of s&pinformationtechnology index is 169.46 ; ; the line graph assumes the investment of $ 100 in our common stock , the standard & poor 2019s 500 index and the standard & poor 2019s information technology index on may 31 , 2012 and assumes reinvestment of all dividends ."
+  },
+  {
+    "source_experience_id": "E075",
+    "representation": "case",
+    "case_id": "DVN/2013/page_101.pdf-3",
+    "report": "DVN/2013/page_101.pdf",
+    "company": "DVN",
+    "question": "what percentage decrease was there from the 2012 proved undeveloped reserves to 2013 proved undeveloped reserves?",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 3,
+    "struct": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_facts": [
+      "the proved undeveloped reserves as of december 31 2012 of u.s . is 407 ; the proved undeveloped reserves as of december 31 2012 of canada is 433 ; the proved undeveloped reserves as of december 31 2012 of total is 840 ;",
+      "the proved undeveloped reserves as of december 31 2013 of u.s . is 258 ; the proved undeveloped reserves as of december 31 2013 of canada is 443 ; the proved undeveloped reserves as of december 31 2013 of total is 701 ;",
+      "devon energy corporation and subsidiaries notes to consolidated financial statements 2013 ( continued ) proved undeveloped reserves the following table presents the changes in devon 2019s total proved undeveloped reserves during 2013 ( in mmboe ) . ."
+    ],
+    "program": "subtract(407, 258), divide(#0, 407), multiply(#1, const_100)",
+    "program_re": "multiply(divide(subtract(407, 258), 407), const_100)",
+    "steps": [
+      {
+        "op": "minus1-1",
+        "arg1": "407",
+        "arg2": "258",
+        "res": "149"
+      },
+      {
+        "op": "divide1-2",
+        "arg1": "#0",
+        "arg2": "407",
+        "res": "0.3661"
+      },
+      {
+        "op": "multiply1-3",
+        "arg1": "#1",
+        "arg2": "const_100",
+        "res": "36.61%"
+      }
+    ],
+    "exe_ans": 36.60934,
+    "answer": "36.61%",
+    "explanation": "",
+    "retrieval_text": "Question: what percentage decrease was there from the 2012 proved undeveloped reserves to 2013 proved undeveloped reserves?\nType: C_unitscaling_multi\nFacts: the proved undeveloped reserves as of december 31 2012 of u.s . is 407 ; the proved undeveloped reserves as of december 31 2012 of canada is 433 ; the proved undeveloped reserves as of december 31 2012 of total is 840 ; ; the proved undeveloped reserves as of december 31 2013 of u.s . is 258 ; the proved undeveloped reserves as of december 31 2013 of canada is 443 ; the proved undeveloped reserves as of december 31 2013 of total is 701 ; ; devon energy corporation and subsidiaries notes to consolidated financial statements 2013 ( continued ) proved undeveloped reserves the following table presents the changes in devon 2019s total proved undeveloped reserves during 2013 ( in mmboe ) . ."
+  },
+  {
+    "source_experience_id": "E076",
+    "representation": "case",
+    "case_id": "ALLE/2018/page_121.pdf-2",
+    "report": "ALLE/2018/page_121.pdf",
+    "company": "ALLE",
+    "question": "considering the years 2017-2018 , what is the decrease observed in the weighted-average number of diluted shares?",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 3,
+    "struct": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_facts": [
+      "in millions the weighted-average number of diluted shares of 2018 is 95.7 ; the weighted-average number of diluted shares of 2017 is 96.0 ; the weighted-average number of diluted shares of 2016 is 96.9 ;",
+      "the following table summarizes the weighted-average number of ordinary shares outstanding for basic and diluted earnings per share calculations: ."
+    ],
+    "program": "subtract(95.7, 96.0), divide(#0, 96.0), multiply(#1, const_100)",
+    "program_re": "multiply(divide(subtract(95.7, 96.0), 96.0), const_100)",
+    "steps": [
+      {
+        "op": "minus2-1",
+        "arg1": "95.7",
+        "arg2": "96.0",
+        "res": "-0.3"
+      },
+      {
+        "op": "divide2-2",
+        "arg1": "#0",
+        "arg2": "96.0",
+        "res": "-0.003125"
+      },
+      {
+        "op": "multiply2-3",
+        "arg1": "#1",
+        "arg2": "const_100",
+        "res": "-0.3125%"
+      }
+    ],
+    "exe_ans": -0.3125,
+    "answer": "0.3125%",
+    "explanation": "it is the final value ( 95.7 ) minus the initial value ( 96 ) , then divided by the initial one and turned into a percentage to represent the decrease .",
+    "retrieval_text": "Question: considering the years 2017-2018 , what is the decrease observed in the weighted-average number of diluted shares?\nType: C_unitscaling_multi\nFacts: in millions the weighted-average number of diluted shares of 2018 is 95.7 ; the weighted-average number of diluted shares of 2017 is 96.0 ; the weighted-average number of diluted shares of 2016 is 96.9 ; ; the following table summarizes the weighted-average number of ordinary shares outstanding for basic and diluted earnings per share calculations: ."
+  },
+  {
+    "source_experience_id": "E077",
+    "representation": "case",
+    "case_id": "CDNS/2012/page_31.pdf-1",
+    "report": "CDNS/2012/page_31.pdf",
+    "company": "CDNS",
+    "question": "what is the total return if $ 1000000 are invested in cadence design system in 2009 and sold in 2010?",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 3,
+    "struct": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_facts": [
+      "the cadence design systems inc . of 1/3/2009 is 100.00 ; the cadence design systems inc . of 1/2/2010 is 155.99 ; the cadence design systems inc . of 1/1/2011 is 215.10 ; the cadence design systems inc . of 12/31/2011 is 270.83 ; the cadence design systems inc . of 12/29/2012 is 350.00 ;"
+    ],
+    "program": "subtract(155.99, const_100), divide(#0, const_100), multiply(#1, 1000000)",
+    "program_re": "multiply(divide(subtract(155.99, const_100), const_100), 1000000)",
+    "steps": [
+      {
+        "op": "minus1-1",
+        "arg1": "155.99",
+        "arg2": "const_100",
+        "res": "55.99"
+      },
+      {
+        "op": "divide1-2",
+        "arg1": "#0",
+        "arg2": "const_100",
+        "res": "56%"
+      },
+      {
+        "op": "multiply1-3",
+        "arg1": "#1",
+        "arg2": "1000000",
+        "res": "560000"
+      }
+    ],
+    "exe_ans": 559900.0,
+    "answer": "560000",
+    "explanation": "",
+    "retrieval_text": "Question: what is the total return if $ 1000000 are invested in cadence design system in 2009 and sold in 2010?\nType: C_unitscaling_multi\nFacts: the cadence design systems inc . of 1/3/2009 is 100.00 ; the cadence design systems inc . of 1/2/2010 is 155.99 ; the cadence design systems inc . of 1/1/2011 is 215.10 ; the cadence design systems inc . of 12/31/2011 is 270.83 ; the cadence design systems inc . of 12/29/2012 is 350.00 ;"
+  },
+  {
+    "source_experience_id": "E078",
+    "representation": "case",
+    "case_id": "GS/2018/page_76.pdf-3",
+    "report": "GS/2018/page_76.pdf",
+    "company": "GS",
+    "question": "what were net revenues in investing & lending in billions for 2017?",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 3,
+    "struct": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "gold_facts": [
+      "during 2018 , our investments in private equities benefited from company-specific events , including sales , and strong corporate performance , while investments in public equities reflected losses , as global equity prices generally decreased .",
+      "net revenues in investing & lending were $ 8.25 billion for 2018 , 14% ( 14 % ) higher than 2017 ."
+    ],
+    "program": "subtract(const_100, 14), divide(#0, const_100), multiply(#1, 8.25)",
+    "program_re": "multiply(divide(subtract(const_100, 14), const_100), 8.25)",
+    "steps": [
+      {
+        "op": "minus1-1",
+        "arg1": "const_100",
+        "arg2": "14",
+        "res": "86"
+      },
+      {
+        "op": "divide1-2",
+        "arg1": "#0",
+        "arg2": "const_100",
+        "res": ".86"
+      },
+      {
+        "op": "multiply1-3",
+        "arg1": "#1",
+        "arg2": "8.25",
+        "res": "7.1"
+      }
+    ],
+    "exe_ans": 7.095,
+    "answer": "7.1",
+    "explanation": "",
+    "retrieval_text": "Question: what were net revenues in investing & lending in billions for 2017?\nType: C_unitscaling_multi\nFacts: during 2018 , our investments in private equities benefited from company-specific events , including sales , and strong corporate performance , while investments in public equities reflected losses , as global equity prices generally decreased . ; net revenues in investing & lending were $ 8.25 billion for 2018 , 14% ( 14 % ) higher than 2017 ."
+  },
+  {
+    "source_experience_id": "E079",
+    "representation": "case",
+    "case_id": "C/2008/page_105.pdf-4",
+    "report": "C/2008/page_105.pdf",
+    "company": "C",
+    "question": "what is the total long-term debt in billions of dollars for citigroup , cgmhi , cfi and citigroup 2019s subsidiaries at december 31 , 2008?",
+    "problem_kind": "E_3step",
+    "n_steps": 3,
+    "struct": [
+      "add",
+      "add",
+      "add"
+    ],
+    "gold_facts": [
+      "in billions of dollars the long-term debt of citigroup parent company is $ 192.3 ; the long-term debt of cgmhi ( 2 ) is $ 20.6 ; the long-term debt of citigroup funding inc . ( 2 ) is $ 37.4 ; the long-term debt of other citigroup subsidiaries is $ 109.3 ; the long-term debt of is -1 ( 1 ) ;"
+    ],
+    "program": "add(192.3, 20.6), add(#0, 37.4), add(#1, 109.3)",
+    "program_re": "add(add(add(192.3, 20.6), 37.4), 109.3)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "192.3",
+        "arg2": "20.6",
+        "res": "212.9"
+      },
+      {
+        "op": "add1-2",
+        "arg1": "#0",
+        "arg2": "37.4",
+        "res": "250.3"
+      },
+      {
+        "op": "add1-3",
+        "arg1": "#1",
+        "arg2": "109.3",
+        "res": "359.6"
+      }
+    ],
+    "exe_ans": 359.6,
+    "answer": "359.6",
+    "explanation": "",
+    "retrieval_text": "Question: what is the total long-term debt in billions of dollars for citigroup , cgmhi , cfi and citigroup 2019s subsidiaries at december 31 , 2008?\nType: E_3step\nFacts: in billions of dollars the long-term debt of citigroup parent company is $ 192.3 ; the long-term debt of cgmhi ( 2 ) is $ 20.6 ; the long-term debt of citigroup funding inc . ( 2 ) is $ 37.4 ; the long-term debt of other citigroup subsidiaries is $ 109.3 ; the long-term debt of is -1 ( 1 ) ;"
+  },
+  {
+    "source_experience_id": "E080",
+    "representation": "case",
+    "case_id": "CME/2010/page_109.pdf-1",
+    "report": "CME/2010/page_109.pdf",
+    "company": "CME",
+    "question": "for 2010 , what were the total number of shares of common stock outstanding , in thousands?",
+    "problem_kind": "E_3step",
+    "n_steps": 3,
+    "struct": [
+      "add",
+      "add",
+      "add"
+    ],
+    "gold_facts": [
+      "( in thousands ) the class a common stock of december 31 , 2010 is 66847 ; the class a common stock of december 31 , 2009 is 66511 ;",
+      "( in thousands ) the class b-1 common stock of december 31 , 2010 is 0.6 ; the class b-1 common stock of december 31 , 2009 is 0.6 ;",
+      "( in thousands ) the class b-2 common stock of december 31 , 2010 is 0.8 ; the class b-2 common stock of december 31 , 2009 is 0.8 ;",
+      "( in thousands ) the class b-3 common stock of december 31 , 2010 is 1.3 ; the class b-3 common stock of december 31 , 2009 is 1.3 ;",
+      "( in thousands ) the class b-4 common stock of december 31 , 2010 is 0.4 ; the class b-4 common stock of december 31 , 2009 is 0.4 ;"
+    ],
+    "program": "add(66847, 0.6), add(#0, 0.8), add(#1, 1.3)",
+    "program_re": "add(add(add(66847, 0.6), 0.8), 1.3)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "66847",
+        "arg2": "0.6",
+        "res": "66847.6"
+      },
+      {
+        "op": "add1-2",
+        "arg1": "#0",
+        "arg2": "0.8",
+        "res": "66848.4"
+      },
+      {
+        "op": "add1-3",
+        "arg1": "#1",
+        "arg2": "1.3",
+        "res": "66848.7"
+      }
+    ],
+    "exe_ans": 66849.7,
+    "answer": "66849.1",
+    "explanation": "",
+    "retrieval_text": "Question: for 2010 , what were the total number of shares of common stock outstanding , in thousands?\nType: E_3step\nFacts: ( in thousands ) the class a common stock of december 31 , 2010 is 66847 ; the class a common stock of december 31 , 2009 is 66511 ; ; ( in thousands ) the class b-1 common stock of december 31 , 2010 is 0.6 ; the class b-1 common stock of december 31 , 2009 is 0.6 ; ; ( in thousands ) the class b-2 common stock of december 31 , 2010 is 0.8 ; the class b-2 common stock of december 31 , 2009 is 0.8 ; ; ( in thousands ) the class b-3 common stock of december 31 , 2010 is 1.3 ; the class b-3 common stock of december 31 , 2009 is 1.3 ; ; ( in thousands ) the class b-4 common stock of december 31 , 2010 is 0.4 ; the class b-4 common stock of december 31 , 2009 is 0.4 ;"
+  },
+  {
+    "source_experience_id": "E081",
+    "representation": "case",
+    "case_id": "AMT/2008/page_14.pdf-1",
+    "report": "AMT/2008/page_14.pdf",
+    "company": "AMT",
+    "question": "what is the total number of owned sites presented in the table?",
+    "problem_kind": "E_3step",
+    "n_steps": 3,
+    "struct": [
+      "add",
+      "add",
+      "add"
+    ],
+    "gold_facts": [
+      "country the united states of number of owned sites ( approx ) is 19400 ; the united states of coverage area is coverage spans 49 states and the district of columbia ; 90% ( 90 % ) of network provides coverage in the top 100 markets or core areas such as high traffic interstate corridors . ;",
+      "country the mexico of number of owned sites ( approx ) is 2500 ; the mexico of coverage area is coverage primarily concentrated in highly populated areas including mexico city monterrey guadalajara and acapulco . ;",
+      "country the brazil of number of owned sites ( approx ) is 1100 ; the brazil of coverage area is coverage primarily concentrated in major metropolitan areas in central and southern brazil including sao paulo rio de janeiro brasilia and curitiba . ;",
+      "country the india of number of owned sites ( approx ) is 200 ; the india of coverage area is initial-phase coverage ( operations established in the second half of 2007 ) . ;"
+    ],
+    "program": "add(19400, 2500), add(#0, 1100), add(#1, 200)",
+    "program_re": "add(add(add(19400, 2500), 1100), 200)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "19400",
+        "arg2": "2500",
+        "res": "21900"
+      },
+      {
+        "op": "add1-2",
+        "arg1": "#0",
+        "arg2": "1100",
+        "res": "23000"
+      },
+      {
+        "op": "add1-3",
+        "arg1": "#1",
+        "arg2": "200",
+        "res": "23200"
+      }
+    ],
+    "exe_ans": 23200.0,
+    "answer": "23200",
+    "explanation": "",
+    "retrieval_text": "Question: what is the total number of owned sites presented in the table?\nType: E_3step\nFacts: country the united states of number of owned sites ( approx ) is 19400 ; the united states of coverage area is coverage spans 49 states and the district of columbia ; 90% ( 90 % ) of network provides coverage in the top 100 markets or core areas such as high traffic interstate corridors . ; ; country the mexico of number of owned sites ( approx ) is 2500 ; the mexico of coverage area is coverage primarily concentrated in highly populated areas including mexico city monterrey guadalajara and acapulco . ; ; country the brazil of number of owned sites ( approx ) is 1100 ; the brazil of coverage area is coverage primarily concentrated in major metropolitan areas in central and southern brazil including sao paulo rio de janeiro brasilia and curitiba . ; ; country the india of number of owned sites ( approx ) is 200 ; the india of coverage area is initial-phase coverage ( operations established in the second half of 2007 ) . ;"
+  },
+  {
+    "source_experience_id": "E082",
+    "representation": "case",
+    "case_id": "PNC/2012/page_98.pdf-3",
+    "report": "PNC/2012/page_98.pdf",
+    "company": "PNC",
+    "question": "how much in combined repurchase claims , in millions , were recorded in the first quarter of 2005 , 2006 , 2007 , 2008?",
+    "problem_kind": "E_3step",
+    "n_steps": 3,
+    "struct": [
+      "add",
+      "add",
+      "add"
+    ],
+    "gold_facts": [
+      "dollars in millions the 2005 of december 31 2012 is 8 ; the 2005 of september 30 2012 is 10 ; the 2005 of june 30 2012 is 19 ; the 2005 of march 31 2012 is 12 ; the 2005 of december 312011 is 13 ;",
+      "dollars in millions the 2006 of december 31 2012 is 23 ; the 2006 of september 30 2012 is 30 ; the 2006 of june 30 2012 is 56 ; the 2006 of march 31 2012 is 41 ; the 2006 of december 312011 is 28 ;",
+      "dollars in millions the 2007 of december 31 2012 is 45 ; the 2007 of september 30 2012 is 137 ; the 2007 of june 30 2012 is 182 ; the 2007 of march 31 2012 is 100 ; the 2007 of december 312011 is 90 ;",
+      "dollars in millions the 2008 of december 31 2012 is 7 ; the 2008 of september 30 2012 is 23 ; the 2008 of june 30 2012 is 49 ; the 2008 of march 31 2012 is 17 ; the 2008 of december 312011 is 18 ;",
+      "table 28 : analysis of quarterly residential mortgage repurchase claims by vintage dollars in millions december 31 september 30 june 30 march 31 december 31 ."
+    ],
+    "program": "add(12, 41), add(#0, 100), add(#1, 17)",
+    "program_re": "add(add(add(12, 41), 100), 17)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "12",
+        "arg2": "41",
+        "res": "53"
+      },
+      {
+        "op": "add1-2",
+        "arg1": "#0",
+        "arg2": "100",
+        "res": "153"
+      },
+      {
+        "op": "add1-3",
+        "arg1": "#1",
+        "arg2": "17",
+        "res": "170"
+      }
+    ],
+    "exe_ans": 170.0,
+    "answer": "170",
+    "explanation": "",
+    "retrieval_text": "Question: how much in combined repurchase claims , in millions , were recorded in the first quarter of 2005 , 2006 , 2007 , 2008?\nType: E_3step\nFacts: dollars in millions the 2005 of december 31 2012 is 8 ; the 2005 of september 30 2012 is 10 ; the 2005 of june 30 2012 is 19 ; the 2005 of march 31 2012 is 12 ; the 2005 of december 312011 is 13 ; ; dollars in millions the 2006 of december 31 2012 is 23 ; the 2006 of september 30 2012 is 30 ; the 2006 of june 30 2012 is 56 ; the 2006 of march 31 2012 is 41 ; the 2006 of december 312011 is 28 ; ; dollars in millions the 2007 of december 31 2012 is 45 ; the 2007 of september 30 2012 is 137 ; the 2007 of june 30 2012 is 182 ; the 2007 of march 31 2012 is 100 ; the 2007 of december 312011 is 90 ; ; dollars in millions the 2008 of december 31 2012 is 7 ; the 2008 of september 30 2012 is 23 ; the 2008 of june 30 2012 is 49 ; the 2008 of march 31 2012 is 17 ; the 2008 of december 312011 is 18 ; ; table 28 : analysis of quarterly residential mortgage repurchase claims by vintage dollars in millions december 31 september 30 june 30 march 31 december 31 ."
+  },
+  {
+    "source_experience_id": "E083",
+    "representation": "case",
+    "case_id": "GIS/2017/page_46.pdf-1",
+    "report": "GIS/2017/page_46.pdf",
+    "company": "GIS",
+    "question": "what is the total average fair value impact of all the instruments?",
+    "problem_kind": "E_3step",
+    "n_steps": 3,
+    "struct": [
+      "add",
+      "add",
+      "add"
+    ],
+    "gold_facts": [
+      "in millions the interest rate instruments of fair value impact may 28 2017 is $ 25.1 ; the interest rate instruments of fair value impact averageduringfiscal 2017 is $ 26.5 ; the interest rate instruments of fair value impact may 29 2016 is $ 33.3 ;",
+      "in millions the foreign currency instruments of fair value impact may 28 2017 is 24.6 ; the foreign currency instruments of fair value impact averageduringfiscal 2017 is 22.9 ; the foreign currency instruments of fair value impact may 29 2016 is 27.6 ;",
+      "in millions the commodity instruments of fair value impact may 28 2017 is 3.2 ; the commodity instruments of fair value impact averageduringfiscal 2017 is 2.5 ; the commodity instruments of fair value impact may 29 2016 is 3.3 ;",
+      "in millions the equity instruments of fair value impact may 28 2017 is 1.3 ; the equity instruments of fair value impact averageduringfiscal 2017 is 1.4 ; the equity instruments of fair value impact may 29 2016 is 1.7 ;"
+    ],
+    "program": "add(26.5, 22.9), add(#0, 2.5), add(#1, 1.4)",
+    "program_re": "add(add(add(26.5, 22.9), 2.5), 1.4)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "26.5",
+        "arg2": "22.9",
+        "res": "49.4"
+      },
+      {
+        "op": "add1-2",
+        "arg1": "#0",
+        "arg2": "2.5",
+        "res": "51.9"
+      },
+      {
+        "op": "add1-3",
+        "arg1": "#1",
+        "arg2": "1.4",
+        "res": "53.3"
+      }
+    ],
+    "exe_ans": 53.3,
+    "answer": "53.3",
+    "explanation": "",
+    "retrieval_text": "Question: what is the total average fair value impact of all the instruments?\nType: E_3step\nFacts: in millions the interest rate instruments of fair value impact may 28 2017 is $ 25.1 ; the interest rate instruments of fair value impact averageduringfiscal 2017 is $ 26.5 ; the interest rate instruments of fair value impact may 29 2016 is $ 33.3 ; ; in millions the foreign currency instruments of fair value impact may 28 2017 is 24.6 ; the foreign currency instruments of fair value impact averageduringfiscal 2017 is 22.9 ; the foreign currency instruments of fair value impact may 29 2016 is 27.6 ; ; in millions the commodity instruments of fair value impact may 28 2017 is 3.2 ; the commodity instruments of fair value impact averageduringfiscal 2017 is 2.5 ; the commodity instruments of fair value impact may 29 2016 is 3.3 ; ; in millions the equity instruments of fair value impact may 28 2017 is 1.3 ; the equity instruments of fair value impact averageduringfiscal 2017 is 1.4 ; the equity instruments of fair value impact may 29 2016 is 1.7 ;"
+  },
+  {
+    "source_experience_id": "E084",
+    "representation": "case",
+    "case_id": "ETR/2016/page_444.pdf-3",
+    "report": "ETR/2016/page_444.pdf",
+    "company": "ETR",
+    "question": "for the period from 2013 to 2016 , what was the combined balance ( in thousands ) for money pool receivables?\\\\n",
+    "problem_kind": "E_3step",
+    "n_steps": 3,
+    "struct": [
+      "add",
+      "add",
+      "add"
+    ],
+    "gold_facts": [
+      "2016 the $ 33809 of 2015 is $ 39926 ; the $ 33809 of 2014 is $ 2373 ; the $ 33809 of 2013 is $ 9223 ;"
+    ],
+    "program": "add(33809, 39926), add(#0, 2373), add(#1, 9223)",
+    "program_re": "add(add(add(33809, 39926), 2373), 9223)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "33809",
+        "arg2": "39926",
+        "res": "73735"
+      },
+      {
+        "op": "add2-2",
+        "arg1": "#0",
+        "arg2": "2373",
+        "res": "76108"
+      },
+      {
+        "op": "add2-3",
+        "arg1": "#1",
+        "arg2": "9223",
+        "res": "85331"
+      }
+    ],
+    "exe_ans": 85331.0,
+    "answer": "85331",
+    "explanation": "",
+    "retrieval_text": "Question: for the period from 2013 to 2016 , what was the combined balance ( in thousands ) for money pool receivables?\\\\n\nType: E_3step\nFacts: 2016 the $ 33809 of 2015 is $ 39926 ; the $ 33809 of 2014 is $ 2373 ; the $ 33809 of 2013 is $ 9223 ;"
+  },
+  {
+    "source_experience_id": "E085",
+    "representation": "case",
+    "case_id": "IP/2014/page_66.pdf-4",
+    "report": "IP/2014/page_66.pdf",
+    "company": "IP",
+    "question": "what was the average net sales for north american consumer packaging from 2012",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 4,
+    "struct": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "north american consumer packaging net sales were $ 2.0 billion in 2014 compared with $ 2.0 billion in 2013 and $ 2.0 billion in 2012 ."
+    ],
+    "program": "add(2.0, 2.0), add(#0, 2.0), add(#1, const_3), divide(#2, const_2)",
+    "program_re": "divide(add(add(add(2.0, 2.0), 2.0), const_3), const_2)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "2.0",
+        "arg2": "2.0",
+        "res": "4.0"
+      },
+      {
+        "op": "add2-2",
+        "arg1": "#0",
+        "arg2": "2.0",
+        "res": "6.0"
+      },
+      {
+        "op": "add2-3",
+        "arg1": "#1",
+        "arg2": "const_3",
+        "res": "4.0"
+      },
+      {
+        "op": "divide0-0",
+        "arg1": "#2",
+        "arg2": "const_2",
+        "res": "2.0"
+      }
+    ],
+    "exe_ans": 4.5,
+    "answer": "2.0",
+    "explanation": "",
+    "retrieval_text": "Question: what was the average net sales for north american consumer packaging from 2012\nType: C_unitscaling_multi\nFacts: north american consumer packaging net sales were $ 2.0 billion in 2014 compared with $ 2.0 billion in 2013 and $ 2.0 billion in 2012 ."
+  },
+  {
+    "source_experience_id": "E086",
+    "representation": "case",
+    "case_id": "MA/2009/page_123.pdf-1",
+    "report": "MA/2009/page_123.pdf",
+    "company": "MA",
+    "question": "what was the average rental expense from 2007 to 2009",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 4,
+    "struct": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "the dsus vested immediately upon grant and will be settled in shares of the company 2019s class a common stock on the fourth anniversary of the date of grant .",
+      "consolidated rental expense for the company 2019s office space , which is recognized on a straight line basis over the life of the lease , was approximately $ 39586 , $ 42905 and $ 35614 for the years ended december 31 , 2009 , 2008 and 2007 , respectively ."
+    ],
+    "program": "add(39586, 42905), add(#0, 35614), add(#1, const_3), divide(#2, const_2)",
+    "program_re": "divide(add(add(add(39586, 42905), 35614), const_3), const_2)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "39586",
+        "arg2": "42905",
+        "res": "82491"
+      },
+      {
+        "op": "add1-2",
+        "arg1": "#0",
+        "arg2": "35614",
+        "res": "118105"
+      },
+      {
+        "op": "add1-3",
+        "arg1": "#1",
+        "arg2": "const_3",
+        "res": "78736.0"
+      },
+      {
+        "op": "divide0-0",
+        "arg1": "#2",
+        "arg2": "const_2",
+        "res": "39368"
+      }
+    ],
+    "exe_ans": 59054.0,
+    "answer": "39368",
+    "explanation": "",
+    "retrieval_text": "Question: what was the average rental expense from 2007 to 2009\nType: C_unitscaling_multi\nFacts: the dsus vested immediately upon grant and will be settled in shares of the company 2019s class a common stock on the fourth anniversary of the date of grant . ; consolidated rental expense for the company 2019s office space , which is recognized on a straight line basis over the life of the lease , was approximately $ 39586 , $ 42905 and $ 35614 for the years ended december 31 , 2009 , 2008 and 2007 , respectively ."
+  },
+  {
+    "source_experience_id": "E087",
+    "representation": "case",
+    "case_id": "LMT/2013/page_49.pdf-3",
+    "report": "LMT/2013/page_49.pdf",
+    "company": "LMT",
+    "question": "what was the average net sales from 2011 to 2013",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 4,
+    "struct": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "the net sales of 2013 is $ 7958 ; the net sales of 2012 is $ 8347 ; the net sales of 2011 is $ 8161 ;"
+    ],
+    "program": "add(7958, 8347), add(#0, 8161), add(#1, const_3), divide(#2, const_2)",
+    "program_re": "divide(add(add(add(7958, 8347), 8161), const_3), const_2)",
+    "steps": [
+      {
+        "op": "add1-1",
+        "arg1": "7958",
+        "arg2": "8347",
+        "res": "16305"
+      },
+      {
+        "op": "add1-2",
+        "arg1": "#0",
+        "arg2": "8161",
+        "res": "24466"
+      },
+      {
+        "op": "add1-3",
+        "arg1": "#1",
+        "arg2": "const_3",
+        "res": "16310.66"
+      },
+      {
+        "op": "divide0-0",
+        "arg1": "#2",
+        "arg2": "const_2",
+        "res": "8155.33"
+      }
+    ],
+    "exe_ans": 12234.5,
+    "answer": "8155.3",
+    "explanation": "",
+    "retrieval_text": "Question: what was the average net sales from 2011 to 2013\nType: C_unitscaling_multi\nFacts: the net sales of 2013 is $ 7958 ; the net sales of 2012 is $ 8347 ; the net sales of 2011 is $ 8161 ;"
+  },
+  {
+    "source_experience_id": "E088",
+    "representation": "case",
+    "case_id": "RE/2006/page_31.pdf-3",
+    "report": "RE/2006/page_31.pdf",
+    "company": "RE",
+    "question": "what is the average gross reserves from 2004 to 2006 in millions",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 4,
+    "struct": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "( dollars in millions ) the gross reserves of 2006 is 650.1 ; the gross reserves of 2005 is 649.6 ; the gross reserves of 2004 is 728.3 ;"
+    ],
+    "program": "add(650.1, 649.6), add(#0, 728.3), add(#1, const_3), divide(#2, const_2)",
+    "program_re": "divide(add(add(add(650.1, 649.6), 728.3), const_3), const_2)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "650.1",
+        "arg2": "649.6",
+        "res": "1299.7"
+      },
+      {
+        "op": "add2-2",
+        "arg1": "#0",
+        "arg2": "728.3",
+        "res": "2028"
+      },
+      {
+        "op": "add2-3",
+        "arg1": "#1",
+        "arg2": "const_3",
+        "res": "1352.0"
+      },
+      {
+        "op": "divide0-0",
+        "arg1": "#2",
+        "arg2": "const_2",
+        "res": "676"
+      }
+    ],
+    "exe_ans": 1015.5,
+    "answer": "676",
+    "explanation": "",
+    "retrieval_text": "Question: what is the average gross reserves from 2004 to 2006 in millions\nType: C_unitscaling_multi\nFacts: ( dollars in millions ) the gross reserves of 2006 is 650.1 ; the gross reserves of 2005 is 649.6 ; the gross reserves of 2004 is 728.3 ;"
+  },
+  {
+    "source_experience_id": "E089",
+    "representation": "case",
+    "case_id": "AMT/2008/page_14.pdf-2",
+    "report": "AMT/2008/page_14.pdf",
+    "company": "AMT",
+    "question": "what portion of total owned sites is located in united states?",
+    "problem_kind": "D_multistep4plus",
+    "n_steps": 4,
+    "struct": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "country the united states of number of owned sites ( approx ) is 19400 ; the united states of coverage area is coverage spans 49 states and the district of columbia ; 90% ( 90 % ) of network provides coverage in the top 100 markets or core areas such as high traffic interstate corridors . ;",
+      "country the mexico of number of owned sites ( approx ) is 2500 ; the mexico of coverage area is coverage primarily concentrated in highly populated areas including mexico city monterrey guadalajara and acapulco . ;",
+      "country the brazil of number of owned sites ( approx ) is 1100 ; the brazil of coverage area is coverage primarily concentrated in major metropolitan areas in central and southern brazil including sao paulo rio de janeiro brasilia and curitiba . ;",
+      "country the india of number of owned sites ( approx ) is 200 ; the india of coverage area is initial-phase coverage ( operations established in the second half of 2007 ) . ;"
+    ],
+    "program": "add(19400, 2500), add(#0, 1100), add(#1, 200), divide(19400, #2)",
+    "program_re": "divide(19400, add(add(add(19400, 2500), 1100), 200))",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "19400",
+        "arg2": "2500",
+        "res": "21900"
+      },
+      {
+        "op": "add2-2",
+        "arg1": "#0",
+        "arg2": "1100",
+        "res": "23000"
+      },
+      {
+        "op": "add2-3",
+        "arg1": "#1",
+        "arg2": "200",
+        "res": "23200"
+      },
+      {
+        "op": "divide2-4",
+        "arg1": "19400",
+        "arg2": "#2",
+        "res": "83.6%"
+      }
+    ],
+    "exe_ans": 0.83621,
+    "answer": "83.6%",
+    "explanation": "",
+    "retrieval_text": "Question: what portion of total owned sites is located in united states?\nType: D_multistep4plus\nFacts: country the united states of number of owned sites ( approx ) is 19400 ; the united states of coverage area is coverage spans 49 states and the district of columbia ; 90% ( 90 % ) of network provides coverage in the top 100 markets or core areas such as high traffic interstate corridors . ; ; country the mexico of number of owned sites ( approx ) is 2500 ; the mexico of coverage area is coverage primarily concentrated in highly populated areas including mexico city monterrey guadalajara and acapulco . ; ; country the brazil of number of owned sites ( approx ) is 1100 ; the brazil of coverage area is coverage primarily concentrated in major metropolitan areas in central and southern brazil including sao paulo rio de janeiro brasilia and curitiba . ; ; country the india of number of owned sites ( approx ) is 200 ; the india of coverage area is initial-phase coverage ( operations established in the second half of 2007 ) . ;"
+  },
+  {
+    "source_experience_id": "E090",
+    "representation": "case",
+    "case_id": "RSG/2017/page_74.pdf-2",
+    "report": "RSG/2017/page_74.pdf",
+    "company": "RSG",
+    "question": "what is the average from the proceeds from sales of property and equipment from 2015 to 2017",
+    "problem_kind": "C_unitscaling_multi",
+    "n_steps": 4,
+    "struct": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "gold_facts": [
+      "the proceeds from sales of property and equipment of 2017 is 6.1 ; the proceeds from sales of property and equipment of 2016 is 9.8 ; the proceeds from sales of property and equipment of 2015 is 21.2 ;"
+    ],
+    "program": "add(6.1, 9.8), add(#0, 21.2), add(#1, const_3), divide(#2, const_2)",
+    "program_re": "divide(add(add(add(6.1, 9.8), 21.2), const_3), const_2)",
+    "steps": [
+      {
+        "op": "add2-1",
+        "arg1": "6.1",
+        "arg2": "9.8",
+        "res": "15.9"
+      },
+      {
+        "op": "add2-2",
+        "arg1": "#0",
+        "arg2": "21.2",
+        "res": "37.1"
+      },
+      {
+        "op": "add2-3",
+        "arg1": "#1",
+        "arg2": "const_3",
+        "res": "24.74"
+      },
+      {
+        "op": "divide0-0",
+        "arg1": "#2",
+        "arg2": "const_2",
+        "res": "12.37"
+      }
+    ],
+    "exe_ans": 20.05,
+    "answer": "12.37",
+    "explanation": "the average of the three years is equal to the the sum of the 3 years divide by three",
+    "retrieval_text": "Question: what is the average from the proceeds from sales of property and equipment from 2015 to 2017\nType: C_unitscaling_multi\nFacts: the proceeds from sales of property and equipment of 2017 is 6.1 ; the proceeds from sales of property and equipment of 2016 is 9.8 ; the proceeds from sales of property and equipment of 2015 is 21.2 ;"
+  }
+]

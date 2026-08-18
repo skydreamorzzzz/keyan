@@ -1,0 +1,1826 @@
+[
+  {
+    "source_experience_id": "E001",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E002",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E003",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E004",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E005",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E006",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E007",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E008",
+    "leakage": {
+      "passed": false,
+      "issues": [
+        "years: {'20'}"
+      ]
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": false
+  },
+  {
+    "source_experience_id": "E009",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E010",
+    "leakage": {
+      "passed": false,
+      "issues": [
+        "years: {'20'}"
+      ]
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": false
+  },
+  {
+    "source_experience_id": "E011",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E012",
+    "leakage": {
+      "passed": false,
+      "issues": [
+        "years: {'20'}"
+      ]
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": false
+  },
+  {
+    "source_experience_id": "E013",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E014",
+    "leakage": {
+      "passed": false,
+      "issues": [
+        "years: {'20'}"
+      ]
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": false
+  },
+  {
+    "source_experience_id": "E015",
+    "leakage": {
+      "passed": false,
+      "issues": [
+        "years: {'20'}"
+      ]
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": false
+  },
+  {
+    "source_experience_id": "E016",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E017",
+    "leakage": {
+      "passed": false,
+      "issues": [
+        "years: {'20'}"
+      ]
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": false
+  },
+  {
+    "source_experience_id": "E018",
+    "leakage": {
+      "passed": false,
+      "issues": [
+        "years: {'20'}"
+      ]
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": false
+  },
+  {
+    "source_experience_id": "E019",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E020",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E021",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E022",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E023",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E024",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E025",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E026",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E027",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E028",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E029",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E030",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E031",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E032",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E033",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E034",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E035",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E036",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E037",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E038",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E039",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E040",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E041",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E042",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E043",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E044",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E045",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E046",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E047",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E048",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E049",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E050",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E051",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E052",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E053",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E054",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E055",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E056",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E057",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E058",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E059",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E060",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E061",
+    "leakage": {
+      "passed": false,
+      "issues": [
+        "years: {'20'}"
+      ]
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": false
+  },
+  {
+    "source_experience_id": "E062",
+    "leakage": {
+      "passed": false,
+      "issues": [
+        "years: {'20'}"
+      ]
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": false
+  },
+  {
+    "source_experience_id": "E063",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E064",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E065",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E066",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E067",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E068",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E069",
+    "leakage": {
+      "passed": false,
+      "issues": [
+        "years: {'20'}"
+      ]
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": false
+  },
+  {
+    "source_experience_id": "E070",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E071",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E072",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E073",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E074",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E075",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E076",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E077",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E078",
+    "leakage": {
+      "passed": false,
+      "issues": [
+        "answer_value: 7.1"
+      ]
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": false
+  },
+  {
+    "source_experience_id": "E079",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E080",
+    "leakage": {
+      "passed": false,
+      "issues": [
+        "years: {'20'}"
+      ]
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": false
+  },
+  {
+    "source_experience_id": "E081",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E082",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E083",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E084",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E085",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E086",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E087",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E088",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E089",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  },
+  {
+    "source_experience_id": "E090",
+    "leakage": {
+      "passed": true,
+      "issues": []
+    },
+    "structural_preservation": {
+      "passed": true,
+      "issues": []
+    },
+    "hallucination": {
+      "passed": true,
+      "issues": []
+    },
+    "degeneracy": {
+      "passed": true,
+      "issues": []
+    },
+    "overall_passed": true
+  }
+]

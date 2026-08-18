@@ -1,0 +1,1465 @@
+[
+  {
+    "target_id": "RE/2015/page_33.pdf-2",
+    "source_id": "E067",
+    "rank": 1,
+    "semantic_similarity": 0.5910984873771667,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 0.9999999999999998,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "subtract",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "RE/2015/page_33.pdf-2",
+    "source_id": "E074",
+    "rank": 2,
+    "semantic_similarity": 0.5485745668411255,
+    "operation_family_overlap": 0.6666666666666666,
+    "operation_multiset_similarity": 0.8164965809277259,
+    "structure_alignment": 0.6666666666666667,
+    "source_ops": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "target_ops": [
+      "subtract",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "RE/2015/page_33.pdf-2",
+    "source_id": "E068",
+    "rank": 3,
+    "semantic_similarity": 0.5332656502723694,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 0.9999999999999998,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "subtract",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "GS/2017/page_143.pdf-1",
+    "source_id": "E039",
+    "rank": 1,
+    "semantic_similarity": 0.6411662697792053,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "add"
+    ],
+    "target_ops": [
+      "subtract",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "GS/2017/page_143.pdf-1",
+    "source_id": "E073",
+    "rank": 2,
+    "semantic_similarity": 0.5829922556877136,
+    "operation_family_overlap": 0.6666666666666666,
+    "operation_multiset_similarity": 0.8164965809277259,
+    "structure_alignment": 0.6666666666666667,
+    "source_ops": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "target_ops": [
+      "subtract",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "GS/2017/page_143.pdf-1",
+    "source_id": "E011",
+    "rank": 3,
+    "semantic_similarity": 0.5577738285064697,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 0.9999999999999998,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "subtract",
+      "divide"
+    ],
+    "target_ops": [
+      "subtract",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "PM/2017/page_99.pdf-3",
+    "source_id": "E076",
+    "rank": 1,
+    "semantic_similarity": 0.7636132836341858,
+    "operation_family_overlap": 0.3333333333333333,
+    "operation_multiset_similarity": 0.5773502691896258,
+    "structure_alignment": 0.33333333333333337,
+    "source_ops": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "target_ops": [
+      "subtract"
+    ]
+  },
+  {
+    "target_id": "PM/2017/page_99.pdf-3",
+    "source_id": "E067",
+    "rank": 2,
+    "semantic_similarity": 0.5357632637023926,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.7071067811865475,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "subtract"
+    ]
+  },
+  {
+    "target_id": "PM/2017/page_99.pdf-3",
+    "source_id": "E055",
+    "rank": 3,
+    "semantic_similarity": 0.5260778069496155,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "subtract"
+    ]
+  },
+  {
+    "target_id": "UA/2009/page_50.pdf-2",
+    "source_id": "E011",
+    "rank": 1,
+    "semantic_similarity": 0.4801414906978607,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 0.9999999999999998,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "subtract",
+      "divide"
+    ],
+    "target_ops": [
+      "subtract",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "UA/2009/page_50.pdf-2",
+    "source_id": "E019",
+    "rank": 2,
+    "semantic_similarity": 0.3971092104911804,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add"
+    ],
+    "target_ops": [
+      "subtract",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "UA/2009/page_50.pdf-2",
+    "source_id": "E042",
+    "rank": 3,
+    "semantic_similarity": 0.39263415336608887,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "add"
+    ],
+    "target_ops": [
+      "subtract",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "ETR/2008/page_355.pdf-2",
+    "source_id": "E011",
+    "rank": 1,
+    "semantic_similarity": 0.6627494096755981,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 0.9999999999999998,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "subtract",
+      "divide"
+    ],
+    "target_ops": [
+      "subtract",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "ETR/2008/page_355.pdf-2",
+    "source_id": "E073",
+    "rank": 2,
+    "semantic_similarity": 0.5568065643310547,
+    "operation_family_overlap": 0.6666666666666666,
+    "operation_multiset_similarity": 0.8164965809277259,
+    "structure_alignment": 0.6666666666666667,
+    "source_ops": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "target_ops": [
+      "subtract",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "ETR/2008/page_355.pdf-2",
+    "source_id": "E045",
+    "rank": 3,
+    "semantic_similarity": 0.52581787109375,
+    "operation_family_overlap": 0.3333333333333333,
+    "operation_multiset_similarity": 0.4999999999999999,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "multiply",
+      "divide"
+    ],
+    "target_ops": [
+      "subtract",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "PPG/2011/page_70.pdf-3",
+    "source_id": "E022",
+    "rank": 1,
+    "semantic_similarity": 0.5058488249778748,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add"
+    ],
+    "target_ops": [
+      "divide"
+    ]
+  },
+  {
+    "target_id": "PPG/2011/page_70.pdf-3",
+    "source_id": "E011",
+    "rank": 2,
+    "semantic_similarity": 0.4638708233833313,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.7071067811865475,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "subtract",
+      "divide"
+    ],
+    "target_ops": [
+      "divide"
+    ]
+  },
+  {
+    "target_id": "PPG/2011/page_70.pdf-3",
+    "source_id": "E045",
+    "rank": 3,
+    "semantic_similarity": 0.44026604294776917,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.7071067811865475,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "multiply",
+      "divide"
+    ],
+    "target_ops": [
+      "divide"
+    ]
+  },
+  {
+    "target_id": "IP/2006/page_32.pdf-4",
+    "source_id": "E085",
+    "rank": 1,
+    "semantic_similarity": 0.7287216782569885,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.31622776601683794,
+    "structure_alignment": 0.25,
+    "source_ops": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "divide"
+    ]
+  },
+  {
+    "target_id": "IP/2006/page_32.pdf-4",
+    "source_id": "E071",
+    "rank": 2,
+    "semantic_similarity": 0.6039499640464783,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.7071067811865475,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "divide"
+    ]
+  },
+  {
+    "target_id": "IP/2006/page_32.pdf-4",
+    "source_id": "E051",
+    "rank": 3,
+    "semantic_similarity": 0.47064322233200073,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "greater"
+    ],
+    "target_ops": [
+      "divide"
+    ]
+  },
+  {
+    "target_id": "FIS/2007/page_94.pdf-4",
+    "source_id": "E060",
+    "rank": 1,
+    "semantic_similarity": 0.6779534220695496,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.4472135954999579,
+    "structure_alignment": 0.33333333333333337,
+    "source_ops": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "divide"
+    ]
+  },
+  {
+    "target_id": "FIS/2007/page_94.pdf-4",
+    "source_id": "E038",
+    "rank": 2,
+    "semantic_similarity": 0.5246148705482483,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "add"
+    ],
+    "target_ops": [
+      "divide"
+    ]
+  },
+  {
+    "target_id": "FIS/2007/page_94.pdf-4",
+    "source_id": "E009",
+    "rank": 3,
+    "semantic_similarity": 0.5175612568855286,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.7071067811865475,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "subtract",
+      "divide"
+    ],
+    "target_ops": [
+      "divide"
+    ]
+  },
+  {
+    "target_id": "BLL/2007/page_47.pdf-4",
+    "source_id": "E044",
+    "rank": 1,
+    "semantic_similarity": 0.7852229475975037,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.7071067811865475,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "multiply",
+      "divide"
+    ],
+    "target_ops": [
+      "divide",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "BLL/2007/page_47.pdf-4",
+    "source_id": "E033",
+    "rank": 2,
+    "semantic_similarity": 0.6375842094421387,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "multiply"
+    ],
+    "target_ops": [
+      "divide",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "BLL/2007/page_47.pdf-4",
+    "source_id": "E055",
+    "rank": 3,
+    "semantic_similarity": 0.6036081314086914,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.4472135954999579,
+    "structure_alignment": 0.33333333333333337,
+    "source_ops": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "divide",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "BLK/2012/page_160.pdf-4",
+    "source_id": "E024",
+    "rank": 1,
+    "semantic_similarity": 0.5918929576873779,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add"
+    ],
+    "target_ops": [
+      "divide"
+    ]
+  },
+  {
+    "target_id": "BLK/2012/page_160.pdf-4",
+    "source_id": "E072",
+    "rank": 2,
+    "semantic_similarity": 0.5474753379821777,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.7071067811865475,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "divide"
+    ]
+  },
+  {
+    "target_id": "BLK/2012/page_160.pdf-4",
+    "source_id": "E037",
+    "rank": 3,
+    "semantic_similarity": 0.4999672472476959,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "add"
+    ],
+    "target_ops": [
+      "divide"
+    ]
+  },
+  {
+    "target_id": "GPN/2017/page_77.pdf-4",
+    "source_id": "E037",
+    "rank": 1,
+    "semantic_similarity": 0.6975457072257996,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "add",
+      "add"
+    ],
+    "target_ops": [
+      "add",
+      "add"
+    ]
+  },
+  {
+    "target_id": "GPN/2017/page_77.pdf-4",
+    "source_id": "E028",
+    "rank": 2,
+    "semantic_similarity": 0.5150253772735596,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.7071067811865475,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "add",
+      "add"
+    ]
+  },
+  {
+    "target_id": "GPN/2017/page_77.pdf-4",
+    "source_id": "E031",
+    "rank": 3,
+    "semantic_similarity": 0.47253161668777466,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "multiply"
+    ],
+    "target_ops": [
+      "add",
+      "add"
+    ]
+  },
+  {
+    "target_id": "UNP/2014/page_25.pdf-2",
+    "source_id": "E071",
+    "rank": 1,
+    "semantic_similarity": 0.5316154360771179,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "add"
+    ]
+  },
+  {
+    "target_id": "UNP/2014/page_25.pdf-2",
+    "source_id": "E070",
+    "rank": 2,
+    "semantic_similarity": 0.505916178226471,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "add"
+    ]
+  },
+  {
+    "target_id": "UNP/2014/page_25.pdf-2",
+    "source_id": "E068",
+    "rank": 3,
+    "semantic_similarity": 0.5027084946632385,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "add"
+    ]
+  },
+  {
+    "target_id": "STT/2008/page_83.pdf-2",
+    "source_id": "E065",
+    "rank": 1,
+    "semantic_similarity": 0.4399930536746979,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "table_average"
+    ],
+    "target_ops": [
+      "add",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "STT/2008/page_83.pdf-2",
+    "source_id": "E067",
+    "rank": 2,
+    "semantic_similarity": 0.4132336676120758,
+    "operation_family_overlap": 0.3333333333333333,
+    "operation_multiset_similarity": 0.4999999999999999,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "add",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "STT/2008/page_83.pdf-2",
+    "source_id": "E005",
+    "rank": 3,
+    "semantic_similarity": 0.4004734754562378,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.7071067811865475,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "divide"
+    ],
+    "target_ops": [
+      "add",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "MRO/2007/page_134.pdf-2",
+    "source_id": "E048",
+    "rank": 1,
+    "semantic_similarity": 0.5312699675559998,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "multiply",
+      "divide"
+    ],
+    "target_ops": [
+      "add"
+    ]
+  },
+  {
+    "target_id": "MRO/2007/page_134.pdf-2",
+    "source_id": "E059",
+    "rank": 2,
+    "semantic_similarity": 0.5279322862625122,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.8944271909999159,
+    "structure_alignment": 0.33333333333333337,
+    "source_ops": [
+      "add",
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "add"
+    ]
+  },
+  {
+    "target_id": "MRO/2007/page_134.pdf-2",
+    "source_id": "E034",
+    "rank": 3,
+    "semantic_similarity": 0.5260524749755859,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "multiply"
+    ],
+    "target_ops": [
+      "add"
+    ]
+  },
+  {
+    "target_id": "IPG/2015/page_48.pdf-3",
+    "source_id": "E073",
+    "rank": 1,
+    "semantic_similarity": 0.6403614282608032,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "subtract",
+      "divide",
+      "multiply"
+    ],
+    "target_ops": [
+      "add"
+    ]
+  },
+  {
+    "target_id": "IPG/2015/page_48.pdf-3",
+    "source_id": "E011",
+    "rank": 2,
+    "semantic_similarity": 0.5382335186004639,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "subtract",
+      "divide"
+    ],
+    "target_ops": [
+      "add"
+    ]
+  },
+  {
+    "target_id": "IPG/2015/page_48.pdf-3",
+    "source_id": "E003",
+    "rank": 3,
+    "semantic_similarity": 0.528440535068512,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide"
+    ],
+    "target_ops": [
+      "add"
+    ]
+  },
+  {
+    "target_id": "IP/2007/page_31.pdf-1",
+    "source_id": "E085",
+    "rank": 1,
+    "semantic_similarity": 0.6807541847229004,
+    "operation_family_overlap": 0.3333333333333333,
+    "operation_multiset_similarity": 0.22360679774997896,
+    "structure_alignment": 0.25,
+    "source_ops": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "multiply",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "IP/2007/page_31.pdf-1",
+    "source_id": "E005",
+    "rank": 2,
+    "semantic_similarity": 0.6739500164985657,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.7071067811865475,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "divide"
+    ],
+    "target_ops": [
+      "multiply",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "IP/2007/page_31.pdf-1",
+    "source_id": "E071",
+    "rank": 3,
+    "semantic_similarity": 0.6616818904876709,
+    "operation_family_overlap": 0.3333333333333333,
+    "operation_multiset_similarity": 0.4999999999999999,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "multiply",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "IP/2009/page_37.pdf-1",
+    "source_id": "E085",
+    "rank": 1,
+    "semantic_similarity": 0.784946858882904,
+    "operation_family_overlap": 0.3333333333333333,
+    "operation_multiset_similarity": 0.22360679774997896,
+    "structure_alignment": 0.25,
+    "source_ops": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "multiply",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "IP/2009/page_37.pdf-1",
+    "source_id": "E005",
+    "rank": 2,
+    "semantic_similarity": 0.6526206731796265,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.7071067811865475,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "divide"
+    ],
+    "target_ops": [
+      "multiply",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "IP/2009/page_37.pdf-1",
+    "source_id": "E071",
+    "rank": 3,
+    "semantic_similarity": 0.5793987512588501,
+    "operation_family_overlap": 0.3333333333333333,
+    "operation_multiset_similarity": 0.4999999999999999,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "multiply",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "BLL/2007/page_35.pdf-3",
+    "source_id": "E031",
+    "rank": 1,
+    "semantic_similarity": 0.6962593197822571,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.7071067811865475,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "multiply"
+    ],
+    "target_ops": [
+      "multiply",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "BLL/2007/page_35.pdf-3",
+    "source_id": "E023",
+    "rank": 2,
+    "semantic_similarity": 0.6707913279533386,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add"
+    ],
+    "target_ops": [
+      "multiply",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "BLL/2007/page_35.pdf-3",
+    "source_id": "E082",
+    "rank": 3,
+    "semantic_similarity": 0.6546069979667664,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "add",
+      "add"
+    ],
+    "target_ops": [
+      "multiply",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "SNPS/2006/page_69.pdf-1",
+    "source_id": "E028",
+    "rank": 1,
+    "semantic_similarity": 0.6393570899963379,
+    "operation_family_overlap": 0.3333333333333333,
+    "operation_multiset_similarity": 0.4999999999999999,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "multiply",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "SNPS/2006/page_69.pdf-1",
+    "source_id": "E005",
+    "rank": 2,
+    "semantic_similarity": 0.5336047410964966,
+    "operation_family_overlap": 0.5,
+    "operation_multiset_similarity": 0.7071067811865475,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "divide"
+    ],
+    "target_ops": [
+      "multiply",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "SNPS/2006/page_69.pdf-1",
+    "source_id": "E025",
+    "rank": 3,
+    "semantic_similarity": 0.5107641220092773,
+    "operation_family_overlap": 0.3333333333333333,
+    "operation_multiset_similarity": 0.4999999999999999,
+    "structure_alignment": 0.5,
+    "source_ops": [
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "multiply",
+      "divide"
+    ]
+  },
+  {
+    "target_id": "TFX/2015/page_70.pdf-3",
+    "source_id": "E067",
+    "rank": 1,
+    "semantic_similarity": 0.5358248353004456,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "multiply"
+    ]
+  },
+  {
+    "target_id": "TFX/2015/page_70.pdf-3",
+    "source_id": "E031",
+    "rank": 2,
+    "semantic_similarity": 0.5082398056983948,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "multiply"
+    ],
+    "target_ops": [
+      "multiply"
+    ]
+  },
+  {
+    "target_id": "TFX/2015/page_70.pdf-3",
+    "source_id": "E035",
+    "rank": 3,
+    "semantic_similarity": 0.5081009268760681,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "multiply"
+    ],
+    "target_ops": [
+      "multiply"
+    ]
+  },
+  {
+    "target_id": "AON/2009/page_46.pdf-2",
+    "source_id": "E022",
+    "rank": 1,
+    "semantic_similarity": 0.5196301341056824,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add"
+    ],
+    "target_ops": [
+      "table_min"
+    ]
+  },
+  {
+    "target_id": "AON/2009/page_46.pdf-2",
+    "source_id": "E025",
+    "rank": 2,
+    "semantic_similarity": 0.47502461075782776,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "table_min"
+    ]
+  },
+  {
+    "target_id": "AON/2009/page_46.pdf-2",
+    "source_id": "E045",
+    "rank": 3,
+    "semantic_similarity": 0.45637786388397217,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "multiply",
+      "divide"
+    ],
+    "target_ops": [
+      "table_min"
+    ]
+  },
+  {
+    "target_id": "APD/2019/page_48.pdf-1",
+    "source_id": "E039",
+    "rank": 1,
+    "semantic_similarity": 0.6854498982429504,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "add"
+    ],
+    "target_ops": [
+      "table_average"
+    ]
+  },
+  {
+    "target_id": "APD/2019/page_48.pdf-1",
+    "source_id": "E068",
+    "rank": 2,
+    "semantic_similarity": 0.5589248538017273,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "table_average"
+    ]
+  },
+  {
+    "target_id": "APD/2019/page_48.pdf-1",
+    "source_id": "E063",
+    "rank": 3,
+    "semantic_similarity": 0.5453203916549683,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "table_average"
+    ],
+    "target_ops": [
+      "table_average"
+    ]
+  },
+  {
+    "target_id": "AES/2016/page_191.pdf-3",
+    "source_id": "E063",
+    "rank": 1,
+    "semantic_similarity": 0.6144686341285706,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "table_average"
+    ],
+    "target_ops": [
+      "table_average"
+    ]
+  },
+  {
+    "target_id": "AES/2016/page_191.pdf-3",
+    "source_id": "E066",
+    "rank": 2,
+    "semantic_similarity": 0.5453060269355774,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "table_average"
+    ],
+    "target_ops": [
+      "table_average"
+    ]
+  },
+  {
+    "target_id": "AES/2016/page_191.pdf-3",
+    "source_id": "E084",
+    "rank": 3,
+    "semantic_similarity": 0.5009242296218872,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "add",
+      "add"
+    ],
+    "target_ops": [
+      "table_average"
+    ]
+  },
+  {
+    "target_id": "LMT/2015/page_56.pdf-2",
+    "source_id": "E087",
+    "rank": 1,
+    "semantic_similarity": 0.5832250714302063,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "table_average"
+    ]
+  },
+  {
+    "target_id": "LMT/2015/page_56.pdf-2",
+    "source_id": "E005",
+    "rank": 2,
+    "semantic_similarity": 0.5499958395957947,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide"
+    ],
+    "target_ops": [
+      "table_average"
+    ]
+  },
+  {
+    "target_id": "LMT/2015/page_56.pdf-2",
+    "source_id": "E063",
+    "rank": 3,
+    "semantic_similarity": 0.5486202239990234,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "table_average"
+    ],
+    "target_ops": [
+      "table_average"
+    ]
+  },
+  {
+    "target_id": "MRO/2006/page_33.pdf-3",
+    "source_id": "E027",
+    "rank": 1,
+    "semantic_similarity": 0.49281570315361023,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "table_average"
+    ]
+  },
+  {
+    "target_id": "MRO/2006/page_33.pdf-3",
+    "source_id": "E004",
+    "rank": 2,
+    "semantic_similarity": 0.45548826456069946,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide"
+    ],
+    "target_ops": [
+      "table_average"
+    ]
+  },
+  {
+    "target_id": "MRO/2006/page_33.pdf-3",
+    "source_id": "E090",
+    "rank": 3,
+    "semantic_similarity": 0.430110901594162,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "add",
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "table_average"
+    ]
+  },
+  {
+    "target_id": "JPM/2014/page_65.pdf-5",
+    "source_id": "E049",
+    "rank": 1,
+    "semantic_similarity": 0.5733750462532043,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "greater"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "JPM/2014/page_65.pdf-5",
+    "source_id": "E054",
+    "rank": 2,
+    "semantic_similarity": 0.42227864265441895,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "greater"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "JPM/2014/page_65.pdf-5",
+    "source_id": "E027",
+    "rank": 3,
+    "semantic_similarity": 0.397756963968277,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "PPG/2013/page_40.pdf-2",
+    "source_id": "E051",
+    "rank": 1,
+    "semantic_similarity": 0.630754828453064,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "greater"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "PPG/2013/page_40.pdf-2",
+    "source_id": "E070",
+    "rank": 2,
+    "semantic_similarity": 0.5532312989234924,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "PPG/2013/page_40.pdf-2",
+    "source_id": "E007",
+    "rank": 3,
+    "semantic_similarity": 0.41137251257896423,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "subtract",
+      "divide"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "BLL/2010/page_28.pdf-2",
+    "source_id": "E071",
+    "rank": 1,
+    "semantic_similarity": 0.5133936405181885,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "BLL/2010/page_28.pdf-2",
+    "source_id": "E049",
+    "rank": 2,
+    "semantic_similarity": 0.482077032327652,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "greater"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "BLL/2010/page_28.pdf-2",
+    "source_id": "E027",
+    "rank": 3,
+    "semantic_similarity": 0.46407750248908997,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "add",
+      "divide"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "PNC/2009/page_46.pdf-3",
+    "source_id": "E049",
+    "rank": 1,
+    "semantic_similarity": 0.5591951012611389,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "greater"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "PNC/2009/page_46.pdf-3",
+    "source_id": "E011",
+    "rank": 2,
+    "semantic_similarity": 0.5493689179420471,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "subtract",
+      "divide"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "PNC/2009/page_46.pdf-3",
+    "source_id": "E054",
+    "rank": 3,
+    "semantic_similarity": 0.5345475673675537,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "greater"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "PPG/2013/page_40.pdf-1",
+    "source_id": "E051",
+    "rank": 1,
+    "semantic_similarity": 0.6352441310882568,
+    "operation_family_overlap": 1.0,
+    "operation_multiset_similarity": 1.0,
+    "structure_alignment": 1.0,
+    "source_ops": [
+      "greater"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "PPG/2013/page_40.pdf-1",
+    "source_id": "E070",
+    "rank": 2,
+    "semantic_similarity": 0.5708253979682922,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  },
+  {
+    "target_id": "PPG/2013/page_40.pdf-1",
+    "source_id": "E072",
+    "rank": 3,
+    "semantic_similarity": 0.4123610556125641,
+    "operation_family_overlap": 0.0,
+    "operation_multiset_similarity": 0.0,
+    "structure_alignment": 0.0,
+    "source_ops": [
+      "divide",
+      "subtract"
+    ],
+    "target_ops": [
+      "greater"
+    ]
+  }
+]
