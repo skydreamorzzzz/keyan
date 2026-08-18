@@ -1298,3 +1298,59 @@ strategy      0.119     0.333     +0.214
   - `pilot/multibench/audit_evaluator_mismatch.py`
   - `pilot/multibench/audit_real_errors.py`
 - Report：`pilot/multibench/output/multihiertt/STAGE_33_AUDIT_REPORT.md`
+
+---
+
+## Stage 34 Audit: Correcting the Diagnostic (2026-08-18)
+
+**Objective**: Independent review of Stage 34 diagnostic claims before implementing fixes.
+
+**Findings**:
+
+1. **Evaluator Bug Claim: OVERCLAIMED**
+   - Stage 34 claimed: ~6/60 (10%) false negatives due to type bugs
+   - Audit confirmed: **1/60 (1.7%)**
+   - Root cause: Stage 34 audit script reimplemented evaluation instead of calling actual evaluator
+   - Conclusion: **Evaluator is NOT a bottleneck**
+
+2. **Context Truncation: UNDERESTIMATED**
+   - Stage 34 claimed: 52.8% HTML character retention, "truncation not main problem"
+   - Evidence-level audit (operand coverage from gold programs):
+     - 38/53 samples (71.7%) missing ≥1 operand in rendered context
+     - 12/53 samples (22.6%) hurt by 600-char table limit
+     - Average operand coverage: **42.2%** (vs 52.8% character retention)
+   - Key insight: **Character retention ≠ evidence coverage**
+   - Example: uid=776342a2d..., operand at position 679 truncated at 600-char limit
+   - Conclusion: **Context rendering is the dominant bottleneck**
+
+3. **Corrected Failure Attribution** (none arm, 60 samples):
+   - Correct: 7 (11.7%)
+   - Missing evidence (operands): 38/53 failures with programs (72%)
+     - Due to 600-char truncation: 12 (23%)
+     - Due to other reasons: 26 (49%)
+   - Extraction failure (evidence present but unused): ~15%
+   - Operation/reasoning errors: ~12%
+   - Format/scale errors: ~5%
+   - Evaluator bugs: 1 (1.9%)
+
+**Corrected Diagnosis**:
+- Primary bottleneck: **Context rendering** (600-char table limit truncates critical operands)
+- Secondary issues: Structure loss (HTML→text loses headers/relationships), prompt quality
+- NOT bottlenecks: Evaluator (only 1 bug), strategy retrieval (already works)
+
+**Implications for Memory Research**:
+- MultiHiertt currently **NOT VALID** for memory utility experiments
+- Root cause: When context lacks evidence, even perfect memory retrieval cannot help
+- Stage 33 paradox explained: Retrieved strategies are surface-similar but structurally irrelevant
+
+**Recommended Next Step**:
+- **Option A**: Fix MultiHiertt context rendering (increase table limit 600→2000, measure impact)
+- **Option B**: Switch to FinQA (simpler tables, less reliant on HTML rendering)
+- DO NOT: Modify evaluator, optimize retrieval, or run more experiments on broken pipeline
+
+**Decision**: [PENDING — awaiting user direction on Option A vs B]
+
+**Artifacts**:
+- Full audit: pilot/STAGE34_AUDIT_REPORT.md
+- Evidence coverage data: Can be regenerated from cache
+

@@ -1,0 +1,334 @@
+{
+  "version": "multihiertt_four_arm_dry_run_v3_repaired_runtime_json_20260818",
+  "sample_n": 4,
+  "seed": 20260817,
+  "sample_selection": "first 4 of fixed 120-sample validation set",
+  "arms": [
+    "none",
+    "case",
+    "strategy",
+    "both"
+  ],
+  "case_top_k": 4,
+  "strategy_top_k": 3,
+  "strategy_query_method": "question_only_family_dedup_k10",
+  "execution_cache": "pilot/multibench/output/multihiertt/multihiertt_four_arm_dry_run_repaired_smoke_cache.jsonl",
+  "runtime_request": {
+    "provider": "DeepSeek",
+    "backend": "deepseek_openai_compatible",
+    "base_url": "https://api.deepseek.com",
+    "requested_model": "deepseek-v4-flash",
+    "effective_model": null,
+    "model_version": null,
+    "temperature": 0.0,
+    "max_tokens": 2500,
+    "thinking_mode": false
+  },
+  "observed_response_models": {
+    "deepseek-v4-flash": 16
+  },
+  "runtime_guard": {
+    "expected": {
+      "backend": "deepseek_openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "requested_model": "deepseek-v4-flash",
+      "response_model": "deepseek-v4-flash",
+      "thinking_mode": false
+    },
+    "namespace_fingerprint": "a26a7955944dc5c60445bff77fac9c8e"
+  },
+  "temperature": 0,
+  "max_tokens": 1400,
+  "response_format": {
+    "type": "json_object"
+  },
+  "api_calls_made": 1,
+  "cache_hits": 15,
+  "cache_records_after": 16,
+  "arm_metrics": {
+    "none": {
+      "exact_match": 0.25,
+      "f1": 0.25,
+      "by_answer_type": {
+        "program": {
+          "count": 3,
+          "exact_match": 0.0,
+          "f1": 0.0
+        },
+        "span": {
+          "count": 1,
+          "exact_match": 1.0,
+          "f1": 1.0
+        }
+      },
+      "missing_predictions": 0,
+      "parse_failures": 0
+    },
+    "case": {
+      "exact_match": 0.25,
+      "f1": 0.25,
+      "by_answer_type": {
+        "program": {
+          "count": 3,
+          "exact_match": 0.0,
+          "f1": 0.0
+        },
+        "span": {
+          "count": 1,
+          "exact_match": 1.0,
+          "f1": 1.0
+        }
+      },
+      "missing_predictions": 0,
+      "parse_failures": 0
+    },
+    "strategy": {
+      "exact_match": 0.25,
+      "f1": 0.25,
+      "by_answer_type": {
+        "program": {
+          "count": 3,
+          "exact_match": 0.0,
+          "f1": 0.0
+        },
+        "span": {
+          "count": 1,
+          "exact_match": 1.0,
+          "f1": 1.0
+        }
+      },
+      "missing_predictions": 0,
+      "parse_failures": 0
+    },
+    "both": {
+      "exact_match": 0.25,
+      "f1": 0.25,
+      "by_answer_type": {
+        "program": {
+          "count": 3,
+          "exact_match": 0.0,
+          "f1": 0.0
+        },
+        "span": {
+          "count": 1,
+          "exact_match": 1.0,
+          "f1": 1.0
+        }
+      },
+      "missing_predictions": 0,
+      "parse_failures": 0
+    }
+  },
+  "best_fixed_arm": "none",
+  "best_fixed_em": 0.25,
+  "oracle_em": 0.25,
+  "oracle_gap": 0.0,
+  "retrieval_conditioned": {
+    "family_hit_n": 3,
+    "family_miss_n": 1,
+    "hit": {
+      "none": 0.3333333333333333,
+      "case": 0.3333333333333333,
+      "strategy": 0.3333333333333333,
+      "both": 0.3333333333333333
+    },
+    "miss": {
+      "none": 0.0,
+      "case": 0.0,
+      "strategy": 0.0,
+      "both": 0.0
+    },
+    "overall": {
+      "none": 0.25,
+      "case": 0.25,
+      "strategy": 0.25,
+      "both": 0.25
+    }
+  },
+  "event_counts": {
+    "case_only": 0,
+    "strategy_only": 0,
+    "none_only": 0,
+    "both_only": 0,
+    "none_gt_both": 0,
+    "case_gt_both": 0,
+    "strategy_gt_both": 0
+  },
+  "by_answer_type": {
+    "program": {
+      "none": 0.0,
+      "case": 0.0,
+      "strategy": 0.0,
+      "both": 0.0
+    },
+    "span": {
+      "none": 1.0,
+      "case": 1.0,
+      "strategy": 1.0,
+      "both": 1.0
+    }
+  },
+  "records": [
+    {
+      "uid": "6e69e996da0a482b87e237352da9369b",
+      "question": "What is the sum of Investment real estate in 2012 and Gain (loss) recognized in OCI on derivatives in 2011? (in million)",
+      "answer_type": "program",
+      "gold_answer": "3190",
+      "gold_family": "program:difference",
+      "gold_type": "program",
+      "family_hit": false,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:4b64837f1b0cdb76",
+          "family": "program:aggregation_sum",
+          "score": 0.6194561123847961
+        },
+        {
+          "strategy_id": "multihiertt_strategy:137da5fc74532645",
+          "family": "program:average_or_composed_division",
+          "score": 0.6146267652511597
+        },
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.6142899990081787
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": 3193,
+        "case": 3193,
+        "strategy": 3193,
+        "both": 3193
+      }
+    },
+    {
+      "uid": "c649cb8dafee4d23b4184b0c8c89e74f",
+      "question": "In the year with the most Interest cost in Table 1, what is the growth rate of Environmental in Table 0?",
+      "answer_type": "program",
+      "gold_answer": "-0.23188",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.6575562953948975
+        },
+        {
+          "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+          "family": "program:change_rate",
+          "score": 0.6574314832687378
+        },
+        {
+          "strategy_id": "multihiertt_strategy:5df905c0e6235174",
+          "family": "span:comparison_lookup",
+          "score": 0.6264936327934265
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": -0.2318840579710145,
+        "case": 0.0,
+        "strategy": -0.2318840579710145,
+        "both": 0.0
+      }
+    },
+    {
+      "uid": "faac106d01bb414e8459e88d762e51b4",
+      "question": "What's the greatest value of Stores Opened in 2011?",
+      "answer_type": "span",
+      "gold_answer": "86",
+      "gold_family": "span:superlative_lookup",
+      "gold_type": "span_superlative_lookup",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:5df905c0e6235174",
+          "family": "span:comparison_lookup",
+          "score": 0.43869197368621826
+        },
+        {
+          "strategy_id": "multihiertt_strategy:b06d0f816511a288",
+          "family": "span:superlative_lookup",
+          "score": 0.43110519647598267
+        },
+        {
+          "strategy_id": "multihiertt_strategy:b72171a6cd389886",
+          "family": "span:computed_value_lookup",
+          "score": 0.4228959083557129
+        }
+      ],
+      "correct_arms": [
+        "none",
+        "case",
+        "strategy",
+        "both"
+      ],
+      "em": {
+        "none": 1.0,
+        "case": 1.0,
+        "strategy": 1.0,
+        "both": 1.0
+      },
+      "predictions": {
+        "none": 86,
+        "case": 86,
+        "strategy": 86,
+        "both": 86
+      }
+    },
+    {
+      "uid": "776342a2d8c1492286eedc213289f373",
+      "question": "In the year with the most Granted for shares(in thousands), what is the growth rate of Outstanding ? (in %)",
+      "answer_type": "program",
+      "gold_answer": "-0.12537",
+      "gold_family": "program:change_rate",
+      "gold_type": "program",
+      "family_hit": true,
+      "strategy_hits": [
+        {
+          "strategy_id": "multihiertt_strategy:1da8202a7ef86fba",
+          "family": "program:projection_or_compound_change",
+          "score": 0.5826917290687561
+        },
+        {
+          "strategy_id": "multihiertt_strategy:54d9e148c52fb02a",
+          "family": "program:division_composition",
+          "score": 0.5809983611106873
+        },
+        {
+          "strategy_id": "multihiertt_strategy:fbf259ef9cea6db8",
+          "family": "program:change_rate",
+          "score": 0.5786954760551453
+        }
+      ],
+      "correct_arms": [],
+      "em": {
+        "none": 0.0,
+        "case": 0.0,
+        "strategy": 0.0,
+        "both": 0.0
+      },
+      "predictions": {
+        "none": "N/A",
+        "case": "-17.87",
+        "strategy": 0.0,
+        "both": 0.0
+      }
+    }
+  ]
+}
