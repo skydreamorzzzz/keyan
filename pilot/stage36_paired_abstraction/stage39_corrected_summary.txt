@@ -1,0 +1,90 @@
+================================================================================
+STAGE 39 AUDIT COMPLETE - EVALUATOR BUG FIXED
+================================================================================
+
+CRITICAL FINDING: Original Stage 39 results were WRONG due to evaluator bug
+
+ROOT CAUSE:
+- Stage 37 used dual-parser strategy (linear + nested)
+- Stage 39 only used parse_program_re (cannot parse comma-separated sequences)
+- 51.6% of multi-step programs systematically misevaluated
+
+CORRECTED RESULTS (after evaluator fix):
+========================================
+
+Case:                      33.0% (was 31.2%)
+Format-Neutral:           32.1% (was 39.7%) 
+Format-Neutral+Binding:   32.6% (was 40.6%)
+Grounded Sketch:          50.4% (was 40.6%)
+
+KEY STATISTICAL FINDINGS:
+========================
+
+GS vs Case:         +17.4pp (p<0.0001) *** HIGHLY SIGNIFICANT ***
+GS vs FN+Binding:   +17.9pp (p<0.0001) *** HIGHLY SIGNIFICANT ***
+FN vs Case:         -0.9pp  (p=0.90)   NOT SIGNIFICANT
+FN+B vs FN:         +0.4pp  (p=1.0)    NOT SIGNIFICANT
+
+SCIENTIFIC CONCLUSIONS:
+======================
+
+✓ GROUNDED PROGRAM SKETCH WORKS
+  - 50.4% accuracy vs ~33% for all others
+  - Effect size: +17-18pp, p<0.0001
+  - 23 unique rescues (most of any arm)
+
+✗ "BINDING INSTRUCTION DOMINATES" WAS WRONG
+  - Original claim based on buggy evaluator
+  - FN+Binding (32.6%) does NOT equal GS (50.4%)
+  - Program template is the key component
+
+✗ ABSTRACTION ALONE DOESN'T HELP
+  - Format-Neutral (32.1%) ≈ Case (33.0%)
+  - No significant difference (p=0.90)
+  - Under same-source design, abstraction provides no advantage
+
+✓ MECHANISM IDENTIFIED: Template Prevents Hallucination
+  - 46 GS-rescue cases analyzed
+  - 41 (89%) FN+B failures: spurious multiply(x, 100)
+  - Gold programs: 0% contain percentage conversion
+  - Template explicitly encodes correct output format
+
+GO/NO-GO DECISION:
+==================
+
+Scenario A (GS Method Paper): ✓✓✓ PASSED
+  - All three criteria met
+  - GS significantly outperforms all baselines
+  - High executable rate (92.4%)
+
+Scenario B (Binding Dominates): ✗ FAILED
+  - GS >> FN+Binding (+17.9pp, p<0.0001)
+  - Program template has massive independent effect
+
+RECOMMENDED PAPER FRAMING:
+==========================
+
+Title: "Grounded Program Sketches: Structural Templates Prevent 
+        Hallucination in Executable Financial Reasoning"
+
+Core contributions:
+1. Method: Grounded Program Sketch representation (50.4% accuracy)
+2. Mechanism: Templates prevent output format hallucination
+3. Design: Confound elimination + same-source causal control
+4. Finding: Structure > natural language for executability
+
+Next steps:
+- Complete detailed failure analysis
+- Write paper with GS method framing
+- Consider ablation: template-only vs binding-only
+
+FILES GENERATED:
+===============
+- STAGE39_AUDIT_FINAL.md (complete audit report)
+- stage39_full224_evaluations.json (corrected evaluations)
+- stage39_statistical_results.json (corrected statistics)
+- stage39_case_fn_disagreement.json (Case vs FN analysis)
+- stage39_gs_fnb_disagreement.json (GS vs FN+B analysis)
+
+Repository: https://github.com/skydreamorzzzz/keyan
+Date: 2026-08-18

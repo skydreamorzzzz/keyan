@@ -8,7 +8,7 @@ import re
 import sys
 
 sys.path.insert(0, '/home/tiantian/keyan/pilot')
-from executor import parse_program_re, exec_steps
+from executor import parse_program_re, parse_linear_steps, exec_steps
 
 BASE_PATH = '/home/tiantian/keyan/pilot/stage36_paired_abstraction'
 
@@ -58,7 +58,26 @@ def evaluate_response(response_record, target_map):
     normalized = raw_program.replace('\n', ', ')
 
     try:
-        steps = parse_program_re(normalized)
+        # Detect format: linear (has top-level commas) or nested (single expression)
+        # This matches Stage 37's execute_program_with_table logic
+        depth = 0
+        has_top_level_comma = False
+        for c in normalized:
+            if c == '(':
+                depth += 1
+            elif c == ')':
+                depth -= 1
+            elif c == ',' and depth == 0:
+                has_top_level_comma = True
+                break
+
+        # Parse program to linear steps
+        if has_top_level_comma:
+            # Linear format: use parse_linear_steps (handles multi-step programs)
+            steps = parse_linear_steps(normalized)
+        else:
+            # Nested format: use parse_program_re (handles single nested expression)
+            steps = parse_program_re(normalized)
 
         if not steps:
             return {
