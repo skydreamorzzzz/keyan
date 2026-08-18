@@ -1,0 +1,70 @@
+{
+  "comparisons": [
+    {
+      "comparison": "Grounded Sketch vs Case",
+      "accuracy_a": 0.5267857142857143,
+      "accuracy_b": 0.48660714285714285,
+      "difference_pp": 4.017857142857145,
+      "ci_95_lower_pp": -2.6785714285714244,
+      "ci_95_upper_pp": 10.71428571428571,
+      "mcnemar_p": 0.2806097176983541,
+      "significant_at_05": false,
+      "a_rescue": 32,
+      "b_rescue": 23,
+      "rescue_ratio": "32:23"
+    },
+    {
+      "comparison": "Grounded Sketch vs Format Neutral+Binding",
+      "accuracy_a": 0.5267857142857143,
+      "accuracy_b": 0.35267857142857145,
+      "difference_pp": 17.410714285714285,
+      "ci_95_lower_pp": 11.607142857142854,
+      "ci_95_upper_pp": 23.214285714285715,
+      "mcnemar_p": 4.003196174551249e-08,
+      "significant_at_05": true,
+      "a_rescue": 46,
+      "b_rescue": 7,
+      "rescue_ratio": "46:7"
+    },
+    {
+      "comparison": "Case vs Format Neutral",
+      "accuracy_a": 0.48660714285714285,
+      "accuracy_b": 0.3482142857142857,
+      "difference_pp": 13.839285714285715,
+      "ci_95_lower_pp": 7.589285714285715,
+      "ci_95_upper_pp": 20.089285714285715,
+      "mcnemar_p": 3.3053764732060564e-05,
+      "significant_at_05": true,
+      "a_rescue": 43,
+      "b_rescue": 12,
+      "rescue_ratio": "43:12"
+    },
+    {
+      "comparison": "Format Neutral+Binding vs Format Neutral",
+      "accuracy_a": 0.35267857142857145,
+      "accuracy_b": 0.3482142857142857,
+      "difference_pp": 0.4464285714285754,
+      "ci_95_lower_pp": -3.125,
+      "ci_95_upper_pp": 4.017857142857145,
+      "mcnemar_p": 1.0,
+      "significant_at_05": false,
+      "a_rescue": 9,
+      "b_rescue": 8,
+      "rescue_ratio": "9:8"
+    },
+    {
+      "comparison": "Grounded Sketch vs Format Neutral",
+      "accuracy_a": 0.5267857142857143,
+      "accuracy_b": 0.3482142857142857,
+      "difference_pp": 17.85714285714286,
+      "ci_95_lower_pp": 11.607142857142861,
+      "ci_95_upper_pp": 24.107142857142854,
+      "mcnemar_p": 4.688184102041859e-08,
+      "significant_at_05": true,
+      "a_rescue": 48,
+      "b_rescue": 8,
+      "rescue_ratio": "48:8"
+    }
+  ],
+  "note": "Based on canonical evaluator with case-insensitive PROGRAM extraction"
+}

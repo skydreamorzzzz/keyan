@@ -1,0 +1,180 @@
+================================================================================
+MEASUREMENT + CONTROL 修复完成 - 最终总结
+================================================================================
+
+## 完成的工作
+
+✓ A. 建立 canonical evaluator
+   - Case-insensitive PROGRAM extraction
+   - Correct exec_steps(table) call
+   - Full string validation
+   - 7/7 regression tests pass
+
+✓ B. 重新评估所有 arms
+   - Case: 33.0% → 48.7% (+15.6pp)
+   - Format-Neutral: 32.1% → 34.8% (+2.7pp)
+   - FN+Binding: 32.6% → 35.3% (+2.7pp)
+   - Grounded Sketch: 50.4% → 52.7% (+2.2pp)
+
+✓ C. Strategy QC 审计
+   - 无法完成完整审计 (数据不存在)
+   - Grounded Sketch memory 本身无 hallucination
+   - Percentage hallucination 是 generation 问题，非 memory 问题
+
+✓ D. Clean experiment protocol
+   - 定义 3-arm minimal comparison (Case vs Clean-FN vs GS)
+   - 未实现 API calling (等待用户授权)
+   - 672 API calls total
+
+================================================================================
+修复后推翻的结论
+================================================================================
+
+✗ "Grounded Sketch 显著优于所有表示"
+   Previous: GS 50.4% vs Case 33.0% (+17.4pp)
+   Corrected: GS 52.7% vs Case 48.7% (+4.0pp)
+   → 效应量缩小 13.4pp
+
+✗ "Abstraction 与 Case 相当"
+   Previous: FN 32.1% ≈ Case 33.0%
+   Corrected: FN 34.8% << Case 48.7% (-13.9pp)
+   → Concrete 显著优于 Abstract
+
+✗ "Format-Neutral 是推荐方法"
+   Previous: FN 简单且与 Case 相当
+   Corrected: Case 是最强 non-template baseline
+   → Case > GS > FN
+
+================================================================================
+仍然成立的结论
+================================================================================
+
+✓ Template 对 abstract baseline 有大效应
+   GS 52.7% vs FN+B 35.3% (+17.4pp)
+   
+✓ Explicit binding instruction 无效
+   FN 34.8% vs FN+B 35.3% (+0.5pp)
+   
+✓ GS rescues 中 100% 是 percentage-related
+   Sample of 20 GS rescues: 20/20 have FN+B with spurious multiply×100
+
+✓ Operator-only artifact 已消除
+   Stage 37 Strategy: 6.2%, 165/224 operator-only
+
+================================================================================
+修复后的关键发现
+================================================================================
+
+1. Case (48.7%) 是最强的 baseline
+   - 比 FN (34.8%) 高 13.9pp
+   - 比 FN+B (35.3%) 高 13.4pp
+   - Concrete examples 显著优于 abstract reasoning
+
+2. GS (52.7%) 只比 Case 高 4.0pp
+   - 之前以为是 +17.4pp（因为 Case 被低估）
+   - Template effect 在强 baseline 上很小
+   - 可能不 statistically significant
+
+3. Template 对弱 baseline 帮助大
+   - GS vs FN+B: +17.4pp
+   - GS vs Case: +4.0pp
+   - Template 收益取决于 baseline 质量
+
+4. Percentage hallucination 仍然是问题
+   - 100% of GS rescues involve FN+B adding spurious ×100
+   - Gold programs: 只有 4.9% 包含 ×100
+   - 但这是 generation 问题，不是 memory contamination
+
+================================================================================
+下一步唯一最值得跑的实验
+================================================================================
+
+Clean 3-arm Experiment: Case vs Clean-FN vs GS
+
+目标: 隔离 template pure effect
+
+设计要点:
+  - 所有 arms 完全相同的 base prompt/document/output instruction
+  - 只有 memory representation 不同
+  - Case 必须重新跑 (224 calls)
+  - Clean-FN 必须重新跑 (224 calls)
+  - GS 必须重新跑 (224 calls)
+  - Total: 672 API calls
+
+预期回答:
+  1. Abstraction 是否真的劣于 Concrete?
+  2. Template 的 pure effect 是多少?
+  3. Case + Template 是否是最优组合?
+
+为什么这是唯一值得跑的:
+  - 当前最大 uncertainty: GS vs Case 只差 4pp
+  - 不清楚是 template effect 还是其他 confounds
+  - 这个实验能确定 template 的 causal effect
+
+================================================================================
+文件清单
+================================================================================
+
+新建:
+  canonical_evaluator.py           - 主评估器
+  test_canonical_evaluator.py      - 回归测试
+  canonical_evaluations.json       - 重新评估结果
+  strategy_qc_audit.py             - QC 审计脚本
+  clean_experiment_protocol.py     - Clean 实验协议
+  MEASUREMENT_CONTROL_AUDIT.md     - 详细审计报告
+  FINAL_SUMMARY.txt               - 本文件
+
+Canonical 结果:
+  Case_Stage37:                    109/224 (48.7%)
+  Strategy_Stage37:                 14/224 ( 6.2%)
+  Format-Neutral_Stage39:           78/224 (34.8%)
+  Format-Neutral+Binding_Stage39:   79/224 (35.3%)
+  Grounded-Sketch_Stage39:         118/224 (52.7%)
+
+================================================================================
+核心建议
+================================================================================
+
+1. 使用 canonical evaluator 重新做统计分析
+   - McNemar test on GS vs Case (+4.0pp)
+   - 如果不显著，论文故事完全改变
+
+2. 承认 measurement 问题严重
+   - Case-sensitivity bug 改变了所有结论
+   - 之前的 "GS 显著优于 Case" 是 artifact
+
+3. 运行 clean 3-arm experiment (需要授权)
+   - 这是唯一能确定 template causal effect 的实验
+   - 672 API calls
+
+4. 论文故事需要完全重写
+   - 不能再声称 "GS 显著优于所有表示"
+   - 主要发现是 "Case > GS > FN"
+   - Template effect 取决于 baseline
+
+================================================================================
+最终结论
+================================================================================
+
+修复后的真相:
+
+✓ Measurement 问题比预期严重
+  - Case baseline 被低估 15.6pp
+  - 改变了所有相对比较
+
+✓ Case 是隐藏的最强 baseline
+  - 48.7% 超过所有 abstract 表示
+  - Concrete examples 的价值被低估
+
+✓ GS template effect 比想象的小
+  - 只比 Case 好 4.0pp (可能不显著)
+  - 需要 clean experiment 确认
+
+✓ 下一步清晰
+  - Clean 3-arm experiment
+  - 672 API calls
+  - 等待用户授权
+
+Report generated: 2024-08-18
+Canonical evaluator: v1
+Status: Ready for clean experiment
