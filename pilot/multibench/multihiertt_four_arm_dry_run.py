@@ -53,7 +53,7 @@ OUT_DIR = os.path.join(ROOT, "pilot", "multibench", "output", "multihiertt")
 REPORT_STEM = "MULTIHIERTT_FOUR_ARM_DRY_RUN_REPAIRED"
 JSON_STEM = "multihiertt_four_arm_dry_run_repaired"
 
-VERSION = "multihiertt_four_arm_dry_run_v3_repaired_runtime_json_20260818"
+VERSION = "multihiertt_four_arm_dry_run_v3_structured_20260818"
 SEED = 20260817
 FULL_SAMPLE_N = 120
 DEFAULT_SAMPLE_N = 60
@@ -157,6 +157,39 @@ def render_table_html_preview(html: str, limit: int = 600) -> str:
     return normalize_text(html)[:limit]
 
 
+def render_structured_table(html: str, char_limit: int = 2000) -> str:
+    """
+    Render HTML table as structured text preserving row/column relationships.
+    Format: markdown-like with headers and aligned columns.
+
+    Falls back to regex-based parsing (no external dependencies).
+    """
+    if not html or not html.strip():
+        return ""
+
+    # Simple regex-based extraction
+    # Extract text between <td> and <th> tags, preserve row structure
+    try:
+        text = html
+        # Replace </tr> with newline
+        text = re.sub(r'</tr>', '\n', text, flags=re.IGNORECASE)
+        # Replace <td> and <th> boundaries with |
+        text = re.sub(r'</?t[dh][^>]*>', '|', text, flags=re.IGNORECASE)
+        # Remove remaining tags
+        text = re.sub(r'<[^>]+>', '', text)
+        # Clean up whitespace
+        lines = []
+        for line in text.split('\n'):
+            cleaned = '|'.join(cell.strip() for cell in line.split('|') if cell.strip())
+            if cleaned:
+                lines.append('| ' + cleaned + ' |')
+
+        result = '\n'.join(lines)
+        return result[:char_limit]
+    except Exception:
+        return html[:char_limit]
+
+
 def render_context(row: dict[str, Any]) -> str:
     paragraphs = []
     for i, text in enumerate((row.get("paragraphs") or [])[:30]):
@@ -166,12 +199,13 @@ def render_context(row: dict[str, Any]) -> str:
         paragraphs.append(f"p{i}: {t}")
     table_bits = []
     for i, html in enumerate((row.get("tables") or [])[:6]):
-        table_bits.append(f"table_{i}: {render_table_html_preview(html)}")
+        # Use structured rendering with 2000-char limit
+        table_bits.append(f"table_{i}:\n{render_structured_table(html, char_limit=2000)}")
     return "\n".join([
         "Paragraphs (selected):",
         "\n".join(paragraphs) or "(none)",
         "",
-        "Tables (HTML preview):",
+        "Tables (structured):",
         "\n".join(table_bits) or "(none)",
     ]).strip()
 
