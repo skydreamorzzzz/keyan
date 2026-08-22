@@ -65,7 +65,7 @@ def build(config_path="configs/finqa_v1.json", artifacts=ARTIFACT_ROOT):
         retrieval_text=[{"source_id":r["source_id"],"source_hash":r["source_hash"],"representation":"retrieval_question_v1","text":r["raw"]["qa"][config["embedding"]["text_field"]],"text_hash":sha256_bytes(r["raw"]["qa"][config["embedding"]["text_field"]].encode())} for r in source]
         write_jsonl(temp/"representations/retrieval_question_v1.jsonl",retrieval_text); rep_m=manifest("retrieval_text_representation",temp,temp/"representations/retrieval_question_v1.jsonl",{"source_pool":file_ref(temp/"source_pool.manifest.json",temp)},count=len(retrieval_text),representation="retrieval_question_v1",status="VALID",config=config_ref); write_json(temp/"representations/retrieval_question_v1.manifest.json",rep_m)
         embcfg=config["embedding"]
-        with contextlib.redirect_stdout(io.StringIO()): model=SentenceTransformer(embcfg["model"],revision=embcfg["revision"],local_files_only=True)
+        with contextlib.redirect_stdout(io.StringIO()): model=SentenceTransformer(embcfg["model"],revision=embcfg["revision"],local_files_only=True,device="cpu")
         texts=[r["text"] for r in retrieval_text]; vectors=model.encode(texts,batch_size=embcfg["batch_size"],normalize_embeddings=embcfg["normalize_embeddings"],convert_to_numpy=True,show_progress_bar=False)
         if len(vectors)!=len(source) or not np.isfinite(vectors).all(): raise RuntimeError("EMBEDDING GATE FAILURE")
         emb=[{"source_id":r["source_id"],"source_hash":r["source_hash"],"embedding_text_hash":r["text_hash"],"vector":v.astype(float).tolist()} for r,v in zip(retrieval_text,vectors)]
@@ -74,14 +74,15 @@ def build(config_path="configs/finqa_v1.json", artifacts=ARTIFACT_ROOT):
         emb=read_jsonl(temp/"embeddings/source_question.jsonl"); matrix=np.asarray([x["vector"] for x in emb],dtype=float); k=config["retrieval"]["top_k"]; decimals=config["retrieval"]["score_decimals"]; source_ids=np.asarray([x["source_id"] for x in emb])
         if k<=0 or k>len(source): raise RuntimeError("RETRIEVAL GATE FAILURE: top_k")
         for split, target in targets.items():
-            qtexts=[r["raw"]["qa"][config["retrieval"]["query_field"]] for r in target]; qvec=model.encode(qtexts,batch_size=embcfg["batch_size"],normalize_embeddings=embcfg["normalize_embeddings"],convert_to_numpy=True,show_progress_bar=False); rows=[]
-            for t,q in zip(target,qvec):
-                scores=np.round(matrix@q,decimals); ids=np.lexsort((source_ids,-scores))[:k]
+            qtexts=[r["raw"]["qa"][config["retrieval"]["query_field"]] for r in target]; qvec=model.encode(qtexts,batch_size=embcfg["batch_size"],normalize_embeddings=embcfg["normalize_embeddings"],convert_to_numpy=True,show_progress_bar=False); all_scores=np.round(qvec @ matrix.T,decimals); rows=[]
+            for t,scores in zip(target,all_scores):
+                ids=np.lexsort((source_ids,-scores))[:k]
                 rows.append({"target_id":t["target_id"],"target_hash":t["target_hash"],"query_text_hash":sha256_bytes(t["raw"]["qa"][config["retrieval"]["query_field"]].encode()),"neighbors":[{"source_id":emb[i]["source_id"],"source_hash":emb[i]["source_hash"],"score":float(scores[i])} for i in ids]})
             write_jsonl(temp/f"retrieval/{split}_manifest.jsonl",rows); rm=manifest("frozen_retrieval_manifest",temp,temp/f"retrieval/{split}_manifest.jsonl",{"embedding":file_ref(temp/"embeddings/source_question.manifest.json",temp),"target_pool":file_ref(temp/f"targets/{split}_pool.manifest.json",temp)},split=split,purpose=config["target_splits"][split],count=len(rows),retrieval_config=config["retrieval"],config=config_ref); write_json(temp/f"retrieval/{split}_manifest.manifest.json",rm)
         # Gate 3/4: independently validate the staged tree before atomic publish.
         from pipeline.validate import validate
-        errors=validate(temp,config_path=config_path)
+        # Reuse the frozen loaded model, but still perform a second full encode from representation text.
+        errors=validate(temp,config_path=config_path,model=model,release=False)
         if errors: raise RuntimeError("STAGED VALIDATION FAILURE: "+"; ".join(errors[:10]))
         if artifacts.exists(): backup=artifacts.with_name(artifacts.name+".previous"); shutil.rmtree(backup,ignore_errors=True); os.replace(artifacts,backup)
         os.replace(temp,artifacts); temp=None
