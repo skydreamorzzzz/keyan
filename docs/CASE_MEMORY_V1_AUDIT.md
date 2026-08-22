@@ -1,14 +1,34 @@
-# Case Memory V1 Audit
+# Case Memory V1.1 Audit
 
-All fields are either verbatim FinQA raw (`question`, `gold_inds`, `program`, `answer`, `exe_ans`) or deterministic (`reasoning_trace`, hashes, IDs). No LLM-generated, target, retrieval, or strategy fields exist.
+## Information boundary
 
-## QC
+`question`, `evidence` (`qa.gold_inds`), `gold_program`, `gold_answer`, and `exe_ans` are verbatim raw FinQA fields. `table_grounding` is the exact raw row/cells consumed by each strict parsed table operator. `reasoning_trace`, numeric cells, IDs, and hashes are deterministic derivations. No target, retrieval, strategy, or LLM-generated field is present.
+
+## Full QC
 
 - Source coverage: 6251/6251
 - QC failures: 0
-- Trace execution: official FinQA evaluator aligned for all cases
+- Table-grounded Cases: 198
+- Trace execution: official FinQA evaluator aligned for every Case
 
-## Operator audit
+## High-risk family audit
+
+| Family | Case count | Step count | QC failures |
+|---|---:|---:|---:|
+| `literal_percentage_token` | 214 | 225 | 0 |
+| `const_100` | 256 | 466 | 0 |
+| `multiply_const_100` | 78 | 78 | 0 |
+| `divide_percentage_conversion` | 52 | 52 | 0 |
+| `multi_step_reference` | 2528 | 3144 | 0 |
+| `table_sum` | 32 | 36 | 0 |
+| `table_average` | 94 | 95 | 0 |
+| `table_max` | 48 | 48 | 0 |
+| `table_min` | 27 | 27 | 0 |
+| `greater` | 124 | 124 | 0 |
+| `exp` | 5 | 5 | 0 |
+| `three_or_more_steps` | 521 | 1855 | 0 |
+
+## Operator steps
 
 - `add`: 1512
 - `divide`: 4445
@@ -20,12 +40,3 @@ All fields are either verbatim FinQA raw (`question`, `gold_inds`, `program`, `a
 - `table_max`: 48
 - `table_min`: 27
 - `table_sum`: 36
-
-## Step-count audit
-
-- `1` steps: 3717
-- `2` steps: 2013
-- `3` steps: 331
-- `4` steps: 94
-- `5` steps: 90
-- `6` steps: 6

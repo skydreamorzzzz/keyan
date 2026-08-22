@@ -1,8 +1,8 @@
 {
   "kind": "case_memory",
-  "schema_version": "CaseRepresentationV1",
-  "constructor_version": "case_memory_constructor_v1",
-  "constructor_sha256": "3bd4d0554c051dbf3f79e07640ee6314d4e957d2851c71f286fd24dc99101b9a",
+  "schema_version": "CaseRepresentationV1.1",
+  "constructor_version": "case_memory_constructor_v1_1",
+  "constructor_sha256": "854052a8b417e010d626633ae43f33e660afe63f6dbb676698bfd292d6b18061",
   "parents": {
     "source_pool": {
       "path": "source_pool.manifest.json",
@@ -12,8 +12,8 @@
   },
   "records": {
     "path": "memory/case_v1.jsonl",
-    "sha256": "389e57ab0e7d380d1072fa30576709e8f66f01de75f5f527a59aa65d92b00139",
-    "bytes": 8402382
+    "sha256": "ec751eaa2aff14ff4670c41437454e2e727680f0beb03b6a213b95ec91eadcd3",
+    "bytes": 8601657
   },
   "count": 6251,
   "qc_failures": {}
