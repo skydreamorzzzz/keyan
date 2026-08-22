@@ -25,7 +25,12 @@ class CanonicalV11Tests(unittest.TestCase):
         for rel in ("source_pool.jsonl","targets/dev_pool.jsonl","embeddings/source_question.jsonl","retrieval/dev_manifest.jsonl"):
             manifest_rel={"source_pool.jsonl":"source_pool.manifest.json","targets/dev_pool.jsonl":"targets/dev_pool.manifest.json","embeddings/source_question.jsonl":"embeddings/source_question.manifest.json","retrieval/dev_manifest.jsonl":"retrieval/dev_manifest.manifest.json"}[rel]
             manifest=load_json(ARTIFACT_ROOT/manifest_rel); changed=self.tmp/rel; changed.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(ARTIFACT_ROOT/rel,changed)
-            with open(changed,"ab") as h: h.write(b"\n ")
+            rows=changed.read_text().splitlines(); row=json.loads(rows[0])
+            if rel == "source_pool.jsonl": row["source_hash"]="tampered"
+            elif rel == "targets/dev_pool.jsonl": row["target_hash"]="tampered"
+            elif rel == "embeddings/source_question.jsonl": row["vector"][0] += 1.0
+            else: row["neighbors"][0]["source_id"]="tampered-id"
+            rows[0]=json.dumps(row,separators=(",",":")); changed.write_text("\n".join(rows)+"\n")
             errors=[]; verify_ref(self.tmp,manifest["records"],rel,errors); self.assertTrue(errors,rel)
     def test_dev_test_identity_is_disjoint(self):
         with open(ARTIFACT_ROOT/"targets/dev_pool.jsonl") as handle: dev={json.loads(x)["target_id"] for x in handle if x.strip()}
