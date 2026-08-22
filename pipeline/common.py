@@ -1,5 +1,6 @@
 import hashlib
 import json
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -20,6 +21,11 @@ def sha256_file(path):
         for block in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(block)
     return digest.hexdigest()
+
+def file_ref(path, root):
+    """Byte-level reference, always relative to an artifact root."""
+    path = Path(path)
+    return {"path": str(path.relative_to(root)), "sha256": sha256_file(path), "bytes": path.stat().st_size}
 
 def load_json(path):
     with open(path, encoding="utf-8") as handle:

@@ -1,8 +1,0 @@
-{
-  "kind": "memory_representation",
-  "representation": "case_v1",
-  "status": "VALID",
-  "source_pool_hash": "da4d1e35ff124e32a5dcda3efa3b1fab3dbf146af3d089a4d7637af4bc0183ff",
-  "count": 6251,
-  "records": "representations/case_v1.jsonl"
-}

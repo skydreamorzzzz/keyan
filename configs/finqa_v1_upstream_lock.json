@@ -1,0 +1,10 @@
+{
+  "kind": "immutable_finqa_upstream_lock",
+  "schema_version": "finqa_canonical_v1.1",
+  "upstream": {"dataset": "FinQA", "source": "https://github.com/czyssrs/FinQA", "version_note": "Local files were checksum-frozen; no upstream git commit is asserted."},
+  "raw_files": {
+    "train": {"path": "data/finqa/train.json", "count": 6251, "sha256": "49f237eb9779b569473b26b08048867d04635a7cc39ad6a7a5664c55bb428db6"},
+    "dev": {"path": "data/finqa/dev.json", "count": 883, "sha256": "a847fb7e0d61a3125a1e2909852df6b89f1ee64d2c5ff1bf689e332214deee51"},
+    "test": {"path": "data/finqa/test.json", "count": 1147, "sha256": "831dbfb2e785dbc227f895ce3f24046433467aec67b09db2bd6ac7692a8a30dc"}
+  }
+}

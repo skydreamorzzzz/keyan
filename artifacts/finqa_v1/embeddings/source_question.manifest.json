@@ -1,13 +1,31 @@
 {
   "kind": "id_keyed_embeddings",
-  "source_pool_hash": "da4d1e35ff124e32a5dcda3efa3b1fab3dbf146af3d089a4d7637af4bc0183ff",
-  "embedding_config": {
-    "model": "sentence-transformers/all-MiniLM-L6-v2",
-    "revision": "local-cache",
-    "normalize_embeddings": true,
-    "text_field": "question",
-    "batch_size": 64
+  "records": {
+    "path": "embeddings/source_question.jsonl",
+    "sha256": "d8896cefe0d33ea3e711c025a9cb65d862877f1448040654441ca1539637a88c",
+    "bytes": 51692085
+  },
+  "parents": {
+    "source_pool": {
+      "path": "source_pool.manifest.json",
+      "sha256": "c5a6c8a75fc6a16db581f14efa056fec3ef5f92fc989f2bca0d13a8bcce74916",
+      "bytes": 717
+    },
+    "retrieval_text": {
+      "path": "representations/retrieval_question_v1.manifest.json",
+      "sha256": "2db7c615e61d178f32ece4404f3e7d3cdd04b94f04fe908e03d8256ee5d62cb8",
+      "bytes": 641
+    }
   },
   "count": 6251,
-  "records": "embeddings/source_question.jsonl"
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "sentence_transformers_version": "5.6.0",
+  "vector_dimension": 384,
+  "normalization": true,
+  "text_field": "question",
+  "config": {
+    "path": "configs/finqa_v1.json",
+    "sha256": "6188dba7af4f29a1d76f0b53db951dffcd765ffb49a57c1cd1c1a6f5a45c8b53"
+  }
 }

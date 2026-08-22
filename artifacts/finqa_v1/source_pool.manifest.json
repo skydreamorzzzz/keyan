@@ -1,8 +1,25 @@
 {
-  "kind": "source_pool",
-  "schema_version": "finqa_canonical_v1",
-  "dataset_lock_hash": "d9b7d006e7fe21335a16b8a97ecf0f106b9d2a4136bf21d8aa5d11a9b79708b2",
+  "kind": "immutable_source_pool",
+  "records": {
+    "path": "source_pool.jsonl",
+    "sha256": "b38407fe22742150b2c358518a572230ea2c108305a82d2a143b5181fe78fb16",
+    "bytes": 50378055
+  },
+  "parents": {
+    "dataset_lock": {
+      "path": "dataset_lock.json",
+      "sha256": "9dbcccbe0e8d93b93b088a04d724a7994357593272d8cd7f5bd7b8e963add48e",
+      "bytes": 786
+    },
+    "gold_validation": {
+      "path": "gold_validation.manifest.json",
+      "sha256": "34c58295bfa93f71e127a25f7cac2cbfe5cbfbdb404633e531e9e94bf8509c40",
+      "bytes": 731
+    }
+  },
   "count": 6251,
-  "source_pool_hash": "da4d1e35ff124e32a5dcda3efa3b1fab3dbf146af3d089a4d7637af4bc0183ff",
-  "records": "source_pool.jsonl"
+  "config": {
+    "path": "configs/finqa_v1.json",
+    "sha256": "6188dba7af4f29a1d76f0b53db951dffcd765ffb49a57c1cd1c1a6f5a45c8b53"
+  }
 }

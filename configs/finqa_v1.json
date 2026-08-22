@@ -1,13 +1,15 @@
 {
-  "schema_version": "finqa_canonical_v1",
+  "schema_version": "finqa_canonical_v1.1",
+  "upstream_lock": "configs/finqa_v1_upstream_lock.json",
   "dataset": "FinQA",
-  "splits": {"source": ["train"], "target": ["dev", "test"]},
+  "source_split": "train",
+  "target_splits": {"dev": "development_only", "test": "final_evaluation_only"},
   "embedding": {
     "model": "sentence-transformers/all-MiniLM-L6-v2",
-    "revision": "local-cache",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
     "normalize_embeddings": true,
     "text_field": "question",
     "batch_size": 64
   },
-  "retrieval": {"top_k": 3, "metric": "cosine", "query_field": "question"}
+  "retrieval": {"top_k": 3, "metric": "cosine", "query_field": "question", "score_decimals": 7}
 }

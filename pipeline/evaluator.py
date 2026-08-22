@@ -1,6 +1,6 @@
 """Primary evaluator: strict by default and deliberately non-repairing."""
 import re
-from pipeline.programs import parse_strict, execute_custom, answers_equal
+from pipeline.programs import execute_custom, primary_answers_equal
 
 def normalize_surface(program):
     """Only non-semantic surface normalization permitted in primary metrics."""
@@ -13,6 +13,6 @@ def evaluate_strict(predicted_program, gold_answer, table):
     try:
         program=normalize_surface(predicted_program)
         answer=execute_custom(program,table)
-        return {"valid_program":True,"execution_accuracy":answers_equal(answer,gold_answer),"answer":answer,"normalized_program":program}
+        return {"valid_program":True,"execution_accuracy":primary_answers_equal(answer,gold_answer),"answer":answer,"normalized_program":program}
     except Exception as exc:
         return {"valid_program":False,"execution_accuracy":False,"error":type(exc).__name__,"normalized_program":normalize_surface(predicted_program)}

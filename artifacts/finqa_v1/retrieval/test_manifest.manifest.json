@@ -1,0 +1,33 @@
+{
+  "kind": "frozen_retrieval_manifest",
+  "records": {
+    "path": "retrieval/test_manifest.jsonl",
+    "sha256": "98e500a1b132a2aed260661327d27c417a0c004d4f69e2b1e279f66485dd0ba6",
+    "bytes": 726844
+  },
+  "parents": {
+    "embedding": {
+      "path": "embeddings/source_question.manifest.json",
+      "sha256": "b4987aac191103cf025d3e4f55382234e08c58818b6e0d6f059607225cc30638",
+      "bytes": 999
+    },
+    "target_pool": {
+      "path": "targets/test_pool.manifest.json",
+      "sha256": "9f6109db9519938d2d5b405558735db560dbf16ebec69816e1cf112b9a729b01",
+      "bytes": 779
+    }
+  },
+  "split": "test",
+  "purpose": "final_evaluation_only",
+  "count": 1147,
+  "retrieval_config": {
+    "top_k": 3,
+    "metric": "cosine",
+    "query_field": "question",
+    "score_decimals": 7
+  },
+  "config": {
+    "path": "configs/finqa_v1.json",
+    "sha256": "6188dba7af4f29a1d76f0b53db951dffcd765ffb49a57c1cd1c1a6f5a45c8b53"
+  }
+}

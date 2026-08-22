@@ -1,0 +1,22 @@
+{
+  "kind": "gold_validation",
+  "records": {
+    "path": "gold_validation.jsonl",
+    "sha256": "0c9419d77f0149331a5d45d6ad063cd8f63a9d5848ccb271c81aa12cf8ff4b76",
+    "bytes": 1523385
+  },
+  "parents": {
+    "dataset_lock": {
+      "path": "dataset_lock.json",
+      "sha256": "9dbcccbe0e8d93b93b088a04d724a7994357593272d8cd7f5bd7b8e963add48e",
+      "bytes": 786
+    },
+    "official_evaluator_sha256": "845cd131cab843eceff256cf6d392978cc470a7da4a80107beb56027fdca5c13",
+    "custom_executor_sha256": "576aee986f0f202c722c3bdb8a4ada81d6657ab5c92eef3bf18b3f6705fbf5ce"
+  },
+  "count": 8281,
+  "config": {
+    "path": "configs/finqa_v1.json",
+    "sha256": "6188dba7af4f29a1d76f0b53db951dffcd765ffb49a57c1cd1c1a6f5a45c8b53"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "immutable_target_pool",
+  "records": {
+    "path": "targets/test_pool.jsonl",
+    "sha256": "0a2dc2a88abc5bfd2e51cb922239cfb301c47ac177b71dfd18b67467b15d30d1",
+    "bytes": 9225497
+  },
+  "parents": {
+    "dataset_lock": {
+      "path": "dataset_lock.json",
+      "sha256": "9dbcccbe0e8d93b93b088a04d724a7994357593272d8cd7f5bd7b8e963add48e",
+      "bytes": 786
+    },
+    "gold_validation": {
+      "path": "gold_validation.manifest.json",
+      "sha256": "34c58295bfa93f71e127a25f7cac2cbfe5cbfbdb404633e531e9e94bf8509c40",
+      "bytes": 731
+    }
+  },
+  "split": "test",
+  "purpose": "final_evaluation_only",
+  "count": 1147,
+  "config": {
+    "path": "configs/finqa_v1.json",
+    "sha256": "6188dba7af4f29a1d76f0b53db951dffcd765ffb49a57c1cd1c1a6f5a45c8b53"
+  }
+}

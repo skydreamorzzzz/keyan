@@ -51,10 +51,15 @@ def execute_custom(program, table):
     result=values[-1]
     return result if isinstance(result,str) else round(result,5)
 
-def answers_equal(left, right):
+def primary_answers_equal(left, right):
+    """FinQA primary answer comparison: numeric values rounded to 5 decimals, exact thereafter."""
     if str(left).strip().lower() in {"yes", "no", "n/a"} or str(right).strip().lower() in {"yes", "no", "n/a"}:
         return str(left).strip().lower() == str(right).strip().lower()
     try:
-        return abs(Decimal(str(left)) - Decimal(str(right))) <= Decimal("0.00001")
+        quantum = Decimal("0.00001")
+        return Decimal(str(left)).quantize(quantum) == Decimal(str(right)).quantize(quantum)
     except (InvalidOperation, ValueError):
         return str(left).strip() == str(right).strip()
+
+# Compatibility alias deliberately keeps the canonical exact-after-rounding semantics.
+answers_equal = primary_answers_equal

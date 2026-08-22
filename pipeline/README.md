@@ -1,7 +1,7 @@
-# Canonical FinQA Data Pipeline v1
+# Canonical FinQA Data Pipeline v1.1
 
-`python -m pipeline.build --until retrieval` creates immutable source (train) and target (dev/test) pools from raw FinQA, an ID-keyed question embedding ledger, and a frozen top-3 retrieval manifest under `artifacts/finqa_v1/`.
+`python -m pipeline.build` first checks the committed immutable upstream lock, validates every gold program, then builds into a temporary directory and atomically publishes only a fully validated tree. It creates an immutable train source pool, separate dev (development only) and test (final evaluation only) target pools, an ID-keyed question embedding ledger, and separate frozen top-3 retrieval manifests under `artifacts/finqa_v1/`.
 
-`python -m pipeline.validate` is the release gate. It checks locks, hashes, identities, strict gold execution against the bundled FinQA official evaluator, independent custom-executor differential results, representations, embeddings, and retrieval recomputation. It prints exactly `CANONICAL DATASET: VALID` or `CANONICAL DATASET: INVALID` (use `--details` for diagnostics).
+`python -m pipeline.validate` is the release gate. It verifies every manifest's records byte hash and parent byte hash, re-executes every FinQA gold program with both official and custom executors, and recomputes every dev and test retrieval row. It prints exactly `CANONICAL DATASET: VALID` or `CANONICAL DATASET: INVALID` (use `--details` for diagnostics).
 
-Representation artifacts are deliberately independent from the source universe: `case_v1` is deterministic and valid; Strategy and Grounded Sketch must be added as separate versioned, QC-gated artifacts without changing `source_pool.jsonl`.
+`retrieval_question_v1` is retrieval text, not a Case Memory representation. Future memory representations must be separate versioned, QC-gated artifacts and may not change `source_pool.jsonl`.

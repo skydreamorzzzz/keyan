@@ -1,0 +1,22 @@
+{
+  "kind": "retrieval_text_representation",
+  "records": {
+    "path": "representations/retrieval_question_v1.jsonl",
+    "sha256": "2cdef3a6a312e83f9d348ee9f28c4fe62af4f23b2848ebc4fa6becd176aa5fd1",
+    "bytes": 2160485
+  },
+  "parents": {
+    "source_pool": {
+      "path": "source_pool.manifest.json",
+      "sha256": "c5a6c8a75fc6a16db581f14efa056fec3ef5f92fc989f2bca0d13a8bcce74916",
+      "bytes": 717
+    }
+  },
+  "count": 6251,
+  "representation": "retrieval_question_v1",
+  "status": "VALID",
+  "config": {
+    "path": "configs/finqa_v1.json",
+    "sha256": "6188dba7af4f29a1d76f0b53db951dffcd765ffb49a57c1cd1c1a6f5a45c8b53"
+  }
+}
