@@ -1,0 +1,20 @@
+{
+  "kind": "case_memory",
+  "schema_version": "CaseRepresentationV1",
+  "constructor_version": "case_memory_constructor_v1",
+  "constructor_sha256": "3bd4d0554c051dbf3f79e07640ee6314d4e957d2851c71f286fd24dc99101b9a",
+  "parents": {
+    "source_pool": {
+      "path": "source_pool.manifest.json",
+      "sha256": "3e2898ddce8d0e425c8aa602347cc94af4e58762746e128b2bbd75cf793b8938",
+      "bytes": 717
+    }
+  },
+  "records": {
+    "path": "memory/case_v1.jsonl",
+    "sha256": "389e57ab0e7d380d1072fa30576709e8f66f01de75f5f527a59aa65d92b00139",
+    "bytes": 8402382
+  },
+  "count": 6251,
+  "qc_failures": {}
+}
