@@ -99,7 +99,7 @@ def validate(root=ARTIFACT_ROOT, config_path=ROOT/"configs/finqa_v1.json", model
             for source_id, vector in fresh_by_id.items():
                 committed=np.asarray(emb_by_id[source_id]["vector"],dtype=float) if source_id in emb_by_id else None
                 norm=np.linalg.norm(vector)
-                if committed is None or vector.shape != committed.shape or not np.isfinite(vector).all() or (config["embedding"]["normalize_embeddings"] and not np.isclose(norm,1.0,atol=1e-5,rtol=0)) or not np.allclose(vector,committed,atol=1e-6,rtol=1e-6): add(errors,"source embedding re-encode mismatch: "+source_id)
+                if committed is None or vector.shape != committed.shape or not np.isfinite(vector).all() or (config["embedding"]["normalize_embeddings"] and not np.isclose(norm,1.0,atol=config["embedding"]["normalization_atol"],rtol=0)) or not np.allclose(vector,committed,atol=config["embedding"]["validation_atol"],rtol=config["embedding"]["validation_rtol"]): add(errors,"source embedding re-encode mismatch: "+source_id)
         # Full, not sampled, recomputation independently derives every query vector and top-k.
         for split, rows in targets.items():
             rm=load_json(root/f"retrieval/{split}_manifest.manifest.json"); verify_config(rm,config_ref,split+" retrieval",errors); verify_ref(root,rm["records"],split+" retrieval records",errors); verify_ref(root,rm["parents"]["embedding"],split+" embedding parent",errors); verify_ref(root,rm["parents"]["target_pool"],split+" target parent",errors); retrieval=read_jsonl(root/rm["records"]["path"]); rmap={r["target_id"]:r for r in retrieval}

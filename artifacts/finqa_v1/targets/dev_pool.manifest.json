@@ -13,7 +13,7 @@
     },
     "gold_validation": {
       "path": "gold_validation.manifest.json",
-      "sha256": "34c58295bfa93f71e127a25f7cac2cbfe5cbfbdb404633e531e9e94bf8509c40",
+      "sha256": "fd09323ad4380f00e52ea0a8d0ce2b8e5cece54e32f94e990b6b0f410ef2dded",
       "bytes": 731
     }
   },
@@ -22,6 +22,6 @@
   "count": 883,
   "config": {
     "path": "configs/finqa_v1.json",
-    "sha256": "6188dba7af4f29a1d76f0b53db951dffcd765ffb49a57c1cd1c1a6f5a45c8b53"
+    "sha256": "a36b13a7f32c329c912c087c65f4714b99deb137cfa1f254b9c43c587c59a714"
   }
 }

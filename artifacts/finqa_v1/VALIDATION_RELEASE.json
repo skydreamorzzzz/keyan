@@ -1,0 +1,13 @@
+{
+  "schema_version": "finqa_canonical_v1.1",
+  "validator_sha256": "af11a6552c3a0aeffa4ffcd2075ff9c2e7b9fd16b139e6a0749901d5a5ccfcf7",
+  "config_sha256": "a36b13a7f32c329c912c087c65f4714b99deb137cfa1f254b9c43c587c59a714",
+  "dataset_lock_sha256": "9dbcccbe0e8d93b93b088a04d724a7994357593272d8cd7f5bd7b8e963add48e",
+  "gold_checked": 8281,
+  "representation_checked": 6251,
+  "source_embeddings_reencoded": 6251,
+  "dev_retrieval_checked": 883,
+  "test_retrieval_checked": 1147,
+  "validated_at": "2026-08-22T14:41:34.706356+00:00",
+  "verdict": "CANONICAL DATASET: VALID"
+}

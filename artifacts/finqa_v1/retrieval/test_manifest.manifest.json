@@ -2,18 +2,18 @@
   "kind": "frozen_retrieval_manifest",
   "records": {
     "path": "retrieval/test_manifest.jsonl",
-    "sha256": "98e500a1b132a2aed260661327d27c417a0c004d4f69e2b1e279f66485dd0ba6",
-    "bytes": 726844
+    "sha256": "ab43dabdc65565380aae12a10f72b533c86430de3122a7d326d622a731eb324d",
+    "bytes": 726863
   },
   "parents": {
     "embedding": {
       "path": "embeddings/source_question.manifest.json",
-      "sha256": "b4987aac191103cf025d3e4f55382234e08c58818b6e0d6f059607225cc30638",
+      "sha256": "d6a774d08a9c77d610680c771bf70bad09ed13913971d3e4423fb8c4b1175551",
       "bytes": 999
     },
     "target_pool": {
       "path": "targets/test_pool.manifest.json",
-      "sha256": "9f6109db9519938d2d5b405558735db560dbf16ebec69816e1cf112b9a729b01",
+      "sha256": "33e2a47a91811ab38b2cac03790a53a6566f65cd35f64bbc7a375b4e936eddb6",
       "bytes": 779
     }
   },
@@ -28,6 +28,6 @@
   },
   "config": {
     "path": "configs/finqa_v1.json",
-    "sha256": "6188dba7af4f29a1d76f0b53db951dffcd765ffb49a57c1cd1c1a6f5a45c8b53"
+    "sha256": "a36b13a7f32c329c912c087c65f4714b99deb137cfa1f254b9c43c587c59a714"
   }
 }

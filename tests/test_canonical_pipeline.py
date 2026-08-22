@@ -1,4 +1,5 @@
 import json, os, shutil, tempfile, unittest
+import numpy as np
 from unittest.mock import patch
 from pathlib import Path
 from pipeline.common import ROOT, ARTIFACT_ROOT, file_ref, load_json, sha256_file, write_json
@@ -31,6 +32,17 @@ class CanonicalV11Tests(unittest.TestCase):
         with patch("pipeline.build.checked_raw",side_effect=RuntimeError("UPSTREAM LOCK FAILURE")):
             with self.assertRaisesRegex(RuntimeError,"UPSTREAM LOCK FAILURE"): build(artifacts=out)
         self.assertFalse(out.exists())
+    def test_full_release_failure_preserves_existing_tree_and_cleans_temp(self):
+        old=self.tmp/"canonical"; old.mkdir(); (old/"sentinel").write_text("old")
+        class FakeModel:
+            def __init__(self,*args,**kwargs): pass
+            def encode(self,texts,**kwargs): return np.zeros((len(texts),384),dtype=float)
+        raw={"train":[{"id":f"source-{i}","qa":{"question":"q"}} for i in range(3)],"dev":[],"test":[]}
+        with patch("pipeline.build.checked_raw",return_value=raw), patch("pipeline.build.gold_rows",return_value=[]), patch("pipeline.build.SentenceTransformer",FakeModel), patch("pipeline.validate.validate",side_effect=[[],["semantic failure"]]):
+            with self.assertRaisesRegex(RuntimeError,"RELEASE VALIDATION FAILURE"): build(artifacts=old)
+        self.assertEqual((old/"sentinel").read_text(),"old")
+        self.assertFalse((self.tmp/"canonical.previous").exists())
+        self.assertFalse(any(self.tmp.glob("finqa_v1_*")))
     def test_byte_hash_detects_pool_embedding_and_retrieval_tampering(self):
         for rel in ("source_pool.jsonl","targets/dev_pool.jsonl","embeddings/source_question.jsonl","retrieval/dev_manifest.jsonl"):
             manifest_rel={"source_pool.jsonl":"source_pool.manifest.json","targets/dev_pool.jsonl":"targets/dev_pool.manifest.json","embeddings/source_question.jsonl":"embeddings/source_question.manifest.json","retrieval/dev_manifest.jsonl":"retrieval/dev_manifest.manifest.json"}[rel]

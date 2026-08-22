@@ -8,7 +8,7 @@
   "parents": {
     "source_pool": {
       "path": "source_pool.manifest.json",
-      "sha256": "c5a6c8a75fc6a16db581f14efa056fec3ef5f92fc989f2bca0d13a8bcce74916",
+      "sha256": "3e2898ddce8d0e425c8aa602347cc94af4e58762746e128b2bbd75cf793b8938",
       "bytes": 717
     }
   },
@@ -17,6 +17,6 @@
   "status": "VALID",
   "config": {
     "path": "configs/finqa_v1.json",
-    "sha256": "6188dba7af4f29a1d76f0b53db951dffcd765ffb49a57c1cd1c1a6f5a45c8b53"
+    "sha256": "a36b13a7f32c329c912c087c65f4714b99deb137cfa1f254b9c43c587c59a714"
   }
 }

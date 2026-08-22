@@ -1,5 +1,6 @@
 """Fail-closed, atomic builder for Canonical FinQA Pipeline v1.1."""
 import argparse, contextlib, importlib.util, io, os, shutil, tempfile
+from datetime import datetime, timezone
 from pathlib import Path
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -79,11 +80,14 @@ def build(config_path="configs/finqa_v1.json", artifacts=ARTIFACT_ROOT):
                 ids=np.lexsort((source_ids,-scores))[:k]
                 rows.append({"target_id":t["target_id"],"target_hash":t["target_hash"],"query_text_hash":sha256_bytes(t["raw"]["qa"][config["retrieval"]["query_field"]].encode()),"neighbors":[{"source_id":emb[i]["source_id"],"source_hash":emb[i]["source_hash"],"score":float(scores[i])} for i in ids]})
             write_jsonl(temp/f"retrieval/{split}_manifest.jsonl",rows); rm=manifest("frozen_retrieval_manifest",temp,temp/f"retrieval/{split}_manifest.jsonl",{"embedding":file_ref(temp/"embeddings/source_question.manifest.json",temp),"target_pool":file_ref(temp/f"targets/{split}_pool.manifest.json",temp)},split=split,purpose=config["target_splits"][split],count=len(rows),retrieval_config=config["retrieval"],config=config_ref); write_json(temp/f"retrieval/{split}_manifest.manifest.json",rm)
-        # Gate 3/4: independently validate the staged tree before atomic publish.
+        # Optional structural smoke precedes the mandatory independent release gate.
         from pipeline.validate import validate
-        # Reuse the frozen loaded model, but still perform a second full encode from representation text.
         errors=validate(temp,config_path=config_path,model=model,release=False)
         if errors: raise RuntimeError("STAGED VALIDATION FAILURE: "+"; ".join(errors[:10]))
+        # This must be full: no temp tree may be atomically published until all independent checks pass.
+        errors=validate(temp,config_path=config_path,model=model,release=True)
+        if errors: raise RuntimeError("RELEASE VALIDATION FAILURE: "+"; ".join(errors[:10]))
+        write_json(temp/"VALIDATION_RELEASE.json",{"schema_version":config["schema_version"],"validator_sha256":sha256_file(ROOT/"pipeline/validate.py"),"config_sha256":sha256_file(config_path),"dataset_lock_sha256":lock_ref["sha256"],"gold_checked":len(gold),"representation_checked":len(retrieval_text),"source_embeddings_reencoded":len(emb),"dev_retrieval_checked":len(targets["dev"]),"test_retrieval_checked":len(targets["test"]),"validated_at":datetime.now(timezone.utc).isoformat(),"verdict":"CANONICAL DATASET: VALID"})
         if artifacts.exists(): backup=artifacts.with_name(artifacts.name+".previous"); shutil.rmtree(backup,ignore_errors=True); os.replace(artifacts,backup)
         os.replace(temp,artifacts); temp=None
         if backup: shutil.rmtree(backup)
