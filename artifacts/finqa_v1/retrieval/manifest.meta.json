@@ -1,0 +1,13 @@
+{
+  "kind": "frozen_retrieval_manifest",
+  "source_pool_hash": "da4d1e35ff124e32a5dcda3efa3b1fab3dbf146af3d089a4d7637af4bc0183ff",
+  "target_pool_hash": "1efec117b88996c0be4ca76f9b1347ff3a94caf500eea0f33c015dcb7ab4ca2d",
+  "embedding_manifest_hash": "d6cf9cbca18333f9d41a4b19e0c455b7b39cf3e3c98f8a8a13bf2a1219957270",
+  "retrieval_config": {
+    "top_k": 3,
+    "metric": "cosine",
+    "query_field": "question"
+  },
+  "count": 2030,
+  "records": "retrieval/manifest.jsonl"
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "finqa_canonical_v1",
+  "dataset": "FinQA",
+  "splits": {"source": ["train"], "target": ["dev", "test"]},
+  "embedding": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "local-cache",
+    "normalize_embeddings": true,
+    "text_field": "question",
+    "batch_size": 64
+  },
+  "retrieval": {"top_k": 3, "metric": "cosine", "query_field": "question"}
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "source_pool",
+  "schema_version": "finqa_canonical_v1",
+  "dataset_lock_hash": "d9b7d006e7fe21335a16b8a97ecf0f106b9d2a4136bf21d8aa5d11a9b79708b2",
+  "count": 6251,
+  "source_pool_hash": "da4d1e35ff124e32a5dcda3efa3b1fab3dbf146af3d089a4d7637af4bc0183ff",
+  "records": "source_pool.jsonl"
+}

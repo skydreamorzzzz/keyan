@@ -1,0 +1,60 @@
+{
+  "legacy_source_embeddings_rows": 78,
+  "legacy_clean_sources": 78,
+  "legacy_paired_sources": 90,
+  "index_mapping_mismatch": true,
+  "mismatched_rows": 71,
+  "first_mismatches": [
+    {
+      "row": 7,
+      "embedding_source_id": "E009",
+      "retrieval_mapped_source_id": "E008"
+    },
+    {
+      "row": 8,
+      "embedding_source_id": "E011",
+      "retrieval_mapped_source_id": "E009"
+    },
+    {
+      "row": 9,
+      "embedding_source_id": "E013",
+      "retrieval_mapped_source_id": "E010"
+    },
+    {
+      "row": 10,
+      "embedding_source_id": "E016",
+      "retrieval_mapped_source_id": "E011"
+    },
+    {
+      "row": 11,
+      "embedding_source_id": "E019",
+      "retrieval_mapped_source_id": "E012"
+    },
+    {
+      "row": 12,
+      "embedding_source_id": "E020",
+      "retrieval_mapped_source_id": "E013"
+    },
+    {
+      "row": 13,
+      "embedding_source_id": "E021",
+      "retrieval_mapped_source_id": "E014"
+    },
+    {
+      "row": 14,
+      "embedding_source_id": "E022",
+      "retrieval_mapped_source_id": "E015"
+    },
+    {
+      "row": 15,
+      "embedding_source_id": "E023",
+      "retrieval_mapped_source_id": "E016"
+    },
+    {
+      "row": 16,
+      "embedding_source_id": "E024",
+      "retrieval_mapped_source_id": "E017"
+    }
+  ],
+  "finding": "INVALID: expanded retrieval maps embedding rows through a different source ordering."
+}
